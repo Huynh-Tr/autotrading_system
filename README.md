@@ -43,14 +43,23 @@ autotrading_system/
    # Edit config.yaml with your settings
    ```
 
-3. **Run Backtesting**:
+3. **Run Backtesting with Different Strategies**:
    ```bash
+   # SMA Crossover Strategy
    python src/main.py --mode backtest --strategy sma_crossover
+   
+   # RSI Strategy
+   python src/main.py --mode backtest --strategy rsi
+   
+   # MACD Strategy
+   python src/main.py --mode backtest --strategy macd
    ```
 
 4. **Start Live Trading**:
    ```bash
    python src/main.py --mode live --strategy sma_crossover
+   python src/main.py --mode live --strategy rsi
+   python src/main.py --mode live --strategy macd
    ```
 
 5. **Launch Dashboard**:

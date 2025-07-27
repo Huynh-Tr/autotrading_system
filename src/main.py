@@ -13,6 +13,8 @@ sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
 
 from src.core.trading_engine import TradingEngine
 from src.strategies.sma_crossover import SMACrossoverStrategy
+from src.strategies.rsi_strategy import RSIStrategy
+from src.strategies.macd_strategy import MACDStrategy
 from src.utils.config_manager import ConfigManager
 
 
@@ -56,6 +58,14 @@ def run_backtest(config_path: str, strategy_name: str):
         strategy_config = config.get("strategies.sma_crossover", {})
         strategy = SMACrossoverStrategy(strategy_config)
         engine.add_strategy(strategy)
+    elif strategy_name == "rsi":
+        strategy_config = config.get("strategies.rsi", {})
+        strategy = RSIStrategy(strategy_config)
+        engine.add_strategy(strategy)
+    elif strategy_name == "macd":
+        strategy_config = config.get("strategies.macd", {})
+        strategy = MACDStrategy(strategy_config)
+        engine.add_strategy(strategy)
     else:
         logger.error(f"Unknown strategy: {strategy_name}")
         return
@@ -86,6 +96,14 @@ def run_live_trading(config_path: str, strategy_name: str):
         strategy_config = config.get("strategies.sma_crossover", {})
         strategy = SMACrossoverStrategy(strategy_config)
         engine.add_strategy(strategy)
+    elif strategy_name == "rsi":
+        strategy_config = config.get("strategies.rsi", {})
+        strategy = RSIStrategy(strategy_config)
+        engine.add_strategy(strategy)
+    elif strategy_name == "macd":
+        strategy_config = config.get("strategies.macd", {})
+        strategy = MACDStrategy(strategy_config)
+        engine.add_strategy(strategy)
     else:
         logger.error(f"Unknown strategy: {strategy_name}")
         return
@@ -111,6 +129,14 @@ def run_paper_trading(config_path: str, strategy_name: str):
     if strategy_name == "sma_crossover":
         strategy_config = config.get("strategies.sma_crossover", {})
         strategy = SMACrossoverStrategy(strategy_config)
+        engine.add_strategy(strategy)
+    elif strategy_name == "rsi":
+        strategy_config = config.get("strategies.rsi", {})
+        strategy = RSIStrategy(strategy_config)
+        engine.add_strategy(strategy)
+    elif strategy_name == "macd":
+        strategy_config = config.get("strategies.macd", {})
+        strategy = MACDStrategy(strategy_config)
         engine.add_strategy(strategy)
     else:
         logger.error(f"Unknown strategy: {strategy_name}")

@@ -119,8 +119,8 @@ def main():
     print("🎉 Setup completed successfully!")
     print("\nNext steps:")
     print("1. Edit config/config.yaml with your trading parameters")
-    print("2. Run backtest: python src/main.py --mode backtest --strategy sma_crossover")
-    print("3. Launch dashboard: python run_dashboard.py")
+    print("2. Run backtest: python3 src/main.py --mode backtest --strategy sma_crossover")
+    print("3. Launch dashboard: python3 run_dashboard.py")
     print("4. Open http://localhost:8501 in your browser")
     
     return True
