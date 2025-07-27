@@ -1,0 +1,24 @@
+2025-07-27 09:17:48 | INFO     | src.utils.config_manager:__init__:18 - Configuration loaded from config/config.yaml
+2025-07-27 09:17:48 | INFO     | src.risk.risk_manager:__init__:31 - Risk manager initialized
+2025-07-27 09:17:48 | INFO     | src.core.trading_engine:__init__:66 - Trading engine initialized with $100,000.00 initial capital
+2025-07-27 09:17:48 | INFO     | src.strategies.base_strategy:__init__:21 - Initialized strategy: sma_crossover
+2025-07-27 09:17:48 | INFO     | src.strategies.sma_crossover:__init__:28 - SMA Crossover Strategy initialized: 20/50
+2025-07-27 09:17:48 | INFO     | src.core.trading_engine:add_strategy:71 - Added strategy: sma_crossover
+2025-07-27 09:17:48 | INFO     | src.core.trading_engine:run_backtest:75 - Starting backtest from 2023-01-01 to 2024-01-01
+2025-07-27 09:17:48 | INFO     | src.data.data_manager:get_historical_data:33 - Fetching historical data for ['AAPL', 'GOOGL', 'MSFT', 'TSLA'] from 2023-01-01 to 2024-01-01
+2025-07-27 09:17:50 | WARNING  | src.data.data_manager:_fetch_yfinance_data:83 - No data found for AAPL
+2025-07-27 09:17:50 | WARNING  | src.data.data_manager:_fetch_yfinance_data:83 - No data found for GOOGL
+2025-07-27 09:17:50 | WARNING  | src.data.data_manager:_fetch_yfinance_data:83 - No data found for MSFT
+2025-07-27 09:17:50 | WARNING  | src.data.data_manager:_fetch_yfinance_data:83 - No data found for TSLA
+2025-07-27 09:17:50 | INFO     | src.data.data_manager:get_historical_data:63 - Data cached successfully
+2025-07-27 09:17:50 | INFO     | __main__:run_backtest:70 - Backtest completed
+2025-07-27 09:27:41 | INFO     | src.utils.config_manager:__init__:18 - Configuration loaded from config/config.yaml
+2025-07-27 09:27:41 | INFO     | src.risk.risk_manager:__init__:31 - Risk manager initialized
+2025-07-27 09:27:41 | INFO     | src.core.trading_engine:__init__:66 - Trading engine initialized with $100,000.00 initial capital
+2025-07-27 09:27:41 | INFO     | src.strategies.base_strategy:__init__:21 - Initialized strategy: sma_crossover
+2025-07-27 09:27:41 | INFO     | src.strategies.sma_crossover:__init__:28 - SMA Crossover Strategy initialized: 20/50
+2025-07-27 09:27:41 | INFO     | src.core.trading_engine:add_strategy:71 - Added strategy: sma_crossover
+2025-07-27 09:27:41 | INFO     | src.core.trading_engine:run_backtest:75 - Starting backtest from 2023-01-01 to 2024-01-01
+2025-07-27 09:27:41 | INFO     | src.data.data_manager:get_historical_data:33 - Fetching historical data for ['AAPL', 'GOOGL', 'MSFT', 'TSLA'] from 2023-01-01 to 2024-01-01
+2025-07-27 09:27:41 | INFO     | src.data.data_manager:get_historical_data:43 - Data loaded from cache
+2025-07-27 09:27:41 | INFO     | __main__:run_backtest:70 - Backtest completed
