@@ -21,12 +21,13 @@ class BaseStrategy(ABC):
         logger.info(f"Initialized strategy: {name}")
     
     @abstractmethod
-    def generate_signals(self, data: pd.Series) -> Dict[str, str]:
+    def generate_signals(self, historical_data: pd.DataFrame, current_data: pd.Series) -> Dict[str, str]:
         """
         Generate trading signals for given market data
         
         Args:
-            data: Market data (prices, indicators, etc.)
+            historical_data: Historical market data up to current point
+            current_data: Current day's market data
             
         Returns:
             Dict mapping symbol to signal ('buy', 'sell', 'hold')

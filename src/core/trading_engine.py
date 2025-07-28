@@ -60,6 +60,9 @@ class TradingEngine:
         self.daily_returns = []
         self.portfolio_history = []
         
+        # Historical data for strategies
+        self.historical_data = None
+        
         # Strategies
         self.strategies: Dict[str, BaseStrategy] = {}
         
@@ -82,10 +85,26 @@ class TradingEngine:
             interval=self.config.get("data.interval", "1d")
         )
         
+        # Validate and clean data
+        if not self.data_manager.validate_data(data):
+            logger.error("Invalid data received")
+            return
+        
+        data = self.data_manager.clean_data(data)
+        
+        if data.empty:
+            logger.error("No valid data available for backtesting")
+            return
+        
+        logger.info(f"Loaded {len(data)} data points for {list(data.columns)}")
+        
+        # Store historical data for strategies
+        self.historical_data = data
+        
         # Run simulation
-        for date in data.index:
-            self._process_trading_day(date, data.loc[date])
-            self._update_portfolio_value(date, data.loc[date])
+        for i, (date, row) in enumerate(data.iterrows()):
+            self._process_trading_day(date, row, i)
+            self._update_portfolio_value(date, row)
             self.portfolio_history.append({
                 'date': date,
                 'portfolio_value': self.portfolio_value,
@@ -95,20 +114,22 @@ class TradingEngine:
         
         self._generate_backtest_report()
     
-    def run_live_trading(self):
-        """Run live trading (placeholder for real implementation)"""
-        logger.info("Starting live trading mode")
-        # This would connect to real-time data feeds and execute real trades
-        # For now, this is a placeholder
-        pass
+    # def run_live_trading(self):
+    #     """Run live trading (placeholder for real implementation)"""
+    #     logger.info("Starting live trading mode")
+    #     # This would connect to real-time data feeds and execute real trades
+    #     # For now, this is a placeholder
+    #     pass
     
-    def _process_trading_day(self, date: datetime, market_data: pd.Series):
+    def _process_trading_day(self, date: datetime, market_data: pd.Series, current_index: int):
         """Process trading decisions for a single day"""
         for strategy_name, strategy in self.strategies.items():
             if not self.config.get(f"strategies.{strategy_name}.enabled", True):
                 continue
                 
-            signals = strategy.generate_signals(market_data)
+            # Get historical data up to current point for strategy
+            historical_slice = self.historical_data.iloc[:current_index + 1]
+            signals = strategy.generate_signals(historical_slice, market_data)
             
             for symbol, signal in signals.items():
                 if signal == 'buy':
@@ -233,37 +254,69 @@ class TradingEngine:
     def _generate_backtest_report(self):
         """Generate backtest performance report"""
         if not self.portfolio_history:
+            logger.warning("No portfolio history available for backtest report")
             return
         
         df = pd.DataFrame(self.portfolio_history)
         df.set_index('date', inplace=True)
         
         # Calculate metrics
-        total_return = (self.portfolio_value - self.config.get("trading.initial_capital")) / self.config.get("trading.initial_capital")
+        initial_capital = self.config.get("trading.initial_capital")
+        total_return = (self.portfolio_value - initial_capital) / initial_capital
         daily_returns = df['portfolio_value'].pct_change().dropna()
         
         # Risk metrics
-        volatility = daily_returns.std() * np.sqrt(252)  # Annualized
+        volatility = daily_returns.std() * np.sqrt(252) if len(daily_returns) > 0 else 0  # Annualized
         sharpe_ratio = (daily_returns.mean() * 252) / volatility if volatility > 0 else 0
         
         # Maximum drawdown
-        cumulative_returns = (1 + daily_returns).cumprod()
-        running_max = cumulative_returns.expanding().max()
-        drawdown = (cumulative_returns - running_max) / running_max
-        max_drawdown = drawdown.min()
+        if len(daily_returns) > 0:
+            cumulative_returns = (1 + daily_returns).cumprod()
+            running_max = cumulative_returns.expanding().max()
+            drawdown = (cumulative_returns - running_max) / running_max
+            max_drawdown = drawdown.min()
+        else:
+            max_drawdown = 0
+        
+        # Calculate trade statistics
+        buy_trades = [t for t in self.trades if t.side == 'buy']
+        sell_trades = [t for t in self.trades if t.side == 'sell']
         
         logger.info("=== BACKTEST RESULTS ===")
-        logger.info(f"Initial Capital: ${self.config.get('trading.initial_capital'):,.2f}")
+        logger.info(f"Initial Capital: ${initial_capital:,.2f}")
         logger.info(f"Final Portfolio Value: ${self.portfolio_value:,.2f}")
         logger.info(f"Total Return: {total_return:.2%}")
         logger.info(f"Annualized Volatility: {volatility:.2%}")
         logger.info(f"Sharpe Ratio: {sharpe_ratio:.2f}")
         logger.info(f"Maximum Drawdown: {max_drawdown:.2%}")
         logger.info(f"Total Trades: {len(self.trades)}")
+        logger.info(f"Buy Trades: {len(buy_trades)}")
+        logger.info(f"Sell Trades: {len(sell_trades)}")
         
-        # Save results
+        # Save detailed results
+        import os
+        os.makedirs('data', exist_ok=True)
+        
+        # Save portfolio history
         df.to_csv('data/backtest_results.csv')
         logger.info("Backtest results saved to data/backtest_results.csv")
+        
+        # Save trade details
+        if self.trades:
+            trades_df = pd.DataFrame([
+                {
+                    'timestamp': t.timestamp,
+                    'symbol': t.symbol,
+                    'side': t.side,
+                    'quantity': t.quantity,
+                    'price': t.price,
+                    'commission': t.commission,
+                    'strategy': t.strategy
+                }
+                for t in self.trades
+            ])
+            trades_df.to_csv('data/trades.csv', index=False)
+            logger.info("Trade details saved to data/trades.csv")
     
     def get_portfolio_summary(self) -> Dict[str, Any]:
         """Get current portfolio summary"""

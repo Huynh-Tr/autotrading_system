@@ -1,58 +1,69 @@
-# Auto Trading System Configuration Example
-# Copy this file to config.yaml and edit with your settings
+# Auto Trading System Configuration
 
+# Trading Settings
 trading:
   mode: "backtest"  # backtest, live, paper
   symbols: ["AAPL", "GOOGL", "MSFT", "TSLA"]
   initial_capital: 100000
   commission: 0.001  # 0.1% commission per trade
-
+  
+# Data Settings
 data:
-  source: "yfinance"  # yfinance, alpha_vantage
-  start_date: "2023-01-01"
-  end_date: "2024-01-01"
+  source: "yfinance"  # yfinance, alpha_vantage, custom
+  start_date: "2024-01-01"
+  end_date: "2025-01-01"
   interval: "1d"  # 1m, 5m, 15m, 30m, 1h, 1d
   cache_data: true
   cache_dir: "data/cache"
 
+# Risk Management
 risk:
   max_position_size: 0.1  # 10% of portfolio per position
   max_portfolio_risk: 0.02  # 2% max portfolio risk
   stop_loss: 0.05  # 5% stop loss
   take_profit: 0.15  # 15% take profit
-  max_drawdown: 0.20  # 20% maximum drawdown
+  max_drawdown: 0.20  # 20% max drawdown
 
+# Strategy Settings
 strategies:
-  # SMA Crossover Strategy
   sma_crossover:
-    enabled: true
     short_window: 20
     long_window: 50
-    
-  # RSI Strategy
-  rsi:
     enabled: true
+    
+  rsi_strategy:
     period: 14
-    overbought_threshold: 70
-    oversold_threshold: 30
-    confirmation_period: 2
-    
-  # MACD Strategy
-  macd:
+    oversold: 30
+    overbought: 70
     enabled: true
+    
+  macd_strategy:
     fast_period: 12
     slow_period: 26
     signal_period: 9
-    histogram_threshold: 0.0
-    confirmation_period: 1
+    enabled: true
 
+# Logging
 logging:
   level: "INFO"  # DEBUG, INFO, WARNING, ERROR
   file: "logs/trading.log"
   max_size: "10MB"
   backup_count: 5
 
+# Database
+database:
+  url: "sqlite:///data/trading.db"
+  echo: false
+
+# Dashboard
 dashboard:
   host: "0.0.0.0"
-  port: 8501
-  debug: false 
+  port: 5000
+  debug: false
+
+# API Keys (for live trading)
+api_keys:
+  alpha_vantage: ""
+  alpaca_key: ""
+  alpaca_secret: ""
+  alpaca_base_url: "https://paper-api.alpaca.markets"  # Use paper trading URL 

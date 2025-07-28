@@ -5,6 +5,7 @@ Data Manager - Handles market data retrieval and caching
 import pandas as pd
 import numpy as np
 import yfinance as yf
+from vnstock import Quote
 import os
 import pickle
 from datetime import datetime, timedelta
@@ -50,8 +51,10 @@ class DataManager:
         
         if data_source == "yfinance":
             data = self._fetch_yfinance_data(symbols, start_date, end_date, interval)
-        elif data_source == "alpha_vantage":
-            data = self._fetch_alpha_vantage_data(symbols, start_date, end_date, interval)
+        # elif data_source == "alpha_vantage":
+        #     data = self._fetch_alpha_vantage_data(symbols, start_date, end_date, interval)
+        elif data_source == "vnstock":
+            data = self._fetch_vnstock_data(symbols, start_date, end_date, interval)
         else:
             raise ValueError(f"Unsupported data source: {data_source}")
         
@@ -72,6 +75,7 @@ class DataManager:
         try:
             # Download data for all symbols
             tickers = yf.Tickers(' '.join(symbols))
+            # Only use start and end dates, no period parameter
             data = tickers.history(start=start_date, end=end_date, interval=interval)
             
             # Extract close prices for all symbols
@@ -89,110 +93,76 @@ class DataManager:
             logger.error(f"Error fetching data from Yahoo Finance: {e}")
             raise
     
-    def _fetch_alpha_vantage_data(self, symbols: List[str], start_date: str, 
-                                end_date: str, interval: str) -> pd.DataFrame:
-        """Fetch data from Alpha Vantage (placeholder)"""
-        # This would require Alpha Vantage API key
-        logger.warning("Alpha Vantage data source not implemented yet")
-        raise NotImplementedError("Alpha Vantage data source not implemented")
+    def _fetch_vnstock_data(self, symbols: List[str], start_date: str, 
+                           end_date: str, interval: str) -> pd.DataFrame:
+        """Fetch data from VNStock"""
+        try:
+            # Fetch data for each symbol
+            all_data = {}
+            for symbol in symbols:
+                try:
+                    data = Quote(symbol=symbol, source='tcbs').history(start=start_date, end=end_date, period=interval)
+                    if not data.empty:
+                        # Extract close prices
+                        all_data[symbol] = data['close']
+                    else:
+                        logger.warning(f"No data found for {symbol}")
+                        all_data[symbol] = pd.Series(dtype=float)
+                except Exception as e:
+                    logger.error(f"Error fetching data for {symbol}: {e}")
+                    all_data[symbol] = pd.Series(dtype=float)
+            
+            return pd.DataFrame(all_data)
+        except Exception as e:
+            logger.error(f"Error fetching data from VNStock: {e}")
+            raise
     
     def get_latest_price(self, symbol: str) -> Optional[float]:
         """Get latest price for a symbol"""
         try:
-            ticker = yf.Ticker(symbol)
-            latest_data = ticker.history(period="1d")
+            from datetime import datetime, timedelta
+            end_date = datetime.now().strftime('%Y-%m-%d')
+            start_date = (datetime.now() - timedelta(days=7)).strftime('%Y-%m-%d')
+            
+            ticker = Quote(symbol=symbol, source='tcbs')
+            latest_data = ticker.history(start=start_date, end=end_date, period="1d")
             if not latest_data.empty:
-                return latest_data['Close'].iloc[-1]
+                return latest_data['close'].iloc[-1]
             return None
         except Exception as e:
             logger.error(f"Error fetching latest price for {symbol}: {e}")
             return None
     
-    def get_real_time_data(self, symbols: List[str]) -> Dict[str, Dict[str, Any]]:
-        """Get real-time market data"""
-        real_time_data = {}
+    # def get_real_time_data(self, symbols: List[str]) -> Dict[str, Dict[str, Any]]:
+    #     """Get real-time market data"""
+    #     real_time_data = {}
         
-        for symbol in symbols:
-            try:
-                ticker = yf.Ticker(symbol)
-                info = ticker.info
+    #     for symbol in symbols:
+    #         try:
+    #             ticker = yf.Ticker(symbol)
+    #             info = ticker.info
                 
-                real_time_data[symbol] = {
-                    'price': info.get('regularMarketPrice', 0),
-                    'volume': info.get('volume', 0),
-                    'market_cap': info.get('marketCap', 0),
-                    'pe_ratio': info.get('trailingPE', 0),
-                    'dividend_yield': info.get('dividendYield', 0),
-                    'timestamp': datetime.now()
-                }
-            except Exception as e:
-                logger.error(f"Error fetching real-time data for {symbol}: {e}")
-                real_time_data[symbol] = {
-                    'price': 0,
-                    'volume': 0,
-                    'market_cap': 0,
-                    'pe_ratio': 0,
-                    'dividend_yield': 0,
-                    'timestamp': datetime.now()
-                }
+    #             real_time_data[symbol] = {
+    #                 'price': info.get('regularMarketPrice', 0),
+    #                 'volume': info.get('volume', 0),
+    #                 'market_cap': info.get('marketCap', 0),
+    #                 'pe_ratio': info.get('trailingPE', 0),
+    #                 'dividend_yield': info.get('dividendYield', 0),
+    #                 'timestamp': datetime.now()
+    #             }
+    #         except Exception as e:
+    #             logger.error(f"Error fetching real-time data for {symbol}: {e}")
+    #             real_time_data[symbol] = {
+    #                 'price': 0,
+    #                 'volume': 0,
+    #                 'market_cap': 0,
+    #                 'pe_ratio': 0,
+    #                 'dividend_yield': 0,
+    #                 'timestamp': datetime.now()
+    #             }
         
-        return real_time_data
-    
-    def calculate_technical_indicators(self, data: pd.DataFrame) -> pd.DataFrame:
-        """Calculate technical indicators for the data"""
-        result = data.copy()
-        
-        for symbol in data.columns:
-            # Simple Moving Averages
-            result[f'{symbol}_SMA_20'] = data[symbol].rolling(window=20).mean()
-            result[f'{symbol}_SMA_50'] = data[symbol].rolling(window=50).mean()
-            
-            # Exponential Moving Averages
-            result[f'{symbol}_EMA_12'] = data[symbol].ewm(span=12).mean()
-            result[f'{symbol}_EMA_26'] = data[symbol].ewm(span=26).mean()
-            
-            # RSI
-            result[f'{symbol}_RSI'] = self._calculate_rsi(data[symbol])
-            
-            # MACD
-            macd, signal = self._calculate_macd(data[symbol])
-            result[f'{symbol}_MACD'] = macd
-            result[f'{symbol}_MACD_Signal'] = signal
-            
-            # Bollinger Bands
-            bb_upper, bb_lower = self._calculate_bollinger_bands(data[symbol])
-            result[f'{symbol}_BB_Upper'] = bb_upper
-            result[f'{symbol}_BB_Lower'] = bb_lower
-        
-        return result
-    
-    def _calculate_rsi(self, prices: pd.Series, period: int = 14) -> pd.Series:
-        """Calculate RSI indicator"""
-        delta = prices.diff()
-        gain = (delta.where(delta > 0, 0)).rolling(window=period).mean()
-        loss = (-delta.where(delta < 0, 0)).rolling(window=period).mean()
-        rs = gain / loss
-        rsi = 100 - (100 / (1 + rs))
-        return rsi
-    
-    def _calculate_macd(self, prices: pd.Series, fast: int = 12, 
-                       slow: int = 26, signal: int = 9) -> tuple:
-        """Calculate MACD indicator"""
-        ema_fast = prices.ewm(span=fast).mean()
-        ema_slow = prices.ewm(span=slow).mean()
-        macd = ema_fast - ema_slow
-        signal_line = macd.ewm(span=signal).mean()
-        return macd, signal_line
-    
-    def _calculate_bollinger_bands(self, prices: pd.Series, 
-                                 period: int = 20, std_dev: int = 2) -> tuple:
-        """Calculate Bollinger Bands"""
-        sma = prices.rolling(window=period).mean()
-        std = prices.rolling(window=period).std()
-        upper_band = sma + (std * std_dev)
-        lower_band = sma - (std * std_dev)
-        return upper_band, lower_band
-    
+    #     return real_time_data
+
     def validate_data(self, data: pd.DataFrame) -> bool:
         """Validate data quality"""
         if data.empty:

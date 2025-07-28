@@ -8,6 +8,7 @@ from typing import Dict, Any
 from loguru import logger
 
 from .base_strategy import BaseStrategy
+from ..indicators.macd import calculate_macd, calculate_macd_components
 
 
 class MACDStrategy(BaseStrategy):
@@ -34,30 +35,31 @@ class MACDStrategy(BaseStrategy):
         logger.info(f"MACD Strategy initialized: fast={self.fast_period}, "
                    f"slow={self.slow_period}, signal={self.signal_period}")
     
-    def generate_signals(self, data: pd.Series) -> Dict[str, str]:
+    def generate_signals(self, historical_data: pd.DataFrame, current_data: pd.Series) -> Dict[str, str]:
         """
         Generate trading signals based on MACD
         
         Args:
-            data: Series containing price data with MACD indicators
+            historical_data: Historical market data up to current point
+            current_data: Current day's market data
             
         Returns:
             Dict mapping symbol to signal ('buy', 'sell', 'hold')
         """
         signals = {}
         
-        # Extract symbols from data (assuming data has columns for each symbol)
-        if isinstance(data, pd.Series):
-            # Single symbol data
-            symbol = data.name if hasattr(data, 'name') else 'UNKNOWN'
-            signal = self._generate_signal_for_symbol(data, symbol)
-            signals[symbol] = signal
-        else:
-            # Multiple symbols data
-            for symbol in data.columns:
-                if isinstance(symbol, str) and not symbol.endswith('_MACD'):
-                    signal = self._generate_signal_for_symbol(data[symbol], symbol)
+        # Process each symbol
+        for symbol in historical_data.columns:
+            if isinstance(symbol, str) and not symbol.endswith('_MACD'):
+                # Get historical price data for this symbol
+                symbol_data = historical_data[symbol].dropna()
+                
+                min_periods = max(self.slow_period, self.signal_period) + self.confirmation_period
+                if len(symbol_data) >= min_periods:
+                    signal = self._generate_signal_for_symbol(symbol_data, symbol)
                     signals[symbol] = signal
+                else:
+                    signals[symbol] = 'hold'  # Not enough data
         
         return signals
     
@@ -135,20 +137,7 @@ class MACDStrategy(BaseStrategy):
     
     def _calculate_macd(self, prices: pd.Series) -> tuple:
         """Calculate MACD indicator components"""
-        # Calculate exponential moving averages
-        ema_fast = prices.ewm(span=self.fast_period).mean()
-        ema_slow = prices.ewm(span=self.slow_period).mean()
-        
-        # MACD line
-        macd_line = ema_fast - ema_slow
-        
-        # Signal line
-        signal_line = macd_line.ewm(span=self.signal_period).mean()
-        
-        # Histogram
-        histogram = macd_line - signal_line
-        
-        return macd_line, signal_line, histogram
+        return calculate_macd(prices, self.fast_period, self.slow_period, self.signal_period)
     
     def validate_config(self) -> bool:
         """Validate strategy configuration"""
@@ -168,14 +157,7 @@ class MACDStrategy(BaseStrategy):
     
     def get_indicators(self, price_data: pd.Series) -> Dict[str, pd.Series]:
         """Get strategy indicators for analysis"""
-        macd_line, signal_line, histogram = self._calculate_macd(price_data)
-        
-        return {
-            'macd_line': macd_line,
-            'signal_line': signal_line,
-            'histogram': histogram,
-            'zero_line': pd.Series([0] * len(price_data), index=price_data.index)
-        }
+        return calculate_macd_components(price_data, self.fast_period, self.slow_period, self.signal_period)
     
     def get_summary(self) -> Dict[str, Any]:
         """Get strategy summary with parameters"""

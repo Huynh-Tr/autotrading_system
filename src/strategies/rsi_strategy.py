@@ -8,6 +8,7 @@ from typing import Dict, Any
 from loguru import logger
 
 from .base_strategy import BaseStrategy
+from ..indicators.rsi import calculate_rsi, calculate_rsi_components
 
 
 class RSIStrategy(BaseStrategy):
@@ -36,30 +37,30 @@ class RSIStrategy(BaseStrategy):
         logger.info(f"RSI Strategy initialized: period={self.period}, "
                    f"overbought={self.overbought_threshold}, oversold={self.oversold_threshold}")
     
-    def generate_signals(self, data: pd.Series) -> Dict[str, str]:
+    def generate_signals(self, historical_data: pd.DataFrame, current_data: pd.Series) -> Dict[str, str]:
         """
         Generate trading signals based on RSI
         
         Args:
-            data: Series containing price data with RSI indicators
+            historical_data: Historical market data up to current point
+            current_data: Current day's market data
             
         Returns:
             Dict mapping symbol to signal ('buy', 'sell', 'hold')
         """
         signals = {}
         
-        # Extract symbols from data (assuming data has columns for each symbol)
-        if isinstance(data, pd.Series):
-            # Single symbol data
-            symbol = data.name if hasattr(data, 'name') else 'UNKNOWN'
-            signal = self._generate_signal_for_symbol(data, symbol)
-            signals[symbol] = signal
-        else:
-            # Multiple symbols data
-            for symbol in data.columns:
-                if isinstance(symbol, str) and not symbol.endswith('_RSI'):
-                    signal = self._generate_signal_for_symbol(data[symbol], symbol)
+        # Process each symbol
+        for symbol in historical_data.columns:
+            if isinstance(symbol, str) and not symbol.endswith('_RSI'):
+                # Get historical price data for this symbol
+                symbol_data = historical_data[symbol].dropna()
+                
+                if len(symbol_data) >= self.period + self.confirmation_period:
+                    signal = self._generate_signal_for_symbol(symbol_data, symbol)
                     signals[symbol] = signal
+                else:
+                    signals[symbol] = 'hold'  # Not enough data
         
         return signals
     
@@ -106,21 +107,7 @@ class RSIStrategy(BaseStrategy):
     
     def _calculate_rsi(self, prices: pd.Series, period: int = 14) -> pd.Series:
         """Calculate RSI indicator"""
-        delta = prices.diff()
-        
-        # Separate gains and losses
-        gains = delta.where(delta > 0, 0)
-        losses = -delta.where(delta < 0, 0)
-        
-        # Calculate average gains and losses
-        avg_gains = gains.rolling(window=period).mean()
-        avg_losses = losses.rolling(window=period).mean()
-        
-        # Calculate RS and RSI
-        rs = avg_gains / avg_losses
-        rsi = 100 - (100 / (1 + rs))
-        
-        return rsi
+        return calculate_rsi(prices, period)
     
     def validate_config(self) -> bool:
         """Validate strategy configuration"""
@@ -140,13 +127,7 @@ class RSIStrategy(BaseStrategy):
     
     def get_indicators(self, price_data: pd.Series) -> Dict[str, pd.Series]:
         """Get strategy indicators for analysis"""
-        rsi = self._calculate_rsi(price_data, self.period)
-        
-        return {
-            'rsi': rsi,
-            'overbought_line': pd.Series([self.overbought_threshold] * len(price_data), index=price_data.index),
-            'oversold_line': pd.Series([self.oversold_threshold] * len(price_data), index=price_data.index)
-        }
+        return calculate_rsi_components(price_data, self.period, self.overbought_threshold, self.oversold_threshold)
     
     def get_summary(self) -> Dict[str, Any]:
         """Get strategy summary with parameters"""

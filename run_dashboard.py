@@ -32,7 +32,15 @@ def main():
     
     if not os.path.exists(dashboard_path):
         print(f"❌ Dashboard file not found: {dashboard_path}")
+        print("Current directory:", os.getcwd())
+        print("Available files in dashboard/:", os.listdir("dashboard") if os.path.exists("dashboard") else "No dashboard directory")
         return False
+    
+    # Check if config file exists
+    config_path = os.path.join("config", "config.yaml")
+    if not os.path.exists(config_path):
+        print(f"⚠️ Warning: Config file not found: {config_path}")
+        print("The dashboard may not work correctly without a proper configuration file.")
     
     print("🌐 Starting Streamlit server...")
     print("📊 Dashboard will open in your browser at: http://localhost:8501")

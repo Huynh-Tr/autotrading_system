@@ -13,15 +13,21 @@ import sys
 import os
 
 # Add src to path
-sys.path.append(os.path.join(os.path.dirname(__file__), '..', 'src'))
+current_dir = os.path.dirname(os.path.abspath(__file__))
+project_root = os.path.dirname(current_dir)
+src_path = os.path.join(project_root, 'src')
+sys.path.insert(0, src_path)
 
 try:
-    from src.utils.config_manager import ConfigManager
-    from src.core.trading_engine import TradingEngine
-    from src.strategies.sma_crossover import SMACrossoverStrategy
+    from utils.config_manager import ConfigManager
+    from core.trading_engine import TradingEngine
+    from strategies.sma_crossover import SMACrossoverStrategy
+    from strategies.rsi_strategy import RSIStrategy
+    from strategies.macd_strategy import MACDStrategy
 except ImportError as e:
     st.error(f"Import error: {e}")
-    st.info("Please run the setup script first: python setup.py")
+    st.info("Please ensure all dependencies are installed: pip install -r requirements.txt")
+    st.info("Make sure you're running from the project root directory")
 
 # Page configuration
 st.set_page_config(
@@ -68,8 +74,13 @@ st.markdown("""
 def load_config():
     """Load configuration with caching"""
     try:
-        return ConfigManager("config/config.yaml")
-    except:
+        config_path = os.path.join(project_root, "config", "config.yaml")
+        if not os.path.exists(config_path):
+            st.error(f"Configuration file not found: {config_path}")
+            return None
+        return ConfigManager(config_path)
+    except Exception as e:
+        st.error(f"Error loading config: {e}")
         return None
 
 @st.cache_data
@@ -164,10 +175,75 @@ def get_mock_trades_data():
         }
     ]
 
+def run_backtest_from_dashboard(config, strategy_name):
+    """Run backtest from dashboard and return results"""
+    try:
+        # Initialize trading engine
+        config_path = os.path.join(project_root, "config", "config.yaml")
+        engine = TradingEngine(config_path)
+        
+        # Map dashboard strategy names to actual strategy names
+        strategy_mapping = {
+            "sma_crossover": "sma_crossover",
+            "rsi_strategy": "rsi", 
+            "macd_strategy": "macd"
+        }
+        
+        actual_strategy_name = strategy_mapping.get(strategy_name, strategy_name)
+        
+        # Add strategy based on selection
+        if actual_strategy_name == "sma_crossover":
+            strategy_config = config.get("strategies.sma_crossover", {})
+            strategy = SMACrossoverStrategy(strategy_config)
+            engine.add_strategy(strategy)
+        elif actual_strategy_name == "rsi":
+            strategy_config = config.get("strategies.rsi", {})
+            strategy = RSIStrategy(strategy_config)
+            engine.add_strategy(strategy)
+        elif actual_strategy_name == "macd":
+            strategy_config = config.get("strategies.macd", {})
+            strategy = MACDStrategy(strategy_config)
+            engine.add_strategy(strategy)
+        else:
+            return {"error": f"Unknown strategy: {strategy_name}"}
+        
+        # Get backtest parameters from config
+        start_date = config.get("data.start_date", "2024-01-01")
+        end_date = config.get("data.end_date", "2024-05-31")  # Use valid date range
+        
+        # Run backtest
+        engine.run_backtest(start_date, end_date)
+        
+        # Get results
+        portfolio_summary = engine.get_portfolio_summary()
+        
+        return {
+            'portfolio_summary': portfolio_summary,
+            'portfolio_history': engine.portfolio_history,
+            'trades': engine.trades,
+            'strategy': strategy_name,
+            'start_date': start_date,
+            'end_date': end_date
+        }
+        
+    except Exception as e:
+        import traceback
+        error_msg = f"Backtest error: {str(e)}\nFull traceback: {traceback.format_exc()}"
+        return {"error": error_msg}
+
 @st.cache_data
 def get_mock_portfolio_history():
     """Get mock portfolio history for charts"""
-    dates = pd.date_range(start='2023-01-01', end='2024-01-15', freq='D')
+    # Load config to get date range
+    config = load_config()
+    if config:
+        start_date = config.get("data.start_date", "2024-01-01")
+        end_date = config.get("data.end_date", "2024-05-31")  # Use valid date range
+    else:
+        start_date = "2024-01-01"
+        end_date = "2024-05-31"
+    
+    dates = pd.date_range(start=start_date, end=end_date, freq='D')
     np.random.seed(42)
     
     # Generate realistic portfolio values
@@ -215,7 +291,7 @@ def main():
         # Strategy selection
         strategy = st.selectbox(
             "Active Strategy",
-            ["SMA Crossover", "RSI Strategy", "MACD Strategy"],
+            ["sma_crossover", "rsi_strategy", "macd_strategy"],
             index=0
         )
         
@@ -232,7 +308,26 @@ def main():
         
         with col2:
             if st.button("📊 Run Backtest"):
-                st.info("Backtest started...")
+                with st.spinner("Running backtest..."):
+                    try:
+                        # Load config for backtest
+                        backtest_config = load_config()
+                        if backtest_config:
+                            # Run backtest
+                            backtest_results = run_backtest_from_dashboard(backtest_config, strategy.lower().replace(" ", "_"))
+                            
+                            if backtest_results and "error" not in backtest_results:
+                                st.success("✅ Backtest completed successfully!")
+                                st.session_state.backtest_results = backtest_results
+                                st.rerun()
+                            elif backtest_results and "error" in backtest_results:
+                                st.error(f"❌ Backtest failed: {backtest_results['error']}")
+                            else:
+                                st.error("❌ Backtest failed. Check logs for details.")
+                        else:
+                            st.error("❌ Could not load configuration")
+                    except Exception as e:
+                        st.error(f"❌ Backtest error: {str(e)}")
         
         st.divider()
         
@@ -244,80 +339,279 @@ def main():
     
     # Load data
     config = load_config()
+    
+    if config is None:
+        st.error("❌ Failed to load configuration. Please check your config file.")
+        st.stop()
+    
     portfolio_data = get_mock_portfolio_data()
     performance_data = get_mock_performance_data()
     trades_data = get_mock_trades_data()
     portfolio_history = get_mock_portfolio_history()
     
     # Main content
-    tab1, tab2, tab3, tab4 = st.tabs(["📊 Overview", "📈 Performance", "💼 Positions", "📋 Trades"])
+    tab1, tab2, tab3, tab4, tab5 = st.tabs(["📊 Overview", "📈 Performance", "💼 Positions", "📋 Trades", "🧪 Backtest Results"])
+    
+    # Display backtest results if available
+    if 'backtest_results' in st.session_state and st.session_state.backtest_results:
+        with tab5:
+            st.header("🧪 Backtest Results")
+            
+            results = st.session_state.backtest_results
+            portfolio_summary = results['portfolio_summary']
+            
+            # Display key metrics
+            col1, col2, col3, col4 = st.columns(4)
+            
+            with col1:
+                st.metric(
+                    label="Final Portfolio Value",
+                    value=f"${portfolio_summary.get('portfolio_value', 0):,.0f}",
+                    delta=f"${portfolio_summary.get('portfolio_value', 0) - 100000:,.0f}"
+                )
+            
+            with col2:
+                st.metric(
+                    label="Cash",
+                    value=f"${portfolio_summary.get('cash', 0):,.0f}",
+                    delta="Available cash"
+                )
+            
+            with col3:
+                st.metric(
+                    label="Total Trades",
+                    value=f"{portfolio_summary.get('total_trades', 0)}",
+                    delta="Completed trades"
+                )
+            
+            with col4:
+                st.metric(
+                    label="Positions",
+                    value=f"{len(portfolio_summary.get('positions', {}))}",
+                    delta="Active positions"
+                )
+            
+            # Display strategy info
+            st.subheader("📋 Strategy Information")
+            col1, col2 = st.columns(2)
+            
+            with col1:
+                st.write(f"**Strategy:** {results['strategy']}")
+                st.write(f"**Start Date:** {results['start_date']}")
+                st.write(f"**End Date:** {results['end_date']}")
+            
+            with col2:
+                st.write(f"**Total Trades:** {len(results.get('trades', []))}")
+                st.write(f"**Win Rate:** {portfolio_summary.get('win_rate', 0)*100:.1f}%")
+                st.write(f"**Profit Factor:** {portfolio_summary.get('profit_factor', 0):.2f}")
+            
+            # Display portfolio history chart
+            if results.get('portfolio_history'):
+                st.subheader("📈 Portfolio Performance")
+                
+                history_df = pd.DataFrame(results['portfolio_history'])
+                
+                fig = go.Figure()
+                fig.add_trace(go.Scatter(
+                    x=history_df['date'],
+                    y=history_df['portfolio_value'],
+                    mode='lines',
+                    name='Portfolio Value',
+                    line=dict(color='#1f77b4', width=2)
+                ))
+                
+                fig.update_layout(
+                    title="Backtest Portfolio Performance",
+                    xaxis_title="Date",
+                    yaxis_title="Portfolio Value ($)",
+                    height=400
+                )
+                
+                st.plotly_chart(fig, use_container_width=True)
+            
+            # Display recent trades
+            if results.get('trades'):
+                st.subheader("📋 Recent Trades")
+                
+                # Convert Trade objects to DataFrame
+                trades_data = []
+                for trade in results['trades']:
+                    trades_data.append({
+                        'symbol': trade.symbol,
+                        'side': trade.side,
+                        'quantity': trade.quantity,
+                        'price': trade.price,
+                        'commission': trade.commission,
+                        'timestamp': trade.timestamp,
+                        'strategy': trade.strategy
+                    })
+                
+                if trades_data:
+                    trades_df = pd.DataFrame(trades_data)
+                    # Format trades for display
+                    display_trades = trades_df.copy()
+                    display_trades['Price'] = display_trades['price'].apply(lambda x: f"${x:.2f}")
+                    display_trades['Commission'] = display_trades['commission'].apply(lambda x: f"${x:.2f}")
+                    display_trades['Timestamp'] = display_trades['timestamp'].apply(lambda x: x.strftime('%Y-%m-%d %H:%M'))
+                    
+                    # Select columns to display
+                    display_cols = ['symbol', 'side', 'quantity', 'Price', 'Commission', 'Timestamp']
+                    st.dataframe(display_trades[display_cols], use_container_width=True)
+                else:
+                    st.info("No trades executed during backtest")
     
     with tab1:
         # Portfolio Overview
         st.header("💰 Portfolio Overview")
         
-        # Key metrics
-        col1, col2, col3, col4 = st.columns(4)
-        
-        with col1:
-            st.metric(
-                label="Total Portfolio Value",
-                value=f"${portfolio_data['total_value']:,.0f}",
-                delta=f"${portfolio_data['total_pnl']:,.0f} ({portfolio_data['total_pnl']/100000*100:.1f}%)"
-            )
-        
-        with col2:
-            st.metric(
-                label="Available Cash",
-                value=f"${portfolio_data['cash']:,.0f}",
-                delta="Available for trading"
-            )
-        
-        with col3:
-            st.metric(
-                label="Daily P&L",
-                value=f"${portfolio_data['daily_pnl']:,.0f}",
-                delta=f"{portfolio_data['daily_pnl']/portfolio_data['total_value']*100:.2f}%"
-            )
-        
-        with col4:
-            st.metric(
-                label="Total Trades",
-                value=performance_data['total_trades'],
-                delta=f"Win Rate: {performance_data['win_rate']*100:.0f}%"
-            )
+        # Use backtest results if available, otherwise use mock data
+        if 'backtest_results' in st.session_state and st.session_state.backtest_results:
+            results = st.session_state.backtest_results
+            portfolio_summary = results['portfolio_summary']
+            
+            # Calculate daily P&L from portfolio history
+            if results.get('portfolio_history'):
+                history_df = pd.DataFrame(results['portfolio_history'])
+                if len(history_df) > 1:
+                    latest_value = history_df['portfolio_value'].iloc[-1]
+                    previous_value = history_df['portfolio_value'].iloc[-2]
+                    daily_pnl = latest_value - previous_value
+                else:
+                    daily_pnl = 0
+            else:
+                daily_pnl = 0
+            
+            # Key metrics from backtest results
+            col1, col2, col3, col4 = st.columns(4)
+            
+            with col1:
+                st.metric(
+                    label="Total Portfolio Value",
+                    value=f"${portfolio_summary.get('portfolio_value', 0):,.0f}",
+                    delta=f"${portfolio_summary.get('portfolio_value', 0) - 100000:,.0f} ({(portfolio_summary.get('portfolio_value', 0) - 100000)/100000*100:.1f}%)"
+                )
+            
+            with col2:
+                st.metric(
+                    label="Available Cash",
+                    value=f"${portfolio_summary.get('cash', 0):,.0f}",
+                    delta="Available for trading"
+                )
+            
+            with col3:
+                st.metric(
+                    label="Daily P&L",
+                    value=f"${daily_pnl:,.0f}",
+                    delta=f"{daily_pnl/portfolio_summary.get('portfolio_value', 1)*100:.2f}%"
+                )
+            
+            with col4:
+                st.metric(
+                    label="Total Trades",
+                    value=len(results.get('trades', [])),
+                    delta=f"Total trades executed"
+                )
+        else:
+            # Use mock data if no backtest results
+            col1, col2, col3, col4 = st.columns(4)
+            
+            with col1:
+                st.metric(
+                    label="Total Portfolio Value",
+                    value=f"${portfolio_data['total_value']:,.0f}",
+                    delta=f"${portfolio_data['total_pnl']:,.0f} ({portfolio_data['total_pnl']/100000*100:.1f}%)"
+                )
+            
+            with col2:
+                st.metric(
+                    label="Available Cash",
+                    value=f"${portfolio_data['cash']:,.0f}",
+                    delta="Available for trading"
+                )
+            
+            with col3:
+                st.metric(
+                    label="Daily P&L",
+                    value=f"${portfolio_data['daily_pnl']:,.0f}",
+                    delta=f"{portfolio_data['daily_pnl']/portfolio_data['total_value']*100:.2f}%"
+                )
+            
+            with col4:
+                st.metric(
+                    label="Total Trades",
+                    value=performance_data['total_trades'],
+                    delta=f"Win Rate: {performance_data['win_rate']*100:.0f}%"
+                )
         
         # Portfolio Performance Chart
         st.subheader("📈 Portfolio Performance")
         
-        fig = go.Figure()
-        
-        fig.add_trace(go.Scatter(
-            x=portfolio_history['date'],
-            y=portfolio_history['portfolio_value'],
-            mode='lines',
-            name='Portfolio Value',
-            line=dict(color='#1f77b4', width=2),
-            fill='tonexty'
-        ))
-        
-        fig.add_trace(go.Scatter(
-            x=portfolio_history['date'],
-            y=portfolio_history['cash'],
-            mode='lines',
-            name='Cash',
-            line=dict(color='#ff7f0e', width=2)
-        ))
-        
-        fig.update_layout(
-            title="Portfolio Value Over Time",
-            xaxis_title="Date",
-            yaxis_title="Value ($)",
-            hovermode='x unified',
-            height=400
-        )
-        
-        st.plotly_chart(fig, use_container_width=True)
+        if 'backtest_results' in st.session_state and st.session_state.backtest_results:
+            # Use real backtest data
+            results = st.session_state.backtest_results
+            if results.get('portfolio_history'):
+                history_df = pd.DataFrame(results['portfolio_history'])
+                
+                fig = go.Figure()
+                
+                fig.add_trace(go.Scatter(
+                    x=history_df['date'],
+                    y=history_df['portfolio_value'],
+                    mode='lines',
+                    name='Portfolio Value',
+                    line=dict(color='#1f77b4', width=2),
+                    fill='tonexty'
+                ))
+                
+                fig.add_trace(go.Scatter(
+                    x=history_df['date'],
+                    y=history_df['cash'],
+                    mode='lines',
+                    name='Cash',
+                    line=dict(color='#ff7f0e', width=2)
+                ))
+                
+                fig.update_layout(
+                    title="Backtest Portfolio Performance",
+                    xaxis_title="Date",
+                    yaxis_title="Value ($)",
+                    hovermode='x unified',
+                    height=400
+                )
+                
+                st.plotly_chart(fig, use_container_width=True)
+            else:
+                st.info("No portfolio history available from backtest")
+        else:
+            # Use mock data
+            fig = go.Figure()
+            
+            fig.add_trace(go.Scatter(
+                x=portfolio_history['date'],
+                y=portfolio_history['portfolio_value'],
+                mode='lines',
+                name='Portfolio Value',
+                line=dict(color='#1f77b4', width=2),
+                fill='tonexty'
+            ))
+            
+            fig.add_trace(go.Scatter(
+                x=portfolio_history['date'],
+                y=portfolio_history['cash'],
+                mode='lines',
+                name='Cash',
+                line=dict(color='#ff7f0e', width=2)
+            ))
+            
+            fig.update_layout(
+                title="Portfolio Value Over Time",
+                xaxis_title="Date",
+                yaxis_title="Value ($)",
+                hovermode='x unified',
+                height=400
+            )
+            
+            st.plotly_chart(fig, use_container_width=True)
         
         # Recent Activity
         col1, col2 = st.columns(2)
@@ -325,40 +619,84 @@ def main():
         with col1:
             st.subheader("📊 Performance Metrics")
             
-            metrics_df = pd.DataFrame([
-                ["Total Return", f"{performance_data['total_return']*100:.2f}%"],
-                ["Sharpe Ratio", f"{performance_data['sharpe_ratio']:.2f}"],
-                ["Max Drawdown", f"{performance_data['max_drawdown']*100:.2f}%"],
-                ["Volatility", f"{performance_data['volatility']*100:.2f}%"],
-                ["Win Rate", f"{performance_data['win_rate']*100:.0f}%"],
-                ["Avg Trade Duration", f"{performance_data['avg_trade_duration']:.1f} days"]
-            ], columns=["Metric", "Value"])
-            
-            st.dataframe(metrics_df, hide_index=True, use_container_width=True)
+            if 'backtest_results' in st.session_state and st.session_state.backtest_results:
+                # Use real backtest data
+                results = st.session_state.backtest_results
+                portfolio_summary = results['portfolio_summary']
+                
+                metrics_df = pd.DataFrame([
+                    ["Total Return", f"{portfolio_summary.get('total_return', 0)*100:.2f}%"],
+                    ["Sharpe Ratio", f"{portfolio_summary.get('sharpe_ratio', 0):.2f}"],
+                    ["Max Drawdown", f"{portfolio_summary.get('max_drawdown', 0)*100:.2f}%"],
+                    ["Volatility", f"{portfolio_summary.get('volatility', 0)*100:.2f}%"],
+                    ["Win Rate", f"{portfolio_summary.get('win_rate', 0)*100:.0f}%"],
+                    ["Total Trades", f"{len(results.get('trades', []))}"]
+                ], columns=["Metric", "Value"])
+                
+                st.dataframe(metrics_df, hide_index=True, use_container_width=True)
+            else:
+                # Use mock data
+                metrics_df = pd.DataFrame([
+                    ["Total Return", f"{performance_data['total_return']*100:.2f}%"],
+                    ["Sharpe Ratio", f"{performance_data['sharpe_ratio']:.2f}"],
+                    ["Max Drawdown", f"{performance_data['max_drawdown']*100:.2f}%"],
+                    ["Volatility", f"{performance_data['volatility']*100:.2f}%"],
+                    ["Win Rate", f"{performance_data['win_rate']*100:.0f}%"],
+                    ["Avg Trade Duration", f"{performance_data['avg_trade_duration']:.1f} days"]
+                ], columns=["Metric", "Value"])
+                
+                st.dataframe(metrics_df, hide_index=True, use_container_width=True)
         
         with col2:
             st.subheader("🎯 Risk Metrics")
             
-            # Risk gauge charts
-            fig = make_subplots(
-                rows=2, cols=2,
-                specs=[[{"type": "indicator"}, {"type": "indicator"}],
-                       [{"type": "indicator"}, {"type": "indicator"}]],
-                subplot_titles=("Sharpe Ratio", "Max Drawdown", "Win Rate", "Volatility")
-            )
-            
-            # Sharpe Ratio gauge
-            fig.add_trace(go.Indicator(
-                mode="gauge+number",
-                value=performance_data['sharpe_ratio'],
-                domain={'x': [0, 1], 'y': [0, 1]},
-                title={'text': "Sharpe"},
-                gauge={'axis': {'range': [None, 3]},
-                       'bar': {'color': "darkblue"},
-                       'steps': [{'range': [0, 1], 'color': "lightgray"},
-                                {'range': [1, 2], 'color': "yellow"},
-                                {'range': [2, 3], 'color': "green"}]}
-            ), row=1, col=1)
+            if 'backtest_results' in st.session_state and st.session_state.backtest_results:
+                # Use real backtest data
+                results = st.session_state.backtest_results
+                portfolio_summary = results['portfolio_summary']
+                
+                # Risk gauge charts
+                fig = make_subplots(
+                    rows=2, cols=2,
+                    specs=[[{"type": "indicator"}, {"type": "indicator"}],
+                           [{"type": "indicator"}, {"type": "indicator"}]],
+                    subplot_titles=("Sharpe Ratio", "Max Drawdown", "Win Rate", "Volatility")
+                )
+                
+                # Sharpe Ratio gauge
+                fig.add_trace(go.Indicator(
+                    mode="gauge+number",
+                    value=portfolio_summary.get('sharpe_ratio', 0),
+                    domain={'x': [0, 1], 'y': [0, 1]},
+                    title={'text': "Sharpe"},
+                    gauge={'axis': {'range': [None, 3]},
+                           'bar': {'color': "darkblue"},
+                           'steps': [{'range': [0, 1], 'color': "lightgray"},
+                                    {'range': [1, 2], 'color': "yellow"},
+                                    {'range': [2, 3], 'color': "green"}]}
+                ), row=1, col=1)
+            else:
+                # Use mock data
+                # Risk gauge charts
+                fig = make_subplots(
+                    rows=2, cols=2,
+                    specs=[[{"type": "indicator"}, {"type": "indicator"}],
+                           [{"type": "indicator"}, {"type": "indicator"}]],
+                    subplot_titles=("Sharpe Ratio", "Max Drawdown", "Win Rate", "Volatility")
+                )
+                
+                # Sharpe Ratio gauge
+                fig.add_trace(go.Indicator(
+                    mode="gauge+number",
+                    value=performance_data['sharpe_ratio'],
+                    domain={'x': [0, 1], 'y': [0, 1]},
+                    title={'text': "Sharpe"},
+                    gauge={'axis': {'range': [None, 3]},
+                           'bar': {'color': "darkblue"},
+                           'steps': [{'range': [0, 1], 'color': "lightgray"},
+                                    {'range': [1, 2], 'color': "yellow"},
+                                    {'range': [2, 3], 'color': "green"}]}
+                ), row=1, col=1)
             
             # Max Drawdown gauge
             fig.add_trace(go.Indicator(
@@ -428,7 +766,17 @@ def main():
             
             # Generate cumulative returns
             cumulative_returns = (1 + pd.Series(returns)).cumprod()
-            dates = pd.date_range(start='2023-01-01', periods=len(cumulative_returns), freq='D')
+            
+            # Load config to get date range
+            config = load_config()
+            if config:
+                start_date = config.get("data.start_date", "2024-01-01")
+                end_date = config.get("data.end_date", "2025-05-31")
+            else:
+                start_date = "2024-01-01"
+                end_date = "2025-05-31"
+            
+            dates = pd.date_range(start=start_date, periods=len(cumulative_returns), freq='D')
             
             fig = go.Figure()
             fig.add_trace(go.Scatter(

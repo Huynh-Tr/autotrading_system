@@ -94,3 +94,722 @@
 2025-07-27 10:21:19 | INFO     | src.data.data_manager:get_historical_data:33 - Fetching historical data for ['AAPL', 'GOOGL', 'MSFT', 'TSLA'] from 2023-01-01 to 2024-01-01
 2025-07-27 10:21:19 | INFO     | src.data.data_manager:get_historical_data:43 - Data loaded from cache
 2025-07-27 10:21:19 | INFO     | __main__:run_backtest:80 - Backtest completed
+2025-07-28 14:00:14 | INFO     | src.utils.config_manager:__init__:18 - Configuration loaded from config/config.yaml
+2025-07-28 14:00:14 | INFO     | src.risk.risk_manager:__init__:31 - Risk manager initialized
+2025-07-28 14:00:14 | INFO     | src.core.trading_engine:__init__:66 - Trading engine initialized with $100,000.00 initial capital
+2025-07-28 14:00:14 | INFO     | src.strategies.base_strategy:__init__:21 - Initialized strategy: sma_crossover
+2025-07-28 14:00:14 | INFO     | src.strategies.sma_crossover:__init__:28 - SMA Crossover Strategy initialized: 20/50
+2025-07-28 14:00:14 | INFO     | src.core.trading_engine:add_strategy:71 - Added strategy: sma_crossover
+2025-07-28 14:00:14 | INFO     | src.core.trading_engine:run_backtest:75 - Starting backtest from 2024-01-01 to 2025-01-01
+2025-07-28 14:00:14 | INFO     | src.data.data_manager:get_historical_data:33 - Fetching historical data for ['AAPL', 'GOOGL', 'MSFT', 'TSLA'] from 2024-01-01 to 2025-01-01
+2025-07-28 14:00:20 | WARNING  | src.data.data_manager:_fetch_yfinance_data:83 - No data found for AAPL
+2025-07-28 14:00:20 | WARNING  | src.data.data_manager:_fetch_yfinance_data:83 - No data found for GOOGL
+2025-07-28 14:00:20 | WARNING  | src.data.data_manager:_fetch_yfinance_data:83 - No data found for MSFT
+2025-07-28 14:00:20 | WARNING  | src.data.data_manager:_fetch_yfinance_data:83 - No data found for TSLA
+2025-07-28 14:00:20 | INFO     | src.data.data_manager:get_historical_data:63 - Data cached successfully
+2025-07-28 14:00:20 | INFO     | __main__:run_backtest:80 - Backtest completed
+2025-07-28 14:03:23 | INFO     | src.utils.config_manager:__init__:18 - Configuration loaded from config/config.yaml
+2025-07-28 14:03:23 | INFO     | src.risk.risk_manager:__init__:31 - Risk manager initialized
+2025-07-28 14:03:23 | INFO     | src.core.trading_engine:__init__:66 - Trading engine initialized with $100,000.00 initial capital
+2025-07-28 14:03:23 | INFO     | src.strategies.base_strategy:__init__:21 - Initialized strategy: sma_crossover
+2025-07-28 14:03:23 | INFO     | src.strategies.sma_crossover:__init__:28 - SMA Crossover Strategy initialized: 20/50
+2025-07-28 14:03:23 | INFO     | src.core.trading_engine:add_strategy:71 - Added strategy: sma_crossover
+2025-07-28 14:03:23 | INFO     | src.core.trading_engine:run_backtest:75 - Starting backtest from 2023-01-01 to 2024-01-01
+2025-07-28 14:03:23 | INFO     | src.data.data_manager:get_historical_data:33 - Fetching historical data for ['AAPL', 'GOOGL', 'MSFT', 'TSLA'] from 2023-01-01 to 2024-01-01
+2025-07-28 14:03:24 | INFO     | src.data.data_manager:get_historical_data:43 - Data loaded from cache
+2025-07-28 14:03:24 | INFO     | __main__:run_backtest:80 - Backtest completed
+2025-07-28 14:13:34 | INFO     | src.utils.config_manager:__init__:18 - Configuration loaded from config/config.yaml
+2025-07-28 14:13:34 | INFO     | src.risk.risk_manager:__init__:31 - Risk manager initialized
+2025-07-28 14:13:34 | INFO     | src.core.trading_engine:__init__:66 - Trading engine initialized with $100,000.00 initial capital
+2025-07-28 14:13:34 | INFO     | src.strategies.base_strategy:__init__:21 - Initialized strategy: sma_crossover
+2025-07-28 14:13:34 | INFO     | src.strategies.sma_crossover:__init__:29 - SMA Crossover Strategy initialized: 20/50
+2025-07-28 14:13:34 | INFO     | src.core.trading_engine:add_strategy:71 - Added strategy: sma_crossover
+2025-07-28 14:13:34 | INFO     | src.core.trading_engine:run_backtest:75 - Starting backtest from 2023-01-01 to 2024-01-01
+2025-07-28 14:13:34 | INFO     | src.data.data_manager:get_historical_data:37 - Fetching historical data for ['AAPL', 'GOOGL', 'MSFT', 'TSLA'] from 2023-01-01 to 2024-01-01
+2025-07-28 14:13:34 | INFO     | src.data.data_manager:get_historical_data:47 - Data loaded from cache
+2025-07-28 14:13:34 | INFO     | __main__:run_backtest:80 - Backtest completed
+2025-07-28 16:22:05 | INFO     | src.utils.config_manager:__init__:18 - Configuration loaded from config/config.yaml
+2025-07-28 16:22:05 | INFO     | src.risk.risk_manager:__init__:31 - Risk manager initialized
+2025-07-28 16:22:05 | INFO     | src.core.trading_engine:__init__:66 - Trading engine initialized with $100,000.00 initial capital
+2025-07-28 16:22:05 | INFO     | src.strategies.base_strategy:__init__:21 - Initialized strategy: sma_crossover
+2025-07-28 16:22:05 | INFO     | src.strategies.sma_crossover:__init__:29 - SMA Crossover Strategy initialized: 20/50
+2025-07-28 16:22:05 | INFO     | src.core.trading_engine:add_strategy:71 - Added strategy: sma_crossover
+2025-07-28 16:22:05 | INFO     | src.core.trading_engine:run_backtest:75 - Starting backtest from 2023-01-01 to 2024-01-01
+2025-07-28 16:22:05 | INFO     | src.data.data_manager:get_historical_data:34 - Fetching historical data for ['AAPL', 'GOOGL', 'MSFT', 'TSLA'] from 2023-01-01 to 2024-01-01
+2025-07-28 16:22:05 | INFO     | src.data.data_manager:get_historical_data:44 - Data loaded from cache
+2025-07-28 16:22:05 | INFO     | __main__:run_backtest:80 - Backtest completed
+2025-07-28 16:22:29 | INFO     | src.utils.config_manager:__init__:18 - Configuration loaded from config/config.yaml
+2025-07-28 16:22:29 | INFO     | src.risk.risk_manager:__init__:31 - Risk manager initialized
+2025-07-28 16:22:29 | INFO     | src.core.trading_engine:__init__:66 - Trading engine initialized with $100,000.00 initial capital
+2025-07-28 16:22:29 | INFO     | src.strategies.base_strategy:__init__:21 - Initialized strategy: sma_crossover
+2025-07-28 16:22:29 | INFO     | src.strategies.sma_crossover:__init__:29 - SMA Crossover Strategy initialized: 20/50
+2025-07-28 16:22:29 | INFO     | src.core.trading_engine:add_strategy:71 - Added strategy: sma_crossover
+2025-07-28 16:22:29 | INFO     | src.core.trading_engine:run_backtest:75 - Starting backtest from 2023-01-01 to 2024-01-01
+2025-07-28 16:22:29 | INFO     | src.data.data_manager:get_historical_data:34 - Fetching historical data for ['AAPL', 'GOOGL', 'MSFT', 'TSLA'] from 2023-01-01 to 2024-01-01
+2025-07-28 16:22:29 | INFO     | src.data.data_manager:get_historical_data:44 - Data loaded from cache
+2025-07-28 16:22:29 | INFO     | __main__:run_backtest:80 - Backtest completed
+2025-07-28 16:22:40 | INFO     | src.utils.config_manager:__init__:18 - Configuration loaded from config/config.yaml
+2025-07-28 16:22:40 | INFO     | src.risk.risk_manager:__init__:31 - Risk manager initialized
+2025-07-28 16:22:40 | INFO     | src.core.trading_engine:__init__:66 - Trading engine initialized with $100,000.00 initial capital
+2025-07-28 16:22:40 | INFO     | src.strategies.base_strategy:__init__:21 - Initialized strategy: sma_crossover
+2025-07-28 16:22:40 | INFO     | src.strategies.sma_crossover:__init__:29 - SMA Crossover Strategy initialized: 20/50
+2025-07-28 16:22:40 | INFO     | src.core.trading_engine:add_strategy:71 - Added strategy: sma_crossover
+2025-07-28 16:22:40 | INFO     | src.core.trading_engine:run_backtest:75 - Starting backtest from 2024-01-01 to 2025-01-01
+2025-07-28 16:22:40 | INFO     | src.data.data_manager:get_historical_data:34 - Fetching historical data for ['AAPL', 'GOOGL', 'MSFT', 'TSLA'] from 2024-01-01 to 2025-01-01
+2025-07-28 16:22:42 | WARNING  | src.data.data_manager:_fetch_yfinance_data:84 - No data found for AAPL
+2025-07-28 16:22:42 | WARNING  | src.data.data_manager:_fetch_yfinance_data:84 - No data found for GOOGL
+2025-07-28 16:22:42 | WARNING  | src.data.data_manager:_fetch_yfinance_data:84 - No data found for MSFT
+2025-07-28 16:22:42 | WARNING  | src.data.data_manager:_fetch_yfinance_data:84 - No data found for TSLA
+2025-07-28 16:22:42 | INFO     | src.data.data_manager:get_historical_data:64 - Data cached successfully
+2025-07-28 16:22:42 | INFO     | __main__:run_backtest:80 - Backtest completed
+2025-07-28 16:29:01 | INFO     | src.utils.config_manager:__init__:18 - Configuration loaded from config/config.yaml
+2025-07-28 16:29:01 | INFO     | src.risk.risk_manager:__init__:31 - Risk manager initialized
+2025-07-28 16:29:01 | INFO     | src.core.trading_engine:__init__:66 - Trading engine initialized with $100,000.00 initial capital
+2025-07-28 16:29:01 | INFO     | src.strategies.base_strategy:__init__:21 - Initialized strategy: sma_crossover
+2025-07-28 16:29:01 | INFO     | src.strategies.sma_crossover:__init__:29 - SMA Crossover Strategy initialized: 20/50
+2025-07-28 16:29:01 | INFO     | src.core.trading_engine:add_strategy:71 - Added strategy: sma_crossover
+2025-07-28 16:29:01 | INFO     | src.core.trading_engine:run_backtest:75 - Starting backtest from 2024-01-01 to 2025-05-31
+2025-07-28 16:29:01 | INFO     | src.data.data_manager:get_historical_data:34 - Fetching historical data for ['AAPL', 'GOOGL', 'MSFT', 'TSLA'] from 2024-01-01 to 2025-05-31
+2025-07-28 16:29:01 | WARNING  | src.data.data_manager:_fetch_yfinance_data:84 - No data found for AAPL
+2025-07-28 16:29:01 | WARNING  | src.data.data_manager:_fetch_yfinance_data:84 - No data found for GOOGL
+2025-07-28 16:29:01 | WARNING  | src.data.data_manager:_fetch_yfinance_data:84 - No data found for MSFT
+2025-07-28 16:29:01 | WARNING  | src.data.data_manager:_fetch_yfinance_data:84 - No data found for TSLA
+2025-07-28 16:29:01 | INFO     | src.data.data_manager:get_historical_data:64 - Data cached successfully
+2025-07-28 16:29:01 | INFO     | __main__:run_backtest:80 - Backtest completed
+2025-07-28 16:39:24 | INFO     | src.utils.config_manager:__init__:18 - Configuration loaded from config/config.yaml
+2025-07-28 16:39:24 | INFO     | src.risk.risk_manager:__init__:31 - Risk manager initialized
+2025-07-28 16:39:24 | INFO     | src.core.trading_engine:__init__:66 - Trading engine initialized with $100,000.00 initial capital
+2025-07-28 16:39:24 | INFO     | src.strategies.base_strategy:__init__:21 - Initialized strategy: sma_crossover
+2025-07-28 16:39:24 | INFO     | src.strategies.sma_crossover:__init__:29 - SMA Crossover Strategy initialized: 20/50
+2025-07-28 16:39:24 | INFO     | src.core.trading_engine:add_strategy:71 - Added strategy: sma_crossover
+2025-07-28 16:39:24 | INFO     | src.core.trading_engine:run_backtest:75 - Starting backtest from 2024-01-01 to 2025-05-31
+2025-07-28 16:39:24 | INFO     | src.data.data_manager:get_historical_data:34 - Fetching historical data for ['AAPL', 'GOOGL', 'MSFT', 'TSLA'] from 2024-01-01 to 2025-05-31
+2025-07-28 16:39:24 | INFO     | src.data.data_manager:get_historical_data:44 - Data loaded from cache
+2025-07-28 16:39:24 | INFO     | __main__:run_backtest:80 - Backtest completed
+2025-07-28 16:57:40 | INFO     | src.utils.config_manager:__init__:18 - Configuration loaded from config/config.yaml
+2025-07-28 16:57:40 | INFO     | src.risk.risk_manager:__init__:31 - Risk manager initialized
+2025-07-28 16:57:40 | INFO     | src.core.trading_engine:__init__:66 - Trading engine initialized with $100,000.00 initial capital
+2025-07-28 16:57:40 | INFO     | src.strategies.base_strategy:__init__:21 - Initialized strategy: sma_crossover
+2025-07-28 16:57:40 | INFO     | src.strategies.sma_crossover:__init__:29 - SMA Crossover Strategy initialized: 20/50
+2025-07-28 16:57:40 | INFO     | src.core.trading_engine:add_strategy:71 - Added strategy: sma_crossover
+2025-07-28 16:57:40 | INFO     | src.core.trading_engine:run_backtest:75 - Starting backtest from 2024-01-01 to 2025-05-31
+2025-07-28 16:57:40 | INFO     | src.data.data_manager:get_historical_data:33 - Fetching historical data for ['AAPL', 'GOOGL', 'MSFT', 'TSLA'] from 2024-01-01 to 2025-05-31
+2025-07-28 16:57:40 | WARNING  | src.data.data_manager:_fetch_yfinance_data:84 - No data found for AAPL
+2025-07-28 16:57:40 | WARNING  | src.data.data_manager:_fetch_yfinance_data:84 - No data found for GOOGL
+2025-07-28 16:57:40 | WARNING  | src.data.data_manager:_fetch_yfinance_data:84 - No data found for MSFT
+2025-07-28 16:57:40 | WARNING  | src.data.data_manager:_fetch_yfinance_data:84 - No data found for TSLA
+2025-07-28 16:57:40 | INFO     | src.data.data_manager:get_historical_data:63 - Data cached successfully
+2025-07-28 16:57:40 | INFO     | __main__:run_backtest:80 - Backtest completed
+2025-07-28 16:59:06 | INFO     | src.utils.config_manager:__init__:18 - Configuration loaded from config/config.yaml
+2025-07-28 16:59:06 | INFO     | src.risk.risk_manager:__init__:31 - Risk manager initialized
+2025-07-28 16:59:06 | INFO     | src.core.trading_engine:__init__:66 - Trading engine initialized with $100,000.00 initial capital
+2025-07-28 16:59:06 | INFO     | src.strategies.base_strategy:__init__:21 - Initialized strategy: sma_crossover
+2025-07-28 16:59:06 | INFO     | src.strategies.sma_crossover:__init__:29 - SMA Crossover Strategy initialized: 20/50
+2025-07-28 16:59:06 | INFO     | src.core.trading_engine:add_strategy:71 - Added strategy: sma_crossover
+2025-07-28 16:59:06 | INFO     | src.core.trading_engine:run_backtest:75 - Starting backtest from 2024-01-01 to 2025-05-31
+2025-07-28 16:59:06 | INFO     | src.data.data_manager:get_historical_data:33 - Fetching historical data for ['AAPL', 'GOOGL', 'MSFT', 'TSLA'] from 2024-01-01 to 2025-05-31
+2025-07-28 16:59:06 | INFO     | src.data.data_manager:get_historical_data:43 - Data loaded from cache
+2025-07-28 16:59:06 | INFO     | __main__:run_backtest:80 - Backtest completed
+2025-07-28 22:40:19 | INFO     | src.utils.config_manager:__init__:18 - Configuration loaded from config/config.yaml
+2025-07-28 22:40:19 | INFO     | src.risk.risk_manager:__init__:31 - Risk manager initialized
+2025-07-28 22:40:19 | INFO     | src.core.trading_engine:__init__:66 - Trading engine initialized with $100,000.00 initial capital
+2025-07-28 22:40:19 | INFO     | src.strategies.base_strategy:__init__:21 - Initialized strategy: sma_crossover
+2025-07-28 22:40:19 | INFO     | src.strategies.sma_crossover:__init__:29 - SMA Crossover Strategy initialized: 20/50
+2025-07-28 22:40:19 | INFO     | src.core.trading_engine:add_strategy:71 - Added strategy: sma_crossover
+2025-07-28 22:40:19 | INFO     | src.core.trading_engine:run_backtest:75 - Starting backtest from 2025-01-01 to 2025-05-31
+2025-07-28 22:40:19 | INFO     | src.data.data_manager:get_historical_data:34 - Fetching historical data for ['41I1F8000', 'VN30F2509', 'VN30F2512', '41I1G3000'] from 2025-01-01 to 2025-05-31
+2025-07-28 22:40:19 | ERROR    | src.data.data_manager:_fetch_vnstock_data:103 - Error fetching data from VNStock: Symbol phải là một chuỗi.
+2025-07-28 22:40:57 | INFO     | src.utils.config_manager:__init__:18 - Configuration loaded from config/config.yaml
+2025-07-28 22:40:57 | INFO     | src.risk.risk_manager:__init__:31 - Risk manager initialized
+2025-07-28 22:40:57 | INFO     | src.core.trading_engine:__init__:66 - Trading engine initialized with $100,000.00 initial capital
+2025-07-28 22:40:57 | INFO     | src.strategies.base_strategy:__init__:21 - Initialized strategy: sma_crossover
+2025-07-28 22:40:57 | INFO     | src.strategies.sma_crossover:__init__:29 - SMA Crossover Strategy initialized: 20/50
+2025-07-28 22:40:57 | INFO     | src.core.trading_engine:add_strategy:71 - Added strategy: sma_crossover
+2025-07-28 22:40:57 | INFO     | src.core.trading_engine:run_backtest:75 - Starting backtest from 2025-01-01 to 2025-05-31
+2025-07-28 22:40:57 | INFO     | src.data.data_manager:get_historical_data:34 - Fetching historical data for ['41I1F8000', 'VN30F2509', 'VN30F2512', '41I1G3000'] from 2025-01-01 to 2025-05-31
+2025-07-28 22:40:57 | ERROR    | src.data.data_manager:_fetch_vnstock_data:103 - Error fetching data from VNStock: Symbol phải là một chuỗi.
+2025-07-28 22:43:16 | INFO     | src.utils.config_manager:__init__:18 - Configuration loaded from config/config.yaml
+2025-07-28 22:43:16 | INFO     | src.risk.risk_manager:__init__:31 - Risk manager initialized
+2025-07-28 22:43:16 | INFO     | src.core.trading_engine:__init__:66 - Trading engine initialized with $100,000.00 initial capital
+2025-07-28 22:43:16 | INFO     | src.strategies.base_strategy:__init__:21 - Initialized strategy: sma_crossover
+2025-07-28 22:43:16 | INFO     | src.strategies.sma_crossover:__init__:29 - SMA Crossover Strategy initialized: 20/50
+2025-07-28 22:43:16 | INFO     | src.core.trading_engine:add_strategy:71 - Added strategy: sma_crossover
+2025-07-28 22:43:16 | INFO     | src.core.trading_engine:run_backtest:75 - Starting backtest from 2025-01-01 to 2025-05-31
+2025-07-28 22:43:16 | INFO     | src.data.data_manager:get_historical_data:34 - Fetching historical data for 41I1F8000 from 2025-01-01 to 2025-05-31
+2025-07-28 22:43:16 | INFO     | src.data.data_manager:get_historical_data:66 - Data cached successfully
+2025-07-28 22:43:16 | INFO     | src.core.trading_engine:_generate_backtest_report:255 - === BACKTEST RESULTS ===
+2025-07-28 22:43:16 | INFO     | src.core.trading_engine:_generate_backtest_report:256 - Initial Capital: $100,000.00
+2025-07-28 22:43:16 | INFO     | src.core.trading_engine:_generate_backtest_report:257 - Final Portfolio Value: $100,000.00
+2025-07-28 22:43:16 | INFO     | src.core.trading_engine:_generate_backtest_report:258 - Total Return: 0.00%
+2025-07-28 22:43:16 | INFO     | src.core.trading_engine:_generate_backtest_report:259 - Annualized Volatility: 0.00%
+2025-07-28 22:43:16 | INFO     | src.core.trading_engine:_generate_backtest_report:260 - Sharpe Ratio: 0.00
+2025-07-28 22:43:16 | INFO     | src.core.trading_engine:_generate_backtest_report:261 - Maximum Drawdown: 0.00%
+2025-07-28 22:43:16 | INFO     | src.core.trading_engine:_generate_backtest_report:262 - Total Trades: 0
+2025-07-28 22:43:16 | INFO     | src.core.trading_engine:_generate_backtest_report:266 - Backtest results saved to data/backtest_results.csv
+2025-07-28 22:43:16 | INFO     | __main__:run_backtest:80 - Backtest completed
+2025-07-28 22:48:24 | INFO     | src.utils.config_manager:__init__:18 - Configuration loaded from config/config.yaml
+2025-07-28 22:48:24 | INFO     | src.risk.risk_manager:__init__:31 - Risk manager initialized
+2025-07-28 22:48:24 | INFO     | src.core.trading_engine:__init__:66 - Trading engine initialized with $100,000.00 initial capital
+2025-07-28 22:48:24 | INFO     | src.strategies.base_strategy:__init__:21 - Initialized strategy: rsi
+2025-07-28 22:48:24 | INFO     | src.strategies.rsi_strategy:__init__:37 - RSI Strategy initialized: period=14, overbought=70, oversold=30
+2025-07-28 22:48:24 | INFO     | src.core.trading_engine:add_strategy:71 - Added strategy: rsi
+2025-07-28 22:48:24 | INFO     | src.core.trading_engine:run_backtest:75 - Starting backtest from 2025-01-01 to 2025-05-31
+2025-07-28 22:48:24 | INFO     | src.data.data_manager:get_historical_data:34 - Fetching historical data for 41I1F8000 from 2025-01-01 to 2025-05-31
+2025-07-28 22:48:24 | INFO     | src.data.data_manager:get_historical_data:44 - Data loaded from cache
+2025-07-28 22:48:24 | INFO     | src.core.trading_engine:_generate_backtest_report:255 - === BACKTEST RESULTS ===
+2025-07-28 22:48:24 | INFO     | src.core.trading_engine:_generate_backtest_report:256 - Initial Capital: $100,000.00
+2025-07-28 22:48:24 | INFO     | src.core.trading_engine:_generate_backtest_report:257 - Final Portfolio Value: $100,000.00
+2025-07-28 22:48:24 | INFO     | src.core.trading_engine:_generate_backtest_report:258 - Total Return: 0.00%
+2025-07-28 22:48:24 | INFO     | src.core.trading_engine:_generate_backtest_report:259 - Annualized Volatility: 0.00%
+2025-07-28 22:48:24 | INFO     | src.core.trading_engine:_generate_backtest_report:260 - Sharpe Ratio: 0.00
+2025-07-28 22:48:24 | INFO     | src.core.trading_engine:_generate_backtest_report:261 - Maximum Drawdown: 0.00%
+2025-07-28 22:48:24 | INFO     | src.core.trading_engine:_generate_backtest_report:262 - Total Trades: 0
+2025-07-28 22:48:24 | INFO     | src.core.trading_engine:_generate_backtest_report:266 - Backtest results saved to data/backtest_results.csv
+2025-07-28 22:48:24 | INFO     | __main__:run_backtest:80 - Backtest completed
+2025-07-28 22:48:39 | INFO     | src.utils.config_manager:__init__:18 - Configuration loaded from config/config.yaml
+2025-07-28 22:48:39 | INFO     | src.risk.risk_manager:__init__:31 - Risk manager initialized
+2025-07-28 22:48:39 | INFO     | src.core.trading_engine:__init__:66 - Trading engine initialized with $100,000.00 initial capital
+2025-07-28 22:48:39 | INFO     | src.strategies.base_strategy:__init__:21 - Initialized strategy: macd
+2025-07-28 22:48:39 | INFO     | src.strategies.macd_strategy:__init__:35 - MACD Strategy initialized: fast=12, slow=26, signal=9
+2025-07-28 22:48:39 | INFO     | src.core.trading_engine:add_strategy:71 - Added strategy: macd
+2025-07-28 22:48:39 | INFO     | src.core.trading_engine:run_backtest:75 - Starting backtest from 2025-01-01 to 2025-05-31
+2025-07-28 22:48:39 | INFO     | src.data.data_manager:get_historical_data:34 - Fetching historical data for 41I1F8000 from 2025-01-01 to 2025-05-31
+2025-07-28 22:48:39 | INFO     | src.data.data_manager:get_historical_data:44 - Data loaded from cache
+2025-07-28 22:48:39 | INFO     | src.core.trading_engine:_generate_backtest_report:255 - === BACKTEST RESULTS ===
+2025-07-28 22:48:39 | INFO     | src.core.trading_engine:_generate_backtest_report:256 - Initial Capital: $100,000.00
+2025-07-28 22:48:39 | INFO     | src.core.trading_engine:_generate_backtest_report:257 - Final Portfolio Value: $100,000.00
+2025-07-28 22:48:39 | INFO     | src.core.trading_engine:_generate_backtest_report:258 - Total Return: 0.00%
+2025-07-28 22:48:39 | INFO     | src.core.trading_engine:_generate_backtest_report:259 - Annualized Volatility: 0.00%
+2025-07-28 22:48:39 | INFO     | src.core.trading_engine:_generate_backtest_report:260 - Sharpe Ratio: 0.00
+2025-07-28 22:48:39 | INFO     | src.core.trading_engine:_generate_backtest_report:261 - Maximum Drawdown: 0.00%
+2025-07-28 22:48:39 | INFO     | src.core.trading_engine:_generate_backtest_report:262 - Total Trades: 0
+2025-07-28 22:48:39 | INFO     | src.core.trading_engine:_generate_backtest_report:266 - Backtest results saved to data/backtest_results.csv
+2025-07-28 22:48:39 | INFO     | __main__:run_backtest:80 - Backtest completed
+2025-07-28 22:53:40 | INFO     | src.utils.config_manager:__init__:18 - Configuration loaded from config/config.yaml
+2025-07-28 22:53:40 | INFO     | src.risk.risk_manager:__init__:31 - Risk manager initialized
+2025-07-28 22:53:40 | INFO     | src.core.trading_engine:__init__:69 - Trading engine initialized with $100,000.00 initial capital
+2025-07-28 22:53:40 | INFO     | src.strategies.base_strategy:__init__:21 - Initialized strategy: sma_crossover
+2025-07-28 22:53:40 | INFO     | src.strategies.sma_crossover:__init__:29 - SMA Crossover Strategy initialized: 20/50
+2025-07-28 22:53:40 | INFO     | src.core.trading_engine:add_strategy:74 - Added strategy: sma_crossover
+2025-07-28 22:53:40 | INFO     | src.core.trading_engine:run_backtest:78 - Starting backtest from 2024-01-01 to 2024-05-31
+2025-07-28 22:53:40 | INFO     | src.data.data_manager:get_historical_data:34 - Fetching historical data for ['VCB'] from 2024-01-01 to 2024-05-31
+2025-07-28 22:53:40 | INFO     | src.data.data_manager:get_historical_data:66 - Data cached successfully
+2025-07-28 22:53:40 | INFO     | src.core.trading_engine:run_backtest:99 - Loaded 250 data points for ['VCB']
+2025-07-28 22:53:40 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:79 - Golden cross detected for VCB: 60.50 > 58.41
+2025-07-28 22:53:40 | WARNING  | src.risk.risk_manager:can_buy:49 - Portfolio risk limit exceeded
+2025-07-28 22:53:40 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:83 - Death cross detected for VCB: 59.41 < 59.45
+2025-07-28 22:53:40 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:79 - Golden cross detected for VCB: 58.19 > 58.18
+2025-07-28 22:53:40 | WARNING  | src.risk.risk_manager:can_buy:49 - Portfolio risk limit exceeded
+2025-07-28 22:53:40 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:83 - Death cross detected for VCB: 57.69 < 57.74
+2025-07-28 22:53:40 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:79 - Golden cross detected for VCB: 57.40 > 57.13
+2025-07-28 22:53:40 | WARNING  | src.risk.risk_manager:can_buy:49 - Portfolio risk limit exceeded
+2025-07-28 22:53:40 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:83 - Death cross detected for VCB: 62.49 < 62.55
+2025-07-28 22:53:40 | INFO     | src.core.trading_engine:_generate_backtest_report:276 - === BACKTEST RESULTS ===
+2025-07-28 22:53:40 | INFO     | src.core.trading_engine:_generate_backtest_report:277 - Initial Capital: $100,000.00
+2025-07-28 22:53:40 | INFO     | src.core.trading_engine:_generate_backtest_report:278 - Final Portfolio Value: $100,000.00
+2025-07-28 22:53:40 | INFO     | src.core.trading_engine:_generate_backtest_report:279 - Total Return: 0.00%
+2025-07-28 22:53:40 | INFO     | src.core.trading_engine:_generate_backtest_report:280 - Annualized Volatility: 0.00%
+2025-07-28 22:53:40 | INFO     | src.core.trading_engine:_generate_backtest_report:281 - Sharpe Ratio: 0.00
+2025-07-28 22:53:40 | INFO     | src.core.trading_engine:_generate_backtest_report:282 - Maximum Drawdown: 0.00%
+2025-07-28 22:53:40 | INFO     | src.core.trading_engine:_generate_backtest_report:283 - Total Trades: 0
+2025-07-28 22:53:40 | INFO     | src.core.trading_engine:_generate_backtest_report:287 - Backtest results saved to data/backtest_results.csv
+2025-07-28 22:53:40 | INFO     | src.main:run_backtest:80 - Backtest completed
+2025-07-28 22:53:40 | INFO     | __main__:test_backtest:20 - SMA crossover backtest completed successfully
+2025-07-28 22:53:40 | INFO     | src.main:run_backtest:47 - Starting backtest mode
+2025-07-28 22:53:40 | INFO     | src.utils.config_manager:__init__:18 - Configuration loaded from config/config.yaml
+2025-07-28 22:53:40 | INFO     | src.utils.config_manager:__init__:18 - Configuration loaded from config/config.yaml
+2025-07-28 22:53:40 | INFO     | src.risk.risk_manager:__init__:31 - Risk manager initialized
+2025-07-28 22:53:40 | INFO     | src.core.trading_engine:__init__:69 - Trading engine initialized with $100,000.00 initial capital
+2025-07-28 22:53:40 | INFO     | src.strategies.base_strategy:__init__:21 - Initialized strategy: rsi
+2025-07-28 22:53:40 | INFO     | src.strategies.rsi_strategy:__init__:37 - RSI Strategy initialized: period=14, overbought=70, oversold=30
+2025-07-28 22:53:40 | INFO     | src.core.trading_engine:add_strategy:74 - Added strategy: rsi
+2025-07-28 22:53:40 | INFO     | src.core.trading_engine:run_backtest:78 - Starting backtest from 2024-01-01 to 2024-05-31
+2025-07-28 22:53:40 | INFO     | src.data.data_manager:get_historical_data:34 - Fetching historical data for ['VCB'] from 2024-01-01 to 2024-05-31
+2025-07-28 22:53:40 | INFO     | src.data.data_manager:get_historical_data:44 - Data loaded from cache
+2025-07-28 22:53:40 | INFO     | src.core.trading_engine:run_backtest:99 - Loaded 250 data points for ['VCB']
+2025-07-28 22:53:40 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:88 - RSI overbought signal for VCB: 74.71 > 70
+2025-07-28 22:53:40 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:88 - RSI overbought signal for VCB: 75.47 > 70
+2025-07-28 22:53:40 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:82 - RSI oversold signal for VCB: 29.32 < 30
+2025-07-28 22:53:40 | WARNING  | src.risk.risk_manager:can_buy:49 - Portfolio risk limit exceeded
+2025-07-28 22:53:40 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:82 - RSI oversold signal for VCB: 27.73 < 30
+2025-07-28 22:53:40 | WARNING  | src.risk.risk_manager:can_buy:49 - Portfolio risk limit exceeded
+2025-07-28 22:53:40 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:88 - RSI overbought signal for VCB: 72.30 > 70
+2025-07-28 22:53:40 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:82 - RSI oversold signal for VCB: 29.04 < 30
+2025-07-28 22:53:40 | WARNING  | src.risk.risk_manager:can_buy:49 - Portfolio risk limit exceeded
+2025-07-28 22:53:40 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:98 - RSI sustained oversold for VCB: 26.89
+2025-07-28 22:53:40 | WARNING  | src.risk.risk_manager:can_buy:49 - Portfolio risk limit exceeded
+2025-07-28 22:53:40 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:98 - RSI sustained oversold for VCB: 28.11
+2025-07-28 22:53:40 | WARNING  | src.risk.risk_manager:can_buy:49 - Portfolio risk limit exceeded
+2025-07-28 22:53:40 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:98 - RSI sustained oversold for VCB: 29.04
+2025-07-28 22:53:40 | WARNING  | src.risk.risk_manager:can_buy:49 - Portfolio risk limit exceeded
+2025-07-28 22:53:40 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:98 - RSI sustained oversold for VCB: 25.83
+2025-07-28 22:53:40 | WARNING  | src.risk.risk_manager:can_buy:49 - Portfolio risk limit exceeded
+2025-07-28 22:53:40 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:98 - RSI sustained oversold for VCB: 16.10
+2025-07-28 22:53:40 | WARNING  | src.risk.risk_manager:can_buy:49 - Portfolio risk limit exceeded
+2025-07-28 22:53:40 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:98 - RSI sustained oversold for VCB: 27.10
+2025-07-28 22:53:40 | WARNING  | src.risk.risk_manager:can_buy:49 - Portfolio risk limit exceeded
+2025-07-28 22:53:40 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:82 - RSI oversold signal for VCB: 28.99 < 30
+2025-07-28 22:53:40 | WARNING  | src.risk.risk_manager:can_buy:49 - Portfolio risk limit exceeded
+2025-07-28 22:53:40 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:88 - RSI overbought signal for VCB: 72.63 > 70
+2025-07-28 22:53:40 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:103 - RSI sustained overbought for VCB: 76.60
+2025-07-28 22:53:40 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:103 - RSI sustained overbought for VCB: 80.02
+2025-07-28 22:53:40 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:103 - RSI sustained overbought for VCB: 80.02
+2025-07-28 22:53:40 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:103 - RSI sustained overbought for VCB: 76.74
+2025-07-28 22:53:40 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:103 - RSI sustained overbought for VCB: 77.35
+2025-07-28 22:53:40 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:103 - RSI sustained overbought for VCB: 75.75
+2025-07-28 22:53:40 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:103 - RSI sustained overbought for VCB: 77.68
+2025-07-28 22:53:40 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:103 - RSI sustained overbought for VCB: 77.86
+2025-07-28 22:53:40 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:103 - RSI sustained overbought for VCB: 94.20
+2025-07-28 22:53:40 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:103 - RSI sustained overbought for VCB: 87.58
+2025-07-28 22:53:40 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:103 - RSI sustained overbought for VCB: 82.32
+2025-07-28 22:53:40 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:103 - RSI sustained overbought for VCB: 76.52
+2025-07-28 22:53:40 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:103 - RSI sustained overbought for VCB: 74.96
+2025-07-28 22:53:40 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:103 - RSI sustained overbought for VCB: 75.97
+2025-07-28 22:53:41 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:88 - RSI overbought signal for VCB: 75.66 > 70
+2025-07-28 22:53:41 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:103 - RSI sustained overbought for VCB: 74.27
+2025-07-28 22:53:41 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:103 - RSI sustained overbought for VCB: 75.85
+2025-07-28 22:53:41 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:103 - RSI sustained overbought for VCB: 71.74
+2025-07-28 22:53:41 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:88 - RSI overbought signal for VCB: 70.94 > 70
+2025-07-28 22:53:41 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:88 - RSI overbought signal for VCB: 71.74 > 70
+2025-07-28 22:53:41 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:82 - RSI oversold signal for VCB: 23.63 < 30
+2025-07-28 22:53:41 | WARNING  | src.risk.risk_manager:can_buy:49 - Portfolio risk limit exceeded
+2025-07-28 22:53:41 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:98 - RSI sustained oversold for VCB: 29.31
+2025-07-28 22:53:41 | WARNING  | src.risk.risk_manager:can_buy:49 - Portfolio risk limit exceeded
+2025-07-28 22:53:41 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:82 - RSI oversold signal for VCB: 28.91 < 30
+2025-07-28 22:53:41 | WARNING  | src.risk.risk_manager:can_buy:49 - Portfolio risk limit exceeded
+2025-07-28 22:53:41 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:98 - RSI sustained oversold for VCB: 27.95
+2025-07-28 22:53:41 | WARNING  | src.risk.risk_manager:can_buy:49 - Portfolio risk limit exceeded
+2025-07-28 22:53:41 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:98 - RSI sustained oversold for VCB: 29.97
+2025-07-28 22:53:41 | WARNING  | src.risk.risk_manager:can_buy:49 - Portfolio risk limit exceeded
+2025-07-28 22:53:41 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:98 - RSI sustained oversold for VCB: 28.61
+2025-07-28 22:53:41 | WARNING  | src.risk.risk_manager:can_buy:49 - Portfolio risk limit exceeded
+2025-07-28 22:53:41 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:98 - RSI sustained oversold for VCB: 29.18
+2025-07-28 22:53:41 | WARNING  | src.risk.risk_manager:can_buy:49 - Portfolio risk limit exceeded
+2025-07-28 22:53:41 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:82 - RSI oversold signal for VCB: 20.80 < 30
+2025-07-28 22:53:41 | WARNING  | src.risk.risk_manager:can_buy:49 - Portfolio risk limit exceeded
+2025-07-28 22:53:41 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:98 - RSI sustained oversold for VCB: 25.78
+2025-07-28 22:53:41 | WARNING  | src.risk.risk_manager:can_buy:49 - Portfolio risk limit exceeded
+2025-07-28 22:53:41 | INFO     | src.core.trading_engine:_generate_backtest_report:276 - === BACKTEST RESULTS ===
+2025-07-28 22:53:41 | INFO     | src.core.trading_engine:_generate_backtest_report:277 - Initial Capital: $100,000.00
+2025-07-28 22:53:41 | INFO     | src.core.trading_engine:_generate_backtest_report:278 - Final Portfolio Value: $100,000.00
+2025-07-28 22:53:41 | INFO     | src.core.trading_engine:_generate_backtest_report:279 - Total Return: 0.00%
+2025-07-28 22:53:41 | INFO     | src.core.trading_engine:_generate_backtest_report:280 - Annualized Volatility: 0.00%
+2025-07-28 22:53:41 | INFO     | src.core.trading_engine:_generate_backtest_report:281 - Sharpe Ratio: 0.00
+2025-07-28 22:53:41 | INFO     | src.core.trading_engine:_generate_backtest_report:282 - Maximum Drawdown: 0.00%
+2025-07-28 22:53:41 | INFO     | src.core.trading_engine:_generate_backtest_report:283 - Total Trades: 0
+2025-07-28 22:53:41 | INFO     | src.core.trading_engine:_generate_backtest_report:287 - Backtest results saved to data/backtest_results.csv
+2025-07-28 22:53:41 | INFO     | src.main:run_backtest:80 - Backtest completed
+2025-07-28 22:53:41 | INFO     | __main__:test_backtest:24 - RSI backtest completed successfully
+2025-07-28 22:53:41 | INFO     | src.main:run_backtest:47 - Starting backtest mode
+2025-07-28 22:53:41 | INFO     | src.utils.config_manager:__init__:18 - Configuration loaded from config/config.yaml
+2025-07-28 22:53:41 | INFO     | src.utils.config_manager:__init__:18 - Configuration loaded from config/config.yaml
+2025-07-28 22:53:41 | INFO     | src.risk.risk_manager:__init__:31 - Risk manager initialized
+2025-07-28 22:53:41 | INFO     | src.core.trading_engine:__init__:69 - Trading engine initialized with $100,000.00 initial capital
+2025-07-28 22:53:41 | INFO     | src.strategies.base_strategy:__init__:21 - Initialized strategy: macd
+2025-07-28 22:53:41 | INFO     | src.strategies.macd_strategy:__init__:35 - MACD Strategy initialized: fast=12, slow=26, signal=9
+2025-07-28 22:53:41 | INFO     | src.core.trading_engine:add_strategy:74 - Added strategy: macd
+2025-07-28 22:53:41 | INFO     | src.core.trading_engine:run_backtest:78 - Starting backtest from 2024-01-01 to 2024-05-31
+2025-07-28 22:53:41 | INFO     | src.data.data_manager:get_historical_data:34 - Fetching historical data for ['VCB'] from 2024-01-01 to 2024-05-31
+2025-07-28 22:53:41 | INFO     | src.data.data_manager:get_historical_data:44 - Data loaded from cache
+2025-07-28 22:53:41 | INFO     | src.core.trading_engine:run_backtest:99 - Loaded 250 data points for ['VCB']
+2025-07-28 22:53:41 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:88 - MACD bullish crossover for VCB: MACD=0.2361, Signal=0.1243
+2025-07-28 22:53:41 | WARNING  | src.risk.risk_manager:can_buy:49 - Portfolio risk limit exceeded
+2025-07-28 22:53:41 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:94 - MACD bearish crossover for VCB: MACD=0.8751, Signal=0.8843
+2025-07-28 22:53:41 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:115 - MACD zero line bearish crossover for VCB: MACD=-0.1480
+2025-07-28 22:53:41 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:88 - MACD bullish crossover for VCB: MACD=-0.1143, Signal=-0.1689
+2025-07-28 22:53:41 | WARNING  | src.risk.risk_manager:can_buy:49 - Portfolio risk limit exceeded
+2025-07-28 22:53:41 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:111 - MACD zero line bullish crossover for VCB: MACD=0.0077
+2025-07-28 22:53:41 | WARNING  | src.risk.risk_manager:can_buy:49 - Portfolio risk limit exceeded
+2025-07-28 22:53:41 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:115 - MACD zero line bearish crossover for VCB: MACD=-0.0002
+2025-07-28 22:53:41 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:111 - MACD zero line bullish crossover for VCB: MACD=0.0474
+2025-07-28 22:53:41 | WARNING  | src.risk.risk_manager:can_buy:49 - Portfolio risk limit exceeded
+2025-07-28 22:53:41 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:94 - MACD bearish crossover for VCB: MACD=-0.0172, Signal=0.0056
+2025-07-28 22:53:41 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:88 - MACD bullish crossover for VCB: MACD=-0.4967, Signal=-0.4971
+2025-07-28 22:53:41 | WARNING  | src.risk.risk_manager:can_buy:49 - Portfolio risk limit exceeded
+2025-07-28 22:53:41 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:94 - MACD bearish crossover for VCB: MACD=-0.5064, Signal=-0.4845
+2025-07-28 22:53:41 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:88 - MACD bullish crossover for VCB: MACD=-0.4953, Signal=-0.5044
+2025-07-28 22:53:41 | WARNING  | src.risk.risk_manager:can_buy:49 - Portfolio risk limit exceeded
+2025-07-28 22:53:41 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:111 - MACD zero line bullish crossover for VCB: MACD=0.1288
+2025-07-28 22:53:41 | WARNING  | src.risk.risk_manager:can_buy:49 - Portfolio risk limit exceeded
+2025-07-28 22:53:41 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:94 - MACD bearish crossover for VCB: MACD=0.1212, Signal=0.1338
+2025-07-28 22:53:41 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:88 - MACD bullish crossover for VCB: MACD=0.1235, Signal=0.1126
+2025-07-28 22:53:41 | WARNING  | src.risk.risk_manager:can_buy:49 - Portfolio risk limit exceeded
+2025-07-28 22:53:41 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:94 - MACD bearish crossover for VCB: MACD=0.0268, Signal=0.0954
+2025-07-28 22:53:41 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:115 - MACD zero line bearish crossover for VCB: MACD=-0.0229
+2025-07-28 22:53:41 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:88 - MACD bullish crossover for VCB: MACD=-0.7382, Signal=-0.7417
+2025-07-28 22:53:41 | WARNING  | src.risk.risk_manager:can_buy:49 - Portfolio risk limit exceeded
+2025-07-28 22:53:41 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:94 - MACD bearish crossover for VCB: MACD=-0.7401, Signal=-0.7297
+2025-07-28 22:53:41 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:88 - MACD bullish crossover for VCB: MACD=-0.6168, Signal=-0.7072
+2025-07-28 22:53:41 | WARNING  | src.risk.risk_manager:can_buy:49 - Portfolio risk limit exceeded
+2025-07-28 22:53:41 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:111 - MACD zero line bullish crossover for VCB: MACD=0.0941
+2025-07-28 22:53:41 | WARNING  | src.risk.risk_manager:can_buy:49 - Portfolio risk limit exceeded
+2025-07-28 22:53:41 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:94 - MACD bearish crossover for VCB: MACD=1.1718, Signal=1.1822
+2025-07-28 22:53:41 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:88 - MACD bullish crossover for VCB: MACD=0.6722, Signal=0.4821
+2025-07-28 22:53:41 | WARNING  | src.risk.risk_manager:can_buy:49 - Portfolio risk limit exceeded
+2025-07-28 22:53:41 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:94 - MACD bearish crossover for VCB: MACD=1.0156, Signal=1.0537
+2025-07-28 22:53:41 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:115 - MACD zero line bearish crossover for VCB: MACD=-0.1743
+2025-07-28 22:53:41 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:88 - MACD bullish crossover for VCB: MACD=-0.3993, Signal=-0.4617
+2025-07-28 22:53:41 | WARNING  | src.risk.risk_manager:can_buy:49 - Portfolio risk limit exceeded
+2025-07-28 22:53:41 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:94 - MACD bearish crossover for VCB: MACD=-0.3312, Signal=-0.3239
+2025-07-28 22:53:41 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:88 - MACD bullish crossover for VCB: MACD=-0.2782, Signal=-0.3192
+2025-07-28 22:53:41 | WARNING  | src.risk.risk_manager:can_buy:49 - Portfolio risk limit exceeded
+2025-07-28 22:53:41 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:94 - MACD bearish crossover for VCB: MACD=-0.2962, Signal=-0.2888
+2025-07-28 22:53:41 | INFO     | src.core.trading_engine:_generate_backtest_report:276 - === BACKTEST RESULTS ===
+2025-07-28 22:53:41 | INFO     | src.core.trading_engine:_generate_backtest_report:277 - Initial Capital: $100,000.00
+2025-07-28 22:53:41 | INFO     | src.core.trading_engine:_generate_backtest_report:278 - Final Portfolio Value: $100,000.00
+2025-07-28 22:53:41 | INFO     | src.core.trading_engine:_generate_backtest_report:279 - Total Return: 0.00%
+2025-07-28 22:53:41 | INFO     | src.core.trading_engine:_generate_backtest_report:280 - Annualized Volatility: 0.00%
+2025-07-28 22:53:41 | INFO     | src.core.trading_engine:_generate_backtest_report:281 - Sharpe Ratio: 0.00
+2025-07-28 22:53:41 | INFO     | src.core.trading_engine:_generate_backtest_report:282 - Maximum Drawdown: 0.00%
+2025-07-28 22:53:41 | INFO     | src.core.trading_engine:_generate_backtest_report:283 - Total Trades: 0
+2025-07-28 22:53:41 | INFO     | src.core.trading_engine:_generate_backtest_report:287 - Backtest results saved to data/backtest_results.csv
+2025-07-28 22:53:41 | INFO     | src.main:run_backtest:80 - Backtest completed
+2025-07-28 22:53:41 | INFO     | __main__:test_backtest:28 - MACD backtest completed successfully
+2025-07-28 22:54:12 | INFO     | src.utils.config_manager:__init__:18 - Configuration loaded from config/config.yaml
+2025-07-28 22:54:12 | INFO     | src.risk.risk_manager:__init__:31 - Risk manager initialized
+2025-07-28 22:54:12 | INFO     | src.core.trading_engine:__init__:69 - Trading engine initialized with $100,000.00 initial capital
+2025-07-28 22:54:12 | INFO     | src.strategies.base_strategy:__init__:21 - Initialized strategy: macd
+2025-07-28 22:54:12 | INFO     | src.strategies.macd_strategy:__init__:35 - MACD Strategy initialized: fast=12, slow=26, signal=9
+2025-07-28 22:54:12 | INFO     | src.core.trading_engine:add_strategy:74 - Added strategy: macd
+2025-07-28 22:54:12 | INFO     | src.core.trading_engine:run_backtest:78 - Starting backtest from 2024-01-01 to 2024-05-31
+2025-07-28 22:54:12 | INFO     | src.data.data_manager:get_historical_data:34 - Fetching historical data for ['VCB'] from 2024-01-01 to 2024-05-31
+2025-07-28 22:54:12 | INFO     | src.data.data_manager:get_historical_data:44 - Data loaded from cache
+2025-07-28 22:54:12 | INFO     | src.core.trading_engine:run_backtest:99 - Loaded 250 data points for ['VCB']
+2025-07-28 22:54:12 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:88 - MACD bullish crossover for VCB: MACD=0.2361, Signal=0.1243
+2025-07-28 22:54:12 | WARNING  | src.risk.risk_manager:can_buy:49 - Portfolio risk limit exceeded
+2025-07-28 22:54:12 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:94 - MACD bearish crossover for VCB: MACD=0.8751, Signal=0.8843
+2025-07-28 22:54:12 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:115 - MACD zero line bearish crossover for VCB: MACD=-0.1480
+2025-07-28 22:54:12 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:88 - MACD bullish crossover for VCB: MACD=-0.1143, Signal=-0.1689
+2025-07-28 22:54:12 | WARNING  | src.risk.risk_manager:can_buy:49 - Portfolio risk limit exceeded
+2025-07-28 22:54:12 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:111 - MACD zero line bullish crossover for VCB: MACD=0.0077
+2025-07-28 22:54:12 | WARNING  | src.risk.risk_manager:can_buy:49 - Portfolio risk limit exceeded
+2025-07-28 22:54:12 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:115 - MACD zero line bearish crossover for VCB: MACD=-0.0002
+2025-07-28 22:54:12 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:111 - MACD zero line bullish crossover for VCB: MACD=0.0474
+2025-07-28 22:54:12 | WARNING  | src.risk.risk_manager:can_buy:49 - Portfolio risk limit exceeded
+2025-07-28 22:54:12 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:94 - MACD bearish crossover for VCB: MACD=-0.0172, Signal=0.0056
+2025-07-28 22:54:12 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:88 - MACD bullish crossover for VCB: MACD=-0.4967, Signal=-0.4971
+2025-07-28 22:54:12 | WARNING  | src.risk.risk_manager:can_buy:49 - Portfolio risk limit exceeded
+2025-07-28 22:54:12 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:94 - MACD bearish crossover for VCB: MACD=-0.5064, Signal=-0.4845
+2025-07-28 22:54:12 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:88 - MACD bullish crossover for VCB: MACD=-0.4953, Signal=-0.5044
+2025-07-28 22:54:12 | WARNING  | src.risk.risk_manager:can_buy:49 - Portfolio risk limit exceeded
+2025-07-28 22:54:12 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:111 - MACD zero line bullish crossover for VCB: MACD=0.1288
+2025-07-28 22:54:12 | WARNING  | src.risk.risk_manager:can_buy:49 - Portfolio risk limit exceeded
+2025-07-28 22:54:12 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:94 - MACD bearish crossover for VCB: MACD=0.1212, Signal=0.1338
+2025-07-28 22:54:12 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:88 - MACD bullish crossover for VCB: MACD=0.1235, Signal=0.1126
+2025-07-28 22:54:12 | WARNING  | src.risk.risk_manager:can_buy:49 - Portfolio risk limit exceeded
+2025-07-28 22:54:12 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:94 - MACD bearish crossover for VCB: MACD=0.0268, Signal=0.0954
+2025-07-28 22:54:12 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:115 - MACD zero line bearish crossover for VCB: MACD=-0.0229
+2025-07-28 22:54:12 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:88 - MACD bullish crossover for VCB: MACD=-0.7382, Signal=-0.7417
+2025-07-28 22:54:12 | WARNING  | src.risk.risk_manager:can_buy:49 - Portfolio risk limit exceeded
+2025-07-28 22:54:12 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:94 - MACD bearish crossover for VCB: MACD=-0.7401, Signal=-0.7297
+2025-07-28 22:54:12 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:88 - MACD bullish crossover for VCB: MACD=-0.6168, Signal=-0.7072
+2025-07-28 22:54:12 | WARNING  | src.risk.risk_manager:can_buy:49 - Portfolio risk limit exceeded
+2025-07-28 22:54:12 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:111 - MACD zero line bullish crossover for VCB: MACD=0.0941
+2025-07-28 22:54:12 | WARNING  | src.risk.risk_manager:can_buy:49 - Portfolio risk limit exceeded
+2025-07-28 22:54:12 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:94 - MACD bearish crossover for VCB: MACD=1.1718, Signal=1.1822
+2025-07-28 22:54:12 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:88 - MACD bullish crossover for VCB: MACD=0.6722, Signal=0.4821
+2025-07-28 22:54:12 | WARNING  | src.risk.risk_manager:can_buy:49 - Portfolio risk limit exceeded
+2025-07-28 22:54:12 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:94 - MACD bearish crossover for VCB: MACD=1.0156, Signal=1.0537
+2025-07-28 22:54:13 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:115 - MACD zero line bearish crossover for VCB: MACD=-0.1743
+2025-07-28 22:54:13 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:88 - MACD bullish crossover for VCB: MACD=-0.3993, Signal=-0.4617
+2025-07-28 22:54:13 | WARNING  | src.risk.risk_manager:can_buy:49 - Portfolio risk limit exceeded
+2025-07-28 22:54:13 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:94 - MACD bearish crossover for VCB: MACD=-0.3312, Signal=-0.3239
+2025-07-28 22:54:13 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:88 - MACD bullish crossover for VCB: MACD=-0.2782, Signal=-0.3192
+2025-07-28 22:54:13 | WARNING  | src.risk.risk_manager:can_buy:49 - Portfolio risk limit exceeded
+2025-07-28 22:54:13 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:94 - MACD bearish crossover for VCB: MACD=-0.2962, Signal=-0.2888
+2025-07-28 22:54:13 | INFO     | src.core.trading_engine:_generate_backtest_report:276 - === BACKTEST RESULTS ===
+2025-07-28 22:54:13 | INFO     | src.core.trading_engine:_generate_backtest_report:277 - Initial Capital: $100,000.00
+2025-07-28 22:54:13 | INFO     | src.core.trading_engine:_generate_backtest_report:278 - Final Portfolio Value: $100,000.00
+2025-07-28 22:54:13 | INFO     | src.core.trading_engine:_generate_backtest_report:279 - Total Return: 0.00%
+2025-07-28 22:54:13 | INFO     | src.core.trading_engine:_generate_backtest_report:280 - Annualized Volatility: 0.00%
+2025-07-28 22:54:13 | INFO     | src.core.trading_engine:_generate_backtest_report:281 - Sharpe Ratio: 0.00
+2025-07-28 22:54:13 | INFO     | src.core.trading_engine:_generate_backtest_report:282 - Maximum Drawdown: 0.00%
+2025-07-28 22:54:13 | INFO     | src.core.trading_engine:_generate_backtest_report:283 - Total Trades: 0
+2025-07-28 22:54:13 | INFO     | src.core.trading_engine:_generate_backtest_report:287 - Backtest results saved to data/backtest_results.csv
+2025-07-28 22:54:13 | INFO     | __main__:run_backtest:80 - Backtest completed
+2025-07-28 22:57:20 | INFO     | src.utils.config_manager:__init__:18 - Configuration loaded from config/config.yaml
+2025-07-28 22:57:20 | INFO     | src.risk.risk_manager:__init__:31 - Risk manager initialized
+2025-07-28 22:57:20 | INFO     | src.core.trading_engine:__init__:69 - Trading engine initialized with $100,000.00 initial capital
+2025-07-28 22:57:20 | INFO     | src.strategies.base_strategy:__init__:21 - Initialized strategy: macd
+2025-07-28 22:57:20 | INFO     | src.strategies.macd_strategy:__init__:35 - MACD Strategy initialized: fast=12, slow=26, signal=9
+2025-07-28 22:57:20 | INFO     | src.core.trading_engine:add_strategy:74 - Added strategy: macd
+2025-07-28 22:57:20 | INFO     | src.core.trading_engine:run_backtest:78 - Starting backtest from 2024-01-01 to 2024-05-31
+2025-07-28 22:57:20 | INFO     | src.data.data_manager:get_historical_data:34 - Fetching historical data for ['VCB'] from 2024-01-01 to 2024-05-31
+2025-07-28 22:57:20 | INFO     | src.data.data_manager:get_historical_data:44 - Data loaded from cache
+2025-07-28 22:57:20 | INFO     | src.core.trading_engine:run_backtest:99 - Loaded 250 data points for ['VCB']
+2025-07-28 22:57:20 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:88 - MACD bullish crossover for VCB: MACD=0.2361, Signal=0.1243
+2025-07-28 22:57:20 | INFO     | src.core.trading_engine:_execute_buy_order:202 - BUY: 336.30 VCB @ $59.47
+2025-07-28 22:57:20 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:94 - MACD bearish crossover for VCB: MACD=0.8751, Signal=0.8843
+2025-07-28 22:57:20 | INFO     | src.core.trading_engine:_execute_sell_order:238 - SELL: 336.30 VCB @ $60.60 | P&L: $359.64 (1.80%)
+2025-07-28 22:57:20 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:115 - MACD zero line bearish crossover for VCB: MACD=-0.1480
+2025-07-28 22:57:20 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:88 - MACD bullish crossover for VCB: MACD=-0.1143, Signal=-0.1689
+2025-07-28 22:57:20 | INFO     | src.core.trading_engine:_execute_buy_order:202 - BUY: 332.97 VCB @ $60.27
+2025-07-28 22:57:20 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:111 - MACD zero line bullish crossover for VCB: MACD=0.0077
+2025-07-28 22:58:03 | INFO     | src.utils.config_manager:__init__:18 - Configuration loaded from config/config.yaml
+2025-07-28 22:58:03 | INFO     | src.risk.risk_manager:__init__:31 - Risk manager initialized
+2025-07-28 22:58:03 | INFO     | src.core.trading_engine:__init__:69 - Trading engine initialized with $100,000.00 initial capital
+2025-07-28 22:58:03 | INFO     | src.strategies.base_strategy:__init__:21 - Initialized strategy: sma_crossover
+2025-07-28 22:58:03 | INFO     | src.strategies.sma_crossover:__init__:29 - SMA Crossover Strategy initialized: 20/50
+2025-07-28 22:58:03 | INFO     | src.core.trading_engine:add_strategy:74 - Added strategy: sma_crossover
+2025-07-28 22:58:03 | INFO     | src.core.trading_engine:run_backtest:78 - Starting backtest from 2024-01-01 to 2024-05-31
+2025-07-28 22:58:03 | INFO     | src.data.data_manager:get_historical_data:34 - Fetching historical data for ['VCB'] from 2024-01-01 to 2024-05-31
+2025-07-28 22:58:03 | INFO     | src.data.data_manager:get_historical_data:44 - Data loaded from cache
+2025-07-28 22:58:03 | INFO     | src.core.trading_engine:run_backtest:99 - Loaded 250 data points for ['VCB']
+2025-07-28 22:58:03 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:79 - Golden cross detected for VCB: 60.50 > 58.41
+2025-07-28 22:58:03 | WARNING  | src.risk.risk_manager:can_buy:49 - Portfolio risk limit exceeded
+2025-07-28 22:58:03 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:83 - Death cross detected for VCB: 59.41 < 59.45
+2025-07-28 22:58:03 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:79 - Golden cross detected for VCB: 58.19 > 58.18
+2025-07-28 22:58:03 | INFO     | src.core.trading_engine:_execute_buy_order:202 - BUY: 347.28 VCB @ $57.59
+2025-07-28 22:58:03 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:83 - Death cross detected for VCB: 57.69 < 57.74
+2025-07-28 22:58:03 | INFO     | src.core.trading_engine:_execute_sell_order:238 - SELL: 347.28 VCB @ $57.12 | P&L: $-183.06 (-0.92%)
+2025-07-28 22:58:03 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:79 - Golden cross detected for VCB: 57.40 > 57.13
+2025-07-28 22:58:03 | INFO     | src.core.trading_engine:_execute_buy_order:202 - BUY: 327.53 VCB @ $60.94
+2025-07-28 22:58:03 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:83 - Death cross detected for VCB: 62.49 < 62.55
+2025-07-28 22:58:03 | INFO     | src.core.trading_engine:_execute_sell_order:238 - SELL: 327.53 VCB @ $60.60 | P&L: $-131.21 (-0.66%)
+2025-07-28 22:58:04 | INFO     | src.core.trading_engine:_generate_backtest_report:285 - === BACKTEST RESULTS ===
+2025-07-28 22:58:04 | INFO     | src.core.trading_engine:_generate_backtest_report:286 - Initial Capital: $100,000.00
+2025-07-28 22:58:04 | INFO     | src.core.trading_engine:_generate_backtest_report:287 - Final Portfolio Value: $99,645.77
+2025-07-28 22:58:04 | INFO     | src.core.trading_engine:_generate_backtest_report:288 - Total Return: -0.35%
+2025-07-28 22:58:04 | INFO     | src.core.trading_engine:_generate_backtest_report:289 - Annualized Volatility: 2.20%
+2025-07-28 22:58:04 | INFO     | src.core.trading_engine:_generate_backtest_report:290 - Sharpe Ratio: -0.15
+2025-07-28 22:58:04 | INFO     | src.core.trading_engine:_generate_backtest_report:291 - Maximum Drawdown: -1.58%
+2025-07-28 22:58:04 | INFO     | src.core.trading_engine:_generate_backtest_report:292 - Total Trades: 4
+2025-07-28 22:58:04 | INFO     | src.core.trading_engine:_generate_backtest_report:293 - Buy Trades: 2
+2025-07-28 22:58:04 | INFO     | src.core.trading_engine:_generate_backtest_report:294 - Sell Trades: 2
+2025-07-28 22:58:04 | INFO     | src.core.trading_engine:_generate_backtest_report:302 - Backtest results saved to data/backtest_results.csv
+2025-07-28 22:58:04 | INFO     | src.core.trading_engine:_generate_backtest_report:319 - Trade details saved to data/trades.csv
+2025-07-28 22:58:04 | INFO     | src.main:run_backtest:80 - Backtest completed
+2025-07-28 22:58:04 | INFO     | __main__:test_fixed_backtest:26 - ✅ SMA crossover completed with 4 trades
+2025-07-28 23:00:32 | INFO     | src.utils.config_manager:__init__:18 - Configuration loaded from config/config.yaml
+2025-07-28 23:00:32 | INFO     | src.risk.risk_manager:__init__:31 - Risk manager initialized
+2025-07-28 23:00:32 | INFO     | src.core.trading_engine:__init__:69 - Trading engine initialized with $100,000.00 initial capital
+2025-07-28 23:00:32 | INFO     | src.strategies.base_strategy:__init__:21 - Initialized strategy: macd
+2025-07-28 23:00:32 | INFO     | src.strategies.macd_strategy:__init__:35 - MACD Strategy initialized: fast=12, slow=26, signal=9
+2025-07-28 23:00:32 | INFO     | src.core.trading_engine:add_strategy:74 - Added strategy: macd
+2025-07-28 23:00:32 | INFO     | src.core.trading_engine:run_backtest:78 - Starting backtest from 2024-01-01 to 2024-05-31
+2025-07-28 23:00:32 | INFO     | src.data.data_manager:get_historical_data:34 - Fetching historical data for ['VCB'] from 2024-01-01 to 2024-05-31
+2025-07-28 23:00:32 | INFO     | src.data.data_manager:get_historical_data:44 - Data loaded from cache
+2025-07-28 23:00:32 | INFO     | src.core.trading_engine:run_backtest:99 - Loaded 250 data points for ['VCB']
+2025-07-28 23:00:32 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:88 - MACD bullish crossover for VCB: MACD=0.2361, Signal=0.1243
+2025-07-28 23:00:32 | INFO     | src.core.trading_engine:_execute_buy_order:202 - BUY: 336.30 VCB @ $59.47
+2025-07-28 23:00:32 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:94 - MACD bearish crossover for VCB: MACD=0.8751, Signal=0.8843
+2025-07-28 23:00:32 | INFO     | src.core.trading_engine:_execute_sell_order:238 - SELL: 336.30 VCB @ $60.60 | P&L: $359.64 (1.80%)
+2025-07-28 23:00:32 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:115 - MACD zero line bearish crossover for VCB: MACD=-0.1480
+2025-07-28 23:00:32 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:88 - MACD bullish crossover for VCB: MACD=-0.1143, Signal=-0.1689
+2025-07-28 23:00:32 | INFO     | src.core.trading_engine:_execute_buy_order:202 - BUY: 332.97 VCB @ $60.27
+2025-07-28 23:00:32 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:111 - MACD zero line bullish crossover for VCB: MACD=0.0077
+2025-07-28 23:00:32 | INFO     | src.core.trading_engine:_execute_buy_order:202 - BUY: 268.09 VCB @ $59.87
+2025-07-28 23:00:32 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:115 - MACD zero line bearish crossover for VCB: MACD=-0.0002
+2025-07-28 23:00:32 | INFO     | src.core.trading_engine:_execute_sell_order:238 - SELL: 601.05 VCB @ $59.20 | P&L: $-571.48 (-1.58%)
+2025-07-28 23:00:32 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:111 - MACD zero line bullish crossover for VCB: MACD=0.0474
+2025-07-28 23:00:32 | INFO     | src.core.trading_engine:_execute_buy_order:202 - BUY: 331.72 VCB @ $60.13
+2025-07-28 23:00:32 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:94 - MACD bearish crossover for VCB: MACD=-0.0172, Signal=0.0056
+2025-07-28 23:00:32 | INFO     | src.core.trading_engine:_execute_sell_order:238 - SELL: 331.72 VCB @ $58.93 | P&L: $-417.61 (-2.09%)
+2025-07-28 23:00:32 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:88 - MACD bullish crossover for VCB: MACD=-0.4967, Signal=-0.4971
+2025-07-28 23:00:32 | INFO     | src.core.trading_engine:_execute_buy_order:202 - BUY: 342.81 VCB @ $57.93
+2025-07-28 23:00:32 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:94 - MACD bearish crossover for VCB: MACD=-0.5064, Signal=-0.4845
+2025-07-28 23:00:32 | INFO     | src.core.trading_engine:_execute_sell_order:238 - SELL: 342.81 VCB @ $56.52 | P&L: $-502.74 (-2.53%)
+2025-07-28 23:00:32 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:88 - MACD bullish crossover for VCB: MACD=-0.4953, Signal=-0.5044
+2025-07-28 23:00:32 | INFO     | src.core.trading_engine:_execute_buy_order:202 - BUY: 343.43 VCB @ $57.52
+2025-07-28 23:00:32 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:111 - MACD zero line bullish crossover for VCB: MACD=0.1288
+2025-07-28 23:00:32 | INFO     | src.core.trading_engine:_execute_buy_order:202 - BUY: 265.72 VCB @ $59.46
+2025-07-28 23:00:32 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:94 - MACD bearish crossover for VCB: MACD=0.1212, Signal=0.1338
+2025-07-28 23:00:32 | INFO     | src.core.trading_engine:_execute_sell_order:238 - SELL: 609.15 VCB @ $57.19 | P&L: $-751.35 (-2.11%)
+2025-07-28 23:00:32 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:88 - MACD bullish crossover for VCB: MACD=0.1235, Signal=0.1126
+2025-07-28 23:00:32 | INFO     | src.core.trading_engine:_execute_buy_order:202 - BUY: 332.94 VCB @ $58.86
+2025-07-28 23:00:32 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:94 - MACD bearish crossover for VCB: MACD=0.0268, Signal=0.0954
+2025-07-28 23:00:32 | INFO     | src.core.trading_engine:_execute_sell_order:238 - SELL: 332.94 VCB @ $57.26 | P&L: $-551.77 (-2.82%)
+2025-07-28 23:00:32 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:115 - MACD zero line bearish crossover for VCB: MACD=-0.0229
+2025-07-28 23:00:32 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:88 - MACD bullish crossover for VCB: MACD=-0.7382, Signal=-0.7417
+2025-07-28 23:00:32 | INFO     | src.core.trading_engine:_execute_buy_order:202 - BUY: 352.18 VCB @ $55.32
+2025-07-28 23:00:32 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:94 - MACD bearish crossover for VCB: MACD=-0.7401, Signal=-0.7297
+2025-07-28 23:00:32 | INFO     | src.core.trading_engine:_execute_sell_order:238 - SELL: 352.18 VCB @ $53.71 | P&L: $-585.93 (-3.01%)
+2025-07-28 23:00:32 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:88 - MACD bullish crossover for VCB: MACD=-0.6168, Signal=-0.7072
+2025-07-28 23:00:32 | INFO     | src.core.trading_engine:_execute_buy_order:202 - BUY: 346.67 VCB @ $55.85
+2025-07-28 23:00:32 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:111 - MACD zero line bullish crossover for VCB: MACD=0.0941
+2025-07-28 23:00:32 | INFO     | src.core.trading_engine:_execute_buy_order:202 - BUY: 266.71 VCB @ $58.06
+2025-07-28 23:00:32 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:94 - MACD bearish crossover for VCB: MACD=1.1718, Signal=1.1822
+2025-07-28 23:00:32 | INFO     | src.core.trading_engine:_execute_sell_order:238 - SELL: 613.39 VCB @ $60.87 | P&L: $2452.43 (7.04%)
+2025-07-28 23:00:32 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:88 - MACD bullish crossover for VCB: MACD=0.6722, Signal=0.4821
+2025-07-28 23:00:32 | INFO     | src.core.trading_engine:_execute_buy_order:202 - BUY: 304.61 VCB @ $65.15
+2025-07-28 23:00:32 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:94 - MACD bearish crossover for VCB: MACD=1.0156, Signal=1.0537
+2025-07-28 23:00:32 | INFO     | src.core.trading_engine:_execute_sell_order:238 - SELL: 304.61 VCB @ $63.14 | P&L: $-631.49 (-3.18%)
+2025-07-28 23:00:32 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:115 - MACD zero line bearish crossover for VCB: MACD=-0.1743
+2025-07-28 23:00:32 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:88 - MACD bullish crossover for VCB: MACD=-0.3993, Signal=-0.4617
+2025-07-28 23:00:32 | INFO     | src.core.trading_engine:_execute_buy_order:202 - BUY: 316.91 VCB @ $62.21
+2025-07-28 23:00:32 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:94 - MACD bearish crossover for VCB: MACD=-0.3312, Signal=-0.3239
+2025-07-28 23:00:32 | INFO     | src.core.trading_engine:_execute_sell_order:238 - SELL: 316.91 VCB @ $60.60 | P&L: $-529.43 (-2.69%)
+2025-07-28 23:00:32 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:88 - MACD bullish crossover for VCB: MACD=-0.2782, Signal=-0.3192
+2025-07-28 23:00:32 | INFO     | src.core.trading_engine:_execute_buy_order:202 - BUY: 316.52 VCB @ $61.94
+2025-07-28 23:00:32 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:94 - MACD bearish crossover for VCB: MACD=-0.2962, Signal=-0.2888
+2025-07-28 23:00:32 | INFO     | src.core.trading_engine:_execute_sell_order:238 - SELL: 316.52 VCB @ $60.67 | P&L: $-421.18 (-2.15%)
+2025-07-28 23:00:32 | INFO     | src.core.trading_engine:_generate_backtest_report:285 - === BACKTEST RESULTS ===
+2025-07-28 23:00:32 | INFO     | src.core.trading_engine:_generate_backtest_report:286 - Initial Capital: $100,000.00
+2025-07-28 23:00:32 | INFO     | src.core.trading_engine:_generate_backtest_report:287 - Final Portfolio Value: $97,584.52
+2025-07-28 23:00:32 | INFO     | src.core.trading_engine:_generate_backtest_report:288 - Total Return: -2.42%
+2025-07-28 23:00:32 | INFO     | src.core.trading_engine:_generate_backtest_report:289 - Annualized Volatility: 2.68%
+2025-07-28 23:00:32 | INFO     | src.core.trading_engine:_generate_backtest_report:290 - Sharpe Ratio: -0.91
+2025-07-28 23:00:32 | INFO     | src.core.trading_engine:_generate_backtest_report:291 - Maximum Drawdown: -4.16%
+2025-07-28 23:00:32 | INFO     | src.core.trading_engine:_generate_backtest_report:292 - Total Trades: 25
+2025-07-28 23:00:32 | INFO     | src.core.trading_engine:_generate_backtest_report:293 - Buy Trades: 14
+2025-07-28 23:00:32 | INFO     | src.core.trading_engine:_generate_backtest_report:294 - Sell Trades: 11
+2025-07-28 23:00:32 | INFO     | src.core.trading_engine:_generate_backtest_report:302 - Backtest results saved to data/backtest_results.csv
+2025-07-28 23:00:32 | INFO     | src.core.trading_engine:_generate_backtest_report:319 - Trade details saved to data/trades.csv
+2025-07-28 23:00:32 | INFO     | __main__:run_backtest:80 - Backtest completed
+2025-07-28 23:00:47 | INFO     | src.utils.config_manager:__init__:18 - Configuration loaded from config/config.yaml
+2025-07-28 23:00:47 | INFO     | src.risk.risk_manager:__init__:31 - Risk manager initialized
+2025-07-28 23:00:47 | INFO     | src.core.trading_engine:__init__:69 - Trading engine initialized with $100,000.00 initial capital
+2025-07-28 23:00:47 | INFO     | src.strategies.base_strategy:__init__:21 - Initialized strategy: rsi
+2025-07-28 23:00:47 | INFO     | src.strategies.rsi_strategy:__init__:37 - RSI Strategy initialized: period=14, overbought=70, oversold=30
+2025-07-28 23:00:47 | INFO     | src.core.trading_engine:add_strategy:74 - Added strategy: rsi
+2025-07-28 23:00:47 | INFO     | src.core.trading_engine:run_backtest:78 - Starting backtest from 2024-01-01 to 2024-05-31
+2025-07-28 23:00:47 | INFO     | src.data.data_manager:get_historical_data:34 - Fetching historical data for ['VCB'] from 2024-01-01 to 2024-05-31
+2025-07-28 23:00:47 | INFO     | src.data.data_manager:get_historical_data:44 - Data loaded from cache
+2025-07-28 23:00:47 | INFO     | src.core.trading_engine:run_backtest:99 - Loaded 250 data points for ['VCB']
+2025-07-28 23:00:48 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:88 - RSI overbought signal for VCB: 74.71 > 70
+2025-07-28 23:00:48 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:88 - RSI overbought signal for VCB: 75.47 > 70
+2025-07-28 23:00:48 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:82 - RSI oversold signal for VCB: 29.32 < 30
+2025-07-28 23:00:48 | INFO     | src.core.trading_engine:_execute_buy_order:202 - BUY: 336.36 VCB @ $59.46
+2025-07-28 23:00:48 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:82 - RSI oversold signal for VCB: 27.73 < 30
+2025-07-28 23:00:48 | INFO     | src.core.trading_engine:_execute_buy_order:202 - BUY: 283.01 VCB @ $56.52
+2025-07-28 23:00:48 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:88 - RSI overbought signal for VCB: 72.30 > 70
+2025-07-28 23:00:48 | INFO     | src.core.trading_engine:_execute_sell_order:238 - SELL: 619.38 VCB @ $59.87 | P&L: $1048.93 (2.91%)
+2025-07-28 23:00:48 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:82 - RSI oversold signal for VCB: 29.04 < 30
+2025-07-28 23:00:48 | INFO     | src.core.trading_engine:_execute_buy_order:202 - BUY: 367.45 VCB @ $54.98
+2025-07-28 23:00:48 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:98 - RSI sustained oversold for VCB: 26.89
+2025-07-28 23:00:48 | INFO     | src.core.trading_engine:_execute_buy_order:202 - BUY: 296.37 VCB @ $54.52
+2025-07-28 23:00:48 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:98 - RSI sustained oversold for VCB: 28.11
+2025-07-28 23:00:48 | INFO     | src.core.trading_engine:_execute_buy_order:202 - BUY: 237.91 VCB @ $54.32
+2025-07-28 23:00:48 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:98 - RSI sustained oversold for VCB: 29.04
+2025-07-28 23:00:48 | INFO     | src.core.trading_engine:_execute_buy_order:202 - BUY: 190.52 VCB @ $54.25
+2025-07-28 23:00:48 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:98 - RSI sustained oversold for VCB: 25.83
+2025-07-28 23:00:48 | INFO     | src.core.trading_engine:_execute_buy_order:202 - BUY: 152.78 VCB @ $54.11
+2025-07-28 23:00:48 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:98 - RSI sustained oversold for VCB: 16.10
+2025-07-28 23:00:48 | INFO     | src.core.trading_engine:_execute_buy_order:202 - BUY: 122.19 VCB @ $54.11
+2025-07-28 23:00:48 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:98 - RSI sustained oversold for VCB: 27.10
+2025-07-28 23:00:48 | INFO     | src.core.trading_engine:_execute_buy_order:202 - BUY: 96.64 VCB @ $54.72
+2025-07-28 23:00:48 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:82 - RSI oversold signal for VCB: 28.99 < 30
+2025-07-28 23:00:48 | INFO     | src.core.trading_engine:_execute_buy_order:202 - BUY: 78.74 VCB @ $53.71
+2025-07-28 23:00:48 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:88 - RSI overbought signal for VCB: 72.63 > 70
+2025-07-28 23:00:48 | INFO     | src.core.trading_engine:_execute_sell_order:238 - SELL: 1542.60 VCB @ $58.06 | P&L: $5458.44 (6.50%)
+2025-07-28 23:00:48 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:103 - RSI sustained overbought for VCB: 76.60
+2025-07-28 23:00:48 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:103 - RSI sustained overbought for VCB: 80.02
+2025-07-28 23:00:48 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:103 - RSI sustained overbought for VCB: 80.02
+2025-07-28 23:00:48 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:103 - RSI sustained overbought for VCB: 76.74
+2025-07-28 23:00:48 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:103 - RSI sustained overbought for VCB: 77.35
+2025-07-28 23:00:48 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:103 - RSI sustained overbought for VCB: 75.75
+2025-07-28 23:00:48 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:103 - RSI sustained overbought for VCB: 77.68
+2025-07-28 23:00:48 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:103 - RSI sustained overbought for VCB: 77.86
+2025-07-28 23:00:48 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:103 - RSI sustained overbought for VCB: 94.20
+2025-07-28 23:00:48 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:103 - RSI sustained overbought for VCB: 87.58
+2025-07-28 23:00:48 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:103 - RSI sustained overbought for VCB: 82.32
+2025-07-28 23:00:48 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:103 - RSI sustained overbought for VCB: 76.52
+2025-07-28 23:00:48 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:103 - RSI sustained overbought for VCB: 74.96
+2025-07-28 23:00:48 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:103 - RSI sustained overbought for VCB: 75.97
+2025-07-28 23:00:48 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:88 - RSI overbought signal for VCB: 75.66 > 70
+2025-07-28 23:00:48 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:103 - RSI sustained overbought for VCB: 74.27
+2025-07-28 23:00:48 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:103 - RSI sustained overbought for VCB: 75.85
+2025-07-28 23:00:48 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:103 - RSI sustained overbought for VCB: 71.74
+2025-07-28 23:00:48 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:88 - RSI overbought signal for VCB: 70.94 > 70
+2025-07-28 23:00:48 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:88 - RSI overbought signal for VCB: 71.74 > 70
+2025-07-28 23:00:48 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:82 - RSI oversold signal for VCB: 23.63 < 30
+2025-07-28 23:00:48 | INFO     | src.core.trading_engine:_execute_buy_order:202 - BUY: 343.91 VCB @ $61.87
+2025-07-28 23:00:48 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:98 - RSI sustained oversold for VCB: 29.31
+2025-07-28 23:00:48 | INFO     | src.core.trading_engine:_execute_buy_order:202 - BUY: 272.98 VCB @ $62.34
+2025-07-28 23:00:48 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:82 - RSI oversold signal for VCB: 28.91 < 30
+2025-07-28 23:00:48 | INFO     | src.core.trading_engine:_execute_buy_order:202 - BUY: 223.60 VCB @ $60.87
+2025-07-28 23:00:48 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:98 - RSI sustained oversold for VCB: 27.95
+2025-07-28 23:00:48 | INFO     | src.core.trading_engine:_execute_buy_order:202 - BUY: 179.81 VCB @ $60.54
+2025-07-28 23:00:48 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:98 - RSI sustained oversold for VCB: 29.97
+2025-07-28 23:00:48 | INFO     | src.core.trading_engine:_execute_buy_order:202 - BUY: 143.81 VCB @ $60.54
+2025-07-28 23:00:48 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:98 - RSI sustained oversold for VCB: 28.61
+2025-07-28 23:00:48 | INFO     | src.core.trading_engine:_execute_buy_order:202 - BUY: 114.91 VCB @ $60.60
+2025-07-28 23:00:48 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:98 - RSI sustained oversold for VCB: 29.18
+2025-07-28 23:00:48 | INFO     | src.core.trading_engine:_execute_buy_order:202 - BUY: 92.41 VCB @ $60.27
+2025-07-28 23:00:48 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:82 - RSI oversold signal for VCB: 20.80 < 30
+2025-07-28 23:00:48 | INFO     | src.core.trading_engine:_execute_buy_order:202 - BUY: 73.18 VCB @ $60.87
+2025-07-28 23:00:48 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:98 - RSI sustained oversold for VCB: 25.78
+2025-07-28 23:00:48 | INFO     | src.core.trading_engine:_execute_buy_order:202 - BUY: 58.40 VCB @ $61.00
+2025-07-28 23:00:48 | INFO     | src.core.trading_engine:_generate_backtest_report:285 - === BACKTEST RESULTS ===
+2025-07-28 23:00:48 | INFO     | src.core.trading_engine:_generate_backtest_report:286 - Initial Capital: $100,000.00
+2025-07-28 23:00:48 | INFO     | src.core.trading_engine:_generate_backtest_report:287 - Final Portfolio Value: $101,918.12
+2025-07-28 23:00:48 | INFO     | src.core.trading_engine:_generate_backtest_report:288 - Total Return: 1.92%
+2025-07-28 23:00:48 | INFO     | src.core.trading_engine:_generate_backtest_report:289 - Annualized Volatility: 6.51%
+2025-07-28 23:00:48 | INFO     | src.core.trading_engine:_generate_backtest_report:290 - Sharpe Ratio: 0.33
+2025-07-28 23:00:48 | INFO     | src.core.trading_engine:_generate_backtest_report:291 - Maximum Drawdown: -5.48%
+2025-07-28 23:00:48 | INFO     | src.core.trading_engine:_generate_backtest_report:292 - Total Trades: 21
+2025-07-28 23:00:48 | INFO     | src.core.trading_engine:_generate_backtest_report:293 - Buy Trades: 19
+2025-07-28 23:00:48 | INFO     | src.core.trading_engine:_generate_backtest_report:294 - Sell Trades: 2
+2025-07-28 23:00:48 | INFO     | src.core.trading_engine:_generate_backtest_report:302 - Backtest results saved to data/backtest_results.csv
+2025-07-28 23:00:48 | INFO     | src.core.trading_engine:_generate_backtest_report:319 - Trade details saved to data/trades.csv
+2025-07-28 23:00:48 | INFO     | __main__:run_backtest:80 - Backtest completed
+2025-07-28 23:01:03 | INFO     | src.utils.config_manager:__init__:18 - Configuration loaded from config/config.yaml
+2025-07-28 23:01:03 | INFO     | src.risk.risk_manager:__init__:31 - Risk manager initialized
+2025-07-28 23:01:03 | INFO     | src.core.trading_engine:__init__:69 - Trading engine initialized with $100,000.00 initial capital
+2025-07-28 23:01:03 | INFO     | src.strategies.base_strategy:__init__:21 - Initialized strategy: sma_crossover
+2025-07-28 23:01:03 | INFO     | src.strategies.sma_crossover:__init__:29 - SMA Crossover Strategy initialized: 20/50
+2025-07-28 23:01:03 | INFO     | src.core.trading_engine:add_strategy:74 - Added strategy: sma_crossover
+2025-07-28 23:01:03 | INFO     | src.core.trading_engine:run_backtest:78 - Starting backtest from 2024-01-01 to 2024-05-31
+2025-07-28 23:01:03 | INFO     | src.data.data_manager:get_historical_data:34 - Fetching historical data for ['VCB'] from 2024-01-01 to 2024-05-31
+2025-07-28 23:01:03 | INFO     | src.data.data_manager:get_historical_data:44 - Data loaded from cache
+2025-07-28 23:01:03 | INFO     | src.core.trading_engine:run_backtest:99 - Loaded 250 data points for ['VCB']
+2025-07-28 23:01:03 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:79 - Golden cross detected for VCB: 60.50 > 58.41
+2025-07-28 23:01:03 | INFO     | src.core.trading_engine:_execute_buy_order:202 - BUY: 331.46 VCB @ $60.34
+2025-07-28 23:01:03 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:83 - Death cross detected for VCB: 59.41 < 59.45
+2025-07-28 23:01:03 | INFO     | src.core.trading_engine:_execute_sell_order:238 - SELL: 331.46 VCB @ $59.87 | P&L: $-175.63 (-0.88%)
+2025-07-28 23:01:03 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:79 - Golden cross detected for VCB: 58.19 > 58.18
+2025-07-28 23:01:03 | INFO     | src.core.trading_engine:_execute_buy_order:202 - BUY: 346.60 VCB @ $57.59
+2025-07-28 23:01:03 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:83 - Death cross detected for VCB: 57.69 < 57.74
+2025-07-28 23:01:03 | INFO     | src.core.trading_engine:_execute_sell_order:238 - SELL: 346.60 VCB @ $57.12 | P&L: $-182.70 (-0.92%)
+2025-07-28 23:01:03 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:79 - Golden cross detected for VCB: 57.40 > 57.13
+2025-07-28 23:01:03 | INFO     | src.core.trading_engine:_execute_buy_order:202 - BUY: 326.88 VCB @ $60.94
+2025-07-28 23:01:03 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:83 - Death cross detected for VCB: 62.49 < 62.55
+2025-07-28 23:01:03 | INFO     | src.core.trading_engine:_execute_sell_order:238 - SELL: 326.88 VCB @ $60.60 | P&L: $-130.95 (-0.66%)
+2025-07-28 23:01:03 | INFO     | src.core.trading_engine:_generate_backtest_report:285 - === BACKTEST RESULTS ===
+2025-07-28 23:01:03 | INFO     | src.core.trading_engine:_generate_backtest_report:286 - Initial Capital: $100,000.00
+2025-07-28 23:01:03 | INFO     | src.core.trading_engine:_generate_backtest_report:287 - Final Portfolio Value: $99,450.84
+2025-07-28 23:01:03 | INFO     | src.core.trading_engine:_generate_backtest_report:288 - Total Return: -0.55%
+2025-07-28 23:01:03 | INFO     | src.core.trading_engine:_generate_backtest_report:289 - Annualized Volatility: 2.43%
+2025-07-28 23:01:03 | INFO     | src.core.trading_engine:_generate_backtest_report:290 - Sharpe Ratio: -0.22
+2025-07-28 23:01:03 | INFO     | src.core.trading_engine:_generate_backtest_report:291 - Maximum Drawdown: -1.58%
+2025-07-28 23:01:03 | INFO     | src.core.trading_engine:_generate_backtest_report:292 - Total Trades: 6
+2025-07-28 23:01:03 | INFO     | src.core.trading_engine:_generate_backtest_report:293 - Buy Trades: 3
+2025-07-28 23:01:03 | INFO     | src.core.trading_engine:_generate_backtest_report:294 - Sell Trades: 3
+2025-07-28 23:01:03 | INFO     | src.core.trading_engine:_generate_backtest_report:302 - Backtest results saved to data/backtest_results.csv
+2025-07-28 23:01:03 | INFO     | src.core.trading_engine:_generate_backtest_report:319 - Trade details saved to data/trades.csv
+2025-07-28 23:01:03 | INFO     | __main__:run_backtest:80 - Backtest completed
+2025-07-28 23:08:49 | INFO     | src.utils.config_manager:__init__:18 - Configuration loaded from config/config.yaml
+2025-07-28 23:08:49 | INFO     | src.risk.risk_manager:__init__:31 - Risk manager initialized
+2025-07-28 23:08:49 | INFO     | src.core.trading_engine:__init__:69 - Trading engine initialized with $100,000.00 initial capital
+2025-07-28 23:08:49 | INFO     | src.strategies.base_strategy:__init__:21 - Initialized strategy: sma_crossover
+2025-07-28 23:08:49 | INFO     | src.strategies.sma_crossover:__init__:29 - SMA Crossover Strategy initialized: 20/50
+2025-07-28 23:08:49 | INFO     | src.core.trading_engine:add_strategy:74 - Added strategy: sma_crossover
+2025-07-28 23:08:49 | INFO     | src.core.trading_engine:run_backtest:78 - Starting backtest from 2024-01-01 to 2024-05-31
+2025-07-28 23:08:49 | INFO     | src.data.data_manager:get_historical_data:34 - Fetching historical data for ['VCB'] from 2024-01-01 to 2024-05-31
+2025-07-28 23:08:49 | INFO     | src.data.data_manager:get_historical_data:44 - Data loaded from cache
+2025-07-28 23:08:49 | INFO     | src.core.trading_engine:run_backtest:99 - Loaded 250 data points for ['VCB']
+2025-07-28 23:08:49 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:79 - Golden cross detected for VCB: 60.50 > 58.41
+2025-07-28 23:08:49 | INFO     | src.core.trading_engine:_execute_buy_order:202 - BUY: 331.46 VCB @ $60.34
+2025-07-28 23:08:49 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:83 - Death cross detected for VCB: 59.41 < 59.45
+2025-07-28 23:08:49 | INFO     | src.core.trading_engine:_execute_sell_order:238 - SELL: 331.46 VCB @ $59.87 | P&L: $-175.63 (-0.88%)
+2025-07-28 23:08:49 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:79 - Golden cross detected for VCB: 58.19 > 58.18
+2025-07-28 23:08:49 | INFO     | src.core.trading_engine:_execute_buy_order:202 - BUY: 346.60 VCB @ $57.59
+2025-07-28 23:08:49 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:83 - Death cross detected for VCB: 57.69 < 57.74
+2025-07-28 23:08:49 | INFO     | src.core.trading_engine:_execute_sell_order:238 - SELL: 346.60 VCB @ $57.12 | P&L: $-182.70 (-0.92%)
+2025-07-28 23:08:49 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:79 - Golden cross detected for VCB: 57.40 > 57.13
+2025-07-28 23:08:49 | INFO     | src.core.trading_engine:_execute_buy_order:202 - BUY: 326.88 VCB @ $60.94
+2025-07-28 23:08:49 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:83 - Death cross detected for VCB: 62.49 < 62.55
+2025-07-28 23:08:49 | INFO     | src.core.trading_engine:_execute_sell_order:238 - SELL: 326.88 VCB @ $60.60 | P&L: $-130.95 (-0.66%)
+2025-07-28 23:08:50 | INFO     | src.core.trading_engine:_generate_backtest_report:285 - === BACKTEST RESULTS ===
+2025-07-28 23:08:50 | INFO     | src.core.trading_engine:_generate_backtest_report:286 - Initial Capital: $100,000.00
+2025-07-28 23:08:50 | INFO     | src.core.trading_engine:_generate_backtest_report:287 - Final Portfolio Value: $99,450.84
+2025-07-28 23:08:50 | INFO     | src.core.trading_engine:_generate_backtest_report:288 - Total Return: -0.55%
+2025-07-28 23:08:50 | INFO     | src.core.trading_engine:_generate_backtest_report:289 - Annualized Volatility: 2.43%
+2025-07-28 23:08:50 | INFO     | src.core.trading_engine:_generate_backtest_report:290 - Sharpe Ratio: -0.22
+2025-07-28 23:08:50 | INFO     | src.core.trading_engine:_generate_backtest_report:291 - Maximum Drawdown: -1.58%
+2025-07-28 23:08:50 | INFO     | src.core.trading_engine:_generate_backtest_report:292 - Total Trades: 6
+2025-07-28 23:08:50 | INFO     | src.core.trading_engine:_generate_backtest_report:293 - Buy Trades: 3
+2025-07-28 23:08:50 | INFO     | src.core.trading_engine:_generate_backtest_report:294 - Sell Trades: 3
+2025-07-28 23:08:50 | INFO     | src.core.trading_engine:_generate_backtest_report:302 - Backtest results saved to data/backtest_results.csv
+2025-07-28 23:08:50 | INFO     | src.core.trading_engine:_generate_backtest_report:319 - Trade details saved to data/trades.csv
+2025-07-28 23:08:50 | INFO     | __main__:run_backtest:80 - Backtest completed

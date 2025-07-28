@@ -8,6 +8,7 @@ from typing import Dict, Any
 from loguru import logger
 
 from .base_strategy import BaseStrategy
+from ..indicators.sma import calculate_sma_crossover, calculate_sma_components
 
 
 class SMACrossoverStrategy(BaseStrategy):
@@ -27,30 +28,30 @@ class SMACrossoverStrategy(BaseStrategy):
         
         logger.info(f"SMA Crossover Strategy initialized: {self.short_window}/{self.long_window}")
     
-    def generate_signals(self, data: pd.Series) -> Dict[str, str]:
+    def generate_signals(self, historical_data: pd.DataFrame, current_data: pd.Series) -> Dict[str, str]:
         """
         Generate trading signals based on SMA crossover
         
         Args:
-            data: Series containing price data with SMA indicators
+            historical_data: Historical market data up to current point
+            current_data: Current day's market data
             
         Returns:
             Dict mapping symbol to signal ('buy', 'sell', 'hold')
         """
         signals = {}
         
-        # Extract symbols from data (assuming data has columns for each symbol)
-        if isinstance(data, pd.Series):
-            # Single symbol data
-            symbol = data.name if hasattr(data, 'name') else 'UNKNOWN'
-            signal = self._generate_signal_for_symbol(data, symbol)
-            signals[symbol] = signal
-        else:
-            # Multiple symbols data
-            for symbol in data.columns:
-                if isinstance(symbol, str) and not symbol.endswith('_SMA'):
-                    signal = self._generate_signal_for_symbol(data[symbol], symbol)
+        # Process each symbol
+        for symbol in historical_data.columns:
+            if isinstance(symbol, str) and not symbol.endswith('_SMA'):
+                # Get historical price data for this symbol
+                symbol_data = historical_data[symbol].dropna()
+                
+                if len(symbol_data) >= self.long_window:
+                    signal = self._generate_signal_for_symbol(symbol_data, symbol)
                     signals[symbol] = signal
+                else:
+                    signals[symbol] = 'hold'  # Not enough data
         
         return signals
     
@@ -60,8 +61,7 @@ class SMACrossoverStrategy(BaseStrategy):
             return 'hold'  # Not enough data
         
         # Calculate SMAs
-        short_sma = price_data.rolling(window=self.short_window).mean()
-        long_sma = price_data.rolling(window=self.long_window).mean()
+        short_sma, long_sma = calculate_sma_crossover(price_data, self.short_window, self.long_window)
         
         # Get current and previous values
         current_short = short_sma.iloc[-1]
@@ -99,14 +99,7 @@ class SMACrossoverStrategy(BaseStrategy):
     
     def get_indicators(self, price_data: pd.Series) -> Dict[str, pd.Series]:
         """Get strategy indicators for analysis"""
-        short_sma = price_data.rolling(window=self.short_window).mean()
-        long_sma = price_data.rolling(window=self.long_window).mean()
-        
-        return {
-            'short_sma': short_sma,
-            'long_sma': long_sma,
-            'sma_diff': short_sma - long_sma
-        }
+        return calculate_sma_components(price_data, self.short_window, self.long_window)
     
     def get_summary(self) -> Dict[str, Any]:
         """Get strategy summary with parameters"""
