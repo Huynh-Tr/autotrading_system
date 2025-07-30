@@ -3,15 +3,15 @@
 # Trading Settings
 trading:
   mode: "backtest"  # backtest, live, paper
-  symbols: ["VCB"]
+  symbols: ["AAPL"]
   initial_capital: 100000
   commission: 0.001  # 0.1% commission per trade
   
 # Data Settings
 data:
-  source: "vnstock"  # yfinance, alpha_vantage, custom
-  start_date: "2024-01-01"
-  end_date: "2024-05-31"
+  source: "yfinance"  # yfinance, alpha_vantage, custom
+  start_date: "2025-01-01"
+  end_date: "2025-07-31"
   interval: "1d"  # 1m, 5m, 15m, 30m, 1h, 1d
   cache_data: true
   cache_dir: "data/cache"
@@ -27,20 +27,20 @@ risk:
 # Strategy Settings
 strategies:
   sma_crossover:
-    short_window: 20
-    long_window: 50
+    short_window: 5
+    long_window: 30
     enabled: true
     
   rsi:
-    period: 14
+    period: 20
     oversold: 30
     overbought: 70
     enabled: true
     
   macd:
-    fast_period: 12
-    slow_period: 26
-    signal_period: 9
+    fast_period: 15
+    slow_period: 20
+    signal_period: 7
     enabled: true
 
 # Logging

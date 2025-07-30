@@ -5,7 +5,20 @@ Configuration Manager - Handles system configuration
 import yaml
 import os
 from typing import Any, Dict, Optional
-from loguru import logger
+
+# Try to import loguru, fallback to basic logging if not available
+try:
+    from loguru import logger
+except ImportError:
+    import logging
+    logger = logging.getLogger(__name__)
+    # Set up basic logging if loguru is not available
+    if not logger.handlers:
+        handler = logging.StreamHandler()
+        formatter = logging.Formatter('%(levelname)s: %(message)s')
+        handler.setFormatter(formatter)
+        logger.addHandler(handler)
+        logger.setLevel(logging.INFO)
 
 
 class ConfigManager:
@@ -31,37 +44,37 @@ class ConfigManager:
             logger.error(f"Error loading config: {e}")
             return self._get_default_config()
     
-    def _get_default_config(self) -> Dict[str, Any]:
-        """Get default configuration"""
-        return {
-            'trading': {
-                'mode': 'backtest',
-                'symbols': ['AAPL', 'GOOGL', 'MSFT'],
-                'initial_capital': 100000,
-                'commission': 0.001
-            },
-            'data': {
-                'source': 'yfinance',
-                'start_date': '2023-01-01',
-                'end_date': '2024-01-01',
-                'interval': '1d',
-                'cache_data': True,
-                'cache_dir': 'data/cache'
-            },
-            'risk': {
-                'max_position_size': 0.1,
-                'max_portfolio_risk': 0.02,
-                'stop_loss': 0.05,
-                'take_profit': 0.15,
-                'max_drawdown': 0.20
-            },
-            'logging': {
-                'level': 'INFO',
-                'file': 'logs/trading.log',
-                'max_size': '10MB',
-                'backup_count': 5
-            }
-        }
+    # def _get_default_config(self) -> Dict[str, Any]:
+    #     """Get default configuration"""
+    #     return {
+    #         'trading': {
+    #             'mode': 'backtest',
+    #             'symbols': ['AAPL', 'GOOGL', 'MSFT'],
+    #             'initial_capital': 100000,
+    #             'commission': 0.001
+    #         },
+    #         'data': {
+    #             'source': 'yfinance',
+    #             'start_date': '2023-01-01',
+    #             'end_date': '2024-01-01',
+    #             'interval': '1d',
+    #             'cache_data': True,
+    #             'cache_dir': 'data/cache'
+    #         },
+    #         'risk': {
+    #             'max_position_size': 0.1,
+    #             'max_portfolio_risk': 0.02,
+    #             'stop_loss': 0.05,
+    #             'take_profit': 0.15,
+    #             'max_drawdown': 0.20
+    #         },
+    #         'logging': {
+    #             'level': 'INFO',
+    #             'file': 'logs/trading.log',
+    #             'max_size': '10MB',
+    #             'backup_count': 5
+    #         }
+    #     }
     
     def get(self, key: str, default: Any = None) -> Any:
         """Get configuration value using dot notation"""

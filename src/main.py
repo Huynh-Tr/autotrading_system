@@ -6,7 +6,20 @@ import argparse
 import sys
 import os
 from datetime import datetime
-from loguru import logger
+
+# Try to import loguru, fallback to basic logging if not available
+try:
+    from loguru import logger
+except ImportError:
+    import logging
+    logger = logging.getLogger(__name__)
+    # Set up basic logging if loguru is not available
+    if not logger.handlers:
+        handler = logging.StreamHandler()
+        formatter = logging.Formatter('%(levelname)s: %(message)s')
+        handler.setFormatter(formatter)
+        logger.addHandler(handler)
+        logger.setLevel(logging.INFO)
 
 # Add src to path
 sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
@@ -50,8 +63,8 @@ def run_backtest(config_path: str, strategy_name: str):
     config = ConfigManager(config_path)
     setup_logging(config)
     
-    # Initialize trading engine
-    engine = TradingEngine(config_path)
+    # Initialize trading engine with config object
+    engine = TradingEngine(config)
     
     # Add strategies
     if strategy_name == "sma_crossover":
@@ -88,8 +101,8 @@ def run_live_trading(config_path: str, strategy_name: str):
     config = ConfigManager(config_path)
     setup_logging(config)
     
-    # Initialize trading engine
-    engine = TradingEngine(config_path)
+    # Initialize trading engine with config object
+    engine = TradingEngine(config)
     
     # Add strategies
     if strategy_name == "sma_crossover":
@@ -122,8 +135,8 @@ def run_paper_trading(config_path: str, strategy_name: str):
     config = ConfigManager(config_path)
     setup_logging(config)
     
-    # Initialize trading engine
-    engine = TradingEngine(config_path)
+    # Initialize trading engine with config object
+    engine = TradingEngine(config)
     
     # Add strategies
     if strategy_name == "sma_crossover":

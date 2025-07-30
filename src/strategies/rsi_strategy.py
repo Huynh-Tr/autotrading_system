@@ -5,10 +5,29 @@ RSI Strategy - Relative Strength Index trading strategy
 import pandas as pd
 import numpy as np
 from typing import Dict, Any
-from loguru import logger
 
-from .base_strategy import BaseStrategy
-from ..indicators.rsi import calculate_rsi, calculate_rsi_components
+# Try to import loguru, fallback to basic logging if not available
+try:
+    from loguru import logger
+except ImportError:
+    import logging
+    logger = logging.getLogger(__name__)
+    # Set up basic logging if loguru is not available
+    if not logger.handlers:
+        handler = logging.StreamHandler()
+        formatter = logging.Formatter('%(levelname)s: %(message)s')
+        handler.setFormatter(formatter)
+        logger.addHandler(handler)
+        logger.setLevel(logging.INFO)
+
+# Use absolute imports instead of relative imports
+try:
+    from .base_strategy import BaseStrategy
+    from ..indicators.rsi import calculate_rsi, calculate_rsi_components
+except ImportError:
+    # Fallback to absolute imports
+    from src.strategies.base_strategy import BaseStrategy
+    from src.indicators.rsi import calculate_rsi, calculate_rsi_components
 
 
 class RSIStrategy(BaseStrategy):
@@ -42,7 +61,7 @@ class RSIStrategy(BaseStrategy):
         Generate trading signals based on RSI
         
         Args:
-            historical_data: Historical market data up to current point
+            historical_data: Historical market data up to current point (OHLCV or close-only)
             current_data: Current day's market data
             
         Returns:
@@ -50,17 +69,35 @@ class RSIStrategy(BaseStrategy):
         """
         signals = {}
         
-        # Process each symbol
-        for symbol in historical_data.columns:
-            if isinstance(symbol, str) and not symbol.endswith('_RSI'):
-                # Get historical price data for this symbol
-                symbol_data = historical_data[symbol].dropna()
-                
-                if len(symbol_data) >= self.period + self.confirmation_period:
-                    signal = self._generate_signal_for_symbol(symbol_data, symbol)
-                    signals[symbol] = signal
+        # Handle both OHLCV data (MultiIndex columns) and legacy close-only data
+        if isinstance(historical_data.columns, pd.MultiIndex):
+            # New OHLCV data structure
+            symbols = historical_data.columns.get_level_values(0).unique()
+            for symbol in symbols:
+                if (symbol, 'close') in historical_data.columns:
+                    # Extract close prices for this symbol
+                    symbol_data = historical_data[(symbol, 'close')].dropna()
+                    
+                    if len(symbol_data) >= self.period + self.confirmation_period:
+                        signal = self._generate_signal_for_symbol(symbol_data, symbol)
+                        signals[symbol] = signal
+                    else:
+                        signals[symbol] = 'hold'  # Not enough data
                 else:
-                    signals[symbol] = 'hold'  # Not enough data
+                    logger.warning(f"No close data found for {symbol}")
+                    signals[symbol] = 'hold'
+        else:
+            # Legacy close-only data structure
+            for symbol in historical_data.columns:
+                if isinstance(symbol, str) and not symbol.endswith('_RSI'):
+                    # Get historical price data for this symbol
+                    symbol_data = historical_data[symbol].dropna()
+                    
+                    if len(symbol_data) >= self.period + self.confirmation_period:
+                        signal = self._generate_signal_for_symbol(symbol_data, symbol)
+                        signals[symbol] = signal
+                    else:
+                        signals[symbol] = 'hold'  # Not enough data
         
         return signals
     
@@ -106,7 +143,7 @@ class RSIStrategy(BaseStrategy):
         return 'hold'
     
     def _calculate_rsi(self, prices: pd.Series, period: int = 14) -> pd.Series:
-        """Calculate RSI indicator"""
+        """Calculate RSI for the given price series"""
         return calculate_rsi(prices, period)
     
     def validate_config(self) -> bool:
@@ -123,20 +160,34 @@ class RSIStrategy(BaseStrategy):
             logger.error("RSI thresholds must be between 0 and 100")
             return False
         
+        if self.confirmation_period <= 0:
+            logger.error("Confirmation period must be positive")
+            return False
+        
         return True
     
     def get_indicators(self, price_data: pd.Series) -> Dict[str, pd.Series]:
-        """Get strategy indicators for analysis"""
-        return calculate_rsi_components(price_data, self.period, self.overbought_threshold, self.oversold_threshold)
+        """Get strategy indicators for the given price data"""
+        if len(price_data) < self.period:
+            return {}
+        
+        # Calculate RSI
+        rsi = calculate_rsi(price_data, self.period)
+        
+        return {
+            'RSI': rsi,
+            'Overbought': pd.Series([self.overbought_threshold] * len(rsi), index=rsi.index),
+            'Oversold': pd.Series([self.oversold_threshold] * len(rsi), index=rsi.index)
+        }
     
     def get_summary(self) -> Dict[str, Any]:
-        """Get strategy summary with parameters"""
-        summary = super().get_summary()
-        summary.update({
+        """Get strategy summary"""
+        return {
+            'name': self.name,
+            'strategy_type': 'RSI Strategy',
             'period': self.period,
             'overbought_threshold': self.overbought_threshold,
             'oversold_threshold': self.oversold_threshold,
             'confirmation_period': self.confirmation_period,
-            'strategy_type': 'RSI'
-        })
-        return summary 
+            'description': f'RSI Strategy with {self.period} period, {self.oversold_threshold}/{self.overbought_threshold} levels'
+        } 

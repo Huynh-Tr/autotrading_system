@@ -1,0 +1,22 @@
+sequenceDiagram
+    participant Market as Market Data Sources
+    participant DataMgr as Data Manager
+    participant Trading as Trading Engine
+    participant Strategy as Strategy Layer
+    participant Risk as Risk Manager
+    participant Backtest as Backtest Engine
+    participant Optimizer as Strategy Optimizer
+    participant Dashboard as Dashboard
+    participant Output as Output Layer
+    
+    Market->>DataMgr: Historical price data
+    DataMgr->>Trading: Processed market data
+    Trading->>Strategy: Market signals
+    Strategy->>Risk: Trading signals
+    Risk->>Backtest: Risk-adjusted signals
+    Backtest->>Optimizer: Performance metrics
+    Optimizer->>Strategy: Optimized parameters
+    Strategy->>Trading: Enhanced signals
+    Trading->>Dashboard: Real-time updates
+    Dashboard->>Output: Trading decisions
+    Output->>Market: Execute trades

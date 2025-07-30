@@ -14,7 +14,7 @@ def check_python_version():
     if sys.version_info < (3, 8):
         print("❌ Python 3.8 or higher is required")
         return False
-    print(f"✓ Python {sys.version_info.major}.{sys.version_info.minor} detected")
+        print(f"[OK] Python {sys.version_info.major}.{sys.version_info.minor} detected")
     return True
 
 def install_dependencies():
@@ -23,7 +23,7 @@ def install_dependencies():
     
     try:
         subprocess.check_call([sys.executable, "-m", "pip", "install", "-r", "requirements.txt"])
-        print("✓ Dependencies installed successfully")
+        print("[OK] Dependencies installed successfully")
         return True
     except subprocess.CalledProcessError as e:
         print(f"❌ Failed to install dependencies: {e}")
@@ -42,7 +42,7 @@ def create_directories():
     
     for directory in directories:
         Path(directory).mkdir(parents=True, exist_ok=True)
-        print(f"✓ Created directory: {directory}")
+        print(f"[OK] Created directory: {directory}")
 
 def setup_config():
     """Setup configuration file"""
@@ -56,12 +56,12 @@ def setup_config():
         return False
     
     if os.path.exists(config_file):
-        print(f"✓ Configuration file already exists: {config_file}")
+        print(f"[OK] Configuration file already exists: {config_file}")
         return True
     
     try:
         shutil.copy(config_example, config_file)
-        print(f"✓ Configuration file created: {config_file}")
+        print(f"[OK] Configuration file created: {config_file}")
         print("  Please edit the configuration file with your settings")
         return True
     except Exception as e:
@@ -77,7 +77,7 @@ def run_tests():
                               capture_output=True, text=True)
         
         if result.returncode == 0:
-            print("✓ All tests passed")
+            print("[OK] All tests passed")
             return True
         else:
             print("❌ Some tests failed")

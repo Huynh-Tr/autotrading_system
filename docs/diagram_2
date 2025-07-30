@@ -1,0 +1,32 @@
+digraph G {
+  rankdir=TB;
+  node [shape=box, style=filled];
+  "ST" [label="ST"];
+  "PG_I" [label="PG_I"];
+  "HD" [label="HD"];
+  "RP" [label="RP"];
+  "PC" [label="PC"];
+  "SC" [label="SC"];
+  "BT" [label="BT"];
+  "RM" [label="RM"];
+  "PE" [label="PE"];
+  "RANK" [label="RANK"];
+  "BP" [label="BP"];
+  "VAL" [label="VAL"];
+  "OS_O" [label="OS_O"];
+  "PR_O" [label="PR_O"];
+  "PRANK" [label="PRANK"];
+  "VIS" [label="VIS"];
+  "ST" -> "PC";
+  "PG_I" -> "SC";
+  "HD" -> "BT";
+  "RP" -> "RM";
+  "PC" -> "PE";
+  "SC" -> "RANK";
+  "BT" -> "BP";
+  "RM" -> "VAL";
+  "PE" -> "OS_O";
+  "RANK" -> "PR_O";
+  "BP" -> "PRANK";
+  "VAL" -> "VIS";
+}

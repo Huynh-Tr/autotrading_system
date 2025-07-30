@@ -5,9 +5,27 @@ Risk Manager - Handles risk management and position sizing
 import pandas as pd
 import numpy as np
 from typing import Dict, Any, List
-from loguru import logger
 
-from ..utils.config_manager import ConfigManager
+# Try to import loguru, fallback to basic logging if not available
+try:
+    from loguru import logger
+except ImportError:
+    import logging
+    logger = logging.getLogger(__name__)
+    # Set up basic logging if loguru is not available
+    if not logger.handlers:
+        handler = logging.StreamHandler()
+        formatter = logging.Formatter('%(levelname)s: %(message)s')
+        handler.setFormatter(formatter)
+        logger.addHandler(handler)
+        logger.setLevel(logging.INFO)
+
+# Use absolute imports instead of relative imports
+try:
+    from ..utils.config_manager import ConfigManager
+except ImportError:
+    # Fallback to absolute imports
+    from src.utils.config_manager import ConfigManager
 
 
 class RiskManager:
@@ -32,8 +50,11 @@ class RiskManager:
     
     def can_buy(self, symbol: str, price: float, cash: float, 
                 positions: Dict[str, Any]) -> bool:
-        """Check if a buy order is allowed"""
-        # Check if we have enough cash
+        """Check if we can buy the symbol based on risk parameters"""
+        # Convert cash to scalar if it's a pandas Series
+        if hasattr(cash, 'item'):
+            cash = cash.item()
+        
         if cash <= 0:
             logger.warning("Insufficient cash for buy order")
             return False
@@ -49,6 +70,10 @@ class RiskManager:
     def calculate_position_size(self, symbol: str, price: float, cash: float,
                               positions: Dict[str, Any]) -> float:
         """Calculate optimal position size based on risk parameters"""
+        # Convert cash to scalar if it's a pandas Series
+        if hasattr(cash, 'item'):
+            cash = cash.item()
+        
         # For testing, use a simple position size calculation
         position_size = cash * self.max_position_size
         

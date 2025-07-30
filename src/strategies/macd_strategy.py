@@ -5,10 +5,29 @@ MACD Strategy - Moving Average Convergence Divergence trading strategy
 import pandas as pd
 import numpy as np
 from typing import Dict, Any
-from loguru import logger
 
-from .base_strategy import BaseStrategy
-from ..indicators.macd import calculate_macd, calculate_macd_components
+# Try to import loguru, fallback to basic logging if not available
+try:
+    from loguru import logger
+except ImportError:
+    import logging
+    logger = logging.getLogger(__name__)
+    # Set up basic logging if loguru is not available
+    if not logger.handlers:
+        handler = logging.StreamHandler()
+        formatter = logging.Formatter('%(levelname)s: %(message)s')
+        handler.setFormatter(formatter)
+        logger.addHandler(handler)
+        logger.setLevel(logging.INFO)
+
+# Use absolute imports instead of relative imports
+try:
+    from .base_strategy import BaseStrategy
+    from ..indicators.macd import calculate_macd, calculate_macd_components
+except ImportError:
+    # Fallback to absolute imports
+    from src.strategies.base_strategy import BaseStrategy
+    from src.indicators.macd import calculate_macd, calculate_macd_components
 
 
 class MACDStrategy(BaseStrategy):
@@ -40,7 +59,7 @@ class MACDStrategy(BaseStrategy):
         Generate trading signals based on MACD
         
         Args:
-            historical_data: Historical market data up to current point
+            historical_data: Historical market data up to current point (OHLCV or close-only)
             current_data: Current day's market data
             
         Returns:
@@ -48,18 +67,35 @@ class MACDStrategy(BaseStrategy):
         """
         signals = {}
         
-        # Process each symbol
-        for symbol in historical_data.columns:
-            if isinstance(symbol, str) and not symbol.endswith('_MACD'):
-                # Get historical price data for this symbol
-                symbol_data = historical_data[symbol].dropna()
-                
-                min_periods = max(self.slow_period, self.signal_period) + self.confirmation_period
-                if len(symbol_data) >= min_periods:
-                    signal = self._generate_signal_for_symbol(symbol_data, symbol)
-                    signals[symbol] = signal
+        # Handle both OHLCV data (MultiIndex columns) and legacy close-only data
+        if isinstance(historical_data.columns, pd.MultiIndex):
+            # New OHLCV data structure
+            symbols = historical_data.columns.get_level_values(0).unique()
+            for symbol in symbols:
+                if (symbol, 'close') in historical_data.columns:
+                    # Extract close prices for this symbol
+                    symbol_data = historical_data[(symbol, 'close')].dropna()
+                    
+                    if len(symbol_data) >= self.slow_period + self.confirmation_period:
+                        signal = self._generate_signal_for_symbol(symbol_data, symbol)
+                        signals[symbol] = signal
+                    else:
+                        signals[symbol] = 'hold'  # Not enough data
                 else:
-                    signals[symbol] = 'hold'  # Not enough data
+                    logger.warning(f"No close data found for {symbol}")
+                    signals[symbol] = 'hold'
+        else:
+            # Legacy close-only data structure
+            for symbol in historical_data.columns:
+                if isinstance(symbol, str) and not symbol.endswith('_MACD'):
+                    # Get historical price data for this symbol
+                    symbol_data = historical_data[symbol].dropna()
+                    
+                    if len(symbol_data) >= self.slow_period + self.confirmation_period:
+                        signal = self._generate_signal_for_symbol(symbol_data, symbol)
+                        signals[symbol] = signal
+                    else:
+                        signals[symbol] = 'hold'  # Not enough data
         
         return signals
     
@@ -136,11 +172,15 @@ class MACDStrategy(BaseStrategy):
         return 'hold'
     
     def _calculate_macd(self, prices: pd.Series) -> tuple:
-        """Calculate MACD indicator components"""
+        """Calculate MACD components for the given price series"""
         return calculate_macd(prices, self.fast_period, self.slow_period, self.signal_period)
     
     def validate_config(self) -> bool:
         """Validate strategy configuration"""
+        if self.fast_period <= 0 or self.slow_period <= 0:
+            logger.error("MACD periods must be positive")
+            return False
+        
         if self.fast_period >= self.slow_period:
             logger.error("Fast period must be less than slow period")
             return False
@@ -149,25 +189,39 @@ class MACDStrategy(BaseStrategy):
             logger.error("Signal period must be positive")
             return False
         
-        if self.fast_period <= 0 or self.slow_period <= 0:
-            logger.error("Fast and slow periods must be positive")
+        if self.confirmation_period <= 0:
+            logger.error("Confirmation period must be positive")
             return False
         
         return True
     
     def get_indicators(self, price_data: pd.Series) -> Dict[str, pd.Series]:
-        """Get strategy indicators for analysis"""
-        return calculate_macd_components(price_data, self.fast_period, self.slow_period, self.signal_period)
+        """Get strategy indicators for the given price data"""
+        min_periods = max(self.slow_period, self.signal_period)
+        
+        if len(price_data) < min_periods:
+            return {}
+        
+        # Calculate MACD components
+        macd_line, signal_line, histogram = calculate_macd_components(
+            price_data, self.fast_period, self.slow_period, self.signal_period
+        )
+        
+        return {
+            'MACD': macd_line,
+            'Signal': signal_line,
+            'Histogram': histogram
+        }
     
     def get_summary(self) -> Dict[str, Any]:
-        """Get strategy summary with parameters"""
-        summary = super().get_summary()
-        summary.update({
+        """Get strategy summary"""
+        return {
+            'name': self.name,
+            'strategy_type': 'MACD Strategy',
             'fast_period': self.fast_period,
             'slow_period': self.slow_period,
             'signal_period': self.signal_period,
             'histogram_threshold': self.histogram_threshold,
             'confirmation_period': self.confirmation_period,
-            'strategy_type': 'MACD'
-        })
-        return summary 
+            'description': f'MACD Strategy with {self.fast_period}/{self.slow_period}/{self.signal_period} periods'
+        } 

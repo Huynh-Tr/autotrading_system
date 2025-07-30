@@ -813,3 +813,1214 @@
 2025-07-28 23:08:50 | INFO     | src.core.trading_engine:_generate_backtest_report:302 - Backtest results saved to data/backtest_results.csv
 2025-07-28 23:08:50 | INFO     | src.core.trading_engine:_generate_backtest_report:319 - Trade details saved to data/trades.csv
 2025-07-28 23:08:50 | INFO     | __main__:run_backtest:80 - Backtest completed
+2025-07-29 10:00:49 | INFO     | src.utils.config_manager:__init__:18 - Configuration loaded from config/config.yaml
+2025-07-29 10:00:49 | INFO     | src.risk.risk_manager:__init__:31 - Risk manager initialized
+2025-07-29 10:00:49 | INFO     | src.core.trading_engine:__init__:69 - Trading engine initialized with $100,000.00 initial capital
+2025-07-29 10:00:49 | INFO     | src.strategies.base_strategy:__init__:21 - Initialized strategy: sma_crossover
+2025-07-29 10:00:49 | INFO     | src.strategies.sma_crossover:__init__:29 - SMA Crossover Strategy initialized: 20/50
+2025-07-29 10:00:49 | INFO     | src.core.trading_engine:add_strategy:74 - Added strategy: sma_crossover
+2025-07-29 10:00:49 | INFO     | src.core.trading_engine:run_backtest:78 - Starting backtest from 2024-01-01 to 2024-05-31
+2025-07-29 10:00:49 | INFO     | src.data.data_manager:get_historical_data:34 - Fetching historical data for ['VN30F2509'] from 2024-01-01 to 2024-05-31
+2025-07-29 10:00:49 | INFO     | src.data.data_manager:get_historical_data:66 - Data cached successfully
+2025-07-29 10:00:49 | INFO     | src.core.trading_engine:run_backtest:99 - Loaded 250 data points for ['VN30F2509']
+2025-07-29 10:00:49 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:79 - Golden cross detected for VN30F2509: 1198.45 > 1143.87
+2025-07-29 10:00:49 | INFO     | src.core.trading_engine:_execute_buy_order:202 - BUY: 16.13 VN30F2509 @ $1239.60
+2025-07-29 10:00:49 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:83 - Death cross detected for VN30F2509: 1213.46 < 1215.07
+2025-07-29 10:00:49 | INFO     | src.core.trading_engine:_execute_sell_order:238 - SELL: 16.13 VN30F2509 @ $1165.00 | P&L: $-1222.41 (-6.11%)
+2025-07-29 10:00:49 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:79 - Golden cross detected for VN30F2509: 1099.61 > 1098.06
+2025-07-29 10:00:49 | INFO     | src.core.trading_engine:_execute_buy_order:202 - BUY: 17.73 VN30F2509 @ $1114.10
+2025-07-29 10:00:49 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:83 - Death cross detected for VN30F2509: 1255.02 < 1255.37
+2025-07-29 10:00:49 | INFO     | src.core.trading_engine:_execute_sell_order:238 - SELL: 17.73 VN30F2509 @ $1230.00 | P&L: $2032.95 (10.29%)
+2025-07-29 10:00:49 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:79 - Golden cross detected for VN30F2509: 1266.89 > 1264.63
+2025-07-29 10:00:49 | INFO     | src.core.trading_engine:_execute_buy_order:202 - BUY: 15.58 VN30F2509 @ $1293.50
+2025-07-29 10:00:49 | INFO     | src.core.trading_engine:_generate_backtest_report:285 - === BACKTEST RESULTS ===
+2025-07-29 10:00:49 | INFO     | src.core.trading_engine:_generate_backtest_report:286 - Initial Capital: $100,000.00
+2025-07-29 10:00:49 | INFO     | src.core.trading_engine:_generate_backtest_report:287 - Final Portfolio Value: $100,417.20
+2025-07-29 10:00:49 | INFO     | src.core.trading_engine:_generate_backtest_report:288 - Total Return: 0.42%
+2025-07-29 10:00:49 | INFO     | src.core.trading_engine:_generate_backtest_report:289 - Annualized Volatility: 2.64%
+2025-07-29 10:00:49 | INFO     | src.core.trading_engine:_generate_backtest_report:290 - Sharpe Ratio: 0.17
+2025-07-29 10:00:49 | INFO     | src.core.trading_engine:_generate_backtest_report:291 - Maximum Drawdown: -1.92%
+2025-07-29 10:00:49 | INFO     | src.core.trading_engine:_generate_backtest_report:292 - Total Trades: 5
+2025-07-29 10:00:49 | INFO     | src.core.trading_engine:_generate_backtest_report:293 - Buy Trades: 3
+2025-07-29 10:00:49 | INFO     | src.core.trading_engine:_generate_backtest_report:294 - Sell Trades: 2
+2025-07-29 10:00:49 | INFO     | src.core.trading_engine:_generate_backtest_report:302 - Backtest results saved to data/backtest_results.csv
+2025-07-29 10:00:49 | INFO     | src.core.trading_engine:_generate_backtest_report:319 - Trade details saved to data/trades.csv
+2025-07-29 10:00:49 | INFO     | __main__:run_backtest:80 - Backtest completed
+2025-07-29 11:27:25 | INFO     | src.utils.config_manager:__init__:18 - Configuration loaded from config/config.yaml
+2025-07-29 11:27:25 | INFO     | src.risk.risk_manager:__init__:31 - Risk manager initialized
+2025-07-29 11:27:25 | INFO     | src.core.trading_engine:__init__:69 - Trading engine initialized with $100,000.00 initial capital
+2025-07-29 11:27:25 | INFO     | src.strategies.base_strategy:__init__:21 - Initialized strategy: sma_crossover
+2025-07-29 11:27:25 | INFO     | src.strategies.sma_crossover:__init__:29 - SMA Crossover Strategy initialized: 20/50
+2025-07-29 11:27:25 | INFO     | src.core.trading_engine:add_strategy:74 - Added strategy: sma_crossover
+2025-07-29 11:27:25 | INFO     | src.core.trading_engine:run_backtest:78 - Starting backtest from 2025-01-01 to 2025-05-31
+2025-07-29 11:27:25 | INFO     | src.data.data_manager:get_historical_data:34 - Fetching historical data for ['VN30F2509'] from 2025-01-01 to 2025-05-31
+2025-07-29 11:27:26 | INFO     | src.data.data_manager:get_historical_data:66 - Data cached successfully
+2025-07-29 11:27:26 | INFO     | src.core.trading_engine:run_backtest:99 - Loaded 250 data points for ['VN30F2509']
+2025-07-29 11:27:26 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:79 - Golden cross detected for VN30F2509: 1296.07 > 1294.65
+2025-07-29 11:27:26 | INFO     | src.core.trading_engine:_execute_buy_order:202 - BUY: 15.28 VN30F2509 @ $1309.30
+2025-07-29 11:27:26 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:83 - Death cross detected for VN30F2509: 1334.81 < 1336.15
+2025-07-29 11:27:26 | INFO     | src.core.trading_engine:_execute_sell_order:238 - SELL: 15.28 VN30F2509 @ $1295.90 | P&L: $-224.48 (-1.12%)
+2025-07-29 11:27:26 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:79 - Golden cross detected for VN30F2509: 1329.32 > 1328.74
+2025-07-29 11:27:26 | INFO     | src.core.trading_engine:_execute_buy_order:202 - BUY: 15.07 VN30F2509 @ $1324.00
+2025-07-29 11:27:26 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:83 - Death cross detected for VN30F2509: 1325.26 < 1326.10
+2025-07-29 11:27:26 | INFO     | src.core.trading_engine:_execute_sell_order:238 - SELL: 15.07 VN30F2509 @ $1336.00 | P&L: $160.69 (0.81%)
+2025-07-29 11:27:26 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:79 - Golden cross detected for VN30F2509: 1334.07 > 1333.77
+2025-07-29 11:27:26 | INFO     | src.core.trading_engine:_execute_buy_order:202 - BUY: 14.87 VN30F2509 @ $1343.80
+2025-07-29 11:27:26 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:83 - Death cross detected for VN30F2509: 1347.66 < 1350.68
+2025-07-29 11:27:26 | INFO     | src.core.trading_engine:_execute_sell_order:238 - SELL: 14.87 VN30F2509 @ $1173.90 | P&L: $-2543.48 (-12.73%)
+2025-07-29 11:27:26 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:79 - Golden cross detected for VN30F2509: 1345.11 > 1341.85
+2025-07-29 11:27:26 | INFO     | src.core.trading_engine:_execute_buy_order:202 - BUY: 13.77 VN30F2509 @ $1414.10
+2025-07-29 11:27:26 | INFO     | src.core.trading_engine:_generate_backtest_report:285 - === BACKTEST RESULTS ===
+2025-07-29 11:27:26 | INFO     | src.core.trading_engine:_generate_backtest_report:286 - Initial Capital: $100,000.00
+2025-07-29 11:27:26 | INFO     | src.core.trading_engine:_generate_backtest_report:287 - Final Portfolio Value: $97,382.16
+2025-07-29 11:27:26 | INFO     | src.core.trading_engine:_generate_backtest_report:288 - Total Return: -2.62%
+2025-07-29 11:27:26 | INFO     | src.core.trading_engine:_generate_backtest_report:289 - Annualized Volatility: 2.43%
+2025-07-29 11:27:26 | INFO     | src.core.trading_engine:_generate_backtest_report:290 - Sharpe Ratio: -1.09
+2025-07-29 11:27:26 | INFO     | src.core.trading_engine:_generate_backtest_report:291 - Maximum Drawdown: -3.66%
+2025-07-29 11:27:26 | INFO     | src.core.trading_engine:_generate_backtest_report:292 - Total Trades: 7
+2025-07-29 11:27:26 | INFO     | src.core.trading_engine:_generate_backtest_report:293 - Buy Trades: 4
+2025-07-29 11:27:26 | INFO     | src.core.trading_engine:_generate_backtest_report:294 - Sell Trades: 3
+2025-07-29 11:27:26 | INFO     | src.core.trading_engine:_generate_backtest_report:302 - Backtest results saved to data/backtest_results.csv
+2025-07-29 11:27:26 | INFO     | src.core.trading_engine:_generate_backtest_report:319 - Trade details saved to data/trades.csv
+2025-07-29 11:27:26 | INFO     | __main__:run_backtest:80 - Backtest completed
+2025-07-29 11:28:53 | INFO     | src.utils.config_manager:__init__:18 - Configuration loaded from config/config.yaml
+2025-07-29 11:28:53 | INFO     | src.risk.risk_manager:__init__:31 - Risk manager initialized
+2025-07-29 11:28:53 | INFO     | src.core.trading_engine:__init__:69 - Trading engine initialized with $100,000.00 initial capital
+2025-07-29 11:28:53 | INFO     | src.strategies.base_strategy:__init__:21 - Initialized strategy: rsi
+2025-07-29 11:28:53 | INFO     | src.strategies.rsi_strategy:__init__:37 - RSI Strategy initialized: period=14, overbought=70, oversold=30
+2025-07-29 11:28:53 | INFO     | src.core.trading_engine:add_strategy:74 - Added strategy: rsi
+2025-07-29 11:28:53 | INFO     | src.core.trading_engine:run_backtest:78 - Starting backtest from 2025-01-01 to 2025-05-31
+2025-07-29 11:28:53 | INFO     | src.data.data_manager:get_historical_data:34 - Fetching historical data for ['VN30F2509'] from 2025-01-01 to 2025-05-31
+2025-07-29 11:28:53 | INFO     | src.data.data_manager:get_historical_data:44 - Data loaded from cache
+2025-07-29 11:28:53 | INFO     | src.core.trading_engine:run_backtest:99 - Loaded 250 data points for ['VN30F2509']
+2025-07-29 11:28:53 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:88 - RSI overbought signal for VN30F2509: 70.22 > 70
+2025-07-29 11:28:53 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:82 - RSI oversold signal for VN30F2509: 20.17 < 30
+2025-07-29 11:28:53 | INFO     | src.core.trading_engine:_execute_buy_order:202 - BUY: 15.67 VN30F2509 @ $1276.50
+2025-07-29 11:28:53 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:82 - RSI oversold signal for VN30F2509: 29.27 < 30
+2025-07-29 11:28:53 | INFO     | src.core.trading_engine:_execute_buy_order:202 - BUY: 12.40 VN30F2509 @ $1290.20
+2025-07-29 11:28:53 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:82 - RSI oversold signal for VN30F2509: 23.63 < 30
+2025-07-29 11:28:53 | INFO     | src.core.trading_engine:_execute_buy_order:202 - BUY: 10.36 VN30F2509 @ $1235.10
+2025-07-29 11:28:53 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:88 - RSI overbought signal for VN30F2509: 82.86 > 70
+2025-07-29 11:28:53 | INFO     | src.core.trading_engine:_execute_sell_order:238 - SELL: 38.42 VN30F2509 @ $1316.00 | P&L: $1726.17 (3.54%)
+2025-07-29 11:28:53 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:103 - RSI sustained overbought for VN30F2509: 80.62
+2025-07-29 11:28:53 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:103 - RSI sustained overbought for VN30F2509: 81.18
+2025-07-29 11:28:53 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:103 - RSI sustained overbought for VN30F2509: 89.16
+2025-07-29 11:28:53 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:103 - RSI sustained overbought for VN30F2509: 86.71
+2025-07-29 11:28:53 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:103 - RSI sustained overbought for VN30F2509: 86.84
+2025-07-29 11:28:53 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:103 - RSI sustained overbought for VN30F2509: 72.38
+2025-07-29 11:28:53 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:88 - RSI overbought signal for VN30F2509: 74.70 > 70
+2025-07-29 11:28:53 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:88 - RSI overbought signal for VN30F2509: 76.71 > 70
+2025-07-29 11:28:53 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:103 - RSI sustained overbought for VN30F2509: 79.09
+2025-07-29 11:28:53 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:103 - RSI sustained overbought for VN30F2509: 76.21
+2025-07-29 11:28:53 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:103 - RSI sustained overbought for VN30F2509: 76.35
+2025-07-29 11:28:53 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:103 - RSI sustained overbought for VN30F2509: 78.39
+2025-07-29 11:28:53 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:88 - RSI overbought signal for VN30F2509: 73.15 > 70
+2025-07-29 11:28:53 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:82 - RSI oversold signal for VN30F2509: 27.93 < 30
+2025-07-29 11:28:53 | INFO     | src.core.trading_engine:_execute_buy_order:202 - BUY: 15.40 VN30F2509 @ $1320.50
+2025-07-29 11:28:53 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:98 - RSI sustained oversold for VN30F2509: 28.69
+2025-07-29 11:28:53 | INFO     | src.core.trading_engine:_execute_buy_order:202 - BUY: 12.30 VN30F2509 @ $1322.50
+2025-07-29 11:28:53 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:82 - RSI oversold signal for VN30F2509: 27.95 < 30
+2025-07-29 11:28:53 | INFO     | src.core.trading_engine:_execute_buy_order:202 - BUY: 10.16 VN30F2509 @ $1280.00
+2025-07-29 11:28:53 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:98 - RSI sustained oversold for VN30F2509: 22.09
+2025-07-29 11:28:53 | INFO     | src.core.trading_engine:_execute_buy_order:202 - BUY: 8.15 VN30F2509 @ $1276.20
+2025-07-29 11:28:53 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:98 - RSI sustained oversold for VN30F2509: 19.92
+2025-07-29 11:28:53 | INFO     | src.core.trading_engine:_execute_buy_order:202 - BUY: 6.56 VN30F2509 @ $1269.00
+2025-07-29 11:28:53 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:98 - RSI sustained oversold for VN30F2509: 23.98
+2025-07-29 11:28:53 | INFO     | src.core.trading_engine:_execute_buy_order:202 - BUY: 5.21 VN30F2509 @ $1278.00
+2025-07-29 11:28:53 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:88 - RSI overbought signal for VN30F2509: 79.54 > 70
+2025-07-29 11:28:53 | INFO     | src.core.trading_engine:_execute_sell_order:238 - SELL: 57.78 VN30F2509 @ $1349.00 | P&L: $2875.87 (3.84%)
+2025-07-29 11:28:53 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:103 - RSI sustained overbought for VN30F2509: 80.85
+2025-07-29 11:28:53 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:103 - RSI sustained overbought for VN30F2509: 84.84
+2025-07-29 11:28:53 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:103 - RSI sustained overbought for VN30F2509: 83.91
+2025-07-29 11:28:53 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:103 - RSI sustained overbought for VN30F2509: 77.49
+2025-07-29 11:28:53 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:103 - RSI sustained overbought for VN30F2509: 75.36
+2025-07-29 11:28:53 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:103 - RSI sustained overbought for VN30F2509: 70.51
+2025-07-29 11:28:53 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:82 - RSI oversold signal for VN30F2509: 17.82 < 30
+2025-07-29 11:28:53 | INFO     | src.core.trading_engine:_execute_buy_order:202 - BUY: 16.06 VN30F2509 @ $1301.00
+2025-07-29 11:28:53 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:98 - RSI sustained oversold for VN30F2509: 24.63
+2025-07-29 11:28:53 | INFO     | src.core.trading_engine:_execute_buy_order:202 - BUY: 12.77 VN30F2509 @ $1308.50
+2025-07-29 11:28:53 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:88 - RSI overbought signal for VN30F2509: 73.34 > 70
+2025-07-29 11:28:53 | INFO     | src.core.trading_engine:_execute_sell_order:238 - SELL: 28.83 VN30F2509 @ $1354.00 | P&L: $1393.34 (3.70%)
+2025-07-29 11:28:53 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:103 - RSI sustained overbought for VN30F2509: 72.77
+2025-07-29 11:28:53 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:88 - RSI overbought signal for VN30F2509: 70.80 > 70
+2025-07-29 11:28:53 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:103 - RSI sustained overbought for VN30F2509: 74.77
+2025-07-29 11:28:53 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:103 - RSI sustained overbought for VN30F2509: 72.79
+2025-07-29 11:28:53 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:103 - RSI sustained overbought for VN30F2509: 73.98
+2025-07-29 11:28:53 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:103 - RSI sustained overbought for VN30F2509: 82.26
+2025-07-29 11:28:53 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:103 - RSI sustained overbought for VN30F2509: 81.99
+2025-07-29 11:28:53 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:103 - RSI sustained overbought for VN30F2509: 81.72
+2025-07-29 11:28:53 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:103 - RSI sustained overbought for VN30F2509: 79.91
+2025-07-29 11:28:53 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:103 - RSI sustained overbought for VN30F2509: 77.46
+2025-07-29 11:28:53 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:88 - RSI overbought signal for VN30F2509: 75.44 > 70
+2025-07-29 11:28:53 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:82 - RSI oversold signal for VN30F2509: 29.93 < 30
+2025-07-29 11:28:53 | INFO     | src.core.trading_engine:_execute_buy_order:202 - BUY: 15.56 VN30F2509 @ $1360.50
+2025-07-29 11:28:53 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:82 - RSI oversold signal for VN30F2509: 19.00 < 30
+2025-07-29 11:28:53 | INFO     | src.core.trading_engine:_execute_buy_order:202 - BUY: 13.27 VN30F2509 @ $1275.80
+2025-07-29 11:28:53 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:98 - RSI sustained oversold for VN30F2509: 15.44
+2025-07-29 11:28:53 | INFO     | src.core.trading_engine:_execute_buy_order:202 - BUY: 10.65 VN30F2509 @ $1271.00
+2025-07-29 11:28:53 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:98 - RSI sustained oversold for VN30F2509: 10.44
+2025-07-29 11:28:53 | INFO     | src.core.trading_engine:_execute_buy_order:202 - BUY: 9.16 VN30F2509 @ $1182.10
+2025-07-29 11:28:53 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:98 - RSI sustained oversold for VN30F2509: 10.43
+2025-07-29 11:28:53 | INFO     | src.core.trading_engine:_execute_buy_order:202 - BUY: 7.38 VN30F2509 @ $1173.90
+2025-07-29 11:28:53 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:88 - RSI overbought signal for VN30F2509: 76.88 > 70
+2025-07-29 11:28:53 | INFO     | src.core.trading_engine:_execute_sell_order:238 - SELL: 56.02 VN30F2509 @ $1314.90 | P&L: $2460.31 (3.46%)
+2025-07-29 11:28:53 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:103 - RSI sustained overbought for VN30F2509: 76.45
+2025-07-29 11:28:53 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:88 - RSI overbought signal for VN30F2509: 77.09 > 70
+2025-07-29 11:28:53 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:103 - RSI sustained overbought for VN30F2509: 78.72
+2025-07-29 11:28:53 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:103 - RSI sustained overbought for VN30F2509: 87.99
+2025-07-29 11:28:53 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:103 - RSI sustained overbought for VN30F2509: 91.41
+2025-07-29 11:28:53 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:103 - RSI sustained overbought for VN30F2509: 90.01
+2025-07-29 11:28:53 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:103 - RSI sustained overbought for VN30F2509: 82.61
+2025-07-29 11:28:53 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:103 - RSI sustained overbought for VN30F2509: 77.81
+2025-07-29 11:28:53 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:103 - RSI sustained overbought for VN30F2509: 80.98
+2025-07-29 11:28:53 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:103 - RSI sustained overbought for VN30F2509: 81.00
+2025-07-29 11:28:53 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:103 - RSI sustained overbought for VN30F2509: 82.50
+2025-07-29 11:28:53 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:103 - RSI sustained overbought for VN30F2509: 80.33
+2025-07-29 11:28:53 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:103 - RSI sustained overbought for VN30F2509: 81.56
+2025-07-29 11:28:53 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:103 - RSI sustained overbought for VN30F2509: 79.62
+2025-07-29 11:28:53 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:103 - RSI sustained overbought for VN30F2509: 77.53
+2025-07-29 11:28:53 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:103 - RSI sustained overbought for VN30F2509: 76.60
+2025-07-29 11:28:53 | INFO     | src.core.trading_engine:_generate_backtest_report:285 - === BACKTEST RESULTS ===
+2025-07-29 11:28:53 | INFO     | src.core.trading_engine:_generate_backtest_report:286 - Initial Capital: $100,000.00
+2025-07-29 11:28:53 | INFO     | src.core.trading_engine:_generate_backtest_report:287 - Final Portfolio Value: $108,223.18
+2025-07-29 11:28:53 | INFO     | src.core.trading_engine:_generate_backtest_report:288 - Total Return: 8.22%
+2025-07-29 11:28:53 | INFO     | src.core.trading_engine:_generate_backtest_report:289 - Annualized Volatility: 7.80%
+2025-07-29 11:28:53 | INFO     | src.core.trading_engine:_generate_backtest_report:290 - Sharpe Ratio: 1.06
+2025-07-29 11:28:53 | INFO     | src.core.trading_engine:_generate_backtest_report:291 - Maximum Drawdown: -5.27%
+2025-07-29 11:28:53 | INFO     | src.core.trading_engine:_generate_backtest_report:292 - Total Trades: 20
+2025-07-29 11:28:53 | INFO     | src.core.trading_engine:_generate_backtest_report:293 - Buy Trades: 16
+2025-07-29 11:28:53 | INFO     | src.core.trading_engine:_generate_backtest_report:294 - Sell Trades: 4
+2025-07-29 11:28:53 | INFO     | src.core.trading_engine:_generate_backtest_report:302 - Backtest results saved to data/backtest_results.csv
+2025-07-29 11:28:53 | INFO     | src.core.trading_engine:_generate_backtest_report:319 - Trade details saved to data/trades.csv
+2025-07-29 11:28:53 | INFO     | __main__:run_backtest:80 - Backtest completed
+2025-07-29 11:29:25 | INFO     | src.utils.config_manager:__init__:18 - Configuration loaded from config/config.yaml
+2025-07-29 11:29:25 | INFO     | src.risk.risk_manager:__init__:31 - Risk manager initialized
+2025-07-29 11:29:25 | INFO     | src.core.trading_engine:__init__:69 - Trading engine initialized with $100,000.00 initial capital
+2025-07-29 11:29:25 | INFO     | src.strategies.base_strategy:__init__:21 - Initialized strategy: macd
+2025-07-29 11:29:25 | INFO     | src.strategies.macd_strategy:__init__:35 - MACD Strategy initialized: fast=12, slow=26, signal=9
+2025-07-29 11:29:25 | INFO     | src.core.trading_engine:add_strategy:74 - Added strategy: macd
+2025-07-29 11:29:25 | INFO     | src.core.trading_engine:run_backtest:78 - Starting backtest from 2025-01-01 to 2025-05-31
+2025-07-29 11:29:25 | INFO     | src.data.data_manager:get_historical_data:34 - Fetching historical data for ['VN30F2509'] from 2025-01-01 to 2025-05-31
+2025-07-29 11:29:25 | INFO     | src.data.data_manager:get_historical_data:44 - Data loaded from cache
+2025-07-29 11:29:25 | INFO     | src.core.trading_engine:run_backtest:99 - Loaded 250 data points for ['VN30F2509']
+2025-07-29 11:29:25 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:111 - MACD zero line bullish crossover for VN30F2509: MACD=0.0818
+2025-07-29 11:29:25 | INFO     | src.core.trading_engine:_execute_buy_order:202 - BUY: 15.21 VN30F2509 @ $1314.70
+2025-07-29 11:29:25 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:94 - MACD bearish crossover for VN30F2509: MACD=-0.1361, Signal=-0.0668
+2025-07-29 11:29:25 | INFO     | src.core.trading_engine:_execute_sell_order:238 - SELL: 15.21 VN30F2509 @ $1303.40 | P&L: $-191.73 (-0.96%)
+2025-07-29 11:29:25 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:88 - MACD bullish crossover for VN30F2509: MACD=-0.0286, Signal=-0.0892
+2025-07-29 11:29:25 | INFO     | src.core.trading_engine:_execute_buy_order:202 - BUY: 15.26 VN30F2509 @ $1307.70
+2025-07-29 11:29:25 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:94 - MACD bearish crossover for VN30F2509: MACD=-0.3651, Signal=-0.1444
+2025-07-29 11:29:25 | INFO     | src.core.trading_engine:_execute_sell_order:238 - SELL: 15.26 VN30F2509 @ $1300.90 | P&L: $-123.63 (-0.62%)
+2025-07-29 11:29:25 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:88 - MACD bullish crossover for VN30F2509: MACD=-9.4280, Signal=-9.6830
+2025-07-29 11:29:25 | INFO     | src.core.trading_engine:_execute_buy_order:202 - BUY: 15.68 VN30F2509 @ $1271.20
+2025-07-29 11:29:25 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:111 - MACD zero line bullish crossover for VN30F2509: MACD=1.0263
+2025-07-29 11:29:25 | INFO     | src.core.trading_engine:_execute_buy_order:202 - BUY: 12.13 VN30F2509 @ $1314.00
+2025-07-29 11:29:25 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:94 - MACD bearish crossover for VN30F2509: MACD=6.4368, Signal=7.6973
+2025-07-29 11:29:25 | INFO     | src.core.trading_engine:_execute_sell_order:238 - SELL: 27.81 VN30F2509 @ $1296.10 | P&L: $137.19 (0.38%)
+2025-07-29 11:29:25 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:88 - MACD bullish crossover for VN30F2509: MACD=5.3793, Signal=4.1068
+2025-07-29 11:29:25 | INFO     | src.core.trading_engine:_execute_buy_order:202 - BUY: 14.98 VN30F2509 @ $1331.50
+2025-07-29 11:29:25 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:94 - MACD bearish crossover for VN30F2509: MACD=12.1717, Signal=12.7523
+2025-07-29 11:29:25 | INFO     | src.core.trading_engine:_execute_sell_order:238 - SELL: 14.98 VN30F2509 @ $1345.00 | P&L: $182.11 (0.91%)
+2025-07-29 11:29:25 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:88 - MACD bullish crossover for VN30F2509: MACD=13.1398, Signal=12.7922
+2025-07-29 11:29:25 | INFO     | src.core.trading_engine:_execute_buy_order:202 - BUY: 14.63 VN30F2509 @ $1366.20
+2025-07-29 11:29:25 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:94 - MACD bearish crossover for VN30F2509: MACD=12.7221, Signal=13.0003
+2025-07-29 11:29:25 | INFO     | src.core.trading_engine:_execute_sell_order:238 - SELL: 14.63 VN30F2509 @ $1362.90 | P&L: $-68.20 (-0.34%)
+2025-07-29 11:29:25 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:115 - MACD zero line bearish crossover for VN30F2509: MACD=-0.1600
+2025-07-29 11:29:25 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:88 - MACD bullish crossover for VN30F2509: MACD=-11.5275, Signal=-12.5291
+2025-07-29 11:29:25 | INFO     | src.core.trading_engine:_execute_buy_order:202 - BUY: 15.22 VN30F2509 @ $1312.00
+2025-07-29 11:29:25 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:111 - MACD zero line bullish crossover for VN30F2509: MACD=2.0939
+2025-07-29 11:29:25 | INFO     | src.core.trading_engine:_execute_buy_order:202 - BUY: 11.85 VN30F2509 @ $1347.10
+2025-07-29 11:29:25 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:94 - MACD bearish crossover for VN30F2509: MACD=4.6879, Signal=4.7051
+2025-07-29 11:29:25 | INFO     | src.core.trading_engine:_execute_sell_order:238 - SELL: 27.07 VN30F2509 @ $1318.00 | P&L: $-289.30 (-0.81%)
+2025-07-29 11:29:25 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:88 - MACD bullish crossover for VN30F2509: MACD=4.4518, Signal=4.0930
+2025-07-29 11:29:25 | INFO     | src.core.trading_engine:_execute_buy_order:202 - BUY: 14.71 VN30F2509 @ $1353.00
+2025-07-29 11:29:25 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:94 - MACD bearish crossover for VN30F2509: MACD=5.1195, Signal=5.6152
+2025-07-29 11:29:25 | INFO     | src.core.trading_engine:_execute_sell_order:238 - SELL: 14.71 VN30F2509 @ $1330.00 | P&L: $-357.83 (-1.80%)
+2025-07-29 11:29:25 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:115 - MACD zero line bearish crossover for VN30F2509: MACD=-0.2394
+2025-07-29 11:29:25 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:88 - MACD bullish crossover for VN30F2509: MACD=-3.7144, Signal=-3.9063
+2025-07-29 11:29:25 | INFO     | src.core.trading_engine:_execute_buy_order:202 - BUY: 14.93 VN30F2509 @ $1327.40
+2025-07-29 11:29:25 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:111 - MACD zero line bullish crossover for VN30F2509: MACD=1.5403
+2025-07-29 11:29:25 | INFO     | src.core.trading_engine:_execute_buy_order:202 - BUY: 11.73 VN30F2509 @ $1351.30
+2025-07-29 11:29:25 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:94 - MACD bearish crossover for VN30F2509: MACD=11.2220, Signal=11.6085
+2025-07-29 11:29:25 | INFO     | src.core.trading_engine:_execute_sell_order:238 - SELL: 26.67 VN30F2509 @ $1377.30 | P&L: $1013.54 (2.84%)
+2025-07-29 11:29:25 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:115 - MACD zero line bearish crossover for VN30F2509: MACD=-5.7104
+2025-07-29 11:29:25 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:88 - MACD bullish crossover for VN30F2509: MACD=-20.6091, Signal=-21.0689
+2025-07-29 11:29:25 | INFO     | src.core.trading_engine:_execute_buy_order:202 - BUY: 15.36 VN30F2509 @ $1303.40
+2025-07-29 11:29:25 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:111 - MACD zero line bullish crossover for VN30F2509: MACD=2.4466
+2025-07-29 11:29:25 | INFO     | src.core.trading_engine:_execute_buy_order:202 - BUY: 11.84 VN30F2509 @ $1352.00
+2025-07-29 11:29:25 | INFO     | src.core.trading_engine:_generate_backtest_report:285 - === BACKTEST RESULTS ===
+2025-07-29 11:29:25 | INFO     | src.core.trading_engine:_generate_backtest_report:286 - Initial Capital: $100,000.00
+2025-07-29 11:29:25 | INFO     | src.core.trading_engine:_generate_backtest_report:287 - Final Portfolio Value: $102,630.53
+2025-07-29 11:29:25 | INFO     | src.core.trading_engine:_generate_backtest_report:288 - Total Return: 2.63%
+2025-07-29 11:29:25 | INFO     | src.core.trading_engine:_generate_backtest_report:289 - Annualized Volatility: 2.32%
+2025-07-29 11:29:25 | INFO     | src.core.trading_engine:_generate_backtest_report:290 - Sharpe Ratio: 1.14
+2025-07-29 11:29:25 | INFO     | src.core.trading_engine:_generate_backtest_report:291 - Maximum Drawdown: -2.12%
+2025-07-29 11:29:25 | INFO     | src.core.trading_engine:_generate_backtest_report:292 - Total Trades: 21
+2025-07-29 11:29:25 | INFO     | src.core.trading_engine:_generate_backtest_report:293 - Buy Trades: 13
+2025-07-29 11:29:25 | INFO     | src.core.trading_engine:_generate_backtest_report:294 - Sell Trades: 8
+2025-07-29 11:29:25 | INFO     | src.core.trading_engine:_generate_backtest_report:302 - Backtest results saved to data/backtest_results.csv
+2025-07-29 11:29:25 | INFO     | src.core.trading_engine:_generate_backtest_report:319 - Trade details saved to data/trades.csv
+2025-07-29 11:29:25 | INFO     | __main__:run_backtest:80 - Backtest completed
+2025-07-29 14:19:42 | INFO     | src.utils.config_manager:__init__:31 - Configuration loaded from config/config.yaml
+2025-07-29 14:19:42 | INFO     | src.risk.risk_manager:__init__:49 - Risk manager initialized
+2025-07-29 14:19:42 | INFO     | src.core.trading_engine:__init__:69 - Trading engine initialized with $100,000.00 initial capital
+2025-07-29 14:19:42 | INFO     | src.strategies.base_strategy:__init__:34 - Initialized strategy: sma_crossover
+2025-07-29 14:19:42 | INFO     | src.strategies.sma_crossover:__init__:48 - SMA Crossover Strategy initialized: 20/50
+2025-07-29 14:19:42 | INFO     | src.core.trading_engine:add_strategy:74 - Added strategy: sma_crossover
+2025-07-29 14:19:42 | INFO     | src.core.trading_engine:run_backtest:78 - Starting backtest from 2025-01-01 to 2025-05-31
+2025-07-29 14:19:42 | INFO     | src.data.data_manager:get_historical_data:52 - Fetching historical OHLCV data for ['VN30F2509'] from 2025-01-01 to 2025-05-31
+2025-07-29 14:19:42 | INFO     | src.data.data_manager:get_historical_data:82 - OHLCV data cached successfully
+2025-07-29 14:26:08 | INFO     | src.utils.config_manager:__init__:31 - Configuration loaded from config/config.yaml
+2025-07-29 14:26:08 | INFO     | src.risk.risk_manager:__init__:49 - Risk manager initialized
+2025-07-29 14:26:08 | INFO     | src.core.trading_engine:__init__:69 - Trading engine initialized with $100,000.00 initial capital
+2025-07-29 14:26:08 | INFO     | src.strategies.base_strategy:__init__:34 - Initialized strategy: sma_crossover
+2025-07-29 14:26:08 | INFO     | src.strategies.sma_crossover:__init__:48 - SMA Crossover Strategy initialized: 20/50
+2025-07-29 14:26:08 | INFO     | src.core.trading_engine:add_strategy:74 - Added strategy: sma_crossover
+2025-07-29 14:26:08 | INFO     | src.core.trading_engine:run_backtest:78 - Starting backtest from 2025-01-01 to 2025-05-31
+2025-07-29 14:26:08 | INFO     | src.data.data_manager:get_historical_data:52 - Fetching historical OHLCV data for ['VN30F2509'] from 2025-01-01 to 2025-05-31
+2025-07-29 14:26:08 | INFO     | src.data.data_manager:get_historical_data:62 - OHLCV data loaded from cache
+2025-07-29 14:26:08 | INFO     | src.core.trading_engine:run_backtest:99 - Loaded 250 data points for [('VN30F2509', 'open'), ('VN30F2509', 'high'), ('VN30F2509', 'low'), ('VN30F2509', 'close'), ('VN30F2509', 'volume')]
+2025-07-29 14:26:08 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for VN30F2509: 1296.07 > 1294.65
+2025-07-29 14:36:30 | INFO     | src.utils.config_manager:__init__:31 - Configuration loaded from config/config.yaml
+2025-07-29 14:36:30 | INFO     | src.risk.risk_manager:__init__:49 - Risk manager initialized
+2025-07-29 14:36:30 | INFO     | src.core.trading_engine:__init__:69 - Trading engine initialized with $100,000.00 initial capital
+2025-07-29 14:36:30 | INFO     | src.strategies.base_strategy:__init__:34 - Initialized strategy: sma_crossover
+2025-07-29 14:36:30 | INFO     | src.strategies.sma_crossover:__init__:48 - SMA Crossover Strategy initialized: 20/50
+2025-07-29 14:36:30 | INFO     | src.core.trading_engine:add_strategy:74 - Added strategy: sma_crossover
+2025-07-29 14:36:30 | INFO     | src.core.trading_engine:run_backtest:78 - Starting backtest from 2025-01-01 to 2025-05-31
+2025-07-29 14:36:30 | INFO     | src.data.data_manager:get_historical_data:52 - Fetching historical OHLCV data for ['VN30F2509'] from 2025-01-01 to 2025-05-31
+2025-07-29 14:36:30 | INFO     | src.data.data_manager:get_historical_data:62 - OHLCV data loaded from cache
+2025-07-29 14:36:30 | INFO     | src.core.trading_engine:run_backtest:99 - Loaded 250 data points for [('VN30F2509', 'open'), ('VN30F2509', 'high'), ('VN30F2509', 'low'), ('VN30F2509', 'close'), ('VN30F2509', 'volume')]
+2025-07-29 14:36:30 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for VN30F2509: 1296.07 > 1294.65
+2025-07-29 14:47:46 | INFO     | src.utils.config_manager:__init__:31 - Configuration loaded from config/config.yaml
+2025-07-29 14:47:46 | INFO     | src.risk.risk_manager:__init__:49 - Risk manager initialized
+2025-07-29 14:47:46 | INFO     | src.core.trading_engine:__init__:74 - Trading engine initialized with $100,000.00 initial capital
+2025-07-29 14:47:46 | INFO     | src.strategies.base_strategy:__init__:34 - Initialized strategy: sma_crossover
+2025-07-29 14:47:46 | INFO     | src.strategies.sma_crossover:__init__:48 - SMA Crossover Strategy initialized: 20/50
+2025-07-29 14:47:46 | INFO     | src.core.trading_engine:add_strategy:79 - Added strategy: sma_crossover
+2025-07-29 14:47:46 | INFO     | src.core.trading_engine:run_backtest:83 - Starting backtest from 2025-01-01 to 2025-05-31
+2025-07-29 14:47:46 | INFO     | src.data.data_manager:get_historical_data:52 - Fetching historical OHLCV data for ['VN30F2509'] from 2025-01-01 to 2025-05-31
+2025-07-29 14:47:46 | INFO     | src.data.data_manager:get_historical_data:62 - OHLCV data loaded from cache
+2025-07-29 14:47:46 | INFO     | src.core.trading_engine:run_backtest:104 - Loaded 250 data points for [('VN30F2509', 'open'), ('VN30F2509', 'high'), ('VN30F2509', 'low'), ('VN30F2509', 'close'), ('VN30F2509', 'volume')]
+2025-07-29 14:47:46 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for VN30F2509: 1296.07 > 1294.65
+2025-07-29 14:49:28 | INFO     | src.risk.risk_manager:__init__:49 - Risk manager initialized
+2025-07-29 14:49:28 | INFO     | src.core.trading_engine:__init__:74 - Trading engine initialized with $100,000.00 initial capital
+2025-07-29 14:49:28 | INFO     | src.strategies.base_strategy:__init__:34 - Initialized strategy: sma_crossover
+2025-07-29 14:49:28 | INFO     | src.strategies.sma_crossover:__init__:48 - SMA Crossover Strategy initialized: 20/50
+2025-07-29 14:49:28 | INFO     | src.core.trading_engine:add_strategy:79 - Added strategy: sma_crossover
+2025-07-29 14:49:28 | INFO     | src.core.trading_engine:run_backtest:83 - Starting backtest from 2025-01-01 to 2025-05-31
+2025-07-29 14:49:28 | INFO     | src.data.data_manager:get_historical_data:52 - Fetching historical OHLCV data for ['VN30F2509'] from 2025-01-01 to 2025-05-31
+2025-07-29 14:49:28 | INFO     | src.data.data_manager:get_historical_data:62 - OHLCV data loaded from cache
+2025-07-29 14:49:28 | INFO     | src.core.trading_engine:run_backtest:104 - Loaded 250 data points for [('VN30F2509', 'open'), ('VN30F2509', 'high'), ('VN30F2509', 'low'), ('VN30F2509', 'close'), ('VN30F2509', 'volume')]
+2025-07-29 14:49:28 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for VN30F2509: 1296.07 > 1294.65
+2025-07-29 14:53:11 | INFO     | src.risk.risk_manager:__init__:49 - Risk manager initialized
+2025-07-29 14:53:11 | INFO     | src.core.trading_engine:__init__:74 - Trading engine initialized with $100,000.00 initial capital
+2025-07-29 14:53:11 | INFO     | src.strategies.base_strategy:__init__:34 - Initialized strategy: sma_crossover
+2025-07-29 14:53:11 | INFO     | src.strategies.sma_crossover:__init__:48 - SMA Crossover Strategy initialized: 20/50
+2025-07-29 14:53:11 | INFO     | src.core.trading_engine:add_strategy:79 - Added strategy: sma_crossover
+2025-07-29 14:53:11 | INFO     | src.core.trading_engine:run_backtest:83 - Starting backtest from 2025-01-01 to 2025-05-31
+2025-07-29 14:53:11 | INFO     | src.data.data_manager:get_historical_data:52 - Fetching historical OHLCV data for ['VN30F2509'] from 2025-01-01 to 2025-05-31
+2025-07-29 14:53:11 | INFO     | src.data.data_manager:get_historical_data:62 - OHLCV data loaded from cache
+2025-07-29 14:53:11 | INFO     | src.core.trading_engine:run_backtest:104 - Loaded 250 data points for [('VN30F2509', 'open'), ('VN30F2509', 'high'), ('VN30F2509', 'low'), ('VN30F2509', 'close'), ('VN30F2509', 'volume')]
+2025-07-29 14:53:11 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for VN30F2509: 1296.07 > 1294.65
+2025-07-29 14:53:11 | INFO     | src.core.trading_engine:_execute_buy_order:226 - BUY: 15.28 VN30F2509 @ $1309.30
+2025-07-29 14:53:11 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for VN30F2509: 1334.81 < 1336.15
+2025-07-29 14:53:11 | INFO     | src.core.trading_engine:_execute_sell_order:262 - SELL: 15.28 VN30F2509 @ $1295.90 | P&L: $-224.48 (-1.12%)
+2025-07-29 14:53:11 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for VN30F2509: 1329.32 > 1328.74
+2025-07-29 14:53:11 | INFO     | src.core.trading_engine:_execute_buy_order:226 - BUY: 15.07 VN30F2509 @ $1324.00
+2025-07-29 14:53:11 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for VN30F2509: 1325.26 < 1326.10
+2025-07-29 14:53:11 | INFO     | src.core.trading_engine:_execute_sell_order:262 - SELL: 15.07 VN30F2509 @ $1336.00 | P&L: $160.69 (0.81%)
+2025-07-29 14:53:11 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for VN30F2509: 1334.07 > 1333.77
+2025-07-29 14:53:11 | INFO     | src.core.trading_engine:_execute_buy_order:226 - BUY: 14.87 VN30F2509 @ $1343.80
+2025-07-29 14:53:11 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for VN30F2509: 1347.66 < 1350.68
+2025-07-29 14:53:11 | INFO     | src.core.trading_engine:_execute_sell_order:262 - SELL: 14.87 VN30F2509 @ $1173.90 | P&L: $-2543.48 (-12.73%)
+2025-07-29 14:53:11 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for VN30F2509: 1345.11 > 1341.85
+2025-07-29 14:53:11 | INFO     | src.core.trading_engine:_execute_buy_order:226 - BUY: 13.77 VN30F2509 @ $1414.10
+2025-07-29 14:53:41 | INFO     | src.risk.risk_manager:__init__:49 - Risk manager initialized
+2025-07-29 14:53:41 | INFO     | src.core.trading_engine:__init__:74 - Trading engine initialized with $100,000.00 initial capital
+2025-07-29 14:53:41 | INFO     | src.strategies.base_strategy:__init__:34 - Initialized strategy: sma_crossover
+2025-07-29 14:53:41 | INFO     | src.strategies.sma_crossover:__init__:48 - SMA Crossover Strategy initialized: 20/50
+2025-07-29 14:53:41 | INFO     | src.core.trading_engine:add_strategy:79 - Added strategy: sma_crossover
+2025-07-29 14:53:41 | INFO     | src.core.trading_engine:run_backtest:83 - Starting backtest from 2025-01-01 to 2025-05-31
+2025-07-29 14:53:41 | INFO     | src.data.data_manager:get_historical_data:52 - Fetching historical OHLCV data for ['VN30F2509'] from 2025-01-01 to 2025-05-31
+2025-07-29 14:53:41 | INFO     | src.data.data_manager:get_historical_data:62 - OHLCV data loaded from cache
+2025-07-29 14:53:41 | INFO     | src.core.trading_engine:run_backtest:104 - Loaded 250 data points for [('VN30F2509', 'open'), ('VN30F2509', 'high'), ('VN30F2509', 'low'), ('VN30F2509', 'close'), ('VN30F2509', 'volume')]
+2025-07-29 14:53:41 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for VN30F2509: 1296.07 > 1294.65
+2025-07-29 14:53:41 | INFO     | src.core.trading_engine:_execute_buy_order:226 - BUY: 15.28 VN30F2509 @ $1309.30
+2025-07-29 14:53:41 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for VN30F2509: 1334.81 < 1336.15
+2025-07-29 14:53:41 | INFO     | src.core.trading_engine:_execute_sell_order:262 - SELL: 15.28 VN30F2509 @ $1295.90 | P&L: $-224.48 (-1.12%)
+2025-07-29 14:53:41 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for VN30F2509: 1329.32 > 1328.74
+2025-07-29 14:53:41 | INFO     | src.core.trading_engine:_execute_buy_order:226 - BUY: 15.07 VN30F2509 @ $1324.00
+2025-07-29 14:53:41 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for VN30F2509: 1325.26 < 1326.10
+2025-07-29 14:53:41 | INFO     | src.core.trading_engine:_execute_sell_order:262 - SELL: 15.07 VN30F2509 @ $1336.00 | P&L: $160.69 (0.81%)
+2025-07-29 14:53:41 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for VN30F2509: 1334.07 > 1333.77
+2025-07-29 14:53:41 | INFO     | src.core.trading_engine:_execute_buy_order:226 - BUY: 14.87 VN30F2509 @ $1343.80
+2025-07-29 14:53:41 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for VN30F2509: 1347.66 < 1350.68
+2025-07-29 14:53:41 | INFO     | src.core.trading_engine:_execute_sell_order:262 - SELL: 14.87 VN30F2509 @ $1173.90 | P&L: $-2543.48 (-12.73%)
+2025-07-29 14:53:41 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for VN30F2509: 1345.11 > 1341.85
+2025-07-29 14:53:41 | INFO     | src.core.trading_engine:_execute_buy_order:226 - BUY: 13.77 VN30F2509 @ $1414.10
+2025-07-29 14:53:41 | INFO     | src.core.trading_engine:_generate_backtest_report:326 - === BACKTEST RESULTS ===
+2025-07-29 14:53:41 | INFO     | src.core.trading_engine:_generate_backtest_report:327 - Initial Capital: $100,000.00
+2025-07-29 14:53:41 | INFO     | src.core.trading_engine:_generate_backtest_report:328 - Final Portfolio Value: $97,382.16
+2025-07-29 14:53:41 | INFO     | src.core.trading_engine:_generate_backtest_report:329 - Total Return: -2.62%
+2025-07-29 14:53:41 | INFO     | src.core.trading_engine:_generate_backtest_report:330 - Annualized Volatility: 2.43%
+2025-07-29 14:53:41 | INFO     | src.core.trading_engine:_generate_backtest_report:331 - Sharpe Ratio: -1.09
+2025-07-29 14:53:41 | INFO     | src.core.trading_engine:_generate_backtest_report:332 - Maximum Drawdown: -3.66%
+2025-07-29 14:53:41 | INFO     | src.core.trading_engine:_generate_backtest_report:333 - Total Trades: 7
+2025-07-29 14:53:41 | INFO     | src.core.trading_engine:_generate_backtest_report:334 - Buy Trades: 4
+2025-07-29 14:53:41 | INFO     | src.core.trading_engine:_generate_backtest_report:335 - Sell Trades: 3
+2025-07-29 14:53:41 | INFO     | src.core.trading_engine:_generate_backtest_report:343 - Backtest results saved to data/backtest_results.csv
+2025-07-29 14:53:41 | INFO     | src.core.trading_engine:_generate_backtest_report:360 - Trade details saved to data/trades.csv
+2025-07-29 14:53:41 | INFO     | __main__:run_backtest:93 - Backtest completed
+2025-07-29 14:55:21 | INFO     | src.risk.risk_manager:__init__:49 - Risk manager initialized
+2025-07-29 14:55:21 | INFO     | src.core.trading_engine:__init__:74 - Trading engine initialized with $100,000.00 initial capital
+2025-07-29 14:55:21 | INFO     | src.strategies.base_strategy:__init__:34 - Initialized strategy: sma_crossover
+2025-07-29 14:55:21 | INFO     | src.strategies.sma_crossover:__init__:48 - SMA Crossover Strategy initialized: 20/50
+2025-07-29 14:55:21 | INFO     | src.core.trading_engine:add_strategy:79 - Added strategy: sma_crossover
+2025-07-29 14:55:21 | INFO     | src.core.trading_engine:run_backtest:83 - Starting backtest from 2025-01-01 to 2025-05-31
+2025-07-29 14:55:21 | INFO     | src.data.data_manager:get_historical_data:52 - Fetching historical OHLCV data for ['VN30F2509'] from 2025-01-01 to 2025-05-31
+2025-07-29 14:55:21 | INFO     | src.data.data_manager:get_historical_data:62 - OHLCV data loaded from cache
+2025-07-29 14:55:21 | INFO     | src.core.trading_engine:run_backtest:104 - Loaded 250 data points for [('VN30F2509', 'open'), ('VN30F2509', 'high'), ('VN30F2509', 'low'), ('VN30F2509', 'close'), ('VN30F2509', 'volume')]
+2025-07-29 14:55:21 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for VN30F2509: 1296.07 > 1294.65
+2025-07-29 14:55:21 | INFO     | src.core.trading_engine:_execute_buy_order:226 - BUY: 15.28 VN30F2509 @ $1309.30
+2025-07-29 14:55:21 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for VN30F2509: 1334.81 < 1336.15
+2025-07-29 14:55:21 | INFO     | src.core.trading_engine:_execute_sell_order:262 - SELL: 15.28 VN30F2509 @ $1295.90 | P&L: $-224.48 (-1.12%)
+2025-07-29 14:55:21 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for VN30F2509: 1329.32 > 1328.74
+2025-07-29 14:55:21 | INFO     | src.core.trading_engine:_execute_buy_order:226 - BUY: 15.07 VN30F2509 @ $1324.00
+2025-07-29 14:55:21 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for VN30F2509: 1325.26 < 1326.10
+2025-07-29 14:55:21 | INFO     | src.core.trading_engine:_execute_sell_order:262 - SELL: 15.07 VN30F2509 @ $1336.00 | P&L: $160.69 (0.81%)
+2025-07-29 14:55:21 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for VN30F2509: 1334.07 > 1333.77
+2025-07-29 14:55:21 | INFO     | src.core.trading_engine:_execute_buy_order:226 - BUY: 14.87 VN30F2509 @ $1343.80
+2025-07-29 14:55:21 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for VN30F2509: 1347.66 < 1350.68
+2025-07-29 14:55:21 | INFO     | src.core.trading_engine:_execute_sell_order:262 - SELL: 14.87 VN30F2509 @ $1173.90 | P&L: $-2543.48 (-12.73%)
+2025-07-29 14:55:21 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for VN30F2509: 1345.11 > 1341.85
+2025-07-29 14:55:21 | INFO     | src.core.trading_engine:_execute_buy_order:226 - BUY: 13.77 VN30F2509 @ $1414.10
+2025-07-29 14:55:21 | INFO     | src.core.trading_engine:_generate_backtest_report:326 - === BACKTEST RESULTS ===
+2025-07-29 14:55:21 | INFO     | src.core.trading_engine:_generate_backtest_report:327 - Initial Capital: $100,000.00
+2025-07-29 14:55:21 | INFO     | src.core.trading_engine:_generate_backtest_report:328 - Final Portfolio Value: $97,382.16
+2025-07-29 14:55:21 | INFO     | src.core.trading_engine:_generate_backtest_report:329 - Total Return: -2.62%
+2025-07-29 14:55:21 | INFO     | src.core.trading_engine:_generate_backtest_report:330 - Annualized Volatility: 2.43%
+2025-07-29 14:55:21 | INFO     | src.core.trading_engine:_generate_backtest_report:331 - Sharpe Ratio: -1.09
+2025-07-29 14:55:21 | INFO     | src.core.trading_engine:_generate_backtest_report:332 - Maximum Drawdown: -3.66%
+2025-07-29 14:55:21 | INFO     | src.core.trading_engine:_generate_backtest_report:333 - Total Trades: 7
+2025-07-29 14:55:21 | INFO     | src.core.trading_engine:_generate_backtest_report:334 - Buy Trades: 4
+2025-07-29 14:55:21 | INFO     | src.core.trading_engine:_generate_backtest_report:335 - Sell Trades: 3
+2025-07-29 14:55:21 | INFO     | src.core.trading_engine:_generate_backtest_report:343 - Backtest results saved to data/backtest_results.csv
+2025-07-29 14:55:21 | INFO     | src.core.trading_engine:_generate_backtest_report:360 - Trade details saved to data/trades.csv
+2025-07-29 14:55:21 | INFO     | __main__:run_backtest:93 - Backtest completed
+2025-07-29 14:55:41 | INFO     | src.risk.risk_manager:__init__:49 - Risk manager initialized
+2025-07-29 14:55:41 | INFO     | src.core.trading_engine:__init__:74 - Trading engine initialized with $100,000.00 initial capital
+2025-07-29 14:55:41 | INFO     | src.strategies.base_strategy:__init__:34 - Initialized strategy: sma_crossover
+2025-07-29 14:55:41 | INFO     | src.strategies.sma_crossover:__init__:48 - SMA Crossover Strategy initialized: 20/50
+2025-07-29 14:55:41 | INFO     | src.core.trading_engine:add_strategy:79 - Added strategy: sma_crossover
+2025-07-29 14:55:41 | INFO     | src.core.trading_engine:run_backtest:83 - Starting backtest from 2025-01-01 to 2025-05-31
+2025-07-29 14:55:41 | INFO     | src.data.data_manager:get_historical_data:52 - Fetching historical OHLCV data for ['VN30F2509'] from 2025-01-01 to 2025-05-31
+2025-07-29 14:55:41 | INFO     | src.data.data_manager:get_historical_data:62 - OHLCV data loaded from cache
+2025-07-29 14:55:42 | INFO     | src.core.trading_engine:run_backtest:104 - Loaded 250 data points for [('VN30F2509', 'open'), ('VN30F2509', 'high'), ('VN30F2509', 'low'), ('VN30F2509', 'close'), ('VN30F2509', 'volume')]
+2025-07-29 14:55:42 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for VN30F2509: 1296.07 > 1294.65
+2025-07-29 14:55:42 | INFO     | src.core.trading_engine:_execute_buy_order:226 - BUY: 15.28 VN30F2509 @ $1309.30
+2025-07-29 14:55:42 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for VN30F2509: 1334.81 < 1336.15
+2025-07-29 14:55:42 | INFO     | src.core.trading_engine:_execute_sell_order:262 - SELL: 15.28 VN30F2509 @ $1295.90 | P&L: $-224.48 (-1.12%)
+2025-07-29 14:55:42 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for VN30F2509: 1329.32 > 1328.74
+2025-07-29 14:55:42 | INFO     | src.core.trading_engine:_execute_buy_order:226 - BUY: 15.07 VN30F2509 @ $1324.00
+2025-07-29 14:55:42 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for VN30F2509: 1325.26 < 1326.10
+2025-07-29 14:55:42 | INFO     | src.core.trading_engine:_execute_sell_order:262 - SELL: 15.07 VN30F2509 @ $1336.00 | P&L: $160.69 (0.81%)
+2025-07-29 14:55:42 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for VN30F2509: 1334.07 > 1333.77
+2025-07-29 14:55:42 | INFO     | src.core.trading_engine:_execute_buy_order:226 - BUY: 14.87 VN30F2509 @ $1343.80
+2025-07-29 14:55:42 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for VN30F2509: 1347.66 < 1350.68
+2025-07-29 14:55:42 | INFO     | src.core.trading_engine:_execute_sell_order:262 - SELL: 14.87 VN30F2509 @ $1173.90 | P&L: $-2543.48 (-12.73%)
+2025-07-29 14:55:42 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for VN30F2509: 1345.11 > 1341.85
+2025-07-29 14:55:42 | INFO     | src.core.trading_engine:_execute_buy_order:226 - BUY: 13.77 VN30F2509 @ $1414.10
+2025-07-29 14:55:42 | INFO     | src.core.trading_engine:_generate_backtest_report:326 - === BACKTEST RESULTS ===
+2025-07-29 14:55:42 | INFO     | src.core.trading_engine:_generate_backtest_report:327 - Initial Capital: $100,000.00
+2025-07-29 14:55:42 | INFO     | src.core.trading_engine:_generate_backtest_report:328 - Final Portfolio Value: $97,382.16
+2025-07-29 14:55:42 | INFO     | src.core.trading_engine:_generate_backtest_report:329 - Total Return: -2.62%
+2025-07-29 14:55:42 | INFO     | src.core.trading_engine:_generate_backtest_report:330 - Annualized Volatility: 2.43%
+2025-07-29 14:55:42 | INFO     | src.core.trading_engine:_generate_backtest_report:331 - Sharpe Ratio: -1.09
+2025-07-29 14:55:42 | INFO     | src.core.trading_engine:_generate_backtest_report:332 - Maximum Drawdown: -3.66%
+2025-07-29 14:55:42 | INFO     | src.core.trading_engine:_generate_backtest_report:333 - Total Trades: 7
+2025-07-29 14:55:42 | INFO     | src.core.trading_engine:_generate_backtest_report:334 - Buy Trades: 4
+2025-07-29 14:55:42 | INFO     | src.core.trading_engine:_generate_backtest_report:335 - Sell Trades: 3
+2025-07-29 14:55:42 | INFO     | src.core.trading_engine:_generate_backtest_report:343 - Backtest results saved to data/backtest_results.csv
+2025-07-29 14:55:42 | INFO     | src.core.trading_engine:_generate_backtest_report:360 - Trade details saved to data/trades.csv
+2025-07-29 14:55:42 | INFO     | __main__:run_backtest:93 - Backtest completed
+2025-07-29 14:57:01 | INFO     | src.risk.risk_manager:__init__:49 - Risk manager initialized
+2025-07-29 14:57:01 | INFO     | src.core.trading_engine:__init__:74 - Trading engine initialized with $100,000.00 initial capital
+2025-07-29 14:57:01 | INFO     | src.strategies.base_strategy:__init__:34 - Initialized strategy: sma_crossover
+2025-07-29 14:57:01 | INFO     | src.strategies.sma_crossover:__init__:48 - SMA Crossover Strategy initialized: 20/50
+2025-07-29 14:57:01 | INFO     | src.core.trading_engine:add_strategy:79 - Added strategy: sma_crossover
+2025-07-29 14:57:01 | INFO     | src.core.trading_engine:run_backtest:83 - Starting backtest from 2025-01-01 to 2025-05-31
+2025-07-29 14:57:01 | INFO     | src.data.data_manager:get_historical_data:52 - Fetching historical OHLCV data for ['VN30F2509'] from 2025-01-01 to 2025-05-31
+2025-07-29 14:57:01 | INFO     | src.data.data_manager:get_historical_data:62 - OHLCV data loaded from cache
+2025-07-29 14:57:01 | INFO     | src.core.trading_engine:run_backtest:104 - Loaded 250 data points for [('VN30F2509', 'open'), ('VN30F2509', 'high'), ('VN30F2509', 'low'), ('VN30F2509', 'close'), ('VN30F2509', 'volume')]
+2025-07-29 14:57:01 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for VN30F2509: 1296.07 > 1294.65
+2025-07-29 14:57:01 | INFO     | src.core.trading_engine:_execute_buy_order:226 - BUY: 15.28 VN30F2509 @ $1309.30
+2025-07-29 14:57:01 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for VN30F2509: 1334.81 < 1336.15
+2025-07-29 14:57:01 | INFO     | src.core.trading_engine:_execute_sell_order:262 - SELL: 15.28 VN30F2509 @ $1295.90 | P&L: $-224.48 (-1.12%)
+2025-07-29 14:57:01 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for VN30F2509: 1329.32 > 1328.74
+2025-07-29 14:57:01 | INFO     | src.core.trading_engine:_execute_buy_order:226 - BUY: 15.07 VN30F2509 @ $1324.00
+2025-07-29 14:57:01 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for VN30F2509: 1325.26 < 1326.10
+2025-07-29 14:57:01 | INFO     | src.core.trading_engine:_execute_sell_order:262 - SELL: 15.07 VN30F2509 @ $1336.00 | P&L: $160.69 (0.81%)
+2025-07-29 14:57:01 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for VN30F2509: 1334.07 > 1333.77
+2025-07-29 14:57:01 | INFO     | src.core.trading_engine:_execute_buy_order:226 - BUY: 14.87 VN30F2509 @ $1343.80
+2025-07-29 14:57:01 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for VN30F2509: 1347.66 < 1350.68
+2025-07-29 14:57:01 | INFO     | src.core.trading_engine:_execute_sell_order:262 - SELL: 14.87 VN30F2509 @ $1173.90 | P&L: $-2543.48 (-12.73%)
+2025-07-29 14:57:01 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for VN30F2509: 1345.11 > 1341.85
+2025-07-29 14:57:01 | INFO     | src.core.trading_engine:_execute_buy_order:226 - BUY: 13.77 VN30F2509 @ $1414.10
+2025-07-29 14:57:01 | INFO     | src.core.trading_engine:_generate_backtest_report:326 - === BACKTEST RESULTS ===
+2025-07-29 14:57:01 | INFO     | src.core.trading_engine:_generate_backtest_report:327 - Initial Capital: $100,000.00
+2025-07-29 14:57:01 | INFO     | src.core.trading_engine:_generate_backtest_report:328 - Final Portfolio Value: $97,382.16
+2025-07-29 14:57:01 | INFO     | src.core.trading_engine:_generate_backtest_report:329 - Total Return: -2.62%
+2025-07-29 14:57:01 | INFO     | src.core.trading_engine:_generate_backtest_report:330 - Annualized Volatility: 2.43%
+2025-07-29 14:57:01 | INFO     | src.core.trading_engine:_generate_backtest_report:331 - Sharpe Ratio: -1.09
+2025-07-29 14:57:01 | INFO     | src.core.trading_engine:_generate_backtest_report:332 - Maximum Drawdown: -3.66%
+2025-07-29 14:57:01 | INFO     | src.core.trading_engine:_generate_backtest_report:333 - Total Trades: 7
+2025-07-29 14:57:01 | INFO     | src.core.trading_engine:_generate_backtest_report:334 - Buy Trades: 4
+2025-07-29 14:57:01 | INFO     | src.core.trading_engine:_generate_backtest_report:335 - Sell Trades: 3
+2025-07-29 14:57:01 | INFO     | src.core.trading_engine:_generate_backtest_report:343 - Backtest results saved to data/backtest_results.csv
+2025-07-29 14:57:01 | INFO     | src.core.trading_engine:_generate_backtest_report:360 - Trade details saved to data/trades.csv
+2025-07-29 14:57:01 | INFO     | __main__:run_backtest:93 - Backtest completed
+2025-07-29 14:57:29 | INFO     | src.risk.risk_manager:__init__:49 - Risk manager initialized
+2025-07-29 14:57:29 | INFO     | src.core.trading_engine:__init__:74 - Trading engine initialized with $100,000.00 initial capital
+2025-07-29 14:57:29 | INFO     | src.strategies.base_strategy:__init__:34 - Initialized strategy: rsi
+2025-07-29 14:57:29 | INFO     | src.strategies.rsi_strategy:__init__:56 - RSI Strategy initialized: period=14, overbought=70, oversold=30
+2025-07-29 14:57:29 | INFO     | src.core.trading_engine:add_strategy:79 - Added strategy: rsi
+2025-07-29 14:57:29 | INFO     | src.core.trading_engine:run_backtest:83 - Starting backtest from 2025-01-01 to 2025-05-31
+2025-07-29 14:57:29 | INFO     | src.data.data_manager:get_historical_data:52 - Fetching historical OHLCV data for ['VN30F2509'] from 2025-01-01 to 2025-05-31
+2025-07-29 14:57:29 | INFO     | src.data.data_manager:get_historical_data:62 - OHLCV data loaded from cache
+2025-07-29 14:57:29 | INFO     | src.core.trading_engine:run_backtest:104 - Loaded 250 data points for [('VN30F2509', 'open'), ('VN30F2509', 'high'), ('VN30F2509', 'low'), ('VN30F2509', 'close'), ('VN30F2509', 'volume')]
+2025-07-29 14:57:29 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:125 - RSI overbought signal for VN30F2509: 70.22 > 70
+2025-07-29 14:57:29 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:119 - RSI oversold signal for VN30F2509: 20.17 < 30
+2025-07-29 14:57:29 | INFO     | src.core.trading_engine:_execute_buy_order:226 - BUY: 15.67 VN30F2509 @ $1276.50
+2025-07-29 14:57:29 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:119 - RSI oversold signal for VN30F2509: 29.27 < 30
+2025-07-29 14:57:29 | INFO     | src.core.trading_engine:_execute_buy_order:226 - BUY: 12.40 VN30F2509 @ $1290.20
+2025-07-29 14:57:29 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:119 - RSI oversold signal for VN30F2509: 23.63 < 30
+2025-07-29 14:57:29 | INFO     | src.core.trading_engine:_execute_buy_order:226 - BUY: 10.36 VN30F2509 @ $1235.10
+2025-07-29 14:57:29 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:125 - RSI overbought signal for VN30F2509: 82.86 > 70
+2025-07-29 14:57:29 | INFO     | src.core.trading_engine:_execute_sell_order:262 - SELL: 38.42 VN30F2509 @ $1316.00 | P&L: $1726.17 (3.54%)
+2025-07-29 14:57:29 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:140 - RSI sustained overbought for VN30F2509: 80.62
+2025-07-29 14:57:29 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:140 - RSI sustained overbought for VN30F2509: 81.18
+2025-07-29 14:57:29 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:140 - RSI sustained overbought for VN30F2509: 89.16
+2025-07-29 14:57:29 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:140 - RSI sustained overbought for VN30F2509: 86.71
+2025-07-29 14:57:29 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:140 - RSI sustained overbought for VN30F2509: 86.84
+2025-07-29 14:57:29 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:140 - RSI sustained overbought for VN30F2509: 72.38
+2025-07-29 14:57:29 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:125 - RSI overbought signal for VN30F2509: 74.70 > 70
+2025-07-29 14:57:29 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:125 - RSI overbought signal for VN30F2509: 76.71 > 70
+2025-07-29 14:57:29 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:140 - RSI sustained overbought for VN30F2509: 79.09
+2025-07-29 14:57:29 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:140 - RSI sustained overbought for VN30F2509: 76.21
+2025-07-29 14:57:29 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:140 - RSI sustained overbought for VN30F2509: 76.35
+2025-07-29 14:57:29 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:140 - RSI sustained overbought for VN30F2509: 78.39
+2025-07-29 14:57:29 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:125 - RSI overbought signal for VN30F2509: 73.15 > 70
+2025-07-29 14:57:29 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:119 - RSI oversold signal for VN30F2509: 27.93 < 30
+2025-07-29 14:57:29 | INFO     | src.core.trading_engine:_execute_buy_order:226 - BUY: 15.40 VN30F2509 @ $1320.50
+2025-07-29 14:57:29 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:135 - RSI sustained oversold for VN30F2509: 28.69
+2025-07-29 14:57:29 | INFO     | src.core.trading_engine:_execute_buy_order:226 - BUY: 12.30 VN30F2509 @ $1322.50
+2025-07-29 14:57:29 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:119 - RSI oversold signal for VN30F2509: 27.95 < 30
+2025-07-29 14:57:29 | INFO     | src.core.trading_engine:_execute_buy_order:226 - BUY: 10.16 VN30F2509 @ $1280.00
+2025-07-29 14:57:29 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:135 - RSI sustained oversold for VN30F2509: 22.09
+2025-07-29 14:57:29 | INFO     | src.core.trading_engine:_execute_buy_order:226 - BUY: 8.15 VN30F2509 @ $1276.20
+2025-07-29 14:57:29 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:135 - RSI sustained oversold for VN30F2509: 19.92
+2025-07-29 14:57:29 | INFO     | src.core.trading_engine:_execute_buy_order:226 - BUY: 6.56 VN30F2509 @ $1269.00
+2025-07-29 14:57:29 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:135 - RSI sustained oversold for VN30F2509: 23.98
+2025-07-29 14:57:29 | INFO     | src.core.trading_engine:_execute_buy_order:226 - BUY: 5.21 VN30F2509 @ $1278.00
+2025-07-29 14:57:29 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:125 - RSI overbought signal for VN30F2509: 79.54 > 70
+2025-07-29 14:57:29 | INFO     | src.core.trading_engine:_execute_sell_order:262 - SELL: 57.78 VN30F2509 @ $1349.00 | P&L: $2875.87 (3.84%)
+2025-07-29 14:57:29 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:140 - RSI sustained overbought for VN30F2509: 80.85
+2025-07-29 14:57:29 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:140 - RSI sustained overbought for VN30F2509: 84.84
+2025-07-29 14:57:29 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:140 - RSI sustained overbought for VN30F2509: 83.91
+2025-07-29 14:57:29 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:140 - RSI sustained overbought for VN30F2509: 77.49
+2025-07-29 14:57:29 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:140 - RSI sustained overbought for VN30F2509: 75.36
+2025-07-29 14:57:29 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:140 - RSI sustained overbought for VN30F2509: 70.51
+2025-07-29 14:57:29 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:119 - RSI oversold signal for VN30F2509: 17.82 < 30
+2025-07-29 14:57:29 | INFO     | src.core.trading_engine:_execute_buy_order:226 - BUY: 16.06 VN30F2509 @ $1301.00
+2025-07-29 14:57:29 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:135 - RSI sustained oversold for VN30F2509: 24.63
+2025-07-29 14:57:29 | INFO     | src.core.trading_engine:_execute_buy_order:226 - BUY: 12.77 VN30F2509 @ $1308.50
+2025-07-29 14:57:29 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:125 - RSI overbought signal for VN30F2509: 73.34 > 70
+2025-07-29 14:57:29 | INFO     | src.core.trading_engine:_execute_sell_order:262 - SELL: 28.83 VN30F2509 @ $1354.00 | P&L: $1393.34 (3.70%)
+2025-07-29 14:57:29 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:140 - RSI sustained overbought for VN30F2509: 72.77
+2025-07-29 14:57:29 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:125 - RSI overbought signal for VN30F2509: 70.80 > 70
+2025-07-29 14:57:29 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:140 - RSI sustained overbought for VN30F2509: 74.77
+2025-07-29 14:57:29 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:140 - RSI sustained overbought for VN30F2509: 72.79
+2025-07-29 14:57:29 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:140 - RSI sustained overbought for VN30F2509: 73.98
+2025-07-29 14:57:29 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:140 - RSI sustained overbought for VN30F2509: 82.26
+2025-07-29 14:57:29 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:140 - RSI sustained overbought for VN30F2509: 81.99
+2025-07-29 14:57:29 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:140 - RSI sustained overbought for VN30F2509: 81.72
+2025-07-29 14:57:29 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:140 - RSI sustained overbought for VN30F2509: 79.91
+2025-07-29 14:57:29 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:140 - RSI sustained overbought for VN30F2509: 77.46
+2025-07-29 14:57:29 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:125 - RSI overbought signal for VN30F2509: 75.44 > 70
+2025-07-29 14:57:29 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:119 - RSI oversold signal for VN30F2509: 29.93 < 30
+2025-07-29 14:57:29 | INFO     | src.core.trading_engine:_execute_buy_order:226 - BUY: 15.56 VN30F2509 @ $1360.50
+2025-07-29 14:57:29 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:119 - RSI oversold signal for VN30F2509: 19.00 < 30
+2025-07-29 14:57:29 | INFO     | src.core.trading_engine:_execute_buy_order:226 - BUY: 13.27 VN30F2509 @ $1275.80
+2025-07-29 14:57:29 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:135 - RSI sustained oversold for VN30F2509: 15.44
+2025-07-29 14:57:29 | INFO     | src.core.trading_engine:_execute_buy_order:226 - BUY: 10.65 VN30F2509 @ $1271.00
+2025-07-29 14:57:29 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:135 - RSI sustained oversold for VN30F2509: 10.44
+2025-07-29 14:57:29 | INFO     | src.core.trading_engine:_execute_buy_order:226 - BUY: 9.16 VN30F2509 @ $1182.10
+2025-07-29 14:57:29 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:135 - RSI sustained oversold for VN30F2509: 10.43
+2025-07-29 14:57:29 | INFO     | src.core.trading_engine:_execute_buy_order:226 - BUY: 7.38 VN30F2509 @ $1173.90
+2025-07-29 14:57:29 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:125 - RSI overbought signal for VN30F2509: 76.88 > 70
+2025-07-29 14:57:29 | INFO     | src.core.trading_engine:_execute_sell_order:262 - SELL: 56.02 VN30F2509 @ $1314.90 | P&L: $2460.31 (3.46%)
+2025-07-29 14:57:29 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:140 - RSI sustained overbought for VN30F2509: 76.45
+2025-07-29 14:57:29 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:125 - RSI overbought signal for VN30F2509: 77.09 > 70
+2025-07-29 14:57:29 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:140 - RSI sustained overbought for VN30F2509: 78.72
+2025-07-29 14:57:29 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:140 - RSI sustained overbought for VN30F2509: 87.99
+2025-07-29 14:57:29 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:140 - RSI sustained overbought for VN30F2509: 91.41
+2025-07-29 14:57:29 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:140 - RSI sustained overbought for VN30F2509: 90.01
+2025-07-29 14:57:29 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:140 - RSI sustained overbought for VN30F2509: 82.61
+2025-07-29 14:57:29 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:140 - RSI sustained overbought for VN30F2509: 77.81
+2025-07-29 14:57:29 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:140 - RSI sustained overbought for VN30F2509: 80.98
+2025-07-29 14:57:29 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:140 - RSI sustained overbought for VN30F2509: 81.00
+2025-07-29 14:57:29 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:140 - RSI sustained overbought for VN30F2509: 82.50
+2025-07-29 14:57:29 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:140 - RSI sustained overbought for VN30F2509: 80.33
+2025-07-29 14:57:29 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:140 - RSI sustained overbought for VN30F2509: 81.56
+2025-07-29 14:57:29 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:140 - RSI sustained overbought for VN30F2509: 79.62
+2025-07-29 14:57:29 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:140 - RSI sustained overbought for VN30F2509: 77.53
+2025-07-29 14:57:29 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:140 - RSI sustained overbought for VN30F2509: 76.60
+2025-07-29 14:57:29 | INFO     | src.core.trading_engine:_generate_backtest_report:326 - === BACKTEST RESULTS ===
+2025-07-29 14:57:29 | INFO     | src.core.trading_engine:_generate_backtest_report:327 - Initial Capital: $100,000.00
+2025-07-29 14:57:29 | INFO     | src.core.trading_engine:_generate_backtest_report:328 - Final Portfolio Value: $108,223.18
+2025-07-29 14:57:29 | INFO     | src.core.trading_engine:_generate_backtest_report:329 - Total Return: 8.22%
+2025-07-29 14:57:29 | INFO     | src.core.trading_engine:_generate_backtest_report:330 - Annualized Volatility: 7.80%
+2025-07-29 14:57:29 | INFO     | src.core.trading_engine:_generate_backtest_report:331 - Sharpe Ratio: 1.06
+2025-07-29 14:57:29 | INFO     | src.core.trading_engine:_generate_backtest_report:332 - Maximum Drawdown: -5.27%
+2025-07-29 14:57:29 | INFO     | src.core.trading_engine:_generate_backtest_report:333 - Total Trades: 20
+2025-07-29 14:57:29 | INFO     | src.core.trading_engine:_generate_backtest_report:334 - Buy Trades: 16
+2025-07-29 14:57:29 | INFO     | src.core.trading_engine:_generate_backtest_report:335 - Sell Trades: 4
+2025-07-29 14:57:29 | INFO     | src.core.trading_engine:_generate_backtest_report:343 - Backtest results saved to data/backtest_results.csv
+2025-07-29 14:57:29 | INFO     | src.core.trading_engine:_generate_backtest_report:360 - Trade details saved to data/trades.csv
+2025-07-29 14:57:29 | INFO     | __main__:run_backtest:93 - Backtest completed
+2025-07-29 14:57:43 | INFO     | src.risk.risk_manager:__init__:49 - Risk manager initialized
+2025-07-29 14:57:43 | INFO     | src.core.trading_engine:__init__:74 - Trading engine initialized with $100,000.00 initial capital
+2025-07-29 14:57:43 | INFO     | src.strategies.base_strategy:__init__:34 - Initialized strategy: macd
+2025-07-29 14:57:43 | INFO     | src.strategies.macd_strategy:__init__:54 - MACD Strategy initialized: fast=12, slow=26, signal=9
+2025-07-29 14:57:43 | INFO     | src.core.trading_engine:add_strategy:79 - Added strategy: macd
+2025-07-29 14:57:43 | INFO     | src.core.trading_engine:run_backtest:83 - Starting backtest from 2025-01-01 to 2025-05-31
+2025-07-29 14:57:43 | INFO     | src.data.data_manager:get_historical_data:52 - Fetching historical OHLCV data for ['VN30F2509'] from 2025-01-01 to 2025-05-31
+2025-07-29 14:57:43 | INFO     | src.data.data_manager:get_historical_data:62 - OHLCV data loaded from cache
+2025-07-29 14:57:43 | INFO     | src.core.trading_engine:run_backtest:104 - Loaded 250 data points for [('VN30F2509', 'open'), ('VN30F2509', 'high'), ('VN30F2509', 'low'), ('VN30F2509', 'close'), ('VN30F2509', 'volume')]
+2025-07-29 14:57:44 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:147 - MACD zero line bullish crossover for VN30F2509: MACD=0.0818
+2025-07-29 14:57:44 | INFO     | src.core.trading_engine:_execute_buy_order:226 - BUY: 15.21 VN30F2509 @ $1314.70
+2025-07-29 14:57:44 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:130 - MACD bearish crossover for VN30F2509: MACD=-0.1361, Signal=-0.0668
+2025-07-29 14:57:44 | INFO     | src.core.trading_engine:_execute_sell_order:262 - SELL: 15.21 VN30F2509 @ $1303.40 | P&L: $-191.73 (-0.96%)
+2025-07-29 14:57:44 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:124 - MACD bullish crossover for VN30F2509: MACD=-0.0286, Signal=-0.0892
+2025-07-29 14:57:44 | INFO     | src.core.trading_engine:_execute_buy_order:226 - BUY: 15.26 VN30F2509 @ $1307.70
+2025-07-29 14:57:44 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:130 - MACD bearish crossover for VN30F2509: MACD=-0.3651, Signal=-0.1444
+2025-07-29 14:57:44 | INFO     | src.core.trading_engine:_execute_sell_order:262 - SELL: 15.26 VN30F2509 @ $1300.90 | P&L: $-123.63 (-0.62%)
+2025-07-29 14:57:44 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:124 - MACD bullish crossover for VN30F2509: MACD=-9.4280, Signal=-9.6830
+2025-07-29 14:57:44 | INFO     | src.core.trading_engine:_execute_buy_order:226 - BUY: 15.68 VN30F2509 @ $1271.20
+2025-07-29 14:57:44 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:147 - MACD zero line bullish crossover for VN30F2509: MACD=1.0263
+2025-07-29 14:57:44 | INFO     | src.core.trading_engine:_execute_buy_order:226 - BUY: 12.13 VN30F2509 @ $1314.00
+2025-07-29 14:57:44 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:130 - MACD bearish crossover for VN30F2509: MACD=6.4368, Signal=7.6973
+2025-07-29 14:57:44 | INFO     | src.core.trading_engine:_execute_sell_order:262 - SELL: 27.81 VN30F2509 @ $1296.10 | P&L: $137.19 (0.38%)
+2025-07-29 14:57:44 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:124 - MACD bullish crossover for VN30F2509: MACD=5.3793, Signal=4.1068
+2025-07-29 14:57:44 | INFO     | src.core.trading_engine:_execute_buy_order:226 - BUY: 14.98 VN30F2509 @ $1331.50
+2025-07-29 14:57:44 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:130 - MACD bearish crossover for VN30F2509: MACD=12.1717, Signal=12.7523
+2025-07-29 14:57:44 | INFO     | src.core.trading_engine:_execute_sell_order:262 - SELL: 14.98 VN30F2509 @ $1345.00 | P&L: $182.11 (0.91%)
+2025-07-29 14:57:44 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:124 - MACD bullish crossover for VN30F2509: MACD=13.1398, Signal=12.7922
+2025-07-29 14:57:44 | INFO     | src.core.trading_engine:_execute_buy_order:226 - BUY: 14.63 VN30F2509 @ $1366.20
+2025-07-29 14:57:44 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:130 - MACD bearish crossover for VN30F2509: MACD=12.7221, Signal=13.0003
+2025-07-29 14:57:44 | INFO     | src.core.trading_engine:_execute_sell_order:262 - SELL: 14.63 VN30F2509 @ $1362.90 | P&L: $-68.20 (-0.34%)
+2025-07-29 14:57:44 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:151 - MACD zero line bearish crossover for VN30F2509: MACD=-0.1600
+2025-07-29 14:57:44 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:124 - MACD bullish crossover for VN30F2509: MACD=-11.5275, Signal=-12.5291
+2025-07-29 14:57:44 | INFO     | src.core.trading_engine:_execute_buy_order:226 - BUY: 15.22 VN30F2509 @ $1312.00
+2025-07-29 14:57:44 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:147 - MACD zero line bullish crossover for VN30F2509: MACD=2.0939
+2025-07-29 14:57:44 | INFO     | src.core.trading_engine:_execute_buy_order:226 - BUY: 11.85 VN30F2509 @ $1347.10
+2025-07-29 14:57:44 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:130 - MACD bearish crossover for VN30F2509: MACD=4.6879, Signal=4.7051
+2025-07-29 14:57:44 | INFO     | src.core.trading_engine:_execute_sell_order:262 - SELL: 27.07 VN30F2509 @ $1318.00 | P&L: $-289.30 (-0.81%)
+2025-07-29 14:57:44 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:124 - MACD bullish crossover for VN30F2509: MACD=4.4518, Signal=4.0930
+2025-07-29 14:57:44 | INFO     | src.core.trading_engine:_execute_buy_order:226 - BUY: 14.71 VN30F2509 @ $1353.00
+2025-07-29 14:57:44 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:130 - MACD bearish crossover for VN30F2509: MACD=5.1195, Signal=5.6152
+2025-07-29 14:57:44 | INFO     | src.core.trading_engine:_execute_sell_order:262 - SELL: 14.71 VN30F2509 @ $1330.00 | P&L: $-357.83 (-1.80%)
+2025-07-29 14:57:44 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:151 - MACD zero line bearish crossover for VN30F2509: MACD=-0.2394
+2025-07-29 14:57:44 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:124 - MACD bullish crossover for VN30F2509: MACD=-3.7144, Signal=-3.9063
+2025-07-29 14:57:44 | INFO     | src.core.trading_engine:_execute_buy_order:226 - BUY: 14.93 VN30F2509 @ $1327.40
+2025-07-29 14:57:44 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:147 - MACD zero line bullish crossover for VN30F2509: MACD=1.5403
+2025-07-29 14:57:44 | INFO     | src.core.trading_engine:_execute_buy_order:226 - BUY: 11.73 VN30F2509 @ $1351.30
+2025-07-29 14:57:44 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:130 - MACD bearish crossover for VN30F2509: MACD=11.2220, Signal=11.6085
+2025-07-29 14:57:44 | INFO     | src.core.trading_engine:_execute_sell_order:262 - SELL: 26.67 VN30F2509 @ $1377.30 | P&L: $1013.54 (2.84%)
+2025-07-29 14:57:44 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:151 - MACD zero line bearish crossover for VN30F2509: MACD=-5.7104
+2025-07-29 14:57:44 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:124 - MACD bullish crossover for VN30F2509: MACD=-20.6091, Signal=-21.0689
+2025-07-29 14:57:44 | INFO     | src.core.trading_engine:_execute_buy_order:226 - BUY: 15.36 VN30F2509 @ $1303.40
+2025-07-29 14:57:44 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:147 - MACD zero line bullish crossover for VN30F2509: MACD=2.4466
+2025-07-29 14:57:44 | INFO     | src.core.trading_engine:_execute_buy_order:226 - BUY: 11.84 VN30F2509 @ $1352.00
+2025-07-29 14:57:44 | INFO     | src.core.trading_engine:_generate_backtest_report:326 - === BACKTEST RESULTS ===
+2025-07-29 14:57:44 | INFO     | src.core.trading_engine:_generate_backtest_report:327 - Initial Capital: $100,000.00
+2025-07-29 14:57:44 | INFO     | src.core.trading_engine:_generate_backtest_report:328 - Final Portfolio Value: $102,630.53
+2025-07-29 14:57:44 | INFO     | src.core.trading_engine:_generate_backtest_report:329 - Total Return: 2.63%
+2025-07-29 14:57:44 | INFO     | src.core.trading_engine:_generate_backtest_report:330 - Annualized Volatility: 2.32%
+2025-07-29 14:57:44 | INFO     | src.core.trading_engine:_generate_backtest_report:331 - Sharpe Ratio: 1.14
+2025-07-29 14:57:44 | INFO     | src.core.trading_engine:_generate_backtest_report:332 - Maximum Drawdown: -2.12%
+2025-07-29 14:57:44 | INFO     | src.core.trading_engine:_generate_backtest_report:333 - Total Trades: 21
+2025-07-29 14:57:44 | INFO     | src.core.trading_engine:_generate_backtest_report:334 - Buy Trades: 13
+2025-07-29 14:57:44 | INFO     | src.core.trading_engine:_generate_backtest_report:335 - Sell Trades: 8
+2025-07-29 14:57:44 | INFO     | src.core.trading_engine:_generate_backtest_report:343 - Backtest results saved to data/backtest_results.csv
+2025-07-29 14:57:44 | INFO     | src.core.trading_engine:_generate_backtest_report:360 - Trade details saved to data/trades.csv
+2025-07-29 14:57:44 | INFO     | __main__:run_backtest:93 - Backtest completed
+2025-07-30 08:04:58 | INFO     | src.risk.risk_manager:__init__:49 - Risk manager initialized
+2025-07-30 08:04:58 | INFO     | src.core.trading_engine:__init__:74 - Trading engine initialized with $100,000.00 initial capital
+2025-07-30 08:04:58 | INFO     | src.strategies.base_strategy:__init__:34 - Initialized strategy: sma_crossover
+2025-07-30 08:04:58 | INFO     | src.strategies.sma_crossover:__init__:48 - SMA Crossover Strategy initialized: 20/50
+2025-07-30 08:04:58 | INFO     | src.core.trading_engine:add_strategy:79 - Added strategy: sma_crossover
+2025-07-30 08:04:58 | INFO     | src.core.trading_engine:run_backtest:83 - Starting backtest from 2025-01-01 to 2025-05-31
+2025-07-30 08:04:58 | INFO     | src.data.data_manager:get_historical_data:52 - Fetching historical OHLCV data for ['VN30F2509'] from 2025-01-01 to 2025-05-31
+2025-07-30 08:04:58 | INFO     | src.data.data_manager:get_historical_data:82 - OHLCV data cached successfully
+2025-07-30 08:04:58 | INFO     | src.core.trading_engine:run_backtest:104 - Loaded 250 data points for [('VN30F2509', 'time'), ('VN30F2509', 'open'), ('VN30F2509', 'high'), ('VN30F2509', 'low'), ('VN30F2509', 'close'), ('VN30F2509', 'volume')]
+2025-07-30 08:04:58 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for VN30F2509: 1296.07 > 1294.65
+2025-07-30 08:04:58 | INFO     | src.core.trading_engine:_execute_buy_order:226 - BUY: 15.28 VN30F2509 @ $1309.30
+2025-07-30 08:04:58 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for VN30F2509: 1334.81 < 1336.15
+2025-07-30 08:04:58 | INFO     | src.core.trading_engine:_execute_sell_order:262 - SELL: 15.28 VN30F2509 @ $1295.90 | P&L: $-224.48 (-1.12%)
+2025-07-30 08:04:58 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for VN30F2509: 1329.32 > 1328.74
+2025-07-30 08:04:58 | INFO     | src.core.trading_engine:_execute_buy_order:226 - BUY: 15.07 VN30F2509 @ $1324.00
+2025-07-30 08:04:58 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for VN30F2509: 1325.26 < 1326.10
+2025-07-30 08:04:58 | INFO     | src.core.trading_engine:_execute_sell_order:262 - SELL: 15.07 VN30F2509 @ $1336.00 | P&L: $160.69 (0.81%)
+2025-07-30 08:04:58 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for VN30F2509: 1334.07 > 1333.77
+2025-07-30 08:04:58 | INFO     | src.core.trading_engine:_execute_buy_order:226 - BUY: 14.87 VN30F2509 @ $1343.80
+2025-07-30 08:04:58 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for VN30F2509: 1347.66 < 1350.68
+2025-07-30 08:04:58 | INFO     | src.core.trading_engine:_execute_sell_order:262 - SELL: 14.87 VN30F2509 @ $1173.90 | P&L: $-2543.48 (-12.73%)
+2025-07-30 08:04:58 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for VN30F2509: 1345.11 > 1341.85
+2025-07-30 08:04:58 | INFO     | src.core.trading_engine:_execute_buy_order:226 - BUY: 13.77 VN30F2509 @ $1414.10
+2025-07-30 08:04:58 | INFO     | src.core.trading_engine:_generate_backtest_report:326 - === BACKTEST RESULTS ===
+2025-07-30 08:04:58 | INFO     | src.core.trading_engine:_generate_backtest_report:327 - Initial Capital: $100,000.00
+2025-07-30 08:04:58 | INFO     | src.core.trading_engine:_generate_backtest_report:328 - Final Portfolio Value: $97,382.16
+2025-07-30 08:04:58 | INFO     | src.core.trading_engine:_generate_backtest_report:329 - Total Return: -2.62%
+2025-07-30 08:04:58 | INFO     | src.core.trading_engine:_generate_backtest_report:330 - Annualized Volatility: 2.43%
+2025-07-30 08:04:58 | INFO     | src.core.trading_engine:_generate_backtest_report:331 - Sharpe Ratio: -1.09
+2025-07-30 08:04:58 | INFO     | src.core.trading_engine:_generate_backtest_report:332 - Maximum Drawdown: -3.66%
+2025-07-30 08:04:58 | INFO     | src.core.trading_engine:_generate_backtest_report:333 - Total Trades: 7
+2025-07-30 08:04:58 | INFO     | src.core.trading_engine:_generate_backtest_report:334 - Buy Trades: 4
+2025-07-30 08:04:58 | INFO     | src.core.trading_engine:_generate_backtest_report:335 - Sell Trades: 3
+2025-07-30 08:04:58 | INFO     | src.core.trading_engine:_generate_backtest_report:343 - Backtest results saved to data/backtest_results.csv
+2025-07-30 08:04:58 | INFO     | src.core.trading_engine:_generate_backtest_report:360 - Trade details saved to data/trades.csv
+2025-07-30 08:04:58 | INFO     | __main__:run_backtest:93 - Backtest completed
+2025-07-30 08:06:49 | INFO     | src.risk.risk_manager:__init__:49 - Risk manager initialized
+2025-07-30 08:06:49 | INFO     | src.core.trading_engine:__init__:74 - Trading engine initialized with $100,000.00 initial capital
+2025-07-30 08:06:49 | INFO     | src.strategies.base_strategy:__init__:34 - Initialized strategy: sma_crossover
+2025-07-30 08:06:49 | INFO     | src.strategies.sma_crossover:__init__:48 - SMA Crossover Strategy initialized: 20/50
+2025-07-30 08:06:49 | INFO     | src.core.trading_engine:add_strategy:79 - Added strategy: sma_crossover
+2025-07-30 08:06:49 | INFO     | src.core.trading_engine:run_backtest:83 - Starting backtest from 2025-01-01 to 2025-05-31
+2025-07-30 08:06:49 | INFO     | src.data.data_manager:get_historical_data:52 - Fetching historical OHLCV data for ['VN30F2509'] from 2025-01-01 to 2025-05-31
+2025-07-30 08:06:49 | INFO     | src.data.data_manager:get_historical_data:62 - OHLCV data loaded from cache
+2025-07-30 08:06:49 | INFO     | src.core.trading_engine:run_backtest:104 - Loaded 250 data points for [('VN30F2509', 'time'), ('VN30F2509', 'open'), ('VN30F2509', 'high'), ('VN30F2509', 'low'), ('VN30F2509', 'close'), ('VN30F2509', 'volume')]
+2025-07-30 08:06:49 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for VN30F2509: 1296.07 > 1294.65
+2025-07-30 08:06:49 | INFO     | src.core.trading_engine:_execute_buy_order:226 - BUY: 15.28 VN30F2509 @ $1309.30
+2025-07-30 08:06:49 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for VN30F2509: 1334.81 < 1336.15
+2025-07-30 08:06:49 | INFO     | src.core.trading_engine:_execute_sell_order:262 - SELL: 15.28 VN30F2509 @ $1295.90 | P&L: $-224.48 (-1.12%)
+2025-07-30 08:06:49 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for VN30F2509: 1329.32 > 1328.74
+2025-07-30 08:06:49 | INFO     | src.core.trading_engine:_execute_buy_order:226 - BUY: 15.07 VN30F2509 @ $1324.00
+2025-07-30 08:06:49 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for VN30F2509: 1325.26 < 1326.10
+2025-07-30 08:06:49 | INFO     | src.core.trading_engine:_execute_sell_order:262 - SELL: 15.07 VN30F2509 @ $1336.00 | P&L: $160.69 (0.81%)
+2025-07-30 08:06:49 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for VN30F2509: 1334.07 > 1333.77
+2025-07-30 08:06:49 | INFO     | src.core.trading_engine:_execute_buy_order:226 - BUY: 14.87 VN30F2509 @ $1343.80
+2025-07-30 08:06:49 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for VN30F2509: 1347.66 < 1350.68
+2025-07-30 08:06:49 | INFO     | src.core.trading_engine:_execute_sell_order:262 - SELL: 14.87 VN30F2509 @ $1173.90 | P&L: $-2543.48 (-12.73%)
+2025-07-30 08:06:49 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for VN30F2509: 1345.11 > 1341.85
+2025-07-30 08:06:49 | INFO     | src.core.trading_engine:_execute_buy_order:226 - BUY: 13.77 VN30F2509 @ $1414.10
+2025-07-30 08:06:49 | INFO     | src.core.trading_engine:_generate_backtest_report:326 - === BACKTEST RESULTS ===
+2025-07-30 08:06:49 | INFO     | src.core.trading_engine:_generate_backtest_report:327 - Initial Capital: $100,000.00
+2025-07-30 08:06:49 | INFO     | src.core.trading_engine:_generate_backtest_report:328 - Final Portfolio Value: $97,382.16
+2025-07-30 08:06:49 | INFO     | src.core.trading_engine:_generate_backtest_report:329 - Total Return: -2.62%
+2025-07-30 08:06:49 | INFO     | src.core.trading_engine:_generate_backtest_report:330 - Annualized Volatility: 2.43%
+2025-07-30 08:06:49 | INFO     | src.core.trading_engine:_generate_backtest_report:331 - Sharpe Ratio: -1.09
+2025-07-30 08:06:49 | INFO     | src.core.trading_engine:_generate_backtest_report:332 - Maximum Drawdown: -3.66%
+2025-07-30 08:06:49 | INFO     | src.core.trading_engine:_generate_backtest_report:333 - Total Trades: 7
+2025-07-30 08:06:49 | INFO     | src.core.trading_engine:_generate_backtest_report:334 - Buy Trades: 4
+2025-07-30 08:06:49 | INFO     | src.core.trading_engine:_generate_backtest_report:335 - Sell Trades: 3
+2025-07-30 08:06:49 | INFO     | src.core.trading_engine:_generate_backtest_report:343 - Backtest results saved to data/backtest_results.csv
+2025-07-30 08:06:49 | INFO     | src.core.trading_engine:_generate_backtest_report:360 - Trade details saved to data/trades.csv
+2025-07-30 08:06:49 | INFO     | __main__:run_backtest:93 - Backtest completed
+2025-07-30 08:08:00 | INFO     | src.risk.risk_manager:__init__:49 - Risk manager initialized
+2025-07-30 08:08:00 | INFO     | src.core.trading_engine:__init__:74 - Trading engine initialized with $100,000.00 initial capital
+2025-07-30 08:08:00 | INFO     | src.strategies.base_strategy:__init__:34 - Initialized strategy: sma_crossover
+2025-07-30 08:08:00 | INFO     | src.strategies.sma_crossover:__init__:48 - SMA Crossover Strategy initialized: 20/50
+2025-07-30 08:08:00 | INFO     | src.core.trading_engine:add_strategy:79 - Added strategy: sma_crossover
+2025-07-30 08:08:00 | INFO     | src.core.trading_engine:run_backtest:83 - Starting backtest from 2024-01-01 to 2025-05-31
+2025-07-30 08:08:00 | INFO     | src.data.data_manager:get_historical_data:52 - Fetching historical OHLCV data for ['VN30F2509'] from 2024-01-01 to 2025-05-31
+2025-07-30 08:08:01 | INFO     | src.data.data_manager:get_historical_data:82 - OHLCV data cached successfully
+2025-07-30 08:08:01 | INFO     | src.core.trading_engine:run_backtest:104 - Loaded 500 data points for [('VN30F2509', 'time'), ('VN30F2509', 'open'), ('VN30F2509', 'high'), ('VN30F2509', 'low'), ('VN30F2509', 'close'), ('VN30F2509', 'volume')]
+2025-07-30 08:08:01 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for VN30F2509: 1252.81 > 1210.54
+2025-07-30 08:08:01 | INFO     | src.core.trading_engine:_execute_buy_order:226 - BUY: 16.16 VN30F2509 @ $1237.60
+2025-07-30 08:08:01 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for VN30F2509: 1255.02 < 1255.37
+2025-07-30 08:08:01 | INFO     | src.core.trading_engine:_execute_sell_order:262 - SELL: 16.16 VN30F2509 @ $1230.00 | P&L: $-142.70 (-0.71%)
+2025-07-30 08:08:01 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for VN30F2509: 1266.89 > 1264.63
+2025-07-30 08:08:01 | INFO     | src.core.trading_engine:_execute_buy_order:226 - BUY: 15.44 VN30F2509 @ $1293.50
+2025-07-30 08:08:01 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for VN30F2509: 1301.41 < 1301.90
+2025-07-30 08:08:01 | INFO     | src.core.trading_engine:_execute_sell_order:262 - SELL: 15.44 VN30F2509 @ $1300.90 | P&L: $94.15 (0.47%)
+2025-07-30 08:08:01 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for VN30F2509: 1301.38 > 1301.24
+2025-07-30 08:08:01 | INFO     | src.core.trading_engine:_execute_buy_order:226 - BUY: 15.49 VN30F2509 @ $1290.20
+2025-07-30 08:08:01 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for VN30F2509: 1300.90 < 1301.07
+2025-07-30 08:08:01 | INFO     | src.core.trading_engine:_execute_sell_order:262 - SELL: 15.49 VN30F2509 @ $1302.60 | P&L: $171.87 (0.86%)
+2025-07-30 08:08:01 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for VN30F2509: 1296.07 > 1294.65
+2025-07-30 08:08:01 | INFO     | src.core.trading_engine:_execute_buy_order:226 - BUY: 15.29 VN30F2509 @ $1309.30
+2025-07-30 08:08:01 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for VN30F2509: 1334.80 < 1336.15
+2025-07-30 08:08:01 | INFO     | src.core.trading_engine:_execute_sell_order:262 - SELL: 15.29 VN30F2509 @ $1295.90 | P&L: $-224.63 (-1.12%)
+2025-07-30 08:08:01 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for VN30F2509: 1329.32 > 1328.74
+2025-07-30 08:08:01 | INFO     | src.core.trading_engine:_execute_buy_order:226 - BUY: 15.08 VN30F2509 @ $1324.00
+2025-07-30 08:08:01 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for VN30F2509: 1318.11 < 1319.15
+2025-07-30 08:08:01 | INFO     | src.core.trading_engine:_execute_sell_order:262 - SELL: 15.08 VN30F2509 @ $1319.50 | P&L: $-87.75 (-0.44%)
+2025-07-30 08:08:01 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for VN30F2509: 1296.07 > 1294.65
+2025-07-30 08:08:01 | INFO     | src.core.trading_engine:_execute_buy_order:226 - BUY: 15.23 VN30F2509 @ $1309.30
+2025-07-30 08:08:01 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for VN30F2509: 1334.80 < 1336.15
+2025-07-30 08:08:01 | INFO     | src.core.trading_engine:_execute_sell_order:262 - SELL: 15.23 VN30F2509 @ $1295.90 | P&L: $-223.84 (-1.12%)
+2025-07-30 08:08:01 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for VN30F2509: 1329.32 > 1328.74
+2025-07-30 08:08:01 | INFO     | src.core.trading_engine:_execute_buy_order:226 - BUY: 15.03 VN30F2509 @ $1324.00
+2025-07-30 08:08:01 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for VN30F2509: 1325.26 < 1326.10
+2025-07-30 08:08:01 | INFO     | src.core.trading_engine:_execute_sell_order:262 - SELL: 15.03 VN30F2509 @ $1336.00 | P&L: $160.23 (0.81%)
+2025-07-30 08:08:01 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for VN30F2509: 1334.07 > 1333.77
+2025-07-30 08:08:01 | INFO     | src.core.trading_engine:_execute_buy_order:226 - BUY: 14.82 VN30F2509 @ $1343.80
+2025-07-30 08:08:01 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for VN30F2509: 1347.65 < 1350.68
+2025-07-30 08:08:01 | INFO     | src.core.trading_engine:_execute_sell_order:262 - SELL: 14.82 VN30F2509 @ $1173.90 | P&L: $-2536.13 (-12.73%)
+2025-07-30 08:08:01 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for VN30F2509: 1345.11 > 1341.85
+2025-07-30 08:08:01 | INFO     | src.core.trading_engine:_execute_buy_order:226 - BUY: 13.73 VN30F2509 @ $1414.10
+2025-07-30 08:08:01 | INFO     | src.core.trading_engine:_generate_backtest_report:326 - === BACKTEST RESULTS ===
+2025-07-30 08:08:01 | INFO     | src.core.trading_engine:_generate_backtest_report:327 - Initial Capital: $100,000.00
+2025-07-30 08:08:01 | INFO     | src.core.trading_engine:_generate_backtest_report:328 - Final Portfolio Value: $97,100.75
+2025-07-30 08:08:01 | INFO     | src.core.trading_engine:_generate_backtest_report:329 - Total Return: -2.90%
+2025-07-30 08:08:01 | INFO     | src.core.trading_engine:_generate_backtest_report:330 - Annualized Volatility: 2.93%
+2025-07-30 08:08:01 | INFO     | src.core.trading_engine:_generate_backtest_report:331 - Sharpe Ratio: -0.49
+2025-07-30 08:08:01 | INFO     | src.core.trading_engine:_generate_backtest_report:332 - Maximum Drawdown: -4.13%
+2025-07-30 08:08:01 | INFO     | src.core.trading_engine:_generate_backtest_report:333 - Total Trades: 17
+2025-07-30 08:08:01 | INFO     | src.core.trading_engine:_generate_backtest_report:334 - Buy Trades: 9
+2025-07-30 08:08:01 | INFO     | src.core.trading_engine:_generate_backtest_report:335 - Sell Trades: 8
+2025-07-30 08:08:01 | INFO     | src.core.trading_engine:_generate_backtest_report:343 - Backtest results saved to data/backtest_results.csv
+2025-07-30 08:08:01 | INFO     | src.core.trading_engine:_generate_backtest_report:360 - Trade details saved to data/trades.csv
+2025-07-30 08:08:01 | INFO     | __main__:run_backtest:93 - Backtest completed
+2025-07-30 08:12:42 | INFO     | src.risk.risk_manager:__init__:49 - Risk manager initialized
+2025-07-30 08:12:42 | INFO     | src.core.trading_engine:__init__:74 - Trading engine initialized with $100,000.00 initial capital
+2025-07-30 08:12:42 | INFO     | src.strategies.base_strategy:__init__:34 - Initialized strategy: sma_crossover
+2025-07-30 08:12:42 | INFO     | src.strategies.sma_crossover:__init__:48 - SMA Crossover Strategy initialized: 5/30
+2025-07-30 08:12:42 | INFO     | src.core.trading_engine:add_strategy:79 - Added strategy: sma_crossover
+2025-07-30 08:12:42 | INFO     | src.core.trading_engine:run_backtest:83 - Starting backtest from 2024-01-01 to 2025-05-31
+2025-07-30 08:12:42 | INFO     | src.data.data_manager:get_historical_data:52 - Fetching historical OHLCV data for ['VN30F2509'] from 2024-01-01 to 2025-05-31
+2025-07-30 08:12:42 | INFO     | src.data.data_manager:get_historical_data:62 - OHLCV data loaded from cache
+2025-07-30 08:12:42 | INFO     | src.core.trading_engine:run_backtest:104 - Loaded 500 data points for [('VN30F2509', 'time'), ('VN30F2509', 'open'), ('VN30F2509', 'high'), ('VN30F2509', 'low'), ('VN30F2509', 'close'), ('VN30F2509', 'volume')]
+2025-07-30 08:12:42 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for VN30F2509: 1226.82 > 1182.36
+2025-07-30 08:12:42 | INFO     | src.core.trading_engine:_execute_buy_order:226 - BUY: 16.08 VN30F2509 @ $1243.50
+2025-07-30 08:12:42 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for VN30F2509: 1265.86 < 1269.57
+2025-07-30 08:12:42 | INFO     | src.core.trading_engine:_execute_sell_order:262 - SELL: 16.08 VN30F2509 @ $1267.00 | P&L: $357.59 (1.79%)
+2025-07-30 08:12:42 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for VN30F2509: 1264.16 > 1259.63
+2025-07-30 08:12:42 | INFO     | src.core.trading_engine:_execute_buy_order:226 - BUY: 15.71 VN30F2509 @ $1277.00
+2025-07-30 08:12:42 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for VN30F2509: 1303.30 < 1303.73
+2025-07-30 08:12:42 | INFO     | src.core.trading_engine:_execute_sell_order:262 - SELL: 15.71 VN30F2509 @ $1290.70 | P&L: $195.01 (0.97%)
+2025-07-30 08:12:42 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for VN30F2509: 1303.60 > 1303.06
+2025-07-30 08:12:42 | INFO     | src.core.trading_engine:_execute_buy_order:226 - BUY: 15.25 VN30F2509 @ $1317.90
+2025-07-30 08:12:42 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for VN30F2509: 1304.30 < 1306.54
+2025-07-30 08:12:42 | INFO     | src.core.trading_engine:_execute_sell_order:262 - SELL: 15.25 VN30F2509 @ $1303.40 | P&L: $-241.06 (-1.20%)
+2025-07-30 08:12:42 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for VN30F2509: 1284.72 > 1284.25
+2025-07-30 08:12:42 | INFO     | src.core.trading_engine:_execute_buy_order:226 - BUY: 15.39 VN30F2509 @ $1302.70
+2025-07-30 08:12:42 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for VN30F2509: 1342.52 < 1348.78
+2025-07-30 08:12:42 | INFO     | src.core.trading_engine:_execute_sell_order:262 - SELL: 15.39 VN30F2509 @ $1333.80 | P&L: $458.14 (2.28%)
+2025-07-30 08:12:42 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for VN30F2509: 1315.60 > 1315.26
+2025-07-30 08:12:42 | INFO     | src.core.trading_engine:_execute_buy_order:226 - BUY: 15.36 VN30F2509 @ $1310.70
+2025-07-30 08:12:42 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for VN30F2509: 1319.36 < 1328.44
+2025-07-30 08:12:42 | INFO     | src.core.trading_engine:_execute_sell_order:262 - SELL: 15.36 VN30F2509 @ $1272.10 | P&L: $-612.60 (-3.04%)
+2025-07-30 08:12:42 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for VN30F2509: 1309.30 > 1308.28
+2025-07-30 08:12:42 | INFO     | src.core.trading_engine:_execute_buy_order:226 - BUY: 15.22 VN30F2509 @ $1314.70
+2025-07-30 08:12:42 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for VN30F2509: 1304.30 < 1306.54
+2025-07-30 08:12:42 | INFO     | src.core.trading_engine:_execute_sell_order:262 - SELL: 15.22 VN30F2509 @ $1303.40 | P&L: $-191.84 (-0.96%)
+2025-07-30 08:12:42 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for VN30F2509: 1284.72 > 1284.25
+2025-07-30 08:12:42 | INFO     | src.core.trading_engine:_execute_buy_order:226 - BUY: 15.33 VN30F2509 @ $1302.70
+2025-07-30 08:12:42 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for VN30F2509: 1342.52 < 1348.78
+2025-07-30 08:12:42 | INFO     | src.core.trading_engine:_execute_sell_order:262 - SELL: 15.33 VN30F2509 @ $1333.80 | P&L: $456.28 (2.28%)
+2025-07-30 08:12:42 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for VN30F2509: 1315.60 > 1315.26
+2025-07-30 08:12:42 | INFO     | src.core.trading_engine:_execute_buy_order:226 - BUY: 15.30 VN30F2509 @ $1310.70
+2025-07-30 08:12:42 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for VN30F2509: 1331.14 < 1334.86
+2025-07-30 08:12:42 | INFO     | src.core.trading_engine:_execute_sell_order:262 - SELL: 15.30 VN30F2509 @ $1327.60 | P&L: $238.29 (1.19%)
+2025-07-30 08:12:42 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for VN30F2509: 1331.66 > 1330.43
+2025-07-30 08:12:42 | INFO     | src.core.trading_engine:_execute_buy_order:226 - BUY: 14.91 VN30F2509 @ $1348.00
+2025-07-30 08:12:42 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for VN30F2509: 1368.74 < 1372.32
+2025-07-30 08:12:42 | INFO     | src.core.trading_engine:_execute_sell_order:262 - SELL: 14.91 VN30F2509 @ $1365.00 | P&L: $233.13 (1.16%)
+2025-07-30 08:12:42 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for VN30F2509: 1315.72 > 1313.53
+2025-07-30 08:12:42 | INFO     | src.core.trading_engine:_execute_buy_order:226 - BUY: 15.21 VN30F2509 @ $1324.50
+2025-07-30 08:12:42 | INFO     | src.core.trading_engine:_generate_backtest_report:326 - === BACKTEST RESULTS ===
+2025-07-30 08:12:42 | INFO     | src.core.trading_engine:_generate_backtest_report:327 - Initial Capital: $100,000.00
+2025-07-30 08:12:42 | INFO     | src.core.trading_engine:_generate_backtest_report:328 - Final Portfolio Value: $102,130.94
+2025-07-30 08:12:42 | INFO     | src.core.trading_engine:_generate_backtest_report:329 - Total Return: 2.13%
+2025-07-30 08:12:42 | INFO     | src.core.trading_engine:_generate_backtest_report:330 - Annualized Volatility: 2.37%
+2025-07-30 08:12:42 | INFO     | src.core.trading_engine:_generate_backtest_report:331 - Sharpe Ratio: 0.46
+2025-07-30 08:12:42 | INFO     | src.core.trading_engine:_generate_backtest_report:332 - Maximum Drawdown: -2.07%
+2025-07-30 08:12:42 | INFO     | src.core.trading_engine:_generate_backtest_report:333 - Total Trades: 19
+2025-07-30 08:12:42 | INFO     | src.core.trading_engine:_generate_backtest_report:334 - Buy Trades: 10
+2025-07-30 08:12:42 | INFO     | src.core.trading_engine:_generate_backtest_report:335 - Sell Trades: 9
+2025-07-30 08:12:42 | INFO     | src.core.trading_engine:_generate_backtest_report:343 - Backtest results saved to data/backtest_results.csv
+2025-07-30 08:12:42 | INFO     | src.core.trading_engine:_generate_backtest_report:360 - Trade details saved to data/trades.csv
+2025-07-30 08:12:42 | INFO     | __main__:run_backtest:93 - Backtest completed
+2025-07-30 08:12:54 | INFO     | src.risk.risk_manager:__init__:49 - Risk manager initialized
+2025-07-30 08:12:54 | INFO     | src.core.trading_engine:__init__:74 - Trading engine initialized with $100,000.00 initial capital
+2025-07-30 08:12:54 | INFO     | src.strategies.base_strategy:__init__:34 - Initialized strategy: rsi
+2025-07-30 08:12:54 | INFO     | src.strategies.rsi_strategy:__init__:56 - RSI Strategy initialized: period=20, overbought=70, oversold=30
+2025-07-30 08:12:54 | INFO     | src.core.trading_engine:add_strategy:79 - Added strategy: rsi
+2025-07-30 08:12:54 | INFO     | src.core.trading_engine:run_backtest:83 - Starting backtest from 2024-01-01 to 2025-05-31
+2025-07-30 08:12:54 | INFO     | src.data.data_manager:get_historical_data:52 - Fetching historical OHLCV data for ['VN30F2509'] from 2024-01-01 to 2025-05-31
+2025-07-30 08:12:54 | INFO     | src.data.data_manager:get_historical_data:62 - OHLCV data loaded from cache
+2025-07-30 08:12:54 | INFO     | src.core.trading_engine:run_backtest:104 - Loaded 500 data points for [('VN30F2509', 'time'), ('VN30F2509', 'open'), ('VN30F2509', 'high'), ('VN30F2509', 'low'), ('VN30F2509', 'close'), ('VN30F2509', 'volume')]
+2025-07-30 08:12:54 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:125 - RSI overbought signal for VN30F2509: 70.15 > 70
+2025-07-30 08:12:54 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:140 - RSI sustained overbought for VN30F2509: 71.33
+2025-07-30 08:12:54 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:140 - RSI sustained overbought for VN30F2509: 71.45
+2025-07-30 08:12:54 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:140 - RSI sustained overbought for VN30F2509: 75.37
+2025-07-30 08:12:54 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:140 - RSI sustained overbought for VN30F2509: 72.71
+2025-07-30 08:12:54 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:140 - RSI sustained overbought for VN30F2509: 75.88
+2025-07-30 08:12:54 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:140 - RSI sustained overbought for VN30F2509: 73.17
+2025-07-30 08:12:54 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:125 - RSI overbought signal for VN30F2509: 72.95 > 70
+2025-07-30 08:12:54 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:140 - RSI sustained overbought for VN30F2509: 71.98
+2025-07-30 08:12:54 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:140 - RSI sustained overbought for VN30F2509: 71.64
+2025-07-30 08:12:54 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:140 - RSI sustained overbought for VN30F2509: 73.28
+2025-07-30 08:12:54 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:140 - RSI sustained overbought for VN30F2509: 74.04
+2025-07-30 08:12:54 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:140 - RSI sustained overbought for VN30F2509: 75.63
+2025-07-30 08:12:54 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:140 - RSI sustained overbought for VN30F2509: 75.98
+2025-07-30 08:12:54 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:125 - RSI overbought signal for VN30F2509: 70.19 > 70
+2025-07-30 08:12:54 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:140 - RSI sustained overbought for VN30F2509: 79.76
+2025-07-30 08:12:54 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:140 - RSI sustained overbought for VN30F2509: 78.59
+2025-07-30 08:12:54 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:140 - RSI sustained overbought for VN30F2509: 74.51
+2025-07-30 08:12:54 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:140 - RSI sustained overbought for VN30F2509: 73.80
+2025-07-30 08:12:54 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:125 - RSI overbought signal for VN30F2509: 71.05 > 70
+2025-07-30 08:12:54 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:119 - RSI oversold signal for VN30F2509: 25.09 < 30
+2025-07-30 08:12:54 | INFO     | src.core.trading_engine:_execute_buy_order:226 - BUY: 16.19 VN30F2509 @ $1235.10
+2025-07-30 08:12:54 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:135 - RSI sustained oversold for VN30F2509: 29.79
+2025-07-30 08:12:54 | INFO     | src.core.trading_engine:_execute_buy_order:226 - BUY: 12.78 VN30F2509 @ $1251.90
+2025-07-30 08:12:54 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:125 - RSI overbought signal for VN30F2509: 75.27 > 70
+2025-07-30 08:12:54 | INFO     | src.core.trading_engine:_execute_sell_order:262 - SELL: 28.97 VN30F2509 @ $1315.40 | P&L: $2073.56 (5.76%)
+2025-07-30 08:12:54 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:125 - RSI overbought signal for VN30F2509: 73.49 > 70
+2025-07-30 08:12:54 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:125 - RSI overbought signal for VN30F2509: 70.57 > 70
+2025-07-30 08:12:54 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:140 - RSI sustained overbought for VN30F2509: 70.07
+2025-07-30 08:12:54 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:140 - RSI sustained overbought for VN30F2509: 73.40
+2025-07-30 08:12:54 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:140 - RSI sustained overbought for VN30F2509: 77.66
+2025-07-30 08:12:54 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:140 - RSI sustained overbought for VN30F2509: 72.39
+2025-07-30 08:12:54 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:140 - RSI sustained overbought for VN30F2509: 70.75
+2025-07-30 08:12:54 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:119 - RSI oversold signal for VN30F2509: 26.53 < 30
+2025-07-30 08:12:54 | INFO     | src.core.trading_engine:_execute_buy_order:226 - BUY: 15.75 VN30F2509 @ $1295.90
+2025-07-30 08:12:54 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:135 - RSI sustained oversold for VN30F2509: 24.35
+2025-07-30 08:12:54 | INFO     | src.core.trading_engine:_execute_buy_order:226 - BUY: 12.75 VN30F2509 @ $1280.00
+2025-07-30 08:12:54 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:135 - RSI sustained oversold for VN30F2509: 23.98
+2025-07-30 08:12:54 | INFO     | src.core.trading_engine:_execute_buy_order:226 - BUY: 10.23 VN30F2509 @ $1276.20
+2025-07-30 08:12:54 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:135 - RSI sustained oversold for VN30F2509: 24.72
+2025-07-30 08:12:54 | INFO     | src.core.trading_engine:_execute_buy_order:226 - BUY: 8.23 VN30F2509 @ $1269.00
+2025-07-30 08:12:54 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:135 - RSI sustained oversold for VN30F2509: 27.16
+2025-07-30 08:12:54 | INFO     | src.core.trading_engine:_execute_buy_order:226 - BUY: 6.53 VN30F2509 @ $1278.00
+2025-07-30 08:12:54 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:125 - RSI overbought signal for VN30F2509: 72.63 > 70
+2025-07-30 08:12:54 | INFO     | src.core.trading_engine:_execute_sell_order:262 - SELL: 53.49 VN30F2509 @ $1339.70 | P&L: $3013.74 (4.39%)
+2025-07-30 08:12:54 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:140 - RSI sustained overbought for VN30F2509: 75.04
+2025-07-30 08:12:54 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:140 - RSI sustained overbought for VN30F2509: 78.37
+2025-07-30 08:12:54 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:140 - RSI sustained overbought for VN30F2509: 76.74
+2025-07-30 08:12:54 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:119 - RSI oversold signal for VN30F2509: 27.34 < 30
+2025-07-30 08:12:54 | INFO     | src.core.trading_engine:_execute_buy_order:226 - BUY: 16.51 VN30F2509 @ $1272.10
+2025-07-30 08:12:54 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:119 - RSI oversold signal for VN30F2509: 25.09 < 30
+2025-07-30 08:12:54 | INFO     | src.core.trading_engine:_execute_buy_order:226 - BUY: 13.60 VN30F2509 @ $1235.10
+2025-07-30 08:12:54 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:135 - RSI sustained oversold for VN30F2509: 29.79
+2025-07-30 08:12:54 | INFO     | src.core.trading_engine:_execute_buy_order:226 - BUY: 10.73 VN30F2509 @ $1251.90
+2025-07-30 08:12:54 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:125 - RSI overbought signal for VN30F2509: 75.27 > 70
+2025-07-30 08:12:54 | INFO     | src.core.trading_engine:_execute_sell_order:262 - SELL: 40.83 VN30F2509 @ $1315.40 | P&L: $2434.04 (4.75%)
+2025-07-30 08:12:54 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:125 - RSI overbought signal for VN30F2509: 73.49 > 70
+2025-07-30 08:12:54 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:125 - RSI overbought signal for VN30F2509: 70.57 > 70
+2025-07-30 08:12:54 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:140 - RSI sustained overbought for VN30F2509: 70.07
+2025-07-30 08:12:54 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:140 - RSI sustained overbought for VN30F2509: 73.40
+2025-07-30 08:12:54 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:140 - RSI sustained overbought for VN30F2509: 77.66
+2025-07-30 08:12:54 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:140 - RSI sustained overbought for VN30F2509: 72.39
+2025-07-30 08:12:54 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:140 - RSI sustained overbought for VN30F2509: 70.75
+2025-07-30 08:12:54 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:119 - RSI oversold signal for VN30F2509: 26.53 < 30
+2025-07-30 08:12:54 | INFO     | src.core.trading_engine:_execute_buy_order:226 - BUY: 16.57 VN30F2509 @ $1295.90
+2025-07-30 08:12:54 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:135 - RSI sustained oversold for VN30F2509: 24.35
+2025-07-30 08:12:54 | INFO     | src.core.trading_engine:_execute_buy_order:226 - BUY: 13.42 VN30F2509 @ $1280.00
+2025-07-30 08:12:54 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:135 - RSI sustained oversold for VN30F2509: 23.98
+2025-07-30 08:12:54 | INFO     | src.core.trading_engine:_execute_buy_order:226 - BUY: 10.76 VN30F2509 @ $1276.20
+2025-07-30 08:12:54 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:135 - RSI sustained oversold for VN30F2509: 24.72
+2025-07-30 08:12:54 | INFO     | src.core.trading_engine:_execute_buy_order:226 - BUY: 8.66 VN30F2509 @ $1269.00
+2025-07-30 08:12:54 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:135 - RSI sustained oversold for VN30F2509: 27.16
+2025-07-30 08:12:54 | INFO     | src.core.trading_engine:_execute_buy_order:226 - BUY: 6.88 VN30F2509 @ $1278.00
+2025-07-30 08:12:54 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:125 - RSI overbought signal for VN30F2509: 72.63 > 70
+2025-07-30 08:12:54 | INFO     | src.core.trading_engine:_execute_sell_order:262 - SELL: 56.28 VN30F2509 @ $1339.70 | P&L: $3171.11 (4.39%)
+2025-07-30 08:12:54 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:140 - RSI sustained overbought for VN30F2509: 75.04
+2025-07-30 08:12:54 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:140 - RSI sustained overbought for VN30F2509: 78.37
+2025-07-30 08:12:54 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:140 - RSI sustained overbought for VN30F2509: 76.74
+2025-07-30 08:12:54 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:125 - RSI overbought signal for VN30F2509: 70.19 > 70
+2025-07-30 08:12:54 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:140 - RSI sustained overbought for VN30F2509: 79.77
+2025-07-30 08:12:54 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:140 - RSI sustained overbought for VN30F2509: 80.20
+2025-07-30 08:12:54 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:140 - RSI sustained overbought for VN30F2509: 80.02
+2025-07-30 08:12:54 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:140 - RSI sustained overbought for VN30F2509: 78.41
+2025-07-30 08:12:54 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:140 - RSI sustained overbought for VN30F2509: 73.75
+2025-07-30 08:12:54 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:140 - RSI sustained overbought for VN30F2509: 79.58
+2025-07-30 08:12:54 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:140 - RSI sustained overbought for VN30F2509: 73.47
+2025-07-30 08:12:54 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:119 - RSI oversold signal for VN30F2509: 24.63 < 30
+2025-07-30 08:12:54 | INFO     | src.core.trading_engine:_execute_buy_order:226 - BUY: 17.32 VN30F2509 @ $1275.80
+2025-07-30 08:12:54 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:135 - RSI sustained oversold for VN30F2509: 20.51
+2025-07-30 08:12:54 | INFO     | src.core.trading_engine:_execute_buy_order:226 - BUY: 13.90 VN30F2509 @ $1271.00
+2025-07-30 08:12:54 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:135 - RSI sustained oversold for VN30F2509: 13.14
+2025-07-30 08:12:54 | INFO     | src.core.trading_engine:_execute_buy_order:226 - BUY: 11.96 VN30F2509 @ $1182.10
+2025-07-30 08:12:54 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:135 - RSI sustained oversold for VN30F2509: 11.78
+2025-07-30 08:12:54 | INFO     | src.core.trading_engine:_execute_buy_order:226 - BUY: 9.63 VN30F2509 @ $1173.90
+2025-07-30 08:12:54 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:125 - RSI overbought signal for VN30F2509: 78.01 > 70
+2025-07-30 08:12:54 | INFO     | src.core.trading_engine:_execute_sell_order:262 - SELL: 52.80 VN30F2509 @ $1352.00 | P&L: $6120.32 (9.39%)
+2025-07-30 08:12:54 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:140 - RSI sustained overbought for VN30F2509: 81.67
+2025-07-30 08:12:54 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:140 - RSI sustained overbought for VN30F2509: 75.64
+2025-07-30 08:12:54 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:140 - RSI sustained overbought for VN30F2509: 71.74
+2025-07-30 08:12:54 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:125 - RSI overbought signal for VN30F2509: 74.38 > 70
+2025-07-30 08:12:54 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:140 - RSI sustained overbought for VN30F2509: 76.39
+2025-07-30 08:12:54 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:140 - RSI sustained overbought for VN30F2509: 81.99
+2025-07-30 08:12:54 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:140 - RSI sustained overbought for VN30F2509: 80.20
+2025-07-30 08:12:54 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:140 - RSI sustained overbought for VN30F2509: 80.45
+2025-07-30 08:12:54 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:140 - RSI sustained overbought for VN30F2509: 80.35
+2025-07-30 08:12:54 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:140 - RSI sustained overbought for VN30F2509: 78.94
+2025-07-30 08:12:54 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:140 - RSI sustained overbought for VN30F2509: 78.89
+2025-07-30 08:12:54 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:140 - RSI sustained overbought for VN30F2509: 78.50
+2025-07-30 08:12:54 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:140 - RSI sustained overbought for VN30F2509: 81.40
+2025-07-30 08:12:54 | INFO     | src.core.trading_engine:_generate_backtest_report:326 - === BACKTEST RESULTS ===
+2025-07-30 08:12:54 | INFO     | src.core.trading_engine:_generate_backtest_report:327 - Initial Capital: $100,000.00
+2025-07-30 08:12:54 | INFO     | src.core.trading_engine:_generate_backtest_report:328 - Final Portfolio Value: $116,519.62
+2025-07-30 08:12:54 | INFO     | src.core.trading_engine:_generate_backtest_report:329 - Total Return: 16.52%
+2025-07-30 08:12:54 | INFO     | src.core.trading_engine:_generate_backtest_report:330 - Annualized Volatility: 5.27%
+2025-07-30 08:12:54 | INFO     | src.core.trading_engine:_generate_backtest_report:331 - Sharpe Ratio: 1.49
+2025-07-30 08:12:54 | INFO     | src.core.trading_engine:_generate_backtest_report:332 - Maximum Drawdown: -3.49%
+2025-07-30 08:12:54 | INFO     | src.core.trading_engine:_generate_backtest_report:333 - Total Trades: 24
+2025-07-30 08:12:54 | INFO     | src.core.trading_engine:_generate_backtest_report:334 - Buy Trades: 19
+2025-07-30 08:12:54 | INFO     | src.core.trading_engine:_generate_backtest_report:335 - Sell Trades: 5
+2025-07-30 08:12:55 | INFO     | src.core.trading_engine:_generate_backtest_report:343 - Backtest results saved to data/backtest_results.csv
+2025-07-30 08:12:55 | INFO     | src.core.trading_engine:_generate_backtest_report:360 - Trade details saved to data/trades.csv
+2025-07-30 08:12:55 | INFO     | __main__:run_backtest:93 - Backtest completed
+2025-07-30 08:13:07 | INFO     | src.risk.risk_manager:__init__:49 - Risk manager initialized
+2025-07-30 08:13:07 | INFO     | src.core.trading_engine:__init__:74 - Trading engine initialized with $100,000.00 initial capital
+2025-07-30 08:13:07 | INFO     | src.strategies.base_strategy:__init__:34 - Initialized strategy: macd
+2025-07-30 08:13:07 | INFO     | src.strategies.macd_strategy:__init__:54 - MACD Strategy initialized: fast=15, slow=20, signal=7
+2025-07-30 08:13:07 | INFO     | src.core.trading_engine:add_strategy:79 - Added strategy: macd
+2025-07-30 08:13:07 | INFO     | src.core.trading_engine:run_backtest:83 - Starting backtest from 2024-01-01 to 2025-05-31
+2025-07-30 08:13:07 | INFO     | src.data.data_manager:get_historical_data:52 - Fetching historical OHLCV data for ['VN30F2509'] from 2024-01-01 to 2025-05-31
+2025-07-30 08:13:07 | INFO     | src.data.data_manager:get_historical_data:62 - OHLCV data loaded from cache
+2025-07-30 08:13:07 | INFO     | src.core.trading_engine:run_backtest:104 - Loaded 500 data points for [('VN30F2509', 'time'), ('VN30F2509', 'open'), ('VN30F2509', 'high'), ('VN30F2509', 'low'), ('VN30F2509', 'close'), ('VN30F2509', 'volume')]
+2025-07-30 08:13:07 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:130 - MACD bearish crossover for VN30F2509: MACD=1.2891, Signal=1.4894
+2025-07-30 08:13:07 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:124 - MACD bullish crossover for VN30F2509: MACD=1.7582, Signal=1.4462
+2025-07-30 08:13:07 | INFO     | src.core.trading_engine:_execute_buy_order:226 - BUY: 16.56 VN30F2509 @ $1207.50
+2025-07-30 08:13:07 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:130 - MACD bearish crossover for VN30F2509: MACD=6.8815, Signal=6.9341
+2025-07-30 08:13:07 | INFO     | src.core.trading_engine:_execute_sell_order:262 - SELL: 16.56 VN30F2509 @ $1254.10 | P&L: $751.07 (3.76%)
+2025-07-30 08:13:07 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:124 - MACD bullish crossover for VN30F2509: MACD=4.1090, Signal=3.9566
+2025-07-30 08:13:07 | INFO     | src.core.trading_engine:_execute_buy_order:226 - BUY: 15.67 VN30F2509 @ $1285.80
+2025-07-30 08:13:07 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:130 - MACD bearish crossover for VN30F2509: MACD=5.1863, Signal=5.3392
+2025-07-30 08:13:07 | INFO     | src.core.trading_engine:_execute_sell_order:262 - SELL: 15.67 VN30F2509 @ $1275.70 | P&L: $-178.24 (-0.88%)
+2025-07-30 08:13:07 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:151 - MACD zero line bearish crossover for VN30F2509: MACD=-0.5823
+2025-07-30 08:13:07 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:124 - MACD bullish crossover for VN30F2509: MACD=-3.1347, Signal=-3.6802
+2025-07-30 08:13:07 | INFO     | src.core.trading_engine:_execute_buy_order:226 - BUY: 16.07 VN30F2509 @ $1251.50
+2025-07-30 08:13:07 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:147 - MACD zero line bullish crossover for VN30F2509: MACD=0.2330
+2025-07-30 08:13:07 | INFO     | src.core.trading_engine:_execute_buy_order:226 - BUY: 12.59 VN30F2509 @ $1277.00
+2025-07-30 08:13:07 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:130 - MACD bearish crossover for VN30F2509: MACD=3.8513, Signal=4.2389
+2025-07-30 08:13:07 | INFO     | src.core.trading_engine:_execute_sell_order:262 - SELL: 28.66 VN30F2509 @ $1278.10 | P&L: $404.58 (1.12%)
+2025-07-30 08:13:07 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:124 - MACD bullish crossover for VN30F2509: MACD=4.2447, Signal=3.4872
+2025-07-30 08:13:07 | INFO     | src.core.trading_engine:_execute_buy_order:226 - BUY: 14.83 VN30F2509 @ $1360.60
+2025-07-30 08:13:07 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:130 - MACD bearish crossover for VN30F2509: MACD=3.5000, Signal=3.5821
+2025-07-30 08:13:07 | INFO     | src.core.trading_engine:_execute_sell_order:262 - SELL: 14.83 VN30F2509 @ $1298.40 | P&L: $-941.80 (-4.67%)
+2025-07-30 08:13:07 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:124 - MACD bullish crossover for VN30F2509: MACD=3.6107, Signal=3.5892
+2025-07-30 08:13:07 | INFO     | src.core.trading_engine:_execute_buy_order:226 - BUY: 15.28 VN30F2509 @ $1308.00
+2025-07-30 08:13:07 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:130 - MACD bearish crossover for VN30F2509: MACD=3.9656, Signal=4.1840
+2025-07-30 08:13:07 | INFO     | src.core.trading_engine:_execute_sell_order:262 - SELL: 15.28 VN30F2509 @ $1309.00 | P&L: $-4.72 (-0.02%)
+2025-07-30 08:13:07 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:151 - MACD zero line bearish crossover for VN30F2509: MACD=-0.1376
+2025-07-30 08:13:07 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:147 - MACD zero line bullish crossover for VN30F2509: MACD=0.1363
+2025-07-30 08:13:07 | INFO     | src.core.trading_engine:_execute_buy_order:226 - BUY: 15.27 VN30F2509 @ $1308.90
+2025-07-30 08:13:07 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:124 - MACD bullish crossover for VN30F2509: MACD=0.6427, Signal=0.4654
+2025-07-30 08:13:07 | INFO     | src.core.trading_engine:_execute_buy_order:226 - BUY: 12.13 VN30F2509 @ $1317.90
+2025-07-30 08:13:07 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:130 - MACD bearish crossover for VN30F2509: MACD=0.9133, Signal=0.9776
+2025-07-30 08:13:07 | INFO     | src.core.trading_engine:_execute_sell_order:262 - SELL: 27.39 VN30F2509 @ $1300.00 | P&L: $-388.56 (-1.08%)
+2025-07-30 08:13:07 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:151 - MACD zero line bearish crossover for VN30F2509: MACD=-0.3572
+2025-07-30 08:13:07 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:124 - MACD bullish crossover for VN30F2509: MACD=-3.6260, Signal=-3.8549
+2025-07-30 08:13:07 | INFO     | src.core.trading_engine:_execute_buy_order:226 - BUY: 15.65 VN30F2509 @ $1271.20
+2025-07-30 08:13:07 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:147 - MACD zero line bullish crossover for VN30F2509: MACD=0.4049
+2025-07-30 08:13:07 | INFO     | src.core.trading_engine:_execute_buy_order:226 - BUY: 12.11 VN30F2509 @ $1314.00
+2025-07-30 08:13:07 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:130 - MACD bearish crossover for VN30F2509: MACD=3.2948, Signal=3.4544
+2025-07-30 08:13:07 | INFO     | src.core.trading_engine:_execute_sell_order:262 - SELL: 27.76 VN30F2509 @ $1309.20 | P&L: $500.33 (1.40%)
+2025-07-30 08:13:07 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:124 - MACD bullish crossover for VN30F2509: MACD=1.4125, Signal=1.3708
+2025-07-30 08:13:07 | INFO     | src.core.trading_engine:_execute_buy_order:226 - BUY: 15.10 VN30F2509 @ $1324.00
+2025-07-30 08:13:07 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:130 - MACD bearish crossover for VN30F2509: MACD=4.9264, Signal=5.0819
+2025-07-30 08:13:07 | INFO     | src.core.trading_engine:_execute_sell_order:262 - SELL: 15.10 VN30F2509 @ $1340.60 | P&L: $230.40 (1.15%)
+2025-07-30 08:13:07 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:124 - MACD bullish crossover for VN30F2509: MACD=4.9037, Signal=4.8916
+2025-07-30 08:13:07 | INFO     | src.core.trading_engine:_execute_buy_order:226 - BUY: 14.66 VN30F2509 @ $1366.20
+2025-07-30 08:13:07 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:130 - MACD bearish crossover for VN30F2509: MACD=4.8538, Signal=4.9296
+2025-07-30 08:13:07 | INFO     | src.core.trading_engine:_execute_sell_order:262 - SELL: 14.66 VN30F2509 @ $1361.90 | P&L: $-83.02 (-0.41%)
+2025-07-30 08:13:07 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:151 - MACD zero line bearish crossover for VN30F2509: MACD=-0.2864
+2025-07-30 08:13:07 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:124 - MACD bullish crossover for VN30F2509: MACD=-5.2533, Signal=-5.3461
+2025-07-30 08:13:07 | INFO     | src.core.trading_engine:_execute_buy_order:226 - BUY: 15.34 VN30F2509 @ $1304.80
+2025-07-30 08:13:07 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:147 - MACD zero line bullish crossover for VN30F2509: MACD=0.8312
+2025-07-30 08:13:07 | INFO     | src.core.trading_engine:_execute_buy_order:226 - BUY: 11.88 VN30F2509 @ $1347.10
+2025-07-30 08:13:07 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:130 - MACD bearish crossover for VN30F2509: MACD=1.9217, Signal=2.1565
+2025-07-30 08:13:07 | INFO     | src.core.trading_engine:_execute_sell_order:262 - SELL: 27.22 VN30F2509 @ $1318.00 | P&L: $-179.18 (-0.50%)
+2025-07-30 08:13:07 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:124 - MACD bullish crossover for VN30F2509: MACD=1.7729, Signal=1.7129
+2025-07-30 08:13:07 | INFO     | src.core.trading_engine:_execute_buy_order:226 - BUY: 14.76 VN30F2509 @ $1353.00
+2025-07-30 08:13:07 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:130 - MACD bearish crossover for VN30F2509: MACD=0.3149, Signal=1.7738
+2025-07-30 08:13:07 | INFO     | src.core.trading_engine:_execute_sell_order:262 - SELL: 14.76 VN30F2509 @ $1273.00 | P&L: $-1199.53 (-6.01%)
+2025-07-30 08:13:07 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:151 - MACD zero line bearish crossover for VN30F2509: MACD=-1.5094
+2025-07-30 08:13:07 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:124 - MACD bullish crossover for VN30F2509: MACD=-1.2116, Signal=-1.7309
+2025-07-30 08:13:07 | INFO     | src.core.trading_engine:_execute_buy_order:226 - BUY: 14.78 VN30F2509 @ $1334.90
+2025-07-30 08:13:07 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:130 - MACD bearish crossover for VN30F2509: MACD=-1.3988, Signal=-1.2639
+2025-07-30 08:13:07 | INFO     | src.core.trading_engine:_execute_sell_order:262 - SELL: 14.78 VN30F2509 @ $1296.30 | P&L: $-589.54 (-2.99%)
+2025-07-30 08:13:07 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:124 - MACD bullish crossover for VN30F2509: MACD=-2.8496, Signal=-2.8588
+2025-07-30 08:13:07 | INFO     | src.core.trading_engine:_execute_buy_order:226 - BUY: 14.99 VN30F2509 @ $1308.00
+2025-07-30 08:13:07 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:130 - MACD bearish crossover for VN30F2509: MACD=-1.2026, Signal=-0.8823
+2025-07-30 08:13:07 | INFO     | src.core.trading_engine:_execute_sell_order:262 - SELL: 14.99 VN30F2509 @ $1286.90 | P&L: $-335.52 (-1.71%)
+2025-07-30 08:13:07 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:124 - MACD bullish crossover for VN30F2509: MACD=-1.6505, Signal=-1.7736
+2025-07-30 08:13:07 | INFO     | src.core.trading_engine:_execute_buy_order:226 - BUY: 15.00 VN30F2509 @ $1302.60
+2025-07-30 08:13:07 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:130 - MACD bearish crossover for VN30F2509: MACD=-1.9927, Signal=-1.8284
+2025-07-30 08:13:07 | INFO     | src.core.trading_engine:_execute_sell_order:262 - SELL: 15.00 VN30F2509 @ $1279.10 | P&L: $-371.56 (-1.90%)
+2025-07-30 08:13:07 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:124 - MACD bullish crossover for VN30F2509: MACD=-4.2085, Signal=-4.2342
+2025-07-30 08:13:07 | INFO     | src.core.trading_engine:_execute_buy_order:226 - BUY: 15.32 VN30F2509 @ $1269.70
+2025-07-30 08:13:07 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:147 - MACD zero line bullish crossover for VN30F2509: MACD=0.2825
+2025-07-30 08:13:07 | INFO     | src.core.trading_engine:_execute_buy_order:226 - BUY: 11.84 VN30F2509 @ $1314.00
+2025-07-30 08:13:07 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:130 - MACD bearish crossover for VN30F2509: MACD=3.2521, Signal=3.3933
+2025-07-30 08:13:07 | INFO     | src.core.trading_engine:_execute_sell_order:262 - SELL: 27.16 VN30F2509 @ $1309.20 | P&L: $512.82 (1.46%)
+2025-07-30 08:13:07 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:124 - MACD bullish crossover for VN30F2509: MACD=1.3929, Signal=1.3426
+2025-07-30 08:13:07 | INFO     | src.core.trading_engine:_execute_buy_order:226 - BUY: 14.77 VN30F2509 @ $1324.00
+2025-07-30 08:13:07 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:130 - MACD bearish crossover for VN30F2509: MACD=4.9203, Signal=5.0731
+2025-07-30 08:13:07 | INFO     | src.core.trading_engine:_execute_sell_order:262 - SELL: 14.77 VN30F2509 @ $1340.60 | P&L: $225.32 (1.15%)
+2025-07-30 08:13:07 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:124 - MACD bullish crossover for VN30F2509: MACD=4.8992, Signal=4.8851
+2025-07-30 08:13:07 | INFO     | src.core.trading_engine:_execute_buy_order:226 - BUY: 14.34 VN30F2509 @ $1366.20
+2025-07-30 08:13:07 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:130 - MACD bearish crossover for VN30F2509: MACD=4.8504, Signal=4.9247
+2025-07-30 08:13:07 | INFO     | src.core.trading_engine:_execute_sell_order:262 - SELL: 14.34 VN30F2509 @ $1361.90 | P&L: $-81.19 (-0.41%)
+2025-07-30 08:13:07 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:151 - MACD zero line bearish crossover for VN30F2509: MACD=-0.2874
+2025-07-30 08:13:07 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:124 - MACD bullish crossover for VN30F2509: MACD=-5.2535, Signal=-5.3464
+2025-07-30 08:13:07 | INFO     | src.core.trading_engine:_execute_buy_order:226 - BUY: 15.00 VN30F2509 @ $1304.80
+2025-07-30 08:13:07 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:147 - MACD zero line bullish crossover for VN30F2509: MACD=0.8311
+2025-07-30 08:13:07 | INFO     | src.core.trading_engine:_execute_buy_order:226 - BUY: 11.62 VN30F2509 @ $1347.10
+2025-07-30 08:13:07 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:130 - MACD bearish crossover for VN30F2509: MACD=1.9217, Signal=2.1564
+2025-07-30 08:13:07 | INFO     | src.core.trading_engine:_execute_sell_order:262 - SELL: 26.62 VN30F2509 @ $1318.00 | P&L: $-175.23 (-0.50%)
+2025-07-30 08:13:07 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:124 - MACD bullish crossover for VN30F2509: MACD=1.7729, Signal=1.7129
+2025-07-30 08:13:07 | INFO     | src.core.trading_engine:_execute_buy_order:226 - BUY: 14.43 VN30F2509 @ $1353.00
+2025-07-30 08:13:07 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:130 - MACD bearish crossover for VN30F2509: MACD=1.9799, Signal=2.2500
+2025-07-30 08:13:07 | INFO     | src.core.trading_engine:_execute_sell_order:262 - SELL: 14.43 VN30F2509 @ $1330.00 | P&L: $-351.17 (-1.80%)
+2025-07-30 08:13:07 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:151 - MACD zero line bearish crossover for VN30F2509: MACD=-0.0847
+2025-07-30 08:13:07 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:124 - MACD bullish crossover for VN30F2509: MACD=-1.4879, Signal=-1.7374
+2025-07-30 08:13:07 | INFO     | src.core.trading_engine:_execute_buy_order:226 - BUY: 14.66 VN30F2509 @ $1327.40
+2025-07-30 08:13:07 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:147 - MACD zero line bullish crossover for VN30F2509: MACD=0.5093
+2025-07-30 08:13:07 | INFO     | src.core.trading_engine:_execute_buy_order:226 - BUY: 11.51 VN30F2509 @ $1351.30
+2025-07-30 08:13:07 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:130 - MACD bearish crossover for VN30F2509: MACD=4.1792, Signal=4.4397
+2025-07-30 08:13:07 | INFO     | src.core.trading_engine:_execute_sell_order:262 - SELL: 26.17 VN30F2509 @ $1377.30 | P&L: $994.68 (2.84%)
+2025-07-30 08:13:07 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:151 - MACD zero line bearish crossover for VN30F2509: MACD=-2.2970
+2025-07-30 08:13:07 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:124 - MACD bullish crossover for VN30F2509: MACD=-8.8667, Signal=-8.9762
+2025-07-30 08:13:07 | INFO     | src.core.trading_engine:_execute_buy_order:226 - BUY: 15.25 VN30F2509 @ $1288.40
+2025-07-30 08:13:07 | INFO     | src.strategies.macd_strategy:_generate_signal_for_symbol:147 - MACD zero line bullish crossover for VN30F2509: MACD=1.1009
+2025-07-30 08:13:07 | INFO     | src.core.trading_engine:_execute_buy_order:226 - BUY: 11.62 VN30F2509 @ $1352.00
+2025-07-30 08:13:07 | INFO     | src.core.trading_engine:_generate_backtest_report:326 - === BACKTEST RESULTS ===
+2025-07-30 08:13:07 | INFO     | src.core.trading_engine:_generate_backtest_report:327 - Initial Capital: $100,000.00
+2025-07-30 08:13:07 | INFO     | src.core.trading_engine:_generate_backtest_report:328 - Final Portfolio Value: $100,970.37
+2025-07-30 08:13:07 | INFO     | src.core.trading_engine:_generate_backtest_report:329 - Total Return: 0.97%
+2025-07-30 08:13:07 | INFO     | src.core.trading_engine:_generate_backtest_report:330 - Annualized Volatility: 2.49%
+2025-07-30 08:13:07 | INFO     | src.core.trading_engine:_generate_backtest_report:331 - Sharpe Ratio: 0.21
+2025-07-30 08:13:07 | INFO     | src.core.trading_engine:_generate_backtest_report:332 - Maximum Drawdown: -4.97%
+2025-07-30 08:13:07 | INFO     | src.core.trading_engine:_generate_backtest_report:333 - Total Trades: 49
+2025-07-30 08:13:07 | INFO     | src.core.trading_engine:_generate_backtest_report:334 - Buy Trades: 29
+2025-07-30 08:13:07 | INFO     | src.core.trading_engine:_generate_backtest_report:335 - Sell Trades: 20
+2025-07-30 08:13:07 | INFO     | src.core.trading_engine:_generate_backtest_report:343 - Backtest results saved to data/backtest_results.csv
+2025-07-30 08:13:07 | INFO     | src.core.trading_engine:_generate_backtest_report:360 - Trade details saved to data/trades.csv
+2025-07-30 08:13:07 | INFO     | __main__:run_backtest:93 - Backtest completed
+2025-07-30 08:14:59 | INFO     | src.risk.risk_manager:__init__:49 - Risk manager initialized
+2025-07-30 08:14:59 | INFO     | src.core.trading_engine:__init__:74 - Trading engine initialized with $100,000.00 initial capital
+2025-07-30 08:14:59 | INFO     | src.strategies.base_strategy:__init__:34 - Initialized strategy: sma_crossover
+2025-07-30 08:14:59 | INFO     | src.strategies.sma_crossover:__init__:48 - SMA Crossover Strategy initialized: 5/30
+2025-07-30 08:14:59 | INFO     | src.core.trading_engine:add_strategy:79 - Added strategy: sma_crossover
+2025-07-30 08:14:59 | INFO     | src.core.trading_engine:run_backtest:83 - Starting backtest from 2024-01-01 to 2025-05-31
+2025-07-30 08:14:59 | INFO     | src.data.data_manager:get_historical_data:52 - Fetching historical OHLCV data for ['VN30F2509'] from 2024-01-01 to 2025-05-31
+2025-07-30 08:14:59 | INFO     | src.data.data_manager:get_historical_data:62 - OHLCV data loaded from cache
+2025-07-30 08:14:59 | INFO     | src.core.trading_engine:run_backtest:104 - Loaded 500 data points for [('VN30F2509', 'time'), ('VN30F2509', 'open'), ('VN30F2509', 'high'), ('VN30F2509', 'low'), ('VN30F2509', 'close'), ('VN30F2509', 'volume')]
+2025-07-30 08:14:59 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for VN30F2509: 1226.82 > 1182.36
+2025-07-30 08:14:59 | INFO     | src.core.trading_engine:_execute_buy_order:226 - BUY: 16.08 VN30F2509 @ $1243.50
+2025-07-30 08:14:59 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for VN30F2509: 1265.86 < 1269.57
+2025-07-30 08:14:59 | INFO     | src.core.trading_engine:_execute_sell_order:262 - SELL: 16.08 VN30F2509 @ $1267.00 | P&L: $357.59 (1.79%)
+2025-07-30 08:14:59 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for VN30F2509: 1264.16 > 1259.63
+2025-07-30 08:14:59 | INFO     | src.core.trading_engine:_execute_buy_order:226 - BUY: 15.71 VN30F2509 @ $1277.00
+2025-07-30 08:14:59 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for VN30F2509: 1303.30 < 1303.73
+2025-07-30 08:14:59 | INFO     | src.core.trading_engine:_execute_sell_order:262 - SELL: 15.71 VN30F2509 @ $1290.70 | P&L: $195.01 (0.97%)
+2025-07-30 08:14:59 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for VN30F2509: 1303.60 > 1303.06
+2025-07-30 08:14:59 | INFO     | src.core.trading_engine:_execute_buy_order:226 - BUY: 15.25 VN30F2509 @ $1317.90
+2025-07-30 08:14:59 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for VN30F2509: 1304.30 < 1306.54
+2025-07-30 08:14:59 | INFO     | src.core.trading_engine:_execute_sell_order:262 - SELL: 15.25 VN30F2509 @ $1303.40 | P&L: $-241.06 (-1.20%)
+2025-07-30 08:14:59 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for VN30F2509: 1284.72 > 1284.25
+2025-07-30 08:14:59 | INFO     | src.core.trading_engine:_execute_buy_order:226 - BUY: 15.39 VN30F2509 @ $1302.70
+2025-07-30 08:15:00 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for VN30F2509: 1342.52 < 1348.78
+2025-07-30 08:15:00 | INFO     | src.core.trading_engine:_execute_sell_order:262 - SELL: 15.39 VN30F2509 @ $1333.80 | P&L: $458.14 (2.28%)
+2025-07-30 08:15:00 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for VN30F2509: 1315.60 > 1315.26
+2025-07-30 08:15:00 | INFO     | src.core.trading_engine:_execute_buy_order:226 - BUY: 15.36 VN30F2509 @ $1310.70
+2025-07-30 08:15:00 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for VN30F2509: 1319.36 < 1328.44
+2025-07-30 08:15:00 | INFO     | src.core.trading_engine:_execute_sell_order:262 - SELL: 15.36 VN30F2509 @ $1272.10 | P&L: $-612.60 (-3.04%)
+2025-07-30 08:15:00 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for VN30F2509: 1309.30 > 1308.28
+2025-07-30 08:15:00 | INFO     | src.core.trading_engine:_execute_buy_order:226 - BUY: 15.22 VN30F2509 @ $1314.70
+2025-07-30 08:15:00 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for VN30F2509: 1304.30 < 1306.54
+2025-07-30 08:15:00 | INFO     | src.core.trading_engine:_execute_sell_order:262 - SELL: 15.22 VN30F2509 @ $1303.40 | P&L: $-191.84 (-0.96%)
+2025-07-30 08:15:00 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for VN30F2509: 1284.72 > 1284.25
+2025-07-30 08:15:00 | INFO     | src.core.trading_engine:_execute_buy_order:226 - BUY: 15.33 VN30F2509 @ $1302.70
+2025-07-30 08:15:00 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for VN30F2509: 1342.52 < 1348.78
+2025-07-30 08:15:00 | INFO     | src.core.trading_engine:_execute_sell_order:262 - SELL: 15.33 VN30F2509 @ $1333.80 | P&L: $456.28 (2.28%)
+2025-07-30 08:15:00 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for VN30F2509: 1315.60 > 1315.26
+2025-07-30 08:15:00 | INFO     | src.core.trading_engine:_execute_buy_order:226 - BUY: 15.30 VN30F2509 @ $1310.70
+2025-07-30 08:15:00 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for VN30F2509: 1331.14 < 1334.86
+2025-07-30 08:15:00 | INFO     | src.core.trading_engine:_execute_sell_order:262 - SELL: 15.30 VN30F2509 @ $1327.60 | P&L: $238.29 (1.19%)
+2025-07-30 08:15:00 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for VN30F2509: 1331.66 > 1330.43
+2025-07-30 08:15:00 | INFO     | src.core.trading_engine:_execute_buy_order:226 - BUY: 14.91 VN30F2509 @ $1348.00
+2025-07-30 08:15:00 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for VN30F2509: 1368.74 < 1372.32
+2025-07-30 08:15:00 | INFO     | src.core.trading_engine:_execute_sell_order:262 - SELL: 14.91 VN30F2509 @ $1365.00 | P&L: $233.13 (1.16%)
+2025-07-30 08:15:00 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for VN30F2509: 1315.72 > 1313.53
+2025-07-30 08:15:00 | INFO     | src.core.trading_engine:_execute_buy_order:226 - BUY: 15.21 VN30F2509 @ $1324.50
+2025-07-30 08:15:00 | INFO     | src.core.trading_engine:_generate_backtest_report:326 - === BACKTEST RESULTS ===
+2025-07-30 08:15:00 | INFO     | src.core.trading_engine:_generate_backtest_report:327 - Initial Capital: $100,000.00
+2025-07-30 08:15:00 | INFO     | src.core.trading_engine:_generate_backtest_report:328 - Final Portfolio Value: $102,130.94
+2025-07-30 08:15:00 | INFO     | src.core.trading_engine:_generate_backtest_report:329 - Total Return: 2.13%
+2025-07-30 08:15:00 | INFO     | src.core.trading_engine:_generate_backtest_report:330 - Annualized Volatility: 2.37%
+2025-07-30 08:15:00 | INFO     | src.core.trading_engine:_generate_backtest_report:331 - Sharpe Ratio: 0.46
+2025-07-30 08:15:00 | INFO     | src.core.trading_engine:_generate_backtest_report:332 - Maximum Drawdown: -2.07%
+2025-07-30 08:15:00 | INFO     | src.core.trading_engine:_generate_backtest_report:333 - Total Trades: 19
+2025-07-30 08:15:00 | INFO     | src.core.trading_engine:_generate_backtest_report:334 - Buy Trades: 10
+2025-07-30 08:15:00 | INFO     | src.core.trading_engine:_generate_backtest_report:335 - Sell Trades: 9
+2025-07-30 08:15:00 | INFO     | src.core.trading_engine:_generate_backtest_report:343 - Backtest results saved to data/backtest_results.csv
+2025-07-30 08:15:00 | INFO     | src.core.trading_engine:_generate_backtest_report:360 - Trade details saved to data/trades.csv
+2025-07-30 08:15:00 | INFO     | __main__:run_backtest:93 - Backtest completed
+2025-07-30 08:19:19 | INFO     | src.risk.risk_manager:__init__:49 - Risk manager initialized
+2025-07-30 08:19:19 | INFO     | src.core.trading_engine:__init__:74 - Trading engine initialized with $100,000.00 initial capital
+2025-07-30 08:19:19 | INFO     | src.strategies.base_strategy:__init__:34 - Initialized strategy: sma_crossover
+2025-07-30 08:19:19 | INFO     | src.strategies.sma_crossover:__init__:48 - SMA Crossover Strategy initialized: 5/30
+2025-07-30 08:19:19 | INFO     | src.core.trading_engine:add_strategy:79 - Added strategy: sma_crossover
+2025-07-30 08:19:19 | INFO     | src.core.trading_engine:run_backtest:83 - Starting backtest from 2024-01-01 to 2025-05-31
+2025-07-30 08:19:19 | INFO     | src.data.data_manager:get_historical_data:52 - Fetching historical OHLCV data for ['VN30F2509'] from 2024-01-01 to 2025-05-31
+2025-07-30 08:19:19 | INFO     | src.data.data_manager:get_historical_data:62 - OHLCV data loaded from cache
+2025-07-30 08:19:19 | INFO     | src.core.trading_engine:run_backtest:104 - Loaded 500 data points for [('VN30F2509', 'time'), ('VN30F2509', 'open'), ('VN30F2509', 'high'), ('VN30F2509', 'low'), ('VN30F2509', 'close'), ('VN30F2509', 'volume')]
+2025-07-30 08:19:19 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for VN30F2509: 1226.82 > 1182.36
+2025-07-30 08:19:19 | INFO     | src.core.trading_engine:_execute_buy_order:226 - BUY: 16.08 VN30F2509 @ $1243.50
+2025-07-30 08:19:19 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for VN30F2509: 1265.86 < 1269.57
+2025-07-30 08:19:19 | INFO     | src.core.trading_engine:_execute_sell_order:262 - SELL: 16.08 VN30F2509 @ $1267.00 | P&L: $357.59 (1.79%)
+2025-07-30 08:19:20 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for VN30F2509: 1264.16 > 1259.63
+2025-07-30 08:19:20 | INFO     | src.core.trading_engine:_execute_buy_order:226 - BUY: 15.71 VN30F2509 @ $1277.00
+2025-07-30 08:19:20 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for VN30F2509: 1303.30 < 1303.73
+2025-07-30 08:19:20 | INFO     | src.core.trading_engine:_execute_sell_order:262 - SELL: 15.71 VN30F2509 @ $1290.70 | P&L: $195.01 (0.97%)
+2025-07-30 08:19:20 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for VN30F2509: 1303.60 > 1303.06
+2025-07-30 08:19:20 | INFO     | src.core.trading_engine:_execute_buy_order:226 - BUY: 15.25 VN30F2509 @ $1317.90
+2025-07-30 08:19:20 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for VN30F2509: 1304.30 < 1306.54
+2025-07-30 08:19:20 | INFO     | src.core.trading_engine:_execute_sell_order:262 - SELL: 15.25 VN30F2509 @ $1303.40 | P&L: $-241.06 (-1.20%)
+2025-07-30 08:19:20 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for VN30F2509: 1284.72 > 1284.25
+2025-07-30 08:19:20 | INFO     | src.core.trading_engine:_execute_buy_order:226 - BUY: 15.39 VN30F2509 @ $1302.70
+2025-07-30 08:19:20 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for VN30F2509: 1342.52 < 1348.78
+2025-07-30 08:19:20 | INFO     | src.core.trading_engine:_execute_sell_order:262 - SELL: 15.39 VN30F2509 @ $1333.80 | P&L: $458.14 (2.28%)
+2025-07-30 08:19:20 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for VN30F2509: 1315.60 > 1315.26
+2025-07-30 08:19:20 | INFO     | src.core.trading_engine:_execute_buy_order:226 - BUY: 15.36 VN30F2509 @ $1310.70
+2025-07-30 08:19:20 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for VN30F2509: 1319.36 < 1328.44
+2025-07-30 08:19:20 | INFO     | src.core.trading_engine:_execute_sell_order:262 - SELL: 15.36 VN30F2509 @ $1272.10 | P&L: $-612.60 (-3.04%)
+2025-07-30 08:19:20 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for VN30F2509: 1309.30 > 1308.28
+2025-07-30 08:19:20 | INFO     | src.core.trading_engine:_execute_buy_order:226 - BUY: 15.22 VN30F2509 @ $1314.70
+2025-07-30 08:19:20 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for VN30F2509: 1304.30 < 1306.54
+2025-07-30 08:19:20 | INFO     | src.core.trading_engine:_execute_sell_order:262 - SELL: 15.22 VN30F2509 @ $1303.40 | P&L: $-191.84 (-0.96%)
+2025-07-30 08:19:20 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for VN30F2509: 1284.72 > 1284.25
+2025-07-30 08:19:20 | INFO     | src.core.trading_engine:_execute_buy_order:226 - BUY: 15.33 VN30F2509 @ $1302.70
+2025-07-30 08:19:20 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for VN30F2509: 1342.52 < 1348.78
+2025-07-30 08:19:20 | INFO     | src.core.trading_engine:_execute_sell_order:262 - SELL: 15.33 VN30F2509 @ $1333.80 | P&L: $456.28 (2.28%)
+2025-07-30 08:19:20 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for VN30F2509: 1315.60 > 1315.26
+2025-07-30 08:19:20 | INFO     | src.core.trading_engine:_execute_buy_order:226 - BUY: 15.30 VN30F2509 @ $1310.70
+2025-07-30 08:19:20 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for VN30F2509: 1331.14 < 1334.86
+2025-07-30 08:19:20 | INFO     | src.core.trading_engine:_execute_sell_order:262 - SELL: 15.30 VN30F2509 @ $1327.60 | P&L: $238.29 (1.19%)
+2025-07-30 08:19:20 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for VN30F2509: 1331.66 > 1330.43
+2025-07-30 08:19:20 | INFO     | src.core.trading_engine:_execute_buy_order:226 - BUY: 14.91 VN30F2509 @ $1348.00
+2025-07-30 08:19:20 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for VN30F2509: 1368.74 < 1372.32
+2025-07-30 08:19:20 | INFO     | src.core.trading_engine:_execute_sell_order:262 - SELL: 14.91 VN30F2509 @ $1365.00 | P&L: $233.13 (1.16%)
+2025-07-30 08:19:20 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for VN30F2509: 1315.72 > 1313.53
+2025-07-30 08:19:20 | INFO     | src.core.trading_engine:_execute_buy_order:226 - BUY: 15.21 VN30F2509 @ $1324.50
+2025-07-30 08:19:20 | INFO     | src.core.trading_engine:_generate_backtest_report:326 - === BACKTEST RESULTS ===
+2025-07-30 08:19:20 | INFO     | src.core.trading_engine:_generate_backtest_report:327 - Initial Capital: $100,000.00
+2025-07-30 08:19:20 | INFO     | src.core.trading_engine:_generate_backtest_report:328 - Final Portfolio Value: $102,130.94
+2025-07-30 08:19:20 | INFO     | src.core.trading_engine:_generate_backtest_report:329 - Total Return: 2.13%
+2025-07-30 08:19:20 | INFO     | src.core.trading_engine:_generate_backtest_report:330 - Annualized Volatility: 2.37%
+2025-07-30 08:19:20 | INFO     | src.core.trading_engine:_generate_backtest_report:331 - Sharpe Ratio: 0.46
+2025-07-30 08:19:20 | INFO     | src.core.trading_engine:_generate_backtest_report:332 - Maximum Drawdown: -2.07%
+2025-07-30 08:19:20 | INFO     | src.core.trading_engine:_generate_backtest_report:333 - Total Trades: 19
+2025-07-30 08:19:20 | INFO     | src.core.trading_engine:_generate_backtest_report:334 - Buy Trades: 10
+2025-07-30 08:19:20 | INFO     | src.core.trading_engine:_generate_backtest_report:335 - Sell Trades: 9
+2025-07-30 08:19:20 | INFO     | src.core.trading_engine:_generate_backtest_report:343 - Backtest results saved to data/backtest_results.csv
+2025-07-30 08:19:20 | INFO     | src.core.trading_engine:_generate_backtest_report:360 - Trade details saved to data/trades.csv
+2025-07-30 08:19:20 | INFO     | __main__:run_backtest:93 - Backtest completed

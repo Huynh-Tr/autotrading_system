@@ -1,0 +1,62 @@
+graph TD
+    %% Input Stage
+    subgraph "Input Stage"
+        ST[Strategy Type<br/>SMA, RSI, MACD]
+        PG_I[Parameter Grid<br/>Predefined ranges]
+        HD[Historical Data<br/>Price data]
+        RP[Risk Parameters<br/>Stop loss, position sizing]
+    end
+    
+    %% Process Stage
+    subgraph "Process Stage"
+        PC[Parameter Combinations<br/>Generate all combinations]
+        SC[Strategy Creation<br/>Create strategy with parameters]
+        BT[Backtesting<br/>Test strategy performance]
+        RM[Risk Metrics<br/>Calculate risk metrics]
+    end
+    
+    %% Optimization Stage
+    subgraph "Optimization Stage"
+        PE[Performance Evaluation<br/>Calculate metrics: Sharpe, return, drawdown]
+        RANK[Ranking<br/>Sort by optimization metric]
+        BP[Best Parameters<br/>Select top performing combination]
+        VAL[Validation<br/>Verify results with different periods]
+    end
+    
+    %% Output Stage
+    subgraph "Output Stage"
+        OS_O[Optimized Strategy<br/>Best parameters]
+        PR_O[Performance Report<br/>Detailed analysis]
+        PRANK[Parameter Rankings<br/>Top combinations]
+        VIS[Visualization<br/>Charts and plots]
+    end
+    
+    %% Flow Connections
+    ST --> PC
+    PG_I --> SC
+    HD --> BT
+    RP --> RM
+    
+    PC --> PE
+    SC --> RANK
+    BT --> BP
+    RM --> VAL
+    
+    PE --> OS_O
+    RANK --> PR_O
+    BP --> PRANK
+    VAL --> VIS
+    
+    %% Feedback Loop
+    OS_O -.-> RP
+    
+    %% Styling
+    classDef inputStage fill:#E3F2FD,stroke:#333,stroke-width:2px
+    classDef processStage fill:#F3E5F5,stroke:#333,stroke-width:2px
+    classDef optimizationStage fill:#E8F5E8,stroke:#333,stroke-width:2px
+    classDef outputStage fill:#F1F8E9,stroke:#333,stroke-width:2px
+    
+    class ST,PG_I,HD,RP inputStage
+    class PC,SC,BT,RM processStage
+    class PE,RANK,BP,VAL optimizationStage
+    class OS_O,PR_O,PRANK,VIS outputStage

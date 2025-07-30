@@ -44,9 +44,14 @@ class TradingEngine:
     Main trading engine that coordinates all components
     """
     
-    def __init__(self, config_path: str = "config/config.yaml"):
+    def __init__(self, config_path_or_config = "config/config.yaml"):
         """Initialize the trading engine"""
-        self.config = ConfigManager(config_path)
+        # Handle both config path string and ConfigManager object
+        if isinstance(config_path_or_config, str):
+            self.config = ConfigManager(config_path_or_config)
+        else:
+            self.config = config_path_or_config
+            
         self.data_manager = DataManager(self.config)
         self.risk_manager = RiskManager(self.config)
         
@@ -86,11 +91,11 @@ class TradingEngine:
         )
         
         # Validate and clean data
-        if not self.data_manager.validate_data(data):
-            logger.error("Invalid data received")
+        if not self.data_manager.validate_ohlcv_data(data):
+            logger.error("Invalid OHLCV data received")
             return
         
-        data = self.data_manager.clean_data(data)
+        data = self.data_manager.clean_ohlcv_data(data)
         
         if data.empty:
             logger.error("No valid data available for backtesting")
@@ -132,10 +137,29 @@ class TradingEngine:
             signals = strategy.generate_signals(historical_slice, market_data)
             
             for symbol, signal in signals.items():
+                # Extract close price from OHLCV data
+                if isinstance(market_data.index, pd.MultiIndex):
+                    # New OHLCV data structure
+                    if (symbol, 'close') in market_data.index:
+                        price = market_data[(symbol, 'close')]
+                    else:
+                        logger.warning(f"No close data found for {symbol}")
+                        continue
+                else:
+                    # Legacy close-only data structure
+                    if symbol in market_data.index:
+                        price = market_data[symbol]
+                    else:
+                        logger.warning(f"No data found for {symbol}")
+                        continue
+                
+                if pd.isna(price):
+                    continue
+                
                 if signal == 'buy':
-                    self._execute_buy_order(symbol, date, market_data[symbol])
+                    self._execute_buy_order(symbol, date, price)
                 elif signal == 'sell':
-                    self._execute_sell_order(symbol, date, market_data[symbol])
+                    self._execute_sell_order(symbol, date, price)
     
     def _execute_buy_order(self, symbol: str, date: datetime, price: float):
         """Execute a buy order"""
@@ -242,12 +266,29 @@ class TradingEngine:
         positions_value = 0
         
         for symbol, position in self.positions.items():
-            if symbol in market_data:
-                current_price = market_data[symbol]
-                position.current_price = current_price
-                position.pnl = (current_price - position.entry_price) * position.quantity
-                position.pnl_pct = ((current_price - position.entry_price) / position.entry_price) * 100
-                positions_value += position.quantity * current_price
+            # Handle both OHLCV data (MultiIndex columns) and legacy close-only data
+            if isinstance(market_data.index, pd.MultiIndex):
+                # New OHLCV data structure
+                if (symbol, 'close') in market_data.index:
+                    current_price = market_data[(symbol, 'close')]
+                else:
+                    logger.warning(f"No close data found for {symbol}")
+                    continue
+            else:
+                # Legacy close-only data structure
+                if symbol in market_data.index:
+                    current_price = market_data[symbol]
+                else:
+                    logger.warning(f"No data found for {symbol}")
+                    continue
+            
+            if pd.isna(current_price):
+                continue
+                
+            position.current_price = current_price
+            position.pnl = (current_price - position.entry_price) * position.quantity
+            position.pnl_pct = ((current_price - position.entry_price) / position.entry_price) * 100
+            positions_value += position.quantity * current_price
         
         self.portfolio_value = self.cash + positions_value
     

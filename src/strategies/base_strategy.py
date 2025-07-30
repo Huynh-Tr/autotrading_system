@@ -5,7 +5,20 @@ Base Strategy - Abstract base class for all trading strategies
 from abc import ABC, abstractmethod
 import pandas as pd
 from typing import Dict, Any, Optional
-from loguru import logger
+
+# Try to import loguru, fallback to basic logging if not available
+try:
+    from loguru import logger
+except ImportError:
+    import logging
+    logger = logging.getLogger(__name__)
+    # Set up basic logging if loguru is not available
+    if not logger.handlers:
+        handler = logging.StreamHandler()
+        formatter = logging.Formatter('%(levelname)s: %(message)s')
+        handler.setFormatter(formatter)
+        logger.addHandler(handler)
+        logger.setLevel(logging.INFO)
 
 
 class BaseStrategy(ABC):

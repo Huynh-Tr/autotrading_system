@@ -1,0 +1,322 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto Trading System Flowcharts</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .flowchart-section {
+            margin-bottom: 40px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #fafafa;
+        }
+        .flowchart-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #444;
+            margin-bottom: 15px;
+        }
+        .flowchart-image {
+            text-align: center;
+            margin: 15px 0;
+        }
+        .flowchart-image img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .download-links {
+            margin-top: 10px;
+            text-align: center;
+        }
+        .download-links a {
+            display: inline-block;
+            margin: 5px;
+            padding: 8px 15px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+        .download-links a:hover {
+            background-color: #0056b3;
+        }
+        .description {
+            margin-top: 15px;
+            padding: 15px;
+            background-color: #e9ecef;
+            border-radius: 5px;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+        .mermaid-content {
+            background-color: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 5px;
+            padding: 15px;
+            margin: 10px 0;
+            font-family: monospace;
+            white-space: pre-wrap;
+            overflow-x: auto;
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script>
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>🚀 Auto Trading System Flowcharts</h1>
+        
+        <div class="flowchart-section">
+            <div class="flowchart-title">📊 System Architecture Flowchart</div>
+            <div class="mermaid-content">
+graph TB
+    %% Data Layer
+    subgraph "Data Layer"
+        MD[Market Data<br/>Yahoo Finance, VNStock]
+        HC[Historical Data Cache]
+        RT[Real-time Price Feeds]
+        CF[Configuration Files]
+    end
+    
+    %% Core Layer
+    subgraph "Core Layer"
+        DM[Data Manager<br/>Data fetching, caching, validation]
+        TE[Trading Engine<br/>Order execution, portfolio management]
+        CM[Configuration Manager<br/>Settings, parameters]
+        LM[Logging & Monitoring<br/>Performance tracking]
+    end
+    
+    %% Strategy Layer
+    subgraph "Strategy Layer"
+        SMA[SMA Crossover Strategy]
+        RSI[RSI Strategy]
+        MACD[MACD Strategy]
+        CS[Custom Strategies]
+    end
+    
+    %% Technical Indicators
+    subgraph "Technical Indicators"
+        SMA_I[SMA<br/>Simple Moving Average]
+        RSI_I[RSI<br/>Relative Strength Index]
+        MACD_I[MACD<br/>Moving Average Convergence]
+        BB[Bollinger Bands]
+    end
+    
+    %% Risk Management Layer
+    subgraph "Risk Management Layer"
+        PS[Position Sizing<br/>Risk-based allocation]
+        SL[Stop Loss & Take Profit<br/>Automatic execution]
+        PRL[Portfolio Risk Limits<br/>Maximum exposure]
+        DM_R[Drawdown Monitoring<br/>Real-time tracking]
+    end
+    
+    %% Backtesting Layer
+    subgraph "Backtesting Layer"
+        BE[Backtest Engine<br/>Multi-strategy testing]
+        PM[Performance Metrics<br/>Sharpe, drawdown, win rate]
+        TT[Trade Tracking<br/>Complete history, analysis]
+        RI[Risk Integration<br/>Risk metrics in backtesting]
+    end
+    
+    %% Optimization Layer
+    subgraph "Optimization Layer"
+        PG[Parameter Grid<br/>Strategy parameter combinations]
+        SO[Strategy Optimizer<br/>Risk-based optimization]
+        PP[Parallel Processing<br/>Efficient multi-core execution]
+        RA[Results Analysis<br/>Top parameters, reports]
+    end
+    
+    %% Dashboard Layer
+    subgraph "Dashboard Layer"
+        WD[Web Dashboard<br/>Streamlit-based monitoring]
+        TC[Trading Charts<br/>Interactive OHLC charts]
+        PR[Performance Reports<br/>Detailed analysis]
+        RTM[Real-time Monitoring<br/>Live updates]
+    end
+    
+    %% Output Layer
+    subgraph "Output Layer"
+        OS[Optimized Strategies<br/>Best parameters]
+        BR[Backtest Results<br/>Performance data]
+        RR[Risk Reports<br/>Risk metrics, alerts]
+        TS[Trading Signals<br/>Buy/sell decisions]
+    end
+    
+    %% Data Flow Connections
+    MD --> DM
+    HC --> DM
+    RT --> TE
+    CF --> CM
+    
+    DM --> SMA
+    TE --> RSI
+    CM --> MACD
+    LM --> CS
+    
+    SMA --> SMA_I
+    RSI --> RSI_I
+    MACD --> MACD_I
+    CS --> BB
+    
+    SMA --> PS
+    RSI --> SL
+    MACD --> PRL
+    CS --> DM_R
+    
+    PS --> BE
+    SL --> PM
+    PRL --> TT
+    DM_R --> RI
+    
+    SMA --> PG
+    RSI --> SO
+    MACD --> PP
+    CS --> RA
+    
+    BE --> WD
+    PM --> TC
+    TT --> PR
+    RI --> RTM
+    
+    PG --> PR
+    SO --> RTM
+    
+    WD --> OS
+    TC --> BR
+    PR --> RR
+    RTM --> TS
+            </div>
+            <div class="description">
+                <strong>Description:</strong> This flowchart shows the complete system architecture with 9 layers: Data, Core, Strategy, Technical Indicators, Risk Management, Backtesting, Optimization, Dashboard, and Output. Each layer has specific components and data flows between them.
+            </div>
+        </div>
+        
+        <div class="flowchart-section">
+            <div class="flowchart-title">🔄 Optimization Flowchart</div>
+            <div class="mermaid-content">
+graph TD
+    %% Input Stage
+    subgraph "Input Stage"
+        ST[Strategy Type<br/>SMA, RSI, MACD]
+        PG_I[Parameter Grid<br/>Predefined ranges]
+        HD[Historical Data<br/>Price data]
+        RP[Risk Parameters<br/>Stop loss, position sizing]
+    end
+    
+    %% Process Stage
+    subgraph "Process Stage"
+        PC[Parameter Combinations<br/>Generate all combinations]
+        SC[Strategy Creation<br/>Create strategy with parameters]
+        BT[Backtesting<br/>Test strategy performance]
+        RM[Risk Metrics<br/>Calculate risk metrics]
+    end
+    
+    %% Optimization Stage
+    subgraph "Optimization Stage"
+        PE[Performance Evaluation<br/>Calculate metrics: Sharpe, return, drawdown]
+        RANK[Ranking<br/>Sort by optimization metric]
+        BP[Best Parameters<br/>Select top performing combination]
+        VAL[Validation<br/>Verify results with different periods]
+    end
+    
+    %% Output Stage
+    subgraph "Output Stage"
+        OS_O[Optimized Strategy<br/>Best parameters]
+        PR_O[Performance Report<br/>Detailed analysis]
+        PRANK[Parameter Rankings<br/>Top combinations]
+        VIS[Visualization<br/>Charts and plots]
+    end
+    
+    %% Flow Connections
+    ST --> PC
+    PG_I --> SC
+    HD --> BT
+    RP --> RM
+    
+    PC --> PE
+    SC --> RANK
+    BT --> BP
+    RM --> VAL
+    
+    PE --> OS_O
+    RANK --> PR_O
+    BP --> PRANK
+    VAL --> VIS
+    
+    %% Feedback Loop
+    OS_O -.-> RP
+            </div>
+            <div class="description">
+                <strong>Description:</strong> This flowchart illustrates the 4-stage optimization process: Input (strategy type, parameters), Process (combinations, creation, backtesting), Optimization (evaluation, ranking, best parameters), and Output (optimized strategy, reports). Includes a feedback loop for continuous improvement.
+            </div>
+        </div>
+        
+        <div class="flowchart-section">
+            <div class="flowchart-title">📈 Data Flow Sequence Diagram</div>
+            <div class="mermaid-content">
+sequenceDiagram
+    participant Market as Market Data Sources
+    participant DataMgr as Data Manager
+    participant Trading as Trading Engine
+    participant Strategy as Strategy Layer
+    participant Risk as Risk Manager
+    participant Backtest as Backtest Engine
+    participant Optimizer as Strategy Optimizer
+    participant Dashboard as Dashboard
+    participant Output as Output Layer
+    
+    Market->>DataMgr: Historical price data
+    DataMgr->>Trading: Processed market data
+    Trading->>Strategy: Market signals
+    Strategy->>Risk: Trading signals
+    Risk->>Backtest: Risk-adjusted signals
+    Backtest->>Optimizer: Performance metrics
+    Optimizer->>Strategy: Optimized parameters
+    Strategy->>Trading: Enhanced signals
+    Trading->>Dashboard: Real-time updates
+    Dashboard->>Output: Trading decisions
+    Output->>Market: Execute trades
+            </div>
+            <div class="description">
+                <strong>Description:</strong> This sequence diagram shows the data flow between system components: Market Data Sources → Data Manager → Trading Engine → Strategy Layer → Risk Manager → Backtest Engine → Strategy Optimizer → Dashboard → Output Layer → Market (trade execution).
+            </div>
+        </div>
+        
+        <div class="description" style="margin-top: 30px; background-color: #d4edda; border: 1px solid #c3e6cb;">
+            <strong>📝 Notes:</strong><br>
+            • All flowcharts are generated from Mermaid diagrams in flowchart.md<br>
+            • Interactive Mermaid diagrams are embedded in this HTML viewer<br>
+            • The system architecture supports modular design and easy extension<br>
+            • Risk management is integrated at every level of the system<br>
+            • You can view the raw Mermaid code in the gray boxes above
+        </div>
+    </div>
+</body>
+</html>

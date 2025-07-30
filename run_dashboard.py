@@ -14,7 +14,7 @@ def main():
     # Check if streamlit is installed
     try:
         import streamlit
-        print("✓ Streamlit is installed")
+        print("[OK] Streamlit is installed")
     except ImportError:
         print("❌ Streamlit not found. Installing...")
         subprocess.check_call([sys.executable, "-m", "pip", "install", "streamlit"])
@@ -22,7 +22,7 @@ def main():
     # Check if plotly is installed
     try:
         import plotly
-        print("✓ Plotly is installed")
+        print("[OK] Plotly is installed")
     except ImportError:
         print("❌ Plotly not found. Installing...")
         subprocess.check_call([sys.executable, "-m", "pip", "install", "plotly"])
