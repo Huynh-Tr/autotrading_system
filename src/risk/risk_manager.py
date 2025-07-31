@@ -55,6 +55,24 @@ class RiskManager:
         if hasattr(cash, 'item'):
             cash = cash.item()
         
+        # Convert price to numeric if it's not already
+        try:
+            if hasattr(price, 'item'):
+                price = price.item()
+            elif hasattr(price, 'timestamp'):
+                # If price is a Timestamp, we can't use it for calculations
+                logger.warning(f"Price for {symbol} is a Timestamp, cannot calculate position size")
+                return False
+            elif not isinstance(price, (int, float, np.number)):
+                # Try to convert to numeric
+                price = pd.to_numeric(price, errors='coerce')
+                if pd.isna(price):
+                    logger.warning(f"Price for {symbol} cannot be converted to numeric")
+                    return False
+        except Exception as e:
+            logger.warning(f"Error converting price for {symbol}: {e}")
+            return False
+        
         if cash <= 0:
             logger.warning("Insufficient cash for buy order")
             return False
@@ -74,6 +92,24 @@ class RiskManager:
         if hasattr(cash, 'item'):
             cash = cash.item()
         
+        # Convert price to numeric if it's not already
+        try:
+            if hasattr(price, 'item'):
+                price = price.item()
+            elif hasattr(price, 'timestamp'):
+                # If price is a Timestamp, we can't use it for calculations
+                logger.warning(f"Price for {symbol} is a Timestamp, cannot calculate position size")
+                return 0.0
+            elif not isinstance(price, (int, float, np.number)):
+                # Try to convert to numeric
+                price = pd.to_numeric(price, errors='coerce')
+                if pd.isna(price):
+                    logger.warning(f"Price for {symbol} cannot be converted to numeric")
+                    return 0.0
+        except Exception as e:
+            logger.warning(f"Error converting price for {symbol}: {e}")
+            return 0.0
+        
         # For testing, use a simple position size calculation
         position_size = cash * self.max_position_size
         
@@ -85,6 +121,31 @@ class RiskManager:
     def check_stop_loss(self, symbol: str, entry_price: float, 
                        current_price: float) -> bool:
         """Check if stop loss has been triggered"""
+        # Convert prices to numeric if needed
+        try:
+            if hasattr(entry_price, 'item'):
+                entry_price = entry_price.item()
+            elif hasattr(entry_price, 'timestamp'):
+                logger.warning(f"Entry price for {symbol} is a Timestamp")
+                return False
+            elif not isinstance(entry_price, (int, float, np.number)):
+                entry_price = pd.to_numeric(entry_price, errors='coerce')
+                if pd.isna(entry_price):
+                    return False
+            
+            if hasattr(current_price, 'item'):
+                current_price = current_price.item()
+            elif hasattr(current_price, 'timestamp'):
+                logger.warning(f"Current price for {symbol} is a Timestamp")
+                return False
+            elif not isinstance(current_price, (int, float, np.number)):
+                current_price = pd.to_numeric(current_price, errors='coerce')
+                if pd.isna(current_price):
+                    return False
+        except Exception as e:
+            logger.warning(f"Error converting prices for {symbol}: {e}")
+            return False
+        
         if entry_price <= 0:
             return False
         
@@ -99,6 +160,31 @@ class RiskManager:
     def check_take_profit(self, symbol: str, entry_price: float,
                          current_price: float) -> bool:
         """Check if take profit has been triggered"""
+        # Convert prices to numeric if needed
+        try:
+            if hasattr(entry_price, 'item'):
+                entry_price = entry_price.item()
+            elif hasattr(entry_price, 'timestamp'):
+                logger.warning(f"Entry price for {symbol} is a Timestamp")
+                return False
+            elif not isinstance(entry_price, (int, float, np.number)):
+                entry_price = pd.to_numeric(entry_price, errors='coerce')
+                if pd.isna(entry_price):
+                    return False
+            
+            if hasattr(current_price, 'item'):
+                current_price = current_price.item()
+            elif hasattr(current_price, 'timestamp'):
+                logger.warning(f"Current price for {symbol} is a Timestamp")
+                return False
+            elif not isinstance(current_price, (int, float, np.number)):
+                current_price = pd.to_numeric(current_price, errors='coerce')
+                if pd.isna(current_price):
+                    return False
+        except Exception as e:
+            logger.warning(f"Error converting prices for {symbol}: {e}")
+            return False
+        
         if entry_price <= 0:
             return False
         

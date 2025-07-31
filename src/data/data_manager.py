@@ -32,6 +32,14 @@ except ImportError:
     # Fallback to absolute imports
     from src.utils.config_manager import ConfigManager
 
+import sys
+project_root = os.path.abspath(os.path.join(os.getcwd(), '..', '..'))
+if project_root not in sys.path:
+        sys.path.insert(0, project_root)
+        print(f"Đã thêm project root: {project_root}")
+from websocket import create_connection
+from TradingviewData import TradingViewData, Interval
+
 
 class DataManager:
     """Manages market data retrieval and caching with full OHLCV data"""
@@ -47,30 +55,33 @@ class DataManager:
         os.makedirs(self.cache_dir, exist_ok=True)
     
     def get_historical_data(self, symbols: List[str], start_date: str, 
-                          end_date: str, interval: str = "1d") -> pd.DataFrame:
+                          end_date: str, interval: str = "1d", n_bars: int = 1000) -> pd.DataFrame:
         """Get historical market data for multiple symbols with full OHLCV data"""
         logger.info(f"Fetching historical OHLCV data for {symbols} from {start_date} to {end_date}")
         
         # Check cache first
-        cache_key = f"{'_'.join(symbols)}_{start_date}_{end_date}_{interval}_ohlcv.pkl"
+        cache_key = f"{'_'.join(symbols)}_{interval}_ohlcv.pkl"
         cache_path = os.path.join(self.cache_dir, cache_key)
         
-        if self.config.get("data.cache_data", True) and os.path.exists(cache_path):
-            try:
-                with open(cache_path, 'rb') as f:
-                    data = pickle.load(f)
-                logger.info("OHLCV data loaded from cache")
-                return data
-            except Exception as e:
-                logger.warning(f"Failed to load from cache: {e}")
+        # if self.config.get("data.cache_data", True) and os.path.exists(cache_path):
+        #     try:
+        #         with open(cache_path, 'rb') as f:
+        #             data = pickle.load(f)
+        #         logger.info("OHLCV data loaded from cache")
+        #         return data
+        #     except Exception as e:
+        #         logger.warning(f"Failed to load from cache: {e}")
         
         # Fetch data from source
         data_source = self.config.get("data.source", "yfinance")
-        
+        # print(data_source)
+
         if data_source == "yfinance":
             data = self._fetch_yfinance_ohlcv_data(symbols, start_date, end_date, interval)
         elif data_source == "vnstock":
             data = self._fetch_vnstock_ohlcv_data(symbols, start_date, end_date, interval)
+        elif data_source == "tradingview":
+            data = self._fetch_tradingview_ohlcv_data(symbols, interval, n_bars)
         else:
             raise ValueError(f"Unsupported data source: {data_source}")
         
@@ -91,52 +102,60 @@ class DataManager:
         ohlcv_data = self.get_historical_data(symbols, start_date, end_date, interval)
         return self._extract_close_prices(ohlcv_data, symbols)
     
+    def _fetch_tradingview_ohlcv_data(self, symbols: List[str], interval: str, n_bars: int = 1000) -> pd.DataFrame:
+        """Fetch full OHLCV data from TradingView"""
+        interval_map = {
+            '1d': Interval.daily,
+            '1h': Interval.hour_1,
+            '2h': Interval.hour_2,
+            '3h': Interval.hour_3,
+            '4h': Interval.hour_4,
+            '1m': Interval.min_1,
+            '3m': Interval.min_3,
+            '5m': Interval.min_5,
+            '15m': Interval.min_15,
+            '30m': Interval.min_30,
+            '45m': Interval.min_45,
+            'monthly': Interval.monthly,
+            'weekly': Interval.weekly,
+        }
+        try:
+            # symbols = ['Bitstamp:BTCUSD']
+            # interval = '1d'
+            for symbol in symbols:
+                # print(symbol.split(':')[], symbol.split(':')[1], interval_map[interval], n_bars)
+                request = TradingViewData()
+                df = request.get_hist(
+                    symbol=symbol.split(':')[1],
+                    exchange=symbol.split(':')[0],
+                    interval=interval_map[interval],
+                    n_bars=n_bars
+                ).drop(columns=['symbol']) \
+                .reset_index(drop=False)
+                df.columns = ['time', 'open', 'high', 'low', 'close', 'volume']
+                df['time'] = pd.to_datetime(df.time)                
+                
+            # combined_data = pd.concat(ohlcv_data.values(), axis=1)
+            return df
+        except Exception as e:
+            logger.error(f"Error fetching OHLCV data from TradingView: {e}")
+            raise
+
     def _fetch_yfinance_ohlcv_data(self, symbols: List[str], start_date: str, 
                                   end_date: str, interval: str) -> pd.DataFrame:
         """Fetch full OHLCV data from Yahoo Finance"""
+        "1m,2m,5m,15m,30m,60m,90m,1h,1d,5d,1wk,1mo,3mo"
         try:
-            # Download data for all symbols
-            tickers = yf.Tickers(' '.join(symbols))
-            data = tickers.history(start=start_date, end=end_date, interval=interval)
-            
-            # Create a comprehensive OHLCV DataFrame
-            ohlcv_data = {}
-            
             for symbol in symbols:
-                symbol_data = {}
-                
-                # Extract OHLCV data for each symbol
-                if f"{symbol} Time" in data.columns:
-                    symbol_data['time'] = data[f"{symbol} Time"]
-                if f"{symbol} Open" in data.columns:
-                    symbol_data['open'] = data[f"{symbol} Open"]
-                if f"{symbol} High" in data.columns:
-                    symbol_data['high'] = data[f"{symbol} High"]
-                if f"{symbol} Low" in data.columns:
-                    symbol_data['low'] = data[f"{symbol} Low"]
-                if f"{symbol} Close" in data.columns:
-                    symbol_data['close'] = data[f"{symbol} Close"]
-                if f"{symbol} Volume" in data.columns:
-                    symbol_data['volume'] = data[f"{symbol} Volume"]
-                
-                if symbol_data:
-                    # Create MultiIndex for the symbol
-                    symbol_df = pd.DataFrame(symbol_data)
-                    symbol_df.columns = pd.MultiIndex.from_product([[symbol], symbol_df.columns])
-                    ohlcv_data[symbol] = symbol_df
-                else:
-                    logger.warning(f"No OHLCV data found for {symbol}")
-                    # Create empty DataFrame with proper structure
-                    empty_data = pd.DataFrame(index=data.index, columns=['time', 'open', 'high', 'low', 'close', 'volume'])
-                    empty_data.columns = pd.MultiIndex.from_product([[symbol], empty_data.columns])
-                    ohlcv_data[symbol] = empty_data
-            
-            # Combine all symbols into one DataFrame
-            if ohlcv_data:
-                combined_data = pd.concat(ohlcv_data.values(), axis=1)
-                return combined_data
-            else:
-                return pd.DataFrame()
+                # Download data for all symbols
+                data = yf.download(symbol, start=start_date, end=end_date, interval=interval, auto_adjust=True)
+                data = data.droplevel(1, axis=1) if isinstance(data.columns, pd.MultiIndex) else data
+                data.reset_index(inplace=True)
+                data.columns = ['time', 'open', 'high', 'low', 'close', 'volume']
+                data['symbol'] = 'VHC.VN'
+                data['time'] = pd.to_datetime(data['time'], format='%Y-%m-%d %H:%M:%S')
+                data.set_index('time', inplace=True)
+            return data
             
         except Exception as e:
             logger.error(f"Error fetching OHLCV data from Yahoo Finance: {e}")
@@ -145,34 +164,46 @@ class DataManager:
     def _fetch_vnstock_ohlcv_data(self, symbols: List[str], start_date: str, 
                                  end_date: str, interval: str) -> pd.DataFrame:
         """Fetch full OHLCV data from VNStock"""
+        # "Vui lòng chọn: 1m, 5m, 15m, 30m, 1H, 1D, 1W, 1M"
+        interval_map = {
+            '1m': '1m',
+            '5m': '5m',
+            '15m': '15m',
+            '30m': '30m',
+            '1h': '1H',
+            '1d': '1D',
+            '1w': '1W',
+            '1m': '1M',
+        }
         try:
             all_data = {}
             
             for symbol in symbols:
+                # print(symbol, start_date, end_date, interval_map[interval])
                 try:
-                    data = Quote(symbol=symbol, source='tcbs').history(start=start_date, end=end_date, period=interval)
-                    
-                    if not data.empty:
-                        # Extract OHLCV data
-                        symbol_data = {
-                            'time': data.get('time', pd.Series(dtype=float)),
-                            'open': data.get('open', pd.Series(dtype=float)),
-                            'high': data.get('high', pd.Series(dtype=float)),
-                            'low': data.get('low', pd.Series(dtype=float)),
-                            'close': data.get('close', pd.Series(dtype=float)),
-                            'volume': data.get('volume', pd.Series(dtype=float))
-                        }
+                    data = Quote(symbol=symbol, source='tcbs').history(start=start_date, end=end_date, period=interval_map[interval])
+                    return data
+                    # if not data.empty:
+                    #     # Extract OHLCV data
+                    #     symbol_data = {
+                    #         'time': data.get('time', pd.Series(dtype=float)),
+                    #         'open': data.get('open', pd.Series(dtype=float)),
+                    #         'high': data.get('high', pd.Series(dtype=float)),
+                    #         'low': data.get('low', pd.Series(dtype=float)),
+                    #         'close': data.get('close', pd.Series(dtype=float)),
+                    #         'volume': data.get('volume', pd.Series(dtype=float))
+                    #     }
                         
-                        # Create MultiIndex for the symbol
-                        symbol_df = pd.DataFrame(symbol_data)
-                        symbol_df.columns = pd.MultiIndex.from_product([[symbol], symbol_df.columns])
-                        all_data[symbol] = symbol_df
-                    else:
-                        logger.warning(f"No OHLCV data found for {symbol}")
-                        # Create empty DataFrame with proper structure
-                        empty_data = pd.DataFrame(columns=['time', 'open', 'high', 'low', 'close', 'volume'])
-                        empty_data.columns = pd.MultiIndex.from_product([[symbol], empty_data.columns])
-                        all_data[symbol] = empty_data
+                    #     # Create MultiIndex for the symbol
+                    #     symbol_df = pd.DataFrame(symbol_data)
+                    #     symbol_df.columns = pd.MultiIndex.from_product([[symbol], symbol_df.columns])
+                    #     all_data[symbol] = symbol_df
+                    # else:
+                    #     logger.warning(f"No OHLCV data found for {symbol}")
+                    #     # Create empty DataFrame with proper structure
+                    #     empty_data = pd.DataFrame(columns=['time', 'open', 'high', 'low', 'close', 'volume'])
+                    #     empty_data.columns = pd.MultiIndex.from_product([[symbol], empty_data.columns])
+                    #     all_data[symbol] = empty_data
                         
                 except Exception as e:
                     logger.error(f"Error fetching OHLCV data for {symbol}: {e}")
@@ -307,31 +338,40 @@ class DataManager:
         if missing_pct > 0.1:  # More than 10% missing data
             logger.warning(f"High percentage of missing OHLCV data: {missing_pct:.2%}")
         
-        # Check for negative prices
-        price_columns = [col for col in data.columns if col[1] in ['open', 'high', 'low', 'close']]
-        if (data[price_columns] < 0).any().any():
-            logger.error("Found negative prices in OHLCV data")
-            return False
-        
-        # Check for zero prices
-        zero_prices = (data[price_columns] == 0).sum().sum()
-        if zero_prices > 0:
-            logger.warning(f"Found {zero_prices} zero prices in OHLCV data")
-        
-        # Check for logical inconsistencies (high < low, etc.)
-        for symbol in data.columns.get_level_values(0).unique():
-            symbol_data = self.get_symbol_ohlcv(data, symbol)
-            if not symbol_data.empty:
-                # Check if high >= low
-                invalid_high_low = (symbol_data['high'] < symbol_data['low']).sum()
-                if invalid_high_low > 0:
-                    logger.warning(f"Found {invalid_high_low} records where high < low for {symbol}")
+        # Check for negative prices - only check numeric columns
+        try:
+            # Filter only numeric columns for price validation
+            numeric_columns = data.select_dtypes(include=[np.number]).columns
+            price_columns = [col for col in numeric_columns if isinstance(col, tuple) and col[1] in ['open', 'high', 'low', 'close']]
+            
+            if price_columns:
+                # Check for negative prices only in numeric columns
+                if (data[price_columns] < 0).any().any():
+                    logger.error("Found negative prices in OHLCV data")
+                    return False
                 
-                # Check if close is between high and low
-                invalid_close = ((symbol_data['close'] > symbol_data['high']) | 
-                               (symbol_data['close'] < symbol_data['low'])).sum()
-                if invalid_close > 0:
-                    logger.warning(f"Found {invalid_close} records where close is outside high-low range for {symbol}")
+                # Check for zero prices only in numeric columns
+                zero_prices = (data[price_columns] == 0).sum().sum()
+                if zero_prices > 0:
+                    logger.warning(f"Found {zero_prices} zero prices in OHLCV data")
+        except Exception as e:
+            logger.warning(f"Error checking price columns: {e}")
+            # Continue validation even if price check fails
+        
+        # # Check for logical inconsistencies (high < low, etc.)
+        # for symbol in data.columns.get_level_values(0).unique():
+        #     symbol_data = self.get_symbol_ohlcv(data, symbol)
+        #     if not symbol_data.empty:
+        #         # Check if high >= low
+        #         invalid_high_low = (symbol_data['high'] < symbol_data['low']).sum()
+        #         if invalid_high_low > 0:
+        #             logger.warning(f"Found {invalid_high_low} records where high < low for {symbol}")
+                
+        #         # Check if close is between high and low
+        #         invalid_close = ((symbol_data['close'] > symbol_data['high']) | 
+        #                        (symbol_data['close'] < symbol_data['low'])).sum()
+        #         if invalid_close > 0:
+        #             logger.warning(f"Found {invalid_close} records where close is outside high-low range for {symbol}")
         
         return True
     
@@ -346,21 +386,21 @@ class DataManager:
         # Remove any remaining NaN values
         data = data.dropna()
         
-        # Fix logical inconsistencies
-        for symbol in data.columns.get_level_values(0).unique():
-            symbol_data = self.get_symbol_ohlcv(data, symbol)
-            if not symbol_data.empty:
-                # Ensure high >= low
-                symbol_data['high'] = symbol_data[['high', 'low']].max(axis=1)
-                symbol_data['low'] = symbol_data[['high', 'low']].min(axis=1)
+        # # Fix logical inconsistencies
+        # for symbol in data.columns.get_level_values(0).unique():
+        #     symbol_data = self.get_symbol_ohlcv(data, symbol)
+        #     if not symbol_data.empty:
+        #         # Ensure high >= low
+        #         symbol_data['high'] = symbol_data[['high', 'low']].max(axis=1)
+        #         symbol_data['low'] = symbol_data[['high', 'low']].min(axis=1)
                 
-                # Ensure close is between high and low
-                symbol_data['close'] = symbol_data['close'].clip(
-                    lower=symbol_data['low'], 
-                    upper=symbol_data['high']
-                )
+        #         # Ensure close is between high and low
+        #         symbol_data['close'] = symbol_data['close'].clip(
+        #             lower=symbol_data['low'], 
+        #             upper=symbol_data['high']
+        #         )
                 
-                # Update the main DataFrame
-                data[symbol] = symbol_data
+        #         # Update the main DataFrame
+        #         data[symbol] = symbol_data
         
         return data 

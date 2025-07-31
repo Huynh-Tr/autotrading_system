@@ -8,6 +8,20 @@ import pandas as pd
 import numpy as np
 from typing import Dict
 
+# Try to import loguru, fallback to basic logging if not available
+try:
+    from loguru import logger
+except ImportError:
+    import logging
+    logger = logging.getLogger(__name__)
+    # Set up basic logging if loguru is not available
+    if not logger.handlers:
+        handler = logging.StreamHandler()
+        formatter = logging.Formatter('%(levelname)s: %(message)s')
+        handler.setFormatter(formatter)
+        logger.addHandler(handler)
+        logger.setLevel(logging.INFO)
+
 
 def calculate_rsi(prices: pd.Series, period: int = 14) -> pd.Series:
     """
@@ -20,9 +34,19 @@ def calculate_rsi(prices: pd.Series, period: int = 14) -> pd.Series:
     Returns:
         RSI series
     """
-    delta = prices.diff()
+    # Ensure prices is numeric
+    try:
+        prices_numeric = pd.to_numeric(prices, errors='coerce')
+        if prices_numeric.isna().all():
+            logger.warning("All prices are non-numeric, returning NaN series")
+            return pd.Series([np.nan] * len(prices), index=prices.index)
+    except Exception as e:
+        logger.warning(f"Error converting prices to numeric: {e}")
+        return pd.Series([np.nan] * len(prices), index=prices.index)
     
-    # Separate gains and losses
+    delta = prices_numeric.diff()
+    
+    # Separate gains and losses - ensure numeric comparison
     gains = delta.where(delta > 0, 0)
     losses = -delta.where(delta < 0, 0)
     

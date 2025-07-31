@@ -8,6 +8,20 @@ import pandas as pd
 import numpy as np
 from typing import Dict, Tuple
 
+# Try to import loguru, fallback to basic logging if not available
+try:
+    from loguru import logger
+except ImportError:
+    import logging
+    logger = logging.getLogger(__name__)
+    # Set up basic logging if loguru is not available
+    if not logger.handlers:
+        handler = logging.StreamHandler()
+        formatter = logging.Formatter('%(levelname)s: %(message)s')
+        handler.setFormatter(formatter)
+        logger.addHandler(handler)
+        logger.setLevel(logging.INFO)
+
 
 def calculate_sma(prices: pd.Series, window: int) -> pd.Series:
     """
@@ -20,7 +34,18 @@ def calculate_sma(prices: pd.Series, window: int) -> pd.Series:
     Returns:
         SMA series
     """
-    return prices.rolling(window=window).mean()
+    # Ensure prices is numeric
+    try:
+        prices_numeric = pd.to_numeric(prices, errors='coerce')
+        if prices_numeric.isna().all():
+            logger.warning("All prices are non-numeric, returning NaN series")
+            return pd.Series([np.nan] * len(prices), index=prices.index)
+        
+        # Calculate SMA only on numeric data
+        return prices_numeric.rolling(window=window).mean()
+    except Exception as e:
+        logger.warning(f"Error calculating SMA: {e}")
+        return pd.Series([np.nan] * len(prices), index=prices.index)
 
 
 def calculate_sma_crossover(prices: pd.Series, short_window: int, long_window: int) -> Tuple[pd.Series, pd.Series]:

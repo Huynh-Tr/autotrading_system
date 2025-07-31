@@ -414,23 +414,41 @@ class BacktestEngine:
         if len(df) < 2:
             return {'max_drawdown': 0.0, 'avg_drawdown': 0.0, 'drawdown_duration': 0}
         
-        # Calculate running maximum
-        running_max = df['total_value'].expanding().max()
-        drawdown = (df['total_value'] - running_max) / running_max
-        
-        max_drawdown = drawdown.min()
-        avg_drawdown = drawdown.mean()
-        
-        # Calculate drawdown duration
-        drawdown_periods = (drawdown < 0).sum()
-        total_periods = len(drawdown)
-        drawdown_duration = drawdown_periods / total_periods if total_periods > 0 else 0
-        
-        return {
-            'max_drawdown': max_drawdown,
-            'avg_drawdown': avg_drawdown,
-            'drawdown_duration': drawdown_duration
-        }
+        # Ensure we're working with numeric data only
+        try:
+            # Filter only numeric columns for total_value
+            numeric_df = df.select_dtypes(include=[np.number])
+            if 'total_value' not in numeric_df.columns:
+                # If total_value is not numeric, try to convert it
+                if 'total_value' in df.columns:
+                    df['total_value'] = pd.to_numeric(df['total_value'], errors='coerce')
+                    numeric_df = df.select_dtypes(include=[np.number])
+            
+            if 'total_value' not in numeric_df.columns:
+                logger.warning("total_value column not found or not numeric")
+                return {'max_drawdown': 0.0, 'avg_drawdown': 0.0, 'drawdown_duration': 0}
+            
+            # Calculate running maximum
+            running_max = numeric_df['total_value'].expanding().max()
+            drawdown = (numeric_df['total_value'] - running_max) / running_max
+            
+            max_drawdown = drawdown.min()
+            avg_drawdown = drawdown.mean()
+            
+            # Calculate drawdown duration - ensure drawdown is numeric
+            drawdown_numeric = pd.to_numeric(drawdown, errors='coerce')
+            drawdown_periods = (drawdown_numeric < 0).sum()
+            total_periods = len(drawdown_numeric)
+            drawdown_duration = drawdown_periods / total_periods if total_periods > 0 else 0
+            
+            return {
+                'max_drawdown': max_drawdown,
+                'avg_drawdown': avg_drawdown,
+                'drawdown_duration': drawdown_duration
+            }
+        except Exception as e:
+            logger.warning(f"Error calculating drawdown metrics: {e}")
+            return {'max_drawdown': 0.0, 'avg_drawdown': 0.0, 'drawdown_duration': 0}
     
     def _calculate_trade_metrics(self, strategy_name: str) -> Dict[str, Any]:
         """Calculate trade-based metrics"""

@@ -1,14 +1,27 @@
 """
 Technical Indicators Module
 
-This module provides comprehensive technical indicator calculations for trading analysis.
-Combines all indicator functionality including data manager integration.
+This module provides comprehensive technical analysis indicators.
 """
 
 import pandas as pd
 import numpy as np
 from typing import Dict, List, Any, Optional, Tuple
 from datetime import datetime
+
+# Try to import loguru, fallback to basic logging if not available
+try:
+    from loguru import logger
+except ImportError:
+    import logging
+    logger = logging.getLogger(__name__)
+    # Set up basic logging if loguru is not available
+    if not logger.handlers:
+        handler = logging.StreamHandler()
+        formatter = logging.Formatter('%(levelname)s: %(message)s')
+        handler.setFormatter(formatter)
+        logger.addHandler(handler)
+        logger.setLevel(logging.INFO)
 
 from .sma import calculate_sma
 from .rsi import calculate_rsi
@@ -27,7 +40,18 @@ def calculate_ema(prices: pd.Series, span: int) -> pd.Series:
     Returns:
         EMA series
     """
-    return prices.ewm(span=span).mean()
+    # Ensure prices is numeric
+    try:
+        prices_numeric = pd.to_numeric(prices, errors='coerce')
+        if prices_numeric.isna().all():
+            logger.warning("All prices are non-numeric, returning NaN series")
+            return pd.Series([np.nan] * len(prices), index=prices.index)
+        
+        # Calculate EMA only on numeric data
+        return prices_numeric.ewm(span=span).mean()
+    except Exception as e:
+        logger.warning(f"Error calculating EMA: {e}")
+        return pd.Series([np.nan] * len(prices), index=prices.index)
 
 
 def calculate_all_technical_indicators(data: pd.DataFrame, 
@@ -55,42 +79,55 @@ def calculate_all_technical_indicators(data: pd.DataFrame,
             
         price_series = data[symbol]
         
+        # Ensure price_series is numeric
+        try:
+            price_series_numeric = pd.to_numeric(price_series, errors='coerce')
+            if price_series_numeric.isna().all():
+                logger.warning(f"All prices for {symbol} are non-numeric, skipping indicators")
+                continue
+        except Exception as e:
+            logger.warning(f"Error converting prices to numeric for {symbol}: {e}")
+            continue
+        
         # Simple Moving Averages
-        result[f'{symbol}_SMA_20'] = calculate_sma(price_series, 20)
-        result[f'{symbol}_SMA_50'] = calculate_sma(price_series, 50)
+        result[f'{symbol}_SMA_20'] = calculate_sma(price_series_numeric, 20)
+        result[f'{symbol}_SMA_50'] = calculate_sma(price_series_numeric, 50)
         
         # Exponential Moving Averages
-        result[f'{symbol}_EMA_12'] = calculate_ema(price_series, 12)
-        result[f'{symbol}_EMA_26'] = calculate_ema(price_series, 26)
+        result[f'{symbol}_EMA_12'] = calculate_ema(price_series_numeric, 12)
+        result[f'{symbol}_EMA_26'] = calculate_ema(price_series_numeric, 26)
         
         # RSI
-        result[f'{symbol}_RSI'] = calculate_rsi(price_series, 14)
+        result[f'{symbol}_RSI'] = calculate_rsi(price_series_numeric, 14)
         
         # MACD
-        macd_line, signal_line, histogram = calculate_macd(price_series, 12, 26, 9)
+        macd_line, signal_line, histogram = calculate_macd(price_series_numeric, 12, 26, 9)
         result[f'{symbol}_MACD'] = macd_line
         result[f'{symbol}_MACD_Signal'] = signal_line
         result[f'{symbol}_MACD_Histogram'] = histogram
         
         # Bollinger Bands
-        bb_upper, bb_middle, bb_lower = calculate_bollinger_bands(price_series, 20, 2)
+        bb_upper, bb_middle, bb_lower = calculate_bollinger_bands(price_series_numeric, 20, 2)
         result[f'{symbol}_BB_Upper'] = bb_upper
         result[f'{symbol}_BB_Middle'] = bb_middle
         result[f'{symbol}_BB_Lower'] = bb_lower
         
-        # Additional indicators
-        result[f'{symbol}_Price_Change'] = price_series.pct_change()
-        result[f'{symbol}_Price_Change_Pct'] = price_series.pct_change() * 100
-        
-        # Volatility indicators
-        result[f'{symbol}_Volatility_20'] = price_series.rolling(window=20).std()
-        result[f'{symbol}_Volatility_50'] = price_series.rolling(window=50).std()
-        
-        # Price levels
-        result[f'{symbol}_High_20'] = price_series.rolling(window=20).max()
-        result[f'{symbol}_Low_20'] = price_series.rolling(window=20).min()
-        result[f'{symbol}_High_50'] = price_series.rolling(window=50).max()
-        result[f'{symbol}_Low_50'] = price_series.rolling(window=50).min()
+        # Additional indicators - ensure numeric operations
+        try:
+            result[f'{symbol}_Price_Change'] = price_series_numeric.pct_change()
+            result[f'{symbol}_Price_Change_Pct'] = price_series_numeric.pct_change() * 100
+            
+            # Volatility indicators
+            result[f'{symbol}_Volatility_20'] = price_series_numeric.rolling(window=20).std()
+            result[f'{symbol}_Volatility_50'] = price_series_numeric.rolling(window=50).std()
+            
+            # Price levels
+            result[f'{symbol}_High_20'] = price_series_numeric.rolling(window=20).max()
+            result[f'{symbol}_Low_20'] = price_series_numeric.rolling(window=20).min()
+            result[f'{symbol}_High_50'] = price_series_numeric.rolling(window=50).max()
+            result[f'{symbol}_Low_50'] = price_series_numeric.rolling(window=50).min()
+        except Exception as e:
+            logger.warning(f"Error calculating advanced indicators for {symbol}: {e}")
     
     return result
 
@@ -111,41 +148,54 @@ def calculate_indicators_for_symbol(price_data: pd.Series,
     """
     indicators = {}
     
+    # Ensure price_data is numeric
+    try:
+        price_data_numeric = pd.to_numeric(price_data, errors='coerce')
+        if price_data_numeric.isna().all():
+            logger.warning(f"All prices for {symbol} are non-numeric, returning empty indicators")
+            return indicators
+    except Exception as e:
+        logger.warning(f"Error converting prices to numeric for {symbol}: {e}")
+        return indicators
+    
     # Basic indicators
-    indicators[f'{symbol}_SMA_20'] = calculate_sma(price_data, 20)
-    indicators[f'{symbol}_SMA_50'] = calculate_sma(price_data, 50)
-    indicators[f'{symbol}_EMA_12'] = calculate_ema(price_data, 12)
-    indicators[f'{symbol}_EMA_26'] = calculate_ema(price_data, 26)
-    indicators[f'{symbol}_RSI'] = calculate_rsi(price_data, 14)
+    indicators[f'{symbol}_SMA_20'] = calculate_sma(price_data_numeric, 20)
+    indicators[f'{symbol}_SMA_50'] = calculate_sma(price_data_numeric, 50)
+    indicators[f'{symbol}_EMA_12'] = calculate_ema(price_data_numeric, 12)
+    indicators[f'{symbol}_EMA_26'] = calculate_ema(price_data_numeric, 26)
+    indicators[f'{symbol}_RSI'] = calculate_rsi(price_data_numeric, 14)
     
     # MACD components
-    macd_line, signal_line, histogram = calculate_macd(price_data, 12, 26, 9)
+    macd_line, signal_line, histogram = calculate_macd(price_data_numeric, 12, 26, 9)
     indicators[f'{symbol}_MACD'] = macd_line
     indicators[f'{symbol}_MACD_Signal'] = signal_line
     indicators[f'{symbol}_MACD_Histogram'] = histogram
     
     # Bollinger Bands
-    bb_upper, bb_middle, bb_lower = calculate_bollinger_bands(price_data, 20, 2)
+    bb_upper, bb_middle, bb_lower = calculate_bollinger_bands(price_data_numeric, 20, 2)
     indicators[f'{symbol}_BB_Upper'] = bb_upper
     indicators[f'{symbol}_BB_Middle'] = bb_middle
     indicators[f'{symbol}_BB_Lower'] = bb_lower
     
     if include_advanced:
-        # Advanced indicators
-        indicators[f'{symbol}_Price_Change'] = price_data.pct_change()
-        indicators[f'{symbol}_Price_Change_Pct'] = price_data.pct_change() * 100
-        indicators[f'{symbol}_Volatility_20'] = price_data.rolling(window=20).std()
-        indicators[f'{symbol}_Volatility_50'] = price_data.rolling(window=50).std()
-        indicators[f'{symbol}_High_20'] = price_data.rolling(window=20).max()
-        indicators[f'{symbol}_Low_20'] = price_data.rolling(window=20).min()
-        indicators[f'{symbol}_High_50'] = price_data.rolling(window=50).max()
-        indicators[f'{symbol}_Low_50'] = price_data.rolling(window=50).min()
+        # Advanced indicators - ensure numeric operations
+        try:
+            indicators[f'{symbol}_Price_Change'] = price_data_numeric.pct_change()
+            indicators[f'{symbol}_Price_Change_Pct'] = price_data_numeric.pct_change() * 100
+            indicators[f'{symbol}_Volatility_20'] = price_data_numeric.rolling(window=20).std()
+            indicators[f'{symbol}_Volatility_50'] = price_data_numeric.rolling(window=50).std()
+            indicators[f'{symbol}_High_20'] = price_data_numeric.rolling(window=20).max()
+            indicators[f'{symbol}_Low_20'] = price_data_numeric.rolling(window=20).min()
+            indicators[f'{symbol}_High_50'] = price_data_numeric.rolling(window=50).max()
+            indicators[f'{symbol}_Low_50'] = price_data_numeric.rolling(window=50).min()
+        except Exception as e:
+            logger.warning(f"Error calculating advanced indicators for {symbol}: {e}")
         
         # Additional moving averages
-        indicators[f'{symbol}_SMA_10'] = calculate_sma(price_data, 10)
-        indicators[f'{symbol}_SMA_30'] = calculate_sma(price_data, 30)
-        indicators[f'{symbol}_EMA_9'] = calculate_ema(price_data, 9)
-        indicators[f'{symbol}_EMA_21'] = calculate_ema(price_data, 21)
+        indicators[f'{symbol}_SMA_10'] = calculate_sma(price_data_numeric, 10)
+        indicators[f'{symbol}_SMA_30'] = calculate_sma(price_data_numeric, 30)
+        indicators[f'{symbol}_EMA_9'] = calculate_ema(price_data_numeric, 9)
+        indicators[f'{symbol}_EMA_21'] = calculate_ema(price_data_numeric, 21)
     
     return indicators
 

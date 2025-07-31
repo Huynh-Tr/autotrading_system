@@ -37,6 +37,8 @@ class Trade:
     timestamp: datetime
     commission: float
     strategy: str
+    pnl: float = 0.0
+    pnl_pct: float = 0.0
 
 
 class TradingEngine:
@@ -112,7 +114,7 @@ class TradingEngine:
             self._update_portfolio_value(date, row)
             self.portfolio_history.append({
                 'date': date,
-                'portfolio_value': self.portfolio_value,
+                'total_value': self.portfolio_value,
                 'cash': self.cash,
                 'positions_value': self.portfolio_value - self.cash
             })
@@ -256,7 +258,9 @@ class TradingEngine:
             price=price,
             timestamp=date,
             commission=commission,
-            strategy='strategy'
+            strategy='strategy',
+            pnl=pnl,
+            pnl_pct=pnl_pct
         ))
         
         logger.info(f"SELL: {quantity:.2f} {symbol} @ ${price:.2f} | P&L: ${pnl:.2f} ({pnl_pct:.2f}%)")
@@ -304,7 +308,7 @@ class TradingEngine:
         # Calculate metrics
         initial_capital = self.config.get("trading.initial_capital")
         total_return = (self.portfolio_value - initial_capital) / initial_capital
-        daily_returns = df['portfolio_value'].pct_change().dropna()
+        daily_returns = df['total_value'].pct_change().dropna()
         
         # Risk metrics
         volatility = daily_returns.std() * np.sqrt(252) if len(daily_returns) > 0 else 0  # Annualized
@@ -360,16 +364,79 @@ class TradingEngine:
             logger.info("Trade details saved to data/trades.csv")
     
     def get_portfolio_summary(self) -> Dict[str, Any]:
-        """Get current portfolio summary"""
+        """Get current portfolio summary with comprehensive metrics"""
+        initial_capital = self.config.get("trading.initial_capital", 100000)
+        total_value = self.portfolio_value
+        total_return = (total_value - initial_capital) / initial_capital
+        
+        # Calculate annualized return
+        if self.portfolio_history:
+            df = pd.DataFrame(self.portfolio_history)
+            df.set_index('date', inplace=True)
+            daily_returns = df['total_value'].pct_change().dropna()
+            
+            if len(daily_returns) > 0:
+                # Calculate trading days
+                trading_days = len(daily_returns)
+                annualized_return = ((1 + total_return) ** (252 / trading_days)) - 1 if trading_days > 0 else 0
+                
+                # Calculate Sharpe ratio
+                volatility = daily_returns.std() * np.sqrt(252) if daily_returns.std() > 0 else 0
+                sharpe_ratio = (daily_returns.mean() * 252) / volatility if volatility > 0 else 0
+                
+                # Calculate maximum drawdown
+                cumulative_returns = (1 + daily_returns).cumprod()
+                running_max = cumulative_returns.expanding().max()
+                drawdown = (cumulative_returns - running_max) / running_max
+                max_drawdown = drawdown.min()
+            else:
+                annualized_return = 0
+                sharpe_ratio = 0
+                max_drawdown = 0
+        else:
+            annualized_return = 0
+            sharpe_ratio = 0
+            max_drawdown = 0
+        
+        # Calculate win rate from trades
+        if self.trades:
+            buy_trades = [t for t in self.trades if t.side == 'buy']
+            sell_trades = [t for t in self.trades if t.side == 'sell']
+            
+            # Calculate win rate based on profitable trades
+            profitable_trades = 0
+            total_trades = len(sell_trades)  # Only completed trades (sells)
+            
+            for sell_trade in sell_trades:
+                # Find corresponding buy trade
+                buy_trades_for_symbol = [t for t in buy_trades if t.symbol == sell_trade.symbol]
+                if buy_trades_for_symbol:
+                    # Calculate P&L for this trade
+                    buy_price = buy_trades_for_symbol[0].price
+                    sell_price = sell_trade.price
+                    if sell_price > buy_price:
+                        profitable_trades += 1
+            
+            win_rate = (profitable_trades / total_trades) if total_trades > 0 else 0
+        else:
+            win_rate = 0
+            total_trades = 0
+        
         return {
+            'initial_capital': initial_capital,
+            'total_value': total_value,
+            'total_return': total_return,
+            'annualized_return': annualized_return,
+            'sharpe_ratio': sharpe_ratio,
+            'max_drawdown': max_drawdown,
+            'win_rate': win_rate,
+            'total_trades': len(self.trades),
             'cash': self.cash,
-            'portfolio_value': self.portfolio_value,
             'positions': {symbol: {
                 'quantity': pos.quantity,
                 'entry_price': pos.entry_price,
                 'current_price': pos.current_price,
                 'pnl': pos.pnl,
                 'pnl_pct': pos.pnl_pct
-            } for symbol, pos in self.positions.items()},
-            'total_trades': len(self.trades)
+            } for symbol, pos in self.positions.items()}
         } 
