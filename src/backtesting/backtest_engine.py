@@ -40,7 +40,7 @@ class BacktestEngine:
     def run_backtest(self, strategies: Dict[str, BaseStrategy], 
                     start_date: str, end_date: str) -> Dict[str, Any]:
         """
-        Run backtest for multiple strategies
+        Run backtest for multiple strategies using standardized OHLCV format
         
         Args:
             strategies: Dictionary of strategy name to strategy object
@@ -52,8 +52,8 @@ class BacktestEngine:
         """
         logger.info(f"Starting backtest from {start_date} to {end_date}")
         
-        # Get historical data
-        data = self.data_manager.get_historical_data(
+        # Get historical data with standardized OHLCV format
+        data = self.data_manager.get_historical_data_standardized(
             self.symbols, start_date, end_date
         )
         

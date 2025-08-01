@@ -119,11 +119,11 @@ class DataManager:
             'monthly': Interval.monthly,
             'weekly': Interval.weekly,
         }
+        
         try:
-            # symbols = ['Bitstamp:BTCUSD']
-            # interval = '1d'
+            all_data = {}
+            
             for symbol in symbols:
-                # print(symbol.split(':')[], symbol.split(':')[1], interval_map[interval], n_bars)
                 request = TradingViewData()
                 df = request.get_hist(
                     symbol=symbol.split(':')[1],
@@ -132,11 +132,27 @@ class DataManager:
                     n_bars=n_bars
                 ).drop(columns=['symbol']) \
                 .reset_index(drop=False)
-                df.columns = ['time', 'open', 'high', 'low', 'close', 'volume']
-                df['time'] = pd.to_datetime(df.time)                
                 
-            # combined_data = pd.concat(ohlcv_data.values(), axis=1)
-            return df
+                # Rename columns to standard OHLCV format
+                df.columns = ['time', 'open', 'high', 'low', 'close', 'volume']
+                df['time'] = pd.to_datetime(df.time, errors='coerce')
+                # Remove rows with invalid timestamps
+                df = df.dropna(subset=['time'])
+                df.set_index('time', inplace=True)
+                
+                # Create MultiIndex columns for this symbol
+                df.columns = pd.MultiIndex.from_product([[symbol], df.columns])
+                all_data[symbol] = df
+            
+            # Combine all symbols into one DataFrame
+            if all_data:
+                combined_data = pd.concat(all_data.values(), axis=1)
+                logger.info(f"Successfully fetched OHLCV data for {len(symbols)} symbols")
+                return combined_data
+            else:
+                logger.error("No data fetched for any symbols")
+                return pd.DataFrame()
+                
         except Exception as e:
             logger.error(f"Error fetching OHLCV data from TradingView: {e}")
             raise
@@ -146,16 +162,36 @@ class DataManager:
         """Fetch full OHLCV data from Yahoo Finance"""
         "1m,2m,5m,15m,30m,60m,90m,1h,1d,5d,1wk,1mo,3mo"
         try:
+            all_data = {}
+            
             for symbol in symbols:
-                # Download data for all symbols
+                # Download data for this symbol
                 data = yf.download(symbol, start=start_date, end=end_date, interval=interval, auto_adjust=True)
-                data = data.droplevel(1, axis=1) if isinstance(data.columns, pd.MultiIndex) else data
+                
+                if data.empty:
+                    logger.warning(f"No data found for {symbol}")
+                    continue
+                
+                # Reset index to get time as a column
                 data.reset_index(inplace=True)
+                
+                # Rename columns to standard format
                 data.columns = ['time', 'open', 'high', 'low', 'close', 'volume']
-                data['symbol'] = 'VHC.VN'
-                data['time'] = pd.to_datetime(data['time'], format='%Y-%m-%d %H:%M:%S')
+                data['time'] = pd.to_datetime(data['time'])
                 data.set_index('time', inplace=True)
-            return data
+                
+                # Create MultiIndex columns for this symbol
+                data.columns = pd.MultiIndex.from_product([[symbol], data.columns])
+                all_data[symbol] = data
+            
+            # Combine all symbols into one DataFrame
+            if all_data:
+                combined_data = pd.concat(all_data.values(), axis=1)
+                logger.info(f"Successfully fetched OHLCV data for {len(symbols)} symbols")
+                return combined_data
+            else:
+                logger.error("No data fetched for any symbols")
+                return pd.DataFrame()
             
         except Exception as e:
             logger.error(f"Error fetching OHLCV data from Yahoo Finance: {e}")
@@ -179,31 +215,28 @@ class DataManager:
             all_data = {}
             
             for symbol in symbols:
-                # print(symbol, start_date, end_date, interval_map[interval])
                 try:
                     data = Quote(symbol=symbol, source='tcbs').history(start=start_date, end=end_date, period=interval_map[interval])
-                    return data
-                    # if not data.empty:
-                    #     # Extract OHLCV data
-                    #     symbol_data = {
-                    #         'time': data.get('time', pd.Series(dtype=float)),
-                    #         'open': data.get('open', pd.Series(dtype=float)),
-                    #         'high': data.get('high', pd.Series(dtype=float)),
-                    #         'low': data.get('low', pd.Series(dtype=float)),
-                    #         'close': data.get('close', pd.Series(dtype=float)),
-                    #         'volume': data.get('volume', pd.Series(dtype=float))
-                    #     }
+                    
+                    if not data.empty:
+                        # Ensure data has the correct column names
+                        if 'time' not in data.columns:
+                            data.reset_index(inplace=True)
+                            data.columns = ['time', 'open', 'high', 'low', 'close', 'volume']
                         
-                    #     # Create MultiIndex for the symbol
-                    #     symbol_df = pd.DataFrame(symbol_data)
-                    #     symbol_df.columns = pd.MultiIndex.from_product([[symbol], symbol_df.columns])
-                    #     all_data[symbol] = symbol_df
-                    # else:
-                    #     logger.warning(f"No OHLCV data found for {symbol}")
-                    #     # Create empty DataFrame with proper structure
-                    #     empty_data = pd.DataFrame(columns=['time', 'open', 'high', 'low', 'close', 'volume'])
-                    #     empty_data.columns = pd.MultiIndex.from_product([[symbol], empty_data.columns])
-                    #     all_data[symbol] = empty_data
+                        # Convert time to datetime
+                        data['time'] = pd.to_datetime(data['time'])
+                        data.set_index('time', inplace=True)
+                        
+                        # Create MultiIndex columns for this symbol
+                        data.columns = pd.MultiIndex.from_product([[symbol], data.columns])
+                        all_data[symbol] = data
+                    else:
+                        logger.warning(f"No OHLCV data found for {symbol}")
+                        # Create empty DataFrame with proper structure
+                        empty_data = pd.DataFrame(columns=['time', 'open', 'high', 'low', 'close', 'volume'])
+                        empty_data.columns = pd.MultiIndex.from_product([[symbol], empty_data.columns])
+                        all_data[symbol] = empty_data
                         
                 except Exception as e:
                     logger.error(f"Error fetching OHLCV data for {symbol}: {e}")
@@ -215,8 +248,10 @@ class DataManager:
             # Combine all symbols into one DataFrame
             if all_data:
                 combined_data = pd.concat(all_data.values(), axis=1)
+                logger.info(f"Successfully fetched OHLCV data for {len(symbols)} symbols")
                 return combined_data
             else:
+                logger.error("No data fetched for any symbols")
                 return pd.DataFrame()
                 
         except Exception as e:
@@ -404,3 +439,208 @@ class DataManager:
         #         data[symbol] = symbol_data
         
         return data 
+
+    def ensure_ohlcv_format(self, data: pd.DataFrame, symbol: str = None) -> pd.DataFrame:
+        """
+        Ensure data has the standard OHLCV format with 6 columns: ['time', 'open', 'high', 'low', 'close', 'volume']
+        
+        Args:
+            data: Input DataFrame
+            symbol: Symbol name (optional, for logging)
+            
+        Returns:
+            DataFrame with standard OHLCV format
+        """
+        if data.empty:
+            logger.warning(f"Empty data provided for {symbol if symbol else 'unknown symbol'}")
+            return pd.DataFrame(columns=['time', 'open', 'high', 'low', 'close', 'volume'])
+        
+        # Create a copy to avoid modifying original
+        df = data.copy()
+        
+        # Handle different column name variations
+        column_mapping = {
+            'date': 'time',
+            'Date': 'time',
+            'DATE': 'time',
+            'timestamp': 'time',
+            'Timestamp': 'time',
+            'Open': 'open',
+            'OPEN': 'open',
+            'High': 'high',
+            'HIGH': 'high',
+            'Low': 'low',
+            'LOW': 'low',
+            'Close': 'close',
+            'CLOSE': 'close',
+            'Volume': 'volume',
+            'VOLUME': 'volume',
+            'vol': 'volume',
+            'VOL': 'volume'
+        }
+        
+        # Rename columns if they exist
+        for old_col, new_col in column_mapping.items():
+            if old_col in df.columns:
+                df = df.rename(columns={old_col: new_col})
+        
+        # Check if we have the required columns
+        required_columns = ['open', 'high', 'low', 'close', 'volume']
+        missing_columns = [col for col in required_columns if col not in df.columns]
+        
+        if missing_columns:
+            logger.warning(f"Missing columns for {symbol if symbol else 'unknown symbol'}: {missing_columns}")
+            # Add missing columns with NaN values
+            for col in missing_columns:
+                df[col] = np.nan
+        
+        # Ensure time column is datetime
+        if 'time' in df.columns:
+            df['time'] = pd.to_datetime(df['time'])
+            df.set_index('time', inplace=True)
+        elif df.index.name == 'time' or isinstance(df.index, pd.DatetimeIndex):
+            # Time is already the index
+            pass
+        else:
+            # Create a default time index if no time column exists
+            df.index = pd.date_range('2024-01-01', periods=len(df), freq='D')
+            df.index.name = 'time'
+        
+        # Ensure all price columns are numeric
+        price_columns = ['open', 'high', 'low', 'close']
+        for col in price_columns:
+            if col in df.columns:
+                df[col] = pd.to_numeric(df[col], errors='coerce')
+        
+        # Ensure volume is numeric
+        if 'volume' in df.columns:
+            df['volume'] = pd.to_numeric(df['volume'], errors='coerce')
+        
+        # Only reorder columns if all required columns exist
+        available_columns = [col for col in required_columns if col in df.columns]
+        if available_columns:
+            df = df[available_columns]
+        
+        logger.info(f"Data formatted for {symbol if symbol else 'unknown symbol'}: {df.shape}")
+        return df
+
+    def convert_to_standard_ohlcv(self, df: pd.DataFrame, symbol: str = None) -> pd.DataFrame:
+        """
+        Convert any DataFrame to standard OHLCV format
+        This is a utility method for external data sources
+        
+        Args:
+            df: Input DataFrame with any column names
+            symbol: Symbol name for logging
+            
+        Returns:
+            DataFrame with standard columns: ['time', 'open', 'high', 'low', 'close', 'volume']
+        """
+        if df.empty:
+            logger.warning(f"Empty DataFrame provided for {symbol if symbol else 'unknown symbol'}")
+            return pd.DataFrame(columns=['time', 'open', 'high', 'low', 'close', 'volume'])
+        
+        # Create a copy to avoid modifying original
+        result_df = df.copy()
+        
+        # Common column name mappings
+        column_mappings = {
+            # Time/Date columns
+            'date': 'time', 'Date': 'time', 'DATE': 'time', 'Date': 'time',
+            'timestamp': 'time', 'Timestamp': 'time', 'TIMESTAMP': 'time',
+            'datetime': 'time', 'DateTime': 'time', 'DATETIME': 'time',
+            
+            # Price columns
+            'open': 'open', 'Open': 'open', 'OPEN': 'open',
+            'high': 'high', 'High': 'high', 'HIGH': 'high',
+            'low': 'low', 'Low': 'low', 'LOW': 'low',
+            'close': 'close', 'Close': 'close', 'CLOSE': 'close',
+            
+            # Volume columns
+            'volume': 'volume', 'Volume': 'volume', 'VOLUME': 'volume',
+            'vol': 'volume', 'Vol': 'volume', 'VOL': 'volume',
+            'amount': 'volume', 'Amount': 'volume', 'AMOUNT': 'volume'
+        }
+        
+        # Rename columns
+        for old_col, new_col in column_mappings.items():
+            if old_col in result_df.columns:
+                result_df = result_df.rename(columns={old_col: new_col})
+        
+        # Check for required columns
+        required_columns = ['time', 'open', 'high', 'low', 'close', 'volume']
+        missing_columns = [col for col in required_columns if col not in result_df.columns]
+        
+        if missing_columns:
+            logger.warning(f"Missing columns for {symbol if symbol else 'unknown symbol'}: {missing_columns}")
+            # Add missing columns with NaN values
+            for col in missing_columns:
+                result_df[col] = np.nan
+        
+        # Ensure time column is datetime and set as index
+        if 'time' in result_df.columns:
+            result_df['time'] = pd.to_datetime(result_df['time'])
+            result_df.set_index('time', inplace=True)
+        
+        # Ensure all price columns are numeric
+        price_columns = ['open', 'high', 'low', 'close']
+        for col in price_columns:
+            if col in result_df.columns:
+                result_df[col] = pd.to_numeric(result_df[col], errors='coerce')
+        
+        # Ensure volume is numeric
+        if 'volume' in result_df.columns:
+            result_df['volume'] = pd.to_numeric(result_df['volume'], errors='coerce')
+        
+        # Only reorder columns if all required columns exist
+        available_columns = [col for col in required_columns if col in result_df.columns]
+        if available_columns:
+            result_df = result_df[available_columns]
+        
+        logger.info(f"Converted data for {symbol if symbol else 'unknown symbol'}: {result_df.shape}")
+        return result_df
+
+    def get_historical_data_standardized(self, symbols: List[str], start_date: str, 
+                                       end_date: str, interval: str = "1d", n_bars: int = 1000) -> pd.DataFrame:
+        """
+        Get historical data with guaranteed standard OHLCV format
+        Returns DataFrame with columns: ['time', 'open', 'high', 'low', 'close', 'volume']
+        """
+        logger.info(f"Fetching standardized OHLCV data for {symbols} from {start_date} to {end_date}")
+        
+        # Get the original data
+        data = self.get_historical_data(symbols, start_date, end_date, interval, n_bars)
+        
+        if data.empty:
+            logger.warning("No data received from data source")
+            return pd.DataFrame(columns=['time', 'open', 'high', 'low', 'close', 'volume'])
+        
+        # Process each symbol to ensure standard format
+        standardized_data = {}
+        
+        for symbol in symbols:
+            if symbol in data.columns.get_level_values(0):
+                symbol_data = self.get_symbol_ohlcv(data, symbol)
+                if not symbol_data.empty:
+                    # Ensure standard format for this symbol
+                    standardized_symbol_data = self.ensure_ohlcv_format(symbol_data, symbol)
+                    standardized_data[symbol] = standardized_symbol_data
+                else:
+                    logger.warning(f"No data found for symbol {symbol}")
+                    # Create empty DataFrame with standard format
+                    empty_df = pd.DataFrame(columns=['time', 'open', 'high', 'low', 'close', 'volume'])
+                    standardized_data[symbol] = empty_df
+            else:
+                logger.warning(f"Symbol {symbol} not found in data")
+                # Create empty DataFrame with standard format
+                empty_df = pd.DataFrame(columns=['time', 'open', 'high', 'low', 'close', 'volume'])
+                standardized_data[symbol] = empty_df
+        
+        # Combine all symbols
+        if standardized_data:
+            combined_data = pd.concat(standardized_data.values(), axis=1, keys=symbols)
+            logger.info(f"Successfully standardized OHLCV data for {len(symbols)} symbols")
+            return combined_data
+        else:
+            logger.error("No standardized data available")
+            return pd.DataFrame(columns=['time', 'open', 'high', 'low', 'close', 'volume']) 

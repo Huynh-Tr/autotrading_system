@@ -58,46 +58,39 @@ class RSIStrategy(BaseStrategy):
     
     def generate_signals(self, historical_data: pd.DataFrame, current_data: pd.Series) -> Dict[str, str]:
         """
-        Generate trading signals based on RSI
+        Generate trading signals based on RSI using standardized OHLCV format
         
         Args:
-            historical_data: Historical market data up to current point (OHLCV or close-only)
+            historical_data: Historical market data up to current point (standardized OHLCV)
             current_data: Current day's market data
             
         Returns:
             Dict mapping symbol to signal ('buy', 'sell', 'hold')
         """
+        from ..utils.ohlcv_utils import get_symbols_from_data, extract_price_data
+        
         signals = {}
         
-        # Handle both OHLCV data (MultiIndex columns) and legacy close-only data
-        if isinstance(historical_data.columns, pd.MultiIndex):
-            # New OHLCV data structure
-            symbols = historical_data.columns.get_level_values(0).unique()
-            for symbol in symbols:
-                if (symbol, 'close') in historical_data.columns:
-                    # Extract close prices for this symbol
-                    symbol_data = historical_data[(symbol, 'close')].dropna()
-                    
-                    if len(symbol_data) >= self.period + self.confirmation_period:
-                        signal = self._generate_signal_for_symbol(symbol_data, symbol)
-                        signals[symbol] = signal
-                    else:
-                        signals[symbol] = 'hold'  # Not enough data
-                else:
-                    logger.warning(f"No close data found for {symbol}")
-                    signals[symbol] = 'hold'
-        else:
-            # Legacy close-only data structure
-            for symbol in historical_data.columns:
-                if isinstance(symbol, str) and not symbol.endswith('_RSI'):
-                    # Get historical price data for this symbol
-                    symbol_data = historical_data[symbol].dropna()
-                    
-                    if len(symbol_data) >= self.period + self.confirmation_period:
-                        signal = self._generate_signal_for_symbol(symbol_data, symbol)
-                        signals[symbol] = signal
-                    else:
-                        signals[symbol] = 'hold'  # Not enough data
+        # Get symbols from the data
+        symbols = get_symbols_from_data(historical_data)
+        
+        for symbol in symbols:
+            # Extract close price data for this symbol
+            close_series = extract_price_data(historical_data, symbol, 'close')
+            
+            if close_series.empty:
+                logger.warning(f"No close data found for {symbol}")
+                signals[symbol] = 'hold'
+                continue
+            
+            # Drop NaN values
+            symbol_data = close_series.dropna()
+            
+            if len(symbol_data) >= self.period + self.confirmation_period:
+                signal = self._generate_signal_for_symbol(symbol_data, symbol)
+                signals[symbol] = signal
+            else:
+                signals[symbol] = 'hold'  # Not enough data
         
         return signals
     

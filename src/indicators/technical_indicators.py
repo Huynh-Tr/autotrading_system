@@ -58,30 +58,34 @@ def calculate_all_technical_indicators(data: pd.DataFrame,
                                     symbols: Optional[List[str]] = None,
                                     include_volume: bool = True) -> pd.DataFrame:
     """
-    Calculate all technical indicators for multiple symbols
+    Calculate all technical indicators for multiple symbols using standardized OHLCV format
     
     Args:
-        data: DataFrame with price data (columns are symbols)
-        symbols: List of symbols to process (if None, uses all columns)
+        data: DataFrame with standardized OHLCV format
+        symbols: List of symbols to process (if None, extracts from data)
         include_volume: Whether to include volume-based indicators
         
     Returns:
         DataFrame with original data plus all technical indicators
     """
+    from ..utils.ohlcv_utils import get_symbols_from_data, get_symbol_data, extract_price_data
+    
     if symbols is None:
-        symbols = list(data.columns)
+        symbols = get_symbols_from_data(data)
     
     result = data.copy()
     
     for symbol in symbols:
-        if symbol not in data.columns:
+        # Extract close price data for the symbol
+        close_series = extract_price_data(data, symbol, 'close')
+        
+        if close_series.empty:
+            logger.warning(f"No close data found for {symbol}, skipping indicators")
             continue
-            
-        price_series = data[symbol]
         
         # Ensure price_series is numeric
         try:
-            price_series_numeric = pd.to_numeric(price_series, errors='coerce')
+            price_series_numeric = pd.to_numeric(close_series, errors='coerce')
             if price_series_numeric.isna().all():
                 logger.warning(f"All prices for {symbol} are non-numeric, skipping indicators")
                 continue

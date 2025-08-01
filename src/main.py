@@ -56,7 +56,7 @@ def setup_logging(config: ConfigManager):
 
 
 def run_backtest(config_path: str, strategy_name: str):
-    """Run backtesting simulation"""
+    """Run backtest for a specific strategy"""
     logger.info("Starting backtest mode")
     
     # Load configuration
@@ -66,19 +66,34 @@ def run_backtest(config_path: str, strategy_name: str):
     # Initialize trading engine with config object
     engine = TradingEngine(config)
     
-    # Add strategies
+    # Add strategies based on enabled flag
     if strategy_name == "sma_crossover":
         strategy_config = config.get("strategies.sma_crossover", {})
-        strategy = SMACrossoverStrategy(strategy_config)
-        engine.add_strategy(strategy)
+        if strategy_config.get('enabled', True):
+            strategy = SMACrossoverStrategy(strategy_config)
+            engine.add_strategy(strategy)
+            logger.info("SMA Crossover strategy added (enabled)")
+        else:
+            logger.warning("SMA Crossover strategy is disabled in config")
+            return
     elif strategy_name == "rsi":
         strategy_config = config.get("strategies.rsi", {})
-        strategy = RSIStrategy(strategy_config)
-        engine.add_strategy(strategy)
+        if strategy_config.get('enabled', True):
+            strategy = RSIStrategy(strategy_config)
+            engine.add_strategy(strategy)
+            logger.info("RSI strategy added (enabled)")
+        else:
+            logger.warning("RSI strategy is disabled in config")
+            return
     elif strategy_name == "macd":
         strategy_config = config.get("strategies.macd", {})
-        strategy = MACDStrategy(strategy_config)
-        engine.add_strategy(strategy)
+        if strategy_config.get('enabled', True):
+            strategy = MACDStrategy(strategy_config)
+            engine.add_strategy(strategy)
+            logger.info("MACD strategy added (enabled)")
+        else:
+            logger.warning("MACD strategy is disabled in config")
+            return
     else:
         logger.error(f"Unknown strategy: {strategy_name}")
         return
@@ -104,26 +119,40 @@ def run_live_trading(config_path: str, strategy_name: str):
     # Initialize trading engine with config object
     engine = TradingEngine(config)
     
-    # Add strategies
+    # Add strategies based on enabled flag
     if strategy_name == "sma_crossover":
         strategy_config = config.get("strategies.sma_crossover", {})
-        strategy = SMACrossoverStrategy(strategy_config)
-        engine.add_strategy(strategy)
+        if strategy_config.get('enabled', True):
+            strategy = SMACrossoverStrategy(strategy_config)
+            engine.add_strategy(strategy)
+            logger.info("SMA Crossover strategy added (enabled)")
+        else:
+            logger.warning("SMA Crossover strategy is disabled in config")
+            return
     elif strategy_name == "rsi":
         strategy_config = config.get("strategies.rsi", {})
-        strategy = RSIStrategy(strategy_config)
-        engine.add_strategy(strategy)
+        if strategy_config.get('enabled', True):
+            strategy = RSIStrategy(strategy_config)
+            engine.add_strategy(strategy)
+            logger.info("RSI strategy added (enabled)")
+        else:
+            logger.warning("RSI strategy is disabled in config")
+            return
     elif strategy_name == "macd":
         strategy_config = config.get("strategies.macd", {})
-        strategy = MACDStrategy(strategy_config)
-        engine.add_strategy(strategy)
+        if strategy_config.get('enabled', True):
+            strategy = MACDStrategy(strategy_config)
+            engine.add_strategy(strategy)
+            logger.info("MACD strategy added (enabled)")
+        else:
+            logger.warning("MACD strategy is disabled in config")
+            return
     else:
         logger.error(f"Unknown strategy: {strategy_name}")
         return
     
-    # Run live trading
-    engine.run_live_trading()
-    
+    # TODO: Implement live trading functionality
+    logger.warning("Live trading not yet implemented")
     logger.info("Live trading completed")
 
 
@@ -138,26 +167,40 @@ def run_paper_trading(config_path: str, strategy_name: str):
     # Initialize trading engine with config object
     engine = TradingEngine(config)
     
-    # Add strategies
+    # Add strategies based on enabled flag
     if strategy_name == "sma_crossover":
         strategy_config = config.get("strategies.sma_crossover", {})
-        strategy = SMACrossoverStrategy(strategy_config)
-        engine.add_strategy(strategy)
+        if strategy_config.get('enabled', True):
+            strategy = SMACrossoverStrategy(strategy_config)
+            engine.add_strategy(strategy)
+            logger.info("SMA Crossover strategy added (enabled)")
+        else:
+            logger.warning("SMA Crossover strategy is disabled in config")
+            return
     elif strategy_name == "rsi":
         strategy_config = config.get("strategies.rsi", {})
-        strategy = RSIStrategy(strategy_config)
-        engine.add_strategy(strategy)
+        if strategy_config.get('enabled', True):
+            strategy = RSIStrategy(strategy_config)
+            engine.add_strategy(strategy)
+            logger.info("RSI strategy added (enabled)")
+        else:
+            logger.warning("RSI strategy is disabled in config")
+            return
     elif strategy_name == "macd":
         strategy_config = config.get("strategies.macd", {})
-        strategy = MACDStrategy(strategy_config)
-        engine.add_strategy(strategy)
+        if strategy_config.get('enabled', True):
+            strategy = MACDStrategy(strategy_config)
+            engine.add_strategy(strategy)
+            logger.info("MACD strategy added (enabled)")
+        else:
+            logger.warning("MACD strategy is disabled in config")
+            return
     else:
         logger.error(f"Unknown strategy: {strategy_name}")
         return
     
-    # Run paper trading (similar to live but with simulated execution)
-    engine.run_live_trading()
-    
+    # TODO: Implement paper trading functionality
+    logger.warning("Paper trading not yet implemented")
     logger.info("Paper trading completed")
 
 

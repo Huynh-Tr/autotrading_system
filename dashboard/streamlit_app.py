@@ -64,6 +64,15 @@ except ImportError as e:
     print(f"⚠️ MACDStrategy import error: {e}")
     MACDStrategy = MockStrategy
 
+try:
+    from utils.ohlcv_utils import get_symbols_from_data, extract_price_data, get_symbol_data
+    print("✅ OHLCV utilities imported successfully")
+except ImportError as e:
+    print(f"⚠️ OHLCV utilities import error: {e}")
+    get_symbols_from_data = None
+    extract_price_data = None
+    get_symbol_data = None
+
 # Page configuration
 st.set_page_config(
     page_title="Auto Trading System Dashboard",

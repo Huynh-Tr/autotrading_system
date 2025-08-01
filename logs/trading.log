@@ -2024,3 +2024,1263 @@
 2025-07-30 08:19:20 | INFO     | src.core.trading_engine:_generate_backtest_report:343 - Backtest results saved to data/backtest_results.csv
 2025-07-30 08:19:20 | INFO     | src.core.trading_engine:_generate_backtest_report:360 - Trade details saved to data/trades.csv
 2025-07-30 08:19:20 | INFO     | __main__:run_backtest:93 - Backtest completed
+2025-08-01 09:32:14 | INFO     | src.risk.risk_manager:__init__:49 - Risk manager initialized
+2025-08-01 09:32:14 | INFO     | src.core.trading_engine:__init__:76 - Trading engine initialized with $100,000.00 initial capital
+2025-08-01 09:32:14 | WARNING  | __main__:run_backtest:86 - RSI strategy is disabled in config
+2025-08-01 09:32:28 | INFO     | src.risk.risk_manager:__init__:49 - Risk manager initialized
+2025-08-01 09:32:28 | INFO     | src.core.trading_engine:__init__:76 - Trading engine initialized with $100,000.00 initial capital
+2025-08-01 09:32:28 | INFO     | src.strategies.base_strategy:__init__:37 - Initialized strategy: sma_crossover (enabled: True)
+2025-08-01 09:32:28 | INFO     | src.strategies.sma_crossover:__init__:48 - SMA Crossover Strategy initialized: 5/30
+2025-08-01 09:32:28 | INFO     | src.core.trading_engine:add_strategy:81 - Added strategy: sma_crossover
+2025-08-01 09:32:28 | INFO     | __main__:run_backtest:75 - SMA Crossover strategy added (enabled)
+2025-08-01 09:32:28 | INFO     | src.core.trading_engine:run_backtest:85 - Starting backtest from 2023-01-01 to 2025-07-31
+2025-08-01 09:32:28 | INFO     | src.data.data_manager:get_historical_data:60 - Fetching historical OHLCV data for ['Bitstamp:BTCUSD'] from 2023-01-01 to 2025-07-31
+2025-08-01 09:32:28 | INFO     | src.data.data_manager:get_historical_data:93 - OHLCV data cached successfully
+2025-08-01 09:32:28 | INFO     | src.core.trading_engine:run_backtest:106 - Loaded 1000 data points for ['time', 'open', 'high', 'low', 'close', 'volume']
+2025-08-01 09:32:28 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for time: 1740034800000000000.00 > 1739854800000000000.00
+2025-08-01 09:32:28 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for open: 96540.00 > 96361.30
+2025-08-01 09:32:28 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for high: 97079.80 > 96778.13
+2025-08-01 09:32:28 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for low: 96304.00 > 95946.87
+2025-08-01 09:32:28 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for close: 96805.80 > 96350.57
+2025-08-01 09:32:28 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for volume: 205.68 > 154.09
+2025-08-01 09:32:28 | WARNING  | src.risk.risk_manager:can_buy:64 - Price for time is a Timestamp, cannot calculate position size
+2025-08-01 09:32:28 | INFO     | src.core.trading_engine:_execute_buy_order:228 - BUY: 0.21 open @ $96887.00
+2025-08-01 09:32:28 | INFO     | src.core.trading_engine:_execute_buy_order:228 - BUY: 0.16 high @ $97376.00
+2025-08-01 09:32:28 | INFO     | src.core.trading_engine:_execute_buy_order:228 - BUY: 0.13 low @ $96818.00
+2025-08-01 09:32:28 | INFO     | src.core.trading_engine:_execute_buy_order:228 - BUY: 0.11 close @ $97211.00
+2025-08-01 09:32:28 | INFO     | src.core.trading_engine:_execute_buy_order:228 - BUY: 88.07 volume @ $92.92
+2025-08-01 09:32:28 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for low: 95837.00 < 95951.20
+2025-08-01 09:32:28 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for close: 96412.20 < 96463.27
+2025-08-01 09:32:28 | INFO     | src.core.trading_engine:_execute_sell_order:266 - SELL: 0.13 low @ $96280.00 | P&L: $-83.81 (-0.66%)
+2025-08-01 09:32:28 | INFO     | src.core.trading_engine:_execute_sell_order:266 - SELL: 0.11 close @ $96296.00 | P&L: $-106.45 (-1.04%)
+2025-08-01 09:32:28 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for open: 96417.40 < 96465.83
+2025-08-01 09:32:28 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for high: 96903.40 < 97047.43
+2025-08-01 09:32:28 | INFO     | src.core.trading_engine:_execute_sell_order:266 - SELL: 0.21 open @ $96297.00 | P&L: $-141.67 (-0.71%)
+2025-08-01 09:32:28 | INFO     | src.core.trading_engine:_execute_sell_order:266 - SELL: 0.16 high @ $96580.00 | P&L: $-146.62 (-0.92%)
+2025-08-01 09:32:28 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for volume: 245.58 < 275.41
+2025-08-01 09:32:28 | INFO     | src.core.trading_engine:_execute_sell_order:266 - SELL: 88.07 volume @ $147.77 | P&L: $4817.90 (58.87%)
+2025-08-01 09:32:28 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for low: 96210.40 > 96026.20
+2025-08-01 09:32:28 | INFO     | src.core.trading_engine:_execute_buy_order:228 - BUY: 0.22 low @ $96379.00
+2025-08-01 09:32:28 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for low: 96130.60 < 96161.17
+2025-08-01 09:32:28 | INFO     | src.core.trading_engine:_execute_sell_order:266 - SELL: 0.22 low @ $95448.00 | P&L: $-222.10 (-1.07%)
+2025-08-01 09:32:28 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for volume: 314.01 > 249.94
+2025-08-01 09:32:28 | INFO     | src.core.trading_engine:_execute_buy_order:228 - BUY: 33.33 volume @ $624.21
+2025-08-01 09:32:28 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for volume: 379.01 < 386.37
+2025-08-01 09:32:28 | INFO     | src.core.trading_engine:_execute_sell_order:266 - SELL: 33.33 volume @ $495.19 | P&L: $-4316.76 (-20.75%)
+2025-08-01 09:32:28 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for volume: 435.66 > 406.51
+2025-08-01 09:32:28 | INFO     | src.core.trading_engine:_execute_buy_order:228 - BUY: 29.99 volume @ $664.88
+2025-08-01 09:32:28 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for volume: 468.97 < 507.43
+2025-08-01 09:32:28 | INFO     | src.core.trading_engine:_execute_sell_order:266 - SELL: 29.99 volume @ $226.54 | P&L: $-13151.67 (-65.96%)
+2025-08-01 09:32:28 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for low: 84663.60 > 84504.50
+2025-08-01 09:32:28 | INFO     | src.core.trading_engine:_execute_buy_order:228 - BUY: 0.20 low @ $85274.00
+2025-08-01 09:32:28 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for close: 85656.20 > 85388.63
+2025-08-01 09:32:28 | INFO     | src.core.trading_engine:_execute_buy_order:228 - BUY: 0.16 close @ $86210.00
+2025-08-01 09:32:28 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for open: 85656.60 > 85389.33
+2025-08-01 09:32:28 | INFO     | src.core.trading_engine:_execute_buy_order:228 - BUY: 0.13 open @ $86210.00
+2025-08-01 09:32:28 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for high: 86806.40 > 86178.83
+2025-08-01 09:32:28 | INFO     | src.core.trading_engine:_execute_buy_order:228 - BUY: 0.10 high @ $88632.00
+2025-08-01 09:32:28 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for volume: 562.03 > 471.40
+2025-08-01 09:32:28 | INFO     | src.core.trading_engine:_execute_buy_order:228 - BUY: 4.17 volume @ $1700.01
+2025-08-01 09:32:28 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for volume: 431.85 < 482.73
+2025-08-01 09:32:28 | INFO     | src.core.trading_engine:_execute_sell_order:266 - SELL: 4.17 volume @ $967.82 | P&L: $-3053.61 (-43.13%)
+2025-08-01 09:32:28 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for volume: 508.95 > 472.87
+2025-08-01 09:32:28 | INFO     | src.core.trading_engine:_execute_buy_order:228 - BUY: 8.88 volume @ $728.36
+2025-08-01 09:32:28 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for close: 85749.40 < 86137.67
+2025-08-01 09:32:28 | INFO     | src.core.trading_engine:_execute_sell_order:266 - SELL: 0.16 close @ $83142.00 | P&L: $-505.87 (-3.66%)
+2025-08-01 09:32:28 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for open: 85752.20 < 86132.60
+2025-08-01 09:32:28 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for high: 86686.00 < 87253.97
+2025-08-01 09:32:28 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for low: 83826.60 < 84889.67
+2025-08-01 09:32:28 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for volume: 446.14 < 462.92
+2025-08-01 09:32:28 | INFO     | src.core.trading_engine:_execute_sell_order:266 - SELL: 0.13 open @ $83141.00 | P&L: $-404.72 (-3.66%)
+2025-08-01 09:32:28 | INFO     | src.core.trading_engine:_execute_sell_order:266 - SELL: 0.10 high @ $84310.00 | P&L: $-440.12 (-4.97%)
+2025-08-01 09:32:28 | INFO     | src.core.trading_engine:_execute_sell_order:266 - SELL: 0.20 low @ $83002.00 | P&L: $-477.88 (-2.76%)
+2025-08-01 09:32:28 | INFO     | src.core.trading_engine:_execute_sell_order:266 - SELL: 8.88 volume @ $254.75 | P&L: $-4208.38 (-65.06%)
+2025-08-01 09:32:28 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for volume: 483.83 > 476.88
+2025-08-01 09:32:28 | INFO     | src.core.trading_engine:_execute_buy_order:228 - BUY: 16.88 volume @ $916.83
+2025-08-01 09:32:28 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for high: 88711.60 > 88083.17
+2025-08-01 09:32:28 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for low: 85855.40 > 85675.43
+2025-08-01 09:32:28 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for close: 87930.40 > 87000.40
+2025-08-01 09:32:28 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for volume: 385.41 < 427.96
+2025-08-01 09:32:28 | INFO     | src.core.trading_engine:_execute_buy_order:228 - BUY: 0.14 high @ $90623.00
+2025-08-01 09:32:28 | INFO     | src.core.trading_engine:_execute_buy_order:228 - BUY: 0.11 low @ $87588.00
+2025-08-01 09:32:28 | INFO     | src.core.trading_engine:_execute_buy_order:228 - BUY: 0.09 close @ $89829.00
+2025-08-01 09:32:28 | INFO     | src.core.trading_engine:_execute_sell_order:266 - SELL: 16.88 volume @ $562.83 | P&L: $-5983.88 (-38.67%)
+2025-08-01 09:32:28 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for open: 87939.60 > 86996.73
+2025-08-01 09:32:28 | INFO     | src.core.trading_engine:_execute_buy_order:228 - BUY: 0.09 open @ $89802.00
+2025-08-01 09:32:28 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for volume: 521.56 > 469.03
+2025-08-01 09:32:28 | INFO     | src.core.trading_engine:_execute_buy_order:228 - BUY: 6.83 volume @ $963.34
+2025-08-01 09:32:28 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for low: 87172.80 < 87386.83
+2025-08-01 09:32:28 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for close: 88541.60 < 88823.27
+2025-08-01 09:32:28 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for volume: 463.54 < 479.10
+2025-08-01 09:32:28 | INFO     | src.core.trading_engine:_execute_sell_order:266 - SELL: 0.11 low @ $87992.00 | P&L: $35.71 (0.36%)
+2025-08-01 09:32:28 | INFO     | src.core.trading_engine:_execute_sell_order:266 - SELL: 0.09 close @ $88957.00 | P&L: $-84.68 (-1.07%)
+2025-08-01 09:32:28 | INFO     | src.core.trading_engine:_execute_sell_order:266 - SELL: 6.83 volume @ $277.66 | P&L: $-4686.55 (-71.21%)
+2025-08-01 09:32:28 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for open: 88558.20 < 88826.77
+2025-08-01 09:32:28 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for high: 90282.40 < 90295.90
+2025-08-01 09:32:28 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for volume: 574.48 > 483.45
+2025-08-01 09:32:28 | INFO     | src.core.trading_engine:_execute_sell_order:266 - SELL: 0.09 open @ $88979.00 | P&L: $-83.57 (-1.02%)
+2025-08-01 09:32:28 | INFO     | src.core.trading_engine:_execute_sell_order:266 - SELL: 0.14 high @ $91081.00 | P&L: $50.11 (0.40%)
+2025-08-01 09:32:28 | INFO     | src.core.trading_engine:_execute_buy_order:228 - BUY: 13.59 volume @ $979.31
+2025-08-01 09:32:28 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for volume: 422.88 < 432.26
+2025-08-01 09:32:28 | INFO     | src.core.trading_engine:_execute_sell_order:266 - SELL: 13.59 volume @ $83.64 | P&L: $-12174.62 (-91.47%)
+2025-08-01 09:32:28 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for volume: 331.17 > 319.30
+2025-08-01 09:32:28 | INFO     | src.core.trading_engine:_execute_buy_order:228 - BUY: 16.21 volume @ $670.83
+2025-08-01 09:32:28 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for volume: 288.51 < 354.98
+2025-08-01 09:32:28 | INFO     | src.core.trading_engine:_execute_sell_order:266 - SELL: 16.21 volume @ $215.31 | P&L: $-7386.44 (-67.94%)
+2025-08-01 09:32:28 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for volume: 413.68 > 359.04
+2025-08-01 09:32:28 | INFO     | src.core.trading_engine:_execute_buy_order:228 - BUY: 8.53 volume @ $1101.11
+2025-08-01 09:32:28 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for low: 82045.60 > 82013.83
+2025-08-01 09:32:28 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for close: 82957.80 > 82925.43
+2025-08-01 09:32:28 | INFO     | src.core.trading_engine:_execute_buy_order:228 - BUY: 0.09 low @ $83310.00
+2025-08-01 09:32:28 | INFO     | src.core.trading_engine:_execute_buy_order:228 - BUY: 0.07 close @ $83543.00
+2025-08-01 09:32:28 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for open: 82965.20 > 82929.93
+2025-08-01 09:32:28 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for high: 83880.80 > 83673.83
+2025-08-01 09:32:28 | INFO     | src.core.trading_engine:_execute_buy_order:228 - BUY: 0.06 open @ $83551.00
+2025-08-01 09:32:28 | INFO     | src.core.trading_engine:_execute_buy_order:228 - BUY: 0.05 high @ $83691.00
+2025-08-01 09:32:28 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for volume: 226.93 < 357.57
+2025-08-01 09:32:28 | INFO     | src.core.trading_engine:_execute_sell_order:266 - SELL: 8.53 volume @ $267.88 | P&L: $-7110.30 (-75.70%)
+2025-08-01 09:32:28 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for high: 83310.00 < 83310.67
+2025-08-01 09:32:28 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for close: 82161.00 < 82345.27
+2025-08-01 09:32:28 | INFO     | src.core.trading_engine:_execute_sell_order:266 - SELL: 0.05 high @ $81231.00 | P&L: $-116.71 (-3.04%)
+2025-08-01 09:32:28 | INFO     | src.core.trading_engine:_execute_sell_order:266 - SELL: 0.07 close @ $80128.00 | P&L: $-251.38 (-4.18%)
+2025-08-01 09:32:28 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for open: 82161.40 < 82349.13
+2025-08-01 09:32:28 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for low: 81257.40 < 81266.47
+2025-08-01 09:32:28 | INFO     | src.core.trading_engine:_execute_sell_order:266 - SELL: 0.06 open @ $80158.00 | P&L: $-199.77 (-4.16%)
+2025-08-01 09:32:28 | INFO     | src.core.trading_engine:_execute_sell_order:266 - SELL: 0.09 low @ $80158.00 | P&L: $-291.47 (-3.88%)
+2025-08-01 09:32:28 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for low: 80965.20 > 80877.57
+2025-08-01 09:32:28 | INFO     | src.core.trading_engine:_execute_buy_order:228 - BUY: 0.09 low @ $82180.00
+2025-08-01 09:32:28 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for high: 82939.20 > 82797.50
+2025-08-01 09:32:28 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for close: 82621.60 > 81903.60
+2025-08-01 09:32:28 | INFO     | src.core.trading_engine:_execute_buy_order:228 - BUY: 0.07 high @ $85294.00
+2025-08-01 09:32:28 | INFO     | src.core.trading_engine:_execute_buy_order:228 - BUY: 0.06 close @ $84724.00
+2025-08-01 09:32:28 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for open: 82620.40 > 81910.30
+2025-08-01 09:32:28 | INFO     | src.core.trading_engine:_execute_buy_order:228 - BUY: 0.05 open @ $84724.00
+2025-08-01 09:32:28 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for low: 82379.60 < 82543.63
+2025-08-01 09:32:28 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for close: 83017.00 < 83173.83
+2025-08-01 09:32:28 | INFO     | src.core.trading_engine:_execute_sell_order:266 - SELL: 0.09 low @ $82521.00 | P&L: $24.51 (0.31%)
+2025-08-01 09:32:28 | INFO     | src.core.trading_engine:_execute_sell_order:266 - SELL: 0.06 close @ $83709.00 | P&L: $-64.65 (-1.30%)
+2025-08-01 09:32:28 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for open: 83026.80 < 83178.17
+2025-08-01 09:32:28 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for close: 83248.80 > 83212.33
+2025-08-01 09:32:28 | INFO     | src.core.trading_engine:_execute_sell_order:266 - SELL: 0.05 open @ $83713.00 | P&L: $-51.52 (-1.29%)
+2025-08-01 09:32:28 | INFO     | src.core.trading_engine:_execute_buy_order:228 - BUY: 0.08 close @ $83564.00
+2025-08-01 09:32:28 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for open: 83254.00 > 83216.33
+2025-08-01 09:32:28 | INFO     | src.core.trading_engine:_execute_buy_order:228 - BUY: 0.06 open @ $83540.00
+2025-08-01 09:32:28 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for high: 83732.20 < 83828.60
+2025-08-01 09:32:28 | INFO     | src.core.trading_engine:_execute_sell_order:266 - SELL: 0.07 high @ $83952.00 | P&L: $-104.20 (-1.67%)
+2025-08-01 09:32:28 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for high: 83999.60 > 83882.57
+2025-08-01 09:32:28 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for low: 82796.40 > 82742.67
+2025-08-01 09:32:28 | INFO     | src.core.trading_engine:_execute_buy_order:228 - BUY: 0.06 high @ $84741.00
+2025-08-01 09:32:28 | INFO     | src.core.trading_engine:_execute_buy_order:228 - BUY: 0.05 low @ $83116.00
+2025-08-01 09:32:28 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for volume: 220.59 > 220.45
+2025-08-01 09:32:28 | INFO     | src.core.trading_engine:_execute_buy_order:228 - BUY: 17.43 volume @ $198.09
+2025-08-01 09:32:28 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for volume: 179.79 < 220.06
+2025-08-01 09:32:28 | INFO     | src.core.trading_engine:_execute_sell_order:266 - SELL: 17.43 volume @ $148.26 | P&L: $-871.32 (-25.23%)
+2025-08-01 09:32:28 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for high: 83577.40 < 83839.27
+2025-08-01 09:32:28 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for low: 82525.20 < 82756.03
+2025-08-01 09:32:28 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for close: 82909.40 < 83349.00
+2025-08-01 09:32:28 | INFO     | src.core.trading_engine:_execute_sell_order:266 - SELL: 0.06 high @ $82803.00 | P&L: $-128.74 (-2.38%)
+2025-08-01 09:32:28 | INFO     | src.core.trading_engine:_execute_sell_order:266 - SELL: 0.05 low @ $81138.00 | P&L: $-106.97 (-2.48%)
+2025-08-01 09:32:28 | INFO     | src.core.trading_engine:_execute_sell_order:266 - SELL: 0.08 close @ $81606.00 | P&L: $-159.22 (-2.44%)
+2025-08-01 09:32:28 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for open: 82856.80 < 83341.80
+2025-08-01 09:32:28 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for volume: 246.16 > 207.84
+2025-08-01 09:32:28 | INFO     | src.core.trading_engine:_execute_sell_order:266 - SELL: 0.06 open @ $81587.00 | P&L: $-127.07 (-2.44%)
+2025-08-01 09:32:28 | INFO     | src.core.trading_engine:_execute_buy_order:228 - BUY: 27.19 volume @ $274.61
+2025-08-01 09:32:28 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for volume: 202.09 < 204.63
+2025-08-01 09:32:28 | INFO     | src.core.trading_engine:_execute_sell_order:266 - SELL: 27.19 volume @ $115.63 | P&L: $-4325.19 (-57.94%)
+2025-08-01 09:32:28 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for high: 84294.00 > 84034.10
+2025-08-01 09:32:28 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for low: 83142.20 > 83003.00
+2025-08-01 09:32:28 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for close: 84060.60 > 83599.83
+2025-08-01 09:32:28 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for volume: 307.10 > 194.97
+2025-08-01 09:32:28 | INFO     | src.core.trading_engine:_execute_buy_order:228 - BUY: 0.08 high @ $85950.00
+2025-08-01 09:32:28 | INFO     | src.core.trading_engine:_execute_buy_order:228 - BUY: 0.06 low @ $83596.00
+2025-08-01 09:32:28 | INFO     | src.core.trading_engine:_execute_buy_order:228 - BUY: 0.05 close @ $85467.00
+2025-08-01 09:32:28 | INFO     | src.core.trading_engine:_execute_buy_order:228 - BUY: 4.09 volume @ $825.60
+2025-08-01 09:32:28 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for open: 84093.00 > 83596.50
+2025-08-01 09:32:28 | WARNING  | src.risk.risk_manager:can_buy:83 - Insufficient cash: $13501.36 < $18802.52
+2025-08-01 09:32:28 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for volume: 167.55 < 240.96
+2025-08-01 09:32:28 | INFO     | src.core.trading_engine:_execute_sell_order:266 - SELL: 4.09 volume @ $110.12 | P&L: $-2926.32 (-86.68%)
+2025-08-01 09:32:28 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for high: 84455.00 < 84479.67
+2025-08-01 09:32:28 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for close: 83882.20 < 83981.73
+2025-08-01 09:32:28 | INFO     | src.core.trading_engine:_execute_sell_order:266 - SELL: 0.08 high @ $84530.00 | P&L: $-115.51 (-1.75%)
+2025-08-01 09:32:28 | INFO     | src.core.trading_engine:_execute_sell_order:266 - SELL: 0.05 close @ $84061.00 | P&L: $-73.60 (-1.74%)
+2025-08-01 09:32:28 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for open: 83881.40 < 83980.53
+2025-08-01 09:32:28 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for close: 84133.40 > 84045.20
+2025-08-01 09:32:28 | INFO     | src.core.trading_engine:_execute_buy_order:228 - BUY: 0.06 close @ $84206.00
+2025-08-01 09:32:28 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for open: 84130.20 > 84045.03
+2025-08-01 09:32:28 | INFO     | src.core.trading_engine:_execute_buy_order:228 - BUY: 0.05 open @ $84207.00
+2025-08-01 09:32:28 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for open: 84084.60 < 84088.00
+2025-08-01 09:32:28 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for close: 84114.40 < 84120.00
+2025-08-01 09:32:28 | INFO     | src.core.trading_engine:_execute_sell_order:266 - SELL: 0.05 open @ $84136.00 | P&L: $-7.24 (-0.18%)
+2025-08-01 09:32:28 | INFO     | src.core.trading_engine:_execute_sell_order:266 - SELL: 0.06 close @ $84272.00 | P&L: $-1.07 (-0.02%)
+2025-08-01 09:32:28 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for close: 84223.20 > 84188.80
+2025-08-01 09:32:28 | INFO     | src.core.trading_engine:_execute_buy_order:228 - BUY: 0.06 close @ $84651.00
+2025-08-01 09:32:28 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for open: 84211.00 > 84196.60
+2025-08-01 09:32:28 | INFO     | src.core.trading_engine:_execute_buy_order:228 - BUY: 0.05 open @ $84652.00
+2025-08-01 09:32:28 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for high: 84832.20 > 84804.33
+2025-08-01 09:32:28 | WARNING  | src.risk.risk_manager:can_buy:83 - Insufficient cash: $15713.93 < $18785.14
+2025-08-01 09:32:28 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for volume: 272.06 > 212.98
+2025-08-01 09:32:28 | INFO     | src.core.trading_engine:_execute_buy_order:228 - BUY: 4.14 volume @ $759.23
+2025-08-01 09:32:28 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for volume: 125.25 < 220.50
+2025-08-01 09:32:28 | INFO     | src.core.trading_engine:_execute_sell_order:266 - SELL: 4.14 volume @ $91.83 | P&L: $-2763.06 (-87.92%)
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for volume: 262.14 > 247.56
+2025-08-01 09:32:29 | INFO     | src.core.trading_engine:_execute_buy_order:228 - BUY: 3.02 volume @ $857.71
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for volume: 238.59 < 250.30
+2025-08-01 09:32:29 | INFO     | src.core.trading_engine:_execute_sell_order:266 - SELL: 3.02 volume @ $116.87 | P&L: $-2237.04 (-86.39%)
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for volume: 255.74 > 252.18
+2025-08-01 09:32:29 | INFO     | src.core.trading_engine:_execute_buy_order:228 - BUY: 18.49 volume @ $115.82
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for high: 87397.40 < 87451.47
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for low: 86287.00 < 86453.33
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for close: 86631.80 < 86957.43
+2025-08-01 09:32:29 | INFO     | src.core.trading_engine:_execute_sell_order:266 - SELL: 0.06 low @ $85140.00 | P&L: $92.11 (1.75%)
+2025-08-01 09:32:29 | INFO     | src.core.trading_engine:_execute_sell_order:266 - SELL: 0.06 close @ $85167.00 | P&L: $25.01 (0.51%)
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for open: 86637.80 < 86959.83
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for volume: 153.86 < 263.13
+2025-08-01 09:32:29 | INFO     | src.core.trading_engine:_execute_sell_order:266 - SELL: 0.05 open @ $85167.00 | P&L: $19.95 (0.51%)
+2025-08-01 09:32:29 | INFO     | src.core.trading_engine:_execute_sell_order:266 - SELL: 18.49 volume @ $187.77 | P&L: $1326.87 (61.96%)
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for volume: 203.16 > 203.12
+2025-08-01 09:32:29 | INFO     | src.core.trading_engine:_execute_buy_order:228 - BUY: 29.52 volume @ $178.14
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for close: 83625.40 > 83590.23
+2025-08-01 09:32:29 | INFO     | src.core.trading_engine:_execute_buy_order:228 - BUY: 0.05 close @ $85271.00
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for open: 83633.20 > 83593.73
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for high: 84454.60 > 84040.27
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for low: 83199.20 > 83024.73
+2025-08-01 09:32:29 | WARNING  | src.risk.risk_manager:can_buy:83 - Insufficient cash: $16817.41 < $18769.08
+2025-08-01 09:32:29 | WARNING  | src.risk.risk_manager:can_buy:83 - Insufficient cash: $16817.41 < $18808.46
+2025-08-01 09:32:29 | WARNING  | src.risk.risk_manager:can_buy:83 - Insufficient cash: $16817.41 < $18640.82
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for volume: 208.82 < 217.70
+2025-08-01 09:32:29 | INFO     | src.core.trading_engine:_execute_sell_order:266 - SELL: 29.52 volume @ $156.99 | P&L: $-628.99 (-11.96%)
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for volume: 335.33 > 231.98
+2025-08-01 09:32:29 | INFO     | src.core.trading_engine:_execute_buy_order:228 - BUY: 5.22 volume @ $822.26
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for low: 82342.20 < 82726.00
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for close: 82925.60 < 83460.23
+2025-08-01 09:32:29 | INFO     | src.core.trading_engine:_execute_sell_order:266 - SELL: 0.05 close @ $82032.00 | P&L: $-163.79 (-3.89%)
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for open: 82894.80 < 83456.27
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for high: 83381.60 < 84080.97
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for volume: 224.60 < 312.52
+2025-08-01 09:32:29 | INFO     | src.core.trading_engine:_execute_sell_order:266 - SELL: 5.22 volume @ $439.29 | P&L: $-2000.07 (-46.63%)
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for volume: 342.37 > 336.37
+2025-08-01 09:32:29 | INFO     | src.core.trading_engine:_execute_buy_order:228 - BUY: 5.67 volume @ $828.01
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for low: 82948.00 > 82852.63
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for volume: 280.42 < 327.59
+2025-08-01 09:32:29 | INFO     | src.core.trading_engine:_execute_buy_order:228 - BUY: 0.05 low @ $83322.00
+2025-08-01 09:32:29 | INFO     | src.core.trading_engine:_execute_sell_order:266 - SELL: 5.67 volume @ $37.35 | P&L: $-4485.09 (-95.49%)
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for low: 82885.80 < 82970.13
+2025-08-01 09:32:29 | INFO     | src.core.trading_engine:_execute_sell_order:266 - SELL: 0.05 low @ $82824.00 | P&L: $-26.19 (-0.70%)
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for volume: 415.27 > 310.95
+2025-08-01 09:32:29 | INFO     | src.core.trading_engine:_execute_buy_order:228 - BUY: 4.94 volume @ $767.80
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for volume: 294.99 < 360.36
+2025-08-01 09:32:29 | INFO     | src.core.trading_engine:_execute_sell_order:266 - SELL: 4.94 volume @ $235.19 | P&L: $-2632.17 (-69.40%)
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for volume: 359.30 > 357.23
+2025-08-01 09:32:29 | INFO     | src.core.trading_engine:_execute_buy_order:228 - BUY: 8.59 volume @ $380.02
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for high: 81070.80 > 80877.40
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for close: 80008.40 > 79796.43
+2025-08-01 09:32:29 | WARNING  | src.risk.risk_manager:can_buy:83 - Insufficient cash: $13059.18 < $18198.84
+2025-08-01 09:32:29 | WARNING  | src.risk.risk_manager:can_buy:83 - Insufficient cash: $13059.18 < $17983.90
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for open: 80026.40 > 79807.87
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for low: 79562.40 > 78876.97
+2025-08-01 09:32:29 | WARNING  | src.risk.risk_manager:can_buy:83 - Insufficient cash: $13059.18 < $17983.24
+2025-08-01 09:32:29 | WARNING  | src.risk.risk_manager:can_buy:83 - Insufficient cash: $13059.18 < $17886.00
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for volume: 378.85 < 465.26
+2025-08-01 09:32:29 | INFO     | src.core.trading_engine:_execute_sell_order:266 - SELL: 8.59 volume @ $697.50 | P&L: $2722.12 (83.36%)
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for volume: 254.34 > 241.06
+2025-08-01 09:32:29 | INFO     | src.core.trading_engine:_execute_buy_order:228 - BUY: 14.52 volume @ $262.41
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for volume: 156.01 < 218.43
+2025-08-01 09:32:29 | INFO     | src.core.trading_engine:_execute_sell_order:266 - SELL: 14.52 volume @ $147.71 | P&L: $-1667.15 (-43.76%)
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for volume: 214.67 > 212.54
+2025-08-01 09:32:29 | INFO     | src.core.trading_engine:_execute_buy_order:228 - BUY: 15.14 volume @ $229.56
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for high: 84710.20 < 84833.83
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for close: 83931.40 < 84227.17
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for open: 83915.60 < 84236.07
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for low: 83401.20 < 83722.43
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for volume: 172.38 < 201.61
+2025-08-01 09:32:29 | INFO     | src.core.trading_engine:_execute_sell_order:266 - SELL: 15.14 volume @ $203.16 | P&L: $-402.79 (-11.59%)
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for volume: 247.15 > 201.99
+2025-08-01 09:32:29 | INFO     | src.core.trading_engine:_execute_buy_order:228 - BUY: 6.82 volume @ $497.70
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for volume: 171.85 < 207.21
+2025-08-01 09:32:29 | INFO     | src.core.trading_engine:_execute_sell_order:266 - SELL: 6.82 volume @ $123.80 | P&L: $-2550.53 (-75.15%)
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for low: 84015.40 > 83981.53
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for close: 84525.60 > 84498.00
+2025-08-01 09:32:29 | WARNING  | src.risk.risk_manager:can_buy:83 - Insufficient cash: $14415.77 < $18569.54
+2025-08-01 09:32:29 | WARNING  | src.risk.risk_manager:can_buy:83 - Insufficient cash: $14415.77 < $18672.06
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for open: 84540.40 > 84504.67
+2025-08-01 09:32:29 | WARNING  | src.risk.risk_manager:can_buy:83 - Insufficient cash: $14415.77 < $18681.30
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for high: 85071.60 > 85033.17
+2025-08-01 09:32:29 | WARNING  | src.risk.risk_manager:can_buy:83 - Insufficient cash: $14415.77 < $18726.62
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for high: 84923.60 < 85012.33
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for close: 84535.40 < 84544.07
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for open: 84547.60 < 84549.60
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for close: 84584.00 > 84555.27
+2025-08-01 09:32:29 | WARNING  | src.risk.risk_manager:can_buy:83 - Insufficient cash: $14415.77 < $18674.26
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for open: 84595.60 > 84560.40
+2025-08-01 09:32:29 | WARNING  | src.risk.risk_manager:can_buy:83 - Insufficient cash: $14415.77 < $18678.44
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for high: 85187.60 > 85010.40
+2025-08-01 09:32:29 | WARNING  | src.risk.risk_manager:can_buy:83 - Insufficient cash: $14415.77 < $18834.42
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for volume: 150.08 > 143.18
+2025-08-01 09:32:29 | INFO     | src.core.trading_engine:_execute_buy_order:228 - BUY: 17.42 volume @ $165.48
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for volume: 247.12 < 290.74
+2025-08-01 09:32:29 | INFO     | src.core.trading_engine:_execute_sell_order:266 - SELL: 17.42 volume @ $181.79 | P&L: $280.97 (9.75%)
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for volume: 366.54 > 353.40
+2025-08-01 09:32:29 | INFO     | src.core.trading_engine:_execute_buy_order:228 - BUY: 2.31 volume @ $1273.45
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for volume: 163.20 < 353.27
+2025-08-01 09:32:29 | INFO     | src.core.trading_engine:_execute_sell_order:266 - SELL: 2.31 volume @ $65.19 | P&L: $-2788.48 (-94.89%)
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for high: 94385.20 < 94403.73
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for high: 94692.20 > 94461.47
+2025-08-01 09:32:29 | WARNING  | src.risk.risk_manager:can_buy:83 - Insufficient cash: $11902.44 < $21022.98
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for volume: 249.57 > 216.90
+2025-08-01 09:32:29 | INFO     | src.core.trading_engine:_execute_buy_order:228 - BUY: 4.65 volume @ $512.27
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for volume: 165.74 < 203.33
+2025-08-01 09:32:29 | INFO     | src.core.trading_engine:_execute_sell_order:266 - SELL: 4.65 volume @ $62.53 | P&L: $-2090.18 (-87.80%)
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for low: 93996.40 < 94088.33
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for volume: 251.48 > 172.22
+2025-08-01 09:32:29 | INFO     | src.core.trading_engine:_execute_buy_order:228 - BUY: 2.36 volume @ $831.80
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for close: 94442.00 < 94520.93
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for open: 94438.80 < 94521.57
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for low: 94277.00 > 94062.30
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for close: 94874.80 > 94603.30
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for volume: 153.82 < 170.65
+2025-08-01 09:32:29 | WARNING  | src.risk.risk_manager:can_buy:83 - Insufficient cash: $7845.94 < $20885.48
+2025-08-01 09:32:29 | WARNING  | src.risk.risk_manager:can_buy:83 - Insufficient cash: $7845.94 < $21164.88
+2025-08-01 09:32:29 | INFO     | src.core.trading_engine:_execute_sell_order:266 - SELL: 2.36 volume @ $286.39 | P&L: $-1287.13 (-65.60%)
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for open: 94881.20 > 94605.47
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for volume: 253.23 > 188.17
+2025-08-01 09:32:29 | WARNING  | src.risk.risk_manager:can_buy:83 - Insufficient cash: $8520.78 < $21171.92
+2025-08-01 09:32:29 | INFO     | src.core.trading_engine:_execute_buy_order:228 - BUY: 2.76 volume @ $618.11
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for volume: 177.41 < 204.37
+2025-08-01 09:32:29 | INFO     | src.core.trading_engine:_execute_sell_order:266 - SELL: 2.76 volume @ $78.49 | P&L: $-1487.97 (-87.31%)
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for high: 96102.40 < 96254.77
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for close: 95692.60 < 95824.40
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for open: 95684.00 < 95828.10
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for low: 95149.00 < 95435.80
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for volume: 182.98 > 161.70
+2025-08-01 09:32:29 | INFO     | src.core.trading_engine:_execute_buy_order:228 - BUY: 4.56 volume @ $308.33
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for volume: 160.96 < 163.46
+2025-08-01 09:32:29 | INFO     | src.core.trading_engine:_execute_sell_order:266 - SELL: 4.56 volume @ $173.72 | P&L: $-614.71 (-43.71%)
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for volume: 161.67 > 148.20
+2025-08-01 09:32:29 | INFO     | src.core.trading_engine:_execute_buy_order:228 - BUY: 2.95 volume @ $434.36
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for high: 96295.80 > 95978.83
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for close: 95962.80 > 95544.00
+2025-08-01 09:32:29 | WARNING  | src.risk.risk_manager:can_buy:83 - Insufficient cash: $5130.70 < $21340.44
+2025-08-01 09:32:29 | WARNING  | src.risk.risk_manager:can_buy:83 - Insufficient cash: $5130.70 < $21340.22
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for open: 95962.80 > 95545.27
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for low: 95616.20 > 95128.17
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for volume: 141.08 < 142.14
+2025-08-01 09:32:29 | WARNING  | src.risk.risk_manager:can_buy:83 - Insufficient cash: $5130.70 < $21339.78
+2025-08-01 09:32:29 | WARNING  | src.risk.risk_manager:can_buy:83 - Insufficient cash: $5130.70 < $21304.14
+2025-08-01 09:32:29 | INFO     | src.core.trading_engine:_execute_sell_order:266 - SELL: 2.95 volume @ $51.98 | P&L: $-1129.62 (-88.05%)
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for volume: 186.55 > 144.40
+2025-08-01 09:32:29 | INFO     | src.core.trading_engine:_execute_buy_order:228 - BUY: 2.86 volume @ $369.29
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for volume: 220.03 < 228.86
+2025-08-01 09:32:29 | INFO     | src.core.trading_engine:_execute_sell_order:266 - SELL: 2.86 volume @ $40.61 | P&L: $-940.72 (-89.01%)
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for volume: 304.19 > 233.77
+2025-08-01 09:32:29 | INFO     | src.core.trading_engine:_execute_buy_order:228 - BUY: 1.35 volume @ $642.38
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for low: 102011.40 < 102382.27
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for close: 102534.60 < 102997.87
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for open: 102521.20 < 102999.30
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for high: 103316.80 < 103793.50
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for volume: 189.77 < 224.76
+2025-08-01 09:32:29 | INFO     | src.core.trading_engine:_execute_sell_order:266 - SELL: 1.35 volume @ $82.80 | P&L: $-756.63 (-87.12%)
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for volume: 235.96 > 207.23
+2025-08-01 09:32:29 | INFO     | src.core.trading_engine:_execute_buy_order:228 - BUY: 1.94 volume @ $369.69
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for high: 104143.40 > 104142.87
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for low: 102921.40 > 102899.93
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for close: 103815.20 > 103497.70
+2025-08-01 09:32:29 | WARNING  | src.risk.risk_manager:can_buy:83 - Insufficient cash: $2867.13 < $23094.06
+2025-08-01 09:32:29 | WARNING  | src.risk.risk_manager:can_buy:83 - Insufficient cash: $2867.13 < $22867.68
+2025-08-01 09:32:29 | WARNING  | src.risk.risk_manager:can_buy:83 - Insufficient cash: $2867.13 < $22909.70
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for open: 103823.00 > 103500.30
+2025-08-01 09:32:29 | WARNING  | src.risk.risk_manager:can_buy:83 - Insufficient cash: $2867.13 < $22907.72
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for high: 104064.60 < 104196.87
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for low: 103027.20 < 103030.10
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for close: 103605.80 < 103611.53
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for open: 103607.00 < 103614.50
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for volume: 178.61 < 199.11
+2025-08-01 09:32:29 | INFO     | src.core.trading_engine:_execute_sell_order:266 - SELL: 1.94 volume @ $81.50 | P&L: $-559.05 (-77.98%)
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for volume: 243.47 > 224.32
+2025-08-01 09:32:29 | INFO     | src.core.trading_engine:_execute_buy_order:228 - BUY: 2.13 volume @ $283.54
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for close: 103608.40 > 103478.97
+2025-08-01 09:32:29 | WARNING  | src.risk.risk_manager:can_buy:83 - Insufficient cash: $2419.42 < $22821.70
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for open: 103622.60 > 103481.23
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for high: 104151.20 > 104051.63
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for low: 103140.60 > 102842.63
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for volume: 166.81 < 223.07
+2025-08-01 09:32:29 | WARNING  | src.risk.risk_manager:can_buy:83 - Insufficient cash: $2419.42 < $22827.86
+2025-08-01 09:32:29 | WARNING  | src.risk.risk_manager:can_buy:83 - Insufficient cash: $2419.42 < $22865.04
+2025-08-01 09:32:29 | WARNING  | src.risk.risk_manager:can_buy:83 - Insufficient cash: $2419.42 < $22690.14
+2025-08-01 09:32:29 | INFO     | src.core.trading_engine:_execute_sell_order:266 - SELL: 2.13 volume @ $111.56 | P&L: $-367.20 (-60.69%)
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for high: 103626.60 < 103803.40
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for close: 103309.40 < 103354.40
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for open: 103304.00 < 103354.80
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for low: 102879.00 < 102910.50
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for low: 102983.60 > 102965.43
+2025-08-01 09:32:29 | WARNING  | src.risk.risk_manager:can_buy:83 - Insufficient cash: $2657.23 < $22731.72
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for high: 104137.20 > 103946.30
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for close: 103957.00 > 103571.93
+2025-08-01 09:32:29 | WARNING  | src.risk.risk_manager:can_buy:83 - Insufficient cash: $2657.23 < $23249.60
+2025-08-01 09:32:29 | WARNING  | src.risk.risk_manager:can_buy:83 - Insufficient cash: $2657.23 < $23216.82
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for open: 103972.00 > 103573.77
+2025-08-01 09:32:29 | WARNING  | src.risk.risk_manager:can_buy:83 - Insufficient cash: $2657.23 < $23221.00
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for volume: 174.66 > 162.34
+2025-08-01 09:32:29 | INFO     | src.core.trading_engine:_execute_buy_order:228 - BUY: 2.07 volume @ $256.67
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for low: 102813.80 < 102964.40
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for low: 103055.80 > 103028.90
+2025-08-01 09:32:29 | WARNING  | src.risk.risk_manager:can_buy:83 - Insufficient cash: $2125.25 < $23002.54
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for volume: 239.24 < 249.60
+2025-08-01 09:32:29 | INFO     | src.core.trading_engine:_execute_sell_order:266 - SELL: 2.07 volume @ $344.68 | P&L: $181.51 (34.15%)
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for volume: 291.41 > 284.50
+2025-08-01 09:32:29 | INFO     | src.core.trading_engine:_execute_buy_order:228 - BUY: 3.20 volume @ $177.45
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for volume: 258.78 < 270.08
+2025-08-01 09:32:29 | INFO     | src.core.trading_engine:_execute_sell_order:266 - SELL: 3.20 volume @ $81.13 | P&L: $-308.37 (-54.32%)
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for high: 108916.20 < 109053.30
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for low: 107511.40 < 107515.53
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for close: 108313.00 < 108405.83
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for open: 108327.00 < 108413.63
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for low: 107894.40 > 107655.03
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for close: 108647.00 > 108519.63
+2025-08-01 09:32:29 | WARNING  | src.risk.risk_manager:can_buy:83 - Insufficient cash: $2529.27 < $23923.24
+2025-08-01 09:32:29 | WARNING  | src.risk.risk_manager:can_buy:83 - Insufficient cash: $2529.27 < $23979.78
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for open: 108664.20 > 108528.53
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for close: 108528.60 < 108592.20
+2025-08-01 09:32:29 | WARNING  | src.risk.risk_manager:can_buy:83 - Insufficient cash: $2529.27 < $23981.10
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for open: 108545.20 < 108600.80
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for low: 107561.00 < 107940.37
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for open: 109315.80 > 109309.07
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for high: 110027.80 > 109945.60
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for low: 108909.20 > 108514.50
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for close: 109758.60 > 109336.20
+2025-08-01 09:32:29 | WARNING  | src.risk.risk_manager:can_buy:83 - Insufficient cash: $2529.27 < $24173.82
+2025-08-01 09:32:29 | WARNING  | src.risk.risk_manager:can_buy:83 - Insufficient cash: $2529.27 < $24293.50
+2025-08-01 09:32:29 | WARNING  | src.risk.risk_manager:can_buy:83 - Insufficient cash: $2529.27 < $24093.08
+2025-08-01 09:32:29 | WARNING  | src.risk.risk_manager:can_buy:83 - Insufficient cash: $2529.27 < $24221.12
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for volume: 170.23 > 168.75
+2025-08-01 09:32:29 | INFO     | src.core.trading_engine:_execute_buy_order:228 - BUY: 1.41 volume @ $358.18
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for high: 109332.20 < 109352.93
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for close: 108570.20 < 108783.13
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for volume: 133.43 < 148.20
+2025-08-01 09:32:29 | INFO     | src.core.trading_engine:_execute_sell_order:266 - SELL: 1.41 volume @ $220.80 | P&L: $-194.33 (-38.42%)
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for open: 108566.80 < 108790.77
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for low: 107898.20 < 108109.47
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for volume: 169.10 > 151.41
+2025-08-01 09:32:29 | INFO     | src.core.trading_engine:_execute_buy_order:228 - BUY: 1.44 volume @ $323.99
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for volume: 186.15 < 190.83
+2025-08-01 09:32:29 | INFO     | src.core.trading_engine:_execute_sell_order:266 - SELL: 1.44 volume @ $129.96 | P&L: $-279.79 (-59.93%)
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for volume: 212.59 > 196.85
+2025-08-01 09:32:29 | INFO     | src.core.trading_engine:_execute_buy_order:228 - BUY: 1.48 volume @ $277.29
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for volume: 180.58 < 191.32
+2025-08-01 09:32:29 | INFO     | src.core.trading_engine:_execute_sell_order:266 - SELL: 1.48 volume @ $104.09 | P&L: $-256.77 (-62.50%)
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for volume: 181.32 > 168.51
+2025-08-01 09:32:29 | INFO     | src.core.trading_engine:_execute_buy_order:228 - BUY: 1.14 volume @ $316.12
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for volume: 150.46 < 158.73
+2025-08-01 09:32:29 | INFO     | src.core.trading_engine:_execute_sell_order:266 - SELL: 1.14 volume @ $30.42 | P&L: $-324.85 (-90.39%)
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for volume: 165.27 > 157.23
+2025-08-01 09:32:29 | INFO     | src.core.trading_engine:_execute_buy_order:228 - BUY: 1.55 volume @ $189.43
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for low: 104585.00 > 104529.33
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for close: 105127.80 > 105066.27
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for volume: 143.08 < 152.10
+2025-08-01 09:32:29 | WARNING  | src.risk.risk_manager:can_buy:83 - Insufficient cash: $1177.14 < $23143.78
+2025-08-01 09:32:29 | WARNING  | src.risk.risk_manager:can_buy:83 - Insufficient cash: $1177.14 < $23154.34
+2025-08-01 09:32:29 | INFO     | src.core.trading_engine:_execute_sell_order:266 - SELL: 1.55 volume @ $55.28 | P&L: $-208.54 (-70.85%)
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for open: 105132.60 > 105066.00
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for high: 105667.80 > 105486.73
+2025-08-01 09:32:29 | WARNING  | src.risk.risk_manager:can_buy:83 - Insufficient cash: $1262.96 < $23152.80
+2025-08-01 09:32:29 | WARNING  | src.risk.risk_manager:can_buy:83 - Insufficient cash: $1262.96 < $23190.64
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for volume: 157.44 > 149.58
+2025-08-01 09:32:29 | INFO     | src.core.trading_engine:_execute_buy_order:228 - BUY: 0.84 volume @ $302.39
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for volume: 125.75 < 128.53
+2025-08-01 09:32:29 | INFO     | src.core.trading_engine:_execute_sell_order:266 - SELL: 0.84 volume @ $194.62 | P&L: $-90.18 (-35.70%)
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for volume: 144.79 > 129.02
+2025-08-01 09:32:29 | INFO     | src.core.trading_engine:_execute_buy_order:228 - BUY: 1.49 volume @ $157.66
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for high: 105353.00 < 105439.87
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for low: 104555.20 < 104561.70
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for close: 104947.20 < 105026.30
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for volume: 123.22 < 125.52
+2025-08-01 09:32:29 | INFO     | src.core.trading_engine:_execute_sell_order:266 - SELL: 1.49 volume @ $60.39 | P&L: $-144.77 (-61.73%)
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for open: 104950.80 < 105027.07
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for low: 104609.80 > 104599.87
+2025-08-01 09:32:29 | WARNING  | src.risk.risk_manager:can_buy:83 - Insufficient cash: $1027.52 < $22988.24
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for low: 104410.40 < 104613.33
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for volume: 195.92 > 145.00
+2025-08-01 09:32:29 | INFO     | src.core.trading_engine:_execute_buy_order:228 - BUY: 0.47 volume @ $440.03
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for low: 104152.60 > 104150.07
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for close: 104753.60 > 104694.73
+2025-08-01 09:32:29 | WARNING  | src.risk.risk_manager:can_buy:83 - Insufficient cash: $821.81 < $23042.36
+2025-08-01 09:32:29 | WARNING  | src.risk.risk_manager:can_buy:83 - Insufficient cash: $821.81 < $23090.32
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for open: 104767.80 > 104697.23
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for volume: 130.97 < 181.45
+2025-08-01 09:32:29 | WARNING  | src.risk.risk_manager:can_buy:83 - Insufficient cash: $821.81 < $23092.52
+2025-08-01 09:32:29 | INFO     | src.core.trading_engine:_execute_sell_order:266 - SELL: 0.47 volume @ $85.84 | P&L: $-165.46 (-80.51%)
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for high: 105257.40 > 105254.57
+2025-08-01 09:32:29 | WARNING  | src.risk.risk_manager:can_buy:83 - Insufficient cash: $861.86 < $23285.90
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for volume: 179.02 > 159.31
+2025-08-01 09:32:29 | INFO     | src.core.trading_engine:_execute_buy_order:228 - BUY: 0.52 volume @ $331.44
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for volume: 164.51 < 166.48
+2025-08-01 09:32:29 | INFO     | src.core.trading_engine:_execute_sell_order:266 - SELL: 0.52 volume @ $274.96 | P&L: $-29.52 (-17.13%)
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for volume: 162.60 > 160.43
+2025-08-01 09:32:29 | INFO     | src.core.trading_engine:_execute_buy_order:228 - BUY: 0.64 volume @ $258.64
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for volume: 94.82 < 137.20
+2025-08-01 09:32:29 | INFO     | src.core.trading_engine:_execute_sell_order:266 - SELL: 0.64 volume @ $30.21 | P&L: $-147.01 (-88.33%)
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for volume: 137.44 > 125.61
+2025-08-01 09:32:29 | INFO     | src.core.trading_engine:_execute_buy_order:228 - BUY: 1.25 volume @ $109.85
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for close: 107633.60 < 107820.03
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for volume: 112.78 < 124.72
+2025-08-01 09:32:29 | INFO     | src.core.trading_engine:_execute_sell_order:266 - SELL: 1.25 volume @ $193.06 | P&L: $103.54 (75.58%)
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for open: 107629.00 < 107821.90
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for high: 108197.00 < 108340.40
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for low: 107082.20 < 107381.70
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for volume: 138.95 > 129.79
+2025-08-01 09:32:29 | INFO     | src.core.trading_engine:_execute_buy_order:228 - BUY: 0.66 volume @ $240.73
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for volume: 145.19 < 164.18
+2025-08-01 09:32:29 | INFO     | src.core.trading_engine:_execute_sell_order:266 - SELL: 0.66 volume @ $79.90 | P&L: $-105.40 (-66.84%)
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for close: 106167.20 > 106118.27
+2025-08-01 09:32:29 | WARNING  | src.risk.risk_manager:can_buy:83 - Insufficient cash: $682.84 < $23516.02
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for open: 106170.80 > 106116.87
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for high: 106776.80 > 106563.47
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for low: 105711.20 > 105519.10
+2025-08-01 09:32:29 | WARNING  | src.risk.risk_manager:can_buy:83 - Insufficient cash: $682.84 < $23516.02
+2025-08-01 09:32:29 | WARNING  | src.risk.risk_manager:can_buy:83 - Insufficient cash: $682.84 < $23717.32
+2025-08-01 09:32:29 | WARNING  | src.risk.risk_manager:can_buy:83 - Insufficient cash: $682.84 < $23435.06
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for volume: 142.08 > 131.62
+2025-08-01 09:32:29 | INFO     | src.core.trading_engine:_execute_buy_order:228 - BUY: 0.64 volume @ $214.93
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for high: 106147.60 < 106210.27
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for low: 104774.80 < 105068.50
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for close: 105209.20 < 105696.63
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for open: 105213.40 < 105698.53
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for volume: 120.01 < 128.05
+2025-08-01 09:32:29 | INFO     | src.core.trading_engine:_execute_sell_order:266 - SELL: 0.64 volume @ $251.15 | P&L: $22.85 (16.73%)
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for volume: 170.38 > 134.20
+2025-08-01 09:32:29 | INFO     | src.core.trading_engine:_execute_buy_order:228 - BUY: 0.44 volume @ $318.07
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for volume: 115.12 < 133.39
+2025-08-01 09:32:29 | INFO     | src.core.trading_engine:_execute_sell_order:266 - SELL: 0.44 volume @ $20.51 | P&L: $-132.02 (-93.56%)
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for volume: 173.94 > 150.54
+2025-08-01 09:32:29 | INFO     | src.core.trading_engine:_execute_buy_order:228 - BUY: 0.31 volume @ $373.16
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for volume: 120.12 < 142.35
+2025-08-01 09:32:29 | INFO     | src.core.trading_engine:_execute_sell_order:266 - SELL: 0.31 volume @ $49.14 | P&L: $-99.59 (-86.84%)
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for volume: 153.33 > 146.09
+2025-08-01 09:32:29 | INFO     | src.core.trading_engine:_execute_buy_order:228 - BUY: 0.20 volume @ $466.02
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for volume: 154.07 < 157.20
+2025-08-01 09:32:29 | INFO     | src.core.trading_engine:_execute_sell_order:266 - SELL: 0.20 volume @ $102.06 | P&L: $-74.01 (-78.12%)
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for volume: 175.21 > 159.15
+2025-08-01 09:32:29 | INFO     | src.core.trading_engine:_execute_buy_order:228 - BUY: 0.26 volume @ $309.64
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for high: 103966.20 > 103853.27
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for close: 103306.00 > 103174.30
+2025-08-01 09:32:29 | WARNING  | src.risk.risk_manager:can_buy:83 - Insufficient cash: $319.59 < $23229.36
+2025-08-01 09:32:29 | WARNING  | src.risk.risk_manager:can_buy:83 - Insufficient cash: $319.59 < $23104.40
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for open: 103297.60 > 103171.33
+2025-08-01 09:32:29 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for low: 102622.80 > 102509.57
+2025-08-01 09:32:30 | WARNING  | src.risk.risk_manager:can_buy:83 - Insufficient cash: $319.59 < $23099.34
+2025-08-01 09:32:30 | WARNING  | src.risk.risk_manager:can_buy:83 - Insufficient cash: $319.59 < $23055.12
+2025-08-01 09:32:30 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for volume: 152.87 < 205.70
+2025-08-01 09:32:30 | INFO     | src.core.trading_engine:_execute_sell_order:266 - SELL: 0.26 volume @ $121.44 | P&L: $-48.60 (-60.82%)
+2025-08-01 09:32:30 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for volume: 222.80 > 210.97
+2025-08-01 09:32:30 | INFO     | src.core.trading_engine:_execute_buy_order:228 - BUY: 0.17 volume @ $401.72
+2025-08-01 09:32:30 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for volume: 158.15 < 216.35
+2025-08-01 09:32:30 | INFO     | src.core.trading_engine:_execute_sell_order:266 - SELL: 0.17 volume @ $84.99 | P&L: $-55.35 (-78.86%)
+2025-08-01 09:32:30 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for volume: 240.67 > 209.50
+2025-08-01 09:32:30 | INFO     | src.core.trading_engine:_execute_buy_order:228 - BUY: 0.17 volume @ $354.01
+2025-08-01 09:32:30 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for volume: 196.20 < 202.24
+2025-08-01 09:32:30 | INFO     | src.core.trading_engine:_execute_sell_order:266 - SELL: 0.17 volume @ $26.64 | P&L: $-54.65 (-92.48%)
+2025-08-01 09:32:30 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for volume: 128.13 > 127.59
+2025-08-01 09:32:30 | INFO     | src.core.trading_engine:_execute_buy_order:228 - BUY: 0.16 volume @ $296.32
+2025-08-01 09:32:30 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for high: 107806.40 < 107823.27
+2025-08-01 09:32:30 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for low: 107085.00 < 107128.40
+2025-08-01 09:32:30 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for open: 107499.00 < 107499.67
+2025-08-01 09:32:30 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for close: 107404.20 < 107475.27
+2025-08-01 09:32:30 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for volume: 105.05 < 118.75
+2025-08-01 09:32:30 | INFO     | src.core.trading_engine:_execute_sell_order:266 - SELL: 0.16 volume @ $81.15 | P&L: $-34.98 (-72.64%)
+2025-08-01 09:32:30 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for volume: 150.79 > 123.00
+2025-08-01 09:32:30 | INFO     | src.core.trading_engine:_execute_buy_order:228 - BUY: 0.10 volume @ $394.47
+2025-08-01 09:32:30 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for volume: 111.81 < 119.15
+2025-08-01 09:32:30 | INFO     | src.core.trading_engine:_execute_sell_order:266 - SELL: 0.10 volume @ $110.93 | P&L: $-29.59 (-71.91%)
+2025-08-01 09:32:30 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for volume: 128.93 > 113.64
+2025-08-01 09:32:30 | INFO     | src.core.trading_engine:_execute_buy_order:228 - BUY: 0.15 volume @ $233.11
+2025-08-01 09:32:30 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for high: 107984.40 > 107701.97
+2025-08-01 09:32:30 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for close: 107873.60 > 107410.93
+2025-08-01 09:32:30 | WARNING  | src.risk.risk_manager:can_buy:83 - Insufficient cash: $140.85 < $24156.44
+2025-08-01 09:32:30 | WARNING  | src.risk.risk_manager:can_buy:83 - Insufficient cash: $140.85 < $24144.12
+2025-08-01 09:32:30 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for open: 107876.40 > 107413.07
+2025-08-01 09:32:30 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for low: 107607.40 > 107040.03
+2025-08-01 09:32:30 | WARNING  | src.risk.risk_manager:can_buy:83 - Insufficient cash: $140.85 < $24145.44
+2025-08-01 09:32:30 | WARNING  | src.risk.risk_manager:can_buy:83 - Insufficient cash: $140.85 < $23934.68
+2025-08-01 09:32:30 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for volume: 95.50 < 136.35
+2025-08-01 09:32:30 | INFO     | src.core.trading_engine:_execute_sell_order:266 - SELL: 0.15 volume @ $92.55 | P&L: $-21.25 (-60.34%)
+2025-08-01 09:32:30 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for high: 108394.80 < 108423.20
+2025-08-01 09:32:30 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for close: 107884.80 < 107980.77
+2025-08-01 09:32:30 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for open: 107897.60 < 107982.87
+2025-08-01 09:32:30 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for close: 108113.20 > 108012.30
+2025-08-01 09:32:30 | WARNING  | src.risk.risk_manager:can_buy:83 - Insufficient cash: $154.83 < $23780.90
+2025-08-01 09:32:30 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for open: 108115.40 > 108014.40
+2025-08-01 09:32:30 | WARNING  | src.risk.risk_manager:can_buy:83 - Insufficient cash: $154.83 < $23781.12
+2025-08-01 09:32:30 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for close: 108140.40 < 108168.53
+2025-08-01 09:32:30 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for open: 108140.80 < 108170.70
+2025-08-01 09:32:30 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for close: 108288.40 > 108266.33
+2025-08-01 09:32:30 | WARNING  | src.risk.risk_manager:can_buy:83 - Insufficient cash: $154.83 < $23961.96
+2025-08-01 09:32:30 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for open: 108290.40 > 108269.57
+2025-08-01 09:32:30 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for close: 108354.80 < 108371.57
+2025-08-01 09:32:30 | WARNING  | src.risk.risk_manager:can_buy:83 - Insufficient cash: $154.83 < $23963.72
+2025-08-01 09:32:30 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for open: 108357.00 < 108374.17
+2025-08-01 09:32:30 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for high: 108847.20 > 108835.10
+2025-08-01 09:32:30 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for close: 108584.60 > 108489.03
+2025-08-01 09:32:30 | WARNING  | src.risk.risk_manager:can_buy:83 - Insufficient cash: $154.83 < $24137.74
+2025-08-01 09:32:30 | WARNING  | src.risk.risk_manager:can_buy:83 - Insufficient cash: $154.83 < $24031.26
+2025-08-01 09:32:30 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for open: 108586.40 > 108491.93
+2025-08-01 09:32:30 | WARNING  | src.risk.risk_manager:can_buy:83 - Insufficient cash: $154.83 < $24030.82
+2025-08-01 09:32:30 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for volume: 114.07 > 99.45
+2025-08-01 09:32:30 | INFO     | src.core.trading_engine:_execute_buy_order:228 - BUY: 0.13 volume @ $231.20
+2025-08-01 09:32:30 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for low: 108300.80 < 108327.10
+2025-08-01 09:32:30 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for high: 108812.80 < 108971.80
+2025-08-01 09:32:30 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for close: 108474.80 < 108606.67
+2025-08-01 09:32:30 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for open: 108473.60 < 108608.93
+2025-08-01 09:32:30 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for high: 108887.60 > 108801.17
+2025-08-01 09:32:30 | WARNING  | src.risk.risk_manager:can_buy:83 - Insufficient cash: $123.83 < $24018.06
+2025-08-01 09:32:30 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for low: 108203.80 > 108110.57
+2025-08-01 09:32:30 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for close: 108655.60 > 108435.33
+2025-08-01 09:32:30 | WARNING  | src.risk.risk_manager:can_buy:83 - Insufficient cash: $123.83 < $23900.36
+2025-08-01 09:32:30 | WARNING  | src.risk.risk_manager:can_buy:83 - Insufficient cash: $123.83 < $23968.34
+2025-08-01 09:32:30 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for open: 108656.40 > 108437.90
+2025-08-01 09:32:30 | WARNING  | src.risk.risk_manager:can_buy:83 - Insufficient cash: $123.83 < $23968.34
+2025-08-01 09:32:30 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for volume: 75.16 < 84.81
+2025-08-01 09:32:30 | INFO     | src.core.trading_engine:_execute_sell_order:266 - SELL: 0.13 volume @ $47.30 | P&L: $-24.64 (-79.56%)
+2025-08-01 09:32:30 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for volume: 97.82 > 88.04
+2025-08-01 09:32:30 | INFO     | src.core.trading_engine:_execute_buy_order:228 - BUY: 0.10 volume @ $267.94
+2025-08-01 09:32:30 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for volume: 182.06 < 215.97
+2025-08-01 09:32:30 | INFO     | src.core.trading_engine:_execute_sell_order:266 - SELL: 0.10 volume @ $118.67 | P&L: $-14.51 (-55.75%)
+2025-08-01 09:32:30 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for volume: 239.42 > 229.86
+2025-08-01 09:32:30 | INFO     | src.core.trading_engine:_execute_buy_order:228 - BUY: 0.06 volume @ $369.11
+2025-08-01 09:32:30 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for volume: 214.87 < 234.73
+2025-08-01 09:32:30 | INFO     | src.core.trading_engine:_execute_sell_order:266 - SELL: 0.06 volume @ $193.40 | P&L: $-11.02 (-47.66%)
+2025-08-01 09:32:30 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for volume: 293.35 > 243.41
+2025-08-01 09:32:30 | WARNING  | src.risk.risk_manager:can_buy:83 - Insufficient cash: $104.57 < $116.21
+2025-08-01 09:32:30 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for high: 118761.40 < 118784.50
+2025-08-01 09:32:30 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for low: 116952.80 < 117346.33
+2025-08-01 09:32:30 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for close: 117455.60 < 118101.20
+2025-08-01 09:32:30 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for open: 117446.40 < 118100.73
+2025-08-01 09:32:30 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for volume: 289.25 < 353.36
+2025-08-01 09:32:30 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for high: 119136.00 > 119108.07
+2025-08-01 09:32:30 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for low: 117843.00 > 117812.43
+2025-08-01 09:32:30 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for close: 118586.00 > 118442.23
+2025-08-01 09:32:30 | WARNING  | src.risk.risk_manager:can_buy:83 - Insufficient cash: $104.57 < $26397.36
+2025-08-01 09:32:30 | WARNING  | src.risk.risk_manager:can_buy:83 - Insufficient cash: $104.57 < $26077.04
+2025-08-01 09:32:30 | WARNING  | src.risk.risk_manager:can_buy:83 - Insufficient cash: $104.57 < $26245.56
+2025-08-01 09:32:30 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for open: 118586.20 > 118441.03
+2025-08-01 09:32:30 | WARNING  | src.risk.risk_manager:can_buy:83 - Insufficient cash: $104.57 < $26244.90
+2025-08-01 09:32:30 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for high: 119297.20 < 119313.97
+2025-08-01 09:32:30 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for close: 118449.40 < 118577.97
+2025-08-01 09:32:30 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for open: 118444.00 < 118575.33
+2025-08-01 09:32:30 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for low: 117926.60 < 117956.70
+2025-08-01 09:32:30 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for high: 119625.60 > 119502.70
+2025-08-01 09:32:30 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for low: 118076.80 > 118004.73
+2025-08-01 09:32:30 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for close: 118726.80 > 118685.40
+2025-08-01 09:32:30 | WARNING  | src.risk.risk_manager:can_buy:83 - Insufficient cash: $104.57 < $26620.00
+2025-08-01 09:32:30 | WARNING  | src.risk.risk_manager:can_buy:83 - Insufficient cash: $104.57 < $26069.34
+2025-08-01 09:32:30 | WARNING  | src.risk.risk_manager:can_buy:83 - Insufficient cash: $104.57 < $26240.50
+2025-08-01 09:32:30 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for open: 118733.20 > 118683.83
+2025-08-01 09:32:30 | WARNING  | src.risk.risk_manager:can_buy:83 - Insufficient cash: $104.57 < $26240.50
+2025-08-01 09:32:30 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for high: 119246.80 < 119658.00
+2025-08-01 09:32:30 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for low: 117882.00 < 118038.20
+2025-08-01 09:32:30 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for close: 118422.40 < 118738.93
+2025-08-01 09:32:30 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for open: 118417.80 < 118736.73
+2025-08-01 09:32:30 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for low: 117855.20 > 117689.03
+2025-08-01 09:32:30 | WARNING  | src.risk.risk_manager:can_buy:83 - Insufficient cash: $104.57 < $25882.34
+2025-08-01 09:32:30 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for low: 117659.40 < 117696.47
+2025-08-01 09:32:30 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for high: 119096.00 > 119091.07
+2025-08-01 09:32:30 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for volume: 208.27 > 197.81
+2025-08-01 09:32:30 | WARNING  | src.risk.risk_manager:can_buy:83 - Insufficient cash: $104.57 < $26242.04
+2025-08-01 09:32:30 | INFO     | src.core.trading_engine:_execute_buy_order:228 - BUY: 0.06 volume @ $372.74
+2025-08-01 09:32:30 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for high: 118925.60 < 118959.63
+2025-08-01 09:32:30 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for high: 119144.80 > 118939.17
+2025-08-01 09:32:30 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for close: 118563.60 > 118355.17
+2025-08-01 09:32:30 | WARNING  | src.risk.risk_manager:can_buy:83 - Insufficient cash: $83.64 < $26454.34
+2025-08-01 09:32:30 | WARNING  | src.risk.risk_manager:can_buy:83 - Insufficient cash: $83.64 < $26255.68
+2025-08-01 09:32:30 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for open: 118561.60 > 118349.57
+2025-08-01 09:32:30 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for low: 117905.40 > 117697.27
+2025-08-01 09:32:30 | WARNING  | src.risk.risk_manager:can_buy:83 - Insufficient cash: $83.64 < $26257.66
+2025-08-01 09:32:30 | WARNING  | src.risk.risk_manager:can_buy:83 - Insufficient cash: $83.64 < $26235.44
+2025-08-01 09:32:30 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for volume: 165.77 < 178.33
+2025-08-01 09:32:30 | INFO     | src.core.trading_engine:_execute_sell_order:266 - SELL: 0.06 volume @ $78.01 | P&L: $-16.54 (-79.09%)
+2025-08-01 09:32:30 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for volume: 165.60 > 159.25
+2025-08-01 09:32:30 | INFO     | src.core.trading_engine:_execute_buy_order:228 - BUY: 0.06 volume @ $302.31
+2025-08-01 09:32:30 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for high: 118787.20 < 118816.30
+2025-08-01 09:32:30 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for low: 117596.60 < 117645.13
+2025-08-01 09:32:30 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for low: 117730.00 > 117645.13
+2025-08-01 09:32:30 | WARNING  | src.risk.risk_manager:can_buy:83 - Insufficient cash: $70.39 < $25969.46
+2025-08-01 09:32:30 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for high: 119033.00 > 118899.87
+2025-08-01 09:32:30 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for volume: 162.52 < 169.91
+2025-08-01 09:32:30 | WARNING  | src.risk.risk_manager:can_buy:83 - Insufficient cash: $70.39 < $26295.50
+2025-08-01 09:32:30 | INFO     | src.core.trading_engine:_execute_sell_order:266 - SELL: 0.06 volume @ $251.69 | P&L: $-2.96 (-16.83%)
+2025-08-01 09:32:30 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for volume: 176.62 > 173.29
+2025-08-01 09:32:30 | INFO     | src.core.trading_engine:_execute_buy_order:228 - BUY: 0.08 volume @ $222.70
+2025-08-01 09:32:30 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for low: 117601.80 < 117628.93
+2025-08-01 09:32:30 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for close: 118118.20 < 118364.77
+2025-08-01 09:32:30 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for open: 118122.40 < 118361.43
+2025-08-01 09:32:30 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for high: 118542.00 < 118910.53
+2025-08-01 09:32:30 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for volume: 316.04 < 341.82
+2025-08-01 09:32:30 | INFO     | src.core.trading_engine:_execute_sell_order:266 - SELL: 0.08 volume @ $52.25 | P&L: $-13.02 (-76.56%)
+2025-08-01 09:32:30 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for low: 117277.40 > 117209.17
+2025-08-01 09:32:30 | WARNING  | src.risk.risk_manager:can_buy:83 - Insufficient cash: $71.99 < $25922.82
+2025-08-01 09:32:30 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for close: 118098.80 > 118073.20
+2025-08-01 09:32:30 | WARNING  | src.risk.risk_manager:can_buy:83 - Insufficient cash: $71.99 < $26013.46
+2025-08-01 09:32:30 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for open: 118104.20 > 118075.37
+2025-08-01 09:32:30 | WARNING  | src.risk.risk_manager:can_buy:83 - Insufficient cash: $71.99 < $26014.78
+2025-08-01 09:32:30 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for high: 118683.60 > 118468.43
+2025-08-01 09:32:30 | WARNING  | src.risk.risk_manager:can_buy:83 - Insufficient cash: $71.99 < $26307.38
+2025-08-01 09:32:30 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for low: 117364.80 < 117444.57
+2025-08-01 09:32:30 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for close: 117905.80 < 117976.97
+2025-08-01 09:32:30 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for open: 117910.40 < 117980.43
+2025-08-01 09:32:30 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for high: 118332.20 < 118437.67
+2025-08-01 09:32:30 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for volume: 179.55 > 169.84
+2025-08-01 09:32:30 | INFO     | src.core.trading_engine:_execute_buy_order:228 - BUY: 0.12 volume @ $124.11
+2025-08-01 09:32:30 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for close: 118316.80 > 118284.57
+2025-08-01 09:32:30 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for volume: 135.51 < 152.88
+2025-08-01 09:32:30 | WARNING  | src.risk.risk_manager:can_buy:83 - Insufficient cash: $57.58 < $26023.80
+2025-08-01 09:32:30 | INFO     | src.core.trading_engine:_execute_sell_order:266 - SELL: 0.12 volume @ $307.46 | P&L: $21.24 (147.49%)
+2025-08-01 09:32:30 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for open: 118319.80 > 118287.00
+2025-08-01 09:32:30 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for high: 118751.40 > 118722.00
+2025-08-01 09:32:30 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for low: 117779.40 > 117768.50
+2025-08-01 09:32:30 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for close: 118103.40 < 118234.27
+2025-08-01 09:32:30 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:116 - Golden cross detected for volume: 167.45 > 159.04
+2025-08-01 09:32:30 | WARNING  | src.risk.risk_manager:can_buy:83 - Insufficient cash: $93.22 < $26023.80
+2025-08-01 09:32:30 | WARNING  | src.risk.risk_manager:can_buy:83 - Insufficient cash: $93.22 < $26150.74
+2025-08-01 09:32:30 | WARNING  | src.risk.risk_manager:can_buy:83 - Insufficient cash: $93.22 < $25682.58
+2025-08-01 09:32:30 | INFO     | src.core.trading_engine:_execute_buy_order:228 - BUY: 0.08 volume @ $241.75
+2025-08-01 09:32:30 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for open: 118105.20 < 118236.47
+2025-08-01 09:32:30 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for high: 118428.40 < 118677.17
+2025-08-01 09:32:30 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:120 - Death cross detected for low: 117326.40 < 117687.43
+2025-08-01 09:32:30 | INFO     | src.core.trading_engine:_generate_backtest_report:330 - === BACKTEST RESULTS ===
+2025-08-01 09:32:30 | INFO     | src.core.trading_engine:_generate_backtest_report:331 - Initial Capital: $100,000.00
+2025-08-01 09:32:30 | INFO     | src.core.trading_engine:_generate_backtest_report:332 - Final Portfolio Value: $100.28
+2025-08-01 09:32:30 | INFO     | src.core.trading_engine:_generate_backtest_report:333 - Total Return: -99.90%
+2025-08-01 09:32:30 | INFO     | src.core.trading_engine:_generate_backtest_report:334 - Annualized Volatility: 188.74%
+2025-08-01 09:32:30 | INFO     | src.core.trading_engine:_generate_backtest_report:335 - Sharpe Ratio: -0.17
+2025-08-01 09:32:30 | INFO     | src.core.trading_engine:_generate_backtest_report:336 - Maximum Drawdown: -99.96%
+2025-08-01 09:32:30 | INFO     | src.core.trading_engine:_generate_backtest_report:337 - Total Trades: 201
+2025-08-01 09:32:30 | INFO     | src.core.trading_engine:_generate_backtest_report:338 - Buy Trades: 101
+2025-08-01 09:32:30 | INFO     | src.core.trading_engine:_generate_backtest_report:339 - Sell Trades: 100
+2025-08-01 09:32:30 | INFO     | src.core.trading_engine:_generate_backtest_report:347 - Backtest results saved to data/backtest_results.csv
+2025-08-01 09:32:30 | INFO     | src.core.trading_engine:_generate_backtest_report:364 - Trade details saved to data/trades.csv
+2025-08-01 09:32:30 | INFO     | __main__:run_backtest:108 - Backtest completed
+2025-08-01 13:32:15 | INFO     | src.risk.risk_manager:__init__:49 - Risk manager initialized
+2025-08-01 13:32:15 | INFO     | src.core.trading_engine:__init__:77 - Trading engine initialized with $100,000.00 initial capital
+2025-08-01 13:32:15 | WARNING  | __main__:run_backtest:77 - SMA Crossover strategy is disabled in config
+2025-08-01 13:32:24 | INFO     | src.risk.risk_manager:__init__:49 - Risk manager initialized
+2025-08-01 13:32:24 | INFO     | src.core.trading_engine:__init__:77 - Trading engine initialized with $100,000.00 initial capital
+2025-08-01 13:32:24 | INFO     | src.strategies.base_strategy:__init__:34 - Initialized strategy: rsi
+2025-08-01 13:32:24 | INFO     | src.strategies.rsi_strategy:__init__:56 - RSI Strategy initialized: period=20, overbought=70, oversold=30
+2025-08-01 13:32:24 | INFO     | src.core.trading_engine:add_strategy:82 - Added strategy: rsi
+2025-08-01 13:32:24 | INFO     | __main__:run_backtest:84 - RSI strategy added (enabled)
+2025-08-01 13:32:24 | INFO     | src.core.trading_engine:run_backtest:86 - Starting backtest from 2023-01-01 to 2025-07-31
+2025-08-01 13:32:24 | INFO     | src.data.data_manager:get_historical_data_standardized:609 - Fetching standardized OHLCV data for ['Bitstamp:BTCUSD'] from 2023-01-01 to 2025-07-31
+2025-08-01 13:32:24 | INFO     | src.data.data_manager:get_historical_data:60 - Fetching historical OHLCV data for ['Bitstamp:BTCUSD'] from 2023-01-01 to 2025-07-31
+2025-08-01 13:32:25 | INFO     | src.data.data_manager:_fetch_tradingview_ohlcv_data:150 - Successfully fetched OHLCV data for 1 symbols
+2025-08-01 13:32:25 | INFO     | src.data.data_manager:get_historical_data:93 - OHLCV data cached successfully
+2025-08-01 13:32:25 | INFO     | src.data.data_manager:ensure_ohlcv_format:524 - Data formatted for Bitstamp:BTCUSD: (1000, 5)
+2025-08-01 13:32:25 | INFO     | src.data.data_manager:get_historical_data_standardized:642 - Successfully standardized OHLCV data for 1 symbols
+2025-08-01 13:32:25 | INFO     | src.core.trading_engine:run_backtest:107 - Loaded 1000 data points for [('Bitstamp:BTCUSD', 'open'), ('Bitstamp:BTCUSD', 'high'), ('Bitstamp:BTCUSD', 'low'), ('Bitstamp:BTCUSD', 'close'), ('Bitstamp:BTCUSD', 'volume')]
+2025-08-01 13:32:25 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:112 - RSI oversold signal for Bitstamp:BTCUSD: 26.76 < 30
+2025-08-01 13:32:25 | INFO     | src.core.trading_engine:_execute_buy_order:236 - BUY: 0.21 Bitstamp:BTCUSD @ $93942.00 (rsi)
+2025-08-01 13:32:25 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:128 - RSI sustained oversold for Bitstamp:BTCUSD: 22.61
+2025-08-01 13:32:25 | INFO     | src.core.trading_engine:_execute_buy_order:236 - BUY: 0.17 Bitstamp:BTCUSD @ $91554.00 (rsi)
+2025-08-01 13:32:25 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:112 - RSI oversold signal for Bitstamp:BTCUSD: 20.65 < 30
+2025-08-01 13:32:25 | INFO     | src.core.trading_engine:_execute_buy_order:236 - BUY: 0.14 Bitstamp:BTCUSD @ $89342.00 (rsi)
+2025-08-01 13:32:25 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:128 - RSI sustained oversold for Bitstamp:BTCUSD: 19.36
+2025-08-01 13:32:25 | INFO     | src.core.trading_engine:_execute_buy_order:236 - BUY: 0.11 Bitstamp:BTCUSD @ $89211.00 (rsi)
+2025-08-01 13:32:25 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:128 - RSI sustained oversold for Bitstamp:BTCUSD: 16.26
+2025-08-01 13:32:25 | INFO     | src.core.trading_engine:_execute_buy_order:236 - BUY: 0.09 Bitstamp:BTCUSD @ $87070.00 (rsi)
+2025-08-01 13:32:25 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:128 - RSI sustained oversold for Bitstamp:BTCUSD: 19.09
+2025-08-01 13:32:25 | INFO     | src.core.trading_engine:_execute_buy_order:236 - BUY: 0.07 Bitstamp:BTCUSD @ $87824.00 (rsi)
+2025-08-01 13:32:25 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:128 - RSI sustained oversold for Bitstamp:BTCUSD: 23.04
+2025-08-01 13:32:25 | INFO     | src.core.trading_engine:_execute_buy_order:236 - BUY: 0.06 Bitstamp:BTCUSD @ $88576.00 (rsi)
+2025-08-01 13:32:25 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:128 - RSI sustained oversold for Bitstamp:BTCUSD: 24.04
+2025-08-01 13:32:25 | INFO     | src.core.trading_engine:_execute_buy_order:236 - BUY: 0.05 Bitstamp:BTCUSD @ $88804.00 (rsi)
+2025-08-01 13:32:25 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:128 - RSI sustained oversold for Bitstamp:BTCUSD: 23.86
+2025-08-01 13:32:25 | WARNING  | src.risk.risk_manager:can_buy:83 - Insufficient cash: $16743.69 < $19499.92
+2025-08-01 13:32:25 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:128 - RSI sustained oversold for Bitstamp:BTCUSD: 23.98
+2025-08-01 13:32:25 | WARNING  | src.risk.risk_manager:can_buy:83 - Insufficient cash: $16743.69 < $19488.70
+2025-08-01 13:32:25 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:128 - RSI sustained oversold for Bitstamp:BTCUSD: 21.92
+2025-08-01 13:32:25 | WARNING  | src.risk.risk_manager:can_buy:83 - Insufficient cash: $16743.69 < $19240.54
+2025-08-01 13:32:25 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:128 - RSI sustained oversold for Bitstamp:BTCUSD: 18.22
+2025-08-01 13:32:25 | WARNING  | src.risk.risk_manager:can_buy:83 - Insufficient cash: $16743.69 < $18428.08
+2025-08-01 13:32:25 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:128 - RSI sustained oversold for Bitstamp:BTCUSD: 20.17
+2025-08-01 13:32:25 | WARNING  | src.risk.risk_manager:can_buy:83 - Insufficient cash: $16743.69 < $18495.62
+2025-08-01 13:32:25 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:128 - RSI sustained oversold for Bitstamp:BTCUSD: 23.26
+2025-08-01 13:32:25 | WARNING  | src.risk.risk_manager:can_buy:83 - Insufficient cash: $16743.69 < $18733.22
+2025-08-01 13:32:25 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:128 - RSI sustained oversold for Bitstamp:BTCUSD: 25.36
+2025-08-01 13:32:25 | WARNING  | src.risk.risk_manager:can_buy:83 - Insufficient cash: $16743.69 < $18964.88
+2025-08-01 13:32:25 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:128 - RSI sustained oversold for Bitstamp:BTCUSD: 27.91
+2025-08-01 13:32:25 | WARNING  | src.risk.risk_manager:can_buy:83 - Insufficient cash: $16743.69 < $19056.40
+2025-08-01 13:32:25 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:128 - RSI sustained oversold for Bitstamp:BTCUSD: 24.87
+2025-08-01 13:32:25 | WARNING  | src.risk.risk_manager:can_buy:83 - Insufficient cash: $16743.69 < $18796.58
+2025-08-01 13:32:25 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:128 - RSI sustained oversold for Bitstamp:BTCUSD: 23.29
+2025-08-01 13:32:25 | WARNING  | src.risk.risk_manager:can_buy:83 - Insufficient cash: $16743.69 < $18476.26
+2025-08-01 13:32:25 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:128 - RSI sustained oversold for Bitstamp:BTCUSD: 27.34
+2025-08-01 13:32:25 | WARNING  | src.risk.risk_manager:can_buy:83 - Insufficient cash: $16743.69 < $18620.58
+2025-08-01 13:32:25 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:128 - RSI sustained oversold for Bitstamp:BTCUSD: 23.08
+2025-08-01 13:32:25 | WARNING  | src.risk.risk_manager:can_buy:83 - Insufficient cash: $16743.69 < $17676.56
+2025-08-01 13:32:25 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:128 - RSI sustained oversold for Bitstamp:BTCUSD: 24.18
+2025-08-01 13:32:25 | WARNING  | src.risk.risk_manager:can_buy:83 - Insufficient cash: $16743.69 < $17402.88
+2025-08-01 13:32:25 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:128 - RSI sustained oversold for Bitstamp:BTCUSD: 26.56
+2025-08-01 13:32:25 | WARNING  | src.risk.risk_manager:can_buy:83 - Insufficient cash: $16743.69 < $17703.40
+2025-08-01 13:32:25 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:118 - RSI overbought signal for Bitstamp:BTCUSD: 79.46 > 70
+2025-08-01 13:32:25 | INFO     | src.core.trading_engine:_execute_sell_order:274 - SELL: 0.92 Bitstamp:BTCUSD @ $92713.00 | P&L: $2063.49 (2.48%) (rsi)
+2025-08-01 13:32:25 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 74.23
+2025-08-01 13:32:25 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:112 - RSI oversold signal for Bitstamp:BTCUSD: 27.84 < 30
+2025-08-01 13:32:25 | INFO     | src.core.trading_engine:_execute_buy_order:236 - BUY: 0.24 Bitstamp:BTCUSD @ $85003.00 (rsi)
+2025-08-01 13:32:25 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:128 - RSI sustained oversold for Bitstamp:BTCUSD: 24.94
+2025-08-01 13:32:25 | INFO     | src.core.trading_engine:_execute_buy_order:236 - BUY: 0.20 Bitstamp:BTCUSD @ $83059.00 (rsi)
+2025-08-01 13:32:25 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:128 - RSI sustained oversold for Bitstamp:BTCUSD: 24.31
+2025-08-01 13:32:25 | INFO     | src.core.trading_engine:_execute_buy_order:236 - BUY: 0.16 Bitstamp:BTCUSD @ $82628.00 (rsi)
+2025-08-01 13:32:25 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:128 - RSI sustained oversold for Bitstamp:BTCUSD: 22.42
+2025-08-01 13:32:25 | INFO     | src.core.trading_engine:_execute_buy_order:236 - BUY: 0.13 Bitstamp:BTCUSD @ $80708.00 (rsi)
+2025-08-01 13:32:25 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:112 - RSI oversold signal for Bitstamp:BTCUSD: 26.61 < 30
+2025-08-01 13:32:25 | INFO     | src.core.trading_engine:_execute_buy_order:236 - BUY: 0.10 Bitstamp:BTCUSD @ $82317.00 (rsi)
+2025-08-01 13:32:25 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:112 - RSI oversold signal for Bitstamp:BTCUSD: 24.79 < 30
+2025-08-01 13:32:25 | INFO     | src.core.trading_engine:_execute_buy_order:236 - BUY: 0.08 Bitstamp:BTCUSD @ $80004.00 (rsi)
+2025-08-01 13:32:25 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:128 - RSI sustained oversold for Bitstamp:BTCUSD: 20.57
+2025-08-01 13:32:25 | INFO     | src.core.trading_engine:_execute_buy_order:236 - BUY: 0.07 Bitstamp:BTCUSD @ $78938.00 (rsi)
+2025-08-01 13:32:25 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:128 - RSI sustained oversold for Bitstamp:BTCUSD: 20.73
+2025-08-01 13:32:25 | INFO     | src.core.trading_engine:_execute_buy_order:236 - BUY: 0.05 Bitstamp:BTCUSD @ $78561.00 (rsi)
+2025-08-01 13:32:25 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:128 - RSI sustained oversold for Bitstamp:BTCUSD: 25.85
+2025-08-01 13:32:25 | WARNING  | src.risk.risk_manager:can_buy:83 - Insufficient cash: $17075.27 < $17488.24
+2025-08-01 13:32:25 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:112 - RSI oversold signal for Bitstamp:BTCUSD: 27.86 < 30
+2025-08-01 13:32:25 | WARNING  | src.risk.risk_manager:can_buy:83 - Insufficient cash: $17075.27 < $18539.84
+2025-08-01 13:32:25 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:118 - RSI overbought signal for Bitstamp:BTCUSD: 70.81 > 70
+2025-08-01 13:32:25 | INFO     | src.core.trading_engine:_execute_sell_order:274 - SELL: 1.03 Bitstamp:BTCUSD @ $86551.00 | P&L: $4267.64 (5.03%) (rsi)
+2025-08-01 13:32:25 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 72.35
+2025-08-01 13:32:25 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 74.65
+2025-08-01 13:32:25 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 82.84
+2025-08-01 13:32:25 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 81.66
+2025-08-01 13:32:25 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 78.59
+2025-08-01 13:32:25 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:118 - RSI overbought signal for Bitstamp:BTCUSD: 70.49 > 70
+2025-08-01 13:32:25 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 71.90
+2025-08-01 13:32:25 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:118 - RSI overbought signal for Bitstamp:BTCUSD: 70.77 > 70
+2025-08-01 13:32:25 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:112 - RSI oversold signal for Bitstamp:BTCUSD: 27.73 < 30
+2025-08-01 13:32:25 | INFO     | src.core.trading_engine:_execute_buy_order:236 - BUY: 0.26 Bitstamp:BTCUSD @ $82256.00 (rsi)
+2025-08-01 13:32:25 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:128 - RSI sustained oversold for Bitstamp:BTCUSD: 21.65
+2025-08-01 13:32:25 | INFO     | src.core.trading_engine:_execute_buy_order:236 - BUY: 0.21 Bitstamp:BTCUSD @ $82388.00 (rsi)
+2025-08-01 13:32:25 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:128 - RSI sustained oversold for Bitstamp:BTCUSD: 24.37
+2025-08-01 13:32:25 | INFO     | src.core.trading_engine:_execute_buy_order:236 - BUY: 0.16 Bitstamp:BTCUSD @ $82700.00 (rsi)
+2025-08-01 13:32:25 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:128 - RSI sustained oversold for Bitstamp:BTCUSD: 27.36
+2025-08-01 13:32:25 | INFO     | src.core.trading_engine:_execute_buy_order:236 - BUY: 0.13 Bitstamp:BTCUSD @ $82608.00 (rsi)
+2025-08-01 13:32:25 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:112 - RSI oversold signal for Bitstamp:BTCUSD: 28.98 < 30
+2025-08-01 13:32:25 | INFO     | src.core.trading_engine:_execute_buy_order:236 - BUY: 0.10 Bitstamp:BTCUSD @ $83054.00 (rsi)
+2025-08-01 13:32:25 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:128 - RSI sustained oversold for Bitstamp:BTCUSD: 22.84
+2025-08-01 13:32:25 | INFO     | src.core.trading_engine:_execute_buy_order:236 - BUY: 0.08 Bitstamp:BTCUSD @ $83097.00 (rsi)
+2025-08-01 13:32:25 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:128 - RSI sustained oversold for Bitstamp:BTCUSD: 22.50
+2025-08-01 13:32:25 | INFO     | src.core.trading_engine:_execute_buy_order:236 - BUY: 0.07 Bitstamp:BTCUSD @ $82706.00 (rsi)
+2025-08-01 13:32:25 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:128 - RSI sustained oversold for Bitstamp:BTCUSD: 23.31
+2025-08-01 13:32:25 | INFO     | src.core.trading_engine:_execute_buy_order:236 - BUY: 0.05 Bitstamp:BTCUSD @ $82538.00 (rsi)
+2025-08-01 13:32:25 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:128 - RSI sustained oversold for Bitstamp:BTCUSD: 22.82
+2025-08-01 13:32:25 | WARNING  | src.risk.risk_manager:can_buy:83 - Insufficient cash: $17775.63 < $18118.98
+2025-08-01 13:32:25 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:128 - RSI sustained oversold for Bitstamp:BTCUSD: 20.13
+2025-08-01 13:32:25 | WARNING  | src.risk.risk_manager:can_buy:83 - Insufficient cash: $17775.63 < $17930.44
+2025-08-01 13:32:25 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:128 - RSI sustained oversold for Bitstamp:BTCUSD: 22.07
+2025-08-01 13:32:25 | WARNING  | src.risk.risk_manager:can_buy:83 - Insufficient cash: $17775.63 < $18023.50
+2025-08-01 13:32:25 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:128 - RSI sustained oversold for Bitstamp:BTCUSD: 25.37
+2025-08-01 13:32:25 | WARNING  | src.risk.risk_manager:can_buy:83 - Insufficient cash: $17775.63 < $18083.34
+2025-08-01 13:32:25 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:112 - RSI oversold signal for Bitstamp:BTCUSD: 22.97 < 30
+2025-08-01 13:32:25 | INFO     | src.core.trading_engine:_execute_buy_order:236 - BUY: 0.05 Bitstamp:BTCUSD @ $75049.00 (rsi)
+2025-08-01 13:32:25 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:118 - RSI overbought signal for Bitstamp:BTCUSD: 72.58 > 70
+2025-08-01 13:32:25 | INFO     | src.core.trading_engine:_execute_sell_order:274 - SELL: 1.12 Bitstamp:BTCUSD @ $84933.00 | P&L: $2890.15 (3.15%) (rsi)
+2025-08-01 13:32:25 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 71.64
+2025-08-01 13:32:25 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:118 - RSI overbought signal for Bitstamp:BTCUSD: 72.67 > 70
+2025-08-01 13:32:25 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 72.55
+2025-08-01 13:32:25 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 72.80
+2025-08-01 13:32:25 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 70.52
+2025-08-01 13:32:25 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:118 - RSI overbought signal for Bitstamp:BTCUSD: 73.19 > 70
+2025-08-01 13:32:25 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:118 - RSI overbought signal for Bitstamp:BTCUSD: 71.59 > 70
+2025-08-01 13:32:25 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 73.30
+2025-08-01 13:32:25 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 72.40
+2025-08-01 13:32:25 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 77.78
+2025-08-01 13:32:25 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 78.96
+2025-08-01 13:32:25 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 82.34
+2025-08-01 13:32:25 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 81.08
+2025-08-01 13:32:25 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 82.49
+2025-08-01 13:32:25 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 78.60
+2025-08-01 13:32:25 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 79.09
+2025-08-01 13:32:25 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 83.34
+2025-08-01 13:32:25 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 83.26
+2025-08-01 13:32:25 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 77.12
+2025-08-01 13:32:25 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 73.84
+2025-08-01 13:32:25 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 70.66
+2025-08-01 13:32:25 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 71.48
+2025-08-01 13:32:25 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 74.61
+2025-08-01 13:32:25 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 73.17
+2025-08-01 13:32:25 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 73.20
+2025-08-01 13:32:25 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 74.00
+2025-08-01 13:32:25 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 74.33
+2025-08-01 13:32:25 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 74.70
+2025-08-01 13:32:25 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 74.91
+2025-08-01 13:32:25 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:118 - RSI overbought signal for Bitstamp:BTCUSD: 71.49 > 70
+2025-08-01 13:32:25 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 73.50
+2025-08-01 13:32:25 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 74.94
+2025-08-01 13:32:25 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 80.45
+2025-08-01 13:32:25 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 84.92
+2025-08-01 13:32:25 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 79.33
+2025-08-01 13:32:25 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 80.50
+2025-08-01 13:32:25 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 78.05
+2025-08-01 13:32:25 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 78.10
+2025-08-01 13:32:25 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 81.81
+2025-08-01 13:32:25 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 79.51
+2025-08-01 13:32:25 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 79.25
+2025-08-01 13:32:25 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 77.06
+2025-08-01 13:32:25 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 76.99
+2025-08-01 13:32:25 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 74.49
+2025-08-01 13:32:25 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 74.55
+2025-08-01 13:32:25 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 77.88
+2025-08-01 13:32:25 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 77.68
+2025-08-01 13:32:25 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 72.76
+2025-08-01 13:32:25 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 71.00
+2025-08-01 13:32:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:118 - RSI overbought signal for Bitstamp:BTCUSD: 74.69 > 70
+2025-08-01 13:32:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:118 - RSI overbought signal for Bitstamp:BTCUSD: 71.74 > 70
+2025-08-01 13:32:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:118 - RSI overbought signal for Bitstamp:BTCUSD: 77.53 > 70
+2025-08-01 13:32:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 80.50
+2025-08-01 13:32:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 81.18
+2025-08-01 13:32:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 79.12
+2025-08-01 13:32:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 73.56
+2025-08-01 13:32:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 71.04
+2025-08-01 13:32:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:112 - RSI oversold signal for Bitstamp:BTCUSD: 26.16 < 30
+2025-08-01 13:32:26 | INFO     | src.core.trading_engine:_execute_buy_order:236 - BUY: 0.21 Bitstamp:BTCUSD @ $104034.00 (rsi)
+2025-08-01 13:32:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:128 - RSI sustained oversold for Bitstamp:BTCUSD: 26.01
+2025-08-01 13:32:26 | INFO     | src.core.trading_engine:_execute_buy_order:236 - BUY: 0.17 Bitstamp:BTCUSD @ $103707.00 (rsi)
+2025-08-01 13:32:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:128 - RSI sustained oversold for Bitstamp:BTCUSD: 28.59
+2025-08-01 13:32:26 | INFO     | src.core.trading_engine:_execute_buy_order:236 - BUY: 0.13 Bitstamp:BTCUSD @ $103793.00 (rsi)
+2025-08-01 13:32:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:128 - RSI sustained oversold for Bitstamp:BTCUSD: 28.14
+2025-08-01 13:32:26 | INFO     | src.core.trading_engine:_execute_buy_order:236 - BUY: 0.11 Bitstamp:BTCUSD @ $103534.00 (rsi)
+2025-08-01 13:32:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:118 - RSI overbought signal for Bitstamp:BTCUSD: 73.24 > 70
+2025-08-01 13:32:26 | INFO     | src.core.trading_engine:_execute_sell_order:274 - SELL: 0.62 Bitstamp:BTCUSD @ $105720.00 | P&L: $1120.20 (1.74%) (rsi)
+2025-08-01 13:32:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 75.81
+2025-08-01 13:32:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 78.86
+2025-08-01 13:32:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 76.64
+2025-08-01 13:32:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 77.03
+2025-08-01 13:32:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 78.26
+2025-08-01 13:32:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 79.92
+2025-08-01 13:32:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 76.72
+2025-08-01 13:32:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 76.05
+2025-08-01 13:32:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 71.70
+2025-08-01 13:32:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 72.47
+2025-08-01 13:32:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 73.37
+2025-08-01 13:32:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:112 - RSI oversold signal for Bitstamp:BTCUSD: 25.23 < 30
+2025-08-01 13:32:26 | INFO     | src.core.trading_engine:_execute_buy_order:236 - BUY: 0.21 Bitstamp:BTCUSD @ $104950.00 (rsi)
+2025-08-01 13:32:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:128 - RSI sustained oversold for Bitstamp:BTCUSD: 27.99
+2025-08-01 13:32:26 | INFO     | src.core.trading_engine:_execute_buy_order:236 - BUY: 0.17 Bitstamp:BTCUSD @ $105091.00 (rsi)
+2025-08-01 13:32:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:112 - RSI oversold signal for Bitstamp:BTCUSD: 28.72 < 30
+2025-08-01 13:32:26 | INFO     | src.core.trading_engine:_execute_buy_order:236 - BUY: 0.13 Bitstamp:BTCUSD @ $105158.00 (rsi)
+2025-08-01 13:32:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:112 - RSI oversold signal for Bitstamp:BTCUSD: 25.48 < 30
+2025-08-01 13:32:26 | INFO     | src.core.trading_engine:_execute_buy_order:236 - BUY: 0.11 Bitstamp:BTCUSD @ $105130.00 (rsi)
+2025-08-01 13:32:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:128 - RSI sustained oversold for Bitstamp:BTCUSD: 27.01
+2025-08-01 13:32:26 | INFO     | src.core.trading_engine:_execute_buy_order:236 - BUY: 0.09 Bitstamp:BTCUSD @ $105147.00 (rsi)
+2025-08-01 13:32:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:128 - RSI sustained oversold for Bitstamp:BTCUSD: 27.06
+2025-08-01 13:32:26 | INFO     | src.core.trading_engine:_execute_buy_order:236 - BUY: 0.07 Bitstamp:BTCUSD @ $104885.00 (rsi)
+2025-08-01 13:32:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:128 - RSI sustained oversold for Bitstamp:BTCUSD: 27.08
+2025-08-01 13:32:26 | INFO     | src.core.trading_engine:_execute_buy_order:236 - BUY: 0.06 Bitstamp:BTCUSD @ $104695.00 (rsi)
+2025-08-01 13:32:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:128 - RSI sustained oversold for Bitstamp:BTCUSD: 29.02
+2025-08-01 13:32:26 | WARNING  | src.risk.risk_manager:can_buy:83 - Insufficient cash: $23031.96 < $23202.08
+2025-08-01 13:32:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:112 - RSI oversold signal for Bitstamp:BTCUSD: 27.07 < 30
+2025-08-01 13:32:26 | INFO     | src.core.trading_engine:_execute_buy_order:236 - BUY: 0.05 Bitstamp:BTCUSD @ $98980.00 (rsi)
+2025-08-01 13:32:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:128 - RSI sustained oversold for Bitstamp:BTCUSD: 26.10
+2025-08-01 13:32:26 | WARNING  | src.risk.risk_manager:can_buy:83 - Insufficient cash: $18420.96 < $21765.04
+2025-08-01 13:32:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:118 - RSI overbought signal for Bitstamp:BTCUSD: 85.61 > 70
+2025-08-01 13:32:26 | INFO     | src.core.trading_engine:_execute_sell_order:274 - SELL: 0.87 Bitstamp:BTCUSD @ $107418.00 | P&L: $2271.59 (2.48%) (rsi)
+2025-08-01 13:32:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 86.54
+2025-08-01 13:32:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 83.28
+2025-08-01 13:32:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 79.22
+2025-08-01 13:32:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 77.26
+2025-08-01 13:32:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 83.18
+2025-08-01 13:32:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 78.23
+2025-08-01 13:32:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 75.07
+2025-08-01 13:32:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:118 - RSI overbought signal for Bitstamp:BTCUSD: 72.66 > 70
+2025-08-01 13:32:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 80.25
+2025-08-01 13:32:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 83.08
+2025-08-01 13:32:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 83.65
+2025-08-01 13:32:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 86.17
+2025-08-01 13:32:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 79.85
+2025-08-01 13:32:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 81.20
+2025-08-01 13:32:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 80.56
+2025-08-01 13:32:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 80.19
+2025-08-01 13:32:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 79.93
+2025-08-01 13:32:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 83.15
+2025-08-01 13:32:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 78.76
+2025-08-01 13:32:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 78.88
+2025-08-01 13:32:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 78.17
+2025-08-01 13:32:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 74.09
+2025-08-01 13:32:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 77.42
+2025-08-01 13:32:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 78.68
+2025-08-01 13:32:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 79.45
+2025-08-01 13:32:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 81.19
+2025-08-01 13:32:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 80.77
+2025-08-01 13:32:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 80.28
+2025-08-01 13:32:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 79.16
+2025-08-01 13:32:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:118 - RSI overbought signal for Bitstamp:BTCUSD: 72.04 > 70
+2025-08-01 13:32:26 | INFO     | src.core.trading_engine:_generate_backtest_report:326 - === BACKTEST RESULTS ===
+2025-08-01 13:32:26 | INFO     | src.core.trading_engine:_generate_backtest_report:327 - Initial Capital: $100,000.00
+2025-08-01 13:32:26 | INFO     | src.core.trading_engine:_generate_backtest_report:328 - Final Portfolio Value: $112,197.41
+2025-08-01 13:32:26 | INFO     | src.core.trading_engine:_generate_backtest_report:329 - Total Return: 12.20%
+2025-08-01 13:32:26 | INFO     | src.core.trading_engine:_generate_backtest_report:330 - Annualized Volatility: 9.21%
+2025-08-01 13:32:26 | INFO     | src.core.trading_engine:_generate_backtest_report:331 - Sharpe Ratio: 0.36
+2025-08-01 13:32:26 | INFO     | src.core.trading_engine:_generate_backtest_report:332 - Maximum Drawdown: -11.55%
+2025-08-01 13:32:26 | INFO     | src.core.trading_engine:_generate_backtest_report:333 - Total Trades: 42
+2025-08-01 13:32:26 | INFO     | src.core.trading_engine:_generate_backtest_report:334 - Buy Trades: 37
+2025-08-01 13:32:26 | INFO     | src.core.trading_engine:_generate_backtest_report:335 - Sell Trades: 5
+2025-08-01 13:32:26 | INFO     | src.core.trading_engine:_generate_backtest_report:343 - Backtest results saved to data/backtest_results.csv
+2025-08-01 13:32:26 | INFO     | src.core.trading_engine:_generate_backtest_report:360 - Trade details saved to data/trades.csv
+2025-08-01 13:32:26 | INFO     | __main__:run_backtest:108 - Backtest completed
+2025-08-01 13:33:25 | INFO     | src.risk.risk_manager:__init__:49 - Risk manager initialized
+2025-08-01 13:33:25 | INFO     | src.core.trading_engine:__init__:77 - Trading engine initialized with $100,000.00 initial capital
+2025-08-01 13:33:25 | INFO     | src.strategies.base_strategy:__init__:34 - Initialized strategy: rsi
+2025-08-01 13:33:25 | INFO     | src.strategies.rsi_strategy:__init__:56 - RSI Strategy initialized: period=20, overbought=70, oversold=30
+2025-08-01 13:33:25 | INFO     | src.core.trading_engine:add_strategy:82 - Added strategy: rsi
+2025-08-01 13:33:25 | INFO     | __main__:run_backtest:84 - RSI strategy added (enabled)
+2025-08-01 13:33:25 | INFO     | src.core.trading_engine:run_backtest:86 - Starting backtest from 2023-01-01 to 2025-07-31
+2025-08-01 13:33:25 | INFO     | src.data.data_manager:get_historical_data_standardized:609 - Fetching standardized OHLCV data for ['Bitstamp:BTCUSD'] from 2023-01-01 to 2025-07-31
+2025-08-01 13:33:25 | INFO     | src.data.data_manager:get_historical_data:60 - Fetching historical OHLCV data for ['Bitstamp:BTCUSD'] from 2023-01-01 to 2025-07-31
+2025-08-01 13:33:26 | INFO     | src.data.data_manager:_fetch_tradingview_ohlcv_data:150 - Successfully fetched OHLCV data for 1 symbols
+2025-08-01 13:33:26 | INFO     | src.data.data_manager:get_historical_data:93 - OHLCV data cached successfully
+2025-08-01 13:33:26 | INFO     | src.data.data_manager:ensure_ohlcv_format:524 - Data formatted for Bitstamp:BTCUSD: (1000, 5)
+2025-08-01 13:33:26 | INFO     | src.data.data_manager:get_historical_data_standardized:642 - Successfully standardized OHLCV data for 1 symbols
+2025-08-01 13:33:26 | INFO     | src.core.trading_engine:run_backtest:107 - Loaded 1000 data points for [('Bitstamp:BTCUSD', 'open'), ('Bitstamp:BTCUSD', 'high'), ('Bitstamp:BTCUSD', 'low'), ('Bitstamp:BTCUSD', 'close'), ('Bitstamp:BTCUSD', 'volume')]
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:112 - RSI oversold signal for Bitstamp:BTCUSD: 26.76 < 30
+2025-08-01 13:33:26 | INFO     | src.core.trading_engine:_execute_buy_order:236 - BUY: 0.21 Bitstamp:BTCUSD @ $93942.00 (rsi)
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:128 - RSI sustained oversold for Bitstamp:BTCUSD: 22.61
+2025-08-01 13:33:26 | INFO     | src.core.trading_engine:_execute_buy_order:236 - BUY: 0.17 Bitstamp:BTCUSD @ $91554.00 (rsi)
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:112 - RSI oversold signal for Bitstamp:BTCUSD: 20.65 < 30
+2025-08-01 13:33:26 | INFO     | src.core.trading_engine:_execute_buy_order:236 - BUY: 0.14 Bitstamp:BTCUSD @ $89342.00 (rsi)
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:128 - RSI sustained oversold for Bitstamp:BTCUSD: 19.36
+2025-08-01 13:33:26 | INFO     | src.core.trading_engine:_execute_buy_order:236 - BUY: 0.11 Bitstamp:BTCUSD @ $89211.00 (rsi)
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:128 - RSI sustained oversold for Bitstamp:BTCUSD: 16.26
+2025-08-01 13:33:26 | INFO     | src.core.trading_engine:_execute_buy_order:236 - BUY: 0.09 Bitstamp:BTCUSD @ $87070.00 (rsi)
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:128 - RSI sustained oversold for Bitstamp:BTCUSD: 19.09
+2025-08-01 13:33:26 | INFO     | src.core.trading_engine:_execute_buy_order:236 - BUY: 0.07 Bitstamp:BTCUSD @ $87824.00 (rsi)
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:128 - RSI sustained oversold for Bitstamp:BTCUSD: 23.04
+2025-08-01 13:33:26 | INFO     | src.core.trading_engine:_execute_buy_order:236 - BUY: 0.06 Bitstamp:BTCUSD @ $88576.00 (rsi)
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:128 - RSI sustained oversold for Bitstamp:BTCUSD: 24.04
+2025-08-01 13:33:26 | INFO     | src.core.trading_engine:_execute_buy_order:236 - BUY: 0.05 Bitstamp:BTCUSD @ $88804.00 (rsi)
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:128 - RSI sustained oversold for Bitstamp:BTCUSD: 23.86
+2025-08-01 13:33:26 | WARNING  | src.risk.risk_manager:can_buy:83 - Insufficient cash: $16743.69 < $19499.92
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:128 - RSI sustained oversold for Bitstamp:BTCUSD: 23.98
+2025-08-01 13:33:26 | WARNING  | src.risk.risk_manager:can_buy:83 - Insufficient cash: $16743.69 < $19488.70
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:128 - RSI sustained oversold for Bitstamp:BTCUSD: 21.92
+2025-08-01 13:33:26 | WARNING  | src.risk.risk_manager:can_buy:83 - Insufficient cash: $16743.69 < $19240.54
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:128 - RSI sustained oversold for Bitstamp:BTCUSD: 18.22
+2025-08-01 13:33:26 | WARNING  | src.risk.risk_manager:can_buy:83 - Insufficient cash: $16743.69 < $18428.08
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:128 - RSI sustained oversold for Bitstamp:BTCUSD: 20.17
+2025-08-01 13:33:26 | WARNING  | src.risk.risk_manager:can_buy:83 - Insufficient cash: $16743.69 < $18495.62
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:128 - RSI sustained oversold for Bitstamp:BTCUSD: 23.26
+2025-08-01 13:33:26 | WARNING  | src.risk.risk_manager:can_buy:83 - Insufficient cash: $16743.69 < $18733.22
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:128 - RSI sustained oversold for Bitstamp:BTCUSD: 25.36
+2025-08-01 13:33:26 | WARNING  | src.risk.risk_manager:can_buy:83 - Insufficient cash: $16743.69 < $18964.88
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:128 - RSI sustained oversold for Bitstamp:BTCUSD: 27.91
+2025-08-01 13:33:26 | WARNING  | src.risk.risk_manager:can_buy:83 - Insufficient cash: $16743.69 < $19056.40
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:128 - RSI sustained oversold for Bitstamp:BTCUSD: 24.87
+2025-08-01 13:33:26 | WARNING  | src.risk.risk_manager:can_buy:83 - Insufficient cash: $16743.69 < $18796.58
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:128 - RSI sustained oversold for Bitstamp:BTCUSD: 23.29
+2025-08-01 13:33:26 | WARNING  | src.risk.risk_manager:can_buy:83 - Insufficient cash: $16743.69 < $18476.26
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:128 - RSI sustained oversold for Bitstamp:BTCUSD: 27.34
+2025-08-01 13:33:26 | WARNING  | src.risk.risk_manager:can_buy:83 - Insufficient cash: $16743.69 < $18620.58
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:128 - RSI sustained oversold for Bitstamp:BTCUSD: 23.08
+2025-08-01 13:33:26 | WARNING  | src.risk.risk_manager:can_buy:83 - Insufficient cash: $16743.69 < $17676.56
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:128 - RSI sustained oversold for Bitstamp:BTCUSD: 24.18
+2025-08-01 13:33:26 | WARNING  | src.risk.risk_manager:can_buy:83 - Insufficient cash: $16743.69 < $17402.88
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:128 - RSI sustained oversold for Bitstamp:BTCUSD: 26.56
+2025-08-01 13:33:26 | WARNING  | src.risk.risk_manager:can_buy:83 - Insufficient cash: $16743.69 < $17703.40
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:118 - RSI overbought signal for Bitstamp:BTCUSD: 79.46 > 70
+2025-08-01 13:33:26 | INFO     | src.core.trading_engine:_execute_sell_order:274 - SELL: 0.92 Bitstamp:BTCUSD @ $92713.00 | P&L: $2063.49 (2.48%) (rsi)
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 74.23
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:112 - RSI oversold signal for Bitstamp:BTCUSD: 27.84 < 30
+2025-08-01 13:33:26 | INFO     | src.core.trading_engine:_execute_buy_order:236 - BUY: 0.24 Bitstamp:BTCUSD @ $85003.00 (rsi)
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:128 - RSI sustained oversold for Bitstamp:BTCUSD: 24.94
+2025-08-01 13:33:26 | INFO     | src.core.trading_engine:_execute_buy_order:236 - BUY: 0.20 Bitstamp:BTCUSD @ $83059.00 (rsi)
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:128 - RSI sustained oversold for Bitstamp:BTCUSD: 24.31
+2025-08-01 13:33:26 | INFO     | src.core.trading_engine:_execute_buy_order:236 - BUY: 0.16 Bitstamp:BTCUSD @ $82628.00 (rsi)
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:128 - RSI sustained oversold for Bitstamp:BTCUSD: 22.42
+2025-08-01 13:33:26 | INFO     | src.core.trading_engine:_execute_buy_order:236 - BUY: 0.13 Bitstamp:BTCUSD @ $80708.00 (rsi)
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:112 - RSI oversold signal for Bitstamp:BTCUSD: 26.61 < 30
+2025-08-01 13:33:26 | INFO     | src.core.trading_engine:_execute_buy_order:236 - BUY: 0.10 Bitstamp:BTCUSD @ $82317.00 (rsi)
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:112 - RSI oversold signal for Bitstamp:BTCUSD: 24.79 < 30
+2025-08-01 13:33:26 | INFO     | src.core.trading_engine:_execute_buy_order:236 - BUY: 0.08 Bitstamp:BTCUSD @ $80004.00 (rsi)
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:128 - RSI sustained oversold for Bitstamp:BTCUSD: 20.57
+2025-08-01 13:33:26 | INFO     | src.core.trading_engine:_execute_buy_order:236 - BUY: 0.07 Bitstamp:BTCUSD @ $78938.00 (rsi)
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:128 - RSI sustained oversold for Bitstamp:BTCUSD: 20.73
+2025-08-01 13:33:26 | INFO     | src.core.trading_engine:_execute_buy_order:236 - BUY: 0.05 Bitstamp:BTCUSD @ $78561.00 (rsi)
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:128 - RSI sustained oversold for Bitstamp:BTCUSD: 25.85
+2025-08-01 13:33:26 | WARNING  | src.risk.risk_manager:can_buy:83 - Insufficient cash: $17075.27 < $17488.24
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:112 - RSI oversold signal for Bitstamp:BTCUSD: 27.86 < 30
+2025-08-01 13:33:26 | WARNING  | src.risk.risk_manager:can_buy:83 - Insufficient cash: $17075.27 < $18539.84
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:118 - RSI overbought signal for Bitstamp:BTCUSD: 70.81 > 70
+2025-08-01 13:33:26 | INFO     | src.core.trading_engine:_execute_sell_order:274 - SELL: 1.03 Bitstamp:BTCUSD @ $86551.00 | P&L: $4267.64 (5.03%) (rsi)
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 72.35
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 74.65
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 82.84
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 81.66
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 78.59
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:118 - RSI overbought signal for Bitstamp:BTCUSD: 70.49 > 70
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 71.90
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:118 - RSI overbought signal for Bitstamp:BTCUSD: 70.77 > 70
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:112 - RSI oversold signal for Bitstamp:BTCUSD: 27.73 < 30
+2025-08-01 13:33:26 | INFO     | src.core.trading_engine:_execute_buy_order:236 - BUY: 0.26 Bitstamp:BTCUSD @ $82256.00 (rsi)
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:128 - RSI sustained oversold for Bitstamp:BTCUSD: 21.65
+2025-08-01 13:33:26 | INFO     | src.core.trading_engine:_execute_buy_order:236 - BUY: 0.21 Bitstamp:BTCUSD @ $82388.00 (rsi)
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:128 - RSI sustained oversold for Bitstamp:BTCUSD: 24.37
+2025-08-01 13:33:26 | INFO     | src.core.trading_engine:_execute_buy_order:236 - BUY: 0.16 Bitstamp:BTCUSD @ $82700.00 (rsi)
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:128 - RSI sustained oversold for Bitstamp:BTCUSD: 27.36
+2025-08-01 13:33:26 | INFO     | src.core.trading_engine:_execute_buy_order:236 - BUY: 0.13 Bitstamp:BTCUSD @ $82608.00 (rsi)
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:112 - RSI oversold signal for Bitstamp:BTCUSD: 28.98 < 30
+2025-08-01 13:33:26 | INFO     | src.core.trading_engine:_execute_buy_order:236 - BUY: 0.10 Bitstamp:BTCUSD @ $83054.00 (rsi)
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:128 - RSI sustained oversold for Bitstamp:BTCUSD: 22.84
+2025-08-01 13:33:26 | INFO     | src.core.trading_engine:_execute_buy_order:236 - BUY: 0.08 Bitstamp:BTCUSD @ $83097.00 (rsi)
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:128 - RSI sustained oversold for Bitstamp:BTCUSD: 22.50
+2025-08-01 13:33:26 | INFO     | src.core.trading_engine:_execute_buy_order:236 - BUY: 0.07 Bitstamp:BTCUSD @ $82706.00 (rsi)
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:128 - RSI sustained oversold for Bitstamp:BTCUSD: 23.31
+2025-08-01 13:33:26 | INFO     | src.core.trading_engine:_execute_buy_order:236 - BUY: 0.05 Bitstamp:BTCUSD @ $82538.00 (rsi)
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:128 - RSI sustained oversold for Bitstamp:BTCUSD: 22.82
+2025-08-01 13:33:26 | WARNING  | src.risk.risk_manager:can_buy:83 - Insufficient cash: $17775.63 < $18118.98
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:128 - RSI sustained oversold for Bitstamp:BTCUSD: 20.13
+2025-08-01 13:33:26 | WARNING  | src.risk.risk_manager:can_buy:83 - Insufficient cash: $17775.63 < $17930.44
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:128 - RSI sustained oversold for Bitstamp:BTCUSD: 22.07
+2025-08-01 13:33:26 | WARNING  | src.risk.risk_manager:can_buy:83 - Insufficient cash: $17775.63 < $18023.50
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:128 - RSI sustained oversold for Bitstamp:BTCUSD: 25.37
+2025-08-01 13:33:26 | WARNING  | src.risk.risk_manager:can_buy:83 - Insufficient cash: $17775.63 < $18083.34
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:112 - RSI oversold signal for Bitstamp:BTCUSD: 22.97 < 30
+2025-08-01 13:33:26 | INFO     | src.core.trading_engine:_execute_buy_order:236 - BUY: 0.05 Bitstamp:BTCUSD @ $75049.00 (rsi)
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:118 - RSI overbought signal for Bitstamp:BTCUSD: 72.58 > 70
+2025-08-01 13:33:26 | INFO     | src.core.trading_engine:_execute_sell_order:274 - SELL: 1.12 Bitstamp:BTCUSD @ $84933.00 | P&L: $2890.15 (3.15%) (rsi)
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 71.64
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:118 - RSI overbought signal for Bitstamp:BTCUSD: 72.67 > 70
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 72.55
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 72.80
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 70.52
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:118 - RSI overbought signal for Bitstamp:BTCUSD: 73.19 > 70
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:118 - RSI overbought signal for Bitstamp:BTCUSD: 71.59 > 70
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 73.30
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 72.40
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 77.78
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 78.96
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 82.34
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 81.08
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 82.49
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 78.60
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 79.09
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 83.34
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 83.26
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 77.12
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 73.84
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 70.66
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 71.48
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 74.61
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 73.17
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 73.20
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 74.00
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 74.33
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 74.70
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 74.91
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:118 - RSI overbought signal for Bitstamp:BTCUSD: 71.49 > 70
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 73.50
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 74.94
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 80.45
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 84.92
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 79.33
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 80.50
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 78.05
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 78.10
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 81.81
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 79.51
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 79.25
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 77.06
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 76.99
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 74.49
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 74.55
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 77.88
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 77.68
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 72.76
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 71.00
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:118 - RSI overbought signal for Bitstamp:BTCUSD: 74.69 > 70
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:118 - RSI overbought signal for Bitstamp:BTCUSD: 71.74 > 70
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:118 - RSI overbought signal for Bitstamp:BTCUSD: 77.53 > 70
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 80.50
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 81.18
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 79.12
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 73.56
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 71.04
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:112 - RSI oversold signal for Bitstamp:BTCUSD: 26.16 < 30
+2025-08-01 13:33:26 | INFO     | src.core.trading_engine:_execute_buy_order:236 - BUY: 0.21 Bitstamp:BTCUSD @ $104034.00 (rsi)
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:128 - RSI sustained oversold for Bitstamp:BTCUSD: 26.01
+2025-08-01 13:33:26 | INFO     | src.core.trading_engine:_execute_buy_order:236 - BUY: 0.17 Bitstamp:BTCUSD @ $103707.00 (rsi)
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:128 - RSI sustained oversold for Bitstamp:BTCUSD: 28.59
+2025-08-01 13:33:26 | INFO     | src.core.trading_engine:_execute_buy_order:236 - BUY: 0.13 Bitstamp:BTCUSD @ $103793.00 (rsi)
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:128 - RSI sustained oversold for Bitstamp:BTCUSD: 28.14
+2025-08-01 13:33:26 | INFO     | src.core.trading_engine:_execute_buy_order:236 - BUY: 0.11 Bitstamp:BTCUSD @ $103534.00 (rsi)
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:118 - RSI overbought signal for Bitstamp:BTCUSD: 73.24 > 70
+2025-08-01 13:33:26 | INFO     | src.core.trading_engine:_execute_sell_order:274 - SELL: 0.62 Bitstamp:BTCUSD @ $105720.00 | P&L: $1120.20 (1.74%) (rsi)
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 75.81
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 78.86
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 76.64
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 77.03
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 78.26
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 79.92
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 76.72
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 76.05
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 71.70
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 72.47
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 73.37
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:112 - RSI oversold signal for Bitstamp:BTCUSD: 25.23 < 30
+2025-08-01 13:33:26 | INFO     | src.core.trading_engine:_execute_buy_order:236 - BUY: 0.21 Bitstamp:BTCUSD @ $104950.00 (rsi)
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:128 - RSI sustained oversold for Bitstamp:BTCUSD: 27.99
+2025-08-01 13:33:26 | INFO     | src.core.trading_engine:_execute_buy_order:236 - BUY: 0.17 Bitstamp:BTCUSD @ $105091.00 (rsi)
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:112 - RSI oversold signal for Bitstamp:BTCUSD: 28.72 < 30
+2025-08-01 13:33:26 | INFO     | src.core.trading_engine:_execute_buy_order:236 - BUY: 0.13 Bitstamp:BTCUSD @ $105158.00 (rsi)
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:112 - RSI oversold signal for Bitstamp:BTCUSD: 25.48 < 30
+2025-08-01 13:33:26 | INFO     | src.core.trading_engine:_execute_buy_order:236 - BUY: 0.11 Bitstamp:BTCUSD @ $105130.00 (rsi)
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:128 - RSI sustained oversold for Bitstamp:BTCUSD: 27.01
+2025-08-01 13:33:26 | INFO     | src.core.trading_engine:_execute_buy_order:236 - BUY: 0.09 Bitstamp:BTCUSD @ $105147.00 (rsi)
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:128 - RSI sustained oversold for Bitstamp:BTCUSD: 27.06
+2025-08-01 13:33:26 | INFO     | src.core.trading_engine:_execute_buy_order:236 - BUY: 0.07 Bitstamp:BTCUSD @ $104885.00 (rsi)
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:128 - RSI sustained oversold for Bitstamp:BTCUSD: 27.08
+2025-08-01 13:33:26 | INFO     | src.core.trading_engine:_execute_buy_order:236 - BUY: 0.06 Bitstamp:BTCUSD @ $104695.00 (rsi)
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:128 - RSI sustained oversold for Bitstamp:BTCUSD: 29.02
+2025-08-01 13:33:26 | WARNING  | src.risk.risk_manager:can_buy:83 - Insufficient cash: $23031.96 < $23202.08
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:112 - RSI oversold signal for Bitstamp:BTCUSD: 27.07 < 30
+2025-08-01 13:33:26 | INFO     | src.core.trading_engine:_execute_buy_order:236 - BUY: 0.05 Bitstamp:BTCUSD @ $98980.00 (rsi)
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:128 - RSI sustained oversold for Bitstamp:BTCUSD: 26.10
+2025-08-01 13:33:26 | WARNING  | src.risk.risk_manager:can_buy:83 - Insufficient cash: $18420.96 < $21765.04
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:118 - RSI overbought signal for Bitstamp:BTCUSD: 85.61 > 70
+2025-08-01 13:33:26 | INFO     | src.core.trading_engine:_execute_sell_order:274 - SELL: 0.87 Bitstamp:BTCUSD @ $107418.00 | P&L: $2271.59 (2.48%) (rsi)
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 86.54
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 83.28
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 79.22
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 77.26
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 83.18
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 78.23
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 75.07
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:118 - RSI overbought signal for Bitstamp:BTCUSD: 72.66 > 70
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 80.25
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 83.08
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 83.65
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 86.17
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 79.85
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 81.20
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 80.56
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 80.19
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 79.93
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 83.15
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 78.76
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 78.88
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 78.17
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 74.09
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 77.42
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 78.68
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 79.45
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 81.19
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 80.77
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 80.28
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:133 - RSI sustained overbought for Bitstamp:BTCUSD: 79.16
+2025-08-01 13:33:26 | INFO     | src.strategies.rsi_strategy:_generate_signal_for_symbol:118 - RSI overbought signal for Bitstamp:BTCUSD: 72.04 > 70
+2025-08-01 13:33:26 | INFO     | src.core.trading_engine:_generate_backtest_report:326 - === BACKTEST RESULTS ===
+2025-08-01 13:33:26 | INFO     | src.core.trading_engine:_generate_backtest_report:327 - Initial Capital: $100,000.00
+2025-08-01 13:33:26 | INFO     | src.core.trading_engine:_generate_backtest_report:328 - Final Portfolio Value: $112,197.41
+2025-08-01 13:33:26 | INFO     | src.core.trading_engine:_generate_backtest_report:329 - Total Return: 12.20%
+2025-08-01 13:33:26 | INFO     | src.core.trading_engine:_generate_backtest_report:330 - Annualized Volatility: 9.21%
+2025-08-01 13:33:26 | INFO     | src.core.trading_engine:_generate_backtest_report:331 - Sharpe Ratio: 0.36
+2025-08-01 13:33:26 | INFO     | src.core.trading_engine:_generate_backtest_report:332 - Maximum Drawdown: -11.55%
+2025-08-01 13:33:26 | INFO     | src.core.trading_engine:_generate_backtest_report:333 - Total Trades: 42
+2025-08-01 13:33:26 | INFO     | src.core.trading_engine:_generate_backtest_report:334 - Buy Trades: 37
+2025-08-01 13:33:26 | INFO     | src.core.trading_engine:_generate_backtest_report:335 - Sell Trades: 5
+2025-08-01 13:33:26 | INFO     | src.core.trading_engine:_generate_backtest_report:343 - Backtest results saved to data/backtest_results.csv
+2025-08-01 13:33:26 | INFO     | src.core.trading_engine:_generate_backtest_report:360 - Trade details saved to data/trades.csv
+2025-08-01 13:33:26 | INFO     | __main__:run_backtest:108 - Backtest completed

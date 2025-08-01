@@ -12,10 +12,10 @@ data:
   source: "tradingview"  # yfinance, vnstock, custom, tradingview
   start_date: "2023-01-01"
   end_date: "2025-07-31"
-  interval: "1d"  # 1m, 5m, 15m, 30m, 1h, 1d
+  interval: "4h"  # 1d, 1h, 2h, 3h, 4h, 1m, 3m, 5m, 15m, 30m, 45m, monthly, weekly
   cache_data: true
   cache_dir: "data/cache"
-  n_bars: 1000
+  n_bars: 100
 
 # Risk Management
 risk:
@@ -36,13 +36,13 @@ strategies:
     period: 20
     oversold: 30
     overbought: 70
-    enabled: true
+    enabled: false
     
   macd:
     fast_period: 15
     slow_period: 20
     signal_period: 7
-    enabled: true
+    enabled: false
 
 # Logging
 logging:

@@ -13,6 +13,7 @@ from ..data.data_manager import DataManager
 from ..strategies.base_strategy import BaseStrategy
 from ..risk.risk_manager import RiskManager
 from ..utils.config_manager import ConfigManager
+from ..utils.ohlcv_utils import get_symbols_from_data, extract_price_data, get_current_price
 
 
 @dataclass
@@ -84,8 +85,8 @@ class TradingEngine:
         """Run backtesting simulation"""
         logger.info(f"Starting backtest from {start_date} to {end_date}")
         
-        # Get historical data
-        data = self.data_manager.get_historical_data(
+        # Get historical data with standardized OHLCV format
+        data = self.data_manager.get_historical_data_standardized(
             symbols=self.config.get("trading.symbols"),
             start_date=start_date,
             end_date=end_date,
@@ -130,40 +131,47 @@ class TradingEngine:
     
     def _process_trading_day(self, date: datetime, market_data: pd.Series, current_index: int):
         """Process trading decisions for a single day"""
+        # Check if historical data is available
+        if self.historical_data is None or self.historical_data.empty:
+            logger.warning("No historical data available for trading day processing")
+            return
+        
+        # Get symbols from the current market data
+        try:
+            symbols = get_symbols_from_data(self.historical_data)
+        except Exception as e:
+            logger.error(f"Error extracting symbols from historical data: {e}")
+            return
+        
         for strategy_name, strategy in self.strategies.items():
             if not self.config.get(f"strategies.{strategy_name}.enabled", True):
                 continue
                 
             # Get historical data up to current point for strategy
             historical_slice = self.historical_data.iloc[:current_index + 1]
+            # Pass both historical_data and current_data (market_data) to the strategy
             signals = strategy.generate_signals(historical_slice, market_data)
             
-            for symbol, signal in signals.items():
-                # Extract close price from OHLCV data
-                if isinstance(market_data.index, pd.MultiIndex):
-                    # New OHLCV data structure
-                    if (symbol, 'close') in market_data.index:
-                        price = market_data[(symbol, 'close')]
-                    else:
-                        logger.warning(f"No close data found for {symbol}")
-                        continue
-                else:
-                    # Legacy close-only data structure
-                    if symbol in market_data.index:
-                        price = market_data[symbol]
-                    else:
-                        logger.warning(f"No data found for {symbol}")
-                        continue
+            # Process signals for each symbol
+            for symbol in symbols:
+                if symbol not in signals:
+                    continue
+                    
+                signal = signals[symbol]
                 
-                if pd.isna(price):
+                # Extract current price for this symbol
+                current_price = get_current_price(market_data, symbol, 'close')
+                
+                if current_price is None or pd.isna(current_price):
+                    logger.warning(f"No valid price data for {symbol} on {date}")
                     continue
                 
                 if signal == 'buy':
-                    self._execute_buy_order(symbol, date, price)
+                    self._execute_buy_order(symbol, date, current_price, strategy_name)
                 elif signal == 'sell':
-                    self._execute_sell_order(symbol, date, price)
+                    self._execute_sell_order(symbol, date, current_price, strategy_name)
     
-    def _execute_buy_order(self, symbol: str, date: datetime, price: float):
+    def _execute_buy_order(self, symbol: str, date: datetime, price: float, strategy_name: str):
         """Execute a buy order"""
         # Check risk management rules
         if not self.risk_manager.can_buy(symbol, price, self.cash, self.positions):
@@ -222,12 +230,12 @@ class TradingEngine:
             price=price,
             timestamp=date,
             commission=commission,
-            strategy='strategy'
+            strategy=strategy_name
         ))
         
-        logger.info(f"BUY: {quantity:.2f} {symbol} @ ${price:.2f}")
+        logger.info(f"BUY: {quantity:.2f} {symbol} @ ${price:.2f} ({strategy_name})")
     
-    def _execute_sell_order(self, symbol: str, date: datetime, price: float):
+    def _execute_sell_order(self, symbol: str, date: datetime, price: float, strategy_name: str):
         """Execute a sell order"""
         if symbol not in self.positions:
             return
@@ -258,35 +266,23 @@ class TradingEngine:
             price=price,
             timestamp=date,
             commission=commission,
-            strategy='strategy',
+            strategy=strategy_name,
             pnl=pnl,
             pnl_pct=pnl_pct
         ))
         
-        logger.info(f"SELL: {quantity:.2f} {symbol} @ ${price:.2f} | P&L: ${pnl:.2f} ({pnl_pct:.2f}%)")
+        logger.info(f"SELL: {quantity:.2f} {symbol} @ ${price:.2f} | P&L: ${pnl:.2f} ({pnl_pct:.2f}%) ({strategy_name})")
     
     def _update_portfolio_value(self, date: datetime, market_data: pd.Series):
         """Update portfolio value and position P&L"""
         positions_value = 0
         
         for symbol, position in self.positions.items():
-            # Handle both OHLCV data (MultiIndex columns) and legacy close-only data
-            if isinstance(market_data.index, pd.MultiIndex):
-                # New OHLCV data structure
-                if (symbol, 'close') in market_data.index:
-                    current_price = market_data[(symbol, 'close')]
-                else:
-                    logger.warning(f"No close data found for {symbol}")
-                    continue
-            else:
-                # Legacy close-only data structure
-                if symbol in market_data.index:
-                    current_price = market_data[symbol]
-                else:
-                    logger.warning(f"No data found for {symbol}")
-                    continue
+            # Extract current price using ohlcv_utils
+            current_price = get_current_price(market_data, symbol, 'close')
             
-            if pd.isna(current_price):
+            if current_price is None or pd.isna(current_price):
+                logger.warning(f"No valid price data for {symbol} on {date}")
                 continue
                 
             position.current_price = current_price

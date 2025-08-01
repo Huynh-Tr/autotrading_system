@@ -29,8 +29,17 @@ class SimulationTesting:
 
     # Get historical data
     def get_price_history(self, symbols, start_date: str, end_date: str, interval: str = "1d"):
-        data = self.data_manager._fetch_vnstock_ohlcv_data(symbols, start_date, end_date, interval)
+        data = self.data_manager.get_historical_data_standardized(symbols, start_date, end_date, interval)
         return data
+
+    def get_price_history_single_symbol(self, symbols, start_date: str, end_date: str, interval: str = "1d"):
+        """Get price history for a single symbol with standardized format"""
+        data = self.data_manager.get_historical_data_standardized(symbols, start_date, end_date, interval)
+        if not data.empty and symbols[0] in data.columns.get_level_values(0):
+            return data[symbols[0]]
+        else:
+            logger.warning(f"No data found for symbol {symbols[0]}")
+            return pd.DataFrame(columns=['time', 'open', 'high', 'low', 'close', 'volume'])
 
     # def plot_price_history(self, symbols: str, start_date: str, end_date: str):
     #     data = self.get_price_history(symbols, start_date, end_date)
@@ -40,17 +49,16 @@ class SimulationTesting:
 
 if __name__ == "__main__":
     simulation_testing = SimulationTesting()
-    get_price_history = simulation_testing.get_price_history(
+    get_price_history = simulation_testing.get_price_history_single_symbol(
         symbols=simulation_testing.config.get("trading.symbols"), 
         start_date=simulation_testing.config.get("data.start_date"), 
         end_date=simulation_testing.config.get("data.end_date"), 
         interval=simulation_testing.config.get("data.interval")
-    )[simulation_testing.config.get("trading.symbols")[0]]
-    get_price_history.columns = ['date', 'open', 'high', 'low', 'close', 'volume']
-    # get_price_history['date'] = pd.to_datetime(get_price_history['date'], format='%Y-%m-%d')
+    )
+    # Data is already in standardized format with columns: ['time', 'open', 'high', 'low', 'close', 'volume']
 
     # trades_transactions = simulation_testing.run()
-    # print(get_price_history.date)
+    # print(get_price_history.index)  # This will show the time index
 
     chart = Chart()
     chart.set(get_price_history)
