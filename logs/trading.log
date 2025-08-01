@@ -3284,3 +3284,332 @@
 2025-08-01 13:33:26 | INFO     | src.core.trading_engine:_generate_backtest_report:343 - Backtest results saved to data/backtest_results.csv
 2025-08-01 13:33:26 | INFO     | src.core.trading_engine:_generate_backtest_report:360 - Trade details saved to data/trades.csv
 2025-08-01 13:33:26 | INFO     | __main__:run_backtest:108 - Backtest completed
+2025-08-01 13:50:20 | INFO     | src.risk.risk_manager:__init__:49 - Risk manager initialized
+2025-08-01 13:50:20 | INFO     | src.core.trading_engine:__init__:77 - Trading engine initialized with $100,000.00 initial capital
+2025-08-01 13:50:20 | WARNING  | __main__:run_backtest:86 - RSI strategy is disabled in config
+2025-08-01 13:50:32 | INFO     | src.risk.risk_manager:__init__:49 - Risk manager initialized
+2025-08-01 13:50:32 | INFO     | src.core.trading_engine:__init__:77 - Trading engine initialized with $100,000.00 initial capital
+2025-08-01 13:50:32 | INFO     | src.strategies.base_strategy:__init__:34 - Initialized strategy: sma_crossover
+2025-08-01 13:50:32 | INFO     | src.strategies.sma_crossover:__init__:48 - SMA Crossover Strategy initialized: 5/30
+2025-08-01 13:50:32 | INFO     | src.core.trading_engine:add_strategy:82 - Added strategy: sma_crossover
+2025-08-01 13:50:32 | INFO     | __main__:run_backtest:75 - SMA Crossover strategy added (enabled)
+2025-08-01 13:50:32 | INFO     | src.core.trading_engine:run_backtest:86 - Starting backtest from 2023-01-01 to 2025-07-31
+2025-08-01 13:50:32 | INFO     | src.data.data_manager:get_historical_data_standardized:609 - Fetching standardized OHLCV data for ['Bitstamp:BTCUSD'] from 2023-01-01 to 2025-07-31
+2025-08-01 13:50:32 | INFO     | src.data.data_manager:get_historical_data:60 - Fetching historical OHLCV data for ['Bitstamp:BTCUSD'] from 2023-01-01 to 2025-07-31
+2025-08-01 13:50:32 | INFO     | src.data.data_manager:_fetch_tradingview_ohlcv_data:150 - Successfully fetched OHLCV data for 1 symbols
+2025-08-01 13:50:32 | INFO     | src.data.data_manager:get_historical_data:93 - OHLCV data cached successfully
+2025-08-01 13:50:32 | INFO     | src.data.data_manager:ensure_ohlcv_format:524 - Data formatted for Bitstamp:BTCUSD: (1000, 5)
+2025-08-01 13:50:32 | INFO     | src.data.data_manager:get_historical_data_standardized:642 - Successfully standardized OHLCV data for 1 symbols
+2025-08-01 13:50:32 | INFO     | src.core.trading_engine:run_backtest:107 - Loaded 1000 data points for [('Bitstamp:BTCUSD', 'open'), ('Bitstamp:BTCUSD', 'high'), ('Bitstamp:BTCUSD', 'low'), ('Bitstamp:BTCUSD', 'close'), ('Bitstamp:BTCUSD', 'volume')]
+2025-08-01 13:50:32 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 96939.40 > 96324.63
+2025-08-01 13:50:32 | INFO     | src.core.trading_engine:_execute_buy_order:236 - BUY: 0.21 Bitstamp:BTCUSD @ $96871.00 (sma_crossover)
+2025-08-01 13:50:32 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 96412.20 < 96463.27
+2025-08-01 13:50:32 | INFO     | src.core.trading_engine:_execute_sell_order:274 - SELL: 0.21 Bitstamp:BTCUSD @ $96296.00 | P&L: $-138.60 (-0.69%) (sma_crossover)
+2025-08-01 13:50:32 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 85656.20 > 85388.63
+2025-08-01 13:50:32 | INFO     | src.core.trading_engine:_execute_buy_order:236 - BUY: 0.23 Bitstamp:BTCUSD @ $86210.00 (sma_crossover)
+2025-08-01 13:50:32 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 85749.40 < 86137.67
+2025-08-01 13:50:32 | INFO     | src.core.trading_engine:_execute_sell_order:274 - SELL: 0.23 Bitstamp:BTCUSD @ $83142.00 | P&L: $-729.88 (-3.66%) (sma_crossover)
+2025-08-01 13:50:32 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 87930.40 > 87000.40
+2025-08-01 13:50:32 | INFO     | src.core.trading_engine:_execute_buy_order:236 - BUY: 0.22 Bitstamp:BTCUSD @ $89829.00 (sma_crossover)
+2025-08-01 13:50:32 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 88541.60 < 88823.27
+2025-08-01 13:50:32 | INFO     | src.core.trading_engine:_execute_sell_order:274 - SELL: 0.22 Bitstamp:BTCUSD @ $88957.00 | P&L: $-212.01 (-1.07%) (sma_crossover)
+2025-08-01 13:50:32 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 82957.80 > 82925.43
+2025-08-01 13:50:32 | INFO     | src.core.trading_engine:_execute_buy_order:236 - BUY: 0.24 Bitstamp:BTCUSD @ $83543.00 (sma_crossover)
+2025-08-01 13:50:32 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 82161.00 < 82345.27
+2025-08-01 13:50:32 | INFO     | src.core.trading_engine:_execute_sell_order:274 - SELL: 0.24 Bitstamp:BTCUSD @ $80128.00 | P&L: $-827.18 (-4.18%) (sma_crossover)
+2025-08-01 13:50:32 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 82621.60 > 81903.60
+2025-08-01 13:50:32 | INFO     | src.core.trading_engine:_execute_buy_order:236 - BUY: 0.23 Bitstamp:BTCUSD @ $84724.00 (sma_crossover)
+2025-08-01 13:50:32 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 83017.00 < 83173.83
+2025-08-01 13:50:32 | INFO     | src.core.trading_engine:_execute_sell_order:274 - SELL: 0.23 Bitstamp:BTCUSD @ $83709.00 | P&L: $-254.21 (-1.30%) (sma_crossover)
+2025-08-01 13:50:32 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 83248.80 > 83212.33
+2025-08-01 13:50:32 | INFO     | src.core.trading_engine:_execute_buy_order:236 - BUY: 0.23 Bitstamp:BTCUSD @ $83564.00 (sma_crossover)
+2025-08-01 13:50:32 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 82909.40 < 83349.00
+2025-08-01 13:50:32 | INFO     | src.core.trading_engine:_execute_sell_order:274 - SELL: 0.23 Bitstamp:BTCUSD @ $81606.00 | P&L: $-477.12 (-2.44%) (sma_crossover)
+2025-08-01 13:50:32 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 84060.60 > 83599.83
+2025-08-01 13:50:32 | INFO     | src.core.trading_engine:_execute_buy_order:236 - BUY: 0.23 Bitstamp:BTCUSD @ $85467.00 (sma_crossover)
+2025-08-01 13:50:32 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 83882.20 < 83981.73
+2025-08-01 13:50:32 | INFO     | src.core.trading_engine:_execute_sell_order:274 - SELL: 0.23 Bitstamp:BTCUSD @ $84061.00 | P&L: $-339.07 (-1.74%) (sma_crossover)
+2025-08-01 13:50:32 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 84133.40 > 84045.20
+2025-08-01 13:50:32 | INFO     | src.core.trading_engine:_execute_buy_order:236 - BUY: 0.23 Bitstamp:BTCUSD @ $84206.00 (sma_crossover)
+2025-08-01 13:50:32 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 84114.40 < 84120.00
+2025-08-01 13:50:32 | INFO     | src.core.trading_engine:_execute_sell_order:274 - SELL: 0.23 Bitstamp:BTCUSD @ $84272.00 | P&L: $-4.20 (-0.02%) (sma_crossover)
+2025-08-01 13:50:32 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 84223.20 > 84188.80
+2025-08-01 13:50:32 | INFO     | src.core.trading_engine:_execute_buy_order:236 - BUY: 0.23 Bitstamp:BTCUSD @ $84651.00 (sma_crossover)
+2025-08-01 13:50:32 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 86631.80 < 86957.43
+2025-08-01 13:50:32 | INFO     | src.core.trading_engine:_execute_sell_order:274 - SELL: 0.23 Bitstamp:BTCUSD @ $85167.00 | P&L: $98.59 (0.51%) (sma_crossover)
+2025-08-01 13:50:32 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 83625.40 > 83590.23
+2025-08-01 13:50:32 | INFO     | src.core.trading_engine:_execute_buy_order:236 - BUY: 0.23 Bitstamp:BTCUSD @ $85271.00 (sma_crossover)
+2025-08-01 13:50:32 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 82925.60 < 83460.23
+2025-08-01 13:50:32 | INFO     | src.core.trading_engine:_execute_sell_order:274 - SELL: 0.23 Bitstamp:BTCUSD @ $82032.00 | P&L: $-755.10 (-3.89%) (sma_crossover)
+2025-08-01 13:50:33 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 80008.40 > 79796.43
+2025-08-01 13:50:33 | INFO     | src.core.trading_engine:_execute_buy_order:236 - BUY: 0.24 Bitstamp:BTCUSD @ $81745.00 (sma_crossover)
+2025-08-01 13:50:33 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 83931.40 < 84227.17
+2025-08-01 13:50:33 | INFO     | src.core.trading_engine:_execute_sell_order:274 - SELL: 0.24 Bitstamp:BTCUSD @ $83362.00 | P&L: $360.83 (1.88%) (sma_crossover)
+2025-08-01 13:50:33 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 84525.60 > 84498.00
+2025-08-01 13:50:33 | INFO     | src.core.trading_engine:_execute_buy_order:236 - BUY: 0.23 Bitstamp:BTCUSD @ $84873.00 (sma_crossover)
+2025-08-01 13:50:33 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 84535.40 < 84544.07
+2025-08-01 13:50:33 | INFO     | src.core.trading_engine:_execute_sell_order:274 - SELL: 0.23 Bitstamp:BTCUSD @ $84468.00 | P&L: $-111.31 (-0.58%) (sma_crossover)
+2025-08-01 13:50:33 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 84584.00 > 84555.27
+2025-08-01 13:50:33 | INFO     | src.core.trading_engine:_execute_buy_order:236 - BUY: 0.23 Bitstamp:BTCUSD @ $84883.00 (sma_crossover)
+2025-08-01 13:50:33 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 94442.00 < 94520.93
+2025-08-01 13:50:33 | INFO     | src.core.trading_engine:_execute_sell_order:274 - SELL: 0.23 Bitstamp:BTCUSD @ $94181.00 | P&L: $2090.00 (10.84%) (sma_crossover)
+2025-08-01 13:50:33 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 94874.80 > 94603.30
+2025-08-01 13:50:33 | INFO     | src.core.trading_engine:_execute_buy_order:236 - BUY: 0.20 Bitstamp:BTCUSD @ $96204.00 (sma_crossover)
+2025-08-01 13:50:33 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 95692.60 < 95824.40
+2025-08-01 13:50:33 | INFO     | src.core.trading_engine:_execute_sell_order:274 - SELL: 0.20 Bitstamp:BTCUSD @ $95476.00 | P&L: $-168.53 (-0.86%) (sma_crossover)
+2025-08-01 13:50:33 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 95962.80 > 95544.00
+2025-08-01 13:50:33 | INFO     | src.core.trading_engine:_execute_buy_order:236 - BUY: 0.20 Bitstamp:BTCUSD @ $97001.00 (sma_crossover)
+2025-08-01 13:50:33 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 102534.60 < 102997.87
+2025-08-01 13:50:33 | INFO     | src.core.trading_engine:_execute_sell_order:274 - SELL: 0.20 Bitstamp:BTCUSD @ $101726.00 | P&L: $936.64 (4.77%) (sma_crossover)
+2025-08-01 13:50:33 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 103815.20 > 103497.70
+2025-08-01 13:50:33 | INFO     | src.core.trading_engine:_execute_buy_order:236 - BUY: 0.19 Bitstamp:BTCUSD @ $104135.00 (sma_crossover)
+2025-08-01 13:50:33 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 103605.80 < 103611.53
+2025-08-01 13:50:33 | INFO     | src.core.trading_engine:_execute_sell_order:274 - SELL: 0.19 Bitstamp:BTCUSD @ $103531.00 | P&L: $-134.77 (-0.68%) (sma_crossover)
+2025-08-01 13:50:33 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 103608.40 > 103478.97
+2025-08-01 13:50:33 | INFO     | src.core.trading_engine:_execute_buy_order:236 - BUY: 0.19 Bitstamp:BTCUSD @ $103735.00 (sma_crossover)
+2025-08-01 13:50:33 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 103309.40 < 103354.40
+2025-08-01 13:50:33 | INFO     | src.core.trading_engine:_execute_sell_order:274 - SELL: 0.19 Bitstamp:BTCUSD @ $102989.00 | P&L: $-162.08 (-0.82%) (sma_crossover)
+2025-08-01 13:50:33 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 103957.00 > 103571.93
+2025-08-01 13:50:33 | INFO     | src.core.trading_engine:_execute_buy_order:236 - BUY: 0.19 Bitstamp:BTCUSD @ $105531.00 (sma_crossover)
+2025-08-01 13:50:33 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 108313.00 < 108405.83
+2025-08-01 13:50:33 | INFO     | src.core.trading_engine:_execute_sell_order:274 - SELL: 0.19 Bitstamp:BTCUSD @ $108964.00 | P&L: $622.65 (3.15%) (sma_crossover)
+2025-08-01 13:50:33 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 108647.00 > 108519.63
+2025-08-01 13:50:33 | INFO     | src.core.trading_engine:_execute_buy_order:236 - BUY: 0.18 Bitstamp:BTCUSD @ $108999.00 (sma_crossover)
+2025-08-01 13:50:33 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 108528.60 < 108592.20
+2025-08-01 13:50:33 | INFO     | src.core.trading_engine:_execute_sell_order:274 - SELL: 0.18 Bitstamp:BTCUSD @ $107799.00 | P&L: $-238.63 (-1.20%) (sma_crossover)
+2025-08-01 13:50:33 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 109758.60 > 109336.20
+2025-08-01 13:50:33 | INFO     | src.core.trading_engine:_execute_buy_order:236 - BUY: 0.18 Bitstamp:BTCUSD @ $110096.00 (sma_crossover)
+2025-08-01 13:50:33 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 108570.20 < 108783.13
+2025-08-01 13:50:33 | INFO     | src.core.trading_engine:_execute_sell_order:274 - SELL: 0.18 Bitstamp:BTCUSD @ $107169.00 | P&L: $-546.68 (-2.76%) (sma_crossover)
+2025-08-01 13:50:33 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 105127.80 > 105066.27
+2025-08-01 13:50:33 | INFO     | src.core.trading_engine:_execute_buy_order:236 - BUY: 0.19 Bitstamp:BTCUSD @ $105247.00 (sma_crossover)
+2025-08-01 13:50:33 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 104947.20 < 105026.30
+2025-08-01 13:50:33 | INFO     | src.core.trading_engine:_execute_sell_order:274 - SELL: 0.19 Bitstamp:BTCUSD @ $104554.00 | P&L: $-149.46 (-0.76%) (sma_crossover)
+2025-08-01 13:50:33 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 104753.60 > 104694.73
+2025-08-01 13:50:33 | INFO     | src.core.trading_engine:_execute_buy_order:236 - BUY: 0.19 Bitstamp:BTCUSD @ $104956.00 (sma_crossover)
+2025-08-01 13:50:33 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 107633.60 < 107820.03
+2025-08-01 13:50:33 | INFO     | src.core.trading_engine:_execute_sell_order:274 - SELL: 0.19 Bitstamp:BTCUSD @ $107030.00 | P&L: $369.00 (1.87%) (sma_crossover)
+2025-08-01 13:50:33 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 106167.20 > 106118.27
+2025-08-01 13:50:33 | INFO     | src.core.trading_engine:_execute_buy_order:236 - BUY: 0.18 Bitstamp:BTCUSD @ $106891.00 (sma_crossover)
+2025-08-01 13:50:33 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 105209.20 < 105696.63
+2025-08-01 13:50:33 | INFO     | src.core.trading_engine:_execute_sell_order:274 - SELL: 0.18 Bitstamp:BTCUSD @ $104584.00 | P&L: $-445.79 (-2.26%) (sma_crossover)
+2025-08-01 13:50:33 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 103306.00 > 103174.30
+2025-08-01 13:50:33 | INFO     | src.core.trading_engine:_execute_buy_order:236 - BUY: 0.19 Bitstamp:BTCUSD @ $105020.00 (sma_crossover)
+2025-08-01 13:50:33 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 107404.20 < 107475.27
+2025-08-01 13:50:33 | INFO     | src.core.trading_engine:_execute_sell_order:274 - SELL: 0.19 Bitstamp:BTCUSD @ $107197.00 | P&L: $387.60 (1.97%) (sma_crossover)
+2025-08-01 13:50:33 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 107873.60 > 107410.93
+2025-08-01 13:50:33 | INFO     | src.core.trading_engine:_execute_buy_order:236 - BUY: 0.18 Bitstamp:BTCUSD @ $109746.00 (sma_crossover)
+2025-08-01 13:50:33 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 107884.80 < 107980.77
+2025-08-01 13:50:33 | INFO     | src.core.trading_engine:_execute_sell_order:274 - SELL: 0.18 Bitstamp:BTCUSD @ $108079.00 | P&L: $-319.28 (-1.62%) (sma_crossover)
+2025-08-01 13:50:33 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 108113.20 > 108012.30
+2025-08-01 13:50:33 | INFO     | src.core.trading_engine:_execute_buy_order:236 - BUY: 0.18 Bitstamp:BTCUSD @ $108095.00 (sma_crossover)
+2025-08-01 13:50:33 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 108140.40 < 108168.53
+2025-08-01 13:50:33 | INFO     | src.core.trading_engine:_execute_sell_order:274 - SELL: 0.18 Bitstamp:BTCUSD @ $108109.00 | P&L: $-17.13 (-0.09%) (sma_crossover)
+2025-08-01 13:50:33 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 108288.40 > 108266.33
+2025-08-01 13:50:33 | INFO     | src.core.trading_engine:_execute_buy_order:236 - BUY: 0.18 Bitstamp:BTCUSD @ $108918.00 (sma_crossover)
+2025-08-01 13:50:33 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 108354.80 < 108371.57
+2025-08-01 13:50:33 | INFO     | src.core.trading_engine:_execute_sell_order:274 - SELL: 0.18 Bitstamp:BTCUSD @ $108572.00 | P&L: $-82.07 (-0.42%) (sma_crossover)
+2025-08-01 13:50:33 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 108584.60 > 108489.03
+2025-08-01 13:50:33 | INFO     | src.core.trading_engine:_execute_buy_order:236 - BUY: 0.18 Bitstamp:BTCUSD @ $109233.00 (sma_crossover)
+2025-08-01 13:50:33 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 108474.80 < 108606.67
+2025-08-01 13:50:33 | INFO     | src.core.trading_engine:_execute_sell_order:274 - SELL: 0.18 Bitstamp:BTCUSD @ $108287.00 | P&L: $-189.60 (-0.97%) (sma_crossover)
+2025-08-01 13:50:33 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 108655.60 > 108435.33
+2025-08-01 13:50:33 | INFO     | src.core.trading_engine:_execute_buy_order:236 - BUY: 0.18 Bitstamp:BTCUSD @ $108947.00 (sma_crossover)
+2025-08-01 13:50:33 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 117455.60 < 118101.20
+2025-08-01 13:50:33 | INFO     | src.core.trading_engine:_execute_sell_order:274 - SELL: 0.18 Bitstamp:BTCUSD @ $116364.00 | P&L: $1313.58 (6.70%) (sma_crossover)
+2025-08-01 13:50:33 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 118586.00 > 118442.23
+2025-08-01 13:50:33 | INFO     | src.core.trading_engine:_execute_buy_order:236 - BUY: 0.17 Bitstamp:BTCUSD @ $119298.00 (sma_crossover)
+2025-08-01 13:50:33 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 118449.40 < 118577.97
+2025-08-01 13:50:33 | INFO     | src.core.trading_engine:_execute_sell_order:274 - SELL: 0.17 Bitstamp:BTCUSD @ $118928.00 | P&L: $-81.40 (-0.41%) (sma_crossover)
+2025-08-01 13:50:33 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 118726.80 > 118685.40
+2025-08-01 13:50:33 | INFO     | src.core.trading_engine:_execute_buy_order:236 - BUY: 0.17 Bitstamp:BTCUSD @ $119275.00 (sma_crossover)
+2025-08-01 13:50:33 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 118422.40 < 118738.93
+2025-08-01 13:50:33 | INFO     | src.core.trading_engine:_execute_sell_order:274 - SELL: 0.17 Bitstamp:BTCUSD @ $118022.00 | P&L: $-228.07 (-1.15%) (sma_crossover)
+2025-08-01 13:50:33 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 118563.60 > 118355.17
+2025-08-01 13:50:33 | INFO     | src.core.trading_engine:_execute_buy_order:236 - BUY: 0.17 Bitstamp:BTCUSD @ $119344.00 (sma_crossover)
+2025-08-01 13:50:33 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 118118.20 < 118364.77
+2025-08-01 13:50:33 | INFO     | src.core.trading_engine:_execute_sell_order:274 - SELL: 0.17 Bitstamp:BTCUSD @ $115400.00 | P&L: $-673.19 (-3.40%) (sma_crossover)
+2025-08-01 13:50:33 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 118098.80 > 118073.20
+2025-08-01 13:50:33 | INFO     | src.core.trading_engine:_execute_buy_order:236 - BUY: 0.17 Bitstamp:BTCUSD @ $118243.00 (sma_crossover)
+2025-08-01 13:50:33 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 117905.80 < 117976.97
+2025-08-01 13:50:33 | INFO     | src.core.trading_engine:_execute_sell_order:274 - SELL: 0.17 Bitstamp:BTCUSD @ $118144.00 | P&L: $-36.09 (-0.18%) (sma_crossover)
+2025-08-01 13:50:33 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 118316.80 > 118284.57
+2025-08-01 13:50:33 | INFO     | src.core.trading_engine:_execute_buy_order:236 - BUY: 0.17 Bitstamp:BTCUSD @ $118290.00 (sma_crossover)
+2025-08-01 13:50:33 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 118103.40 < 118234.27
+2025-08-01 13:50:33 | INFO     | src.core.trading_engine:_execute_sell_order:274 - SELL: 0.17 Bitstamp:BTCUSD @ $116767.00 | P&L: $-272.28 (-1.39%) (sma_crossover)
+2025-08-01 13:50:33 | INFO     | src.core.trading_engine:_generate_backtest_report:326 - === BACKTEST RESULTS ===
+2025-08-01 13:50:33 | INFO     | src.core.trading_engine:_generate_backtest_report:327 - Initial Capital: $100,000.00
+2025-08-01 13:50:33 | INFO     | src.core.trading_engine:_generate_backtest_report:328 - Final Portfolio Value: $97,916.63
+2025-08-01 13:50:33 | INFO     | src.core.trading_engine:_generate_backtest_report:329 - Total Return: -2.08%
+2025-08-01 13:50:33 | INFO     | src.core.trading_engine:_generate_backtest_report:330 - Annualized Volatility: 2.20%
+2025-08-01 13:50:33 | INFO     | src.core.trading_engine:_generate_backtest_report:331 - Sharpe Ratio: -0.23
+2025-08-01 13:50:33 | INFO     | src.core.trading_engine:_generate_backtest_report:332 - Maximum Drawdown: -6.16%
+2025-08-01 13:50:33 | INFO     | src.core.trading_engine:_generate_backtest_report:333 - Total Trades: 68
+2025-08-01 13:50:33 | INFO     | src.core.trading_engine:_generate_backtest_report:334 - Buy Trades: 34
+2025-08-01 13:50:33 | INFO     | src.core.trading_engine:_generate_backtest_report:335 - Sell Trades: 34
+2025-08-01 13:50:33 | INFO     | src.core.trading_engine:_generate_backtest_report:343 - Backtest results saved to data/backtest_results.csv
+2025-08-01 13:50:33 | INFO     | src.core.trading_engine:_generate_backtest_report:360 - Trade details saved to data/trades.csv
+2025-08-01 13:50:33 | INFO     | __main__:run_backtest:108 - Backtest completed
+2025-08-01 13:58:01 | INFO     | src.risk.risk_manager:__init__:49 - Risk manager initialized
+2025-08-01 13:58:01 | INFO     | src.core.trading_engine:__init__:77 - Trading engine initialized with $100,000.00 initial capital
+2025-08-01 13:58:01 | INFO     | src.strategies.base_strategy:__init__:34 - Initialized strategy: sma_crossover
+2025-08-01 13:58:01 | INFO     | src.strategies.sma_crossover:__init__:48 - SMA Crossover Strategy initialized: 5/30
+2025-08-01 13:58:01 | INFO     | src.core.trading_engine:add_strategy:82 - Added strategy: sma_crossover
+2025-08-01 13:58:01 | INFO     | __main__:run_backtest:75 - SMA Crossover strategy added (enabled)
+2025-08-01 13:58:01 | INFO     | src.core.trading_engine:run_backtest:86 - Starting backtest from 2023-01-01 to 2025-07-31
+2025-08-01 13:58:01 | INFO     | src.data.data_manager:get_historical_data_standardized:609 - Fetching standardized OHLCV data for ['Bitstamp:BTCUSD'] from 2023-01-01 to 2025-07-31
+2025-08-01 13:58:01 | INFO     | src.data.data_manager:get_historical_data:60 - Fetching historical OHLCV data for ['Bitstamp:BTCUSD'] from 2023-01-01 to 2025-07-31
+2025-08-01 13:58:02 | INFO     | src.data.data_manager:_fetch_tradingview_ohlcv_data:150 - Successfully fetched OHLCV data for 1 symbols
+2025-08-01 13:58:02 | INFO     | src.data.data_manager:get_historical_data:93 - OHLCV data cached successfully
+2025-08-01 13:58:02 | INFO     | src.data.data_manager:ensure_ohlcv_format:524 - Data formatted for Bitstamp:BTCUSD: (1000, 5)
+2025-08-01 13:58:02 | INFO     | src.data.data_manager:get_historical_data_standardized:642 - Successfully standardized OHLCV data for 1 symbols
+2025-08-01 13:58:02 | INFO     | src.core.trading_engine:run_backtest:107 - Loaded 1000 data points for [('Bitstamp:BTCUSD', 'open'), ('Bitstamp:BTCUSD', 'high'), ('Bitstamp:BTCUSD', 'low'), ('Bitstamp:BTCUSD', 'close'), ('Bitstamp:BTCUSD', 'volume')]
+2025-08-01 13:58:02 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 96939.40 > 96324.63
+2025-08-01 13:58:02 | INFO     | src.core.trading_engine:_execute_buy_order:236 - BUY: 0.21 Bitstamp:BTCUSD @ $96871.00 (sma_crossover)
+2025-08-01 13:58:02 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 96412.20 < 96463.27
+2025-08-01 13:58:02 | INFO     | src.core.trading_engine:_execute_sell_order:274 - SELL: 0.21 Bitstamp:BTCUSD @ $96296.00 | P&L: $-138.60 (-0.69%) (sma_crossover)
+2025-08-01 13:58:02 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 85656.20 > 85388.63
+2025-08-01 13:58:02 | INFO     | src.core.trading_engine:_execute_buy_order:236 - BUY: 0.23 Bitstamp:BTCUSD @ $86210.00 (sma_crossover)
+2025-08-01 13:58:02 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 85749.40 < 86137.67
+2025-08-01 13:58:02 | INFO     | src.core.trading_engine:_execute_sell_order:274 - SELL: 0.23 Bitstamp:BTCUSD @ $83142.00 | P&L: $-729.88 (-3.66%) (sma_crossover)
+2025-08-01 13:58:02 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 87930.40 > 87000.40
+2025-08-01 13:58:02 | INFO     | src.core.trading_engine:_execute_buy_order:236 - BUY: 0.22 Bitstamp:BTCUSD @ $89829.00 (sma_crossover)
+2025-08-01 13:58:02 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 88541.60 < 88823.27
+2025-08-01 13:58:02 | INFO     | src.core.trading_engine:_execute_sell_order:274 - SELL: 0.22 Bitstamp:BTCUSD @ $88957.00 | P&L: $-212.01 (-1.07%) (sma_crossover)
+2025-08-01 13:58:02 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 82957.80 > 82925.43
+2025-08-01 13:58:02 | INFO     | src.core.trading_engine:_execute_buy_order:236 - BUY: 0.24 Bitstamp:BTCUSD @ $83543.00 (sma_crossover)
+2025-08-01 13:58:02 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 82161.00 < 82345.27
+2025-08-01 13:58:02 | INFO     | src.core.trading_engine:_execute_sell_order:274 - SELL: 0.24 Bitstamp:BTCUSD @ $80128.00 | P&L: $-827.18 (-4.18%) (sma_crossover)
+2025-08-01 13:58:02 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 82621.60 > 81903.60
+2025-08-01 13:58:02 | INFO     | src.core.trading_engine:_execute_buy_order:236 - BUY: 0.23 Bitstamp:BTCUSD @ $84724.00 (sma_crossover)
+2025-08-01 13:58:02 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 83017.00 < 83173.83
+2025-08-01 13:58:02 | INFO     | src.core.trading_engine:_execute_sell_order:274 - SELL: 0.23 Bitstamp:BTCUSD @ $83709.00 | P&L: $-254.21 (-1.30%) (sma_crossover)
+2025-08-01 13:58:02 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 83248.80 > 83212.33
+2025-08-01 13:58:02 | INFO     | src.core.trading_engine:_execute_buy_order:236 - BUY: 0.23 Bitstamp:BTCUSD @ $83564.00 (sma_crossover)
+2025-08-01 13:58:02 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 82909.40 < 83349.00
+2025-08-01 13:58:02 | INFO     | src.core.trading_engine:_execute_sell_order:274 - SELL: 0.23 Bitstamp:BTCUSD @ $81606.00 | P&L: $-477.12 (-2.44%) (sma_crossover)
+2025-08-01 13:58:02 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 84060.60 > 83599.83
+2025-08-01 13:58:02 | INFO     | src.core.trading_engine:_execute_buy_order:236 - BUY: 0.23 Bitstamp:BTCUSD @ $85467.00 (sma_crossover)
+2025-08-01 13:58:02 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 83882.20 < 83981.73
+2025-08-01 13:58:02 | INFO     | src.core.trading_engine:_execute_sell_order:274 - SELL: 0.23 Bitstamp:BTCUSD @ $84061.00 | P&L: $-339.07 (-1.74%) (sma_crossover)
+2025-08-01 13:58:02 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 84133.40 > 84045.20
+2025-08-01 13:58:02 | INFO     | src.core.trading_engine:_execute_buy_order:236 - BUY: 0.23 Bitstamp:BTCUSD @ $84206.00 (sma_crossover)
+2025-08-01 13:58:02 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 84114.40 < 84120.00
+2025-08-01 13:58:02 | INFO     | src.core.trading_engine:_execute_sell_order:274 - SELL: 0.23 Bitstamp:BTCUSD @ $84272.00 | P&L: $-4.20 (-0.02%) (sma_crossover)
+2025-08-01 13:58:02 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 84223.20 > 84188.80
+2025-08-01 13:58:02 | INFO     | src.core.trading_engine:_execute_buy_order:236 - BUY: 0.23 Bitstamp:BTCUSD @ $84651.00 (sma_crossover)
+2025-08-01 13:58:02 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 86631.80 < 86957.43
+2025-08-01 13:58:02 | INFO     | src.core.trading_engine:_execute_sell_order:274 - SELL: 0.23 Bitstamp:BTCUSD @ $85167.00 | P&L: $98.59 (0.51%) (sma_crossover)
+2025-08-01 13:58:02 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 83625.40 > 83590.23
+2025-08-01 13:58:02 | INFO     | src.core.trading_engine:_execute_buy_order:236 - BUY: 0.23 Bitstamp:BTCUSD @ $85271.00 (sma_crossover)
+2025-08-01 13:58:02 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 82925.60 < 83460.23
+2025-08-01 13:58:02 | INFO     | src.core.trading_engine:_execute_sell_order:274 - SELL: 0.23 Bitstamp:BTCUSD @ $82032.00 | P&L: $-755.10 (-3.89%) (sma_crossover)
+2025-08-01 13:58:02 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 80008.40 > 79796.43
+2025-08-01 13:58:02 | INFO     | src.core.trading_engine:_execute_buy_order:236 - BUY: 0.24 Bitstamp:BTCUSD @ $81745.00 (sma_crossover)
+2025-08-01 13:58:02 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 83931.40 < 84227.17
+2025-08-01 13:58:02 | INFO     | src.core.trading_engine:_execute_sell_order:274 - SELL: 0.24 Bitstamp:BTCUSD @ $83362.00 | P&L: $360.83 (1.88%) (sma_crossover)
+2025-08-01 13:58:02 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 84525.60 > 84498.00
+2025-08-01 13:58:02 | INFO     | src.core.trading_engine:_execute_buy_order:236 - BUY: 0.23 Bitstamp:BTCUSD @ $84873.00 (sma_crossover)
+2025-08-01 13:58:02 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 84535.40 < 84544.07
+2025-08-01 13:58:02 | INFO     | src.core.trading_engine:_execute_sell_order:274 - SELL: 0.23 Bitstamp:BTCUSD @ $84468.00 | P&L: $-111.31 (-0.58%) (sma_crossover)
+2025-08-01 13:58:02 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 84584.00 > 84555.27
+2025-08-01 13:58:02 | INFO     | src.core.trading_engine:_execute_buy_order:236 - BUY: 0.23 Bitstamp:BTCUSD @ $84883.00 (sma_crossover)
+2025-08-01 13:58:02 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 94442.00 < 94520.93
+2025-08-01 13:58:02 | INFO     | src.core.trading_engine:_execute_sell_order:274 - SELL: 0.23 Bitstamp:BTCUSD @ $94181.00 | P&L: $2090.00 (10.84%) (sma_crossover)
+2025-08-01 13:58:02 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 94874.80 > 94603.30
+2025-08-01 13:58:02 | INFO     | src.core.trading_engine:_execute_buy_order:236 - BUY: 0.20 Bitstamp:BTCUSD @ $96204.00 (sma_crossover)
+2025-08-01 13:58:02 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 95692.60 < 95824.40
+2025-08-01 13:58:02 | INFO     | src.core.trading_engine:_execute_sell_order:274 - SELL: 0.20 Bitstamp:BTCUSD @ $95476.00 | P&L: $-168.53 (-0.86%) (sma_crossover)
+2025-08-01 13:58:02 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 95962.80 > 95544.00
+2025-08-01 13:58:02 | INFO     | src.core.trading_engine:_execute_buy_order:236 - BUY: 0.20 Bitstamp:BTCUSD @ $97001.00 (sma_crossover)
+2025-08-01 13:58:02 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 102534.60 < 102997.87
+2025-08-01 13:58:02 | INFO     | src.core.trading_engine:_execute_sell_order:274 - SELL: 0.20 Bitstamp:BTCUSD @ $101726.00 | P&L: $936.64 (4.77%) (sma_crossover)
+2025-08-01 13:58:02 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 103815.20 > 103497.70
+2025-08-01 13:58:02 | INFO     | src.core.trading_engine:_execute_buy_order:236 - BUY: 0.19 Bitstamp:BTCUSD @ $104135.00 (sma_crossover)
+2025-08-01 13:58:02 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 103605.80 < 103611.53
+2025-08-01 13:58:02 | INFO     | src.core.trading_engine:_execute_sell_order:274 - SELL: 0.19 Bitstamp:BTCUSD @ $103531.00 | P&L: $-134.77 (-0.68%) (sma_crossover)
+2025-08-01 13:58:02 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 103608.40 > 103478.97
+2025-08-01 13:58:02 | INFO     | src.core.trading_engine:_execute_buy_order:236 - BUY: 0.19 Bitstamp:BTCUSD @ $103735.00 (sma_crossover)
+2025-08-01 13:58:02 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 103309.40 < 103354.40
+2025-08-01 13:58:02 | INFO     | src.core.trading_engine:_execute_sell_order:274 - SELL: 0.19 Bitstamp:BTCUSD @ $102989.00 | P&L: $-162.08 (-0.82%) (sma_crossover)
+2025-08-01 13:58:02 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 103957.00 > 103571.93
+2025-08-01 13:58:02 | INFO     | src.core.trading_engine:_execute_buy_order:236 - BUY: 0.19 Bitstamp:BTCUSD @ $105531.00 (sma_crossover)
+2025-08-01 13:58:02 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 108313.00 < 108405.83
+2025-08-01 13:58:02 | INFO     | src.core.trading_engine:_execute_sell_order:274 - SELL: 0.19 Bitstamp:BTCUSD @ $108964.00 | P&L: $622.65 (3.15%) (sma_crossover)
+2025-08-01 13:58:02 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 108647.00 > 108519.63
+2025-08-01 13:58:02 | INFO     | src.core.trading_engine:_execute_buy_order:236 - BUY: 0.18 Bitstamp:BTCUSD @ $108999.00 (sma_crossover)
+2025-08-01 13:58:02 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 108528.60 < 108592.20
+2025-08-01 13:58:02 | INFO     | src.core.trading_engine:_execute_sell_order:274 - SELL: 0.18 Bitstamp:BTCUSD @ $107799.00 | P&L: $-238.63 (-1.20%) (sma_crossover)
+2025-08-01 13:58:02 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 109758.60 > 109336.20
+2025-08-01 13:58:02 | INFO     | src.core.trading_engine:_execute_buy_order:236 - BUY: 0.18 Bitstamp:BTCUSD @ $110096.00 (sma_crossover)
+2025-08-01 13:58:02 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 108570.20 < 108783.13
+2025-08-01 13:58:02 | INFO     | src.core.trading_engine:_execute_sell_order:274 - SELL: 0.18 Bitstamp:BTCUSD @ $107169.00 | P&L: $-546.68 (-2.76%) (sma_crossover)
+2025-08-01 13:58:02 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 105127.80 > 105066.27
+2025-08-01 13:58:02 | INFO     | src.core.trading_engine:_execute_buy_order:236 - BUY: 0.19 Bitstamp:BTCUSD @ $105247.00 (sma_crossover)
+2025-08-01 13:58:02 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 104947.20 < 105026.30
+2025-08-01 13:58:02 | INFO     | src.core.trading_engine:_execute_sell_order:274 - SELL: 0.19 Bitstamp:BTCUSD @ $104554.00 | P&L: $-149.46 (-0.76%) (sma_crossover)
+2025-08-01 13:58:02 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 104753.60 > 104694.73
+2025-08-01 13:58:02 | INFO     | src.core.trading_engine:_execute_buy_order:236 - BUY: 0.19 Bitstamp:BTCUSD @ $104956.00 (sma_crossover)
+2025-08-01 13:58:02 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 107633.60 < 107820.03
+2025-08-01 13:58:02 | INFO     | src.core.trading_engine:_execute_sell_order:274 - SELL: 0.19 Bitstamp:BTCUSD @ $107030.00 | P&L: $369.00 (1.87%) (sma_crossover)
+2025-08-01 13:58:02 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 106167.20 > 106118.27
+2025-08-01 13:58:02 | INFO     | src.core.trading_engine:_execute_buy_order:236 - BUY: 0.18 Bitstamp:BTCUSD @ $106891.00 (sma_crossover)
+2025-08-01 13:58:02 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 105209.20 < 105696.63
+2025-08-01 13:58:02 | INFO     | src.core.trading_engine:_execute_sell_order:274 - SELL: 0.18 Bitstamp:BTCUSD @ $104584.00 | P&L: $-445.79 (-2.26%) (sma_crossover)
+2025-08-01 13:58:02 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 103306.00 > 103174.30
+2025-08-01 13:58:02 | INFO     | src.core.trading_engine:_execute_buy_order:236 - BUY: 0.19 Bitstamp:BTCUSD @ $105020.00 (sma_crossover)
+2025-08-01 13:58:02 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 107404.20 < 107475.27
+2025-08-01 13:58:02 | INFO     | src.core.trading_engine:_execute_sell_order:274 - SELL: 0.19 Bitstamp:BTCUSD @ $107197.00 | P&L: $387.60 (1.97%) (sma_crossover)
+2025-08-01 13:58:02 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 107873.60 > 107410.93
+2025-08-01 13:58:02 | INFO     | src.core.trading_engine:_execute_buy_order:236 - BUY: 0.18 Bitstamp:BTCUSD @ $109746.00 (sma_crossover)
+2025-08-01 13:58:02 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 107884.80 < 107980.77
+2025-08-01 13:58:02 | INFO     | src.core.trading_engine:_execute_sell_order:274 - SELL: 0.18 Bitstamp:BTCUSD @ $108079.00 | P&L: $-319.28 (-1.62%) (sma_crossover)
+2025-08-01 13:58:02 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 108113.20 > 108012.30
+2025-08-01 13:58:02 | INFO     | src.core.trading_engine:_execute_buy_order:236 - BUY: 0.18 Bitstamp:BTCUSD @ $108095.00 (sma_crossover)
+2025-08-01 13:58:02 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 108140.40 < 108168.53
+2025-08-01 13:58:02 | INFO     | src.core.trading_engine:_execute_sell_order:274 - SELL: 0.18 Bitstamp:BTCUSD @ $108109.00 | P&L: $-17.13 (-0.09%) (sma_crossover)
+2025-08-01 13:58:02 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 108288.40 > 108266.33
+2025-08-01 13:58:02 | INFO     | src.core.trading_engine:_execute_buy_order:236 - BUY: 0.18 Bitstamp:BTCUSD @ $108918.00 (sma_crossover)
+2025-08-01 13:58:02 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 108354.80 < 108371.57
+2025-08-01 13:58:02 | INFO     | src.core.trading_engine:_execute_sell_order:274 - SELL: 0.18 Bitstamp:BTCUSD @ $108572.00 | P&L: $-82.07 (-0.42%) (sma_crossover)
+2025-08-01 13:58:02 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 108584.60 > 108489.03
+2025-08-01 13:58:02 | INFO     | src.core.trading_engine:_execute_buy_order:236 - BUY: 0.18 Bitstamp:BTCUSD @ $109233.00 (sma_crossover)
+2025-08-01 13:58:02 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 108474.80 < 108606.67
+2025-08-01 13:58:02 | INFO     | src.core.trading_engine:_execute_sell_order:274 - SELL: 0.18 Bitstamp:BTCUSD @ $108287.00 | P&L: $-189.60 (-0.97%) (sma_crossover)
+2025-08-01 13:58:02 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 108655.60 > 108435.33
+2025-08-01 13:58:02 | INFO     | src.core.trading_engine:_execute_buy_order:236 - BUY: 0.18 Bitstamp:BTCUSD @ $108947.00 (sma_crossover)
+2025-08-01 13:58:02 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 117455.60 < 118101.20
+2025-08-01 13:58:02 | INFO     | src.core.trading_engine:_execute_sell_order:274 - SELL: 0.18 Bitstamp:BTCUSD @ $116364.00 | P&L: $1313.58 (6.70%) (sma_crossover)
+2025-08-01 13:58:02 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 118586.00 > 118442.23
+2025-08-01 13:58:02 | INFO     | src.core.trading_engine:_execute_buy_order:236 - BUY: 0.17 Bitstamp:BTCUSD @ $119298.00 (sma_crossover)
+2025-08-01 13:58:02 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 118449.40 < 118577.97
+2025-08-01 13:58:02 | INFO     | src.core.trading_engine:_execute_sell_order:274 - SELL: 0.17 Bitstamp:BTCUSD @ $118928.00 | P&L: $-81.40 (-0.41%) (sma_crossover)
+2025-08-01 13:58:02 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 118726.80 > 118685.40
+2025-08-01 13:58:02 | INFO     | src.core.trading_engine:_execute_buy_order:236 - BUY: 0.17 Bitstamp:BTCUSD @ $119275.00 (sma_crossover)
+2025-08-01 13:58:02 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 118422.40 < 118738.93
+2025-08-01 13:58:02 | INFO     | src.core.trading_engine:_execute_sell_order:274 - SELL: 0.17 Bitstamp:BTCUSD @ $118022.00 | P&L: $-228.07 (-1.15%) (sma_crossover)
+2025-08-01 13:58:03 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 118563.60 > 118355.17
+2025-08-01 13:58:03 | INFO     | src.core.trading_engine:_execute_buy_order:236 - BUY: 0.17 Bitstamp:BTCUSD @ $119344.00 (sma_crossover)
+2025-08-01 13:58:03 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 118118.20 < 118364.77
+2025-08-01 13:58:03 | INFO     | src.core.trading_engine:_execute_sell_order:274 - SELL: 0.17 Bitstamp:BTCUSD @ $115400.00 | P&L: $-673.19 (-3.40%) (sma_crossover)
+2025-08-01 13:58:03 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 118098.80 > 118073.20
+2025-08-01 13:58:03 | INFO     | src.core.trading_engine:_execute_buy_order:236 - BUY: 0.17 Bitstamp:BTCUSD @ $118243.00 (sma_crossover)
+2025-08-01 13:58:03 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 117905.80 < 117976.97
+2025-08-01 13:58:03 | INFO     | src.core.trading_engine:_execute_sell_order:274 - SELL: 0.17 Bitstamp:BTCUSD @ $118144.00 | P&L: $-36.09 (-0.18%) (sma_crossover)
+2025-08-01 13:58:03 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 118316.80 > 118284.57
+2025-08-01 13:58:03 | INFO     | src.core.trading_engine:_execute_buy_order:236 - BUY: 0.17 Bitstamp:BTCUSD @ $118290.00 (sma_crossover)
+2025-08-01 13:58:03 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 118103.40 < 118234.27
+2025-08-01 13:58:03 | INFO     | src.core.trading_engine:_execute_sell_order:274 - SELL: 0.17 Bitstamp:BTCUSD @ $116767.00 | P&L: $-272.28 (-1.39%) (sma_crossover)
+2025-08-01 13:58:03 | INFO     | src.core.trading_engine:_generate_backtest_report:326 - === BACKTEST RESULTS ===
+2025-08-01 13:58:03 | INFO     | src.core.trading_engine:_generate_backtest_report:327 - Initial Capital: $100,000.00
+2025-08-01 13:58:03 | INFO     | src.core.trading_engine:_generate_backtest_report:328 - Final Portfolio Value: $97,916.63
+2025-08-01 13:58:03 | INFO     | src.core.trading_engine:_generate_backtest_report:329 - Total Return: -2.08%
+2025-08-01 13:58:03 | INFO     | src.core.trading_engine:_generate_backtest_report:330 - Annualized Volatility: 2.20%
+2025-08-01 13:58:03 | INFO     | src.core.trading_engine:_generate_backtest_report:331 - Sharpe Ratio: -0.23
+2025-08-01 13:58:03 | INFO     | src.core.trading_engine:_generate_backtest_report:332 - Maximum Drawdown: -6.16%
+2025-08-01 13:58:03 | INFO     | src.core.trading_engine:_generate_backtest_report:333 - Total Trades: 68
+2025-08-01 13:58:03 | INFO     | src.core.trading_engine:_generate_backtest_report:334 - Buy Trades: 34
+2025-08-01 13:58:03 | INFO     | src.core.trading_engine:_generate_backtest_report:335 - Sell Trades: 34
+2025-08-01 13:58:03 | INFO     | src.core.trading_engine:_generate_backtest_report:343 - Backtest results saved to data/backtest_results.csv
+2025-08-01 13:58:03 | INFO     | src.core.trading_engine:_generate_backtest_report:360 - Trade details saved to data/trades.csv
+2025-08-01 13:58:03 | INFO     | __main__:run_backtest:108 - Backtest completed

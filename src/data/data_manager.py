@@ -55,8 +55,12 @@ class DataManager:
         os.makedirs(self.cache_dir, exist_ok=True)
     
     def get_historical_data(self, symbols: List[str], start_date: str, 
-                          end_date: str, interval: str = "1d", n_bars: int = 1000) -> pd.DataFrame:
+                          end_date: str, interval: str = "1d", n_bars: int = None) -> pd.DataFrame:
         """Get historical market data for multiple symbols with full OHLCV data"""
+        # Get n_bars from config if not provided
+        if n_bars is None:
+            n_bars = self.config.get("data.n_bars", 1000)
+        
         logger.info(f"Fetching historical OHLCV data for {symbols} from {start_date} to {end_date}")
         
         # Check cache first
@@ -102,8 +106,12 @@ class DataManager:
         ohlcv_data = self.get_historical_data(symbols, start_date, end_date, interval)
         return self._extract_close_prices(ohlcv_data, symbols)
     
-    def _fetch_tradingview_ohlcv_data(self, symbols: List[str], interval: str, n_bars: int = 1000) -> pd.DataFrame:
+    def _fetch_tradingview_ohlcv_data(self, symbols: List[str], interval: str, n_bars: int = None) -> pd.DataFrame:
         """Fetch full OHLCV data from TradingView"""
+        # Get n_bars from config if not provided
+        if n_bars is None:
+            n_bars = self.config.get("data.n_bars", 1000)
+        
         interval_map = {
             '1d': Interval.daily,
             '1h': Interval.hour_1,
@@ -299,39 +307,6 @@ class DataManager:
         else:
             logger.warning(f"No volume data found for {symbol}")
             return pd.Series(dtype=float)
-    
-    # def calculate_technical_indicators(self, ohlcv_data: pd.DataFrame, symbol: str) -> pd.DataFrame:
-        # """Calculate technical indicators from OHLCV data"""
-        # symbol_data = self.get_symbol_ohlcv(ohlcv_data, symbol)
-        
-        # if symbol_data.empty:
-        #     return pd.DataFrame()
-        
-        # # Calculate basic technical indicators
-        # indicators = pd.DataFrame(index=symbol_data.index)
-        
-        # # Price-based indicators
-        # indicators['close'] = symbol_data['close']
-        # indicators['open'] = symbol_data['open']
-        # indicators['high'] = symbol_data['high']
-        # indicators['low'] = symbol_data['low']
-        # indicators['volume'] = symbol_data['volume']
-        
-        # # Calculate returns
-        # indicators['returns'] = symbol_data['close'].pct_change()
-        
-        # # Calculate price ranges
-        # indicators['daily_range'] = symbol_data['high'] - symbol_data['low']
-        # indicators['body_size'] = abs(symbol_data['close'] - symbol_data['open'])
-        
-        # # Calculate moving averages
-        # indicators['sma_20'] = symbol_data['close'].rolling(window=20).mean()
-        # indicators['sma_50'] = symbol_data['close'].rolling(window=50).mean()
-        
-        # # Calculate volatility
-        # indicators['volatility'] = indicators['returns'].rolling(window=20).std()
-        
-        # return indicators
     
     def get_latest_ohlcv(self, symbol: str) -> Optional[Dict[str, float]]:
         """Get latest OHLCV data for a symbol"""
@@ -601,11 +576,15 @@ class DataManager:
         return result_df
 
     def get_historical_data_standardized(self, symbols: List[str], start_date: str, 
-                                       end_date: str, interval: str = "1d", n_bars: int = 1000) -> pd.DataFrame:
+                                       end_date: str, interval: str = "1d", n_bars: int = None) -> pd.DataFrame:
         """
         Get historical data with guaranteed standard OHLCV format
         Returns DataFrame with columns: ['time', 'open', 'high', 'low', 'close', 'volume']
         """
+        # Get n_bars from config if not provided
+        if n_bars is None:
+            n_bars = self.config.get("data.n_bars", 1000)
+        
         logger.info(f"Fetching standardized OHLCV data for {symbols} from {start_date} to {end_date}")
         
         # Get the original data

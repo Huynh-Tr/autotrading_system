@@ -68,6 +68,48 @@ def setup_config():
         print(f"❌ Failed to create configuration file: {e}")
         return False
 
+def setup_viz_module():
+    """Setup visualization module with parameters"""
+    print("\nSetting up visualization module...")
+    
+    viz_file = "src/viz/viz.py"
+    
+    if not os.path.exists(viz_file):
+        print(f"❌ Visualization module not found: {viz_file}")
+        return False
+    
+    try:
+        # Check if plotly is available
+        import plotly
+        print("[OK] Plotly is available for visualization")
+        
+        # Create viz parameters documentation
+        viz_params = {
+            "symbol": "Trading symbol (e.g., 'BTC/USD')",
+            "trades_df": "DataFrame containing trade data with columns: Timestamp, Side, Price",
+            "historical_data": "DataFrame containing OHLCV data with columns: open, high, low, close, volume"
+        }
+        
+        print("[OK] Visualization module parameters:")
+        for param, description in viz_params.items():
+            print(f"  - {param}: {description}")
+        
+        print("[OK] Visualization module is ready to use")
+        return True
+        
+    except ImportError:
+        print("❌ Plotly not available. Installing plotly...")
+        try:
+            subprocess.check_call([sys.executable, "-m", "pip", "install", "plotly"])
+            print("[OK] Plotly installed successfully")
+            return True
+        except subprocess.CalledProcessError as e:
+            print(f"❌ Failed to install plotly: {e}")
+            return False
+    except Exception as e:
+        print(f"❌ Failed to setup visualization module: {e}")
+        return False
+
 def run_tests():
     """Run system tests"""
     print("\nRunning system tests...")
@@ -111,6 +153,10 @@ def main():
     if not setup_config():
         return False
     
+    # Setup visualization module
+    if not setup_viz_module():
+        print("\n⚠️  Visualization module setup failed, but setup completed. You may need to install plotly manually.")
+    
     # Run tests
     if not run_tests():
         print("\n⚠️  Tests failed, but setup completed. You may need to fix issues manually.")
@@ -122,6 +168,7 @@ def main():
     print("2. Run backtest: python3 src/main.py --mode backtest --strategy sma_crossover")
     print("3. Launch dashboard: python3 run_dashboard.py")
     print("4. Open http://localhost:8501 in your browser")
+    print("5. Use visualization: from src.viz.viz import viz")
     
     return True
 

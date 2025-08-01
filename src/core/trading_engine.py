@@ -233,7 +233,7 @@ class TradingEngine:
             strategy=strategy_name
         ))
         
-        logger.info(f"BUY: {quantity:.2f} {symbol} @ ${price:.2f} ({strategy_name})")
+        logger.info(f"BUY: {quantity:.3f} {symbol} @ ${price:.2f} ({strategy_name})")
     
     def _execute_sell_order(self, symbol: str, date: datetime, price: float, strategy_name: str):
         """Execute a sell order"""
