@@ -48,19 +48,68 @@ def setup_config():
     """Setup configuration file"""
     print("\nSetting up configuration...")
     
-    config_example = "config/config.example.yaml"
     config_file = "config/config.yaml"
-    
-    if not os.path.exists(config_example):
-        print(f"❌ Configuration example not found: {config_example}")
-        return False
     
     if os.path.exists(config_file):
         print(f"[OK] Configuration file already exists: {config_file}")
         return True
     
     try:
-        shutil.copy(config_example, config_file)
+        # Create a basic config file
+        config_content = """# Auto Trading System Configuration
+
+# Trading settings
+trading:
+  initial_capital: 100000
+  symbols: ["Bitstamp:BTCUSD"]
+  commission: 0.001
+  max_position_size: 0.2
+  max_portfolio_risk: 0.05
+
+# Data settings
+data:
+  source: "vnstock"
+  start_date: "2024-01-01"
+  end_date: "2024-05-31"
+  interval: "1d"
+  cache_enabled: true
+
+# Risk management
+risk:
+  stop_loss: 0.05
+  take_profit: 0.15
+  max_drawdown: 0.20
+
+# Strategies
+strategies:
+  sma_crossover:
+    enabled: true
+    short_window: 20
+    long_window: 50
+    
+  rsi:
+    enabled: true
+    period: 14
+    oversold: 30
+    overbought: 70
+    
+  macd:
+    enabled: true
+    fast_period: 12
+    slow_period: 26
+    signal_period: 9
+
+# Logging
+logging:
+  level: "INFO"
+  file: "logs/trading.log"
+  max_size: 10485760  # 10MB
+  backup_count: 5
+"""
+        
+        with open(config_file, 'w') as f:
+            f.write(config_content)
+        
         print(f"[OK] Configuration file created: {config_file}")
         print("  Please edit the configuration file with your settings")
         return True

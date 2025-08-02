@@ -28,7 +28,7 @@ class BacktestEngine:
         # Backtest parameters
         self.initial_capital = config.get("trading.initial_capital", 100000)
         self.commission = config.get("trading.commission", 0.001)
-        self.symbols = config.get("trading.symbols", ["VCB"])
+        self.symbols = config.get("trading.symbols", ["Bitstamp:BTCUSD"])
         
         # Results storage
         self.results = {}

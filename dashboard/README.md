@@ -106,7 +106,7 @@ dashboard:
 
 3. **Configuration not found**:
    ```bash
-   cp config/config.example.yaml config/config.yaml
+   python setup.py
    ```
 
 ### Performance Tips

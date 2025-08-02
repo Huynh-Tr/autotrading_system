@@ -230,7 +230,7 @@ def main():
     # Check if config file exists
     if not os.path.exists(args.config):
         logger.error(f"Configuration file not found: {args.config}")
-        logger.info("Please copy config/config.example.yaml to config/config.yaml and edit it")
+        logger.info("Please create config/config.yaml with your settings")
         return
     
     # Run based on mode

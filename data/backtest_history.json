@@ -1,0 +1,1768 @@
+[
+  {
+    "timestamp": "2025-08-02T11:26:18.460807",
+    "strategy": "SMA Crossover",
+    "params": {
+      "initial_capital": 100000,
+      "symbols": [
+        "Bitstamp:BTCUSD"
+      ],
+      "source": "tradingview",
+      "start_date": "2023-01-01",
+      "end_date": "2025-07-31",
+      "interval": "4h",
+      "n_bars": 100,
+      "selected_strategy": "SMA Crossover",
+      "selected_mode": "Backtest"
+    },
+    "results": {
+      "total_return": 0.15,
+      "sharpe_ratio": 1.2,
+      "max_drawdown": -0.08,
+      "win_rate": 0.65,
+      "total_trades": 45,
+      "profit_factor": 1.8,
+      "trades": [
+        {
+          "timestamp": "2024-01-01 00:00:00",
+          "symbol": "VCB",
+          "side": "sell",
+          "quantity": 81,
+          "price": 97.53571532049581,
+          "commission": 7.9003929409601605,
+          "strategy": "SMA Crossover"
+        },
+        {
+          "timestamp": "2024-01-04 00:00:00",
+          "symbol": "VCB",
+          "side": "buy",
+          "quantity": 92,
+          "price": 79.84250789732435,
+          "commission": 7.345510726553841,
+          "strategy": "SMA Crossover"
+        },
+        {
+          "timestamp": "2024-01-07 00:00:00",
+          "symbol": "VCB",
+          "side": "buy",
+          "quantity": 97,
+          "price": 52.90418060840997,
+          "commission": 5.131705519015767,
+          "strategy": "SMA Crossover"
+        },
+        {
+          "timestamp": "2024-01-10 00:00:00",
+          "symbol": "VCB",
+          "side": "buy",
+          "quantity": 33,
+          "price": 80.05575058716045,
+          "commission": 2.6418397693762947,
+          "strategy": "SMA Crossover"
+        },
+        {
+          "timestamp": "2024-01-13 00:00:00",
+          "symbol": "VCB",
+          "side": "buy",
+          "quantity": 11,
+          "price": 51.029224714790125,
+          "commission": 0.5613214718626914,
+          "strategy": "SMA Crossover"
+        },
+        {
+          "timestamp": "2024-01-16 00:00:00",
+          "symbol": "VCB",
+          "side": "sell",
+          "quantity": 47,
+          "price": 91.62213204002109,
+          "commission": 4.306240205880991,
+          "strategy": "SMA Crossover"
+        },
+        {
+          "timestamp": "2024-01-19 00:00:00",
+          "symbol": "VCB",
+          "side": "sell",
+          "quantity": 30,
+          "price": 59.09124836035503,
+          "commission": 1.772737450810651,
+          "strategy": "SMA Crossover"
+        },
+        {
+          "timestamp": "2024-01-22 00:00:00",
+          "symbol": "VCB",
+          "side": "buy",
+          "quantity": 31,
+          "price": 65.21211214797688,
+          "commission": 2.0215754765872833,
+          "strategy": "SMA Crossover"
+        },
+        {
+          "timestamp": "2024-01-25 00:00:00",
+          "symbol": "VCB",
+          "side": "buy",
+          "quantity": 58,
+          "price": 71.5972509321058,
+          "commission": 4.1526405540621365,
+          "strategy": "SMA Crossover"
+        },
+        {
+          "timestamp": "2024-01-28 00:00:00",
+          "symbol": "VCB",
+          "side": "buy",
+          "quantity": 51,
+          "price": 80.59264473611897,
+          "commission": 4.110224881542067,
+          "strategy": "SMA Crossover"
+        },
+        {
+          "timestamp": "2024-01-31 00:00:00",
+          "symbol": "VCB",
+          "side": "sell",
+          "quantity": 89,
+          "price": 64.6072324267609,
+          "commission": 5.75004368598172,
+          "strategy": "SMA Crossover"
+        },
+        {
+          "timestamp": "2024-02-03 00:00:00",
+          "symbol": "VCB",
+          "side": "buy",
+          "quantity": 56,
+          "price": 72.8034992108518,
+          "commission": 4.076995955807701,
+          "strategy": "SMA Crossover"
+        },
+        {
+          "timestamp": "2024-02-06 00:00:00",
+          "symbol": "VCB",
+          "side": "sell",
+          "quantity": 64,
+          "price": 59.98368910791799,
+          "commission": 3.8389561029067516,
+          "strategy": "SMA Crossover"
+        },
+        {
+          "timestamp": "2024-02-09 00:00:00",
+          "symbol": "VCB",
+          "side": "sell",
+          "quantity": 12,
+          "price": 79.62072844310212,
+          "commission": 0.9554487413172256,
+          "strategy": "SMA Crossover"
+        },
+        {
+          "timestamp": "2024-02-12 00:00:00",
+          "symbol": "VCB",
+          "side": "buy",
+          "quantity": 30,
+          "price": 80.37724259507192,
+          "commission": 2.4113172778521577,
+          "strategy": "SMA Crossover"
+        },
+        {
+          "timestamp": "2024-02-15 00:00:00",
+          "symbol": "VCB",
+          "side": "buy",
+          "quantity": 13,
+          "price": 53.25257964926398,
+          "commission": 0.6922835354404318,
+          "strategy": "SMA Crossover"
+        },
+        {
+          "timestamp": "2024-02-18 00:00:00",
+          "symbol": "VCB",
+          "side": "buy",
+          "quantity": 18,
+          "price": 98.28160165372796,
+          "commission": 1.7690688297671033,
+          "strategy": "SMA Crossover"
+        },
+        {
+          "timestamp": "2024-02-21 00:00:00",
+          "symbol": "VCB",
+          "side": "sell",
+          "quantity": 93,
+          "price": 54.883605700319194,
+          "commission": 5.104175330129685,
+          "strategy": "SMA Crossover"
+        },
+        {
+          "timestamp": "2024-02-24 00:00:00",
+          "symbol": "VCB",
+          "side": "sell",
+          "quantity": 80,
+          "price": 72.00762468698007,
+          "commission": 5.760609974958405,
+          "strategy": "SMA Crossover"
+        },
+        {
+          "timestamp": "2024-02-27 00:00:00",
+          "symbol": "VCB",
+          "side": "sell",
+          "quantity": 56,
+          "price": 74.75884550556351,
+          "commission": 4.186495348311557,
+          "strategy": "SMA Crossover"
+        },
+        {
+          "timestamp": "2024-03-01 00:00:00",
+          "symbol": "VCB",
+          "side": "buy",
+          "quantity": 45,
+          "price": 95.4660201039391,
+          "commission": 4.29597090467726,
+          "strategy": "SMA Crossover"
+        },
+        {
+          "timestamp": "2024-03-04 00:00:00",
+          "symbol": "VCB",
+          "side": "sell",
+          "quantity": 11,
+          "price": 83.1261142176991,
+          "commission": 0.9143872563946901,
+          "strategy": "SMA Crossover"
+        },
+        {
+          "timestamp": "2024-03-07 00:00:00",
+          "symbol": "VCB",
+          "side": "sell",
+          "quantity": 13,
+          "price": 76.00340105889055,
+          "commission": 0.988044213765577,
+          "strategy": "SMA Crossover"
+        },
+        {
+          "timestamp": "2024-03-10 00:00:00",
+          "symbol": "VCB",
+          "side": "sell",
+          "quantity": 27,
+          "price": 51.56566462277793,
+          "commission": 1.3922729448150042,
+          "strategy": "SMA Crossover"
+        },
+        {
+          "timestamp": "2024-03-13 00:00:00",
+          "symbol": "VCB",
+          "side": "sell",
+          "quantity": 83,
+          "price": 72.48770666848829,
+          "commission": 6.016479653484528,
+          "strategy": "SMA Crossover"
+        },
+        {
+          "timestamp": "2024-03-16 00:00:00",
+          "symbol": "VCB",
+          "side": "sell",
+          "quantity": 57,
+          "price": 96.33294328968971,
+          "commission": 5.490977767512313,
+          "strategy": "SMA Crossover"
+        },
+        {
+          "timestamp": "2024-03-19 00:00:00",
+          "symbol": "VCB",
+          "side": "buy",
+          "quantity": 96,
+          "price": 54.424625102595975,
+          "commission": 5.224764009849214,
+          "strategy": "SMA Crossover"
+        },
+        {
+          "timestamp": "2024-03-22 00:00:00",
+          "symbol": "VCB",
+          "side": "sell",
+          "quantity": 49,
+          "price": 52.2613644455269,
+          "commission": 2.560806857830818,
+          "strategy": "SMA Crossover"
+        },
+        {
+          "timestamp": "2024-03-25 00:00:00",
+          "symbol": "VCB",
+          "side": "buy",
+          "quantity": 91,
+          "price": 69.4338644844741,
+          "commission": 6.318481668087143,
+          "strategy": "SMA Crossover"
+        },
+        {
+          "timestamp": "2024-03-28 00:00:00",
+          "symbol": "VCB",
+          "side": "buy",
+          "quantity": 35,
+          "price": 91.43687545759647,
+          "commission": 3.2002906410158767,
+          "strategy": "SMA Crossover"
+        },
+        {
+          "timestamp": "2024-03-31 00:00:00",
+          "symbol": "VCB",
+          "side": "buy",
+          "quantity": 50,
+          "price": 64.04672548436903,
+          "commission": 3.202336274218452,
+          "strategy": "SMA Crossover"
+        },
+        {
+          "timestamp": "2024-04-03 00:00:00",
+          "symbol": "VCB",
+          "side": "buy",
+          "quantity": 74,
+          "price": 90.10984903770199,
+          "commission": 6.668128828789947,
+          "strategy": "SMA Crossover"
+        },
+        {
+          "timestamp": "2024-04-06 00:00:00",
+          "symbol": "VCB",
+          "side": "buy",
+          "quantity": 97,
+          "price": 99.34434683002587,
+          "commission": 9.63640164251251,
+          "strategy": "SMA Crossover"
+        },
+        {
+          "timestamp": "2024-04-09 00:00:00",
+          "symbol": "VCB",
+          "side": "buy",
+          "quantity": 97,
+          "price": 59.93578407670862,
+          "commission": 5.8137710554407365,
+          "strategy": "SMA Crossover"
+        },
+        {
+          "timestamp": "2024-04-12 00:00:00",
+          "symbol": "VCB",
+          "side": "buy",
+          "quantity": 90,
+          "price": 90.77307142274171,
+          "commission": 8.169576428046755,
+          "strategy": "SMA Crossover"
+        },
+        {
+          "timestamp": "2024-04-15 00:00:00",
+          "symbol": "VCB",
+          "side": "sell",
+          "quantity": 42,
+          "price": 86.45035840204937,
+          "commission": 3.6309150528860736,
+          "strategy": "SMA Crossover"
+        },
+        {
+          "timestamp": "2024-04-18 00:00:00",
+          "symbol": "VCB",
+          "side": "buy",
+          "quantity": 50,
+          "price": 53.70223258670452,
+          "commission": 2.685111629335226,
+          "strategy": "SMA Crossover"
+        },
+        {
+          "timestamp": "2024-04-21 00:00:00",
+          "symbol": "VCB",
+          "side": "sell",
+          "quantity": 81,
+          "price": 93.15517129377967,
+          "commission": 7.545568874796154,
+          "strategy": "SMA Crossover"
+        },
+        {
+          "timestamp": "2024-04-24 00:00:00",
+          "symbol": "VCB",
+          "side": "sell",
+          "quantity": 57,
+          "price": 66.54490124263246,
+          "commission": 3.79305937083005,
+          "strategy": "SMA Crossover"
+        },
+        {
+          "timestamp": "2024-04-27 00:00:00",
+          "symbol": "VCB",
+          "side": "buy",
+          "quantity": 97,
+          "price": 65.54911608578311,
+          "commission": 6.358264260320961,
+          "strategy": "SMA Crossover"
+        },
+        {
+          "timestamp": "2024-04-30 00:00:00",
+          "symbol": "VCB",
+          "side": "buy",
+          "quantity": 95,
+          "price": 86.4803089169032,
+          "commission": 8.215629347105804,
+          "strategy": "SMA Crossover"
+        },
+        {
+          "timestamp": "2024-05-03 00:00:00",
+          "symbol": "VCB",
+          "side": "buy",
+          "quantity": 56,
+          "price": 78.06217129238506,
+          "commission": 4.371481592373564,
+          "strategy": "SMA Crossover"
+        },
+        {
+          "timestamp": "2024-05-06 00:00:00",
+          "symbol": "VCB",
+          "side": "sell",
+          "quantity": 14,
+          "price": 92.4456912133042,
+          "commission": 1.294239676986259,
+          "strategy": "SMA Crossover"
+        },
+        {
+          "timestamp": "2024-05-09 00:00:00",
+          "symbol": "VCB",
+          "side": "sell",
+          "quantity": 23,
+          "price": 61.79924598744779,
+          "commission": 1.4213826577112991,
+          "strategy": "SMA Crossover"
+        },
+        {
+          "timestamp": "2024-05-12 00:00:00",
+          "symbol": "VCB",
+          "side": "buy",
+          "quantity": 88,
+          "price": 52.02167947692157,
+          "commission": 4.577907793969098,
+          "strategy": "SMA Crossover"
+        },
+        {
+          "timestamp": "2024-05-15 00:00:00",
+          "symbol": "VCB",
+          "side": "buy",
+          "quantity": 86,
+          "price": 55.54454104059157,
+          "commission": 4.7768305294908755,
+          "strategy": "SMA Crossover"
+        },
+        {
+          "timestamp": "2024-05-18 00:00:00",
+          "symbol": "VCB",
+          "side": "buy",
+          "quantity": 61,
+          "price": 51.57145928433671,
+          "commission": 3.1458590163445392,
+          "strategy": "SMA Crossover"
+        },
+        {
+          "timestamp": "2024-05-21 00:00:00",
+          "symbol": "VCB",
+          "side": "buy",
+          "quantity": 32,
+          "price": 75.42853455823514,
+          "commission": 2.4137131058635246,
+          "strategy": "SMA Crossover"
+        },
+        {
+          "timestamp": "2024-05-24 00:00:00",
+          "symbol": "VCB",
+          "side": "buy",
+          "quantity": 52,
+          "price": 70.51914615178148,
+          "commission": 3.6669955998926373,
+          "strategy": "SMA Crossover"
+        },
+        {
+          "timestamp": "2024-05-27 00:00:00",
+          "symbol": "VCB",
+          "side": "buy",
+          "quantity": 41,
+          "price": 61.43990827458112,
+          "commission": 2.519036239257826,
+          "strategy": "SMA Crossover"
+        },
+        {
+          "timestamp": "2024-05-30 00:00:00",
+          "symbol": "VCB",
+          "side": "buy",
+          "quantity": 95,
+          "price": 64.4875726456884,
+          "commission": 6.126319401340398,
+          "strategy": "SMA Crossover"
+        },
+        {
+          "timestamp": "2024-06-02 00:00:00",
+          "symbol": "VCB",
+          "side": "sell",
+          "quantity": 54,
+          "price": 96.48488261712865,
+          "commission": 5.2101836613249475,
+          "strategy": "SMA Crossover"
+        },
+        {
+          "timestamp": "2024-06-05 00:00:00",
+          "symbol": "VCB",
+          "side": "sell",
+          "quantity": 15,
+          "price": 81.67018782552117,
+          "commission": 1.2250528173828175,
+          "strategy": "SMA Crossover"
+        },
+        {
+          "timestamp": "2024-06-08 00:00:00",
+          "symbol": "VCB",
+          "side": "sell",
+          "quantity": 53,
+          "price": 90.18360384495573,
+          "commission": 4.779731003782654,
+          "strategy": "SMA Crossover"
+        },
+        {
+          "timestamp": "2024-06-11 00:00:00",
+          "symbol": "VCB",
+          "side": "sell",
+          "quantity": 84,
+          "price": 94.62794992449889,
+          "commission": 7.948747793657907,
+          "strategy": "SMA Crossover"
+        },
+        {
+          "timestamp": "2024-06-14 00:00:00",
+          "symbol": "VCB",
+          "side": "sell",
+          "quantity": 98,
+          "price": 90.37200775820313,
+          "commission": 8.856456760303907,
+          "strategy": "SMA Crossover"
+        },
+        {
+          "timestamp": "2024-06-17 00:00:00",
+          "symbol": "VCB",
+          "side": "buy",
+          "quantity": 10,
+          "price": 95.3414220772877,
+          "commission": 0.9534142207728771,
+          "strategy": "SMA Crossover"
+        },
+        {
+          "timestamp": "2024-06-20 00:00:00",
+          "symbol": "VCB",
+          "side": "buy",
+          "quantity": 86,
+          "price": 82.38450602706811,
+          "commission": 7.085067518327858,
+          "strategy": "SMA Crossover"
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": "2025-08-02T11:27:04.779801",
+    "strategy": "RSI Strategy",
+    "params": {
+      "initial_capital": 100000,
+      "symbols": [
+        "Bitstamp:BTCUSD"
+      ],
+      "source": "tradingview",
+      "start_date": "2023-01-01",
+      "end_date": "2025-07-31",
+      "interval": "4h",
+      "n_bars": 100,
+      "selected_strategy": "RSI Strategy",
+      "selected_mode": "Backtest"
+    },
+    "results": {
+      "total_return": 0.12,
+      "sharpe_ratio": 1.1,
+      "max_drawdown": -0.06,
+      "win_rate": 0.62,
+      "total_trades": 38,
+      "profit_factor": 1.6,
+      "trades": [
+        {
+          "timestamp": "2024-01-01 00:00:00",
+          "symbol": "VCB",
+          "side": "sell",
+          "quantity": 81,
+          "price": 97.53571532049581,
+          "commission": 7.9003929409601605,
+          "strategy": "RSI Strategy"
+        },
+        {
+          "timestamp": "2024-01-04 00:00:00",
+          "symbol": "VCB",
+          "side": "buy",
+          "quantity": 92,
+          "price": 79.84250789732435,
+          "commission": 7.345510726553841,
+          "strategy": "RSI Strategy"
+        },
+        {
+          "timestamp": "2024-01-07 00:00:00",
+          "symbol": "VCB",
+          "side": "buy",
+          "quantity": 97,
+          "price": 52.90418060840997,
+          "commission": 5.131705519015767,
+          "strategy": "RSI Strategy"
+        },
+        {
+          "timestamp": "2024-01-10 00:00:00",
+          "symbol": "VCB",
+          "side": "buy",
+          "quantity": 33,
+          "price": 80.05575058716045,
+          "commission": 2.6418397693762947,
+          "strategy": "RSI Strategy"
+        },
+        {
+          "timestamp": "2024-01-13 00:00:00",
+          "symbol": "VCB",
+          "side": "buy",
+          "quantity": 11,
+          "price": 51.029224714790125,
+          "commission": 0.5613214718626914,
+          "strategy": "RSI Strategy"
+        },
+        {
+          "timestamp": "2024-01-16 00:00:00",
+          "symbol": "VCB",
+          "side": "sell",
+          "quantity": 47,
+          "price": 91.62213204002109,
+          "commission": 4.306240205880991,
+          "strategy": "RSI Strategy"
+        },
+        {
+          "timestamp": "2024-01-19 00:00:00",
+          "symbol": "VCB",
+          "side": "sell",
+          "quantity": 30,
+          "price": 59.09124836035503,
+          "commission": 1.772737450810651,
+          "strategy": "RSI Strategy"
+        },
+        {
+          "timestamp": "2024-01-22 00:00:00",
+          "symbol": "VCB",
+          "side": "buy",
+          "quantity": 31,
+          "price": 65.21211214797688,
+          "commission": 2.0215754765872833,
+          "strategy": "RSI Strategy"
+        },
+        {
+          "timestamp": "2024-01-25 00:00:00",
+          "symbol": "VCB",
+          "side": "buy",
+          "quantity": 58,
+          "price": 71.5972509321058,
+          "commission": 4.1526405540621365,
+          "strategy": "RSI Strategy"
+        },
+        {
+          "timestamp": "2024-01-28 00:00:00",
+          "symbol": "VCB",
+          "side": "buy",
+          "quantity": 51,
+          "price": 80.59264473611897,
+          "commission": 4.110224881542067,
+          "strategy": "RSI Strategy"
+        },
+        {
+          "timestamp": "2024-01-31 00:00:00",
+          "symbol": "VCB",
+          "side": "sell",
+          "quantity": 89,
+          "price": 64.6072324267609,
+          "commission": 5.75004368598172,
+          "strategy": "RSI Strategy"
+        },
+        {
+          "timestamp": "2024-02-03 00:00:00",
+          "symbol": "VCB",
+          "side": "buy",
+          "quantity": 56,
+          "price": 72.8034992108518,
+          "commission": 4.076995955807701,
+          "strategy": "RSI Strategy"
+        },
+        {
+          "timestamp": "2024-02-06 00:00:00",
+          "symbol": "VCB",
+          "side": "sell",
+          "quantity": 64,
+          "price": 59.98368910791799,
+          "commission": 3.8389561029067516,
+          "strategy": "RSI Strategy"
+        },
+        {
+          "timestamp": "2024-02-09 00:00:00",
+          "symbol": "VCB",
+          "side": "sell",
+          "quantity": 12,
+          "price": 79.62072844310212,
+          "commission": 0.9554487413172256,
+          "strategy": "RSI Strategy"
+        },
+        {
+          "timestamp": "2024-02-12 00:00:00",
+          "symbol": "VCB",
+          "side": "buy",
+          "quantity": 30,
+          "price": 80.37724259507192,
+          "commission": 2.4113172778521577,
+          "strategy": "RSI Strategy"
+        },
+        {
+          "timestamp": "2024-02-15 00:00:00",
+          "symbol": "VCB",
+          "side": "buy",
+          "quantity": 13,
+          "price": 53.25257964926398,
+          "commission": 0.6922835354404318,
+          "strategy": "RSI Strategy"
+        },
+        {
+          "timestamp": "2024-02-18 00:00:00",
+          "symbol": "VCB",
+          "side": "buy",
+          "quantity": 18,
+          "price": 98.28160165372796,
+          "commission": 1.7690688297671033,
+          "strategy": "RSI Strategy"
+        },
+        {
+          "timestamp": "2024-02-21 00:00:00",
+          "symbol": "VCB",
+          "side": "sell",
+          "quantity": 93,
+          "price": 54.883605700319194,
+          "commission": 5.104175330129685,
+          "strategy": "RSI Strategy"
+        },
+        {
+          "timestamp": "2024-02-24 00:00:00",
+          "symbol": "VCB",
+          "side": "sell",
+          "quantity": 80,
+          "price": 72.00762468698007,
+          "commission": 5.760609974958405,
+          "strategy": "RSI Strategy"
+        },
+        {
+          "timestamp": "2024-02-27 00:00:00",
+          "symbol": "VCB",
+          "side": "sell",
+          "quantity": 56,
+          "price": 74.75884550556351,
+          "commission": 4.186495348311557,
+          "strategy": "RSI Strategy"
+        },
+        {
+          "timestamp": "2024-03-01 00:00:00",
+          "symbol": "VCB",
+          "side": "buy",
+          "quantity": 45,
+          "price": 95.4660201039391,
+          "commission": 4.29597090467726,
+          "strategy": "RSI Strategy"
+        },
+        {
+          "timestamp": "2024-03-04 00:00:00",
+          "symbol": "VCB",
+          "side": "sell",
+          "quantity": 11,
+          "price": 83.1261142176991,
+          "commission": 0.9143872563946901,
+          "strategy": "RSI Strategy"
+        },
+        {
+          "timestamp": "2024-03-07 00:00:00",
+          "symbol": "VCB",
+          "side": "sell",
+          "quantity": 13,
+          "price": 76.00340105889055,
+          "commission": 0.988044213765577,
+          "strategy": "RSI Strategy"
+        },
+        {
+          "timestamp": "2024-03-10 00:00:00",
+          "symbol": "VCB",
+          "side": "sell",
+          "quantity": 27,
+          "price": 51.56566462277793,
+          "commission": 1.3922729448150042,
+          "strategy": "RSI Strategy"
+        },
+        {
+          "timestamp": "2024-03-13 00:00:00",
+          "symbol": "VCB",
+          "side": "sell",
+          "quantity": 83,
+          "price": 72.48770666848829,
+          "commission": 6.016479653484528,
+          "strategy": "RSI Strategy"
+        },
+        {
+          "timestamp": "2024-03-16 00:00:00",
+          "symbol": "VCB",
+          "side": "sell",
+          "quantity": 57,
+          "price": 96.33294328968971,
+          "commission": 5.490977767512313,
+          "strategy": "RSI Strategy"
+        },
+        {
+          "timestamp": "2024-03-19 00:00:00",
+          "symbol": "VCB",
+          "side": "buy",
+          "quantity": 96,
+          "price": 54.424625102595975,
+          "commission": 5.224764009849214,
+          "strategy": "RSI Strategy"
+        },
+        {
+          "timestamp": "2024-03-22 00:00:00",
+          "symbol": "VCB",
+          "side": "sell",
+          "quantity": 49,
+          "price": 52.2613644455269,
+          "commission": 2.560806857830818,
+          "strategy": "RSI Strategy"
+        },
+        {
+          "timestamp": "2024-03-25 00:00:00",
+          "symbol": "VCB",
+          "side": "buy",
+          "quantity": 91,
+          "price": 69.4338644844741,
+          "commission": 6.318481668087143,
+          "strategy": "RSI Strategy"
+        },
+        {
+          "timestamp": "2024-03-28 00:00:00",
+          "symbol": "VCB",
+          "side": "buy",
+          "quantity": 35,
+          "price": 91.43687545759647,
+          "commission": 3.2002906410158767,
+          "strategy": "RSI Strategy"
+        },
+        {
+          "timestamp": "2024-03-31 00:00:00",
+          "symbol": "VCB",
+          "side": "buy",
+          "quantity": 50,
+          "price": 64.04672548436903,
+          "commission": 3.202336274218452,
+          "strategy": "RSI Strategy"
+        },
+        {
+          "timestamp": "2024-04-03 00:00:00",
+          "symbol": "VCB",
+          "side": "buy",
+          "quantity": 74,
+          "price": 90.10984903770199,
+          "commission": 6.668128828789947,
+          "strategy": "RSI Strategy"
+        },
+        {
+          "timestamp": "2024-04-06 00:00:00",
+          "symbol": "VCB",
+          "side": "buy",
+          "quantity": 97,
+          "price": 99.34434683002587,
+          "commission": 9.63640164251251,
+          "strategy": "RSI Strategy"
+        },
+        {
+          "timestamp": "2024-04-09 00:00:00",
+          "symbol": "VCB",
+          "side": "buy",
+          "quantity": 97,
+          "price": 59.93578407670862,
+          "commission": 5.8137710554407365,
+          "strategy": "RSI Strategy"
+        },
+        {
+          "timestamp": "2024-04-12 00:00:00",
+          "symbol": "VCB",
+          "side": "buy",
+          "quantity": 90,
+          "price": 90.77307142274171,
+          "commission": 8.169576428046755,
+          "strategy": "RSI Strategy"
+        },
+        {
+          "timestamp": "2024-04-15 00:00:00",
+          "symbol": "VCB",
+          "side": "sell",
+          "quantity": 42,
+          "price": 86.45035840204937,
+          "commission": 3.6309150528860736,
+          "strategy": "RSI Strategy"
+        },
+        {
+          "timestamp": "2024-04-18 00:00:00",
+          "symbol": "VCB",
+          "side": "buy",
+          "quantity": 50,
+          "price": 53.70223258670452,
+          "commission": 2.685111629335226,
+          "strategy": "RSI Strategy"
+        },
+        {
+          "timestamp": "2024-04-21 00:00:00",
+          "symbol": "VCB",
+          "side": "sell",
+          "quantity": 81,
+          "price": 93.15517129377967,
+          "commission": 7.545568874796154,
+          "strategy": "RSI Strategy"
+        },
+        {
+          "timestamp": "2024-04-24 00:00:00",
+          "symbol": "VCB",
+          "side": "sell",
+          "quantity": 57,
+          "price": 66.54490124263246,
+          "commission": 3.79305937083005,
+          "strategy": "RSI Strategy"
+        },
+        {
+          "timestamp": "2024-04-27 00:00:00",
+          "symbol": "VCB",
+          "side": "buy",
+          "quantity": 97,
+          "price": 65.54911608578311,
+          "commission": 6.358264260320961,
+          "strategy": "RSI Strategy"
+        },
+        {
+          "timestamp": "2024-04-30 00:00:00",
+          "symbol": "VCB",
+          "side": "buy",
+          "quantity": 95,
+          "price": 86.4803089169032,
+          "commission": 8.215629347105804,
+          "strategy": "RSI Strategy"
+        },
+        {
+          "timestamp": "2024-05-03 00:00:00",
+          "symbol": "VCB",
+          "side": "buy",
+          "quantity": 56,
+          "price": 78.06217129238506,
+          "commission": 4.371481592373564,
+          "strategy": "RSI Strategy"
+        },
+        {
+          "timestamp": "2024-05-06 00:00:00",
+          "symbol": "VCB",
+          "side": "sell",
+          "quantity": 14,
+          "price": 92.4456912133042,
+          "commission": 1.294239676986259,
+          "strategy": "RSI Strategy"
+        },
+        {
+          "timestamp": "2024-05-09 00:00:00",
+          "symbol": "VCB",
+          "side": "sell",
+          "quantity": 23,
+          "price": 61.79924598744779,
+          "commission": 1.4213826577112991,
+          "strategy": "RSI Strategy"
+        },
+        {
+          "timestamp": "2024-05-12 00:00:00",
+          "symbol": "VCB",
+          "side": "buy",
+          "quantity": 88,
+          "price": 52.02167947692157,
+          "commission": 4.577907793969098,
+          "strategy": "RSI Strategy"
+        },
+        {
+          "timestamp": "2024-05-15 00:00:00",
+          "symbol": "VCB",
+          "side": "buy",
+          "quantity": 86,
+          "price": 55.54454104059157,
+          "commission": 4.7768305294908755,
+          "strategy": "RSI Strategy"
+        },
+        {
+          "timestamp": "2024-05-18 00:00:00",
+          "symbol": "VCB",
+          "side": "buy",
+          "quantity": 61,
+          "price": 51.57145928433671,
+          "commission": 3.1458590163445392,
+          "strategy": "RSI Strategy"
+        },
+        {
+          "timestamp": "2024-05-21 00:00:00",
+          "symbol": "VCB",
+          "side": "buy",
+          "quantity": 32,
+          "price": 75.42853455823514,
+          "commission": 2.4137131058635246,
+          "strategy": "RSI Strategy"
+        },
+        {
+          "timestamp": "2024-05-24 00:00:00",
+          "symbol": "VCB",
+          "side": "buy",
+          "quantity": 52,
+          "price": 70.51914615178148,
+          "commission": 3.6669955998926373,
+          "strategy": "RSI Strategy"
+        },
+        {
+          "timestamp": "2024-05-27 00:00:00",
+          "symbol": "VCB",
+          "side": "buy",
+          "quantity": 41,
+          "price": 61.43990827458112,
+          "commission": 2.519036239257826,
+          "strategy": "RSI Strategy"
+        },
+        {
+          "timestamp": "2024-05-30 00:00:00",
+          "symbol": "VCB",
+          "side": "buy",
+          "quantity": 95,
+          "price": 64.4875726456884,
+          "commission": 6.126319401340398,
+          "strategy": "RSI Strategy"
+        },
+        {
+          "timestamp": "2024-06-02 00:00:00",
+          "symbol": "VCB",
+          "side": "sell",
+          "quantity": 54,
+          "price": 96.48488261712865,
+          "commission": 5.2101836613249475,
+          "strategy": "RSI Strategy"
+        },
+        {
+          "timestamp": "2024-06-05 00:00:00",
+          "symbol": "VCB",
+          "side": "sell",
+          "quantity": 15,
+          "price": 81.67018782552117,
+          "commission": 1.2250528173828175,
+          "strategy": "RSI Strategy"
+        },
+        {
+          "timestamp": "2024-06-08 00:00:00",
+          "symbol": "VCB",
+          "side": "sell",
+          "quantity": 53,
+          "price": 90.18360384495573,
+          "commission": 4.779731003782654,
+          "strategy": "RSI Strategy"
+        },
+        {
+          "timestamp": "2024-06-11 00:00:00",
+          "symbol": "VCB",
+          "side": "sell",
+          "quantity": 84,
+          "price": 94.62794992449889,
+          "commission": 7.948747793657907,
+          "strategy": "RSI Strategy"
+        },
+        {
+          "timestamp": "2024-06-14 00:00:00",
+          "symbol": "VCB",
+          "side": "sell",
+          "quantity": 98,
+          "price": 90.37200775820313,
+          "commission": 8.856456760303907,
+          "strategy": "RSI Strategy"
+        },
+        {
+          "timestamp": "2024-06-17 00:00:00",
+          "symbol": "VCB",
+          "side": "buy",
+          "quantity": 10,
+          "price": 95.3414220772877,
+          "commission": 0.9534142207728771,
+          "strategy": "RSI Strategy"
+        },
+        {
+          "timestamp": "2024-06-20 00:00:00",
+          "symbol": "VCB",
+          "side": "buy",
+          "quantity": 86,
+          "price": 82.38450602706811,
+          "commission": 7.085067518327858,
+          "strategy": "RSI Strategy"
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": "2025-08-02T11:37:11.953143",
+    "strategy": "SMA Crossover",
+    "params": {
+      "initial_capital": 100000,
+      "symbols": [
+        "Bitstamp:BTCUSD"
+      ],
+      "source": "tradingview",
+      "start_date": "2023-01-01",
+      "end_date": "2025-07-31",
+      "interval": "4h",
+      "n_bars": 100,
+      "selected_strategy": "SMA Crossover",
+      "selected_mode": "Backtest"
+    },
+    "results": {
+      "total_return": 0.15,
+      "sharpe_ratio": 1.2,
+      "max_drawdown": -0.08,
+      "win_rate": 0.65,
+      "total_trades": 45,
+      "profit_factor": 1.8,
+      "trades": [
+        {
+          "timestamp": "2024-01-01 00:00:00",
+          "symbol": "Bitstamp:BTCUSD",
+          "side": "sell",
+          "quantity": 1.4907884894416696,
+          "price": 59014.28612819832,
+          "commission": 87.97781847253525,
+          "strategy": "SMA Crossover"
+        },
+        {
+          "timestamp": "2024-01-04 00:00:00",
+          "symbol": "Bitstamp:BTCUSD",
+          "side": "buy",
+          "quantity": 0.9470822304218232,
+          "price": 51937.00315892974,
+          "commission": 49.188612793184454,
+          "strategy": "SMA Crossover"
+        },
+        {
+          "timestamp": "2024-01-07 00:00:00",
+          "symbol": "Bitstamp:BTCUSD",
+          "side": "buy",
+          "quantity": 1.745734676972377,
+          "price": 41161.67224336399,
+          "commission": 71.85735859741189,
+          "strategy": "SMA Crossover"
+        },
+        {
+          "timestamp": "2024-01-10 00:00:00",
+          "symbol": "Bitstamp:BTCUSD",
+          "side": "sell",
+          "quantity": 1.3366880986028205,
+          "price": 42857.33635843881,
+          "commission": 57.28689144814311,
+          "strategy": "SMA Crossover"
+        },
+        {
+          "timestamp": "2024-01-13 00:00:00",
+          "symbol": "Bitstamp:BTCUSD",
+          "side": "buy",
+          "quantity": 1.6816410175208014,
+          "price": 59398.19704323988,
+          "commission": 99.88644451469497,
+          "strategy": "SMA Crossover"
+        },
+        {
+          "timestamp": "2024-01-16 00:00:00",
+          "symbol": "Bitstamp:BTCUSD",
+          "side": "sell",
+          "quantity": 1.9852019626533133,
+          "price": 40015.57531682029,
+          "commission": 79.43899865565311,
+          "strategy": "SMA Crossover"
+        },
+        {
+          "timestamp": "2024-01-19 00:00:00",
+          "symbol": "Bitstamp:BTCUSD",
+          "side": "buy",
+          "quantity": 1.097037220101252,
+          "price": 46084.84485919075,
+          "commission": 50.55679009312409,
+          "strategy": "SMA Crossover"
+        },
+        {
+          "timestamp": "2024-01-22 00:00:00",
+          "symbol": "Bitstamp:BTCUSD",
+          "side": "sell",
+          "quantity": 1.0970718544909395,
+          "price": 40461.24850082832,
+          "commission": 44.38889692782247,
+          "strategy": "SMA Crossover"
+        },
+        {
+          "timestamp": "2024-01-25 00:00:00",
+          "symbol": "Bitstamp:BTCUSD",
+          "side": "buy",
+          "quantity": 0.6550748322169144,
+          "price": 42789.87721304084,
+          "commission": 28.0305716359151,
+          "strategy": "SMA Crossover"
+        },
+        {
+          "timestamp": "2024-01-28 00:00:00",
+          "symbol": "Bitstamp:BTCUSD",
+          "side": "sell",
+          "quantity": 0.2721522256123595,
+          "price": 44655.426808606084,
+          "commission": 12.15307379163197,
+          "strategy": "SMA Crossover"
+        },
+        {
+          "timestamp": "2024-01-31 00:00:00",
+          "symbol": "Bitstamp:BTCUSD",
+          "side": "sell",
+          "quantity": 1.077045432985862,
+          "price": 43993.47564316719,
+          "commission": 47.382972022647984,
+          "strategy": "SMA Crossover"
+        },
+        {
+          "timestamp": "2024-02-03 00:00:00",
+          "symbol": "Bitstamp:BTCUSD",
+          "side": "sell",
+          "quantity": 1.733886772799009,
+          "price": 49335.257864959596,
+          "commission": 85.54175104468172,
+          "strategy": "SMA Crossover"
+        },
+        {
+          "timestamp": "2024-02-06 00:00:00",
+          "symbol": "Bitstamp:BTCUSD",
+          "side": "buy",
+          "quantity": 0.22359802667203107,
+          "price": 43410.48247374583,
+          "commission": 9.706498218010358,
+          "strategy": "SMA Crossover"
+        },
+        {
+          "timestamp": "2024-02-09 00:00:00",
+          "symbol": "Bitstamp:BTCUSD",
+          "side": "sell",
+          "quantity": 1.1702476139065248,
+          "price": 58844.03511369706,
+          "commission": 68.86209168443574,
+          "strategy": "SMA Crossover"
+        },
+        {
+          "timestamp": "2024-02-12 00:00:00",
+          "symbol": "Bitstamp:BTCUSD",
+          "side": "sell",
+          "quantity": 0.2855770166121293,
+          "price": 46092.275383467415,
+          "commission": 13.162894492875314,
+          "strategy": "SMA Crossover"
+        },
+        {
+          "timestamp": "2024-02-15 00:00:00",
+          "symbol": "Bitstamp:BTCUSD",
+          "side": "sell",
+          "quantity": 1.3982006857683706,
+          "price": 44820.509320520236,
+          "commission": 62.66806686843904,
+          "strategy": "SMA Crossover"
+        },
+        {
+          "timestamp": "2024-02-18 00:00:00",
+          "symbol": "Bitstamp:BTCUSD",
+          "side": "sell",
+          "quantity": 0.16533819011891496,
+          "price": 49903.538202225405,
+          "commission": 8.25096068688608,
+          "strategy": "SMA Crossover"
+        },
+        {
+          "timestamp": "2024-02-21 00:00:00",
+          "symbol": "Bitstamp:BTCUSD",
+          "side": "sell",
+          "quantity": 0.4462485667973184,
+          "price": 47821.21215146482,
+          "commission": 21.340147385101684,
+          "strategy": "SMA Crossover"
+        },
+        {
+          "timestamp": "2024-02-24 00:00:00",
+          "symbol": "Bitstamp:BTCUSD",
+          "side": "sell",
+          "quantity": 1.0881292402378406,
+          "price": 46234.22152178822,
+          "commission": 50.308808337491435,
+          "strategy": "SMA Crossover"
+        },
+        {
+          "timestamp": "2024-02-27 00:00:00",
+          "symbol": "Bitstamp:BTCUSD",
+          "side": "sell",
+          "quantity": 0.1594952556655613,
+          "price": 51354.00655639983,
+          "commission": 8.190720405163901,
+          "strategy": "SMA Crossover"
+        },
+        {
+          "timestamp": "2024-03-01 00:00:00",
+          "symbol": "Bitstamp:BTCUSD",
+          "side": "sell",
+          "quantity": 1.8850479889719594,
+          "price": 55502.65646722229,
+          "commission": 104.62517095613889,
+          "strategy": "SMA Crossover"
+        },
+        {
+          "timestamp": "2024-03-04 00:00:00",
+          "symbol": "Bitstamp:BTCUSD",
+          "side": "sell",
+          "quantity": 1.4818167921271996,
+          "price": 58533.17731587589,
+          "commission": 86.73544504322378,
+          "strategy": "SMA Crossover"
+        },
+        {
+          "timestamp": "2024-03-07 00:00:00",
+          "symbol": "Bitstamp:BTCUSD",
+          "side": "buy",
+          "quantity": 0.47236743859637587,
+          "price": 41769.85004103839,
+          "commission": 19.730717074440033,
+          "strategy": "SMA Crossover"
+        },
+        {
+          "timestamp": "2024-03-10 00:00:00",
+          "symbol": "Bitstamp:BTCUSD",
+          "side": "buy",
+          "quantity": 1.7046143124884876,
+          "price": 59223.44048698698,
+          "commission": 100.95312428892818,
+          "strategy": "SMA Crossover"
+        },
+        {
+          "timestamp": "2024-03-13 00:00:00",
+          "symbol": "Bitstamp:BTCUSD",
+          "side": "buy",
+          "quantity": 1.6746012673886657,
+          "price": 45426.98063547792,
+          "commission": 76.0720793458117,
+          "strategy": "SMA Crossover"
+        },
+        {
+          "timestamp": "2024-03-16 00:00:00",
+          "symbol": "Bitstamp:BTCUSD",
+          "side": "sell",
+          "quantity": 1.253365070604701,
+          "price": 59305.106145282756,
+          "commission": 74.33094855100161,
+          "strategy": "SMA Crossover"
+        },
+        {
+          "timestamp": "2024-03-19 00:00:00",
+          "symbol": "Bitstamp:BTCUSD",
+          "side": "buy",
+          "quantity": 1.6241742634326755,
+          "price": 42818.48449949525,
+          "commission": 69.54468052327114,
+          "strategy": "SMA Crossover"
+        },
+        {
+          "timestamp": "2024-03-22 00:00:00",
+          "symbol": "Bitstamp:BTCUSD",
+          "side": "buy",
+          "quantity": 0.9044628133421022,
+          "price": 40312.728134823876,
+          "commission": 36.46136350231812,
+          "strategy": "SMA Crossover"
+        },
+        {
+          "timestamp": "2024-03-25 00:00:00",
+          "symbol": "Bitstamp:BTCUSD",
+          "side": "buy",
+          "quantity": 0.11049202253484457,
+          "price": 43974.31363068345,
+          "commission": 4.8588108526357985,
+          "strategy": "SMA Crossover"
+        },
+        {
+          "timestamp": "2024-03-28 00:00:00",
+          "symbol": "Bitstamp:BTCUSD",
+          "side": "buy",
+          "quantity": 1.451549710222435,
+          "price": 43976.8480817761,
+          "commission": 63.83458108959815,
+          "strategy": "SMA Crossover"
+        },
+        {
+          "timestamp": "2024-03-31 00:00:00",
+          "symbol": "Bitstamp:BTCUSD",
+          "side": "buy",
+          "quantity": 0.2406848382947717,
+          "price": 55425.406933718914,
+          "commission": 13.340055105264055,
+          "strategy": "SMA Crossover"
+        },
+        {
+          "timestamp": "2024-04-03 00:00:00",
+          "symbol": "Bitstamp:BTCUSD",
+          "side": "buy",
+          "quantity": 1.8384233835331836,
+          "price": 53021.54051003889,
+          "commission": 97.47603990460746,
+          "strategy": "SMA Crossover"
+        },
+        {
+          "timestamp": "2024-04-06 00:00:00",
+          "symbol": "Bitstamp:BTCUSD",
+          "side": "buy",
+          "quantity": 0.7287062472200334,
+          "price": 52465.96253655116,
+          "commission": 38.23227466679707,
+          "strategy": "SMA Crossover"
+        },
+        {
+          "timestamp": "2024-04-09 00:00:00",
+          "symbol": "Bitstamp:BTCUSD",
+          "side": "sell",
+          "quantity": 1.3707983800608539,
+          "price": 47416.36504396533,
+          "commission": 64.99827639064176,
+          "strategy": "SMA Crossover"
+        },
+        {
+          "timestamp": "2024-04-12 00:00:00",
+          "symbol": "Bitstamp:BTCUSD",
+          "side": "buy",
+          "quantity": 1.3113591955749049,
+          "price": 54592.12356676128,
+          "commission": 71.58988324523388,
+          "strategy": "SMA Crossover"
+        },
+        {
+          "timestamp": "2024-04-15 00:00:00",
+          "symbol": "Bitstamp:BTCUSD",
+          "side": "buy",
+          "quantity": 0.8275610620322006,
+          "price": 51224.868516954026,
+          "commission": 42.39170659235031,
+          "strategy": "SMA Crossover"
+        },
+        {
+          "timestamp": "2024-04-18 00:00:00",
+          "symbol": "Bitstamp:BTCUSD",
+          "side": "buy",
+          "quantity": 1.545491592372105,
+          "price": 54264.8957444599,
+          "commission": 83.86594013401161,
+          "strategy": "SMA Crossover"
+        },
+        {
+          "timestamp": "2024-04-21 00:00:00",
+          "symbol": "Bitstamp:BTCUSD",
+          "side": "sell",
+          "quantity": 0.5865298132465155,
+          "price": 44719.69839497912,
+          "commission": 26.229436348047603,
+          "strategy": "SMA Crossover"
+        },
+        {
+          "timestamp": "2024-04-24 00:00:00",
+          "symbol": "Bitstamp:BTCUSD",
+          "side": "buy",
+          "quantity": 0.9123279348812442,
+          "price": 50454.65658763988,
+          "commission": 46.03119264974386,
+          "strategy": "SMA Crossover"
+        },
+        {
+          "timestamp": "2024-04-27 00:00:00",
+          "symbol": "Bitstamp:BTCUSD",
+          "side": "sell",
+          "quantity": 0.48326648443725273,
+          "price": 48786.7300373154,
+          "commission": 23.576991512322735,
+          "strategy": "SMA Crossover"
+        },
+        {
+          "timestamp": "2024-04-30 00:00:00",
+          "symbol": "Bitstamp:BTCUSD",
+          "side": "sell",
+          "quantity": 0.6972763640450206,
+          "price": 52728.20822527561,
+          "commission": 36.76613331392892,
+          "strategy": "SMA Crossover"
+        },
+        {
+          "timestamp": "2024-05-03 00:00:00",
+          "symbol": "Bitstamp:BTCUSD",
+          "side": "sell",
+          "quantity": 0.3647297633711638,
+          "price": 53910.32172852255,
+          "commission": 19.66269888730734,
+          "strategy": "SMA Crossover"
+        },
+        {
+          "timestamp": "2024-05-06 00:00:00",
+          "symbol": "Bitstamp:BTCUSD",
+          "side": "buy",
+          "quantity": 1.5355471632317925,
+          "price": 48207.6584607126,
+          "commission": 74.02513319539436,
+          "strategy": "SMA Crossover"
+        },
+        {
+          "timestamp": "2024-05-09 00:00:00",
+          "symbol": "Bitstamp:BTCUSD",
+          "side": "sell",
+          "quantity": 1.2378443863282185,
+          "price": 58857.07141115962,
+          "commission": 72.85589544202301,
+          "strategy": "SMA Crossover"
+        },
+        {
+          "timestamp": "2024-05-12 00:00:00",
+          "symbol": "Bitstamp:BTCUSD",
+          "side": "buy",
+          "quantity": 1.8664255394508888,
+          "price": 43224.42574508009,
+          "commission": 80.675172138716,
+          "strategy": "SMA Crossover"
+        },
+        {
+          "timestamp": "2024-05-15 00:00:00",
+          "symbol": "Bitstamp:BTCUSD",
+          "side": "buy",
+          "quantity": 0.30043909367751415,
+          "price": 45912.67371675428,
+          "commission": 13.793962079773081,
+          "strategy": "SMA Crossover"
+        },
+        {
+          "timestamp": "2024-05-18 00:00:00",
+          "symbol": "Bitstamp:BTCUSD",
+          "side": "sell",
+          "quantity": 0.4544831118834681,
+          "price": 56073.44153798229,
+          "commission": 25.484432204197915,
+          "strategy": "SMA Crossover"
+        },
+        {
+          "timestamp": "2024-05-21 00:00:00",
+          "symbol": "Bitstamp:BTCUSD",
+          "side": "sell",
+          "quantity": 0.7162555399100204,
+          "price": 57665.605178377366,
+          "commission": 41.30330917127675,
+          "strategy": "SMA Crossover"
+        },
+        {
+          "timestamp": "2024-05-24 00:00:00",
+          "symbol": "Bitstamp:BTCUSD",
+          "side": "buy",
+          "quantity": 0.7042066024465413,
+          "price": 57921.82599846987,
+          "commission": 40.78893229388221,
+          "strategy": "SMA Crossover"
+        },
+        {
+          "timestamp": "2024-05-27 00:00:00",
+          "symbol": "Bitstamp:BTCUSD",
+          "side": "buy",
+          "quantity": 1.3306112290285885,
+          "price": 45442.64498769271,
+          "commission": 60.466493697383626,
+          "strategy": "SMA Crossover"
+        },
+        {
+          "timestamp": "2024-05-30 00:00:00",
+          "symbol": "Bitstamp:BTCUSD",
+          "side": "buy",
+          "quantity": 1.7353881081870526,
+          "price": 56360.29531844986,
+          "commission": 97.8069862695483,
+          "strategy": "SMA Crossover"
+        },
+        {
+          "timestamp": "2024-06-02 00:00:00",
+          "symbol": "Bitstamp:BTCUSD",
+          "side": "buy",
+          "quantity": 1.1147698968133397,
+          "price": 43293.11706285884,
+          "commission": 48.26186364089098,
+          "strategy": "SMA Crossover"
+        },
+        {
+          "timestamp": "2024-06-05 00:00:00",
+          "symbol": "Bitstamp:BTCUSD",
+          "side": "sell",
+          "quantity": 0.32774419793399734,
+          "price": 44442.15620941461,
+          "commission": 14.56565884131201,
+          "strategy": "SMA Crossover"
+        },
+        {
+          "timestamp": "2024-06-08 00:00:00",
+          "symbol": "Bitstamp:BTCUSD",
+          "side": "sell",
+          "quantity": 0.4197529801285681,
+          "price": 44882.510444955486,
+          "commission": 18.83956751492165,
+          "strategy": "SMA Crossover"
+        },
+        {
+          "timestamp": "2024-06-11 00:00:00",
+          "symbol": "Bitstamp:BTCUSD",
+          "side": "sell",
+          "quantity": 1.435736021900838,
+          "price": 50375.81243486732,
+          "commission": 72.32636854525917,
+          "strategy": "SMA Crossover"
+        },
+        {
+          "timestamp": "2024-06-14 00:00:00",
+          "symbol": "Bitstamp:BTCUSD",
+          "side": "buy",
+          "quantity": 0.5824392864752549,
+          "price": 41297.84494217963,
+          "commission": 24.053487341088818,
+          "strategy": "SMA Crossover"
+        },
+        {
+          "timestamp": "2024-06-17 00:00:00",
+          "symbol": "Bitstamp:BTCUSD",
+          "side": "sell",
+          "quantity": 1.0447721611955323,
+          "price": 45035.64591650728,
+          "commission": 47.05198911502606,
+          "strategy": "SMA Crossover"
+        },
+        {
+          "timestamp": "2024-06-20 00:00:00",
+          "symbol": "Bitstamp:BTCUSD",
+          "side": "buy",
+          "quantity": 1.9957069215929895,
+          "price": 42961.738599068,
+          "commission": 85.73903908582871,
+          "strategy": "SMA Crossover"
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": "2025-08-02T11:43:37.521605",
+    "strategy": "SMA Crossover",
+    "params": {
+      "initial_capital": 100000,
+      "symbols": [
+        "Bitstamp:BTCUSD"
+      ],
+      "source": "tradingview",
+      "start_date": "2023-01-01",
+      "end_date": "2025-07-31",
+      "interval": "4h",
+      "n_bars": 100,
+      "selected_strategy": "SMA Crossover",
+      "selected_mode": "Backtest"
+    },
+    "results": {
+      "strategy_name": "SMA Crossover",
+      "total_return": 0.24163645758234986,
+      "sharpe_ratio": 1.1978193703039222,
+      "max_drawdown": 0.10829457131300951,
+      "win_rate": 0.6376577279806176,
+      "profit_factor": 1.5093209599257973,
+      "total_trades": 10,
+      "trades": [
+        {
+          "timestamp": "2023-02-28 00:00:00",
+          "symbol": "Bitstamp:BTCUSD",
+          "side": "sell",
+          "quantity": 0.8597358462589854,
+          "price": 54751.848411984516,
+          "commission": 47.07212672872119,
+          "strategy": "SMA Crossover"
+        },
+        {
+          "timestamp": "2023-05-02 00:00:00",
+          "symbol": "Bitstamp:BTCUSD",
+          "side": "sell",
+          "quantity": 0.39638958863878504,
+          "price": 46922.85115200832,
+          "commission": 18.59972966590352,
+          "strategy": "SMA Crossover"
+        },
+        {
+          "timestamp": "2023-05-11 00:00:00",
+          "symbol": "Bitstamp:BTCUSD",
+          "side": "sell",
+          "quantity": 0.13911053916202465,
+          "price": 47535.98287518286,
+          "commission": 6.612756207363458,
+          "strategy": "SMA Crossover"
+        },
+        {
+          "timestamp": "2023-10-04 00:00:00",
+          "symbol": "Bitstamp:BTCUSD",
+          "side": "sell",
+          "quantity": 1.2732148682926614,
+          "price": 50589.973061717494,
+          "commission": 64.41190588870393,
+          "strategy": "SMA Crossover"
+        },
+        {
+          "timestamp": "2023-11-10 00:00:00",
+          "symbol": "Bitstamp:BTCUSD",
+          "side": "buy",
+          "quantity": 0.6533353663762795,
+          "price": 40000,
+          "commission": 26.133414655051183,
+          "strategy": "SMA Crossover"
+        },
+        {
+          "timestamp": "2023-11-27 00:00:00",
+          "symbol": "Bitstamp:BTCUSD",
+          "side": "buy",
+          "quantity": 0.3714469540516875,
+          "price": 40000,
+          "commission": 14.8578781620675,
+          "strategy": "SMA Crossover"
+        },
+        {
+          "timestamp": "2025-02-08 00:00:00",
+          "symbol": "Bitstamp:BTCUSD",
+          "side": "buy",
+          "quantity": 0.10147965509792722,
+          "price": 51165.47619529872,
+          "commission": 5.19225487722012,
+          "strategy": "SMA Crossover"
+        },
+        {
+          "timestamp": "2025-05-10 00:00:00",
+          "symbol": "Bitstamp:BTCUSD",
+          "side": "buy",
+          "quantity": 1.2340153000983254,
+          "price": 52718.71580240649,
+          "commission": 65.05570190170498,
+          "strategy": "SMA Crossover"
+        },
+        {
+          "timestamp": "2023-02-28 00:00:00",
+          "symbol": "Bitstamp:BTCUSD",
+          "side": "sell",
+          "quantity": 0.8597358462589854,
+          "price": 54751.848411984516,
+          "commission": 47.07212672872119,
+          "strategy": "SMA Crossover"
+        },
+        {
+          "timestamp": "2023-02-28 00:00:00",
+          "symbol": "Bitstamp:BTCUSD",
+          "side": "sell",
+          "quantity": 0.8597358462589854,
+          "price": 54751.848411984516,
+          "commission": 47.07212672872119,
+          "strategy": "SMA Crossover"
+        }
+      ],
+      "final_portfolio_value": 124163.645758235
+    }
+  }
+]

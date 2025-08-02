@@ -3613,3 +3613,42 @@
 2025-08-01 13:58:03 | INFO     | src.core.trading_engine:_generate_backtest_report:343 - Backtest results saved to data/backtest_results.csv
 2025-08-01 13:58:03 | INFO     | src.core.trading_engine:_generate_backtest_report:360 - Trade details saved to data/trades.csv
 2025-08-01 13:58:03 | INFO     | __main__:run_backtest:108 - Backtest completed
+2025-08-02 10:44:21 | INFO     | src.risk.risk_manager:__init__:49 - Risk manager initialized
+2025-08-02 10:44:21 | INFO     | src.core.trading_engine:__init__:77 - Trading engine initialized with $100,000.00 initial capital
+2025-08-02 10:44:21 | INFO     | src.strategies.base_strategy:__init__:34 - Initialized strategy: sma_crossover
+2025-08-02 10:44:21 | INFO     | src.strategies.sma_crossover:__init__:48 - SMA Crossover Strategy initialized: 5/30
+2025-08-02 10:44:21 | INFO     | src.core.trading_engine:add_strategy:82 - Added strategy: sma_crossover
+2025-08-02 10:44:21 | INFO     | __main__:run_backtest:75 - SMA Crossover strategy added (enabled)
+2025-08-02 10:44:21 | INFO     | src.core.trading_engine:run_backtest:86 - Starting backtest from 2023-01-01 to 2025-07-31
+2025-08-02 10:44:21 | INFO     | src.data.data_manager:get_historical_data_standardized:588 - Fetching standardized OHLCV data for ['Bitstamp:BTCUSD'] from 2023-01-01 to 2025-07-31
+2025-08-02 10:44:21 | INFO     | src.data.data_manager:get_historical_data:64 - Fetching historical OHLCV data for ['Bitstamp:BTCUSD'] from 2023-01-01 to 2025-07-31
+2025-08-02 10:44:22 | INFO     | src.data.data_manager:_fetch_tradingview_ohlcv_data:158 - Successfully fetched OHLCV data for 1 symbols
+2025-08-02 10:44:22 | INFO     | src.data.data_manager:get_historical_data:97 - OHLCV data cached successfully
+2025-08-02 10:44:22 | INFO     | src.data.data_manager:ensure_ohlcv_format:499 - Data formatted for Bitstamp:BTCUSD: (100, 5)
+2025-08-02 10:44:22 | INFO     | src.data.data_manager:get_historical_data_standardized:621 - Successfully standardized OHLCV data for 1 symbols
+2025-08-02 10:44:22 | INFO     | src.core.trading_engine:run_backtest:107 - Loaded 100 data points for [('Bitstamp:BTCUSD', 'open'), ('Bitstamp:BTCUSD', 'high'), ('Bitstamp:BTCUSD', 'low'), ('Bitstamp:BTCUSD', 'close'), ('Bitstamp:BTCUSD', 'volume')]
+2025-08-02 10:44:22 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 118563.60 > 118355.17
+2025-08-02 10:44:22 | INFO     | src.core.trading_engine:_execute_buy_order:236 - BUY: 0.168 Bitstamp:BTCUSD @ $119344.00 (sma_crossover)
+2025-08-02 10:44:22 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 118118.20 < 118364.77
+2025-08-02 10:44:22 | INFO     | src.core.trading_engine:_execute_sell_order:274 - SELL: 0.17 Bitstamp:BTCUSD @ $115400.00 | P&L: $-680.29 (-3.40%) (sma_crossover)
+2025-08-02 10:44:22 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 118098.80 > 118073.20
+2025-08-02 10:44:22 | INFO     | src.core.trading_engine:_execute_buy_order:236 - BUY: 0.168 Bitstamp:BTCUSD @ $118243.00 (sma_crossover)
+2025-08-02 10:44:22 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 117905.80 < 117976.97
+2025-08-02 10:44:22 | INFO     | src.core.trading_engine:_execute_sell_order:274 - SELL: 0.17 Bitstamp:BTCUSD @ $118144.00 | P&L: $-36.47 (-0.18%) (sma_crossover)
+2025-08-02 10:44:22 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 118316.80 > 118284.57
+2025-08-02 10:44:22 | INFO     | src.core.trading_engine:_execute_buy_order:236 - BUY: 0.168 Bitstamp:BTCUSD @ $118290.00 (sma_crossover)
+2025-08-02 10:44:22 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 118103.40 < 118234.27
+2025-08-02 10:44:22 | INFO     | src.core.trading_engine:_execute_sell_order:274 - SELL: 0.17 Bitstamp:BTCUSD @ $116767.00 | P&L: $-275.15 (-1.39%) (sma_crossover)
+2025-08-02 10:44:22 | INFO     | src.core.trading_engine:_generate_backtest_report:326 - === BACKTEST RESULTS ===
+2025-08-02 10:44:22 | INFO     | src.core.trading_engine:_generate_backtest_report:327 - Initial Capital: $100,000.00
+2025-08-02 10:44:22 | INFO     | src.core.trading_engine:_generate_backtest_report:328 - Final Portfolio Value: $98,948.39
+2025-08-02 10:44:22 | INFO     | src.core.trading_engine:_generate_backtest_report:329 - Total Return: -1.05%
+2025-08-02 10:44:22 | INFO     | src.core.trading_engine:_generate_backtest_report:330 - Annualized Volatility: 1.16%
+2025-08-02 10:44:22 | INFO     | src.core.trading_engine:_generate_backtest_report:331 - Sharpe Ratio: -2.31
+2025-08-02 10:44:22 | INFO     | src.core.trading_engine:_generate_backtest_report:332 - Maximum Drawdown: -1.14%
+2025-08-02 10:44:22 | INFO     | src.core.trading_engine:_generate_backtest_report:333 - Total Trades: 6
+2025-08-02 10:44:22 | INFO     | src.core.trading_engine:_generate_backtest_report:334 - Buy Trades: 3
+2025-08-02 10:44:22 | INFO     | src.core.trading_engine:_generate_backtest_report:335 - Sell Trades: 3
+2025-08-02 10:44:22 | INFO     | src.core.trading_engine:_generate_backtest_report:343 - Backtest results saved to data/backtest_results.csv
+2025-08-02 10:44:22 | INFO     | src.core.trading_engine:_generate_backtest_report:360 - Trade details saved to data/trades.csv
+2025-08-02 10:44:22 | INFO     | __main__:run_backtest:108 - Backtest completed

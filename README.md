@@ -45,8 +45,9 @@ autotrading_system/
 
 2. **Configure Settings**:
    ```bash
-   cp config/config.example.yaml config/config.yaml
-   # Edit config.yaml with your settings
+   # Run setup to create config file
+   python setup.py
+   # Edit config/config.yaml with your settings
    ```
 
 3. **Run Backtesting**:
