@@ -46,7 +46,7 @@ def demo_data_caching():
         end_date=end_date,
         optimization_metric='sharpe_ratio',
         max_combinations_per_strategy=10,  # Small number for demo
-        symbols=["AAPL"]
+        # symbols=["AAPL"]
     )
     time1 = time.time() - start_time
     
@@ -69,7 +69,7 @@ def demo_data_caching():
         end_date=end_date,
         optimization_metric='sharpe_ratio',
         max_combinations_per_strategy=10,
-        symbols=["AAPL"]
+        # symbols=["AAPL"]
     )
     time2 = time.time() - start_time
     
@@ -88,7 +88,7 @@ def demo_data_caching():
         end_date="2023-12-31",
         optimization_metric='sharpe_ratio',
         max_combinations_per_strategy=10,
-        symbols=["AAPL"]
+        # symbols=["AAPL"]
     )
     time3 = time.time() - start_time
     
@@ -109,7 +109,7 @@ def demo_data_caching():
         end_date=end_date,
         optimization_metric='sharpe_ratio',
         max_combinations_per_strategy=10,
-        symbols=["AAPL"]
+        # symbols=["AAPL"]
     )
     time4 = time.time() - start_time
     
@@ -158,7 +158,7 @@ def demo_individual_methods():
         end_date=end_date,
         optimization_metric='sharpe_ratio',
         max_combinations_per_strategy=5,
-        symbols=["AAPL"]
+        # symbols=["AAPL"]
     )
     print(f"Optimization completed for {len(opt_results)} strategies")
     
@@ -168,7 +168,7 @@ def demo_individual_methods():
         start_date=start_date,
         end_date=end_date,
         strategy_types=strategy_types,
-        symbols=["AAPL"]
+        # symbols=["AAPL"]
     )
     print(f"Backtest completed for {len(backtest_results)} strategies")
     
