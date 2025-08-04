@@ -1,0 +1,5846 @@
+{
+  "optimization_results": {
+    "sma_crossover": {
+      "results": [
+        {
+          "total_return": 0,
+          "annualized_return": 0,
+          "sharpe_ratio": -999,
+          "max_drawdown": 0,
+          "volatility": 0,
+          "win_rate": 0,
+          "profit_factor": 0,
+          "total_trades": 0,
+          "final_portfolio_value": 0,
+          "current_drawdown": 0,
+          "portfolio_volatility": 0,
+          "parameters": {
+            "short_window": 5,
+            "long_window": 40
+          },
+          "combination_index": 0
+        },
+        {
+          "total_return": 0.014082349172249486,
+          "annualized_return": 0.05290982403278921,
+          "sharpe_ratio": 0.57402535326667,
+          "max_drawdown": -0.012431376044461767,
+          "volatility": 0.027840909459467003,
+          "win_rate": 0.0,
+          "profit_factor": 0.0,
+          "total_trades": 0,
+          "final_portfolio_value": 101408.23491722494,
+          "current_drawdown": -0.01157359640309602,
+          "portfolio_volatility": 0.027840909459467007,
+          "parameters": {
+            "short_window": 5,
+            "long_window": 60
+          },
+          "combination_index": 1
+        },
+        {
+          "total_return": 0,
+          "annualized_return": 0,
+          "sharpe_ratio": -999,
+          "max_drawdown": 0,
+          "volatility": 0,
+          "win_rate": 0,
+          "profit_factor": 0,
+          "total_trades": 0,
+          "final_portfolio_value": 0,
+          "current_drawdown": 0,
+          "portfolio_volatility": 0,
+          "parameters": {
+            "short_window": 5,
+            "long_window": 50
+          },
+          "combination_index": 2
+        },
+        {
+          "total_return": 0,
+          "annualized_return": 0,
+          "sharpe_ratio": -999,
+          "max_drawdown": 0,
+          "volatility": 0,
+          "win_rate": 0,
+          "profit_factor": 0,
+          "total_trades": 0,
+          "final_portfolio_value": 0,
+          "current_drawdown": 0,
+          "portfolio_volatility": 0,
+          "parameters": {
+            "short_window": 5,
+            "long_window": 30
+          },
+          "combination_index": 3
+        },
+        {
+          "total_return": 0.007209163869837942,
+          "annualized_return": 0.026837706276022555,
+          "sharpe_ratio": -0.05857445876958084,
+          "max_drawdown": -0.01211831792762321,
+          "volatility": 0.024293438549505216,
+          "win_rate": 0.0,
+          "profit_factor": 0.0,
+          "total_trades": 0,
+          "final_portfolio_value": 100720.9163869838,
+          "current_drawdown": -0.011282139666364467,
+          "portfolio_volatility": 0.024293438549505216,
+          "parameters": {
+            "short_window": 5,
+            "long_window": 70
+          },
+          "combination_index": 4
+        },
+        {
+          "total_return": -0.009307315230620783,
+          "annualized_return": -0.03388802608747732,
+          "sharpe_ratio": -2.868918274272313,
+          "max_drawdown": -0.011347482247616026,
+          "volatility": 0.015227456984522042,
+          "win_rate": 0.0,
+          "profit_factor": 0.0,
+          "total_trades": 0,
+          "final_portfolio_value": 99069.26847693793,
+          "current_drawdown": -0.010564492559430965,
+          "portfolio_volatility": 0.01522745698452204,
+          "parameters": {
+            "short_window": 5,
+            "long_window": 80
+          },
+          "combination_index": 5
+        },
+        {
+          "total_return": -0.008789969111124174,
+          "annualized_return": -0.03202665897543111,
+          "sharpe_ratio": -3.955947422916776,
+          "max_drawdown": -0.010470866297032389,
+          "volatility": 0.01072192847524583,
+          "win_rate": 0.0,
+          "profit_factor": 0.0,
+          "total_trades": 0,
+          "final_portfolio_value": 99121.00308888758,
+          "current_drawdown": -0.00968546723491961,
+          "portfolio_volatility": 0.01072192847524583,
+          "parameters": {
+            "short_window": 5,
+            "long_window": 90
+          },
+          "combination_index": 6
+        },
+        {
+          "total_return": -0.00019999999999997797,
+          "annualized_return": -0.0007371756370128102,
+          "sharpe_ratio": -64.27376512324273,
+          "max_drawdown": -0.0002,
+          "volatility": 0.00031908961408695115,
+          "win_rate": 0.0,
+          "profit_factor": 0.0,
+          "total_trades": 0,
+          "final_portfolio_value": 99980.0,
+          "current_drawdown": -0.0002,
+          "portfolio_volatility": 0.00031908961408695115,
+          "parameters": {
+            "short_window": 5,
+            "long_window": 100
+          },
+          "combination_index": 7
+        },
+        {
+          "total_return": 0,
+          "annualized_return": 0,
+          "sharpe_ratio": -999,
+          "max_drawdown": 0,
+          "volatility": 0,
+          "win_rate": 0,
+          "profit_factor": 0,
+          "total_trades": 0,
+          "final_portfolio_value": 0,
+          "current_drawdown": 0,
+          "portfolio_volatility": 0,
+          "parameters": {
+            "short_window": 10,
+            "long_window": 30
+          },
+          "combination_index": 8
+        },
+        {
+          "total_return": 0.01042050521051019,
+          "annualized_return": 0.03896002960184153,
+          "sharpe_ratio": 0.19567764023682213,
+          "max_drawdown": -0.013532073707208318,
+          "volatility": 0.03590740169047133,
+          "win_rate": 0.0,
+          "profit_factor": 0.0,
+          "total_trades": 0,
+          "final_portfolio_value": 101042.05052105102,
+          "current_drawdown": -0.011609582879515998,
+          "portfolio_volatility": 0.03590740169047133,
+          "parameters": {
+            "short_window": 10,
+            "long_window": 40
+          },
+          "combination_index": 9
+        },
+        {
+          "total_return": 0.004780308993362681,
+          "annualized_return": 0.017737860286069163,
+          "sharpe_ratio": -0.25801131605857897,
+          "max_drawdown": -0.01247002966649158,
+          "volatility": 0.028869934383377205,
+          "win_rate": 0.0,
+          "profit_factor": 0.0,
+          "total_trades": 0,
+          "final_portfolio_value": 100478.03089933627,
+          "current_drawdown": -0.011609582879515948,
+          "portfolio_volatility": 0.028869934383377205,
+          "parameters": {
+            "short_window": 10,
+            "long_window": 50
+          },
+          "combination_index": 10
+        },
+        {
+          "total_return": 0.01543756352878689,
+          "annualized_return": 0.05810694969814412,
+          "sharpe_ratio": 0.6914974766123824,
+          "max_drawdown": -0.012492581237808715,
+          "volatility": 0.0280358756126256,
+          "win_rate": 0.0,
+          "profit_factor": 0.0,
+          "total_trades": 0,
+          "final_portfolio_value": 101543.7563528787,
+          "current_drawdown": -0.01163057836575548,
+          "portfolio_volatility": 0.0280358756126256,
+          "parameters": {
+            "short_window": 10,
+            "long_window": 60
+          },
+          "combination_index": 11
+        },
+        {
+          "total_return": 0.007209163869837942,
+          "annualized_return": 0.026837706276022555,
+          "sharpe_ratio": -0.05857445876958084,
+          "max_drawdown": -0.01211831792762321,
+          "volatility": 0.024293438549505216,
+          "win_rate": 0.0,
+          "profit_factor": 0.0,
+          "total_trades": 0,
+          "final_portfolio_value": 100720.9163869838,
+          "current_drawdown": -0.011282139666364467,
+          "portfolio_volatility": 0.024293438549505216,
+          "parameters": {
+            "short_window": 10,
+            "long_window": 70
+          },
+          "combination_index": 12
+        },
+        {
+          "total_return": -0.009307315230620783,
+          "annualized_return": -0.03388802608747732,
+          "sharpe_ratio": -2.868918274272313,
+          "max_drawdown": -0.011347482247616026,
+          "volatility": 0.015227456984522042,
+          "win_rate": 0.0,
+          "profit_factor": 0.0,
+          "total_trades": 0,
+          "final_portfolio_value": 99069.26847693793,
+          "current_drawdown": -0.010564492559430965,
+          "portfolio_volatility": 0.01522745698452204,
+          "parameters": {
+            "short_window": 10,
+            "long_window": 80
+          },
+          "combination_index": 13
+        },
+        {
+          "total_return": -0.008789969111124174,
+          "annualized_return": -0.03202665897543111,
+          "sharpe_ratio": -3.955947422916776,
+          "max_drawdown": -0.010470866297032389,
+          "volatility": 0.01072192847524583,
+          "win_rate": 0.0,
+          "profit_factor": 0.0,
+          "total_trades": 0,
+          "final_portfolio_value": 99121.00308888758,
+          "current_drawdown": -0.00968546723491961,
+          "portfolio_volatility": 0.01072192847524583,
+          "parameters": {
+            "short_window": 10,
+            "long_window": 90
+          },
+          "combination_index": 14
+        },
+        {
+          "total_return": 0,
+          "annualized_return": 0,
+          "sharpe_ratio": -999,
+          "max_drawdown": 0,
+          "volatility": 0,
+          "win_rate": 0,
+          "profit_factor": 0,
+          "total_trades": 0,
+          "final_portfolio_value": 0,
+          "current_drawdown": 0,
+          "portfolio_volatility": 0,
+          "parameters": {
+            "short_window": 10,
+            "long_window": 100
+          },
+          "combination_index": 15
+        },
+        {
+          "total_return": -0.004844424478616327,
+          "annualized_return": -0.017744832514131725,
+          "sharpe_ratio": -1.1278379011138941,
+          "max_drawdown": -0.017918277183835974,
+          "volatility": 0.028340657444336358,
+          "win_rate": 0.0,
+          "profit_factor": 0.0,
+          "total_trades": 0,
+          "final_portfolio_value": 99515.55755213837,
+          "current_drawdown": -0.011283930197972974,
+          "portfolio_volatility": 0.028340657444336358,
+          "parameters": {
+            "short_window": 15,
+            "long_window": 30
+          },
+          "combination_index": 16
+        },
+        {
+          "total_return": 0.006185478314762349,
+          "annualized_return": 0.022995211124818393,
+          "sharpe_ratio": -0.11053072461586023,
+          "max_drawdown": -0.013165021112128528,
+          "volatility": 0.03381768554586526,
+          "win_rate": 0.0,
+          "profit_factor": 0.0,
+          "total_trades": 0,
+          "final_portfolio_value": 100618.54783147624,
+          "current_drawdown": -0.01141594351214351,
+          "portfolio_volatility": 0.03381768554586526,
+          "parameters": {
+            "short_window": 15,
+            "long_window": 40
+          },
+          "combination_index": 17
+        },
+        {
+          "total_return": 0.011973256778358587,
+          "annualized_return": 0.04485868177786534,
+          "sharpe_ratio": 0.3608663822569658,
+          "max_drawdown": -0.01224173608654717,
+          "volatility": 0.029748553756558143,
+          "win_rate": 0.0,
+          "profit_factor": 0.0,
+          "total_trades": 0,
+          "final_portfolio_value": 101197.32567783585,
+          "current_drawdown": -0.011398850593590377,
+          "portfolio_volatility": 0.029748553756558143,
+          "parameters": {
+            "short_window": 15,
+            "long_window": 50
+          },
+          "combination_index": 18
+        },
+        {
+          "total_return": 0.015435667147083443,
+          "annualized_return": 0.05809966420961654,
+          "sharpe_ratio": 0.6913307940362026,
+          "max_drawdown": -0.012492581237808715,
+          "volatility": 0.028035752915245998,
+          "win_rate": 0.0,
+          "profit_factor": 0.0,
+          "total_trades": 0,
+          "final_portfolio_value": 101543.56671470834,
+          "current_drawdown": -0.011632424196316472,
+          "portfolio_volatility": 0.028035752915245994,
+          "parameters": {
+            "short_window": 15,
+            "long_window": 60
+          },
+          "combination_index": 19
+        },
+        {
+          "total_return": 0.007207339851160066,
+          "annualized_return": 0.026830850319830235,
+          "sharpe_ratio": -0.05876472939569874,
+          "max_drawdown": -0.01211831792762321,
+          "volatility": 0.02429329047510122,
+          "win_rate": 0.0,
+          "profit_factor": 0.0,
+          "total_trades": 0,
+          "final_portfolio_value": 100720.733985116,
+          "current_drawdown": -0.01128393019797308,
+          "portfolio_volatility": 0.02429329047510122,
+          "parameters": {
+            "short_window": 15,
+            "long_window": 70
+          },
+          "combination_index": 20
+        },
+        {
+          "total_return": -0.009308993998405235,
+          "annualized_return": -0.03389406190103528,
+          "sharpe_ratio": -2.869249524787476,
+          "max_drawdown": -0.011347482247616026,
+          "volatility": 0.01522720349877141,
+          "win_rate": 0.0,
+          "profit_factor": 0.0,
+          "total_trades": 0,
+          "final_portfolio_value": 99069.10060015948,
+          "current_drawdown": -0.010566169196878923,
+          "portfolio_volatility": 0.01522720349877141,
+          "parameters": {
+            "short_window": 15,
+            "long_window": 80
+          },
+          "combination_index": 21
+        },
+        {
+          "total_return": -0.008791652428606356,
+          "annualized_return": -0.03203271964240939,
+          "sharpe_ratio": -3.956483555631047,
+          "max_drawdown": -0.010470866297032389,
+          "volatility": 0.010721569029773738,
+          "win_rate": 0.0,
+          "profit_factor": 0.0,
+          "total_trades": 0,
+          "final_portfolio_value": 99120.83475713937,
+          "current_drawdown": -0.009687149031626489,
+          "portfolio_volatility": 0.010721569029773738,
+          "parameters": {
+            "short_window": 15,
+            "long_window": 90
+          },
+          "combination_index": 22
+        },
+        {
+          "total_return": -0.00019999999999997797,
+          "annualized_return": -0.0007371756370128102,
+          "sharpe_ratio": -64.27376512324273,
+          "max_drawdown": -0.0002,
+          "volatility": 0.00031908961408695115,
+          "win_rate": 0.0,
+          "profit_factor": 0.0,
+          "total_trades": 0,
+          "final_portfolio_value": 99980.0,
+          "current_drawdown": -0.0002,
+          "portfolio_volatility": 0.00031908961408695115,
+          "parameters": {
+            "short_window": 15,
+            "long_window": 100
+          },
+          "combination_index": 23
+        },
+        {
+          "total_return": -0.008700409779411222,
+          "annualized_return": -0.031704166980977555,
+          "sharpe_ratio": -1.5525505830099993,
+          "max_drawdown": -0.015848004783129966,
+          "volatility": 0.02697654686017097,
+          "win_rate": 0.0,
+          "profit_factor": 0.0,
+          "total_trades": 0,
+          "final_portfolio_value": 99129.95902205887,
+          "current_drawdown": -0.011563419969080679,
+          "portfolio_volatility": 0.02697654686017097,
+          "parameters": {
+            "short_window": 20,
+            "long_window": 30
+          },
+          "combination_index": 24
+        },
+        {
+          "total_return": 0.007836673332005217,
+          "annualized_return": 0.029198312570854812,
+          "sharpe_ratio": 0.012765361085809238,
+          "max_drawdown": -0.012241736086547092,
+          "volatility": 0.033599531237380596,
+          "win_rate": 0.0,
+          "profit_factor": 0.0,
+          "total_trades": 0,
+          "final_portfolio_value": 100783.66733320052,
+          "current_drawdown": -0.011398850593590245,
+          "portfolio_volatility": 0.033599531237380596,
+          "parameters": {
+            "short_window": 20,
+            "long_window": 40
+          },
+          "combination_index": 25
+        },
+        {
+          "total_return": 0.012441338763983234,
+          "annualized_return": 0.04664162688734441,
+          "sharpe_ratio": 0.4033896185475614,
+          "max_drawdown": -0.012179451410838923,
+          "volatility": 0.029513982551107956,
+          "win_rate": 0.0,
+          "profit_factor": 0.0,
+          "total_trades": 0,
+          "final_portfolio_value": 101244.13387639832,
+          "current_drawdown": -0.01134085443131008,
+          "portfolio_volatility": 0.029513982551107952,
+          "parameters": {
+            "short_window": 20,
+            "long_window": 50
+          },
+          "combination_index": 26
+        },
+        {
+          "total_return": 0.015435667147083443,
+          "annualized_return": 0.05809966420961654,
+          "sharpe_ratio": 0.6913307940362026,
+          "max_drawdown": -0.012492581237808715,
+          "volatility": 0.028035752915245998,
+          "win_rate": 0.0,
+          "profit_factor": 0.0,
+          "total_trades": 0,
+          "final_portfolio_value": 101543.56671470834,
+          "current_drawdown": -0.011632424196316472,
+          "portfolio_volatility": 0.028035752915245994,
+          "parameters": {
+            "short_window": 20,
+            "long_window": 60
+          },
+          "combination_index": 27
+        },
+        {
+          "total_return": 0,
+          "annualized_return": 0,
+          "sharpe_ratio": -999,
+          "max_drawdown": 0,
+          "volatility": 0,
+          "win_rate": 0,
+          "profit_factor": 0,
+          "total_trades": 0,
+          "final_portfolio_value": 0,
+          "current_drawdown": 0,
+          "portfolio_volatility": 0,
+          "parameters": {
+            "short_window": 20,
+            "long_window": 70
+          },
+          "combination_index": 28
+        },
+        {
+          "total_return": -0.009308993998405235,
+          "annualized_return": -0.03389406190103528,
+          "sharpe_ratio": -2.869249524787476,
+          "max_drawdown": -0.011347482247616026,
+          "volatility": 0.01522720349877141,
+          "win_rate": 0.0,
+          "profit_factor": 0.0,
+          "total_trades": 0,
+          "final_portfolio_value": 99069.10060015948,
+          "current_drawdown": -0.010566169196878923,
+          "portfolio_volatility": 0.01522720349877141,
+          "parameters": {
+            "short_window": 20,
+            "long_window": 80
+          },
+          "combination_index": 29
+        },
+        {
+          "total_return": 0,
+          "annualized_return": 0,
+          "sharpe_ratio": -999,
+          "max_drawdown": 0,
+          "volatility": 0,
+          "win_rate": 0,
+          "profit_factor": 0,
+          "total_trades": 0,
+          "final_portfolio_value": 0,
+          "current_drawdown": 0,
+          "portfolio_volatility": 0,
+          "parameters": {
+            "short_window": 20,
+            "long_window": 90
+          },
+          "combination_index": 30
+        },
+        {
+          "total_return": -0.00019999999999997797,
+          "annualized_return": -0.0007371756370128102,
+          "sharpe_ratio": -64.27376512324273,
+          "max_drawdown": -0.0002,
+          "volatility": 0.00031908961408695115,
+          "win_rate": 0.0,
+          "profit_factor": 0.0,
+          "total_trades": 0,
+          "final_portfolio_value": 99980.0,
+          "current_drawdown": -0.0002,
+          "portfolio_volatility": 0.00031908961408695115,
+          "parameters": {
+            "short_window": 20,
+            "long_window": 100
+          },
+          "combination_index": 31
+        },
+        {
+          "total_return": -0.014238780161921594,
+          "annualized_return": -0.05150033420493649,
+          "sharpe_ratio": -2.1981315900577263,
+          "max_drawdown": -0.017880336328353504,
+          "volatility": 0.02555743675932688,
+          "win_rate": 0.0,
+          "profit_factor": 0.0,
+          "total_trades": 0,
+          "final_portfolio_value": 98576.12198380784,
+          "current_drawdown": -0.017085794772660364,
+          "portfolio_volatility": 0.02555743675932688,
+          "parameters": {
+            "short_window": 25,
+            "long_window": 30
+          },
+          "combination_index": 32
+        },
+        {
+          "total_return": 0.0041732124331272935,
+          "annualized_return": 0.015472549926466517,
+          "sharpe_ratio": -0.2578768835462229,
+          "max_drawdown": -0.015076159303868285,
+          "volatility": 0.03420553293942603,
+          "win_rate": 0.0,
+          "profit_factor": 0.0,
+          "total_trades": 0,
+          "final_portfolio_value": 100417.32124331273,
+          "current_drawdown": -0.011344116389157813,
+          "portfolio_volatility": 0.03420553293942603,
+          "parameters": {
+            "short_window": 25,
+            "long_window": 40
+          },
+          "combination_index": 33
+        },
+        {
+          "total_return": 0,
+          "annualized_return": 0,
+          "sharpe_ratio": -999,
+          "max_drawdown": 0,
+          "volatility": 0,
+          "win_rate": 0,
+          "profit_factor": 0,
+          "total_trades": 0,
+          "final_portfolio_value": 0,
+          "current_drawdown": 0,
+          "portfolio_volatility": 0,
+          "parameters": {
+            "short_window": 25,
+            "long_window": 50
+          },
+          "combination_index": 34
+        },
+        {
+          "total_return": 0.01543756352878689,
+          "annualized_return": 0.05810694969814412,
+          "sharpe_ratio": 0.6914974766123824,
+          "max_drawdown": -0.012492581237808715,
+          "volatility": 0.0280358756126256,
+          "win_rate": 0.0,
+          "profit_factor": 0.0,
+          "total_trades": 0,
+          "final_portfolio_value": 101543.7563528787,
+          "current_drawdown": -0.01163057836575548,
+          "portfolio_volatility": 0.0280358756126256,
+          "parameters": {
+            "short_window": 25,
+            "long_window": 60
+          },
+          "combination_index": 35
+        },
+        {
+          "total_return": 0.007209163869837942,
+          "annualized_return": 0.026837706276022555,
+          "sharpe_ratio": -0.05857445876958084,
+          "max_drawdown": -0.01211831792762321,
+          "volatility": 0.024293438549505216,
+          "win_rate": 0.0,
+          "profit_factor": 0.0,
+          "total_trades": 0,
+          "final_portfolio_value": 100720.9163869838,
+          "current_drawdown": -0.011282139666364467,
+          "portfolio_volatility": 0.024293438549505216,
+          "parameters": {
+            "short_window": 25,
+            "long_window": 70
+          },
+          "combination_index": 36
+        },
+        {
+          "total_return": 0,
+          "annualized_return": 0,
+          "sharpe_ratio": -999,
+          "max_drawdown": 0,
+          "volatility": 0,
+          "win_rate": 0,
+          "profit_factor": 0,
+          "total_trades": 0,
+          "final_portfolio_value": 0,
+          "current_drawdown": 0,
+          "portfolio_volatility": 0,
+          "parameters": {
+            "short_window": 30,
+            "long_window": 30
+          },
+          "combination_index": 37
+        },
+        {
+          "total_return": 0,
+          "annualized_return": 0,
+          "sharpe_ratio": -999,
+          "max_drawdown": 0,
+          "volatility": 0,
+          "win_rate": 0,
+          "profit_factor": 0,
+          "total_trades": 0,
+          "final_portfolio_value": 0,
+          "current_drawdown": 0,
+          "portfolio_volatility": 0,
+          "parameters": {
+            "short_window": 25,
+            "long_window": 80
+          },
+          "combination_index": 38
+        },
+        {
+          "total_return": -0.008789969111124174,
+          "annualized_return": -0.03202665897543111,
+          "sharpe_ratio": -3.955947422916776,
+          "max_drawdown": -0.010470866297032389,
+          "volatility": 0.01072192847524583,
+          "win_rate": 0.0,
+          "profit_factor": 0.0,
+          "total_trades": 0,
+          "final_portfolio_value": 99121.00308888758,
+          "current_drawdown": -0.00968546723491961,
+          "portfolio_volatility": 0.01072192847524583,
+          "parameters": {
+            "short_window": 25,
+            "long_window": 90
+          },
+          "combination_index": 39
+        },
+        {
+          "total_return": 0,
+          "annualized_return": 0,
+          "sharpe_ratio": -999,
+          "max_drawdown": 0,
+          "volatility": 0,
+          "win_rate": 0,
+          "profit_factor": 0,
+          "total_trades": 0,
+          "final_portfolio_value": 0,
+          "current_drawdown": 0,
+          "portfolio_volatility": 0,
+          "parameters": {
+            "short_window": 25,
+            "long_window": 100
+          },
+          "combination_index": 40
+        },
+        {
+          "total_return": 0.0010094651405421207,
+          "annualized_return": 0.0037268155552230287,
+          "sharpe_ratio": -0.4922273011207879,
+          "max_drawdown": -0.017851929842554463,
+          "volatility": 0.03423694394649198,
+          "win_rate": 0.0,
+          "profit_factor": 0.0,
+          "total_trades": 0,
+          "final_portfolio_value": 100100.94651405422,
+          "current_drawdown": -0.011397041826438182,
+          "portfolio_volatility": 0.03423694394649198,
+          "parameters": {
+            "short_window": 30,
+            "long_window": 40
+          },
+          "combination_index": 41
+        },
+        {
+          "total_return": 0.011096593780380193,
+          "annualized_return": 0.04152538959089913,
+          "sharpe_ratio": 0.2883827521999347,
+          "max_drawdown": -0.01223757576097728,
+          "volatility": 0.02955538403936161,
+          "win_rate": 0.0,
+          "profit_factor": 0.0,
+          "total_trades": 0,
+          "final_portfolio_value": 101109.65937803802,
+          "current_drawdown": -0.011393168568250154,
+          "portfolio_volatility": 0.02955538403936161,
+          "parameters": {
+            "short_window": 30,
+            "long_window": 50
+          },
+          "combination_index": 42
+        },
+        {
+          "total_return": 0.01543756352878689,
+          "annualized_return": 0.05810694969814412,
+          "sharpe_ratio": 0.6914974766123824,
+          "max_drawdown": -0.012492581237808715,
+          "volatility": 0.0280358756126256,
+          "win_rate": 0.0,
+          "profit_factor": 0.0,
+          "total_trades": 0,
+          "final_portfolio_value": 101543.7563528787,
+          "current_drawdown": -0.01163057836575548,
+          "portfolio_volatility": 0.0280358756126256,
+          "parameters": {
+            "short_window": 30,
+            "long_window": 60
+          },
+          "combination_index": 43
+        },
+        {
+          "total_return": 0.007209163869837942,
+          "annualized_return": 0.026837706276022555,
+          "sharpe_ratio": -0.05857445876958084,
+          "max_drawdown": -0.01211831792762321,
+          "volatility": 0.024293438549505216,
+          "win_rate": 0.0,
+          "profit_factor": 0.0,
+          "total_trades": 0,
+          "final_portfolio_value": 100720.9163869838,
+          "current_drawdown": -0.011282139666364467,
+          "portfolio_volatility": 0.024293438549505216,
+          "parameters": {
+            "short_window": 30,
+            "long_window": 70
+          },
+          "combination_index": 44
+        },
+        {
+          "total_return": -0.009307315230620783,
+          "annualized_return": -0.03388802608747732,
+          "sharpe_ratio": -2.868918274272313,
+          "max_drawdown": -0.011347482247616026,
+          "volatility": 0.015227456984522042,
+          "win_rate": 0.0,
+          "profit_factor": 0.0,
+          "total_trades": 0,
+          "final_portfolio_value": 99069.26847693793,
+          "current_drawdown": -0.010564492559430965,
+          "portfolio_volatility": 0.01522745698452204,
+          "parameters": {
+            "short_window": 30,
+            "long_window": 80
+          },
+          "combination_index": 45
+        },
+        {
+          "total_return": -0.008789969111124174,
+          "annualized_return": -0.03202665897543111,
+          "sharpe_ratio": -3.955947422916776,
+          "max_drawdown": -0.010470866297032389,
+          "volatility": 0.01072192847524583,
+          "win_rate": 0.0,
+          "profit_factor": 0.0,
+          "total_trades": 0,
+          "final_portfolio_value": 99121.00308888758,
+          "current_drawdown": -0.00968546723491961,
+          "portfolio_volatility": 0.01072192847524583,
+          "parameters": {
+            "short_window": 30,
+            "long_window": 90
+          },
+          "combination_index": 46
+        },
+        {
+          "total_return": -0.00019999999999997797,
+          "annualized_return": -0.0007371756370128102,
+          "sharpe_ratio": -64.27376512324273,
+          "max_drawdown": -0.0002,
+          "volatility": 0.00031908961408695115,
+          "win_rate": 0.0,
+          "profit_factor": 0.0,
+          "total_trades": 0,
+          "final_portfolio_value": 99980.0,
+          "current_drawdown": -0.0002,
+          "portfolio_volatility": 0.00031908961408695115,
+          "parameters": {
+            "short_window": 30,
+            "long_window": 100
+          },
+          "combination_index": 47
+        }
+      ],
+      "best_parameters": {
+        "parameters": {
+          "short_window": 10,
+          "long_window": 60
+        },
+        "metrics": {
+          "total_return": 0.01543756352878689,
+          "annualized_return": 0.05810694969814412,
+          "sharpe_ratio": 0.6914974766123824,
+          "max_drawdown": -0.012492581237808715,
+          "volatility": 0.0280358756126256,
+          "win_rate": 0.0,
+          "profit_factor": 0.0,
+          "total_trades": 0,
+          "final_portfolio_value": 101543.7563528787,
+          "current_drawdown": -0.01163057836575548,
+          "portfolio_volatility": 0.0280358756126256
+        },
+        "rank": 1
+      },
+      "optimization_metric": "sharpe_ratio",
+      "total_combinations": 48,
+      "tested_combinations": 48
+    },
+    "rsi": {
+      "results": [
+        {
+          "total_return": 0,
+          "annualized_return": 0,
+          "sharpe_ratio": -999,
+          "max_drawdown": 0,
+          "volatility": 0,
+          "win_rate": 0,
+          "profit_factor": 0,
+          "total_trades": 0,
+          "final_portfolio_value": 0,
+          "current_drawdown": 0,
+          "portfolio_volatility": 0,
+          "parameters": {
+            "period": 30,
+            "oversold": 35,
+            "overbought": 65
+          },
+          "combination_index": 0
+        },
+        {
+          "total_return": 0.014697285321832565,
+          "annualized_return": 0.05526573798739087,
+          "sharpe_ratio": 0.5802553603895446,
+          "max_drawdown": -0.017992359369936747,
+          "volatility": 0.03032415750168944,
+          "win_rate": 0.0,
+          "profit_factor": 0.0,
+          "total_trades": 0,
+          "final_portfolio_value": 101469.72853218326,
+          "current_drawdown": -0.0022911271367163644,
+          "portfolio_volatility": 0.03032415750168944,
+          "parameters": {
+            "period": 14,
+            "oversold": 35,
+            "overbought": 65
+          },
+          "combination_index": 1
+        },
+        {
+          "total_return": 0.0,
+          "annualized_return": 0.0,
+          "sharpe_ratio": -Infinity,
+          "max_drawdown": 0.0,
+          "volatility": 0.0,
+          "win_rate": 0.0,
+          "profit_factor": 0.0,
+          "total_trades": 0,
+          "final_portfolio_value": "100000",
+          "current_drawdown": 0.0,
+          "portfolio_volatility": 0.0,
+          "parameters": {
+            "period": 30,
+            "oversold": 35,
+            "overbought": 80
+          },
+          "combination_index": 2
+        },
+        {
+          "total_return": 0.0,
+          "annualized_return": 0.0,
+          "sharpe_ratio": -Infinity,
+          "max_drawdown": 0.0,
+          "volatility": 0.0,
+          "win_rate": 0.0,
+          "profit_factor": 0.0,
+          "total_trades": 0,
+          "final_portfolio_value": "100000",
+          "current_drawdown": 0.0,
+          "portfolio_volatility": 0.0,
+          "parameters": {
+            "period": 20,
+            "oversold": 30,
+            "overbought": 80
+          },
+          "combination_index": 3
+        },
+        {
+          "total_return": 0.0,
+          "annualized_return": 0.0,
+          "sharpe_ratio": -Infinity,
+          "max_drawdown": 0.0,
+          "volatility": 0.0,
+          "win_rate": 0.0,
+          "profit_factor": 0.0,
+          "total_trades": 0,
+          "final_portfolio_value": "100000",
+          "current_drawdown": 0.0,
+          "portfolio_volatility": 0.0,
+          "parameters": {
+            "period": 30,
+            "oversold": 25,
+            "overbought": 70
+          },
+          "combination_index": 4
+        },
+        {
+          "total_return": 0.0,
+          "annualized_return": 0.0,
+          "sharpe_ratio": -Infinity,
+          "max_drawdown": 0.0,
+          "volatility": 0.0,
+          "win_rate": 0.0,
+          "profit_factor": 0.0,
+          "total_trades": 0,
+          "final_portfolio_value": "100000",
+          "current_drawdown": 0.0,
+          "portfolio_volatility": 0.0,
+          "parameters": {
+            "period": 30,
+            "oversold": 20,
+            "overbought": 80
+          },
+          "combination_index": 5
+        },
+        {
+          "total_return": 0,
+          "annualized_return": 0,
+          "sharpe_ratio": -999,
+          "max_drawdown": 0,
+          "volatility": 0,
+          "win_rate": 0,
+          "profit_factor": 0,
+          "total_trades": 0,
+          "final_portfolio_value": 0,
+          "current_drawdown": 0,
+          "portfolio_volatility": 0,
+          "parameters": {
+            "period": 10,
+            "oversold": 30,
+            "overbought": 75
+          },
+          "combination_index": 6
+        },
+        {
+          "total_return": 0.014697285321832565,
+          "annualized_return": 0.05526573798739087,
+          "sharpe_ratio": 0.5802553603895446,
+          "max_drawdown": -0.017992359369936747,
+          "volatility": 0.03032415750168944,
+          "win_rate": 0.0,
+          "profit_factor": 0.0,
+          "total_trades": 0,
+          "final_portfolio_value": 101469.72853218326,
+          "current_drawdown": -0.0022911271367163644,
+          "portfolio_volatility": 0.03032415750168944,
+          "parameters": {
+            "period": 14,
+            "oversold": 35,
+            "overbought": 70
+          },
+          "combination_index": 7
+        },
+        {
+          "total_return": 0.014697285321832565,
+          "annualized_return": 0.05526573798739087,
+          "sharpe_ratio": 0.5802553603895446,
+          "max_drawdown": -0.017992359369936747,
+          "volatility": 0.03032415750168944,
+          "win_rate": 0.0,
+          "profit_factor": 0.0,
+          "total_trades": 0,
+          "final_portfolio_value": 101469.72853218326,
+          "current_drawdown": -0.0022911271367163644,
+          "portfolio_volatility": 0.03032415750168944,
+          "parameters": {
+            "period": 14,
+            "oversold": 20,
+            "overbought": 65
+          },
+          "combination_index": 8
+        },
+        {
+          "total_return": 0,
+          "annualized_return": 0,
+          "sharpe_ratio": -999,
+          "max_drawdown": 0,
+          "volatility": 0,
+          "win_rate": 0,
+          "profit_factor": 0,
+          "total_trades": 0,
+          "final_portfolio_value": 0,
+          "current_drawdown": 0,
+          "portfolio_volatility": 0,
+          "parameters": {
+            "period": 20,
+            "oversold": 30,
+            "overbought": 65
+          },
+          "combination_index": 9
+        },
+        {
+          "total_return": 0.016606543416213926,
+          "annualized_return": 0.06260487909410739,
+          "sharpe_ratio": 0.8152006991161082,
+          "max_drawdown": -0.008221417646134233,
+          "volatility": 0.027351263176516333,
+          "win_rate": 0.0,
+          "profit_factor": 0.0,
+          "total_trades": 0,
+          "final_portfolio_value": 101660.65434162138,
+          "current_drawdown": 0.0,
+          "portfolio_volatility": 0.02735126317651633,
+          "parameters": {
+            "period": 10,
+            "oversold": 30,
+            "overbought": 70
+          },
+          "combination_index": 10
+        },
+        {
+          "total_return": 0.014697285321832565,
+          "annualized_return": 0.05526573798739087,
+          "sharpe_ratio": 0.5802553603895446,
+          "max_drawdown": -0.017992359369936747,
+          "volatility": 0.03032415750168944,
+          "win_rate": 0.0,
+          "profit_factor": 0.0,
+          "total_trades": 0,
+          "final_portfolio_value": 101469.72853218326,
+          "current_drawdown": -0.0022911271367163644,
+          "portfolio_volatility": 0.03032415750168944,
+          "parameters": {
+            "period": 14,
+            "oversold": 30,
+            "overbought": 75
+          },
+          "combination_index": 11
+        },
+        {
+          "total_return": 0,
+          "annualized_return": 0,
+          "sharpe_ratio": -999,
+          "max_drawdown": 0,
+          "volatility": 0,
+          "win_rate": 0,
+          "profit_factor": 0,
+          "total_trades": 0,
+          "final_portfolio_value": 0,
+          "current_drawdown": 0,
+          "portfolio_volatility": 0,
+          "parameters": {
+            "period": 10,
+            "oversold": 20,
+            "overbought": 70
+          },
+          "combination_index": 12
+        },
+        {
+          "total_return": 0.0,
+          "annualized_return": 0.0,
+          "sharpe_ratio": -Infinity,
+          "max_drawdown": 0.0,
+          "volatility": 0.0,
+          "win_rate": 0.0,
+          "profit_factor": 0.0,
+          "total_trades": 0,
+          "final_portfolio_value": "100000",
+          "current_drawdown": 0.0,
+          "portfolio_volatility": 0.0,
+          "parameters": {
+            "period": 20,
+            "oversold": 20,
+            "overbought": 70
+          },
+          "combination_index": 13
+        },
+        {
+          "total_return": 0.016606543416213926,
+          "annualized_return": 0.06260487909410739,
+          "sharpe_ratio": 0.8152006991161082,
+          "max_drawdown": -0.008221417646134233,
+          "volatility": 0.027351263176516333,
+          "win_rate": 0.0,
+          "profit_factor": 0.0,
+          "total_trades": 0,
+          "final_portfolio_value": 101660.65434162138,
+          "current_drawdown": 0.0,
+          "portfolio_volatility": 0.02735126317651633,
+          "parameters": {
+            "period": 10,
+            "oversold": 20,
+            "overbought": 80
+          },
+          "combination_index": 14
+        },
+        {
+          "total_return": 0.0,
+          "annualized_return": 0.0,
+          "sharpe_ratio": -Infinity,
+          "max_drawdown": 0.0,
+          "volatility": 0.0,
+          "win_rate": 0.0,
+          "profit_factor": 0.0,
+          "total_trades": 0,
+          "final_portfolio_value": "100000",
+          "current_drawdown": 0.0,
+          "portfolio_volatility": 0.0,
+          "parameters": {
+            "period": 20,
+            "oversold": 35,
+            "overbought": 70
+          },
+          "combination_index": 15
+        },
+        {
+          "total_return": 0.0,
+          "annualized_return": 0.0,
+          "sharpe_ratio": -Infinity,
+          "max_drawdown": 0.0,
+          "volatility": 0.0,
+          "win_rate": 0.0,
+          "profit_factor": 0.0,
+          "total_trades": 0,
+          "final_portfolio_value": "100000",
+          "current_drawdown": 0.0,
+          "portfolio_volatility": 0.0,
+          "parameters": {
+            "period": 20,
+            "oversold": 25,
+            "overbought": 80
+          },
+          "combination_index": 16
+        },
+        {
+          "total_return": 0.014697285321832565,
+          "annualized_return": 0.05526573798739087,
+          "sharpe_ratio": 0.5802553603895446,
+          "max_drawdown": -0.017992359369936747,
+          "volatility": 0.03032415750168944,
+          "win_rate": 0.0,
+          "profit_factor": 0.0,
+          "total_trades": 0,
+          "final_portfolio_value": 101469.72853218326,
+          "current_drawdown": -0.0022911271367163644,
+          "portfolio_volatility": 0.03032415750168944,
+          "parameters": {
+            "period": 14,
+            "oversold": 30,
+            "overbought": 70
+          },
+          "combination_index": 17
+        },
+        {
+          "total_return": 0.0,
+          "annualized_return": 0.0,
+          "sharpe_ratio": -Infinity,
+          "max_drawdown": 0.0,
+          "volatility": 0.0,
+          "win_rate": 0.0,
+          "profit_factor": 0.0,
+          "total_trades": 0,
+          "final_portfolio_value": "100000",
+          "current_drawdown": 0.0,
+          "portfolio_volatility": 0.0,
+          "parameters": {
+            "period": 20,
+            "oversold": 20,
+            "overbought": 75
+          },
+          "combination_index": 18
+        },
+        {
+          "total_return": 0.0,
+          "annualized_return": 0.0,
+          "sharpe_ratio": -Infinity,
+          "max_drawdown": 0.0,
+          "volatility": 0.0,
+          "win_rate": 0.0,
+          "profit_factor": 0.0,
+          "total_trades": 0,
+          "final_portfolio_value": "100000",
+          "current_drawdown": 0.0,
+          "portfolio_volatility": 0.0,
+          "parameters": {
+            "period": 30,
+            "oversold": 20,
+            "overbought": 70
+          },
+          "combination_index": 19
+        },
+        {
+          "total_return": 0.0,
+          "annualized_return": 0.0,
+          "sharpe_ratio": -Infinity,
+          "max_drawdown": 0.0,
+          "volatility": 0.0,
+          "win_rate": 0.0,
+          "profit_factor": 0.0,
+          "total_trades": 0,
+          "final_portfolio_value": "100000",
+          "current_drawdown": 0.0,
+          "portfolio_volatility": 0.0,
+          "parameters": {
+            "period": 20,
+            "oversold": 35,
+            "overbought": 80
+          },
+          "combination_index": 20
+        },
+        {
+          "total_return": 0.0,
+          "annualized_return": 0.0,
+          "sharpe_ratio": -Infinity,
+          "max_drawdown": 0.0,
+          "volatility": 0.0,
+          "win_rate": 0.0,
+          "profit_factor": 0.0,
+          "total_trades": 0,
+          "final_portfolio_value": "100000",
+          "current_drawdown": 0.0,
+          "portfolio_volatility": 0.0,
+          "parameters": {
+            "period": 30,
+            "oversold": 25,
+            "overbought": 80
+          },
+          "combination_index": 21
+        },
+        {
+          "total_return": 0.016606543416213926,
+          "annualized_return": 0.06260487909410739,
+          "sharpe_ratio": 0.8152006991161082,
+          "max_drawdown": -0.008221417646134233,
+          "volatility": 0.027351263176516333,
+          "win_rate": 0.0,
+          "profit_factor": 0.0,
+          "total_trades": 0,
+          "final_portfolio_value": 101660.65434162138,
+          "current_drawdown": 0.0,
+          "portfolio_volatility": 0.02735126317651633,
+          "parameters": {
+            "period": 10,
+            "oversold": 25,
+            "overbought": 80
+          },
+          "combination_index": 22
+        },
+        {
+          "total_return": 0.014697285321832565,
+          "annualized_return": 0.05526573798739087,
+          "sharpe_ratio": 0.5802553603895446,
+          "max_drawdown": -0.017992359369936747,
+          "volatility": 0.03032415750168944,
+          "win_rate": 0.0,
+          "profit_factor": 0.0,
+          "total_trades": 0,
+          "final_portfolio_value": 101469.72853218326,
+          "current_drawdown": -0.0022911271367163644,
+          "portfolio_volatility": 0.03032415750168944,
+          "parameters": {
+            "period": 14,
+            "oversold": 35,
+            "overbought": 80
+          },
+          "combination_index": 23
+        },
+        {
+          "total_return": 0.016606543416213926,
+          "annualized_return": 0.06260487909410739,
+          "sharpe_ratio": 0.8152006991161082,
+          "max_drawdown": -0.008221417646134233,
+          "volatility": 0.027351263176516333,
+          "win_rate": 0.0,
+          "profit_factor": 0.0,
+          "total_trades": 0,
+          "final_portfolio_value": 101660.65434162138,
+          "current_drawdown": 0.0,
+          "portfolio_volatility": 0.02735126317651633,
+          "parameters": {
+            "period": 10,
+            "oversold": 30,
+            "overbought": 80
+          },
+          "combination_index": 24
+        },
+        {
+          "total_return": 0.0,
+          "annualized_return": 0.0,
+          "sharpe_ratio": -Infinity,
+          "max_drawdown": 0.0,
+          "volatility": 0.0,
+          "win_rate": 0.0,
+          "profit_factor": 0.0,
+          "total_trades": 0,
+          "final_portfolio_value": "100000",
+          "current_drawdown": 0.0,
+          "portfolio_volatility": 0.0,
+          "parameters": {
+            "period": 30,
+            "oversold": 20,
+            "overbought": 75
+          },
+          "combination_index": 25
+        },
+        {
+          "total_return": 0.016606543416213926,
+          "annualized_return": 0.06260487909410739,
+          "sharpe_ratio": 0.8152006991161082,
+          "max_drawdown": -0.008221417646134233,
+          "volatility": 0.027351263176516333,
+          "win_rate": 0.0,
+          "profit_factor": 0.0,
+          "total_trades": 0,
+          "final_portfolio_value": 101660.65434162138,
+          "current_drawdown": 0.0,
+          "portfolio_volatility": 0.02735126317651633,
+          "parameters": {
+            "period": 10,
+            "oversold": 20,
+            "overbought": 75
+          },
+          "combination_index": 26
+        },
+        {
+          "total_return": 0.0,
+          "annualized_return": 0.0,
+          "sharpe_ratio": -Infinity,
+          "max_drawdown": 0.0,
+          "volatility": 0.0,
+          "win_rate": 0.0,
+          "profit_factor": 0.0,
+          "total_trades": 0,
+          "final_portfolio_value": "100000",
+          "current_drawdown": 0.0,
+          "portfolio_volatility": 0.0,
+          "parameters": {
+            "period": 30,
+            "oversold": 30,
+            "overbought": 70
+          },
+          "combination_index": 27
+        },
+        {
+          "total_return": 0.014697285321832565,
+          "annualized_return": 0.05526573798739087,
+          "sharpe_ratio": 0.5802553603895446,
+          "max_drawdown": -0.017992359369936747,
+          "volatility": 0.03032415750168944,
+          "win_rate": 0.0,
+          "profit_factor": 0.0,
+          "total_trades": 0,
+          "final_portfolio_value": 101469.72853218326,
+          "current_drawdown": -0.0022911271367163644,
+          "portfolio_volatility": 0.03032415750168944,
+          "parameters": {
+            "period": 14,
+            "oversold": 35,
+            "overbought": 75
+          },
+          "combination_index": 28
+        },
+        {
+          "total_return": 0.0,
+          "annualized_return": 0.0,
+          "sharpe_ratio": -Infinity,
+          "max_drawdown": 0.0,
+          "volatility": 0.0,
+          "win_rate": 0.0,
+          "profit_factor": 0.0,
+          "total_trades": 0,
+          "final_portfolio_value": "100000",
+          "current_drawdown": 0.0,
+          "portfolio_volatility": 0.0,
+          "parameters": {
+            "period": 30,
+            "oversold": 35,
+            "overbought": 75
+          },
+          "combination_index": 29
+        },
+        {
+          "total_return": 0.016606543416213926,
+          "annualized_return": 0.06260487909410739,
+          "sharpe_ratio": 0.8152006991161082,
+          "max_drawdown": -0.008221417646134233,
+          "volatility": 0.027351263176516333,
+          "win_rate": 0.0,
+          "profit_factor": 0.0,
+          "total_trades": 0,
+          "final_portfolio_value": 101660.65434162138,
+          "current_drawdown": 0.0,
+          "portfolio_volatility": 0.02735126317651633,
+          "parameters": {
+            "period": 10,
+            "oversold": 25,
+            "overbought": 75
+          },
+          "combination_index": 30
+        },
+        {
+          "total_return": 0.0,
+          "annualized_return": 0.0,
+          "sharpe_ratio": -Infinity,
+          "max_drawdown": 0.0,
+          "volatility": 0.0,
+          "win_rate": 0.0,
+          "profit_factor": 0.0,
+          "total_trades": 0,
+          "final_portfolio_value": "100000",
+          "current_drawdown": 0.0,
+          "portfolio_volatility": 0.0,
+          "parameters": {
+            "period": 20,
+            "oversold": 25,
+            "overbought": 65
+          },
+          "combination_index": 31
+        },
+        {
+          "total_return": 0,
+          "annualized_return": 0,
+          "sharpe_ratio": -999,
+          "max_drawdown": 0,
+          "volatility": 0,
+          "win_rate": 0,
+          "profit_factor": 0,
+          "total_trades": 0,
+          "final_portfolio_value": 0,
+          "current_drawdown": 0,
+          "portfolio_volatility": 0,
+          "parameters": {
+            "period": 10,
+            "oversold": 25,
+            "overbought": 65
+          },
+          "combination_index": 32
+        },
+        {
+          "total_return": 0.014697285321832565,
+          "annualized_return": 0.05526573798739087,
+          "sharpe_ratio": 0.5802553603895446,
+          "max_drawdown": -0.017992359369936747,
+          "volatility": 0.03032415750168944,
+          "win_rate": 0.0,
+          "profit_factor": 0.0,
+          "total_trades": 0,
+          "final_portfolio_value": 101469.72853218326,
+          "current_drawdown": -0.0022911271367163644,
+          "portfolio_volatility": 0.03032415750168944,
+          "parameters": {
+            "period": 14,
+            "oversold": 20,
+            "overbought": 80
+          },
+          "combination_index": 33
+        },
+        {
+          "total_return": 0.014697285321832565,
+          "annualized_return": 0.05526573798739087,
+          "sharpe_ratio": 0.5802553603895446,
+          "max_drawdown": -0.017992359369936747,
+          "volatility": 0.03032415750168944,
+          "win_rate": 0.0,
+          "profit_factor": 0.0,
+          "total_trades": 0,
+          "final_portfolio_value": 101469.72853218326,
+          "current_drawdown": -0.0022911271367163644,
+          "portfolio_volatility": 0.03032415750168944,
+          "parameters": {
+            "period": 14,
+            "oversold": 30,
+            "overbought": 65
+          },
+          "combination_index": 34
+        },
+        {
+          "total_return": 0.0,
+          "annualized_return": 0.0,
+          "sharpe_ratio": -Infinity,
+          "max_drawdown": 0.0,
+          "volatility": 0.0,
+          "win_rate": 0.0,
+          "profit_factor": 0.0,
+          "total_trades": 0,
+          "final_portfolio_value": "100000",
+          "current_drawdown": 0.0,
+          "portfolio_volatility": 0.0,
+          "parameters": {
+            "period": 30,
+            "oversold": 20,
+            "overbought": 65
+          },
+          "combination_index": 35
+        },
+        {
+          "total_return": 0.014697285321832565,
+          "annualized_return": 0.05526573798739087,
+          "sharpe_ratio": 0.5802553603895446,
+          "max_drawdown": -0.017992359369936747,
+          "volatility": 0.03032415750168944,
+          "win_rate": 0.0,
+          "profit_factor": 0.0,
+          "total_trades": 0,
+          "final_portfolio_value": 101469.72853218326,
+          "current_drawdown": -0.0022911271367163644,
+          "portfolio_volatility": 0.03032415750168944,
+          "parameters": {
+            "period": 14,
+            "oversold": 25,
+            "overbought": 80
+          },
+          "combination_index": 36
+        },
+        {
+          "total_return": 0.0,
+          "annualized_return": 0.0,
+          "sharpe_ratio": -Infinity,
+          "max_drawdown": 0.0,
+          "volatility": 0.0,
+          "win_rate": 0.0,
+          "profit_factor": 0.0,
+          "total_trades": 0,
+          "final_portfolio_value": "100000",
+          "current_drawdown": 0.0,
+          "portfolio_volatility": 0.0,
+          "parameters": {
+            "period": 20,
+            "oversold": 25,
+            "overbought": 70
+          },
+          "combination_index": 37
+        },
+        {
+          "total_return": 0.014697285321832565,
+          "annualized_return": 0.05526573798739087,
+          "sharpe_ratio": 0.5802553603895446,
+          "max_drawdown": -0.017992359369936747,
+          "volatility": 0.03032415750168944,
+          "win_rate": 0.0,
+          "profit_factor": 0.0,
+          "total_trades": 0,
+          "final_portfolio_value": 101469.72853218326,
+          "current_drawdown": -0.0022911271367163644,
+          "portfolio_volatility": 0.03032415750168944,
+          "parameters": {
+            "period": 14,
+            "oversold": 25,
+            "overbought": 65
+          },
+          "combination_index": 38
+        },
+        {
+          "total_return": 0,
+          "annualized_return": 0,
+          "sharpe_ratio": -999,
+          "max_drawdown": 0,
+          "volatility": 0,
+          "win_rate": 0,
+          "profit_factor": 0,
+          "total_trades": 0,
+          "final_portfolio_value": 0,
+          "current_drawdown": 0,
+          "portfolio_volatility": 0,
+          "parameters": {
+            "period": 10,
+            "oversold": 35,
+            "overbought": 75
+          },
+          "combination_index": 39
+        },
+        {
+          "total_return": 0.0,
+          "annualized_return": 0.0,
+          "sharpe_ratio": -Infinity,
+          "max_drawdown": 0.0,
+          "volatility": 0.0,
+          "win_rate": 0.0,
+          "profit_factor": 0.0,
+          "total_trades": 0,
+          "final_portfolio_value": "100000",
+          "current_drawdown": 0.0,
+          "portfolio_volatility": 0.0,
+          "parameters": {
+            "period": 20,
+            "oversold": 30,
+            "overbought": 75
+          },
+          "combination_index": 40
+        },
+        {
+          "total_return": 0.0,
+          "annualized_return": 0.0,
+          "sharpe_ratio": -Infinity,
+          "max_drawdown": 0.0,
+          "volatility": 0.0,
+          "win_rate": 0.0,
+          "profit_factor": 0.0,
+          "total_trades": 0,
+          "final_portfolio_value": "100000",
+          "current_drawdown": 0.0,
+          "portfolio_volatility": 0.0,
+          "parameters": {
+            "period": 30,
+            "oversold": 35,
+            "overbought": 70
+          },
+          "combination_index": 41
+        },
+        {
+          "total_return": 0.016604749094640603,
+          "annualized_return": 0.0625979643546033,
+          "sharpe_ratio": 0.8150395498246041,
+          "max_drawdown": -0.008221417646134233,
+          "volatility": 0.02735115419475417,
+          "win_rate": 0.0,
+          "profit_factor": 0.0,
+          "total_trades": 0,
+          "final_portfolio_value": 101660.47490946406,
+          "current_drawdown": 0.0,
+          "portfolio_volatility": 0.02735115419475417,
+          "parameters": {
+            "period": 10,
+            "oversold": 35,
+            "overbought": 80
+          },
+          "combination_index": 42
+        },
+        {
+          "total_return": 0.0,
+          "annualized_return": 0.0,
+          "sharpe_ratio": -Infinity,
+          "max_drawdown": 0.0,
+          "volatility": 0.0,
+          "win_rate": 0.0,
+          "profit_factor": 0.0,
+          "total_trades": 0,
+          "final_portfolio_value": "100000",
+          "current_drawdown": 0.0,
+          "portfolio_volatility": 0.0,
+          "parameters": {
+            "period": 30,
+            "oversold": 25,
+            "overbought": 75
+          },
+          "combination_index": 43
+        },
+        {
+          "total_return": 0.0,
+          "annualized_return": 0.0,
+          "sharpe_ratio": -Infinity,
+          "max_drawdown": 0.0,
+          "volatility": 0.0,
+          "win_rate": 0.0,
+          "profit_factor": 0.0,
+          "total_trades": 0,
+          "final_portfolio_value": "100000",
+          "current_drawdown": 0.0,
+          "portfolio_volatility": 0.0,
+          "parameters": {
+            "period": 30,
+            "oversold": 30,
+            "overbought": 65
+          },
+          "combination_index": 44
+        },
+        {
+          "total_return": 0,
+          "annualized_return": 0,
+          "sharpe_ratio": -999,
+          "max_drawdown": 0,
+          "volatility": 0,
+          "win_rate": 0,
+          "profit_factor": 0,
+          "total_trades": 0,
+          "final_portfolio_value": 0,
+          "current_drawdown": 0,
+          "portfolio_volatility": 0,
+          "parameters": {
+            "period": 14,
+            "oversold": 20,
+            "overbought": 70
+          },
+          "combination_index": 45
+        },
+        {
+          "total_return": 0.0,
+          "annualized_return": 0.0,
+          "sharpe_ratio": -Infinity,
+          "max_drawdown": 0.0,
+          "volatility": 0.0,
+          "win_rate": 0.0,
+          "profit_factor": 0.0,
+          "total_trades": 0,
+          "final_portfolio_value": "100000",
+          "current_drawdown": 0.0,
+          "portfolio_volatility": 0.0,
+          "parameters": {
+            "period": 20,
+            "oversold": 25,
+            "overbought": 75
+          },
+          "combination_index": 46
+        },
+        {
+          "total_return": 0.016604749094640603,
+          "annualized_return": 0.0625979643546033,
+          "sharpe_ratio": 0.8150395498246041,
+          "max_drawdown": -0.008221417646134233,
+          "volatility": 0.02735115419475417,
+          "win_rate": 0.0,
+          "profit_factor": 0.0,
+          "total_trades": 0,
+          "final_portfolio_value": 101660.47490946406,
+          "current_drawdown": 0.0,
+          "portfolio_volatility": 0.02735115419475417,
+          "parameters": {
+            "period": 10,
+            "oversold": 35,
+            "overbought": 70
+          },
+          "combination_index": 47
+        },
+        {
+          "total_return": 0.016604749094640603,
+          "annualized_return": 0.0625979643546033,
+          "sharpe_ratio": 0.8150395498246041,
+          "max_drawdown": -0.008221417646134233,
+          "volatility": 0.02735115419475417,
+          "win_rate": 0.0,
+          "profit_factor": 0.0,
+          "total_trades": 0,
+          "final_portfolio_value": 101660.47490946406,
+          "current_drawdown": 0.0,
+          "portfolio_volatility": 0.02735115419475417,
+          "parameters": {
+            "period": 10,
+            "oversold": 30,
+            "overbought": 65
+          },
+          "combination_index": 48
+        },
+        {
+          "total_return": 0.014697285321832565,
+          "annualized_return": 0.05526573798739087,
+          "sharpe_ratio": 0.5802553603895446,
+          "max_drawdown": -0.017992359369936747,
+          "volatility": 0.03032415750168944,
+          "win_rate": 0.0,
+          "profit_factor": 0.0,
+          "total_trades": 0,
+          "final_portfolio_value": 101469.72853218326,
+          "current_drawdown": -0.0022911271367163644,
+          "portfolio_volatility": 0.03032415750168944,
+          "parameters": {
+            "period": 14,
+            "oversold": 25,
+            "overbought": 70
+          },
+          "combination_index": 49
+        }
+      ],
+      "best_parameters": {
+        "parameters": {
+          "period": 10,
+          "oversold": 30,
+          "overbought": 70
+        },
+        "metrics": {
+          "total_return": 0.016606543416213926,
+          "annualized_return": 0.06260487909410739,
+          "sharpe_ratio": 0.8152006991161082,
+          "max_drawdown": -0.008221417646134233,
+          "volatility": 0.027351263176516333,
+          "win_rate": 0.0,
+          "profit_factor": 0.0,
+          "total_trades": 0,
+          "final_portfolio_value": 101660.65434162138,
+          "current_drawdown": 0.0,
+          "portfolio_volatility": 0.02735126317651633
+        },
+        "rank": 1
+      },
+      "optimization_metric": "sharpe_ratio",
+      "total_combinations": 50,
+      "tested_combinations": 50
+    },
+    "macd": {
+      "results": [
+        {
+          "total_return": 0.012641294993193553,
+          "annualized_return": 0.04740394452772034,
+          "sharpe_ratio": 0.46312516886132715,
+          "max_drawdown": -0.01134251944427102,
+          "volatility": 0.02661972285610725,
+          "win_rate": 0.0,
+          "profit_factor": 0.0,
+          "total_trades": 0,
+          "final_portfolio_value": 101264.12949931936,
+          "current_drawdown": -0.0023960544156781394,
+          "portfolio_volatility": 0.026619722856107243,
+          "parameters": {
+            "fast_period": 12,
+            "slow_period": 20,
+            "signal_period": 12
+          },
+          "combination_index": 0
+        },
+        {
+          "total_return": 0.010652743144076826,
+          "annualized_return": 0.039840716660761055,
+          "sharpe_ratio": 0.2728628859368389,
+          "max_drawdown": -0.01126027179560464,
+          "volatility": 0.02686587927615603,
+          "win_rate": 0.0,
+          "profit_factor": 0.0,
+          "total_trades": 0,
+          "final_portfolio_value": 101065.27431440768,
+          "current_drawdown": -0.00451827459861486,
+          "portfolio_volatility": 0.02686587927615603,
+          "parameters": {
+            "fast_period": 10,
+            "slow_period": 30,
+            "signal_period": 15
+          },
+          "combination_index": 1
+        },
+        {
+          "total_return": 0.0129664995310117,
+          "annualized_return": 0.04864462573047046,
+          "sharpe_ratio": 0.42633890943082065,
+          "max_drawdown": -0.017797289607200756,
+          "volatility": 0.031137743271567955,
+          "win_rate": 0.0,
+          "profit_factor": 0.0,
+          "total_trades": 0,
+          "final_portfolio_value": 101296.64995310118,
+          "current_drawdown": -0.004836418309459929,
+          "portfolio_volatility": 0.031137743271567955,
+          "parameters": {
+            "fast_period": 8,
+            "slow_period": 20,
+            "signal_period": 9
+          },
+          "combination_index": 2
+        },
+        {
+          "total_return": 0.015688032951235442,
+          "annualized_return": 0.059069520393758346,
+          "sharpe_ratio": 0.7254558766997367,
+          "max_drawdown": -0.006807390742019488,
+          "volatility": 0.02757145172717654,
+          "win_rate": 0.0,
+          "profit_factor": 0.0,
+          "total_trades": 0,
+          "final_portfolio_value": 101568.80329512355,
+          "current_drawdown": -0.004215121810522507,
+          "portfolio_volatility": 0.027571451727176538,
+          "parameters": {
+            "fast_period": 20,
+            "slow_period": 40,
+            "signal_period": 15
+          },
+          "combination_index": 3
+        },
+        {
+          "total_return": 0.011224716086756903,
+          "annualized_return": 0.042012058455964896,
+          "sharpe_ratio": 0.3267944032043992,
+          "max_drawdown": -0.01126027179560464,
+          "volatility": 0.026837296276001534,
+          "win_rate": 0.0,
+          "profit_factor": 0.0,
+          "total_trades": 0,
+          "final_portfolio_value": 101122.47160867568,
+          "current_drawdown": -0.0039548876037003985,
+          "portfolio_volatility": 0.02683729627600153,
+          "parameters": {
+            "fast_period": 12,
+            "slow_period": 35,
+            "signal_period": 15
+          },
+          "combination_index": 4
+        },
+        {
+          "total_return": 0,
+          "annualized_return": 0,
+          "sharpe_ratio": -999,
+          "max_drawdown": 0,
+          "volatility": 0,
+          "win_rate": 0,
+          "profit_factor": 0,
+          "total_trades": 0,
+          "final_portfolio_value": 0,
+          "current_drawdown": 0,
+          "portfolio_volatility": 0,
+          "parameters": {
+            "fast_period": 8,
+            "slow_period": 26,
+            "signal_period": 7
+          },
+          "combination_index": 5
+        },
+        {
+          "total_return": 0.011224716086756903,
+          "annualized_return": 0.042012058455964896,
+          "sharpe_ratio": 0.3267944032043992,
+          "max_drawdown": -0.01126027179560464,
+          "volatility": 0.026837296276001534,
+          "win_rate": 0.0,
+          "profit_factor": 0.0,
+          "total_trades": 0,
+          "final_portfolio_value": 101122.47160867568,
+          "current_drawdown": -0.0039548876037003985,
+          "portfolio_volatility": 0.02683729627600153,
+          "parameters": {
+            "fast_period": 10,
+            "slow_period": 40,
+            "signal_period": 15
+          },
+          "combination_index": 6
+        },
+        {
+          "total_return": 0,
+          "annualized_return": 0,
+          "sharpe_ratio": -999,
+          "max_drawdown": 0,
+          "volatility": 0,
+          "win_rate": 0,
+          "profit_factor": 0,
+          "total_trades": 0,
+          "final_portfolio_value": 0,
+          "current_drawdown": 0,
+          "portfolio_volatility": 0,
+          "parameters": {
+            "fast_period": 20,
+            "slow_period": 20,
+            "signal_period": 15
+          },
+          "combination_index": 7
+        },
+        {
+          "total_return": 0.011781447455354588,
+          "annualized_return": 0.04412871127078377,
+          "sharpe_ratio": 0.38165586502011484,
+          "max_drawdown": -0.01134251944427102,
+          "volatility": 0.026636953548099074,
+          "win_rate": 0.0,
+          "profit_factor": 0.0,
+          "total_trades": 0,
+          "final_portfolio_value": 101178.14474553545,
+          "current_drawdown": -0.003243133534997486,
+          "portfolio_volatility": 0.026636953548099074,
+          "parameters": {
+            "fast_period": 15,
+            "slow_period": 35,
+            "signal_period": 7
+          },
+          "combination_index": 8
+        },
+        {
+          "total_return": 0.014291560572499806,
+          "annualized_return": 0.053710914080088434,
+          "sharpe_ratio": 0.6067679558249377,
+          "max_drawdown": -0.008423161923897278,
+          "volatility": 0.027174221099027184,
+          "win_rate": 0.0,
+          "profit_factor": 0.0,
+          "total_trades": 0,
+          "final_portfolio_value": 101429.15605724999,
+          "current_drawdown": -0.0037926175630939884,
+          "portfolio_volatility": 0.027174221099027184,
+          "parameters": {
+            "fast_period": 15,
+            "slow_period": 35,
+            "signal_period": 15
+          },
+          "combination_index": 9
+        },
+        {
+          "total_return": 0.010652743144076826,
+          "annualized_return": 0.039840716660761055,
+          "sharpe_ratio": 0.2728628859368389,
+          "max_drawdown": -0.01126027179560464,
+          "volatility": 0.02686587927615603,
+          "win_rate": 0.0,
+          "profit_factor": 0.0,
+          "total_trades": 0,
+          "final_portfolio_value": 101065.27431440768,
+          "current_drawdown": -0.00451827459861486,
+          "portfolio_volatility": 0.02686587927615603,
+          "parameters": {
+            "fast_period": 12,
+            "slow_period": 30,
+            "signal_period": 12
+          },
+          "combination_index": 10
+        },
+        {
+          "total_return": 0.019145126515109245,
+          "annualized_return": 0.0724206517792978,
+          "sharpe_ratio": 1.1233668185692458,
+          "max_drawdown": -0.004972594202321041,
+          "volatility": 0.02545651292738858,
+          "win_rate": 0.0,
+          "profit_factor": 0.0,
+          "total_trades": 0,
+          "final_portfolio_value": 101914.51265151092,
+          "current_drawdown": -0.004008413168545821,
+          "portfolio_volatility": 0.02545651292738858,
+          "parameters": {
+            "fast_period": 20,
+            "slow_period": 35,
+            "signal_period": 15
+          },
+          "combination_index": 11
+        },
+        {
+          "total_return": 0,
+          "annualized_return": 0,
+          "sharpe_ratio": -999,
+          "max_drawdown": 0,
+          "volatility": 0,
+          "win_rate": 0,
+          "profit_factor": 0,
+          "total_trades": 0,
+          "final_portfolio_value": 0,
+          "current_drawdown": 0,
+          "portfolio_volatility": 0,
+          "parameters": {
+            "fast_period": 20,
+            "slow_period": 26,
+            "signal_period": 12
+          },
+          "combination_index": 12
+        },
+        {
+          "total_return": 0,
+          "annualized_return": 0,
+          "sharpe_ratio": -999,
+          "max_drawdown": 0,
+          "volatility": 0,
+          "win_rate": 0,
+          "profit_factor": 0,
+          "total_trades": 0,
+          "final_portfolio_value": 0,
+          "current_drawdown": 0,
+          "portfolio_volatility": 0,
+          "parameters": {
+            "fast_period": 8,
+            "slow_period": 26,
+            "signal_period": 9
+          },
+          "combination_index": 13
+        },
+        {
+          "total_return": 0.01860707386890459,
+          "annualized_return": 0.07033470351508608,
+          "sharpe_ratio": 0.94993621145842,
+          "max_drawdown": -0.011417955747370097,
+          "volatility": 0.028782521985940505,
+          "win_rate": 0.0,
+          "profit_factor": 0.0,
+          "total_trades": 0,
+          "final_portfolio_value": 101860.70738689047,
+          "current_drawdown": -0.004836418309459917,
+          "portfolio_volatility": 0.028782521985940505,
+          "parameters": {
+            "fast_period": 10,
+            "slow_period": 26,
+            "signal_period": 7
+          },
+          "combination_index": 14
+        },
+        {
+          "total_return": 0,
+          "annualized_return": 0,
+          "sharpe_ratio": -999,
+          "max_drawdown": 0,
+          "volatility": 0,
+          "win_rate": 0,
+          "profit_factor": 0,
+          "total_trades": 0,
+          "final_portfolio_value": 0,
+          "current_drawdown": 0,
+          "portfolio_volatility": 0,
+          "parameters": {
+            "fast_period": 15,
+            "slow_period": 20,
+            "signal_period": 12
+          },
+          "combination_index": 15
+        },
+        {
+          "total_return": 0,
+          "annualized_return": 0,
+          "sharpe_ratio": -999,
+          "max_drawdown": 0,
+          "volatility": 0,
+          "win_rate": 0,
+          "profit_factor": 0,
+          "total_trades": 0,
+          "final_portfolio_value": 0,
+          "current_drawdown": 0,
+          "portfolio_volatility": 0,
+          "parameters": {
+            "fast_period": 8,
+            "slow_period": 20,
+            "signal_period": 7
+          },
+          "combination_index": 16
+        },
+        {
+          "total_return": 0.007683668930251075,
+          "annualized_return": 0.02862236635942983,
+          "sharpe_ratio": -0.007577602312079163,
+          "max_drawdown": -0.01134251944427102,
+          "volatility": 0.02553304084476637,
+          "win_rate": 0.0,
+          "profit_factor": 0.0,
+          "total_trades": 0,
+          "final_portfolio_value": 100768.3668930251,
+          "current_drawdown": -0.007041567499422946,
+          "portfolio_volatility": 0.025533040844766368,
+          "parameters": {
+            "fast_period": 15,
+            "slow_period": 26,
+            "signal_period": 7
+          },
+          "combination_index": 17
+        },
+        {
+          "total_return": 0.010102346040260946,
+          "annualized_return": 0.037754396722381456,
+          "sharpe_ratio": 0.2336299605039233,
+          "max_drawdown": -0.01134251944427102,
+          "volatility": 0.025265151913328572,
+          "win_rate": 0.0,
+          "profit_factor": 0.0,
+          "total_trades": 0,
+          "final_portfolio_value": 101010.23460402609,
+          "current_drawdown": -0.0046582344099525075,
+          "portfolio_volatility": 0.02526515191332857,
+          "parameters": {
+            "fast_period": 10,
+            "slow_period": 20,
+            "signal_period": 12
+          },
+          "combination_index": 18
+        },
+        {
+          "total_return": 0.009921519734020112,
+          "annualized_return": 0.037069627812946315,
+          "sharpe_ratio": 0.21538635716540383,
+          "max_drawdown": -0.01134251944427102,
+          "volatility": 0.025292254342708795,
+          "win_rate": 0.0,
+          "profit_factor": 0.0,
+          "total_trades": 0,
+          "final_portfolio_value": 100992.15197340201,
+          "current_drawdown": -0.0048364183094597064,
+          "portfolio_volatility": 0.025292254342708795,
+          "parameters": {
+            "fast_period": 10,
+            "slow_period": 30,
+            "signal_period": 7
+          },
+          "combination_index": 19
+        },
+        {
+          "total_return": 0.010652743144076826,
+          "annualized_return": 0.039840716660761055,
+          "sharpe_ratio": 0.2728628859368389,
+          "max_drawdown": -0.01126027179560464,
+          "volatility": 0.02686587927615603,
+          "win_rate": 0.0,
+          "profit_factor": 0.0,
+          "total_trades": 0,
+          "final_portfolio_value": 101065.27431440768,
+          "current_drawdown": -0.00451827459861486,
+          "portfolio_volatility": 0.02686587927615603,
+          "parameters": {
+            "fast_period": 20,
+            "slow_period": 26,
+            "signal_period": 9
+          },
+          "combination_index": 20
+        },
+        {
+          "total_return": 0.013161935149788695,
+          "annualized_return": 0.04939074319357206,
+          "sharpe_ratio": 0.503882646742875,
+          "max_drawdown": -0.012015167163903679,
+          "volatility": 0.02708820397366675,
+          "win_rate": 0.0,
+          "profit_factor": 0.0,
+          "total_trades": 0,
+          "final_portfolio_value": 101316.19351497886,
+          "current_drawdown": -0.001203599689769404,
+          "portfolio_volatility": 0.027088203973666753,
+          "parameters": {
+            "fast_period": 15,
+            "slow_period": 40,
+            "signal_period": 12
+          },
+          "combination_index": 21
+        },
+        {
+          "total_return": 0,
+          "annualized_return": 0,
+          "sharpe_ratio": -999,
+          "max_drawdown": 0,
+          "volatility": 0,
+          "win_rate": 0,
+          "profit_factor": 0,
+          "total_trades": 0,
+          "final_portfolio_value": 0,
+          "current_drawdown": 0,
+          "portfolio_volatility": 0,
+          "parameters": {
+            "fast_period": 15,
+            "slow_period": 20,
+            "signal_period": 7
+          },
+          "combination_index": 22
+        },
+        {
+          "total_return": 0.011367474543121592,
+          "annualized_return": 0.042554517492175314,
+          "sharpe_ratio": 0.34096928231294504,
+          "max_drawdown": -0.010561037232571544,
+          "volatility": 0.026770313322026614,
+          "win_rate": 0.0,
+          "profit_factor": 0.0,
+          "total_trades": 0,
+          "final_portfolio_value": 101136.74745431215,
+          "current_drawdown": -0.004518274598614959,
+          "portfolio_volatility": 0.026770313322026614,
+          "parameters": {
+            "fast_period": 8,
+            "slow_period": 35,
+            "signal_period": 15
+          },
+          "combination_index": 23
+        },
+        {
+          "total_return": 0.010102346040260946,
+          "annualized_return": 0.037754396722381456,
+          "sharpe_ratio": 0.2336299605039233,
+          "max_drawdown": -0.01134251944427102,
+          "volatility": 0.025265151913328572,
+          "win_rate": 0.0,
+          "profit_factor": 0.0,
+          "total_trades": 0,
+          "final_portfolio_value": 101010.23460402609,
+          "current_drawdown": -0.0046582344099525075,
+          "portfolio_volatility": 0.02526515191332857,
+          "parameters": {
+            "fast_period": 10,
+            "slow_period": 35,
+            "signal_period": 7
+          },
+          "combination_index": 24
+        },
+        {
+          "total_return": 0.01845519561338249,
+          "annualized_return": 0.06974643013923876,
+          "sharpe_ratio": 0.9379377904444975,
+          "max_drawdown": -0.011407532353359005,
+          "volatility": 0.028744817228591464,
+          "win_rate": 0.0,
+          "profit_factor": 0.0,
+          "total_trades": 0,
+          "final_portfolio_value": 101845.51956133824,
+          "current_drawdown": -0.004658234409952557,
+          "portfolio_volatility": 0.028744817228591468,
+          "parameters": {
+            "fast_period": 8,
+            "slow_period": 26,
+            "signal_period": 12
+          },
+          "combination_index": 25
+        },
+        {
+          "total_return": 0,
+          "annualized_return": 0,
+          "sharpe_ratio": -999,
+          "max_drawdown": 0,
+          "volatility": 0,
+          "win_rate": 0,
+          "profit_factor": 0,
+          "total_trades": 0,
+          "final_portfolio_value": 0,
+          "current_drawdown": 0,
+          "portfolio_volatility": 0,
+          "parameters": {
+            "fast_period": 20,
+            "slow_period": 35,
+            "signal_period": 7
+          },
+          "combination_index": 26
+        },
+        {
+          "total_return": 0.009921519734020112,
+          "annualized_return": 0.037069627812946315,
+          "sharpe_ratio": 0.21538635716540383,
+          "max_drawdown": -0.01134251944427102,
+          "volatility": 0.025292254342708795,
+          "win_rate": 0.0,
+          "profit_factor": 0.0,
+          "total_trades": 0,
+          "final_portfolio_value": 100992.15197340201,
+          "current_drawdown": -0.0048364183094597064,
+          "portfolio_volatility": 0.025292254342708795,
+          "parameters": {
+            "fast_period": 8,
+            "slow_period": 20,
+            "signal_period": 12
+          },
+          "combination_index": 27
+        },
+        {
+          "total_return": 0.011367474543121592,
+          "annualized_return": 0.042554517492175314,
+          "sharpe_ratio": 0.34096928231294504,
+          "max_drawdown": -0.010561037232571544,
+          "volatility": 0.026770313322026614,
+          "win_rate": 0.0,
+          "profit_factor": 0.0,
+          "total_trades": 0,
+          "final_portfolio_value": 101136.74745431215,
+          "current_drawdown": -0.004518274598614959,
+          "portfolio_volatility": 0.026770313322026614,
+          "parameters": {
+            "fast_period": 15,
+            "slow_period": 35,
+            "signal_period": 9
+          },
+          "combination_index": 28
+        },
+        {
+          "total_return": 0,
+          "annualized_return": 0,
+          "sharpe_ratio": -999,
+          "max_drawdown": 0,
+          "volatility": 0,
+          "win_rate": 0,
+          "profit_factor": 0,
+          "total_trades": 0,
+          "final_portfolio_value": 0,
+          "current_drawdown": 0,
+          "portfolio_volatility": 0,
+          "parameters": {
+            "fast_period": 15,
+            "slow_period": 35,
+            "signal_period": 12
+          },
+          "combination_index": 29
+        },
+        {
+          "total_return": 0.007683668930251075,
+          "annualized_return": 0.02862236635942983,
+          "sharpe_ratio": -0.007577602312079163,
+          "max_drawdown": -0.01134251944427102,
+          "volatility": 0.02553304084476637,
+          "win_rate": 0.0,
+          "profit_factor": 0.0,
+          "total_trades": 0,
+          "final_portfolio_value": 100768.3668930251,
+          "current_drawdown": -0.007041567499422946,
+          "portfolio_volatility": 0.025533040844766368,
+          "parameters": {
+            "fast_period": 8,
+            "slow_period": 40,
+            "signal_period": 9
+          },
+          "combination_index": 30
+        },
+        {
+          "total_return": 0.010383161266752206,
+          "annualized_return": 0.03881846555297064,
+          "sharpe_ratio": 0.24809639837429542,
+          "max_drawdown": -0.012015167163903679,
+          "volatility": 0.026803773854607867,
+          "win_rate": 0.0,
+          "profit_factor": 0.0,
+          "total_trades": 0,
+          "final_portfolio_value": 101038.31612667523,
+          "current_drawdown": -0.003942973579928876,
+          "portfolio_volatility": 0.02680377385460787,
+          "parameters": {
+            "fast_period": 12,
+            "slow_period": 40,
+            "signal_period": 15
+          },
+          "combination_index": 31
+        },
+        {
+          "total_return": 0.011781447455354588,
+          "annualized_return": 0.04412871127078377,
+          "sharpe_ratio": 0.38165586502011484,
+          "max_drawdown": -0.01134251944427102,
+          "volatility": 0.026636953548099074,
+          "win_rate": 0.0,
+          "profit_factor": 0.0,
+          "total_trades": 0,
+          "final_portfolio_value": 101178.14474553545,
+          "current_drawdown": -0.003243133534997486,
+          "portfolio_volatility": 0.026636953548099074,
+          "parameters": {
+            "fast_period": 12,
+            "slow_period": 40,
+            "signal_period": 7
+          },
+          "combination_index": 32
+        },
+        {
+          "total_return": 0.01191078116723343,
+          "annualized_return": 0.04462087694155836,
+          "sharpe_ratio": 0.3921018180249487,
+          "max_drawdown": -0.011286249600320734,
+          "volatility": 0.026765913036744762,
+          "win_rate": 0.0,
+          "profit_factor": 0.0,
+          "total_trades": 0,
+          "final_portfolio_value": 101191.07811672334,
+          "current_drawdown": -0.0032529329336615244,
+          "portfolio_volatility": 0.026765913036744762,
+          "parameters": {
+            "fast_period": 12,
+            "slow_period": 20,
+            "signal_period": 15
+          },
+          "combination_index": 33
+        },
+        {
+          "total_return": 0.010527530578816613,
+          "annualized_return": 0.0393658210483927,
+          "sharpe_ratio": 0.26225593176658574,
+          "max_drawdown": -0.011316466461216187,
+          "volatility": 0.026736666330770726,
+          "win_rate": 0.0,
+          "profit_factor": 0.0,
+          "total_trades": 0,
+          "final_portfolio_value": 101052.75305788167,
+          "current_drawdown": -0.004504663382224377,
+          "portfolio_volatility": 0.026736666330770726,
+          "parameters": {
+            "fast_period": 15,
+            "slow_period": 40,
+            "signal_period": 9
+          },
+          "combination_index": 34
+        },
+        {
+          "total_return": 0.007683668930251075,
+          "annualized_return": 0.02862236635942983,
+          "sharpe_ratio": -0.007577602312079163,
+          "max_drawdown": -0.01134251944427102,
+          "volatility": 0.02553304084476637,
+          "win_rate": 0.0,
+          "profit_factor": 0.0,
+          "total_trades": 0,
+          "final_portfolio_value": 100768.3668930251,
+          "current_drawdown": -0.007041567499422946,
+          "portfolio_volatility": 0.025533040844766368,
+          "parameters": {
+            "fast_period": 12,
+            "slow_period": 35,
+            "signal_period": 7
+          },
+          "combination_index": 35
+        },
+        {
+          "total_return": 0.012641294993193553,
+          "annualized_return": 0.04740394452772034,
+          "sharpe_ratio": 0.46312516886132715,
+          "max_drawdown": -0.01134251944427102,
+          "volatility": 0.02661972285610725,
+          "win_rate": 0.0,
+          "profit_factor": 0.0,
+          "total_trades": 0,
+          "final_portfolio_value": 101264.12949931936,
+          "current_drawdown": -0.0023960544156781394,
+          "portfolio_volatility": 0.026619722856107243,
+          "parameters": {
+            "fast_period": 10,
+            "slow_period": 20,
+            "signal_period": 15
+          },
+          "combination_index": 36
+        },
+        {
+          "total_return": 0,
+          "annualized_return": 0,
+          "sharpe_ratio": -999,
+          "max_drawdown": 0,
+          "volatility": 0,
+          "win_rate": 0,
+          "profit_factor": 0,
+          "total_trades": 0,
+          "final_portfolio_value": 0,
+          "current_drawdown": 0,
+          "portfolio_volatility": 0,
+          "parameters": {
+            "fast_period": 8,
+            "slow_period": 35,
+            "signal_period": 12
+          },
+          "combination_index": 37
+        },
+        {
+          "total_return": 0,
+          "annualized_return": 0,
+          "sharpe_ratio": -999,
+          "max_drawdown": 0,
+          "volatility": 0,
+          "win_rate": 0,
+          "profit_factor": 0,
+          "total_trades": 0,
+          "final_portfolio_value": 0,
+          "current_drawdown": 0,
+          "portfolio_volatility": 0,
+          "parameters": {
+            "fast_period": 20,
+            "slow_period": 40,
+            "signal_period": 12
+          },
+          "combination_index": 38
+        },
+        {
+          "total_return": 0,
+          "annualized_return": 0,
+          "sharpe_ratio": -999,
+          "max_drawdown": 0,
+          "volatility": 0,
+          "win_rate": 0,
+          "profit_factor": 0,
+          "total_trades": 0,
+          "final_portfolio_value": 0,
+          "current_drawdown": 0,
+          "portfolio_volatility": 0,
+          "parameters": {
+            "fast_period": 12,
+            "slow_period": 40,
+            "signal_period": 12
+          },
+          "combination_index": 39
+        },
+        {
+          "total_return": 0.01860707386890459,
+          "annualized_return": 0.07033470351508608,
+          "sharpe_ratio": 0.94993621145842,
+          "max_drawdown": -0.011417955747370097,
+          "volatility": 0.028782521985940505,
+          "win_rate": 0.0,
+          "profit_factor": 0.0,
+          "total_trades": 0,
+          "final_portfolio_value": 101860.70738689047,
+          "current_drawdown": -0.004836418309459917,
+          "portfolio_volatility": 0.028782521985940505,
+          "parameters": {
+            "fast_period": 8,
+            "slow_period": 30,
+            "signal_period": 7
+          },
+          "combination_index": 40
+        },
+        {
+          "total_return": 0.010102346040260946,
+          "annualized_return": 0.037754396722381456,
+          "sharpe_ratio": 0.2336299605039233,
+          "max_drawdown": -0.01134251944427102,
+          "volatility": 0.025265151913328572,
+          "win_rate": 0.0,
+          "profit_factor": 0.0,
+          "total_trades": 0,
+          "final_portfolio_value": 101010.23460402609,
+          "current_drawdown": -0.0046582344099525075,
+          "portfolio_volatility": 0.02526515191332857,
+          "parameters": {
+            "fast_period": 8,
+            "slow_period": 20,
+            "signal_period": 15
+          },
+          "combination_index": 41
+        },
+        {
+          "total_return": 0,
+          "annualized_return": 0,
+          "sharpe_ratio": -999,
+          "max_drawdown": 0,
+          "volatility": 0,
+          "win_rate": 0,
+          "profit_factor": 0,
+          "total_trades": 0,
+          "final_portfolio_value": 0,
+          "current_drawdown": 0,
+          "portfolio_volatility": 0,
+          "parameters": {
+            "fast_period": 8,
+            "slow_period": 30,
+            "signal_period": 12
+          },
+          "combination_index": 42
+        },
+        {
+          "total_return": 0.01344695421959452,
+          "annualized_return": 0.05047955815586125,
+          "sharpe_ratio": 0.5293741188922191,
+          "max_drawdown": -0.009180223404308926,
+          "volatility": 0.02713905565548174,
+          "win_rate": 0.0,
+          "profit_factor": 0.0,
+          "total_trades": 0,
+          "final_portfolio_value": 101344.69542195946,
+          "current_drawdown": -0.003781192374736884,
+          "portfolio_volatility": 0.02713905565548174,
+          "parameters": {
+            "fast_period": 20,
+            "slow_period": 30,
+            "signal_period": 12
+          },
+          "combination_index": 43
+        },
+        {
+          "total_return": 0.010652743144076826,
+          "annualized_return": 0.039840716660761055,
+          "sharpe_ratio": 0.2728628859368389,
+          "max_drawdown": -0.01126027179560464,
+          "volatility": 0.02686587927615603,
+          "win_rate": 0.0,
+          "profit_factor": 0.0,
+          "total_trades": 0,
+          "final_portfolio_value": 101065.27431440768,
+          "current_drawdown": -0.00451827459861486,
+          "portfolio_volatility": 0.02686587927615603,
+          "parameters": {
+            "fast_period": 12,
+            "slow_period": 26,
+            "signal_period": 15
+          },
+          "combination_index": 44
+        },
+        {
+          "total_return": 0.009921519734020112,
+          "annualized_return": 0.037069627812946315,
+          "sharpe_ratio": 0.21538635716540383,
+          "max_drawdown": -0.01134251944427102,
+          "volatility": 0.025292254342708795,
+          "win_rate": 0.0,
+          "profit_factor": 0.0,
+          "total_trades": 0,
+          "final_portfolio_value": 100992.15197340201,
+          "current_drawdown": -0.0048364183094597064,
+          "portfolio_volatility": 0.025292254342708795,
+          "parameters": {
+            "fast_period": 12,
+            "slow_period": 20,
+            "signal_period": 7
+          },
+          "combination_index": 45
+        },
+        {
+          "total_return": 0.012641294993193553,
+          "annualized_return": 0.04740394452772034,
+          "sharpe_ratio": 0.46312516886132715,
+          "max_drawdown": -0.01134251944427102,
+          "volatility": 0.02661972285610725,
+          "win_rate": 0.0,
+          "profit_factor": 0.0,
+          "total_trades": 0,
+          "final_portfolio_value": 101264.12949931936,
+          "current_drawdown": -0.0023960544156781394,
+          "portfolio_volatility": 0.026619722856107243,
+          "parameters": {
+            "fast_period": 10,
+            "slow_period": 35,
+            "signal_period": 9
+          },
+          "combination_index": 46
+        },
+        {
+          "total_return": 0.015246711125463941,
+          "annualized_return": 0.057373919302314835,
+          "sharpe_ratio": 0.6134971474366636,
+          "max_drawdown": -0.01662300575372258,
+          "volatility": 0.03096026116229265,
+          "win_rate": 0.0,
+          "profit_factor": 0.0,
+          "total_trades": 0,
+          "final_portfolio_value": 101524.67111254639,
+          "current_drawdown": -0.003787315146034475,
+          "portfolio_volatility": 0.030960261162292654,
+          "parameters": {
+            "fast_period": 10,
+            "slow_period": 20,
+            "signal_period": 7
+          },
+          "combination_index": 47
+        },
+        {
+          "total_return": 0.010652743144076826,
+          "annualized_return": 0.039840716660761055,
+          "sharpe_ratio": 0.2728628859368389,
+          "max_drawdown": -0.01126027179560464,
+          "volatility": 0.02686587927615603,
+          "win_rate": 0.0,
+          "profit_factor": 0.0,
+          "total_trades": 0,
+          "final_portfolio_value": 101065.27431440768,
+          "current_drawdown": -0.00451827459861486,
+          "portfolio_volatility": 0.02686587927615603,
+          "parameters": {
+            "fast_period": 12,
+            "slow_period": 30,
+            "signal_period": 15
+          },
+          "combination_index": 48
+        },
+        {
+          "total_return": 0.010102346040260946,
+          "annualized_return": 0.037754396722381456,
+          "sharpe_ratio": 0.2336299605039233,
+          "max_drawdown": -0.01134251944427102,
+          "volatility": 0.025265151913328572,
+          "win_rate": 0.0,
+          "profit_factor": 0.0,
+          "total_trades": 0,
+          "final_portfolio_value": 101010.23460402609,
+          "current_drawdown": -0.0046582344099525075,
+          "portfolio_volatility": 0.02526515191332857,
+          "parameters": {
+            "fast_period": 12,
+            "slow_period": 30,
+            "signal_period": 7
+          },
+          "combination_index": 49
+        }
+      ],
+      "best_parameters": {
+        "parameters": {
+          "fast_period": 20,
+          "slow_period": 35,
+          "signal_period": 15
+        },
+        "metrics": {
+          "total_return": 0.019145126515109245,
+          "annualized_return": 0.0724206517792978,
+          "sharpe_ratio": 1.1233668185692458,
+          "max_drawdown": -0.004972594202321041,
+          "volatility": 0.02545651292738858,
+          "win_rate": 0.0,
+          "profit_factor": 0.0,
+          "total_trades": 0,
+          "final_portfolio_value": 101914.51265151092,
+          "current_drawdown": -0.004008413168545821,
+          "portfolio_volatility": 0.02545651292738858
+        },
+        "rank": 1
+      },
+      "optimization_metric": "sharpe_ratio",
+      "total_combinations": 50,
+      "tested_combinations": 50
+    }
+  },
+  "backtest_results": {
+    "SMA_CROSSOVER_OPTIMIZED": {
+      "strategy_name": "SMA_CROSSOVER_OPTIMIZED",
+      "portfolio_history": [
+        {
+          "date": "2025-04-25 07:00:00",
+          "total_value": 100000,
+          "cash": 100000,
+          "positions": {}
+        },
+        {
+          "date": "2025-04-26 07:00:00",
+          "total_value": 100000,
+          "cash": 100000,
+          "positions": {}
+        },
+        {
+          "date": "2025-04-27 07:00:00",
+          "total_value": 100000,
+          "cash": 100000,
+          "positions": {}
+        },
+        {
+          "date": "2025-04-28 07:00:00",
+          "total_value": 100000,
+          "cash": 100000,
+          "positions": {}
+        },
+        {
+          "date": "2025-04-29 07:00:00",
+          "total_value": 100000,
+          "cash": 100000,
+          "positions": {}
+        },
+        {
+          "date": "2025-04-30 07:00:00",
+          "total_value": 100000,
+          "cash": 100000,
+          "positions": {}
+        },
+        {
+          "date": "2025-05-01 07:00:00",
+          "total_value": 100000,
+          "cash": 100000,
+          "positions": {}
+        },
+        {
+          "date": "2025-05-02 07:00:00",
+          "total_value": 100000,
+          "cash": 100000,
+          "positions": {}
+        },
+        {
+          "date": "2025-05-03 07:00:00",
+          "total_value": 100000,
+          "cash": 100000,
+          "positions": {}
+        },
+        {
+          "date": "2025-05-04 07:00:00",
+          "total_value": 100000,
+          "cash": 100000,
+          "positions": {}
+        },
+        {
+          "date": "2025-05-05 07:00:00",
+          "total_value": 100000,
+          "cash": 100000,
+          "positions": {}
+        },
+        {
+          "date": "2025-05-06 07:00:00",
+          "total_value": 100000,
+          "cash": 100000,
+          "positions": {}
+        },
+        {
+          "date": "2025-05-07 07:00:00",
+          "total_value": 100000,
+          "cash": 100000,
+          "positions": {}
+        },
+        {
+          "date": "2025-05-08 07:00:00",
+          "total_value": 100000,
+          "cash": 100000,
+          "positions": {}
+        },
+        {
+          "date": "2025-05-09 07:00:00",
+          "total_value": 100000,
+          "cash": 100000,
+          "positions": {}
+        },
+        {
+          "date": "2025-05-10 07:00:00",
+          "total_value": 100000,
+          "cash": 100000,
+          "positions": {}
+        },
+        {
+          "date": "2025-05-11 07:00:00",
+          "total_value": 100000,
+          "cash": 100000,
+          "positions": {}
+        },
+        {
+          "date": "2025-05-12 07:00:00",
+          "total_value": 100000,
+          "cash": 100000,
+          "positions": {}
+        },
+        {
+          "date": "2025-05-13 07:00:00",
+          "total_value": 100000,
+          "cash": 100000,
+          "positions": {}
+        },
+        {
+          "date": "2025-05-14 07:00:00",
+          "total_value": 100000,
+          "cash": 100000,
+          "positions": {}
+        },
+        {
+          "date": "2025-05-15 07:00:00",
+          "total_value": 100000,
+          "cash": 100000,
+          "positions": {}
+        },
+        {
+          "date": "2025-05-16 07:00:00",
+          "total_value": 100000,
+          "cash": 100000,
+          "positions": {}
+        },
+        {
+          "date": "2025-05-17 07:00:00",
+          "total_value": 100000,
+          "cash": 100000,
+          "positions": {}
+        },
+        {
+          "date": "2025-05-18 07:00:00",
+          "total_value": 100000,
+          "cash": 100000,
+          "positions": {}
+        },
+        {
+          "date": "2025-05-19 07:00:00",
+          "total_value": 100000,
+          "cash": 100000,
+          "positions": {}
+        },
+        {
+          "date": "2025-05-20 07:00:00",
+          "total_value": 100000,
+          "cash": 100000,
+          "positions": {}
+        },
+        {
+          "date": "2025-05-21 07:00:00",
+          "total_value": 100000,
+          "cash": 100000,
+          "positions": {}
+        },
+        {
+          "date": "2025-05-22 07:00:00",
+          "total_value": 100000,
+          "cash": 100000,
+          "positions": {}
+        },
+        {
+          "date": "2025-05-23 07:00:00",
+          "total_value": 100000,
+          "cash": 100000,
+          "positions": {}
+        },
+        {
+          "date": "2025-05-24 07:00:00",
+          "total_value": 100000,
+          "cash": 100000,
+          "positions": {}
+        },
+        {
+          "date": "2025-05-25 07:00:00",
+          "total_value": 100000,
+          "cash": 100000,
+          "positions": {}
+        },
+        {
+          "date": "2025-05-26 07:00:00",
+          "total_value": 100000,
+          "cash": 100000,
+          "positions": {}
+        },
+        {
+          "date": "2025-05-27 07:00:00",
+          "total_value": 100000,
+          "cash": 100000,
+          "positions": {}
+        },
+        {
+          "date": "2025-05-28 07:00:00",
+          "total_value": 100000,
+          "cash": 100000,
+          "positions": {}
+        },
+        {
+          "date": "2025-05-29 07:00:00",
+          "total_value": 100000,
+          "cash": 100000,
+          "positions": {}
+        },
+        {
+          "date": "2025-05-30 07:00:00",
+          "total_value": 100000,
+          "cash": 100000,
+          "positions": {}
+        },
+        {
+          "date": "2025-05-31 07:00:00",
+          "total_value": 100000,
+          "cash": 100000,
+          "positions": {}
+        },
+        {
+          "date": "2025-06-01 07:00:00",
+          "total_value": 100000,
+          "cash": 100000,
+          "positions": {}
+        },
+        {
+          "date": "2025-06-02 07:00:00",
+          "total_value": 100000,
+          "cash": 100000,
+          "positions": {}
+        },
+        {
+          "date": "2025-06-03 07:00:00",
+          "total_value": 100000,
+          "cash": 100000,
+          "positions": {}
+        },
+        {
+          "date": "2025-06-04 07:00:00",
+          "total_value": 100000,
+          "cash": 100000,
+          "positions": {}
+        },
+        {
+          "date": "2025-06-05 07:00:00",
+          "total_value": 100000,
+          "cash": 100000,
+          "positions": {}
+        },
+        {
+          "date": "2025-06-06 07:00:00",
+          "total_value": 100000,
+          "cash": 100000,
+          "positions": {}
+        },
+        {
+          "date": "2025-06-07 07:00:00",
+          "total_value": 100000,
+          "cash": 100000,
+          "positions": {}
+        },
+        {
+          "date": "2025-06-08 07:00:00",
+          "total_value": 100000,
+          "cash": 100000,
+          "positions": {}
+        },
+        {
+          "date": "2025-06-09 07:00:00",
+          "total_value": 100000,
+          "cash": 100000,
+          "positions": {}
+        },
+        {
+          "date": "2025-06-10 07:00:00",
+          "total_value": 100000,
+          "cash": 100000,
+          "positions": {}
+        },
+        {
+          "date": "2025-06-11 07:00:00",
+          "total_value": 100000,
+          "cash": 100000,
+          "positions": {}
+        },
+        {
+          "date": "2025-06-12 07:00:00",
+          "total_value": 100000,
+          "cash": 100000,
+          "positions": {}
+        },
+        {
+          "date": "2025-06-13 07:00:00",
+          "total_value": 100000,
+          "cash": 100000,
+          "positions": {}
+        },
+        {
+          "date": "2025-06-14 07:00:00",
+          "total_value": 100000,
+          "cash": 100000,
+          "positions": {}
+        },
+        {
+          "date": "2025-06-15 07:00:00",
+          "total_value": 100000,
+          "cash": 100000,
+          "positions": {}
+        },
+        {
+          "date": "2025-06-16 07:00:00",
+          "total_value": 100000,
+          "cash": 100000,
+          "positions": {}
+        },
+        {
+          "date": "2025-06-17 07:00:00",
+          "total_value": 100000,
+          "cash": 100000,
+          "positions": {}
+        },
+        {
+          "date": "2025-06-18 07:00:00",
+          "total_value": 100000,
+          "cash": 100000,
+          "positions": {}
+        },
+        {
+          "date": "2025-06-19 07:00:00",
+          "total_value": 100000,
+          "cash": 100000,
+          "positions": {}
+        },
+        {
+          "date": "2025-06-20 07:00:00",
+          "total_value": 100000,
+          "cash": 100000,
+          "positions": {}
+        },
+        {
+          "date": "2025-06-21 07:00:00",
+          "total_value": 100000,
+          "cash": 100000,
+          "positions": {}
+        },
+        {
+          "date": "2025-06-22 07:00:00",
+          "total_value": 100000,
+          "cash": 100000,
+          "positions": {}
+        },
+        {
+          "date": "2025-06-23 07:00:00",
+          "total_value": 99980.0,
+          "cash": 79980.0,
+          "positions": {
+            "Bitstamp:BTCUSD": {
+              "quantity": 0.18963817037093225,
+              "avg_price": 105464.0,
+              "entry_date": "2025-06-23 07:00:00"
+            }
+          }
+        },
+        {
+          "date": "2025-06-24 07:00:00",
+          "total_value": 100106.48865963741,
+          "cash": 79980.0,
+          "positions": {
+            "Bitstamp:BTCUSD": {
+              "quantity": 0.18963817037093225,
+              "avg_price": 105464.0,
+              "entry_date": "2025-06-23 07:00:00"
+            }
+          }
+        },
+        {
+          "date": "2025-06-25 07:00:00",
+          "total_value": 100350.5529849048,
+          "cash": 79980.0,
+          "positions": {
+            "Bitstamp:BTCUSD": {
+              "quantity": 0.18963817037093225,
+              "avg_price": 105464.0,
+              "entry_date": "2025-06-23 07:00:00"
+            }
+          }
+        },
+        {
+          "date": "2025-06-26 07:00:00",
+          "total_value": 100272.04278237124,
+          "cash": 79980.0,
+          "positions": {
+            "Bitstamp:BTCUSD": {
+              "quantity": 0.18963817037093225,
+              "avg_price": 105464.0,
+              "entry_date": "2025-06-23 07:00:00"
+            }
+          }
+        },
+        {
+          "date": "2025-06-27 07:00:00",
+          "total_value": 100290.24804672685,
+          "cash": 79980.0,
+          "positions": {
+            "Bitstamp:BTCUSD": {
+              "quantity": 0.18963817037093225,
+              "avg_price": 105464.0,
+              "entry_date": "2025-06-23 07:00:00"
+            }
+          }
+        },
+        {
+          "date": "2025-06-28 07:00:00",
+          "total_value": 100337.27831297883,
+          "cash": 79980.0,
+          "positions": {
+            "Bitstamp:BTCUSD": {
+              "quantity": 0.18963817037093225,
+              "avg_price": 105464.0,
+              "entry_date": "2025-06-23 07:00:00"
+            }
+          }
+        },
+        {
+          "date": "2025-06-29 07:00:00",
+          "total_value": 100533.74345748313,
+          "cash": 79980.0,
+          "positions": {
+            "Bitstamp:BTCUSD": {
+              "quantity": 0.18963817037093225,
+              "avg_price": 105464.0,
+              "entry_date": "2025-06-23 07:00:00"
+            }
+          }
+        },
+        {
+          "date": "2025-06-30 07:00:00",
+          "total_value": 100305.22946218615,
+          "cash": 79980.0,
+          "positions": {
+            "Bitstamp:BTCUSD": {
+              "quantity": 0.18963817037093225,
+              "avg_price": 105464.0,
+              "entry_date": "2025-06-23 07:00:00"
+            }
+          }
+        },
+        {
+          "date": "2025-07-01 07:00:00",
+          "total_value": 100026.46135174087,
+          "cash": 79980.0,
+          "positions": {
+            "Bitstamp:BTCUSD": {
+              "quantity": 0.18963817037093225,
+              "avg_price": 105464.0,
+              "entry_date": "2025-06-23 07:00:00"
+            }
+          }
+        },
+        {
+          "date": "2025-07-02 07:00:00",
+          "total_value": 100628.75218083896,
+          "cash": 79980.0,
+          "positions": {
+            "Bitstamp:BTCUSD": {
+              "quantity": 0.18963817037093225,
+              "avg_price": 105464.0,
+              "entry_date": "2025-06-23 07:00:00"
+            }
+          }
+        },
+        {
+          "date": "2025-07-03 07:00:00",
+          "total_value": 100773.44610483198,
+          "cash": 79980.0,
+          "positions": {
+            "Bitstamp:BTCUSD": {
+              "quantity": 0.18963817037093225,
+              "avg_price": 105464.0,
+              "entry_date": "2025-06-23 07:00:00"
+            }
+          }
+        },
+        {
+          "date": "2025-07-04 07:00:00",
+          "total_value": 100467.18045968292,
+          "cash": 79980.0,
+          "positions": {
+            "Bitstamp:BTCUSD": {
+              "quantity": 0.18963817037093225,
+              "avg_price": 105464.0,
+              "entry_date": "2025-06-23 07:00:00"
+            }
+          }
+        },
+        {
+          "date": "2025-07-05 07:00:00",
+          "total_value": 100506.4355609497,
+          "cash": 79980.0,
+          "positions": {
+            "Bitstamp:BTCUSD": {
+              "quantity": 0.18963817037093225,
+              "avg_price": 105464.0,
+              "entry_date": "2025-06-23 07:00:00"
+            }
+          }
+        },
+        {
+          "date": "2025-07-06 07:00:00",
+          "total_value": 100694.74626412804,
+          "cash": 79980.0,
+          "positions": {
+            "Bitstamp:BTCUSD": {
+              "quantity": 0.18963817037093225,
+              "avg_price": 105464.0,
+              "entry_date": "2025-06-23 07:00:00"
+            }
+          }
+        },
+        {
+          "date": "2025-07-07 07:00:00",
+          "total_value": 100515.34855495713,
+          "cash": 79980.0,
+          "positions": {
+            "Bitstamp:BTCUSD": {
+              "quantity": 0.18963817037093225,
+              "avg_price": 105464.0,
+              "entry_date": "2025-06-23 07:00:00"
+            }
+          }
+        },
+        {
+          "date": "2025-07-08 07:00:00",
+          "total_value": 100640.50974740196,
+          "cash": 79980.0,
+          "positions": {
+            "Bitstamp:BTCUSD": {
+              "quantity": 0.18963817037093225,
+              "avg_price": 105464.0,
+              "entry_date": "2025-06-23 07:00:00"
+            }
+          }
+        },
+        {
+          "date": "2025-07-09 07:00:00",
+          "total_value": 101084.26306606994,
+          "cash": 79980.0,
+          "positions": {
+            "Bitstamp:BTCUSD": {
+              "quantity": 0.18963817037093225,
+              "avg_price": 105464.0,
+              "entry_date": "2025-06-23 07:00:00"
+            }
+          }
+        },
+        {
+          "date": "2025-07-10 07:00:00",
+          "total_value": 101983.90654630965,
+          "cash": 79980.0,
+          "positions": {
+            "Bitstamp:BTCUSD": {
+              "quantity": 0.18963817037093225,
+              "avg_price": 105464.0,
+              "entry_date": "2025-06-23 07:00:00"
+            }
+          }
+        },
+        {
+          "date": "2025-07-11 07:00:00",
+          "total_value": 102277.46643404385,
+          "cash": 79980.0,
+          "positions": {
+            "Bitstamp:BTCUSD": {
+              "quantity": 0.18963817037093225,
+              "avg_price": 105464.0,
+              "entry_date": "2025-06-23 07:00:00"
+            }
+          }
+        },
+        {
+          "date": "2025-07-12 07:00:00",
+          "total_value": 102255.65804445118,
+          "cash": 79980.0,
+          "positions": {
+            "Bitstamp:BTCUSD": {
+              "quantity": 0.18963817037093225,
+              "avg_price": 105464.0,
+              "entry_date": "2025-06-23 07:00:00"
+            }
+          }
+        },
+        {
+          "date": "2025-07-13 07:00:00",
+          "total_value": 102572.543427141,
+          "cash": 79980.0,
+          "positions": {
+            "Bitstamp:BTCUSD": {
+              "quantity": 0.18963817037093225,
+              "avg_price": 105464.0,
+              "entry_date": "2025-06-23 07:00:00"
+            }
+          }
+        },
+        {
+          "date": "2025-07-14 07:00:00",
+          "total_value": 102713.634225897,
+          "cash": 79980.0,
+          "positions": {
+            "Bitstamp:BTCUSD": {
+              "quantity": 0.18963817037093225,
+              "avg_price": 105464.0,
+              "entry_date": "2025-06-23 07:00:00"
+            }
+          }
+        },
+        {
+          "date": "2025-07-15 07:00:00",
+          "total_value": 102313.49768641432,
+          "cash": 79980.0,
+          "positions": {
+            "Bitstamp:BTCUSD": {
+              "quantity": 0.18963817037093225,
+              "avg_price": 105464.0,
+              "entry_date": "2025-06-23 07:00:00"
+            }
+          }
+        },
+        {
+          "date": "2025-07-16 07:00:00",
+          "total_value": 102493.46431009634,
+          "cash": 79980.0,
+          "positions": {
+            "Bitstamp:BTCUSD": {
+              "quantity": 0.18963817037093225,
+              "avg_price": 105464.0,
+              "entry_date": "2025-06-23 07:00:00"
+            }
+          }
+        },
+        {
+          "date": "2025-07-17 07:00:00",
+          "total_value": 102599.09277099295,
+          "cash": 79980.0,
+          "positions": {
+            "Bitstamp:BTCUSD": {
+              "quantity": 0.18963817037093225,
+              "avg_price": 105464.0,
+              "entry_date": "2025-06-23 07:00:00"
+            }
+          }
+        },
+        {
+          "date": "2025-07-18 07:00:00",
+          "total_value": 102361.47614351817,
+          "cash": 79980.0,
+          "positions": {
+            "Bitstamp:BTCUSD": {
+              "quantity": 0.18963817037093225,
+              "avg_price": 105464.0,
+              "entry_date": "2025-06-23 07:00:00"
+            }
+          }
+        },
+        {
+          "date": "2025-07-19 07:00:00",
+          "total_value": 102341.37449745885,
+          "cash": 79980.0,
+          "positions": {
+            "Bitstamp:BTCUSD": {
+              "quantity": 0.18963817037093225,
+              "avg_price": 105464.0,
+              "entry_date": "2025-06-23 07:00:00"
+            }
+          }
+        },
+        {
+          "date": "2025-07-20 07:00:00",
+          "total_value": 102231.95327315482,
+          "cash": 79980.0,
+          "positions": {
+            "Bitstamp:BTCUSD": {
+              "quantity": 0.18963817037093225,
+              "avg_price": 105464.0,
+              "entry_date": "2025-06-23 07:00:00"
+            }
+          }
+        },
+        {
+          "date": "2025-07-21 07:00:00",
+          "total_value": 102250.53781385117,
+          "cash": 79980.0,
+          "positions": {
+            "Bitstamp:BTCUSD": {
+              "quantity": 0.18963817037093225,
+              "avg_price": 105464.0,
+              "entry_date": "2025-06-23 07:00:00"
+            }
+          }
+        },
+        {
+          "date": "2025-07-22 07:00:00",
+          "total_value": 102738.66646438595,
+          "cash": 79980.0,
+          "positions": {
+            "Bitstamp:BTCUSD": {
+              "quantity": 0.18963817037093225,
+              "avg_price": 105464.0,
+              "entry_date": "2025-06-23 07:00:00"
+            }
+          }
+        },
+        {
+          "date": "2025-07-23 07:00:00",
+          "total_value": 102511.47993628157,
+          "cash": 79980.0,
+          "positions": {
+            "Bitstamp:BTCUSD": {
+              "quantity": 0.18963817037093225,
+              "avg_price": 105464.0,
+              "entry_date": "2025-06-23 07:00:00"
+            }
+          }
+        },
+        {
+          "date": "2025-07-24 07:00:00",
+          "total_value": 102423.10854888872,
+          "cash": 79980.0,
+          "positions": {
+            "Bitstamp:BTCUSD": {
+              "quantity": 0.18963817037093225,
+              "avg_price": 105464.0,
+              "entry_date": "2025-06-23 07:00:00"
+            }
+          }
+        },
+        {
+          "date": "2025-07-25 07:00:00",
+          "total_value": 102291.4996586513,
+          "cash": 79980.0,
+          "positions": {
+            "Bitstamp:BTCUSD": {
+              "quantity": 0.18963817037093225,
+              "avg_price": 105464.0,
+              "entry_date": "2025-06-23 07:00:00"
+            }
+          }
+        },
+        {
+          "date": "2025-07-26 07:00:00",
+          "total_value": 102350.09785329591,
+          "cash": 79980.0,
+          "positions": {
+            "Bitstamp:BTCUSD": {
+              "quantity": 0.18963817037093225,
+              "avg_price": 105464.0,
+              "entry_date": "2025-06-23 07:00:00"
+            }
+          }
+        },
+        {
+          "date": "2025-07-27 07:00:00",
+          "total_value": 102635.88257604491,
+          "cash": 79980.0,
+          "positions": {
+            "Bitstamp:BTCUSD": {
+              "quantity": 0.18963817037093225,
+              "avg_price": 105464.0,
+              "entry_date": "2025-06-23 07:00:00"
+            }
+          }
+        },
+        {
+          "date": "2025-07-28 07:00:00",
+          "total_value": 102366.97565045892,
+          "cash": 79980.0,
+          "positions": {
+            "Bitstamp:BTCUSD": {
+              "quantity": 0.18963817037093225,
+              "avg_price": 105464.0,
+              "entry_date": "2025-06-23 07:00:00"
+            }
+          }
+        },
+        {
+          "date": "2025-07-29 07:00:00",
+          "total_value": 102343.27087916256,
+          "cash": 79980.0,
+          "positions": {
+            "Bitstamp:BTCUSD": {
+              "quantity": 0.18963817037093225,
+              "avg_price": 105464.0,
+              "entry_date": "2025-06-23 07:00:00"
+            }
+          }
+        },
+        {
+          "date": "2025-07-30 07:00:00",
+          "total_value": 102325.82416748843,
+          "cash": 79980.0,
+          "positions": {
+            "Bitstamp:BTCUSD": {
+              "quantity": 0.18963817037093225,
+              "avg_price": 105464.0,
+              "entry_date": "2025-06-23 07:00:00"
+            }
+          }
+        },
+        {
+          "date": "2025-07-31 07:00:00",
+          "total_value": 101930.61822043541,
+          "cash": 79980.0,
+          "positions": {
+            "Bitstamp:BTCUSD": {
+              "quantity": 0.18963817037093225,
+              "avg_price": 105464.0,
+              "entry_date": "2025-06-23 07:00:00"
+            }
+          }
+        },
+        {
+          "date": "2025-08-01 07:00:00",
+          "total_value": 101455.19532731548,
+          "cash": 79980.0,
+          "positions": {
+            "Bitstamp:BTCUSD": {
+              "quantity": 0.18963817037093225,
+              "avg_price": 105464.0,
+              "entry_date": "2025-06-23 07:00:00"
+            }
+          }
+        },
+        {
+          "date": "2025-08-02 07:00:00",
+          "total_value": 101550.20405067131,
+          "cash": 79980.0,
+          "positions": {
+            "Bitstamp:BTCUSD": {
+              "quantity": 0.18963817037093225,
+              "avg_price": 105464.0,
+              "entry_date": "2025-06-23 07:00:00"
+            }
+          }
+        }
+      ],
+      "final_portfolio": {
+        "cash": 79980.0,
+        "positions": {
+          "Bitstamp:BTCUSD": {
+            "quantity": 0.18963817037093225,
+            "avg_price": 105464.0,
+            "entry_date": "2025-06-23 07:00:00"
+          }
+        },
+        "total_value": 101550.20405067131,
+        "trades": [
+          {
+            "date": "2025-06-23 07:00:00",
+            "symbol": "Bitstamp:BTCUSD",
+            "action": "buy",
+            "quantity": 0.18963817037093225,
+            "price": 105464.0,
+            "cost": 20020.0,
+            "commission": 20.0
+          }
+        ]
+      },
+      "trades": [
+        {
+          "date": "2025-06-23 07:00:00",
+          "symbol": "Bitstamp:BTCUSD",
+          "action": "buy",
+          "quantity": 0.18963817037093225,
+          "price": 105464.0,
+          "cost": 20020.0,
+          "commission": 20.0
+        }
+      ],
+      "performance_metrics": {
+        "total_return": 0.015502040506713,
+        "annualized_return": 0.05835467806069983,
+        "volatility": 0.02804023571847934,
+        "sharpe_ratio": 0.6971591321951057,
+        "max_drawdown": -0.012492581237808715,
+        "avg_drawdown": -0.001008310794789146,
+        "drawdown_duration": 0.3,
+        "win_rate": 0.0,
+        "profit_factor": 0.0,
+        "avg_trade": 0.0,
+        "total_trades": 0,
+        "final_portfolio_value": 101550.20405067131,
+        "risk_metrics": {
+          "current_drawdown": -0.011567820126676674,
+          "max_drawdown": -0.012492581237808715,
+          "volatility": 0.028040235718479342,
+          "portfolio_value": 101550.20405067131
+        }
+      },
+      "risk_metrics": {
+        "current_drawdown": -0.011567820126676674,
+        "max_drawdown": -0.012492581237808715,
+        "volatility": 0.028040235718479342,
+        "portfolio_value": 101550.20405067131
+      }
+    },
+    "RSI_OPTIMIZED": {
+      "strategy_name": "RSI_OPTIMIZED",
+      "portfolio_history": [
+        {
+          "date": "2025-04-25 07:00:00",
+          "total_value": 100000,
+          "cash": 100000,
+          "positions": {}
+        },
+        {
+          "date": "2025-04-26 07:00:00",
+          "total_value": 100000,
+          "cash": 100000,
+          "positions": {}
+        },
+        {
+          "date": "2025-04-27 07:00:00",
+          "total_value": 100000,
+          "cash": 100000,
+          "positions": {}
+        },
+        {
+          "date": "2025-04-28 07:00:00",
+          "total_value": 100000,
+          "cash": 100000,
+          "positions": {}
+        },
+        {
+          "date": "2025-04-29 07:00:00",
+          "total_value": 100000,
+          "cash": 100000,
+          "positions": {}
+        },
+        {
+          "date": "2025-04-30 07:00:00",
+          "total_value": 100000,
+          "cash": 100000,
+          "positions": {}
+        },
+        {
+          "date": "2025-05-01 07:00:00",
+          "total_value": 100000,
+          "cash": 100000,
+          "positions": {}
+        },
+        {
+          "date": "2025-05-02 07:00:00",
+          "total_value": 100000,
+          "cash": 100000,
+          "positions": {}
+        },
+        {
+          "date": "2025-05-03 07:00:00",
+          "total_value": 100000,
+          "cash": 100000,
+          "positions": {}
+        },
+        {
+          "date": "2025-05-04 07:00:00",
+          "total_value": 100000,
+          "cash": 100000,
+          "positions": {}
+        },
+        {
+          "date": "2025-05-05 07:00:00",
+          "total_value": 100000,
+          "cash": 100000,
+          "positions": {}
+        },
+        {
+          "date": "2025-05-06 07:00:00",
+          "total_value": 100000,
+          "cash": 100000,
+          "positions": {}
+        },
+        {
+          "date": "2025-05-07 07:00:00",
+          "total_value": 100000,
+          "cash": 100000,
+          "positions": {}
+        },
+        {
+          "date": "2025-05-08 07:00:00",
+          "total_value": 100000,
+          "cash": 100000,
+          "positions": {}
+        },
+        {
+          "date": "2025-05-09 07:00:00",
+          "total_value": 100000,
+          "cash": 100000,
+          "positions": {}
+        },
+        {
+          "date": "2025-05-10 07:00:00",
+          "total_value": 100000,
+          "cash": 100000,
+          "positions": {}
+        },
+        {
+          "date": "2025-05-11 07:00:00",
+          "total_value": 100000,
+          "cash": 100000,
+          "positions": {}
+        },
+        {
+          "date": "2025-05-12 07:00:00",
+          "total_value": 100000,
+          "cash": 100000,
+          "positions": {}
+        },
+        {
+          "date": "2025-05-13 07:00:00",
+          "total_value": 100000,
+          "cash": 100000,
+          "positions": {}
+        },
+        {
+          "date": "2025-05-14 07:00:00",
+          "total_value": 100000,
+          "cash": 100000,
+          "positions": {}
+        },
+        {
+          "date": "2025-05-15 07:00:00",
+          "total_value": 100000,
+          "cash": 100000,
+          "positions": {}
+        },
+        {
+          "date": "2025-05-16 07:00:00",
+          "total_value": 100000,
+          "cash": 100000,
+          "positions": {}
+        },
+        {
+          "date": "2025-05-17 07:00:00",
+          "total_value": 100000,
+          "cash": 100000,
+          "positions": {}
+        },
+        {
+          "date": "2025-05-18 07:00:00",
+          "total_value": 100000,
+          "cash": 100000,
+          "positions": {}
+        },
+        {
+          "date": "2025-05-19 07:00:00",
+          "total_value": 100000,
+          "cash": 100000,
+          "positions": {}
+        },
+        {
+          "date": "2025-05-20 07:00:00",
+          "total_value": 100000,
+          "cash": 100000,
+          "positions": {}
+        },
+        {
+          "date": "2025-05-21 07:00:00",
+          "total_value": 100000,
+          "cash": 100000,
+          "positions": {}
+        },
+        {
+          "date": "2025-05-22 07:00:00",
+          "total_value": 100000,
+          "cash": 100000,
+          "positions": {}
+        },
+        {
+          "date": "2025-05-23 07:00:00",
+          "total_value": 100000,
+          "cash": 100000,
+          "positions": {}
+        },
+        {
+          "date": "2025-05-24 07:00:00",
+          "total_value": 100000,
+          "cash": 100000,
+          "positions": {}
+        },
+        {
+          "date": "2025-05-25 07:00:00",
+          "total_value": 100000,
+          "cash": 100000,
+          "positions": {}
+        },
+        {
+          "date": "2025-05-26 07:00:00",
+          "total_value": 100000,
+          "cash": 100000,
+          "positions": {}
+        },
+        {
+          "date": "2025-05-27 07:00:00",
+          "total_value": 100000,
+          "cash": 100000,
+          "positions": {}
+        },
+        {
+          "date": "2025-05-28 07:00:00",
+          "total_value": 100000,
+          "cash": 100000,
+          "positions": {}
+        },
+        {
+          "date": "2025-05-29 07:00:00",
+          "total_value": 100000,
+          "cash": 100000,
+          "positions": {}
+        },
+        {
+          "date": "2025-05-30 07:00:00",
+          "total_value": 100000,
+          "cash": 100000,
+          "positions": {}
+        },
+        {
+          "date": "2025-05-31 07:00:00",
+          "total_value": 100000,
+          "cash": 100000,
+          "positions": {}
+        },
+        {
+          "date": "2025-06-01 07:00:00",
+          "total_value": 99980.0,
+          "cash": 79980.0,
+          "positions": {
+            "Bitstamp:BTCUSD": {
+              "quantity": 0.1892058086183246,
+              "avg_price": 105705.0,
+              "entry_date": "2025-06-01 07:00:00"
+            }
+          }
+        },
+        {
+          "date": "2025-06-02 07:00:00",
+          "total_value": 100017.84116172367,
+          "cash": 79980.0,
+          "positions": {
+            "Bitstamp:BTCUSD": {
+              "quantity": 0.1892058086183246,
+              "avg_price": 105705.0,
+              "entry_date": "2025-06-01 07:00:00"
+            }
+          }
+        },
+        {
+          "date": "2025-06-03 07:00:00",
+          "total_value": 99932.5093420368,
+          "cash": 79980.0,
+          "positions": {
+            "Bitstamp:BTCUSD": {
+              "quantity": 0.1892058086183246,
+              "avg_price": 105705.0,
+              "entry_date": "2025-06-01 07:00:00"
+            }
+          }
+        },
+        {
+          "date": "2025-06-04 07:00:00",
+          "total_value": 99798.36242372642,
+          "cash": 79980.0,
+          "positions": {
+            "Bitstamp:BTCUSD": {
+              "quantity": 0.1892058086183246,
+              "avg_price": 105705.0,
+              "entry_date": "2025-06-01 07:00:00"
+            }
+          }
+        },
+        {
+          "date": "2025-06-05 07:00:00",
+          "total_value": 99195.55271746842,
+          "cash": 79980.0,
+          "positions": {
+            "Bitstamp:BTCUSD": {
+              "quantity": 0.1892058086183246,
+              "avg_price": 105705.0,
+              "entry_date": "2025-06-01 07:00:00"
+            }
+          }
+        },
+        {
+          "date": "2025-06-06 07:00:00",
+          "total_value": 99731.76197909276,
+          "cash": 79980.0,
+          "positions": {
+            "Bitstamp:BTCUSD": {
+              "quantity": 0.1892058086183246,
+              "avg_price": 105705.0,
+              "entry_date": "2025-06-01 07:00:00"
+            }
+          }
+        },
+        {
+          "date": "2025-06-07 07:00:00",
+          "total_value": 99963.72830045882,
+          "cash": 79980.0,
+          "positions": {
+            "Bitstamp:BTCUSD": {
+              "quantity": 0.1892058086183246,
+              "avg_price": 105705.0,
+              "entry_date": "2025-06-01 07:00:00"
+            }
+          }
+        },
+        {
+          "date": "2025-06-08 07:00:00",
+          "total_value": 99996.4609053498,
+          "cash": 79980.0,
+          "positions": {
+            "Bitstamp:BTCUSD": {
+              "quantity": 0.1892058086183246,
+              "avg_price": 105705.0,
+              "entry_date": "2025-06-01 07:00:00"
+            }
+          }
+        },
+        {
+          "date": "2025-06-09 07:00:00",
+          "total_value": 100829.85440613027,
+          "cash": 100829.85440613027,
+          "positions": {
+            "Bitstamp:BTCUSD": {
+              "quantity": 0,
+              "avg_price": 0
+            }
+          }
+        },
+        {
+          "date": "2025-06-10 07:00:00",
+          "total_value": 100829.85440613027,
+          "cash": 100829.85440613027,
+          "positions": {
+            "Bitstamp:BTCUSD": {
+              "quantity": 0,
+              "avg_price": 0
+            }
+          }
+        },
+        {
+          "date": "2025-06-11 07:00:00",
+          "total_value": 100829.85440613027,
+          "cash": 100829.85440613027,
+          "positions": {
+            "Bitstamp:BTCUSD": {
+              "quantity": 0,
+              "avg_price": 0
+            }
+          }
+        },
+        {
+          "date": "2025-06-12 07:00:00",
+          "total_value": 100829.85440613027,
+          "cash": 100829.85440613027,
+          "positions": {
+            "Bitstamp:BTCUSD": {
+              "quantity": 0,
+              "avg_price": 0
+            }
+          }
+        },
+        {
+          "date": "2025-06-13 07:00:00",
+          "total_value": 100829.85440613027,
+          "cash": 100829.85440613027,
+          "positions": {
+            "Bitstamp:BTCUSD": {
+              "quantity": 0,
+              "avg_price": 0
+            }
+          }
+        },
+        {
+          "date": "2025-06-14 07:00:00",
+          "total_value": 100829.85440613027,
+          "cash": 100829.85440613027,
+          "positions": {
+            "Bitstamp:BTCUSD": {
+              "quantity": 0,
+              "avg_price": 0
+            }
+          }
+        },
+        {
+          "date": "2025-06-15 07:00:00",
+          "total_value": 100829.85440613027,
+          "cash": 100829.85440613027,
+          "positions": {
+            "Bitstamp:BTCUSD": {
+              "quantity": 0,
+              "avg_price": 0
+            }
+          }
+        },
+        {
+          "date": "2025-06-16 07:00:00",
+          "total_value": 100829.85440613027,
+          "cash": 100829.85440613027,
+          "positions": {
+            "Bitstamp:BTCUSD": {
+              "quantity": 0,
+              "avg_price": 0
+            }
+          }
+        },
+        {
+          "date": "2025-06-17 07:00:00",
+          "total_value": 100829.85440613027,
+          "cash": 100829.85440613027,
+          "positions": {
+            "Bitstamp:BTCUSD": {
+              "quantity": 0,
+              "avg_price": 0
+            }
+          }
+        },
+        {
+          "date": "2025-06-18 07:00:00",
+          "total_value": 100829.85440613027,
+          "cash": 100829.85440613027,
+          "positions": {
+            "Bitstamp:BTCUSD": {
+              "quantity": 0,
+              "avg_price": 0
+            }
+          }
+        },
+        {
+          "date": "2025-06-19 07:00:00",
+          "total_value": 100809.68843524905,
+          "cash": 80643.717554023,
+          "positions": {
+            "Bitstamp:BTCUSD": {
+              "quantity": 0.192629249591415,
+              "avg_price": 104688.0,
+              "entry_date": "2025-06-19 07:00:00"
+            }
+          }
+        },
+        {
+          "date": "2025-06-20 07:00:00",
+          "total_value": 100545.40110480963,
+          "cash": 80643.717554023,
+          "positions": {
+            "Bitstamp:BTCUSD": {
+              "quantity": 0.192629249591415,
+              "avg_price": 104688.0,
+              "entry_date": "2025-06-19 07:00:00"
+            }
+          }
+        },
+        {
+          "date": "2025-06-21 07:00:00",
+          "total_value": 100318.67647804054,
+          "cash": 80643.717554023,
+          "positions": {
+            "Bitstamp:BTCUSD": {
+              "quantity": 0.192629249591415,
+              "avg_price": 104688.0,
+              "entry_date": "2025-06-19 07:00:00"
+            }
+          }
+        },
+        {
+          "date": "2025-06-22 07:00:00",
+          "total_value": 100102.16120149978,
+          "cash": 80643.717554023,
+          "positions": {
+            "Bitstamp:BTCUSD": {
+              "quantity": 0.192629249591415,
+              "avg_price": 104688.0,
+              "entry_date": "2025-06-19 07:00:00"
+            }
+          }
+        },
+        {
+          "date": "2025-06-23 07:00:00",
+          "total_value": 100959.16873293198,
+          "cash": 80643.717554023,
+          "positions": {
+            "Bitstamp:BTCUSD": {
+              "quantity": 0.192629249591415,
+              "avg_price": 104688.0,
+              "entry_date": "2025-06-19 07:00:00"
+            }
+          }
+        },
+        {
+          "date": "2025-06-24 07:00:00",
+          "total_value": 101087.65244240945,
+          "cash": 80643.717554023,
+          "positions": {
+            "Bitstamp:BTCUSD": {
+              "quantity": 0.192629249591415,
+              "avg_price": 104688.0,
+              "entry_date": "2025-06-19 07:00:00"
+            }
+          }
+        },
+        {
+          "date": "2025-06-25 07:00:00",
+          "total_value": 101335.5662866336,
+          "cash": 80643.717554023,
+          "positions": {
+            "Bitstamp:BTCUSD": {
+              "quantity": 0.192629249591415,
+              "avg_price": 104688.0,
+              "entry_date": "2025-06-19 07:00:00"
+            }
+          }
+        },
+        {
+          "date": "2025-06-26 07:00:00",
+          "total_value": 101255.81777730277,
+          "cash": 80643.717554023,
+          "positions": {
+            "Bitstamp:BTCUSD": {
+              "quantity": 0.192629249591415,
+              "avg_price": 104688.0,
+              "entry_date": "2025-06-19 07:00:00"
+            }
+          }
+        },
+        {
+          "date": "2025-06-27 07:00:00",
+          "total_value": 101274.31018526354,
+          "cash": 80643.717554023,
+          "positions": {
+            "Bitstamp:BTCUSD": {
+              "quantity": 0.192629249591415,
+              "avg_price": 104688.0,
+              "entry_date": "2025-06-19 07:00:00"
+            }
+          }
+        },
+        {
+          "date": "2025-06-28 07:00:00",
+          "total_value": 101322.0822391622,
+          "cash": 80643.717554023,
+          "positions": {
+            "Bitstamp:BTCUSD": {
+              "quantity": 0.192629249591415,
+              "avg_price": 104688.0,
+              "entry_date": "2025-06-19 07:00:00"
+            }
+          }
+        },
+        {
+          "date": "2025-06-29 07:00:00",
+          "total_value": 101521.64614173892,
+          "cash": 80643.717554023,
+          "positions": {
+            "Bitstamp:BTCUSD": {
+              "quantity": 0.192629249591415,
+              "avg_price": 104688.0,
+              "entry_date": "2025-06-19 07:00:00"
+            }
+          }
+        },
+        {
+          "date": "2025-06-30 07:00:00",
+          "total_value": 101289.52789598127,
+          "cash": 80643.717554023,
+          "positions": {
+            "Bitstamp:BTCUSD": {
+              "quantity": 0.192629249591415,
+              "avg_price": 104688.0,
+              "entry_date": "2025-06-19 07:00:00"
+            }
+          }
+        },
+        {
+          "date": "2025-07-01 07:00:00",
+          "total_value": 101006.36289908188,
+          "cash": 80643.717554023,
+          "positions": {
+            "Bitstamp:BTCUSD": {
+              "quantity": 0.192629249591415,
+              "avg_price": 104688.0,
+              "entry_date": "2025-06-19 07:00:00"
+            }
+          }
+        },
+        {
+          "date": "2025-07-02 07:00:00",
+          "total_value": 101597.17895994245,
+          "cash": 101597.17895994245,
+          "positions": {
+            "Bitstamp:BTCUSD": {
+              "quantity": 0,
+              "avg_price": 0
+            }
+          }
+        },
+        {
+          "date": "2025-07-03 07:00:00",
+          "total_value": 101597.17895994245,
+          "cash": 101597.17895994245,
+          "positions": {
+            "Bitstamp:BTCUSD": {
+              "quantity": 0,
+              "avg_price": 0
+            }
+          }
+        },
+        {
+          "date": "2025-07-04 07:00:00",
+          "total_value": 101597.17895994245,
+          "cash": 101597.17895994245,
+          "positions": {
+            "Bitstamp:BTCUSD": {
+              "quantity": 0,
+              "avg_price": 0
+            }
+          }
+        },
+        {
+          "date": "2025-07-05 07:00:00",
+          "total_value": 101597.17895994245,
+          "cash": 101597.17895994245,
+          "positions": {
+            "Bitstamp:BTCUSD": {
+              "quantity": 0,
+              "avg_price": 0
+            }
+          }
+        },
+        {
+          "date": "2025-07-06 07:00:00",
+          "total_value": 101597.17895994245,
+          "cash": 101597.17895994245,
+          "positions": {
+            "Bitstamp:BTCUSD": {
+              "quantity": 0,
+              "avg_price": 0
+            }
+          }
+        },
+        {
+          "date": "2025-07-07 07:00:00",
+          "total_value": 101597.17895994245,
+          "cash": 101597.17895994245,
+          "positions": {
+            "Bitstamp:BTCUSD": {
+              "quantity": 0,
+              "avg_price": 0
+            }
+          }
+        },
+        {
+          "date": "2025-07-08 07:00:00",
+          "total_value": 101597.17895994245,
+          "cash": 101597.17895994245,
+          "positions": {
+            "Bitstamp:BTCUSD": {
+              "quantity": 0,
+              "avg_price": 0
+            }
+          }
+        },
+        {
+          "date": "2025-07-09 07:00:00",
+          "total_value": 101597.17895994245,
+          "cash": 101597.17895994245,
+          "positions": {
+            "Bitstamp:BTCUSD": {
+              "quantity": 0,
+              "avg_price": 0
+            }
+          }
+        },
+        {
+          "date": "2025-07-10 07:00:00",
+          "total_value": 101597.17895994245,
+          "cash": 101597.17895994245,
+          "positions": {
+            "Bitstamp:BTCUSD": {
+              "quantity": 0,
+              "avg_price": 0
+            }
+          }
+        },
+        {
+          "date": "2025-07-11 07:00:00",
+          "total_value": 101597.17895994245,
+          "cash": 101597.17895994245,
+          "positions": {
+            "Bitstamp:BTCUSD": {
+              "quantity": 0,
+              "avg_price": 0
+            }
+          }
+        },
+        {
+          "date": "2025-07-12 07:00:00",
+          "total_value": 101597.17895994245,
+          "cash": 101597.17895994245,
+          "positions": {
+            "Bitstamp:BTCUSD": {
+              "quantity": 0,
+              "avg_price": 0
+            }
+          }
+        },
+        {
+          "date": "2025-07-13 07:00:00",
+          "total_value": 101597.17895994245,
+          "cash": 101597.17895994245,
+          "positions": {
+            "Bitstamp:BTCUSD": {
+              "quantity": 0,
+              "avg_price": 0
+            }
+          }
+        },
+        {
+          "date": "2025-07-14 07:00:00",
+          "total_value": 101597.17895994245,
+          "cash": 101597.17895994245,
+          "positions": {
+            "Bitstamp:BTCUSD": {
+              "quantity": 0,
+              "avg_price": 0
+            }
+          }
+        },
+        {
+          "date": "2025-07-15 07:00:00",
+          "total_value": 101597.17895994245,
+          "cash": 101597.17895994245,
+          "positions": {
+            "Bitstamp:BTCUSD": {
+              "quantity": 0,
+              "avg_price": 0
+            }
+          }
+        },
+        {
+          "date": "2025-07-16 07:00:00",
+          "total_value": 101597.17895994245,
+          "cash": 101597.17895994245,
+          "positions": {
+            "Bitstamp:BTCUSD": {
+              "quantity": 0,
+              "avg_price": 0
+            }
+          }
+        },
+        {
+          "date": "2025-07-17 07:00:00",
+          "total_value": 101597.17895994245,
+          "cash": 101597.17895994245,
+          "positions": {
+            "Bitstamp:BTCUSD": {
+              "quantity": 0,
+              "avg_price": 0
+            }
+          }
+        },
+        {
+          "date": "2025-07-18 07:00:00",
+          "total_value": 101597.17895994245,
+          "cash": 101597.17895994245,
+          "positions": {
+            "Bitstamp:BTCUSD": {
+              "quantity": 0,
+              "avg_price": 0
+            }
+          }
+        },
+        {
+          "date": "2025-07-19 07:00:00",
+          "total_value": 101597.17895994245,
+          "cash": 101597.17895994245,
+          "positions": {
+            "Bitstamp:BTCUSD": {
+              "quantity": 0,
+              "avg_price": 0
+            }
+          }
+        },
+        {
+          "date": "2025-07-20 07:00:00",
+          "total_value": 101597.17895994245,
+          "cash": 101597.17895994245,
+          "positions": {
+            "Bitstamp:BTCUSD": {
+              "quantity": 0,
+              "avg_price": 0
+            }
+          }
+        },
+        {
+          "date": "2025-07-21 07:00:00",
+          "total_value": 101597.17895994245,
+          "cash": 101597.17895994245,
+          "positions": {
+            "Bitstamp:BTCUSD": {
+              "quantity": 0,
+              "avg_price": 0
+            }
+          }
+        },
+        {
+          "date": "2025-07-22 07:00:00",
+          "total_value": 101597.17895994245,
+          "cash": 101597.17895994245,
+          "positions": {
+            "Bitstamp:BTCUSD": {
+              "quantity": 0,
+              "avg_price": 0
+            }
+          }
+        },
+        {
+          "date": "2025-07-23 07:00:00",
+          "total_value": 101597.17895994245,
+          "cash": 101597.17895994245,
+          "positions": {
+            "Bitstamp:BTCUSD": {
+              "quantity": 0,
+              "avg_price": 0
+            }
+          }
+        },
+        {
+          "date": "2025-07-24 07:00:00",
+          "total_value": 101597.17895994245,
+          "cash": 101597.17895994245,
+          "positions": {
+            "Bitstamp:BTCUSD": {
+              "quantity": 0,
+              "avg_price": 0
+            }
+          }
+        },
+        {
+          "date": "2025-07-25 07:00:00",
+          "total_value": 101597.17895994245,
+          "cash": 101597.17895994245,
+          "positions": {
+            "Bitstamp:BTCUSD": {
+              "quantity": 0,
+              "avg_price": 0
+            }
+          }
+        },
+        {
+          "date": "2025-07-26 07:00:00",
+          "total_value": 101597.17895994245,
+          "cash": 101597.17895994245,
+          "positions": {
+            "Bitstamp:BTCUSD": {
+              "quantity": 0,
+              "avg_price": 0
+            }
+          }
+        },
+        {
+          "date": "2025-07-27 07:00:00",
+          "total_value": 101597.17895994245,
+          "cash": 101597.17895994245,
+          "positions": {
+            "Bitstamp:BTCUSD": {
+              "quantity": 0,
+              "avg_price": 0
+            }
+          }
+        },
+        {
+          "date": "2025-07-28 07:00:00",
+          "total_value": 101597.17895994245,
+          "cash": 101597.17895994245,
+          "positions": {
+            "Bitstamp:BTCUSD": {
+              "quantity": 0,
+              "avg_price": 0
+            }
+          }
+        },
+        {
+          "date": "2025-07-29 07:00:00",
+          "total_value": 101597.17895994245,
+          "cash": 101597.17895994245,
+          "positions": {
+            "Bitstamp:BTCUSD": {
+              "quantity": 0,
+              "avg_price": 0
+            }
+          }
+        },
+        {
+          "date": "2025-07-30 07:00:00",
+          "total_value": 101597.17895994245,
+          "cash": 101597.17895994245,
+          "positions": {
+            "Bitstamp:BTCUSD": {
+              "quantity": 0,
+              "avg_price": 0
+            }
+          }
+        },
+        {
+          "date": "2025-07-31 07:00:00",
+          "total_value": 101597.17895994245,
+          "cash": 101597.17895994245,
+          "positions": {
+            "Bitstamp:BTCUSD": {
+              "quantity": 0,
+              "avg_price": 0
+            }
+          }
+        },
+        {
+          "date": "2025-08-01 07:00:00",
+          "total_value": 101576.85952415047,
+          "cash": 81257.42373216197,
+          "positions": {
+            "Bitstamp:BTCUSD": {
+              "quantity": 0.179432157325296,
+              "avg_price": 113243.0,
+              "entry_date": "2025-08-01 07:00:00"
+            }
+          }
+        },
+        {
+          "date": "2025-08-02 07:00:00",
+          "total_value": 101666.75503497044,
+          "cash": 81257.42373216197,
+          "positions": {
+            "Bitstamp:BTCUSD": {
+              "quantity": 0.179432157325296,
+              "avg_price": 113243.0,
+              "entry_date": "2025-08-01 07:00:00"
+            }
+          }
+        }
+      ],
+      "final_portfolio": {
+        "cash": 81257.42373216197,
+        "positions": {
+          "Bitstamp:BTCUSD": {
+            "quantity": 0.179432157325296,
+            "avg_price": 113243.0,
+            "entry_date": "2025-08-01 07:00:00"
+          }
+        },
+        "total_value": 101666.75503497044,
+        "trades": [
+          {
+            "date": "2025-06-01 07:00:00",
+            "symbol": "Bitstamp:BTCUSD",
+            "action": "buy",
+            "quantity": 0.1892058086183246,
+            "price": 105705.0,
+            "cost": 20020.0,
+            "commission": 20.0
+          },
+          {
+            "date": "2025-06-09 07:00:00",
+            "symbol": "Bitstamp:BTCUSD",
+            "action": "sell",
+            "quantity": 0.1892058086183246,
+            "price": 110307.0,
+            "proceeds": 20849.854406130267,
+            "commission": 20.87072513126153
+          },
+          {
+            "date": "2025-06-19 07:00:00",
+            "symbol": "Bitstamp:BTCUSD",
+            "action": "buy",
+            "quantity": 0.192629249591415,
+            "price": 104688.0,
+            "cost": 20186.13685210728,
+            "commission": 20.165970881226055
+          },
+          {
+            "date": "2025-07-02 07:00:00",
+            "symbol": "Bitstamp:BTCUSD",
+            "action": "sell",
+            "quantity": 0.192629249591415,
+            "price": 108885.0,
+            "proceeds": 20953.46140591946,
+            "commission": 20.974435841761224
+          },
+          {
+            "date": "2025-08-01 07:00:00",
+            "symbol": "Bitstamp:BTCUSD",
+            "action": "buy",
+            "quantity": 0.179432157325296,
+            "price": 113243.0,
+            "cost": 20339.755227780483,
+            "commission": 20.319435791988493
+          }
+        ]
+      },
+      "trades": [
+        {
+          "date": "2025-06-01 07:00:00",
+          "symbol": "Bitstamp:BTCUSD",
+          "action": "buy",
+          "quantity": 0.1892058086183246,
+          "price": 105705.0,
+          "cost": 20020.0,
+          "commission": 20.0
+        },
+        {
+          "date": "2025-06-09 07:00:00",
+          "symbol": "Bitstamp:BTCUSD",
+          "action": "sell",
+          "quantity": 0.1892058086183246,
+          "price": 110307.0,
+          "proceeds": 20849.854406130267,
+          "commission": 20.87072513126153
+        },
+        {
+          "date": "2025-06-19 07:00:00",
+          "symbol": "Bitstamp:BTCUSD",
+          "action": "buy",
+          "quantity": 0.192629249591415,
+          "price": 104688.0,
+          "cost": 20186.13685210728,
+          "commission": 20.165970881226055
+        },
+        {
+          "date": "2025-07-02 07:00:00",
+          "symbol": "Bitstamp:BTCUSD",
+          "action": "sell",
+          "quantity": 0.192629249591415,
+          "price": 108885.0,
+          "proceeds": 20953.46140591946,
+          "commission": 20.974435841761224
+        },
+        {
+          "date": "2025-08-01 07:00:00",
+          "symbol": "Bitstamp:BTCUSD",
+          "action": "buy",
+          "quantity": 0.179432157325296,
+          "price": 113243.0,
+          "cost": 20339.755227780483,
+          "commission": 20.319435791988493
+        }
+      ],
+      "performance_metrics": {
+        "total_return": 0.016667550349704463,
+        "annualized_return": 0.06283999974924503,
+        "volatility": 0.027355141063073796,
+        "sharpe_ratio": 0.8206738356724366,
+        "max_drawdown": -0.008221417646134233,
+        "avg_drawdown": -0.0003947844549883786,
+        "drawdown_duration": 0.17,
+        "win_rate": 0.0,
+        "profit_factor": 0.0,
+        "avg_trade": 0.0,
+        "total_trades": 0,
+        "final_portfolio_value": 101666.75503497044,
+        "risk_metrics": {
+          "current_drawdown": 0.0,
+          "max_drawdown": -0.008221417646134233,
+          "volatility": 0.0273551410630738,
+          "portfolio_value": 101666.75503497044
+        }
+      },
+      "risk_metrics": {
+        "current_drawdown": 0.0,
+        "max_drawdown": -0.008221417646134233,
+        "volatility": 0.0273551410630738,
+        "portfolio_value": 101666.75503497044
+      }
+    },
+    "MACD_OPTIMIZED": {
+      "strategy_name": "MACD_OPTIMIZED",
+      "portfolio_history": [
+        {
+          "date": "2025-04-25 07:00:00",
+          "total_value": 100000,
+          "cash": 100000,
+          "positions": {}
+        },
+        {
+          "date": "2025-04-26 07:00:00",
+          "total_value": 100000,
+          "cash": 100000,
+          "positions": {}
+        },
+        {
+          "date": "2025-04-27 07:00:00",
+          "total_value": 100000,
+          "cash": 100000,
+          "positions": {}
+        },
+        {
+          "date": "2025-04-28 07:00:00",
+          "total_value": 100000,
+          "cash": 100000,
+          "positions": {}
+        },
+        {
+          "date": "2025-04-29 07:00:00",
+          "total_value": 100000,
+          "cash": 100000,
+          "positions": {}
+        },
+        {
+          "date": "2025-04-30 07:00:00",
+          "total_value": 100000,
+          "cash": 100000,
+          "positions": {}
+        },
+        {
+          "date": "2025-05-01 07:00:00",
+          "total_value": 100000,
+          "cash": 100000,
+          "positions": {}
+        },
+        {
+          "date": "2025-05-02 07:00:00",
+          "total_value": 100000,
+          "cash": 100000,
+          "positions": {}
+        },
+        {
+          "date": "2025-05-03 07:00:00",
+          "total_value": 100000,
+          "cash": 100000,
+          "positions": {}
+        },
+        {
+          "date": "2025-05-04 07:00:00",
+          "total_value": 100000,
+          "cash": 100000,
+          "positions": {}
+        },
+        {
+          "date": "2025-05-05 07:00:00",
+          "total_value": 100000,
+          "cash": 100000,
+          "positions": {}
+        },
+        {
+          "date": "2025-05-06 07:00:00",
+          "total_value": 100000,
+          "cash": 100000,
+          "positions": {}
+        },
+        {
+          "date": "2025-05-07 07:00:00",
+          "total_value": 100000,
+          "cash": 100000,
+          "positions": {}
+        },
+        {
+          "date": "2025-05-08 07:00:00",
+          "total_value": 100000,
+          "cash": 100000,
+          "positions": {}
+        },
+        {
+          "date": "2025-05-09 07:00:00",
+          "total_value": 100000,
+          "cash": 100000,
+          "positions": {}
+        },
+        {
+          "date": "2025-05-10 07:00:00",
+          "total_value": 100000,
+          "cash": 100000,
+          "positions": {}
+        },
+        {
+          "date": "2025-05-11 07:00:00",
+          "total_value": 100000,
+          "cash": 100000,
+          "positions": {}
+        },
+        {
+          "date": "2025-05-12 07:00:00",
+          "total_value": 100000,
+          "cash": 100000,
+          "positions": {}
+        },
+        {
+          "date": "2025-05-13 07:00:00",
+          "total_value": 100000,
+          "cash": 100000,
+          "positions": {}
+        },
+        {
+          "date": "2025-05-14 07:00:00",
+          "total_value": 100000,
+          "cash": 100000,
+          "positions": {}
+        },
+        {
+          "date": "2025-05-15 07:00:00",
+          "total_value": 100000,
+          "cash": 100000,
+          "positions": {}
+        },
+        {
+          "date": "2025-05-16 07:00:00",
+          "total_value": 100000,
+          "cash": 100000,
+          "positions": {}
+        },
+        {
+          "date": "2025-05-17 07:00:00",
+          "total_value": 100000,
+          "cash": 100000,
+          "positions": {}
+        },
+        {
+          "date": "2025-05-18 07:00:00",
+          "total_value": 100000,
+          "cash": 100000,
+          "positions": {}
+        },
+        {
+          "date": "2025-05-19 07:00:00",
+          "total_value": 100000,
+          "cash": 100000,
+          "positions": {}
+        },
+        {
+          "date": "2025-05-20 07:00:00",
+          "total_value": 100000,
+          "cash": 100000,
+          "positions": {}
+        },
+        {
+          "date": "2025-05-21 07:00:00",
+          "total_value": 100000,
+          "cash": 100000,
+          "positions": {}
+        },
+        {
+          "date": "2025-05-22 07:00:00",
+          "total_value": 100000,
+          "cash": 100000,
+          "positions": {}
+        },
+        {
+          "date": "2025-05-23 07:00:00",
+          "total_value": 100000,
+          "cash": 100000,
+          "positions": {}
+        },
+        {
+          "date": "2025-05-24 07:00:00",
+          "total_value": 100000,
+          "cash": 100000,
+          "positions": {}
+        },
+        {
+          "date": "2025-05-25 07:00:00",
+          "total_value": 100000,
+          "cash": 100000,
+          "positions": {}
+        },
+        {
+          "date": "2025-05-26 07:00:00",
+          "total_value": 100000,
+          "cash": 100000,
+          "positions": {}
+        },
+        {
+          "date": "2025-05-27 07:00:00",
+          "total_value": 100000,
+          "cash": 100000,
+          "positions": {}
+        },
+        {
+          "date": "2025-05-28 07:00:00",
+          "total_value": 100000,
+          "cash": 100000,
+          "positions": {}
+        },
+        {
+          "date": "2025-05-29 07:00:00",
+          "total_value": 100000,
+          "cash": 100000,
+          "positions": {}
+        },
+        {
+          "date": "2025-05-30 07:00:00",
+          "total_value": 100000,
+          "cash": 100000,
+          "positions": {}
+        },
+        {
+          "date": "2025-05-31 07:00:00",
+          "total_value": 100000,
+          "cash": 100000,
+          "positions": {}
+        },
+        {
+          "date": "2025-06-01 07:00:00",
+          "total_value": 100000,
+          "cash": 100000,
+          "positions": {}
+        },
+        {
+          "date": "2025-06-02 07:00:00",
+          "total_value": 100000,
+          "cash": 100000,
+          "positions": {}
+        },
+        {
+          "date": "2025-06-03 07:00:00",
+          "total_value": 100000,
+          "cash": 100000,
+          "positions": {}
+        },
+        {
+          "date": "2025-06-04 07:00:00",
+          "total_value": 100000,
+          "cash": 100000,
+          "positions": {}
+        },
+        {
+          "date": "2025-06-05 07:00:00",
+          "total_value": 100000,
+          "cash": 100000,
+          "positions": {}
+        },
+        {
+          "date": "2025-06-06 07:00:00",
+          "total_value": 100000,
+          "cash": 100000,
+          "positions": {}
+        },
+        {
+          "date": "2025-06-07 07:00:00",
+          "total_value": 100000,
+          "cash": 100000,
+          "positions": {}
+        },
+        {
+          "date": "2025-06-08 07:00:00",
+          "total_value": 100000,
+          "cash": 100000,
+          "positions": {}
+        },
+        {
+          "date": "2025-06-09 07:00:00",
+          "total_value": 100000,
+          "cash": 100000,
+          "positions": {}
+        },
+        {
+          "date": "2025-06-10 07:00:00",
+          "total_value": 100000,
+          "cash": 100000,
+          "positions": {}
+        },
+        {
+          "date": "2025-06-11 07:00:00",
+          "total_value": 100000,
+          "cash": 100000,
+          "positions": {}
+        },
+        {
+          "date": "2025-06-12 07:00:00",
+          "total_value": 100000,
+          "cash": 100000,
+          "positions": {}
+        },
+        {
+          "date": "2025-06-13 07:00:00",
+          "total_value": 100000,
+          "cash": 100000,
+          "positions": {}
+        },
+        {
+          "date": "2025-06-14 07:00:00",
+          "total_value": 100000,
+          "cash": 100000,
+          "positions": {}
+        },
+        {
+          "date": "2025-06-15 07:00:00",
+          "total_value": 100000,
+          "cash": 100000,
+          "positions": {}
+        },
+        {
+          "date": "2025-06-16 07:00:00",
+          "total_value": 100000,
+          "cash": 100000,
+          "positions": {}
+        },
+        {
+          "date": "2025-06-17 07:00:00",
+          "total_value": 100000,
+          "cash": 100000,
+          "positions": {}
+        },
+        {
+          "date": "2025-06-18 07:00:00",
+          "total_value": 100000,
+          "cash": 100000,
+          "positions": {}
+        },
+        {
+          "date": "2025-06-19 07:00:00",
+          "total_value": 100000,
+          "cash": 100000,
+          "positions": {}
+        },
+        {
+          "date": "2025-06-20 07:00:00",
+          "total_value": 100000,
+          "cash": 100000,
+          "positions": {}
+        },
+        {
+          "date": "2025-06-21 07:00:00",
+          "total_value": 100000,
+          "cash": 100000,
+          "positions": {}
+        },
+        {
+          "date": "2025-06-22 07:00:00",
+          "total_value": 100000,
+          "cash": 100000,
+          "positions": {}
+        },
+        {
+          "date": "2025-06-23 07:00:00",
+          "total_value": 100000,
+          "cash": 100000,
+          "positions": {}
+        },
+        {
+          "date": "2025-06-24 07:00:00",
+          "total_value": 100000,
+          "cash": 100000,
+          "positions": {}
+        },
+        {
+          "date": "2025-06-25 07:00:00",
+          "total_value": 99980.0,
+          "cash": 79980.0,
+          "positions": {
+            "Bitstamp:BTCUSD": {
+              "quantity": 0.18618853451004488,
+              "avg_price": 107418.0,
+              "entry_date": "2025-06-25 07:00:00"
+            }
+          }
+        },
+        {
+          "date": "2025-06-26 07:00:00",
+          "total_value": 99902.91794671284,
+          "cash": 79980.0,
+          "positions": {
+            "Bitstamp:BTCUSD": {
+              "quantity": 0.18618853451004488,
+              "avg_price": 107418.0,
+              "entry_date": "2025-06-25 07:00:00"
+            }
+          }
+        },
+        {
+          "date": "2025-06-27 07:00:00",
+          "total_value": 99920.7920460258,
+          "cash": 79980.0,
+          "positions": {
+            "Bitstamp:BTCUSD": {
+              "quantity": 0.18618853451004488,
+              "avg_price": 107418.0,
+              "entry_date": "2025-06-25 07:00:00"
+            }
+          }
+        },
+        {
+          "date": "2025-06-28 07:00:00",
+          "total_value": 99966.9668025843,
+          "cash": 79980.0,
+          "positions": {
+            "Bitstamp:BTCUSD": {
+              "quantity": 0.18618853451004488,
+              "avg_price": 107418.0,
+              "entry_date": "2025-06-25 07:00:00"
+            }
+          }
+        },
+        {
+          "date": "2025-06-29 07:00:00",
+          "total_value": 100159.85812433671,
+          "cash": 79980.0,
+          "positions": {
+            "Bitstamp:BTCUSD": {
+              "quantity": 0.18618853451004488,
+              "avg_price": 107418.0,
+              "entry_date": "2025-06-25 07:00:00"
+            }
+          }
+        },
+        {
+          "date": "2025-06-30 07:00:00",
+          "total_value": 99935.5009402521,
+          "cash": 79980.0,
+          "positions": {
+            "Bitstamp:BTCUSD": {
+              "quantity": 0.18618853451004488,
+              "avg_price": 107418.0,
+              "entry_date": "2025-06-25 07:00:00"
+            }
+          }
+        },
+        {
+          "date": "2025-07-01 07:00:00",
+          "total_value": 99661.80379452233,
+          "cash": 79980.0,
+          "positions": {
+            "Bitstamp:BTCUSD": {
+              "quantity": 0.18618853451004488,
+              "avg_price": 107418.0,
+              "entry_date": "2025-06-25 07:00:00"
+            }
+          }
+        },
+        {
+          "date": "2025-07-02 07:00:00",
+          "total_value": 100253.13858012624,
+          "cash": 79980.0,
+          "positions": {
+            "Bitstamp:BTCUSD": {
+              "quantity": 0.18618853451004488,
+              "avg_price": 107418.0,
+              "entry_date": "2025-06-25 07:00:00"
+            }
+          }
+        },
+        {
+          "date": "2025-07-03 07:00:00",
+          "total_value": 100395.2004319574,
+          "cash": 79980.0,
+          "positions": {
+            "Bitstamp:BTCUSD": {
+              "quantity": 0.18618853451004488,
+              "avg_price": 107418.0,
+              "entry_date": "2025-06-25 07:00:00"
+            }
+          }
+        },
+        {
+          "date": "2025-07-04 07:00:00",
+          "total_value": 100094.50594872367,
+          "cash": 79980.0,
+          "positions": {
+            "Bitstamp:BTCUSD": {
+              "quantity": 0.18618853451004488,
+              "avg_price": 107418.0,
+              "entry_date": "2025-06-25 07:00:00"
+            }
+          }
+        },
+        {
+          "date": "2025-07-05 07:00:00",
+          "total_value": 100133.04697536727,
+          "cash": 79980.0,
+          "positions": {
+            "Bitstamp:BTCUSD": {
+              "quantity": 0.18618853451004488,
+              "avg_price": 107418.0,
+              "entry_date": "2025-06-25 07:00:00"
+            }
+          }
+        },
+        {
+          "date": "2025-07-06 07:00:00",
+          "total_value": 100317.93219013573,
+          "cash": 79980.0,
+          "positions": {
+            "Bitstamp:BTCUSD": {
+              "quantity": 0.18618853451004488,
+              "avg_price": 107418.0,
+              "entry_date": "2025-06-25 07:00:00"
+            }
+          }
+        },
+        {
+          "date": "2025-07-07 07:00:00",
+          "total_value": 100141.79783648923,
+          "cash": 79980.0,
+          "positions": {
+            "Bitstamp:BTCUSD": {
+              "quantity": 0.18618853451004488,
+              "avg_price": 107418.0,
+              "entry_date": "2025-06-25 07:00:00"
+            }
+          }
+        },
+        {
+          "date": "2025-07-08 07:00:00",
+          "total_value": 100264.68226926586,
+          "cash": 79980.0,
+          "positions": {
+            "Bitstamp:BTCUSD": {
+              "quantity": 0.18618853451004488,
+              "avg_price": 107418.0,
+              "entry_date": "2025-06-25 07:00:00"
+            }
+          }
+        },
+        {
+          "date": "2025-07-09 07:00:00",
+          "total_value": 100700.36344001937,
+          "cash": 79980.0,
+          "positions": {
+            "Bitstamp:BTCUSD": {
+              "quantity": 0.18618853451004488,
+              "avg_price": 107418.0,
+              "entry_date": "2025-06-25 07:00:00"
+            }
+          }
+        },
+        {
+          "date": "2025-07-10 07:00:00",
+          "total_value": 101583.64184773501,
+          "cash": 79980.0,
+          "positions": {
+            "Bitstamp:BTCUSD": {
+              "quantity": 0.18618853451004488,
+              "avg_price": 107418.0,
+              "entry_date": "2025-06-25 07:00:00"
+            }
+          }
+        },
+        {
+          "date": "2025-07-11 07:00:00",
+          "total_value": 101871.86169915657,
+          "cash": 79980.0,
+          "positions": {
+            "Bitstamp:BTCUSD": {
+              "quantity": 0.18618853451004488,
+              "avg_price": 107418.0,
+              "entry_date": "2025-06-25 07:00:00"
+            }
+          }
+        },
+        {
+          "date": "2025-07-12 07:00:00",
+          "total_value": 101850.45001768791,
+          "cash": 79980.0,
+          "positions": {
+            "Bitstamp:BTCUSD": {
+              "quantity": 0.18618853451004488,
+              "avg_price": 107418.0,
+              "entry_date": "2025-06-25 07:00:00"
+            }
+          }
+        },
+        {
+          "date": "2025-07-13 07:00:00",
+          "total_value": 102161.5710588542,
+          "cash": 79980.0,
+          "positions": {
+            "Bitstamp:BTCUSD": {
+              "quantity": 0.18618853451004488,
+              "avg_price": 107418.0,
+              "entry_date": "2025-06-25 07:00:00"
+            }
+          }
+        },
+        {
+          "date": "2025-07-14 07:00:00",
+          "total_value": 102300.09532852967,
+          "cash": 79980.0,
+          "positions": {
+            "Bitstamp:BTCUSD": {
+              "quantity": 0.18618853451004488,
+              "avg_price": 107418.0,
+              "entry_date": "2025-06-25 07:00:00"
+            }
+          }
+        },
+        {
+          "date": "2025-07-15 07:00:00",
+          "total_value": 101907.23752071348,
+          "cash": 79980.0,
+          "positions": {
+            "Bitstamp:BTCUSD": {
+              "quantity": 0.18618853451004488,
+              "avg_price": 107418.0,
+              "entry_date": "2025-06-25 07:00:00"
+            }
+          }
+        },
+        {
+          "date": "2025-07-16 07:00:00",
+          "total_value": 102083.9304399635,
+          "cash": 79980.0,
+          "positions": {
+            "Bitstamp:BTCUSD": {
+              "quantity": 0.18618853451004488,
+              "avg_price": 107418.0,
+              "entry_date": "2025-06-25 07:00:00"
+            }
+          }
+        },
+        {
+          "date": "2025-07-17 07:00:00",
+          "total_value": 102187.6374536856,
+          "cash": 79980.0,
+          "positions": {
+            "Bitstamp:BTCUSD": {
+              "quantity": 0.18618853451004488,
+              "avg_price": 107418.0,
+              "entry_date": "2025-06-25 07:00:00"
+            }
+          }
+        },
+        {
+          "date": "2025-07-18 07:00:00",
+          "total_value": 101954.34321994451,
+          "cash": 79980.0,
+          "positions": {
+            "Bitstamp:BTCUSD": {
+              "quantity": 0.18618853451004488,
+              "avg_price": 107418.0,
+              "entry_date": "2025-06-25 07:00:00"
+            }
+          }
+        },
+        {
+          "date": "2025-07-19 07:00:00",
+          "total_value": 101934.60723528646,
+          "cash": 79980.0,
+          "positions": {
+            "Bitstamp:BTCUSD": {
+              "quantity": 0.18618853451004488,
+              "avg_price": 107418.0,
+              "entry_date": "2025-06-25 07:00:00"
+            }
+          }
+        },
+        {
+          "date": "2025-07-20 07:00:00",
+          "total_value": 101827.17645087416,
+          "cash": 79980.0,
+          "positions": {
+            "Bitstamp:BTCUSD": {
+              "quantity": 0.18618853451004488,
+              "avg_price": 107418.0,
+              "entry_date": "2025-06-25 07:00:00"
+            }
+          }
+        },
+        {
+          "date": "2025-07-21 07:00:00",
+          "total_value": 101845.42292725615,
+          "cash": 79980.0,
+          "positions": {
+            "Bitstamp:BTCUSD": {
+              "quantity": 0.18618853451004488,
+              "avg_price": 107418.0,
+              "entry_date": "2025-06-25 07:00:00"
+            }
+          }
+        },
+        {
+          "date": "2025-07-22 07:00:00",
+          "total_value": 102324.672215085,
+          "cash": 79980.0,
+          "positions": {
+            "Bitstamp:BTCUSD": {
+              "quantity": 0.18618853451004488,
+              "avg_price": 107418.0,
+              "entry_date": "2025-06-25 07:00:00"
+            }
+          }
+        },
+        {
+          "date": "2025-07-23 07:00:00",
+          "total_value": 102101.61835074196,
+          "cash": 79980.0,
+          "positions": {
+            "Bitstamp:BTCUSD": {
+              "quantity": 0.18618853451004488,
+              "avg_price": 107418.0,
+              "entry_date": "2025-06-25 07:00:00"
+            }
+          }
+        },
+        {
+          "date": "2025-07-24 07:00:00",
+          "total_value": 102014.85449366028,
+          "cash": 79980.0,
+          "positions": {
+            "Bitstamp:BTCUSD": {
+              "quantity": 0.18618853451004488,
+              "avg_price": 107418.0,
+              "entry_date": "2025-06-25 07:00:00"
+            }
+          }
+        },
+        {
+          "date": "2025-07-25 07:00:00",
+          "total_value": 101885.6396507103,
+          "cash": 79980.0,
+          "positions": {
+            "Bitstamp:BTCUSD": {
+              "quantity": 0.18618853451004488,
+              "avg_price": 107418.0,
+              "entry_date": "2025-06-25 07:00:00"
+            }
+          }
+        },
+        {
+          "date": "2025-07-26 07:00:00",
+          "total_value": 101943.17190787391,
+          "cash": 79980.0,
+          "positions": {
+            "Bitstamp:BTCUSD": {
+              "quantity": 0.18618853451004488,
+              "avg_price": 107418.0,
+              "entry_date": "2025-06-25 07:00:00"
+            }
+          }
+        },
+        {
+          "date": "2025-07-27 07:00:00",
+          "total_value": 102223.75802938055,
+          "cash": 79980.0,
+          "positions": {
+            "Bitstamp:BTCUSD": {
+              "quantity": 0.18618853451004488,
+              "avg_price": 107418.0,
+              "entry_date": "2025-06-25 07:00:00"
+            }
+          }
+        },
+        {
+          "date": "2025-07-28 07:00:00",
+          "total_value": 101959.74268744531,
+          "cash": 79980.0,
+          "positions": {
+            "Bitstamp:BTCUSD": {
+              "quantity": 0.18618853451004488,
+              "avg_price": 107418.0,
+              "entry_date": "2025-06-25 07:00:00"
+            }
+          }
+        },
+        {
+          "date": "2025-07-29 07:00:00",
+          "total_value": 101914.51265151092,
+          "cash": 101914.51265151092,
+          "positions": {
+            "Bitstamp:BTCUSD": {
+              "quantity": 0,
+              "avg_price": 0
+            }
+          }
+        },
+        {
+          "date": "2025-07-30 07:00:00",
+          "total_value": 101914.51265151092,
+          "cash": 101914.51265151092,
+          "positions": {
+            "Bitstamp:BTCUSD": {
+              "quantity": 0,
+              "avg_price": 0
+            }
+          }
+        },
+        {
+          "date": "2025-07-31 07:00:00",
+          "total_value": 101914.51265151092,
+          "cash": 101914.51265151092,
+          "positions": {
+            "Bitstamp:BTCUSD": {
+              "quantity": 0,
+              "avg_price": 0
+            }
+          }
+        },
+        {
+          "date": "2025-08-01 07:00:00",
+          "total_value": 101914.51265151092,
+          "cash": 101914.51265151092,
+          "positions": {
+            "Bitstamp:BTCUSD": {
+              "quantity": 0,
+              "avg_price": 0
+            }
+          }
+        },
+        {
+          "date": "2025-08-02 07:00:00",
+          "total_value": 101914.51265151092,
+          "cash": 101914.51265151092,
+          "positions": {
+            "Bitstamp:BTCUSD": {
+              "quantity": 0,
+              "avg_price": 0
+            }
+          }
+        }
+      ],
+      "final_portfolio": {
+        "cash": 101914.51265151092,
+        "positions": {
+          "Bitstamp:BTCUSD": {
+            "quantity": 0,
+            "avg_price": 0
+          }
+        },
+        "total_value": 101914.51265151092,
+        "trades": [
+          {
+            "date": "2025-06-25 07:00:00",
+            "symbol": "Bitstamp:BTCUSD",
+            "action": "buy",
+            "quantity": 0.18618853451004488,
+            "price": 107418.0,
+            "cost": 20020.0,
+            "commission": 20.0
+          },
+          {
+            "date": "2025-07-29 07:00:00",
+            "symbol": "Bitstamp:BTCUSD",
+            "action": "sell",
+            "quantity": 0.18618853451004488,
+            "price": 117926.0,
+            "proceeds": 21934.512651510922,
+            "commission": 21.956469120631557
+          }
+        ]
+      },
+      "trades": [
+        {
+          "date": "2025-06-25 07:00:00",
+          "symbol": "Bitstamp:BTCUSD",
+          "action": "buy",
+          "quantity": 0.18618853451004488,
+          "price": 107418.0,
+          "cost": 20020.0,
+          "commission": 20.0
+        },
+        {
+          "date": "2025-07-29 07:00:00",
+          "symbol": "Bitstamp:BTCUSD",
+          "action": "sell",
+          "quantity": 0.18618853451004488,
+          "price": 117926.0,
+          "proceeds": 21934.512651510922,
+          "commission": 21.956469120631557
+        }
+      ],
+      "performance_metrics": {
+        "total_return": 0.019145126515109245,
+        "annualized_return": 0.0724206517792978,
+        "volatility": 0.02545651292738858,
+        "sharpe_ratio": 1.1233668185692458,
+        "max_drawdown": -0.004972594202321041,
+        "avg_drawdown": -0.0008080973109672779,
+        "drawdown_duration": 0.3,
+        "win_rate": 0.0,
+        "profit_factor": 0.0,
+        "avg_trade": 0.0,
+        "total_trades": 0,
+        "final_portfolio_value": 101914.51265151092,
+        "risk_metrics": {
+          "current_drawdown": -0.004008413168545821,
+          "max_drawdown": -0.004972594202321041,
+          "volatility": 0.02545651292738858,
+          "portfolio_value": 101914.51265151092
+        }
+      },
+      "risk_metrics": {
+        "current_drawdown": -0.004008413168545821,
+        "max_drawdown": -0.004972594202321041,
+        "volatility": 0.02545651292738858,
+        "portfolio_value": 101914.51265151092
+      }
+    }
+  },
+  "comparison_results": {
+    "optimization_summary": {
+      "sma_crossover": {
+        "best_parameters": {
+          "short_window": 10,
+          "long_window": 60
+        },
+        "best_metrics": {
+          "total_return": 0.01543756352878689,
+          "annualized_return": 0.05810694969814412,
+          "sharpe_ratio": 0.6914974766123824,
+          "max_drawdown": -0.012492581237808715,
+          "volatility": 0.0280358756126256,
+          "win_rate": 0.0,
+          "profit_factor": 0.0,
+          "total_trades": 0,
+          "final_portfolio_value": 101543.7563528787,
+          "current_drawdown": -0.01163057836575548,
+          "portfolio_volatility": 0.0280358756126256
+        },
+        "total_combinations_tested": 48,
+        "optimization_metric": "sharpe_ratio"
+      },
+      "rsi": {
+        "best_parameters": {
+          "period": 10,
+          "oversold": 30,
+          "overbought": 70
+        },
+        "best_metrics": {
+          "total_return": 0.016606543416213926,
+          "annualized_return": 0.06260487909410739,
+          "sharpe_ratio": 0.8152006991161082,
+          "max_drawdown": -0.008221417646134233,
+          "volatility": 0.027351263176516333,
+          "win_rate": 0.0,
+          "profit_factor": 0.0,
+          "total_trades": 0,
+          "final_portfolio_value": 101660.65434162138,
+          "current_drawdown": 0.0,
+          "portfolio_volatility": 0.02735126317651633
+        },
+        "total_combinations_tested": 50,
+        "optimization_metric": "sharpe_ratio"
+      },
+      "macd": {
+        "best_parameters": {
+          "fast_period": 20,
+          "slow_period": 35,
+          "signal_period": 15
+        },
+        "best_metrics": {
+          "total_return": 0.019145126515109245,
+          "annualized_return": 0.0724206517792978,
+          "sharpe_ratio": 1.1233668185692458,
+          "max_drawdown": -0.004972594202321041,
+          "volatility": 0.02545651292738858,
+          "win_rate": 0.0,
+          "profit_factor": 0.0,
+          "total_trades": 0,
+          "final_portfolio_value": 101914.51265151092,
+          "current_drawdown": -0.004008413168545821,
+          "portfolio_volatility": 0.02545651292738858
+        },
+        "total_combinations_tested": 50,
+        "optimization_metric": "sharpe_ratio"
+      }
+    },
+    "backtest_summary": {
+      "SMA_CROSSOVER_OPTIMIZED": {
+        "final_portfolio_value": 101550.20405067131,
+        "total_return": 0.015502040506713,
+        "sharpe_ratio": 0.6971591321951057,
+        "max_drawdown": -0.012492581237808715,
+        "win_rate": 0.0,
+        "profit_factor": 0.0
+      },
+      "RSI_OPTIMIZED": {
+        "final_portfolio_value": 101666.75503497044,
+        "total_return": 0.016667550349704463,
+        "sharpe_ratio": 0.8206738356724366,
+        "max_drawdown": -0.008221417646134233,
+        "win_rate": 0.0,
+        "profit_factor": 0.0
+      },
+      "MACD_OPTIMIZED": {
+        "final_portfolio_value": 101914.51265151092,
+        "total_return": 0.019145126515109245,
+        "sharpe_ratio": 1.1233668185692458,
+        "max_drawdown": -0.004972594202321041,
+        "win_rate": 0.0,
+        "profit_factor": 0.0
+      }
+    },
+    "improvement_analysis": {},
+    "recommendations": [
+      "Best performing strategy: MACD_OPTIMIZED (Sharpe: 1.123)"
+    ]
+  }
+}

@@ -1,0 +1,22 @@
+=== BÁO CÁO OPTIMIZATION ===
+
+## SMA_CROSSOVER
+Best parameters: {}
+Best metric value: N/A
+Total combinations tested: 0
+
+--------------------------------------------------
+
+## RSI
+Best parameters: {}
+Best metric value: N/A
+Total combinations tested: 0
+
+--------------------------------------------------
+
+## MACD
+Best parameters: {}
+Best metric value: N/A
+Total combinations tested: 0
+
+--------------------------------------------------

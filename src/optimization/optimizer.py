@@ -46,7 +46,8 @@ class StrategyOptimizer:
                          optimization_metric: str = 'sharpe_ratio',
                          max_combinations: int = None,
                          filters: Dict[str, Any] = None,
-                         use_parallel: bool = True) -> Dict[str, Any]:
+                         use_parallel: bool = True,
+                         historical_data: pd.DataFrame = None) -> Dict[str, Any]:
         """
         Optimize parameters for a specific strategy type
         
@@ -58,6 +59,7 @@ class StrategyOptimizer:
             max_combinations: Maximum number of parameter combinations to test
             filters: Optional filters for parameter combinations
             use_parallel: Whether to use parallel processing
+            historical_data: Pre-fetched historical data (optional)
             
         Returns:
             Dictionary containing optimization results
@@ -78,9 +80,9 @@ class StrategyOptimizer:
         
         # Run optimization
         if use_parallel and len(combinations) > 10:
-            results = self._optimize_parallel(strategy_type, combinations, start_date, end_date, optimization_metric)
+            results = self._optimize_parallel(strategy_type, combinations, start_date, end_date, optimization_metric, historical_data)
         else:
-            results = self._optimize_sequential(strategy_type, combinations, start_date, end_date, optimization_metric)
+            results = self._optimize_sequential(strategy_type, combinations, start_date, end_date, optimization_metric, historical_data)
         
         # Find best parameters
         best_params = self._find_best_parameters(results, optimization_metric)
@@ -102,14 +104,15 @@ class StrategyOptimizer:
         return self.optimization_results[strategy_type]
     
     def _optimize_sequential(self, strategy_type: str, combinations: List[Dict[str, Any]],
-                           start_date: str, end_date: str, optimization_metric: str) -> List[Dict[str, Any]]:
+                           start_date: str, end_date: str, optimization_metric: str,
+                           historical_data: pd.DataFrame = None) -> List[Dict[str, Any]]:
         """Run optimization sequentially"""
         results = []
         
         for i, params in enumerate(combinations):
             try:
                 result = self._test_parameter_combination(
-                    strategy_type, params, start_date, end_date
+                    strategy_type, params, start_date, end_date, historical_data
                 )
                 result['parameters'] = params
                 result['combination_index'] = i
@@ -125,14 +128,15 @@ class StrategyOptimizer:
         return results
     
     def _optimize_parallel(self, strategy_type: str, combinations: List[Dict[str, Any]],
-                          start_date: str, end_date: str, optimization_metric: str) -> List[Dict[str, Any]]:
+                          start_date: str, end_date: str, optimization_metric: str,
+                          historical_data: pd.DataFrame = None) -> List[Dict[str, Any]]:
         """Run optimization using parallel processing"""
         results = []
         
         with ProcessPoolExecutor(max_workers=min(4, len(combinations))) as executor:
             # Submit all tasks
             future_to_params = {
-                executor.submit(self._test_parameter_combination, strategy_type, params, start_date, end_date): params
+                executor.submit(self._test_parameter_combination, strategy_type, params, start_date, end_date, historical_data): params
                 for params in combinations
             }
             
@@ -155,7 +159,8 @@ class StrategyOptimizer:
         return results
     
     def _test_parameter_combination(self, strategy_type: str, params: Dict[str, Any],
-                                  start_date: str, end_date: str) -> Dict[str, Any]:
+                                  start_date: str, end_date: str,
+                                  historical_data: pd.DataFrame = None) -> Dict[str, Any]:
         """Test a single parameter combination"""
         try:
             # Create strategy with parameters
@@ -165,9 +170,9 @@ class StrategyOptimizer:
             
             strategy = strategy_class(params)
             
-            # Run backtest
+            # Run backtest with optional historical data
             strategies = {f"{strategy_type}_test": strategy}
-            results = self.backtest_engine.run_backtest(strategies, start_date, end_date)
+            results = self.backtest_engine.run_backtest(strategies, start_date, end_date, historical_data)
             
             # Extract metrics
             strategy_result = results.get(f"{strategy_type}_test", {})
@@ -232,7 +237,8 @@ class StrategyOptimizer:
     def optimize_multiple_strategies(self, strategy_types: List[str],
                                    start_date: str, end_date: str,
                                    optimization_metric: str = 'sharpe_ratio',
-                                   max_combinations_per_strategy: int = None) -> Dict[str, Any]:
+                                   max_combinations_per_strategy: int = None,
+                                   historical_data: pd.DataFrame = None) -> Dict[str, Any]:
         """
         Optimize multiple strategies
         
@@ -242,6 +248,7 @@ class StrategyOptimizer:
             end_date: End date for optimization period
             optimization_metric: Metric to optimize
             max_combinations_per_strategy: Maximum combinations per strategy
+            historical_data: Pre-fetched historical data (optional)
             
         Returns:
             Dictionary containing results for all strategies
@@ -254,7 +261,8 @@ class StrategyOptimizer:
             try:
                 result = self.optimize_strategy(
                     strategy_type, start_date, end_date, 
-                    optimization_metric, max_combinations_per_strategy
+                    optimization_metric, max_combinations_per_strategy,
+                    historical_data=historical_data
                 )
                 all_results[strategy_type] = result
                 
@@ -366,6 +374,132 @@ class StrategyOptimizer:
         
         strategy_class = self.strategy_factory[strategy_type]
         return strategy_class(params)
+    
+    def select_optimal_strategy(self, strategy_types: List[str], 
+                              metric: str = 'sharpe_ratio') -> str:
+        """
+        Select the optimal strategy from multiple strategies based on a metric
+        
+        Args:
+            strategy_types: List of strategy types to compare
+            metric: Metric to use for selection ('sharpe_ratio', 'total_return', 'profit_factor')
+            
+        Returns:
+            Name of the optimal strategy
+        """
+        if not strategy_types:
+            raise ValueError("No strategy types provided")
+        
+        best_strategy = None
+        best_value = -999 if metric in ['sharpe_ratio', 'total_return', 'profit_factor'] else 999
+        
+        for strategy_type in strategy_types:
+            if strategy_type not in self.best_parameters:
+                logger.warning(f"No optimization results for {strategy_type}")
+                continue
+            
+            metrics = self.best_parameters[strategy_type].get('metrics', {})
+            value = metrics.get(metric, 0)
+            
+            if metric in ['sharpe_ratio', 'total_return', 'profit_factor']:
+                if value > best_value:
+                    best_value = value
+                    best_strategy = strategy_type
+            else:  # For max_drawdown (lower is better)
+                if value < best_value:
+                    best_value = value
+                    best_strategy = strategy_type
+        
+        if best_strategy:
+            logger.info(f"Selected optimal strategy: {best_strategy} with {metric}: {best_value:.3f}")
+        else:
+            logger.warning("No optimal strategy found")
+        
+        return best_strategy
+    
+    def get_strategy_ranking(self, strategy_types: List[str], 
+                           metric: str = 'sharpe_ratio') -> List[Dict[str, Any]]:
+        """
+        Get ranking of strategies based on a metric
+        
+        Args:
+            strategy_types: List of strategy types to rank
+            metric: Metric to use for ranking
+            
+        Returns:
+            List of strategy rankings with metrics
+        """
+        rankings = []
+        
+        for strategy_type in strategy_types:
+            if strategy_type not in self.best_parameters:
+                continue
+            
+            metrics = self.best_parameters[strategy_type].get('metrics', {})
+            value = metrics.get(metric, 0)
+            
+            rankings.append({
+                'strategy_type': strategy_type,
+                'metric_value': value,
+                'parameters': self.best_parameters[strategy_type].get('parameters', {}),
+                'all_metrics': metrics
+            })
+        
+        # Sort by metric value (descending for higher-is-better metrics)
+        reverse = metric in ['sharpe_ratio', 'total_return', 'profit_factor', 'win_rate']
+        rankings.sort(key=lambda x: x['metric_value'], reverse=reverse)
+        
+        return rankings
+    
+    def create_optimal_strategy_portfolio(self, strategy_types: List[str],
+                                        top_n: int = 3,
+                                        metric: str = 'sharpe_ratio') -> Dict[str, Any]:
+        """
+        Create a portfolio of top-performing strategies
+        
+        Args:
+            strategy_types: List of strategy types to consider
+            top_n: Number of top strategies to include
+            metric: Metric to use for selection
+            
+        Returns:
+            Dictionary containing portfolio strategies and weights
+        """
+        rankings = self.get_strategy_ranking(strategy_types, metric)
+        
+        if not rankings:
+            logger.warning("No strategies available for portfolio creation")
+            return {}
+        
+        # Select top N strategies
+        top_strategies = rankings[:top_n]
+        
+        # Create strategies with optimized parameters
+        portfolio = {}
+        total_weight = 0
+        
+        for i, strategy_info in enumerate(top_strategies):
+            strategy_type = strategy_info['strategy_type']
+            weight = 1.0 / (i + 1)  # Decreasing weights (1, 0.5, 0.33, etc.)
+            total_weight += weight
+            
+            optimized_strategy = self.create_optimized_strategy(strategy_type)
+            portfolio[strategy_type] = {
+                'strategy': optimized_strategy,
+                'weight': weight,
+                'metrics': strategy_info['all_metrics'],
+                'parameters': strategy_info['parameters']
+            }
+        
+        # Normalize weights
+        for strategy_info in portfolio.values():
+            strategy_info['weight'] /= total_weight
+        
+        logger.info(f"Created portfolio with {len(portfolio)} strategies")
+        for strategy_type, info in portfolio.items():
+            logger.info(f"  {strategy_type}: weight={info['weight']:.3f}, {metric}={info['metrics'].get(metric, 0):.3f}")
+        
+        return portfolio
     
     def generate_optimization_report(self, strategy_type: str = None) -> str:
         """Generate a comprehensive optimization report"""

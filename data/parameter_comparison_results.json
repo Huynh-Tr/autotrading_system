@@ -1,0 +1,261 @@
+{
+  "sma_crossover": {
+    "conservative": [
+      {
+        "parameters": {
+          "short_window": 10,
+          "long_window": 30
+        },
+        "final_portfolio_value": 99781.2954536478,
+        "total_return": -0.002187045463521886,
+        "sharpe_ratio": -0.7917157553976213,
+        "max_drawdown": -0.01983776654108968,
+        "win_rate": 0.0,
+        "profit_factor": 0.0,
+        "volatility": 0.03167413615604255
+      },
+      {
+        "parameters": {
+          "short_window": 15,
+          "long_window": 40
+        },
+        "final_portfolio_value": 100627.95086601823,
+        "total_return": 0.0062795086601823424,
+        "sharpe_ratio": -0.10347236709171664,
+        "max_drawdown": -0.013165021112128528,
+        "win_rate": 0.0,
+        "profit_factor": 0.0,
+        "volatility": 0.03382363341726932
+      },
+      {
+        "parameters": {
+          "short_window": 20,
+          "long_window": 50
+        },
+        "final_portfolio_value": 101253.53242592902,
+        "total_return": 0.01253532425929027,
+        "sharpe_ratio": 0.41131598786894785,
+        "max_drawdown": -0.012179451410838923,
+        "win_rate": 0.0,
+        "profit_factor": 0.0,
+        "volatility": 0.029520201231066096
+      }
+    ],
+    "moderate": [
+      {
+        "parameters": {
+          "short_window": 5,
+          "long_window": 20
+        },
+        "final_portfolio_value": 101476.54271339314,
+        "total_return": 0.014765427133931475,
+        "sharpe_ratio": 0.49769342428575747,
+        "max_drawdown": -0.02302034576194518,
+        "win_rate": 0.0,
+        "profit_factor": 0.0,
+        "volatility": 0.03607955336796922
+      },
+      {
+        "parameters": {
+          "short_window": 8,
+          "long_window": 25
+        },
+        "final_portfolio_value": 100516.074874809,
+        "total_return": 0.005160748748090027,
+        "sharpe_ratio": -0.18069101532673326,
+        "max_drawdown": -0.01965312176401986,
+        "win_rate": 0.0,
+        "profit_factor": 0.0,
+        "volatility": 0.034845396152133265
+      },
+      {
+        "parameters": {
+          "short_window": 12,
+          "long_window": 35
+        },
+        "final_portfolio_value": 100139.63348436507,
+        "total_return": 0.0013963348436507594,
+        "sharpe_ratio": -0.4591337619739895,
+        "max_drawdown": -0.017650011562042947,
+        "win_rate": 0.0,
+        "profit_factor": 0.0,
+        "volatility": 0.034539875366559884
+      }
+    ],
+    "aggressive": [
+      {
+        "parameters": {
+          "short_window": 3,
+          "long_window": 15
+        },
+        "final_portfolio_value": 101015.70526023919,
+        "total_return": 0.01015705260239197,
+        "sharpe_ratio": 0.174626153647297,
+        "max_drawdown": -0.027257890136803114,
+        "win_rate": 0.0,
+        "profit_factor": 0.0,
+        "volatility": 0.03657416566953886
+      },
+      {
+        "parameters": {
+          "short_window": 5,
+          "long_window": 20
+        },
+        "final_portfolio_value": 101476.54271339314,
+        "total_return": 0.014765427133931475,
+        "sharpe_ratio": 0.49769342428575747,
+        "max_drawdown": -0.02302034576194518,
+        "win_rate": 0.0,
+        "profit_factor": 0.0,
+        "volatility": 0.03607955336796922
+      },
+      {
+        "parameters": {
+          "short_window": 8,
+          "long_window": 25
+        },
+        "final_portfolio_value": 100516.074874809,
+        "total_return": 0.005160748748090027,
+        "sharpe_ratio": -0.18069101532673326,
+        "max_drawdown": -0.01965312176401986,
+        "win_rate": 0.0,
+        "profit_factor": 0.0,
+        "volatility": 0.034845396152133265
+      }
+    ]
+  },
+  "rsi": {
+    "conservative": [
+      {
+        "parameters": {
+          "period": 14,
+          "oversold": 30,
+          "overbought": 70
+        },
+        "final_portfolio_value": 101469.72853218326,
+        "total_return": 0.014697285321832565,
+        "sharpe_ratio": 0.5802553603895446,
+        "max_drawdown": -0.017992359369936747,
+        "win_rate": 0.0,
+        "profit_factor": 0.0,
+        "volatility": 0.03032415750168944
+      },
+      {
+        "parameters": {
+          "period": 21,
+          "oversold": 25,
+          "overbought": 75
+        },
+        "final_portfolio_value": "100000",
+        "total_return": 0.0,
+        "sharpe_ratio": -Infinity,
+        "max_drawdown": 0.0,
+        "win_rate": 0.0,
+        "profit_factor": 0.0,
+        "volatility": 0.0
+      },
+      {
+        "parameters": {
+          "period": 28,
+          "oversold": 20,
+          "overbought": 80
+        },
+        "final_portfolio_value": "100000",
+        "total_return": 0.0,
+        "sharpe_ratio": -Infinity,
+        "max_drawdown": 0.0,
+        "win_rate": 0.0,
+        "profit_factor": 0.0,
+        "volatility": 0.0
+      }
+    ],
+    "moderate": [
+      {
+        "parameters": {
+          "period": 10,
+          "oversold": 35,
+          "overbought": 65
+        },
+        "final_portfolio_value": 101669.62594948764,
+        "total_return": 0.01669625949487652,
+        "sharpe_ratio": 0.8232454033144656,
+        "max_drawdown": -0.008221417646134233,
+        "win_rate": 0.0,
+        "profit_factor": 0.0,
+        "volatility": 0.027357081896825074
+      },
+      {
+        "parameters": {
+          "period": 14,
+          "oversold": 30,
+          "overbought": 70
+        },
+        "final_portfolio_value": 101469.72853218326,
+        "total_return": 0.014697285321832565,
+        "sharpe_ratio": 0.5802553603895446,
+        "max_drawdown": -0.017992359369936747,
+        "win_rate": 0.0,
+        "profit_factor": 0.0,
+        "volatility": 0.03032415750168944
+      },
+      {
+        "parameters": {
+          "period": 18,
+          "oversold": 25,
+          "overbought": 75
+        },
+        "final_portfolio_value": "100000",
+        "total_return": 0.0,
+        "sharpe_ratio": -Infinity,
+        "max_drawdown": 0.0,
+        "win_rate": 0.0,
+        "profit_factor": 0.0,
+        "volatility": 0.0
+      }
+    ],
+    "aggressive": [
+      {
+        "parameters": {
+          "period": 7,
+          "oversold": 40,
+          "overbought": 60
+        },
+        "final_portfolio_value": 99600.21844416778,
+        "total_return": -0.003997815558322126,
+        "sharpe_ratio": -0.9332795749130729,
+        "max_drawdown": -0.017449325436908882,
+        "win_rate": 0.0,
+        "profit_factor": 0.0,
+        "volatility": 0.03181903651246169
+      },
+      {
+        "parameters": {
+          "period": 10,
+          "oversold": 35,
+          "overbought": 65
+        },
+        "final_portfolio_value": 101669.62594948764,
+        "total_return": 0.01669625949487652,
+        "sharpe_ratio": 0.8232454033144656,
+        "max_drawdown": -0.008221417646134233,
+        "win_rate": 0.0,
+        "profit_factor": 0.0,
+        "volatility": 0.027357081896825074
+      },
+      {
+        "parameters": {
+          "period": 14,
+          "oversold": 30,
+          "overbought": 70
+        },
+        "final_portfolio_value": 101469.72853218326,
+        "total_return": 0.014697285321832565,
+        "sharpe_ratio": 0.5802553603895446,
+        "max_drawdown": -0.017992359369936747,
+        "win_rate": 0.0,
+        "profit_factor": 0.0,
+        "volatility": 0.03032415750168944
+      }
+    ]
+  }
+}

@@ -36,13 +36,13 @@ strategies:
     period: 20
     oversold: 30
     overbought: 70
-    enabled: false
+    enabled: true
     
   macd:
     fast_period: 15
     slow_period: 20
     signal_period: 7
-    enabled: false
+    enabled: true
 
 # Logging
 logging:

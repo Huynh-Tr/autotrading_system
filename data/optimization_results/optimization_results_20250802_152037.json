@@ -1,0 +1,23 @@
+{
+  "sma_crossover": {
+    "best_parameters": {},
+    "optimization_metric": "sharpe_ratio",
+    "total_combinations": 48,
+    "tested_combinations": 0,
+    "top_results": []
+  },
+  "rsi": {
+    "best_parameters": {},
+    "optimization_metric": "sharpe_ratio",
+    "total_combinations": 50,
+    "tested_combinations": 0,
+    "top_results": []
+  },
+  "macd": {
+    "best_parameters": {},
+    "optimization_metric": "sharpe_ratio",
+    "total_combinations": 50,
+    "tested_combinations": 0,
+    "top_results": []
+  }
+}

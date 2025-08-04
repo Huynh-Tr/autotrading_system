@@ -1,0 +1,38 @@
+{
+  "optimization_summary": {
+    "sma_crossover": {
+      "best_parameters": {},
+      "best_metrics": {},
+      "total_combinations_tested": 30,
+      "optimization_metric": "sharpe_ratio"
+    },
+    "rsi": {
+      "best_parameters": {},
+      "best_metrics": {},
+      "total_combinations_tested": 30,
+      "optimization_metric": "sharpe_ratio"
+    }
+  },
+  "backtest_summary": {
+    "SMA_CROSSOVER_OPTIMIZED": {
+      "final_portfolio_value": 101253.53242592902,
+      "total_return": 0.01253532425929027,
+      "sharpe_ratio": 0.41131598786894785,
+      "max_drawdown": -0.012179451410838923,
+      "win_rate": 0.0,
+      "profit_factor": 0.0
+    },
+    "RSI_OPTIMIZED": {
+      "final_portfolio_value": 101469.72853218326,
+      "total_return": 0.014697285321832565,
+      "sharpe_ratio": 0.5802553603895446,
+      "max_drawdown": -0.017992359369936747,
+      "win_rate": 0.0,
+      "profit_factor": 0.0
+    }
+  },
+  "improvement_analysis": {},
+  "recommendations": [
+    "Best performing strategy: RSI_OPTIMIZED (Sharpe: 0.580)"
+  ]
+}

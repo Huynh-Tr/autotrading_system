@@ -1,0 +1,269 @@
+================================================================================
+PARAMETER SET COMPARISON REPORT
+================================================================================
+Generated: 2025-08-02 15:37:01
+
+SMA_CROSSOVER STRATEGY
+----------------------------------------
+
+CONSERVATIVE PARAMETERS:
+  Set 1:
+    Parameters: {'short_window': 10, 'long_window': 30}
+    Total Return: -0.22%
+    Sharpe Ratio: -0.794
+    Max Drawdown: -1.98%
+    Win Rate: 0.00%
+    Profit Factor: 0.00
+
+  Set 2:
+    Parameters: {'short_window': 15, 'long_window': 40}
+    Total Return: 0.63%
+    Sharpe Ratio: -0.106
+    Max Drawdown: -1.32%
+    Win Rate: 0.00%
+    Profit Factor: 0.00
+
+  Set 3:
+    Parameters: {'short_window': 20, 'long_window': 50}
+    Total Return: 1.25%
+    Sharpe Ratio: 0.409
+    Max Drawdown: -1.22%
+    Win Rate: 0.00%
+    Profit Factor: 0.00
+
+
+MODERATE PARAMETERS:
+  Set 1:
+    Parameters: {'short_window': 5, 'long_window': 20}
+    Total Return: 1.48%
+    Sharpe Ratio: 0.498
+    Max Drawdown: -2.30%
+    Win Rate: 0.00%
+    Profit Factor: 0.00
+
+  Set 2:
+    Parameters: {'short_window': 8, 'long_window': 25}
+    Total Return: 0.52%
+    Sharpe Ratio: -0.181
+    Max Drawdown: -1.97%
+    Win Rate: 0.00%
+    Profit Factor: 0.00
+
+  Set 3:
+    Parameters: {'short_window': 12, 'long_window': 35}
+    Total Return: 0.14%
+    Sharpe Ratio: -0.461
+    Max Drawdown: -1.77%
+    Win Rate: 0.00%
+    Profit Factor: 0.00
+
+
+AGGRESSIVE PARAMETERS:
+  Set 1:
+    Parameters: {'short_window': 3, 'long_window': 15}
+    Total Return: 1.02%
+    Sharpe Ratio: 0.175
+    Max Drawdown: -2.73%
+    Win Rate: 0.00%
+    Profit Factor: 0.00
+
+  Set 2:
+    Parameters: {'short_window': 5, 'long_window': 20}
+    Total Return: 1.48%
+    Sharpe Ratio: 0.498
+    Max Drawdown: -2.30%
+    Win Rate: 0.00%
+    Profit Factor: 0.00
+
+  Set 3:
+    Parameters: {'short_window': 8, 'long_window': 25}
+    Total Return: 0.52%
+    Sharpe Ratio: -0.181
+    Max Drawdown: -1.97%
+    Win Rate: 0.00%
+    Profit Factor: 0.00
+
+BEST OVERALL PERFORMANCE:
+  Risk Profile: moderate
+  Set Number: 1
+  Parameters: {'short_window': 5, 'long_window': 20}
+  Sharpe Ratio: 0.498
+  Total Return: 1.48%
+
+================================================================================
+RSI STRATEGY
+----------------------------------------
+
+CONSERVATIVE PARAMETERS:
+  Set 1:
+    Parameters: {'period': 14, 'oversold': 30, 'overbought': 70}
+    Total Return: 1.47%
+    Sharpe Ratio: 0.580
+    Max Drawdown: -1.80%
+    Win Rate: 0.00%
+    Profit Factor: 0.00
+
+  Set 2:
+    Parameters: {'period': 21, 'oversold': 25, 'overbought': 75}
+    Total Return: 0.00%
+    Sharpe Ratio: -inf
+    Max Drawdown: 0.00%
+    Win Rate: 0.00%
+    Profit Factor: 0.00
+
+  Set 3:
+    Parameters: {'period': 28, 'oversold': 20, 'overbought': 80}
+    Total Return: 0.00%
+    Sharpe Ratio: -inf
+    Max Drawdown: 0.00%
+    Win Rate: 0.00%
+    Profit Factor: 0.00
+
+
+MODERATE PARAMETERS:
+  Set 1:
+    Parameters: {'period': 10, 'oversold': 35, 'overbought': 65}
+    Total Return: 1.67%
+    Sharpe Ratio: 0.821
+    Max Drawdown: -0.82%
+    Win Rate: 0.00%
+    Profit Factor: 0.00
+
+  Set 2:
+    Parameters: {'period': 14, 'oversold': 30, 'overbought': 70}
+    Total Return: 1.47%
+    Sharpe Ratio: 0.580
+    Max Drawdown: -1.80%
+    Win Rate: 0.00%
+    Profit Factor: 0.00
+
+  Set 3:
+    Parameters: {'period': 18, 'oversold': 25, 'overbought': 75}
+    Total Return: 0.00%
+    Sharpe Ratio: -inf
+    Max Drawdown: 0.00%
+    Win Rate: 0.00%
+    Profit Factor: 0.00
+
+
+AGGRESSIVE PARAMETERS:
+  Set 1:
+    Parameters: {'period': 7, 'oversold': 40, 'overbought': 60}
+    Total Return: -0.40%
+    Sharpe Ratio: -0.936
+    Max Drawdown: -1.74%
+    Win Rate: 0.00%
+    Profit Factor: 0.00
+
+  Set 2:
+    Parameters: {'period': 10, 'oversold': 35, 'overbought': 65}
+    Total Return: 1.67%
+    Sharpe Ratio: 0.821
+    Max Drawdown: -0.82%
+    Win Rate: 0.00%
+    Profit Factor: 0.00
+
+  Set 3:
+    Parameters: {'period': 14, 'oversold': 30, 'overbought': 70}
+    Total Return: 1.47%
+    Sharpe Ratio: 0.580
+    Max Drawdown: -1.80%
+    Win Rate: 0.00%
+    Profit Factor: 0.00
+
+BEST OVERALL PERFORMANCE:
+  Risk Profile: moderate
+  Set Number: 1
+  Parameters: {'period': 10, 'oversold': 35, 'overbought': 65}
+  Sharpe Ratio: 0.821
+  Total Return: 1.67%
+
+================================================================================
+MACD STRATEGY
+----------------------------------------
+
+CONSERVATIVE PARAMETERS:
+  Set 1:
+    Parameters: {'fast_period': 12, 'slow_period': 26, 'signal_period': 9}
+    Total Return: 0.77%
+    Sharpe Ratio: -0.005
+    Max Drawdown: -1.13%
+    Win Rate: 0.00%
+    Profit Factor: 0.00
+
+  Set 2:
+    Parameters: {'fast_period': 15, 'slow_period': 30, 'signal_period': 12}
+    Total Return: 1.07%
+    Sharpe Ratio: 0.273
+    Max Drawdown: -1.13%
+    Win Rate: 0.00%
+    Profit Factor: 0.00
+
+  Set 3:
+    Parameters: {'fast_period': 18, 'slow_period': 35, 'signal_period': 15}
+    Total Return: 1.32%
+    Sharpe Ratio: 0.509
+    Max Drawdown: -0.92%
+    Win Rate: 0.00%
+    Profit Factor: 0.00
+
+
+MODERATE PARAMETERS:
+  Set 1:
+    Parameters: {'fast_period': 8, 'slow_period': 21, 'signal_period': 7}
+    Total Return: 1.79%
+    Sharpe Ratio: 0.818
+    Max Drawdown: -1.43%
+    Win Rate: 0.00%
+    Profit Factor: 0.00
+
+  Set 2:
+    Parameters: {'fast_period': 12, 'slow_period': 26, 'signal_period': 9}
+    Total Return: 0.77%
+    Sharpe Ratio: -0.005
+    Max Drawdown: -1.13%
+    Win Rate: 0.00%
+    Profit Factor: 0.00
+
+  Set 3:
+    Parameters: {'fast_period': 16, 'slow_period': 32, 'signal_period': 11}
+    Total Return: 1.12%
+    Sharpe Ratio: 0.327
+    Max Drawdown: -1.13%
+    Win Rate: 0.00%
+    Profit Factor: 0.00
+
+
+AGGRESSIVE PARAMETERS:
+  Set 1:
+    Parameters: {'fast_period': 5, 'slow_period': 15, 'signal_period': 5}
+    Total Return: 1.11%
+    Sharpe Ratio: 0.272
+    Max Drawdown: -1.26%
+    Win Rate: 0.00%
+    Profit Factor: 0.00
+
+  Set 2:
+    Parameters: {'fast_period': 8, 'slow_period': 21, 'signal_period': 7}
+    Total Return: 1.79%
+    Sharpe Ratio: 0.818
+    Max Drawdown: -1.43%
+    Win Rate: 0.00%
+    Profit Factor: 0.00
+
+  Set 3:
+    Parameters: {'fast_period': 12, 'slow_period': 26, 'signal_period': 9}
+    Total Return: 0.77%
+    Sharpe Ratio: -0.005
+    Max Drawdown: -1.13%
+    Win Rate: 0.00%
+    Profit Factor: 0.00
+
+BEST OVERALL PERFORMANCE:
+  Risk Profile: moderate
+  Set Number: 1
+  Parameters: {'fast_period': 8, 'slow_period': 21, 'signal_period': 7}
+  Sharpe Ratio: 0.818
+  Total Return: 1.79%
+
+================================================================================

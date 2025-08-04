@@ -1,0 +1,41 @@
+================================================================================
+COMPREHENSIVE OPTIMIZATION & BACKTEST REPORT
+================================================================================
+Generated: 2025-08-02 15:38:57
+
+OPTIMIZATION PHASE SUMMARY
+----------------------------------------
+
+SMA_CROSSOVER:
+  Best Parameters: {}
+  Best Sharpe Ratio: 0.000
+  Total Combinations Tested: 30
+
+RSI:
+  Best Parameters: {}
+  Best Sharpe Ratio: 0.000
+  Total Combinations Tested: 30
+
+BACKTEST PHASE SUMMARY
+----------------------------------------
+
+SMA_CROSSOVER_OPTIMIZED:
+  Final Portfolio Value: $101,253.53
+  Total Return: 1.25%
+  Sharpe Ratio: 0.411
+  Max Drawdown: -1.22%
+  Win Rate: 0.00%
+
+RSI_OPTIMIZED:
+  Final Portfolio Value: $101,469.73
+  Total Return: 1.47%
+  Sharpe Ratio: 0.580
+  Max Drawdown: -1.80%
+  Win Rate: 0.00%
+
+IMPROVEMENT ANALYSIS
+----------------------------------------
+
+RECOMMENDATIONS
+----------------------------------------
+1. Best performing strategy: RSI_OPTIMIZED (Sharpe: 0.580)

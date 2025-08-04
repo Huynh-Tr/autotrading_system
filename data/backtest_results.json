@@ -1,0 +1,68 @@
+{
+  "SMA_CROSSOVER_OPTIMIZED": {
+    "strategy_name": "SMA_CROSSOVER_OPTIMIZED",
+    "performance_metrics": {
+      "total_return": 0.01253532425929027,
+      "annualized_return": 0.04699988893143403,
+      "volatility": 0.029520201231066096,
+      "sharpe_ratio": 0.41131598786894785,
+      "max_drawdown": -0.012179451410838923,
+      "avg_drawdown": -0.001259793206787603,
+      "drawdown_duration": 0.34,
+      "win_rate": 0.0,
+      "profit_factor": 0.0,
+      "avg_trade": 0.0,
+      "total_trades": 0,
+      "final_portfolio_value": 101253.53242592902,
+      "risk_metrics": {
+        "current_drawdown": -0.011249076650288717,
+        "max_drawdown": -0.012179451410838923,
+        "volatility": 0.029520201231066096,
+        "portfolio_value": 101253.53242592902
+      }
+    },
+    "risk_metrics": {
+      "current_drawdown": -0.011249076650288717,
+      "max_drawdown": -0.012179451410838923,
+      "volatility": 0.029520201231066096,
+      "portfolio_value": 101253.53242592902
+    },
+    "final_portfolio": {
+      "cash": 80289.23841391658,
+      "total_value": 101253.53242592902
+    }
+  },
+  "RSI_OPTIMIZED": {
+    "strategy_name": "RSI_OPTIMIZED",
+    "performance_metrics": {
+      "total_return": 0.014697285321832565,
+      "annualized_return": 0.05526573798739087,
+      "volatility": 0.03032415750168944,
+      "sharpe_ratio": 0.5802553603895446,
+      "max_drawdown": -0.017992359369936747,
+      "avg_drawdown": -0.0026194608245661655,
+      "drawdown_duration": 0.55,
+      "win_rate": 0.0,
+      "profit_factor": 0.0,
+      "avg_trade": 0.0,
+      "total_trades": 0,
+      "final_portfolio_value": 101469.72853218326,
+      "risk_metrics": {
+        "current_drawdown": -0.0022911271367163644,
+        "max_drawdown": -0.017992359369936747,
+        "volatility": 0.03032415750168944,
+        "portfolio_value": 101469.72853218326
+      }
+    },
+    "risk_metrics": {
+      "current_drawdown": -0.0022911271367163644,
+      "max_drawdown": -0.017992359369936747,
+      "volatility": 0.03032415750168944,
+      "portfolio_value": 101469.72853218326
+    },
+    "final_portfolio": {
+      "cash": 101469.72853218326,
+      "total_value": 101469.72853218326
+    }
+  }
+}

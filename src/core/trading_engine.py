@@ -68,296 +68,330 @@ class TradingEngine:
         self.daily_returns = []
         self.portfolio_history = []
         
-        # Historical data for strategies
+        # Historical data for strategies - cached to avoid multiple fetches
         self.historical_data = None
+        self.data_start_date = None
+        self.data_end_date = None
+        self.data_symbols = None
         
         # Strategies
         self.strategies: Dict[str, BaseStrategy] = {}
         
+        # Optimization results
+        self.optimization_results = {}
+        self.backtest_results = {}
+        
         logger.info(f"Trading engine initialized with ${self.cash:,.2f} initial capital")
+    
+    def _fetch_and_cache_data(self, start_date: str, end_date: str, symbols: List[str] = None) -> pd.DataFrame:
+        """
+        Fetch and cache historical data to avoid multiple data fetches
+        
+        Args:
+            start_date: Start date for data
+            end_date: End date for data
+            symbols: List of symbols to fetch data for
+            
+        Returns:
+            DataFrame containing historical data
+        """
+        # Check if we already have cached data for this period
+        if (self.historical_data is not None and 
+            self.data_start_date == start_date and 
+            self.data_end_date == end_date and
+            self.data_symbols == symbols):
+            logger.info("Using cached historical data")
+            return self.historical_data
+        
+        # Fetch new data
+        logger.info(f"Fetching historical data from {start_date} to {end_date}")
+        
+        if symbols is None:
+            symbols = self.config.get("trading.symbols", ["AAPL"])
+        
+        # Get data from DataManager
+        historical_data = self.data_manager.get_historical_data(
+            symbols=symbols,
+            start_date=start_date,
+            end_date=end_date,
+            interval=self.config.get("data.interval", "1d"),
+            n_bars=self.config.get("data.n_bars", 1000)
+        )
+        
+        # Cache the data
+        self.historical_data = historical_data
+        self.data_start_date = start_date
+        self.data_end_date = end_date
+        self.data_symbols = symbols
+        
+        logger.info(f"Cached historical data: {historical_data.shape}")
+        return historical_data
     
     def add_strategy(self, strategy: BaseStrategy):
         """Add a trading strategy to the engine"""
         self.strategies[strategy.name] = strategy
         logger.info(f"Added strategy: {strategy.name}")
     
-    def run_backtest(self, start_date: str, end_date: str):
-        """Run backtesting simulation"""
+    def run_backtest(self, start_date: str, end_date: str, symbols: List[str] = None):
+        """Run backtesting simulation using BacktestEngine"""
         logger.info(f"Starting backtest from {start_date} to {end_date}")
         
-        # Get historical data with standardized OHLCV format
-        data = self.data_manager.get_historical_data_standardized(
-            symbols=self.config.get("trading.symbols"),
+        # Fetch and cache data
+        historical_data = self._fetch_and_cache_data(start_date, end_date, symbols)
+        
+        # Import BacktestEngine here to avoid circular imports
+        from ..backtesting.backtest_engine import BacktestEngine
+        
+        # Create backtest engine
+        backtest_engine = BacktestEngine(self.config)
+        
+        # Run backtest with current strategies and cached data
+        results = backtest_engine.run_backtest(
+            strategies=self.strategies,
             start_date=start_date,
             end_date=end_date,
-            interval=self.config.get("data.interval", "1d")
+            historical_data=historical_data  # Pass cached data
         )
         
-        # Validate and clean data
-        if not self.data_manager.validate_ohlcv_data(data):
-            logger.error("Invalid OHLCV data received")
-            return
+        # Store results
+        self.backtest_results = results
         
-        data = self.data_manager.clean_ohlcv_data(data)
-        
-        if data.empty:
-            logger.error("No valid data available for backtesting")
-            return
-        
-        logger.info(f"Loaded {len(data)} data points for {list(data.columns)}")
-        
-        # Store historical data for strategies
-        self.historical_data = data
-        
-        # Run simulation
-        for i, (date, row) in enumerate(data.iterrows()):
-            self._process_trading_day(date, row, i)
-            self._update_portfolio_value(date, row)
-            self.portfolio_history.append({
-                'date': date,
-                'total_value': self.portfolio_value,
-                'cash': self.cash,
-                'positions_value': self.portfolio_value - self.cash
-            })
-        
-        self._generate_backtest_report()
+        logger.info("Backtest completed using BacktestEngine")
+        return results
     
-    # def run_live_trading(self):
-    #     """Run live trading (placeholder for real implementation)"""
-    #     logger.info("Starting live trading mode")
-    #     # This would connect to real-time data feeds and execute real trades
-    #     # For now, this is a placeholder
-    #     pass
+    def run_live_trading(self):
+        """Run live trading (placeholder for real implementation)"""
+        logger.info("Starting live trading mode")
+        # This would connect to real-time data feeds and execute real trades
+        # For now, this is a placeholder
+        pass
     
-    def _process_trading_day(self, date: datetime, market_data: pd.Series, current_index: int):
-        """Process trading decisions for a single day"""
-        # Check if historical data is available
-        if self.historical_data is None or self.historical_data.empty:
-            logger.warning("No historical data available for trading day processing")
-            return
+    def optimize_strategies(self, strategy_types: List[str], 
+                          start_date: str, end_date: str,
+                          optimization_metric: str = 'sharpe_ratio',
+                          max_combinations_per_strategy: int = 50,
+                          symbols: List[str] = None) -> Dict[str, Any]:
+        """
+        Optimize parameters for multiple strategies
         
-        # Get symbols from the current market data
-        try:
-            symbols = get_symbols_from_data(self.historical_data)
-        except Exception as e:
-            logger.error(f"Error extracting symbols from historical data: {e}")
-            return
-        
-        for strategy_name, strategy in self.strategies.items():
-            if not self.config.get(f"strategies.{strategy_name}.enabled", True):
-                continue
-                
-            # Get historical data up to current point for strategy
-            historical_slice = self.historical_data.iloc[:current_index + 1]
-            # Pass both historical_data and current_data (market_data) to the strategy
-            signals = strategy.generate_signals(historical_slice, market_data)
+        Args:
+            strategy_types: List of strategy types to optimize
+            start_date: Start date for optimization
+            end_date: End date for optimization
+            optimization_metric: Metric to optimize for
+            max_combinations_per_strategy: Maximum parameter combinations to test
+            symbols: List of symbols to use for optimization
             
-            # Process signals for each symbol
-            for symbol in symbols:
-                if symbol not in signals:
-                    continue
-                    
-                signal = signals[symbol]
-                
-                # Extract current price for this symbol
-                current_price = get_current_price(market_data, symbol, 'close')
-                
-                if current_price is None or pd.isna(current_price):
-                    logger.warning(f"No valid price data for {symbol} on {date}")
-                    continue
-                
-                if signal == 'buy':
-                    self._execute_buy_order(symbol, date, current_price, strategy_name)
-                elif signal == 'sell':
-                    self._execute_sell_order(symbol, date, current_price, strategy_name)
-    
-    def _execute_buy_order(self, symbol: str, date: datetime, price: float, strategy_name: str):
-        """Execute a buy order"""
-        # Check risk management rules
-        if not self.risk_manager.can_buy(symbol, price, self.cash, self.positions):
-            return
+        Returns:
+            Dictionary containing optimization results
+        """
+        logger.info(f"Starting strategy optimization for {strategy_types}")
         
-        # Calculate position size
-        position_size = self.risk_manager.calculate_position_size(
-            symbol, price, self.cash, self.positions
+        # Fetch and cache data once for optimization
+        historical_data = self._fetch_and_cache_data(start_date, end_date, symbols)
+        
+        # Import StrategyOptimizer here to avoid circular imports
+        from ..optimization.optimizer import StrategyOptimizer
+        
+        # Create optimizer
+        optimizer = StrategyOptimizer(self.config)
+        
+        # Run optimization for multiple strategies with cached data
+        results = optimizer.optimize_multiple_strategies(
+            strategy_types=strategy_types,
+            start_date=start_date,
+            end_date=end_date,
+            optimization_metric=optimization_metric,
+            max_combinations_per_strategy=max_combinations_per_strategy,
+            historical_data=historical_data  # Pass cached data
         )
         
-        if position_size <= 0:
-            return
+        # Store optimization results
+        self.optimization_results = results
         
-        # Calculate quantity
-        quantity = position_size / price
-        commission = position_size * self.config.get("trading.commission", 0.001)
-        total_cost = position_size + commission
+        # Save results
+        optimizer.save_optimization_results("data/optimization_results.json")
         
-        if total_cost > self.cash:
-            return
-        
-        # Execute trade
-        self.cash -= total_cost
-        
-        if symbol in self.positions:
-            # Add to existing position
-            pos = self.positions[symbol]
-            total_quantity = pos.quantity + quantity
-            avg_price = ((pos.quantity * pos.entry_price) + (quantity * price)) / total_quantity
-            self.positions[symbol] = Position(
-                symbol=symbol,
-                quantity=total_quantity,
-                entry_price=avg_price,
-                entry_time=pos.entry_time,
-                current_price=price,
-                pnl=0,
-                pnl_pct=0
-            )
-        else:
-            # Create new position
-            self.positions[symbol] = Position(
-                symbol=symbol,
-                quantity=quantity,
-                entry_price=price,
-                entry_time=date,
-                current_price=price,
-                pnl=0,
-                pnl_pct=0
-            )
-        
-        # Record trade
-        self.trades.append(Trade(
-            symbol=symbol,
-            side='buy',
-            quantity=quantity,
-            price=price,
-            timestamp=date,
-            commission=commission,
-            strategy=strategy_name
-        ))
-        
-        logger.info(f"BUY: {quantity:.3f} {symbol} @ ${price:.2f} ({strategy_name})")
+        logger.info("Strategy optimization completed")
+        return results
     
-    def _execute_sell_order(self, symbol: str, date: datetime, price: float, strategy_name: str):
-        """Execute a sell order"""
-        if symbol not in self.positions:
-            return
+    def get_optimized_strategies(self) -> Dict[str, Any]:
+        """Get strategies with optimized parameters"""
+        if not hasattr(self, 'optimization_results') or not self.optimization_results:
+            logger.warning("No optimization results available")
+            return {}
         
-        position = self.positions[symbol]
-        if position.quantity <= 0:
-            return
+        # Import StrategyOptimizer
+        from ..optimization.optimizer import StrategyOptimizer
+        optimizer = StrategyOptimizer(self.config)
         
-        # Sell entire position
-        quantity = position.quantity
-        proceeds = quantity * price
-        commission = proceeds * self.config.get("trading.commission", 0.001)
-        net_proceeds = proceeds - commission
+        optimized_strategies = {}
+        for strategy_type in self.optimization_results.keys():
+            if strategy_type in optimizer.best_parameters:
+                optimized_strategy = optimizer.create_optimized_strategy(strategy_type)
+                optimized_strategies[strategy_type] = optimized_strategy
         
-        # Calculate P&L
-        pnl = net_proceeds - (quantity * position.entry_price)
-        pnl_pct = (pnl / (quantity * position.entry_price)) * 100
-        
-        # Update cash and remove position
-        self.cash += net_proceeds
-        del self.positions[symbol]
-        
-        # Record trade
-        self.trades.append(Trade(
-            symbol=symbol,
-            side='sell',
-            quantity=quantity,
-            price=price,
-            timestamp=date,
-            commission=commission,
-            strategy=strategy_name,
-            pnl=pnl,
-            pnl_pct=pnl_pct
-        ))
-        
-        logger.info(f"SELL: {quantity:.2f} {symbol} @ ${price:.2f} | P&L: ${pnl:.2f} ({pnl_pct:.2f}%) ({strategy_name})")
+        return optimized_strategies
     
-    def _update_portfolio_value(self, date: datetime, market_data: pd.Series):
-        """Update portfolio value and position P&L"""
-        positions_value = 0
+    def run_optimized_backtest(self, start_date: str, end_date: str,
+                             strategy_types: List[str] = None,
+                             symbols: List[str] = None) -> Dict[str, Any]:
+        """
+        Run backtest with optimized strategies
         
-        for symbol, position in self.positions.items():
-            # Extract current price using ohlcv_utils
-            current_price = get_current_price(market_data, symbol, 'close')
+        Args:
+            start_date: Start date for backtest
+            end_date: End date for backtest
+            strategy_types: List of strategy types to optimize (if None, use all available)
+            symbols: List of symbols to use for backtest
             
-            if current_price is None or pd.isna(current_price):
-                logger.warning(f"No valid price data for {symbol} on {date}")
-                continue
-                
-            position.current_price = current_price
-            position.pnl = (current_price - position.entry_price) * position.quantity
-            position.pnl_pct = ((current_price - position.entry_price) / position.entry_price) * 100
-            positions_value += position.quantity * current_price
+        Returns:
+            Dictionary containing backtest results
+        """
+        logger.info("Running optimized backtest")
         
-        self.portfolio_value = self.cash + positions_value
+        # Fetch and cache data once for the entire process
+        historical_data = self._fetch_and_cache_data(start_date, end_date, symbols)
+        
+        # Optimize strategies if not already done
+        if not hasattr(self, 'optimization_results') or not self.optimization_results:
+            if strategy_types is None:
+                strategy_types = ['sma_crossover', 'rsi', 'macd']
+            
+            self.optimize_strategies(
+                strategy_types=strategy_types,
+                start_date=start_date,
+                end_date=end_date,
+                symbols=symbols
+            )
+        
+        # Get optimized strategies
+        optimized_strategies = self.get_optimized_strategies()
+        
+        # Add optimized strategies to engine
+        for strategy_name, strategy in optimized_strategies.items():
+            self.add_strategy(strategy)
+        
+        # Run backtest with optimized strategies using cached data
+        results = self.run_backtest(start_date, end_date, symbols)
+        
+        return results
     
-    def _generate_backtest_report(self):
-        """Generate backtest performance report"""
-        if not self.portfolio_history:
-            logger.warning("No portfolio history available for backtest report")
-            return
+    def run_complete_optimization_workflow(self, strategy_types: List[str],
+                                         start_date: str, end_date: str,
+                                         optimization_metric: str = 'sharpe_ratio',
+                                         max_combinations_per_strategy: int = 50,
+                                         symbols: List[str] = None) -> Dict[str, Any]:
+        """
+        Run complete workflow: fetch data once, optimize, and backtest
         
-        df = pd.DataFrame(self.portfolio_history)
-        df.set_index('date', inplace=True)
+        Args:
+            strategy_types: List of strategy types to optimize
+            start_date: Start date for the entire process
+            end_date: End date for the entire process
+            optimization_metric: Metric to optimize for
+            max_combinations_per_strategy: Maximum parameter combinations to test
+            symbols: List of symbols to use
+            
+        Returns:
+            Dictionary containing both optimization and backtest results
+        """
+        logger.info("Starting complete optimization workflow")
         
-        # Calculate metrics
-        initial_capital = self.config.get("trading.initial_capital")
-        total_return = (self.portfolio_value - initial_capital) / initial_capital
-        daily_returns = df['total_value'].pct_change().dropna()
+        # Fetch data once for the entire workflow
+        historical_data = self._fetch_and_cache_data(start_date, end_date, symbols)
         
-        # Risk metrics
-        volatility = daily_returns.std() * np.sqrt(252) if len(daily_returns) > 0 else 0  # Annualized
-        sharpe_ratio = (daily_returns.mean() * 252) / volatility if volatility > 0 else 0
+        # Step 1: Run optimization
+        optimization_results = self.optimize_strategies(
+            strategy_types=strategy_types,
+            start_date=start_date,
+            end_date=end_date,
+            optimization_metric=optimization_metric,
+            max_combinations_per_strategy=max_combinations_per_strategy,
+            symbols=symbols
+        )
         
-        # Maximum drawdown
-        if len(daily_returns) > 0:
-            cumulative_returns = (1 + daily_returns).cumprod()
-            running_max = cumulative_returns.expanding().max()
-            drawdown = (cumulative_returns - running_max) / running_max
-            max_drawdown = drawdown.min()
-        else:
-            max_drawdown = 0
+        # Step 2: Run backtest with optimized strategies
+        backtest_results = self.run_optimized_backtest(
+            start_date=start_date,
+            end_date=end_date,
+            strategy_types=strategy_types,
+            symbols=symbols
+        )
         
-        # Calculate trade statistics
-        buy_trades = [t for t in self.trades if t.side == 'buy']
-        sell_trades = [t for t in self.trades if t.side == 'sell']
+        # Combine results
+        complete_results = {
+            'optimization_results': optimization_results,
+            'backtest_results': backtest_results,
+            'data_info': {
+                'start_date': start_date,
+                'end_date': end_date,
+                'symbols': symbols or self.config.get("trading.symbols", ["AAPL"]),
+                'data_shape': historical_data.shape if historical_data is not None else None
+            }
+        }
         
-        logger.info("=== BACKTEST RESULTS ===")
-        logger.info(f"Initial Capital: ${initial_capital:,.2f}")
-        logger.info(f"Final Portfolio Value: ${self.portfolio_value:,.2f}")
-        logger.info(f"Total Return: {total_return:.2%}")
-        logger.info(f"Annualized Volatility: {volatility:.2%}")
-        logger.info(f"Sharpe Ratio: {sharpe_ratio:.2f}")
-        logger.info(f"Maximum Drawdown: {max_drawdown:.2%}")
-        logger.info(f"Total Trades: {len(self.trades)}")
-        logger.info(f"Buy Trades: {len(buy_trades)}")
-        logger.info(f"Sell Trades: {len(sell_trades)}")
+        logger.info("Complete optimization workflow finished")
+        return complete_results
+    
+    def get_optimization_summary(self) -> Dict[str, Any]:
+        """Get summary of optimization results"""
+        if not hasattr(self, 'optimization_results') or not self.optimization_results:
+            return {}
         
-        # Save detailed results
-        import os
-        os.makedirs('data', exist_ok=True)
-        
-        # Save portfolio history
-        df.to_csv('data/backtest_results.csv')
-        logger.info("Backtest results saved to data/backtest_results.csv")
-        
-        # Save trade details
-        if self.trades:
-            trades_df = pd.DataFrame([
-                {
-                    'timestamp': t.timestamp,
-                    'symbol': t.symbol,
-                    'side': t.side,
-                    'quantity': t.quantity,
-                    'price': t.price,
-                    'commission': t.commission,
-                    'strategy': t.strategy
+        summary = {}
+        for strategy_type, results in self.optimization_results.items():
+            if 'best_parameters' in results:
+                best_params = results['best_parameters']
+                summary[strategy_type] = {
+                    'best_parameters': best_params.get('parameters', {}),
+                    'best_metrics': best_params.get('metrics', {}),
+                    'total_combinations_tested': results.get('total_combinations', 0),
+                    'optimization_metric': results.get('optimization_metric', '')
                 }
-                for t in self.trades
-            ])
-            trades_df.to_csv('data/trades.csv', index=False)
-            logger.info("Trade details saved to data/trades.csv")
+        
+        return summary
+    
+    def save_optimization_results(self, filepath: str = "data/optimization_results.json"):
+        """Save optimization results to file"""
+        import json
+        import os
+        
+        os.makedirs(os.path.dirname(filepath), exist_ok=True)
+        
+        with open(filepath, 'w') as f:
+            json.dump(self.optimization_results, f, indent=2, default=str)
+        
+        logger.info(f"Optimization results saved to {filepath}")
+    
+    def load_optimization_results(self, filepath: str = "data/optimization_results.json"):
+        """Load optimization results from file"""
+        import json
+        
+        try:
+            with open(filepath, 'r') as f:
+                self.optimization_results = json.load(f)
+            logger.info(f"Optimization results loaded from {filepath}")
+        except FileNotFoundError:
+            logger.warning(f"Optimization results file not found: {filepath}")
+    
+    def clear_cached_data(self):
+        """Clear cached historical data"""
+        self.historical_data = None
+        self.data_start_date = None
+        self.data_end_date = None
+        self.data_symbols = None
+        logger.info("Cached historical data cleared")
+    
+    def get_cached_data_info(self) -> Dict[str, Any]:
+        """Get information about cached data"""
+        return {
+            'has_cached_data': self.historical_data is not None,
+            'data_shape': self.historical_data.shape if self.historical_data is not None else None,
+            'start_date': self.data_start_date,
+            'end_date': self.data_end_date,
+            'symbols': self.data_symbols
+        }
     
     def get_portfolio_summary(self) -> Dict[str, Any]:
         """Get current portfolio summary with comprehensive metrics"""

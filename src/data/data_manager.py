@@ -138,8 +138,9 @@ class DataManager:
                     exchange=symbol.split(':')[0],
                     interval=interval_map[interval],
                     n_bars=n_bars
-                ).drop(columns=['symbol']) \
-                .reset_index(drop=False)
+                ) \
+                .reset_index(drop=False) \
+                .drop(columns=['symbol'])
                 
                 # Rename columns to standard OHLCV format
                 df.columns = ['time', 'open', 'high', 'low', 'close', 'volume']

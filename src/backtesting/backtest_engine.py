@@ -38,7 +38,8 @@ class BacktestEngine:
         logger.info("Backtest engine initialized")
     
     def run_backtest(self, strategies: Dict[str, BaseStrategy], 
-                    start_date: str, end_date: str) -> Dict[str, Any]:
+                    start_date: str, end_date: str,
+                    historical_data: pd.DataFrame = None) -> Dict[str, Any]:
         """
         Run backtest for multiple strategies using standardized OHLCV format
         
@@ -46,16 +47,23 @@ class BacktestEngine:
             strategies: Dictionary of strategy name to strategy object
             start_date: Start date for backtest (YYYY-MM-DD)
             end_date: End date for backtest (YYYY-MM-DD)
+            historical_data: Pre-fetched historical data (optional)
             
         Returns:
             Dictionary containing backtest results for each strategy
         """
         logger.info(f"Starting backtest from {start_date} to {end_date}")
         
-        # Get historical data with standardized OHLCV format
-        data = self.data_manager.get_historical_data_standardized(
-            self.symbols, start_date, end_date
-        )
+        # Use provided historical data or fetch new data
+        if historical_data is not None:
+            logger.info("Using provided historical data")
+            data = historical_data
+        else:
+            logger.info("Fetching historical data")
+            # Get historical data with standardized OHLCV format
+            data = self.data_manager.get_historical_data_standardized(
+                self.symbols, start_date, end_date
+            )
         
         if data.empty:
             raise ValueError("No data available for backtest period")
