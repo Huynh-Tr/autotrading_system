@@ -14,62 +14,62 @@
         "current_drawdown": 0.0,
         "portfolio_volatility": 0.0,
         "parameters": {
-          "short_window": 20,
-          "long_window": 100
+          "short_window": 25,
+          "long_window": 90
         },
         "combination_index": 0
       },
       {
-        "total_return": -0.0002425985379199691,
-        "annualized_return": -0.0055196609421579446,
-        "sharpe_ratio": -5.086907379648996,
-        "max_drawdown": -0.0025398320928002632,
-        "volatility": 0.004051473047270834,
+        "total_return": 0.0,
+        "annualized_return": 0.0,
+        "sharpe_ratio": -Infinity,
+        "max_drawdown": 0.0,
+        "volatility": 0.0,
         "win_rate": 0.0,
         "profit_factor": 0.0,
         "total_trades": 0,
-        "final_portfolio_value": 99975.740146208,
-        "current_drawdown": -0.001475749047796832,
-        "portfolio_volatility": 0.004051473047270834,
+        "final_portfolio_value": "100000",
+        "current_drawdown": 0.0,
+        "portfolio_volatility": 0.0,
         "parameters": {
-          "short_window": 10,
-          "long_window": 60
+          "short_window": 5,
+          "long_window": 90
         },
         "combination_index": 1
       },
       {
-        "total_return": -0.003525887590333787,
-        "annualized_return": -0.07741562701917593,
-        "sharpe_ratio": -4.1426401483858335,
-        "max_drawdown": -0.0053470640036599485,
-        "volatility": 0.006992272206162061,
+        "total_return": -0.0034163053714323377,
+        "annualized_return": -0.07509837106978001,
+        "sharpe_ratio": -3.8861530510911595,
+        "max_drawdown": -0.006335283841752819,
+        "volatility": 0.007381027558752288,
         "win_rate": 0.0,
         "profit_factor": 0.0,
         "total_trades": 0,
-        "final_portfolio_value": 99647.41124096663,
-        "current_drawdown": -0.0053470640036599485,
-        "portfolio_volatility": 0.006992272206162062,
+        "final_portfolio_value": 99658.36946285676,
+        "current_drawdown": -0.006335283841752819,
+        "portfolio_volatility": 0.007381027558752288,
         "parameters": {
           "short_window": 25,
-          "long_window": 60
+          "long_window": 40
         },
         "combination_index": 2
       },
       {
-        "total_return": 0.00011819568755089271,
-        "annualized_return": 0.0026998177485013652,
-        "sharpe_ratio": -4.584166420027895,
-        "max_drawdown": -0.0019832926498507732,
-        "volatility": 0.004295224421790407,
+        "total_return": -0.005346567331163565,
+        "annualized_return": -0.1151134114260789,
+        "sharpe_ratio": -4.9578006336407485,
+        "max_drawdown": -0.00631009886507923,
+        "volatility": 0.006781798022912283,
         "win_rate": 0.0,
         "profit_factor": 0.0,
         "total_trades": 0,
-        "final_portfolio_value": 100011.81956875509,
-        "current_drawdown": -0.0008506296213832708,
-        "portfolio_volatility": 0.004295224421790407,
+        "final_portfolio_value": 99465.34326688365,
+        "current_drawdown": -0.00631009886507923,
+        "portfolio_volatility": 0.006781798022912282,
         "parameters": {
-          "short_window": 20,
-          "long_window": 70
+          "short_window": 30,
+          "long_window": 60
         },
         "combination_index": 3
       },
@@ -86,28 +86,10 @@
         "current_drawdown": 0.0,
         "portfolio_volatility": 0.0,
         "parameters": {
-          "short_window": 5,
+          "short_window": 30,
           "long_window": 100
         },
         "combination_index": 4
-      },
-      {
-        "total_return": -0.0025731556700071545,
-        "annualized_return": -0.05708182003478801,
-        "sharpe_ratio": -3.4797515179404934,
-        "max_drawdown": -0.0038034315547883805,
-        "volatility": 0.007623939235623864,
-        "win_rate": 0.0,
-        "profit_factor": 0.0,
-        "total_trades": 0,
-        "final_portfolio_value": 99742.68443299929,
-        "current_drawdown": -0.0038034315547883805,
-        "portfolio_volatility": 0.007623939235623864,
-        "parameters": {
-          "short_window": 20,
-          "long_window": 50
-        },
-        "combination_index": 5
       },
       {
         "total_return": 0.0,
@@ -122,15 +104,15 @@
         "current_drawdown": 0.0,
         "portfolio_volatility": 0.0,
         "parameters": {
-          "short_window": 30,
-          "long_window": 90
+          "short_window": 15,
+          "long_window": 100
         },
-        "combination_index": 6
+        "combination_index": 5
       },
       {
         "total_return": -0.0069408781863068425,
         "annualized_return": -0.14691052690863782,
-        "sharpe_ratio": -5.087139384151313,
+        "sharpe_ratio": -5.087139384151315,
         "max_drawdown": -0.0075112989913542,
         "volatility": 0.0074111301044455305,
         "win_rate": 0.0,
@@ -138,10 +120,28 @@
         "total_trades": 0,
         "final_portfolio_value": 99305.91218136932,
         "current_drawdown": -0.0075112989913542,
-        "portfolio_volatility": 0.007411130104445531,
+        "portfolio_volatility": 0.0074111301044455305,
         "parameters": {
           "short_window": 10,
           "long_window": 40
+        },
+        "combination_index": 6
+      },
+      {
+        "total_return": -0.006672584065952836,
+        "annualized_return": -0.1416372121879902,
+        "sharpe_ratio": -4.335211231933408,
+        "max_drawdown": -0.009425894162462168,
+        "volatility": 0.008535912084379692,
+        "win_rate": 0.0,
+        "profit_factor": 0.0,
+        "total_trades": 0,
+        "final_portfolio_value": 99332.74159340472,
+        "current_drawdown": -0.009425894162462168,
+        "portfolio_volatility": 0.008535912084379692,
+        "parameters": {
+          "short_window": 30,
+          "long_window": 50
         },
         "combination_index": 7
       },
@@ -158,46 +158,82 @@
         "current_drawdown": 0.0,
         "portfolio_volatility": 0.0,
         "parameters": {
-          "short_window": 15,
-          "long_window": 90
+          "short_window": 10,
+          "long_window": 80
         },
         "combination_index": 8
       },
       {
-        "total_return": -0.0021815093572009614,
-        "annualized_return": -0.0485993801169986,
-        "sharpe_ratio": -8.048876465941577,
-        "max_drawdown": -0.0021815093572009935,
-        "volatility": 0.0031748458294226737,
+        "total_return": -0.000651354705797913,
+        "annualized_return": -0.0147539485496464,
+        "sharpe_ratio": -17.6474966945698,
+        "max_drawdown": -0.0008480165390524513,
+        "volatility": 0.0012272439172786689,
         "win_rate": 0.0,
         "profit_factor": 0.0,
         "total_trades": 0,
-        "final_portfolio_value": 99781.8490642799,
-        "current_drawdown": -0.0021815093572009935,
-        "portfolio_volatility": 0.0031748458294226737,
+        "final_portfolio_value": 99934.86452942021,
+        "current_drawdown": -0.0008480165390524513,
+        "portfolio_volatility": 0.001227243917278669,
         "parameters": {
-          "short_window": 15,
+          "short_window": 20,
           "long_window": 70
         },
         "combination_index": 9
       },
       {
-        "total_return": -0.0054888994236624855,
-        "annualized_return": -0.11799753526298196,
-        "sharpe_ratio": -4.773346961183511,
-        "max_drawdown": -0.007482662847981502,
-        "volatility": 0.007119684884771417,
+        "total_return": -0.0011363118880766132,
+        "annualized_return": -0.02560338300410203,
+        "sharpe_ratio": -6.632905646972922,
+        "max_drawdown": -0.0021969472343799134,
+        "volatility": 0.003450698621774267,
         "win_rate": 0.0,
         "profit_factor": 0.0,
         "total_trades": 0,
-        "final_portfolio_value": 99451.11005763375,
-        "current_drawdown": -0.007482662847981502,
-        "portfolio_volatility": 0.007119684884771417,
+        "final_portfolio_value": 99886.36881119234,
+        "current_drawdown": -0.0011363118880765978,
+        "portfolio_volatility": 0.003450698621774267,
         "parameters": {
-          "short_window": 5,
-          "long_window": 50
+          "short_window": 10,
+          "long_window": 60
         },
         "combination_index": 10
+      },
+      {
+        "total_return": -0.001644308501597358,
+        "annualized_return": -0.036845709273369165,
+        "sharpe_ratio": -2.0911702879561074,
+        "max_drawdown": -0.006441111680830271,
+        "volatility": 0.01153562677081038,
+        "win_rate": 0.0,
+        "profit_factor": 0.0,
+        "total_trades": 0,
+        "final_portfolio_value": 99835.56914984026,
+        "current_drawdown": -0.002268756773874193,
+        "portfolio_volatility": 0.011535626770810376,
+        "parameters": {
+          "short_window": 20,
+          "long_window": 30
+        },
+        "combination_index": 11
+      },
+      {
+        "total_return": -0.00808163926908878,
+        "annualized_return": -0.1689883036941403,
+        "sharpe_ratio": -4.070292946518325,
+        "max_drawdown": -0.008773152546767806,
+        "volatility": 0.009975890576760014,
+        "win_rate": 0.0,
+        "profit_factor": 0.0,
+        "total_trades": 0,
+        "final_portfolio_value": 99191.83607309112,
+        "current_drawdown": -0.00870206114064479,
+        "portfolio_volatility": 0.009975890576760014,
+        "parameters": {
+          "short_window": 10,
+          "long_window": 30
+        },
+        "combination_index": 12
       },
       {
         "total_return": 0.0,
@@ -212,62 +248,26 @@
         "current_drawdown": 0.0,
         "portfolio_volatility": 0.0,
         "parameters": {
-          "short_window": 25,
-          "long_window": 90
-        },
-        "combination_index": 11
-      },
-      {
-        "total_return": -0.00581235597277463,
-        "annualized_return": -0.12451846052812576,
-        "sharpe_ratio": -4.990646566068505,
-        "max_drawdown": -0.00610990154180451,
-        "volatility": 0.0069757916859772,
-        "win_rate": 0.0,
-        "profit_factor": 0.0,
-        "total_trades": 0,
-        "final_portfolio_value": 99418.76440272253,
-        "current_drawdown": -0.0059800470987621795,
-        "portfolio_volatility": 0.0069757916859772,
-        "parameters": {
-          "short_window": 30,
-          "long_window": 40
-        },
-        "combination_index": 12
-      },
-      {
-        "total_return": -0.0086133060239173,
-        "annualized_return": -0.17909029161500845,
-        "sharpe_ratio": -3.9933655591205057,
-        "max_drawdown": -0.00898228961040679,
-        "volatility": 0.010508434533365267,
-        "win_rate": 0.0,
-        "profit_factor": 0.0,
-        "total_trades": 0,
-        "final_portfolio_value": 99138.66939760828,
-        "current_drawdown": -0.00898228961040679,
-        "portfolio_volatility": 0.010508434533365267,
-        "parameters": {
-          "short_window": 15,
-          "long_window": 30
+          "short_window": 20,
+          "long_window": 100
         },
         "combination_index": 13
       },
       {
-        "total_return": -0.001894520999421223,
-        "annualized_return": -0.042337396544895545,
-        "sharpe_ratio": -2.142220401258007,
-        "max_drawdown": -0.006434610266315928,
-        "volatility": 0.01155843800857668,
+        "total_return": -0.006896386520563125,
+        "annualized_return": -0.14603819200765256,
+        "sharpe_ratio": -5.4752991896176475,
+        "max_drawdown": -0.007466832881965841,
+        "volatility": 0.006865611664030625,
         "win_rate": 0.0,
         "profit_factor": 0.0,
         "total_trades": 0,
-        "final_portfolio_value": 99810.54790005788,
-        "current_drawdown": -0.002266005246258792,
-        "portfolio_volatility": 0.01155843800857668,
+        "final_portfolio_value": 99310.36134794369,
+        "current_drawdown": -0.007466832881965841,
+        "portfolio_volatility": 0.006865611664030625,
         "parameters": {
-          "short_window": 20,
-          "long_window": 30
+          "short_window": 5,
+          "long_window": 50
         },
         "combination_index": 14
       }
@@ -278,17 +278,17 @@
         "long_window": 30
       },
       "metrics": {
-        "total_return": -0.001894520999421223,
-        "annualized_return": -0.042337396544895545,
-        "sharpe_ratio": -2.142220401258007,
-        "max_drawdown": -0.006434610266315928,
-        "volatility": 0.01155843800857668,
+        "total_return": -0.001644308501597358,
+        "annualized_return": -0.036845709273369165,
+        "sharpe_ratio": -2.0911702879561074,
+        "max_drawdown": -0.006441111680830271,
+        "volatility": 0.01153562677081038,
         "win_rate": 0.0,
         "profit_factor": 0.0,
         "total_trades": 0,
-        "final_portfolio_value": 99810.54790005788,
-        "current_drawdown": -0.002266005246258792,
-        "portfolio_volatility": 0.01155843800857668
+        "final_portfolio_value": 99835.56914984026,
+        "current_drawdown": -0.002268756773874193,
+        "portfolio_volatility": 0.011535626770810376
       },
       "rank": 1
     },
@@ -299,59 +299,59 @@
   "rsi": {
     "results": [
       {
-        "total_return": 0.002258039395732103,
-        "annualized_return": 0.05280018108295459,
-        "sharpe_ratio": -2.785997220118472,
+        "total_return": 0.0026818392915477496,
+        "annualized_return": 0.06300262467659201,
+        "sharpe_ratio": -2.4991651254389367,
         "max_drawdown": -0.0030359172882698784,
-        "volatility": 0.005113335400577853,
+        "volatility": 0.005269281562484298,
         "win_rate": 0.0,
         "profit_factor": 0.0,
         "total_trades": 0,
-        "final_portfolio_value": 100225.8039395732,
-        "current_drawdown": -5.9899466954342615e-05,
-        "portfolio_volatility": 0.005113335400577853,
+        "final_portfolio_value": 100268.18392915478,
+        "current_drawdown": -0.00027817795740801653,
+        "portfolio_volatility": 0.005269281562484298,
         "parameters": {
           "period": 20,
-          "oversold": 20,
-          "overbought": 75
+          "oversold": 30,
+          "overbought": 70
         },
         "combination_index": 0
       },
       {
-        "total_return": 0.006604858567826222,
-        "annualized_return": 0.16204098424676272,
-        "sharpe_ratio": -0.41702088916825414,
+        "total_return": 0.007106666175332288,
+        "annualized_return": 0.17532824692351023,
+        "sharpe_ratio": -0.25049311677976094,
         "max_drawdown": -0.0030359172882697782,
-        "volatility": 0.0077046187556683654,
+        "volatility": 0.007760069222102494,
         "win_rate": 0.0,
         "profit_factor": 0.0,
         "total_trades": 0,
-        "final_portfolio_value": 100660.48585678263,
-        "current_drawdown": -5.989946695446624e-05,
-        "portfolio_volatility": 0.0077046187556683654,
+        "final_portfolio_value": 100710.66661753322,
+        "current_drawdown": 0.0,
+        "portfolio_volatility": 0.007760069222102494,
         "parameters": {
           "period": 14,
-          "oversold": 35,
-          "overbought": 80
+          "oversold": 30,
+          "overbought": 70
         },
         "combination_index": 1
       },
       {
-        "total_return": -0.0004557314854168881,
-        "annualized_return": -0.010344864191338954,
-        "sharpe_ratio": -1.7790835084702536,
-        "max_drawdown": -0.010959889739904657,
-        "volatility": 0.011854814426092647,
+        "total_return": 0.007106666175332288,
+        "annualized_return": 0.17532824692351023,
+        "sharpe_ratio": -0.25049311677976094,
+        "max_drawdown": -0.0030359172882697782,
+        "volatility": 0.007760069222102494,
         "win_rate": 0.0,
         "profit_factor": 0.0,
         "total_trades": 0,
-        "final_portfolio_value": 99954.42685145831,
-        "current_drawdown": -0.006973943106981098,
-        "portfolio_volatility": 0.011854814426092647,
+        "final_portfolio_value": 100710.66661753322,
+        "current_drawdown": 0.0,
+        "portfolio_volatility": 0.007760069222102494,
         "parameters": {
-          "period": 10,
-          "oversold": 20,
-          "overbought": 80
+          "period": 14,
+          "oversold": 25,
+          "overbought": 75
         },
         "combination_index": 2
       },
@@ -375,23 +375,61 @@
         "combination_index": 3
       },
       {
-        "total_return": 0.002258039395732103,
-        "annualized_return": 0.05280018108295459,
-        "sharpe_ratio": -2.785997220118472,
-        "max_drawdown": -0.0030359172882698784,
-        "volatility": 0.005113335400577853,
+        "total_return": 0.00271408740496093,
+        "annualized_return": 0.06378281529702301,
+        "sharpe_ratio": -2.483629633168106,
+        "max_drawdown": -0.003036302835919028,
+        "volatility": 0.00526927891622722,
         "win_rate": 0.0,
         "profit_factor": 0.0,
         "total_trades": 0,
-        "final_portfolio_value": 100225.8039395732,
-        "current_drawdown": -5.9899466954342615e-05,
-        "portfolio_volatility": 0.005113335400577853,
+        "final_portfolio_value": 100271.4087404961,
+        "current_drawdown": -0.000278213216188915,
+        "portfolio_volatility": 0.00526927891622722,
         "parameters": {
-          "period": 20,
-          "oversold": 20,
-          "overbought": 65
+          "period": 30,
+          "oversold": 30,
+          "overbought": 70
         },
         "combination_index": 4
+      },
+      {
+        "total_return": 0.007106666175332288,
+        "annualized_return": 0.17532824692351023,
+        "sharpe_ratio": -0.25049311677976094,
+        "max_drawdown": -0.0030359172882697782,
+        "volatility": 0.007760069222102494,
+        "win_rate": 0.0,
+        "profit_factor": 0.0,
+        "total_trades": 0,
+        "final_portfolio_value": 100710.66661753322,
+        "current_drawdown": 0.0,
+        "portfolio_volatility": 0.007760069222102494,
+        "parameters": {
+          "period": 14,
+          "oversold": 30,
+          "overbought": 75
+        },
+        "combination_index": 5
+      },
+      {
+        "total_return": 0.00271408740496093,
+        "annualized_return": 0.06378281529702301,
+        "sharpe_ratio": -2.483629633168106,
+        "max_drawdown": -0.003036302835919028,
+        "volatility": 0.00526927891622722,
+        "win_rate": 0.0,
+        "profit_factor": 0.0,
+        "total_trades": 0,
+        "final_portfolio_value": 100271.4087404961,
+        "current_drawdown": -0.000278213216188915,
+        "portfolio_volatility": 0.00526927891622722,
+        "parameters": {
+          "period": 30,
+          "oversold": 25,
+          "overbought": 75
+        },
+        "combination_index": 6
       },
       {
         "total_return": -0.0004557314854168881,
@@ -407,177 +445,139 @@
         "portfolio_volatility": 0.011854814426092647,
         "parameters": {
           "period": 10,
-          "oversold": 30,
-          "overbought": 80
-        },
-        "combination_index": 5
-      },
-      {
-        "total_return": 0.002290220146057509,
-        "annualized_return": 0.05357159512285925,
-        "sharpe_ratio": -2.769999552755917,
-        "max_drawdown": -0.003036302835919028,
-        "volatility": 0.005113360908043846,
-        "win_rate": 0.0,
-        "profit_factor": 0.0,
-        "total_trades": 0,
-        "final_portfolio_value": 100229.02201460575,
-        "current_drawdown": -5.990706402202271e-05,
-        "portfolio_volatility": 0.005113360908043847,
-        "parameters": {
-          "period": 30,
-          "oversold": 20,
-          "overbought": 65
-        },
-        "combination_index": 6
-      },
-      {
-        "total_return": 0.006604858567826222,
-        "annualized_return": 0.16204098424676272,
-        "sharpe_ratio": -0.41702088916825414,
-        "max_drawdown": -0.0030359172882697782,
-        "volatility": 0.0077046187556683654,
-        "win_rate": 0.0,
-        "profit_factor": 0.0,
-        "total_trades": 0,
-        "final_portfolio_value": 100660.48585678263,
-        "current_drawdown": -5.989946695446624e-05,
-        "portfolio_volatility": 0.0077046187556683654,
-        "parameters": {
-          "period": 14,
-          "oversold": 20,
-          "overbought": 80
+          "oversold": 25,
+          "overbought": 75
         },
         "combination_index": 7
       },
       {
-        "total_return": 0.006604858567826222,
-        "annualized_return": 0.16204098424676272,
-        "sharpe_ratio": -0.41702088916825414,
-        "max_drawdown": -0.0030359172882697782,
-        "volatility": 0.0077046187556683654,
+        "total_return": 0.0026818392915477496,
+        "annualized_return": 0.06300262467659201,
+        "sharpe_ratio": -2.4991651254389367,
+        "max_drawdown": -0.0030359172882698784,
+        "volatility": 0.005269281562484298,
         "win_rate": 0.0,
         "profit_factor": 0.0,
         "total_trades": 0,
-        "final_portfolio_value": 100660.48585678263,
-        "current_drawdown": -5.989946695446624e-05,
-        "portfolio_volatility": 0.0077046187556683654,
+        "final_portfolio_value": 100268.18392915478,
+        "current_drawdown": -0.00027817795740801653,
+        "portfolio_volatility": 0.005269281562484298,
         "parameters": {
-          "period": 14,
-          "oversold": 25,
+          "period": 20,
+          "oversold": 35,
           "overbought": 65
         },
         "combination_index": 8
       },
       {
-        "total_return": -0.0004557314854168881,
-        "annualized_return": -0.010344864191338954,
-        "sharpe_ratio": -1.7790835084702536,
-        "max_drawdown": -0.010959889739904657,
-        "volatility": 0.011854814426092647,
+        "total_return": 0.00271408740496093,
+        "annualized_return": 0.06378281529702301,
+        "sharpe_ratio": -2.483629633168106,
+        "max_drawdown": -0.003036302835919028,
+        "volatility": 0.00526927891622722,
         "win_rate": 0.0,
         "profit_factor": 0.0,
         "total_trades": 0,
-        "final_portfolio_value": 99954.42685145831,
-        "current_drawdown": -0.006973943106981098,
-        "portfolio_volatility": 0.011854814426092647,
+        "final_portfolio_value": 100271.4087404961,
+        "current_drawdown": -0.000278213216188915,
+        "portfolio_volatility": 0.00526927891622722,
         "parameters": {
-          "period": 10,
-          "oversold": 30,
-          "overbought": 75
+          "period": 30,
+          "oversold": 35,
+          "overbought": 65
         },
         "combination_index": 9
       },
       {
-        "total_return": 0.002290220146057509,
-        "annualized_return": 0.05357159512285925,
-        "sharpe_ratio": -2.769999552755917,
-        "max_drawdown": -0.003036302835919028,
-        "volatility": 0.005113360908043846,
+        "total_return": 0.0026818392915477496,
+        "annualized_return": 0.06300262467659201,
+        "sharpe_ratio": -2.4991651254389367,
+        "max_drawdown": -0.0030359172882698784,
+        "volatility": 0.005269281562484298,
         "win_rate": 0.0,
         "profit_factor": 0.0,
         "total_trades": 0,
-        "final_portfolio_value": 100229.02201460575,
-        "current_drawdown": -5.990706402202271e-05,
-        "portfolio_volatility": 0.005113360908043847,
+        "final_portfolio_value": 100268.18392915478,
+        "current_drawdown": -0.00027817795740801653,
+        "portfolio_volatility": 0.005269281562484298,
         "parameters": {
-          "period": 30,
-          "oversold": 20,
-          "overbought": 75
+          "period": 20,
+          "oversold": 30,
+          "overbought": 65
         },
         "combination_index": 10
       },
       {
-        "total_return": -0.0004557314854168881,
-        "annualized_return": -0.010344864191338954,
-        "sharpe_ratio": -1.7790835084702536,
-        "max_drawdown": -0.010959889739904657,
-        "volatility": 0.011854814426092647,
+        "total_return": 0.007106666175332288,
+        "annualized_return": 0.17532824692351023,
+        "sharpe_ratio": -0.25049311677976094,
+        "max_drawdown": -0.0030359172882697782,
+        "volatility": 0.007760069222102494,
         "win_rate": 0.0,
         "profit_factor": 0.0,
         "total_trades": 0,
-        "final_portfolio_value": 99954.42685145831,
-        "current_drawdown": -0.006973943106981098,
-        "portfolio_volatility": 0.011854814426092647,
+        "final_portfolio_value": 100710.66661753322,
+        "current_drawdown": 0.0,
+        "portfolio_volatility": 0.007760069222102494,
         "parameters": {
-          "period": 10,
-          "oversold": 20,
-          "overbought": 65
+          "period": 14,
+          "oversold": 35,
+          "overbought": 80
         },
         "combination_index": 11
       },
       {
-        "total_return": 0.002258039395732103,
-        "annualized_return": 0.05280018108295459,
-        "sharpe_ratio": -2.785997220118472,
+        "total_return": 0.0026818392915477496,
+        "annualized_return": 0.06300262467659201,
+        "sharpe_ratio": -2.4991651254389367,
         "max_drawdown": -0.0030359172882698784,
-        "volatility": 0.005113335400577853,
+        "volatility": 0.005269281562484298,
         "win_rate": 0.0,
         "profit_factor": 0.0,
         "total_trades": 0,
-        "final_portfolio_value": 100225.8039395732,
-        "current_drawdown": -5.9899466954342615e-05,
-        "portfolio_volatility": 0.005113335400577853,
+        "final_portfolio_value": 100268.18392915478,
+        "current_drawdown": -0.00027817795740801653,
+        "portfolio_volatility": 0.005269281562484298,
         "parameters": {
           "period": 20,
-          "oversold": 30,
-          "overbought": 70
+          "oversold": 25,
+          "overbought": 80
         },
         "combination_index": 12
       },
       {
-        "total_return": 0.002258039395732103,
-        "annualized_return": 0.05280018108295459,
-        "sharpe_ratio": -2.785997220118472,
+        "total_return": 0.0026818392915477496,
+        "annualized_return": 0.06300262467659201,
+        "sharpe_ratio": -2.4991651254389367,
         "max_drawdown": -0.0030359172882698784,
-        "volatility": 0.005113335400577853,
+        "volatility": 0.005269281562484298,
         "win_rate": 0.0,
         "profit_factor": 0.0,
         "total_trades": 0,
-        "final_portfolio_value": 100225.8039395732,
-        "current_drawdown": -5.9899466954342615e-05,
-        "portfolio_volatility": 0.005113335400577853,
+        "final_portfolio_value": 100268.18392915478,
+        "current_drawdown": -0.00027817795740801653,
+        "portfolio_volatility": 0.005269281562484298,
         "parameters": {
           "period": 20,
-          "oversold": 35,
-          "overbought": 75
+          "oversold": 20,
+          "overbought": 80
         },
         "combination_index": 13
       },
       {
-        "total_return": 0.002290220146057509,
-        "annualized_return": 0.05357159512285925,
-        "sharpe_ratio": -2.769999552755917,
-        "max_drawdown": -0.003036302835919028,
-        "volatility": 0.005113360908043846,
+        "total_return": 0.007106666175332288,
+        "annualized_return": 0.17532824692351023,
+        "sharpe_ratio": -0.25049311677976094,
+        "max_drawdown": -0.0030359172882697782,
+        "volatility": 0.007760069222102494,
         "win_rate": 0.0,
         "profit_factor": 0.0,
         "total_trades": 0,
-        "final_portfolio_value": 100229.02201460575,
-        "current_drawdown": -5.990706402202271e-05,
-        "portfolio_volatility": 0.005113360908043847,
+        "final_portfolio_value": 100710.66661753322,
+        "current_drawdown": 0.0,
+        "portfolio_volatility": 0.007760069222102494,
         "parameters": {
-          "period": 30,
+          "period": 14,
           "oversold": 35,
           "overbought": 65
         },
@@ -587,21 +587,21 @@
     "best_parameters": {
       "parameters": {
         "period": 14,
-        "oversold": 35,
-        "overbought": 80
+        "oversold": 30,
+        "overbought": 70
       },
       "metrics": {
-        "total_return": 0.006604858567826222,
-        "annualized_return": 0.16204098424676272,
-        "sharpe_ratio": -0.41702088916825414,
+        "total_return": 0.007106666175332288,
+        "annualized_return": 0.17532824692351023,
+        "sharpe_ratio": -0.25049311677976094,
         "max_drawdown": -0.0030359172882697782,
-        "volatility": 0.0077046187556683654,
+        "volatility": 0.007760069222102494,
         "win_rate": 0.0,
         "profit_factor": 0.0,
         "total_trades": 0,
-        "final_portfolio_value": 100660.48585678263,
-        "current_drawdown": -5.989946695446624e-05,
-        "portfolio_volatility": 0.0077046187556683654
+        "final_portfolio_value": 100710.66661753322,
+        "current_drawdown": 0.0,
+        "portfolio_volatility": 0.007760069222102494
       },
       "rank": 1
     },

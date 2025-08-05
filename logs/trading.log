@@ -3652,3 +3652,973 @@
 2025-08-02 10:44:22 | INFO     | src.core.trading_engine:_generate_backtest_report:343 - Backtest results saved to data/backtest_results.csv
 2025-08-02 10:44:22 | INFO     | src.core.trading_engine:_generate_backtest_report:360 - Trade details saved to data/trades.csv
 2025-08-02 10:44:22 | INFO     | __main__:run_backtest:108 - Backtest completed
+2025-08-05 14:57:58 | INFO     | src.risk.risk_manager:__init__:49 - Risk manager initialized
+2025-08-05 14:57:58 | INFO     | src.core.trading_engine:__init__:84 - Trading engine initialized with $100,000.00 initial capital
+2025-08-05 14:57:58 | INFO     | src.strategies.base_strategy:__init__:34 - Initialized strategy: custom1
+2025-08-05 14:57:58 | INFO     | src.strategies.custom1_strategy:__init__:64 - Custom1 Strategy initialized: SMA(20/50) + RSI(14)
+2025-08-05 14:57:58 | INFO     | src.core.trading_engine:add_strategy:133 - Added strategy: custom1
+2025-08-05 14:57:58 | INFO     | __main__:run_backtest:103 - Custom1 strategy added (enabled)
+2025-08-05 14:57:58 | INFO     | src.core.trading_engine:run_backtest:137 - Starting backtest from 2023-01-01 to 2025-07-31
+2025-08-05 14:57:58 | INFO     | src.core.trading_engine:_fetch_and_cache_data:107 - Fetching historical data from 2023-01-01 to 2025-07-31
+2025-08-05 14:57:58 | INFO     | src.data.data_manager:get_historical_data:64 - Fetching historical OHLCV data for ['Bitstamp:BTCUSD'] from 2023-01-01 to 2025-07-31
+2025-08-05 14:57:58 | INFO     | src.data.data_manager:_fetch_tradingview_ohlcv_data:159 - Successfully fetched OHLCV data for 1 symbols
+2025-08-05 14:57:58 | INFO     | src.data.data_manager:get_historical_data:97 - OHLCV data cached successfully
+2025-08-05 14:57:58 | INFO     | src.core.trading_engine:_fetch_and_cache_data:127 - Cached historical data: (100, 5)
+2025-08-05 14:57:58 | INFO     | src.risk.risk_manager:__init__:49 - Risk manager initialized
+2025-08-05 14:57:58 | INFO     | src.backtesting.backtest_engine:__init__:38 - Backtest engine initialized
+2025-08-05 14:57:58 | INFO     | src.backtesting.backtest_engine:run_backtest:55 - Starting backtest from 2023-01-01 to 2025-07-31
+2025-08-05 14:57:58 | INFO     | src.backtesting.backtest_engine:run_backtest:59 - Using provided historical data
+2025-08-05 14:57:58 | INFO     | src.backtesting.backtest_engine:run_backtest:73 - Running backtest for strategy: custom1
+2025-08-05 14:57:58 | INFO     | src.strategies.base_strategy:reset:99 - Reset strategy: custom1
+2025-08-05 14:57:58 | INFO     | src.risk.risk_manager:__init__:49 - Risk manager initialized
+2025-08-05 14:57:58 | INFO     | src.strategies.custom1_strategy:_generate_signal_for_symbol:145 - Strong sell signal for Bitstamp:BTCUSD: SMA+RSI combined
+2025-08-05 14:57:58 | INFO     | src.core.trading_engine:run_backtest:159 - Backtest completed using BacktestEngine
+2025-08-05 14:57:58 | INFO     | __main__:run_backtest:118 - Backtest completed
+2025-08-05 15:02:52 | INFO     | src.risk.risk_manager:__init__:49 - Risk manager initialized
+2025-08-05 15:02:52 | INFO     | src.core.trading_engine:__init__:84 - Trading engine initialized with $100,000.00 initial capital
+2025-08-05 15:02:52 | INFO     | src.strategies.base_strategy:__init__:34 - Initialized strategy: custom1
+2025-08-05 15:02:52 | INFO     | src.strategies.custom1_strategy:__init__:64 - Custom1 Strategy initialized: SMA(20/50) + RSI(14)
+2025-08-05 15:02:52 | INFO     | src.core.trading_engine:add_strategy:133 - Added strategy: custom1
+2025-08-05 15:02:52 | INFO     | __main__:run_backtest:103 - Custom1 strategy added (enabled)
+2025-08-05 15:02:52 | INFO     | src.core.trading_engine:run_backtest:137 - Starting backtest from 2023-01-01 to 2025-07-31
+2025-08-05 15:02:52 | INFO     | src.core.trading_engine:_fetch_and_cache_data:107 - Fetching historical data from 2023-01-01 to 2025-07-31
+2025-08-05 15:02:52 | INFO     | src.data.data_manager:get_historical_data:64 - Fetching historical OHLCV data for ['Bitstamp:BTCUSD'] from 2023-01-01 to 2025-07-31
+2025-08-05 15:02:52 | INFO     | src.data.data_manager:_fetch_tradingview_ohlcv_data:159 - Successfully fetched OHLCV data for 1 symbols
+2025-08-05 15:02:52 | INFO     | src.data.data_manager:get_historical_data:97 - OHLCV data cached successfully
+2025-08-05 15:02:52 | INFO     | src.core.trading_engine:_fetch_and_cache_data:127 - Cached historical data: (100, 5)
+2025-08-05 15:02:52 | INFO     | src.risk.risk_manager:__init__:49 - Risk manager initialized
+2025-08-05 15:02:52 | INFO     | src.backtesting.backtest_engine:__init__:38 - Backtest engine initialized
+2025-08-05 15:02:52 | INFO     | src.backtesting.backtest_engine:run_backtest:55 - Starting backtest from 2023-01-01 to 2025-07-31
+2025-08-05 15:02:52 | INFO     | src.backtesting.backtest_engine:run_backtest:59 - Using provided historical data
+2025-08-05 15:02:52 | INFO     | src.backtesting.backtest_engine:run_backtest:73 - Running backtest for strategy: custom1
+2025-08-05 15:02:52 | INFO     | src.strategies.base_strategy:reset:99 - Reset strategy: custom1
+2025-08-05 15:02:52 | INFO     | src.risk.risk_manager:__init__:49 - Risk manager initialized
+2025-08-05 15:02:53 | INFO     | src.core.trading_engine:run_backtest:159 - Backtest completed using BacktestEngine
+2025-08-05 15:02:53 | INFO     | __main__:run_backtest:118 - Backtest completed
+2025-08-05 15:03:40 | INFO     | src.risk.risk_manager:__init__:49 - Risk manager initialized
+2025-08-05 15:03:40 | INFO     | src.core.trading_engine:__init__:84 - Trading engine initialized with $100,000.00 initial capital
+2025-08-05 15:03:40 | INFO     | src.strategies.base_strategy:__init__:34 - Initialized strategy: custom1
+2025-08-05 15:03:40 | INFO     | src.strategies.custom1_strategy:__init__:64 - Custom1 Strategy initialized: SMA(20/50) + RSI(14)
+2025-08-05 15:03:40 | INFO     | src.core.trading_engine:add_strategy:133 - Added strategy: custom1
+2025-08-05 15:03:40 | INFO     | __main__:run_backtest:103 - Custom1 strategy added (enabled)
+2025-08-05 15:03:40 | INFO     | src.core.trading_engine:run_backtest:137 - Starting backtest from 2023-01-01 to 2025-07-31
+2025-08-05 15:03:40 | INFO     | src.core.trading_engine:_fetch_and_cache_data:107 - Fetching historical data from 2023-01-01 to 2025-07-31
+2025-08-05 15:03:40 | INFO     | src.data.data_manager:get_historical_data:64 - Fetching historical OHLCV data for ['Bitstamp:BTCUSD'] from 2023-01-01 to 2025-07-31
+2025-08-05 15:03:45 | ERROR    | src.data.data_manager:_fetch_tradingview_ohlcv_data:166 - Error fetching OHLCV data from TradingView: 'NoneType' object has no attribute 'reset_index'
+2025-08-05 15:04:29 | INFO     | src.risk.risk_manager:__init__:49 - Risk manager initialized
+2025-08-05 15:04:29 | INFO     | src.core.trading_engine:__init__:84 - Trading engine initialized with $100,000.00 initial capital
+2025-08-05 15:04:29 | INFO     | src.strategies.base_strategy:__init__:34 - Initialized strategy: custom1
+2025-08-05 15:04:29 | INFO     | src.strategies.custom1_strategy:__init__:64 - Custom1 Strategy initialized: SMA(20/50) + RSI(14)
+2025-08-05 15:04:29 | INFO     | src.core.trading_engine:add_strategy:133 - Added strategy: custom1
+2025-08-05 15:04:29 | INFO     | __main__:run_backtest:103 - Custom1 strategy added (enabled)
+2025-08-05 15:04:29 | INFO     | src.core.trading_engine:run_backtest:137 - Starting backtest from 2023-01-01 to 2025-07-31
+2025-08-05 15:04:29 | INFO     | src.core.trading_engine:_fetch_and_cache_data:107 - Fetching historical data from 2023-01-01 to 2025-07-31
+2025-08-05 15:04:29 | INFO     | src.data.data_manager:get_historical_data:64 - Fetching historical OHLCV data for ['BTC-USD'] from 2023-01-01 to 2025-07-31
+2025-08-05 15:04:31 | INFO     | src.data.data_manager:_fetch_yfinance_ohlcv_data:199 - Successfully fetched OHLCV data for 1 symbols
+2025-08-05 15:04:31 | INFO     | src.data.data_manager:get_historical_data:97 - OHLCV data cached successfully
+2025-08-05 15:04:31 | INFO     | src.core.trading_engine:_fetch_and_cache_data:127 - Cached historical data: (942, 5)
+2025-08-05 15:04:31 | INFO     | src.risk.risk_manager:__init__:49 - Risk manager initialized
+2025-08-05 15:04:31 | INFO     | src.backtesting.backtest_engine:__init__:38 - Backtest engine initialized
+2025-08-05 15:04:31 | INFO     | src.backtesting.backtest_engine:run_backtest:55 - Starting backtest from 2023-01-01 to 2025-07-31
+2025-08-05 15:04:31 | INFO     | src.backtesting.backtest_engine:run_backtest:59 - Using provided historical data
+2025-08-05 15:04:31 | INFO     | src.backtesting.backtest_engine:run_backtest:73 - Running backtest for strategy: custom1
+2025-08-05 15:04:31 | INFO     | src.strategies.base_strategy:reset:99 - Reset strategy: custom1
+2025-08-05 15:04:31 | INFO     | src.risk.risk_manager:__init__:49 - Risk manager initialized
+2025-08-05 15:04:31 | INFO     | src.strategies.custom1_strategy:_generate_signal_for_symbol:139 - Strong buy signal for BTC-USD: SMA+RSI combined
+2025-08-05 15:04:31 | INFO     | src.risk.risk_manager:check_take_profit:194 - Take profit triggered for BTC-USD: 18.83%
+2025-08-05 15:04:31 | INFO     | src.backtesting.backtest_engine:_execute_trades:311 - TAKE PROFIT: 0.98 BTC-USD @ $24201.77
+2025-08-05 15:04:31 | INFO     | src.strategies.custom1_strategy:_generate_signal_for_symbol:145 - Strong sell signal for BTC-USD: SMA+RSI combined
+2025-08-05 15:04:31 | INFO     | src.strategies.custom1_strategy:_generate_signal_for_symbol:139 - Strong buy signal for BTC-USD: SMA+RSI combined
+2025-08-05 15:04:31 | INFO     | src.risk.risk_manager:check_stop_loss:155 - Stop loss triggered for BTC-USD: -8.82%
+2025-08-05 15:04:31 | INFO     | src.backtesting.backtest_engine:_execute_trades:284 - STOP LOSS: 0.71 BTC-USD @ $26636.08
+2025-08-05 15:04:32 | INFO     | src.strategies.custom1_strategy:_generate_signal_for_symbol:139 - Strong buy signal for BTC-USD: SMA+RSI combined
+2025-08-05 15:04:32 | INFO     | src.strategies.custom1_strategy:_generate_signal_for_symbol:145 - Strong sell signal for BTC-USD: SMA+RSI combined
+2025-08-05 15:04:32 | INFO     | src.strategies.custom1_strategy:_generate_signal_for_symbol:145 - Strong sell signal for BTC-USD: SMA+RSI combined
+2025-08-05 15:04:32 | INFO     | src.strategies.custom1_strategy:_generate_signal_for_symbol:145 - Strong sell signal for BTC-USD: SMA+RSI combined
+2025-08-05 15:04:32 | INFO     | src.strategies.custom1_strategy:_generate_signal_for_symbol:139 - Strong buy signal for BTC-USD: SMA+RSI combined
+2025-08-05 15:04:32 | INFO     | src.strategies.custom1_strategy:_generate_signal_for_symbol:139 - Strong buy signal for BTC-USD: SMA+RSI combined
+2025-08-05 15:04:32 | INFO     | src.strategies.custom1_strategy:_generate_signal_for_symbol:139 - Strong buy signal for BTC-USD: SMA+RSI combined
+2025-08-05 15:04:32 | INFO     | src.strategies.custom1_strategy:_generate_signal_for_symbol:139 - Strong buy signal for BTC-USD: SMA+RSI combined
+2025-08-05 15:04:32 | INFO     | src.risk.risk_manager:check_stop_loss:155 - Stop loss triggered for BTC-USD: -7.23%
+2025-08-05 15:04:32 | INFO     | src.backtesting.backtest_engine:_execute_trades:284 - STOP LOSS: 0.32 BTC-USD @ $60266.28
+2025-08-05 15:04:32 | INFO     | src.strategies.custom1_strategy:_generate_signal_for_symbol:145 - Strong sell signal for BTC-USD: SMA+RSI combined
+2025-08-05 15:04:32 | INFO     | src.strategies.custom1_strategy:_generate_signal_for_symbol:145 - Strong sell signal for BTC-USD: SMA+RSI combined
+2025-08-05 15:04:32 | INFO     | src.strategies.custom1_strategy:_generate_signal_for_symbol:139 - Strong buy signal for BTC-USD: SMA+RSI combined
+2025-08-05 15:04:32 | INFO     | src.strategies.custom1_strategy:_generate_signal_for_symbol:139 - Strong buy signal for BTC-USD: SMA+RSI combined
+2025-08-05 15:04:32 | INFO     | src.risk.risk_manager:check_stop_loss:155 - Stop loss triggered for BTC-USD: -7.09%
+2025-08-05 15:04:32 | INFO     | src.backtesting.backtest_engine:_execute_trades:284 - STOP LOSS: 0.36 BTC-USD @ $53991.35
+2025-08-05 15:04:32 | INFO     | src.strategies.custom1_strategy:_generate_signal_for_symbol:145 - Strong sell signal for BTC-USD: SMA+RSI combined
+2025-08-05 15:04:32 | INFO     | src.strategies.custom1_strategy:_generate_signal_for_symbol:145 - Strong sell signal for BTC-USD: SMA+RSI combined
+2025-08-05 15:04:32 | INFO     | src.strategies.custom1_strategy:_generate_signal_for_symbol:145 - Strong sell signal for BTC-USD: SMA+RSI combined
+2025-08-05 15:04:33 | INFO     | src.strategies.custom1_strategy:_generate_signal_for_symbol:145 - Strong sell signal for BTC-USD: SMA+RSI combined
+2025-08-05 15:04:33 | INFO     | src.strategies.custom1_strategy:_generate_signal_for_symbol:139 - Strong buy signal for BTC-USD: SMA+RSI combined
+2025-08-05 15:04:33 | INFO     | src.risk.risk_manager:check_take_profit:194 - Take profit triggered for BTC-USD: 15.71%
+2025-08-05 15:04:33 | INFO     | src.backtesting.backtest_engine:_execute_trades:311 - TAKE PROFIT: 0.20 BTC-USD @ $117530.71
+2025-08-05 15:04:33 | INFO     | src.core.trading_engine:run_backtest:159 - Backtest completed using BacktestEngine
+2025-08-05 15:04:33 | INFO     | __main__:run_backtest:118 - Backtest completed
+2025-08-05 15:11:40 | INFO     | src.risk.risk_manager:__init__:49 - Risk manager initialized
+2025-08-05 15:11:40 | INFO     | src.core.trading_engine:__init__:84 - Trading engine initialized with $100,000.00 initial capital
+2025-08-05 15:11:40 | INFO     | src.strategies.base_strategy:__init__:34 - Initialized strategy: custom1
+2025-08-05 15:11:40 | INFO     | src.strategies.custom1_strategy:__init__:64 - Custom1 Strategy initialized: SMA(20/50) + RSI(14)
+2025-08-05 15:11:40 | INFO     | src.core.trading_engine:add_strategy:133 - Added strategy: custom1
+2025-08-05 15:11:40 | INFO     | __main__:run_backtest:103 - Custom1 strategy added (enabled)
+2025-08-05 15:11:40 | INFO     | src.core.trading_engine:run_backtest:137 - Starting backtest from 2023-01-01 to 2025-07-31
+2025-08-05 15:11:40 | INFO     | src.core.trading_engine:_fetch_and_cache_data:107 - Fetching historical data from 2023-01-01 to 2025-07-31
+2025-08-05 15:11:40 | INFO     | src.data.data_manager:get_historical_data:64 - Fetching historical OHLCV data for ['Bitstamp:BTCUSD'] from 2023-01-01 to 2025-07-31
+2025-08-05 15:11:41 | INFO     | src.data.data_manager:_fetch_tradingview_ohlcv_data:159 - Successfully fetched OHLCV data for 1 symbols
+2025-08-05 15:11:41 | INFO     | src.data.data_manager:get_historical_data:97 - OHLCV data cached successfully
+2025-08-05 15:11:41 | INFO     | src.core.trading_engine:_fetch_and_cache_data:127 - Cached historical data: (100, 5)
+2025-08-05 15:11:41 | INFO     | src.risk.risk_manager:__init__:49 - Risk manager initialized
+2025-08-05 15:11:41 | INFO     | src.backtesting.backtest_engine:__init__:38 - Backtest engine initialized
+2025-08-05 15:11:41 | INFO     | src.backtesting.backtest_engine:run_backtest:55 - Starting backtest from 2023-01-01 to 2025-07-31
+2025-08-05 15:11:41 | INFO     | src.backtesting.backtest_engine:run_backtest:59 - Using provided historical data
+2025-08-05 15:11:41 | INFO     | src.backtesting.backtest_engine:run_backtest:73 - Running backtest for strategy: custom1
+2025-08-05 15:11:41 | INFO     | src.strategies.base_strategy:reset:99 - Reset strategy: custom1
+2025-08-05 15:11:41 | INFO     | src.risk.risk_manager:__init__:49 - Risk manager initialized
+2025-08-05 15:11:41 | INFO     | src.core.trading_engine:run_backtest:159 - Backtest completed using BacktestEngine
+2025-08-05 15:11:41 | INFO     | __main__:run_backtest:118 - Backtest completed
+2025-08-05 15:16:27 | INFO     | src.risk.risk_manager:__init__:49 - Risk manager initialized
+2025-08-05 15:16:27 | INFO     | src.core.trading_engine:__init__:84 - Trading engine initialized with $100,000.00 initial capital
+2025-08-05 15:16:27 | INFO     | src.strategies.base_strategy:__init__:34 - Initialized strategy: custom1
+2025-08-05 15:16:27 | INFO     | src.strategies.custom1_strategy:__init__:64 - Custom1 Strategy initialized: SMA(20/50) + RSI(14)
+2025-08-05 15:16:27 | INFO     | src.core.trading_engine:add_strategy:133 - Added strategy: custom1
+2025-08-05 15:16:27 | INFO     | __main__:run_backtest:103 - Custom1 strategy added (enabled)
+2025-08-05 15:16:27 | INFO     | src.core.trading_engine:run_backtest:137 - Starting backtest from 2023-01-01 to 2025-07-31
+2025-08-05 15:16:27 | INFO     | src.core.trading_engine:_fetch_and_cache_data:107 - Fetching historical data from 2023-01-01 to 2025-07-31
+2025-08-05 15:16:27 | INFO     | src.data.data_manager:get_historical_data:64 - Fetching historical OHLCV data for ['Bitstamp:BTCUSD'] from 2023-01-01 to 2025-07-31
+2025-08-05 15:16:27 | INFO     | src.data.data_manager:_fetch_tradingview_ohlcv_data:159 - Successfully fetched OHLCV data for 1 symbols
+2025-08-05 15:16:27 | INFO     | src.data.data_manager:get_historical_data:97 - OHLCV data cached successfully
+2025-08-05 15:16:27 | INFO     | src.core.trading_engine:_fetch_and_cache_data:127 - Cached historical data: (1000, 5)
+2025-08-05 15:16:27 | INFO     | src.risk.risk_manager:__init__:49 - Risk manager initialized
+2025-08-05 15:16:27 | INFO     | src.backtesting.backtest_engine:__init__:38 - Backtest engine initialized
+2025-08-05 15:16:27 | INFO     | src.backtesting.backtest_engine:run_backtest:55 - Starting backtest from 2023-01-01 to 2025-07-31
+2025-08-05 15:16:27 | INFO     | src.backtesting.backtest_engine:run_backtest:59 - Using provided historical data
+2025-08-05 15:16:27 | INFO     | src.backtesting.backtest_engine:run_backtest:73 - Running backtest for strategy: custom1
+2025-08-05 15:16:27 | INFO     | src.strategies.base_strategy:reset:99 - Reset strategy: custom1
+2025-08-05 15:16:27 | INFO     | src.risk.risk_manager:__init__:49 - Risk manager initialized
+2025-08-05 15:16:27 | INFO     | src.strategies.custom1_strategy:_generate_signal_for_symbol:145 - Strong sell signal for Bitstamp:BTCUSD: SMA+RSI combined
+2025-08-05 15:16:27 | INFO     | src.strategies.custom1_strategy:_generate_signal_for_symbol:145 - Strong sell signal for Bitstamp:BTCUSD: SMA+RSI combined
+2025-08-05 15:16:27 | INFO     | src.strategies.custom1_strategy:_generate_signal_for_symbol:145 - Strong sell signal for Bitstamp:BTCUSD: SMA+RSI combined
+2025-08-05 15:16:27 | INFO     | src.strategies.custom1_strategy:_generate_signal_for_symbol:145 - Strong sell signal for Bitstamp:BTCUSD: SMA+RSI combined
+2025-08-05 15:16:27 | INFO     | src.strategies.custom1_strategy:_generate_signal_for_symbol:145 - Strong sell signal for Bitstamp:BTCUSD: SMA+RSI combined
+2025-08-05 15:16:28 | INFO     | src.strategies.custom1_strategy:_generate_signal_for_symbol:139 - Strong buy signal for Bitstamp:BTCUSD: SMA+RSI combined
+2025-08-05 15:16:28 | INFO     | src.strategies.custom1_strategy:_generate_signal_for_symbol:139 - Strong buy signal for Bitstamp:BTCUSD: SMA+RSI combined
+2025-08-05 15:16:28 | INFO     | src.strategies.custom1_strategy:_generate_signal_for_symbol:139 - Strong buy signal for Bitstamp:BTCUSD: SMA+RSI combined
+2025-08-05 15:16:28 | INFO     | src.risk.risk_manager:check_stop_loss:155 - Stop loss triggered for Bitstamp:BTCUSD: -5.22%
+2025-08-05 15:16:28 | INFO     | src.backtesting.backtest_engine:_execute_trades:284 - STOP LOSS: 0.24 Bitstamp:BTCUSD @ $79605.00
+2025-08-05 15:16:28 | INFO     | src.strategies.custom1_strategy:_generate_signal_for_symbol:139 - Strong buy signal for Bitstamp:BTCUSD: SMA+RSI combined
+2025-08-05 15:16:28 | INFO     | src.strategies.custom1_strategy:_generate_signal_for_symbol:139 - Strong buy signal for Bitstamp:BTCUSD: SMA+RSI combined
+2025-08-05 15:16:28 | INFO     | src.risk.risk_manager:check_take_profit:194 - Take profit triggered for Bitstamp:BTCUSD: 15.59%
+2025-08-05 15:16:28 | INFO     | src.backtesting.backtest_engine:_execute_trades:311 - TAKE PROFIT: 0.21 Bitstamp:BTCUSD @ $109024.00
+2025-08-05 15:16:29 | INFO     | src.strategies.custom1_strategy:_generate_signal_for_symbol:145 - Strong sell signal for Bitstamp:BTCUSD: SMA+RSI combined
+2025-08-05 15:16:29 | INFO     | src.strategies.custom1_strategy:_generate_signal_for_symbol:139 - Strong buy signal for Bitstamp:BTCUSD: SMA+RSI combined
+2025-08-05 15:16:29 | INFO     | src.strategies.custom1_strategy:_generate_signal_for_symbol:139 - Strong buy signal for Bitstamp:BTCUSD: SMA+RSI combined
+2025-08-05 15:16:29 | INFO     | src.strategies.custom1_strategy:_generate_signal_for_symbol:139 - Strong buy signal for Bitstamp:BTCUSD: SMA+RSI combined
+2025-08-05 15:16:29 | INFO     | src.risk.risk_manager:check_stop_loss:155 - Stop loss triggered for Bitstamp:BTCUSD: -5.18%
+2025-08-05 15:16:29 | INFO     | src.backtesting.backtest_engine:_execute_trades:284 - STOP LOSS: 0.20 Bitstamp:BTCUSD @ $98980.00
+2025-08-05 15:16:29 | INFO     | src.strategies.custom1_strategy:_generate_signal_for_symbol:145 - Strong sell signal for Bitstamp:BTCUSD: SMA+RSI combined
+2025-08-05 15:16:29 | INFO     | src.strategies.custom1_strategy:_generate_signal_for_symbol:145 - Strong sell signal for Bitstamp:BTCUSD: SMA+RSI combined
+2025-08-05 15:16:29 | INFO     | src.strategies.custom1_strategy:_generate_signal_for_symbol:145 - Strong sell signal for Bitstamp:BTCUSD: SMA+RSI combined
+2025-08-05 15:16:29 | INFO     | src.strategies.custom1_strategy:_generate_signal_for_symbol:145 - Strong sell signal for Bitstamp:BTCUSD: SMA+RSI combined
+2025-08-05 15:16:29 | INFO     | src.strategies.custom1_strategy:_generate_signal_for_symbol:145 - Strong sell signal for Bitstamp:BTCUSD: SMA+RSI combined
+2025-08-05 15:16:29 | INFO     | src.strategies.custom1_strategy:_generate_signal_for_symbol:145 - Strong sell signal for Bitstamp:BTCUSD: SMA+RSI combined
+2025-08-05 15:16:29 | INFO     | src.strategies.custom1_strategy:_generate_signal_for_symbol:139 - Strong buy signal for Bitstamp:BTCUSD: SMA+RSI combined
+2025-08-05 15:16:29 | INFO     | src.strategies.custom1_strategy:_generate_signal_for_symbol:145 - Strong sell signal for Bitstamp:BTCUSD: SMA+RSI combined
+2025-08-05 15:16:30 | INFO     | src.core.trading_engine:run_backtest:159 - Backtest completed using BacktestEngine
+2025-08-05 15:16:30 | INFO     | __main__:run_backtest:118 - Backtest completed
+2025-08-05 15:16:42 | INFO     | src.risk.risk_manager:__init__:49 - Risk manager initialized
+2025-08-05 15:16:42 | INFO     | src.core.trading_engine:__init__:84 - Trading engine initialized with $100,000.00 initial capital
+2025-08-05 15:16:42 | INFO     | src.strategies.base_strategy:__init__:34 - Initialized strategy: sma_crossover
+2025-08-05 15:16:42 | INFO     | src.strategies.sma_crossover:__init__:48 - SMA Crossover Strategy initialized: 5/30
+2025-08-05 15:16:42 | INFO     | src.core.trading_engine:add_strategy:133 - Added strategy: sma_crossover
+2025-08-05 15:16:42 | INFO     | __main__:run_backtest:76 - SMA Crossover strategy added (enabled)
+2025-08-05 15:16:42 | INFO     | src.core.trading_engine:run_backtest:137 - Starting backtest from 2023-01-01 to 2025-07-31
+2025-08-05 15:16:42 | INFO     | src.core.trading_engine:_fetch_and_cache_data:107 - Fetching historical data from 2023-01-01 to 2025-07-31
+2025-08-05 15:16:42 | INFO     | src.data.data_manager:get_historical_data:64 - Fetching historical OHLCV data for ['Bitstamp:BTCUSD'] from 2023-01-01 to 2025-07-31
+2025-08-05 15:16:42 | INFO     | src.data.data_manager:_fetch_tradingview_ohlcv_data:159 - Successfully fetched OHLCV data for 1 symbols
+2025-08-05 15:16:42 | INFO     | src.data.data_manager:get_historical_data:97 - OHLCV data cached successfully
+2025-08-05 15:16:42 | INFO     | src.core.trading_engine:_fetch_and_cache_data:127 - Cached historical data: (1000, 5)
+2025-08-05 15:16:42 | INFO     | src.risk.risk_manager:__init__:49 - Risk manager initialized
+2025-08-05 15:16:42 | INFO     | src.backtesting.backtest_engine:__init__:38 - Backtest engine initialized
+2025-08-05 15:16:42 | INFO     | src.backtesting.backtest_engine:run_backtest:55 - Starting backtest from 2023-01-01 to 2025-07-31
+2025-08-05 15:16:42 | INFO     | src.backtesting.backtest_engine:run_backtest:59 - Using provided historical data
+2025-08-05 15:16:42 | INFO     | src.backtesting.backtest_engine:run_backtest:73 - Running backtest for strategy: sma_crossover
+2025-08-05 15:16:42 | INFO     | src.strategies.base_strategy:reset:99 - Reset strategy: sma_crossover
+2025-08-05 15:16:42 | INFO     | src.risk.risk_manager:__init__:49 - Risk manager initialized
+2025-08-05 15:16:42 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 85656.20 > 85388.63
+2025-08-05 15:16:42 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 85749.40 < 86137.67
+2025-08-05 15:16:42 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 87930.40 > 87000.40
+2025-08-05 15:16:42 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 88541.60 < 88823.27
+2025-08-05 15:16:42 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 82957.80 > 82925.43
+2025-08-05 15:16:42 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 82161.00 < 82345.27
+2025-08-05 15:16:42 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 82621.60 > 81903.60
+2025-08-05 15:16:42 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 83017.00 < 83173.83
+2025-08-05 15:16:42 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 83248.80 > 83212.33
+2025-08-05 15:16:42 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 82909.40 < 83349.00
+2025-08-05 15:16:42 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 84060.60 > 83599.83
+2025-08-05 15:16:42 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 83882.20 < 83981.73
+2025-08-05 15:16:42 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 84133.40 > 84045.20
+2025-08-05 15:16:42 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 84114.40 < 84120.00
+2025-08-05 15:16:42 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 84223.20 > 84188.80
+2025-08-05 15:16:42 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 86631.80 < 86957.43
+2025-08-05 15:16:42 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 83625.40 > 83590.23
+2025-08-05 15:16:42 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 82925.60 < 83460.23
+2025-08-05 15:16:42 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 80008.40 > 79796.43
+2025-08-05 15:16:42 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 83931.40 < 84227.17
+2025-08-05 15:16:42 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 84525.60 > 84498.00
+2025-08-05 15:16:42 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 84535.40 < 84544.07
+2025-08-05 15:16:42 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 84584.00 > 84555.27
+2025-08-05 15:16:42 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 94442.00 < 94520.93
+2025-08-05 15:16:42 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 94874.80 > 94603.30
+2025-08-05 15:16:42 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 95692.60 < 95824.40
+2025-08-05 15:16:42 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 95962.80 > 95544.00
+2025-08-05 15:16:42 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 102534.60 < 102997.87
+2025-08-05 15:16:42 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 103815.20 > 103497.70
+2025-08-05 15:16:42 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 103605.80 < 103611.53
+2025-08-05 15:16:42 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 103608.40 > 103478.97
+2025-08-05 15:16:42 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 103309.40 < 103354.40
+2025-08-05 15:16:42 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 103957.00 > 103571.93
+2025-08-05 15:16:42 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 108313.00 < 108405.83
+2025-08-05 15:16:42 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 108647.00 > 108519.63
+2025-08-05 15:16:42 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 108528.60 < 108592.20
+2025-08-05 15:16:42 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 109758.60 > 109336.20
+2025-08-05 15:16:42 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 108570.20 < 108783.13
+2025-08-05 15:16:42 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 105127.80 > 105066.27
+2025-08-05 15:16:43 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 104947.20 < 105026.30
+2025-08-05 15:16:43 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 104753.60 > 104694.73
+2025-08-05 15:16:43 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 107633.60 < 107820.03
+2025-08-05 15:16:43 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 106167.20 > 106118.27
+2025-08-05 15:16:43 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 105209.20 < 105696.63
+2025-08-05 15:16:43 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 103306.00 > 103174.30
+2025-08-05 15:16:43 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 107404.20 < 107475.27
+2025-08-05 15:16:43 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 107873.60 > 107410.93
+2025-08-05 15:16:43 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 107884.80 < 107980.77
+2025-08-05 15:16:43 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 108113.20 > 108012.30
+2025-08-05 15:16:43 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 108140.40 < 108168.53
+2025-08-05 15:16:43 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 108288.40 > 108266.33
+2025-08-05 15:16:43 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 108354.80 < 108371.57
+2025-08-05 15:16:43 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 108584.60 > 108489.03
+2025-08-05 15:16:43 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 108474.80 < 108606.67
+2025-08-05 15:16:43 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 108655.60 > 108435.33
+2025-08-05 15:16:43 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 117455.60 < 118101.20
+2025-08-05 15:16:43 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 118586.00 > 118442.23
+2025-08-05 15:16:43 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 118449.40 < 118577.97
+2025-08-05 15:16:43 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 118726.80 > 118685.40
+2025-08-05 15:16:43 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 118422.40 < 118738.93
+2025-08-05 15:16:43 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 118563.60 > 118355.17
+2025-08-05 15:16:43 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 118118.20 < 118364.77
+2025-08-05 15:16:43 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 118098.80 > 118073.20
+2025-08-05 15:16:43 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 117905.80 < 117976.97
+2025-08-05 15:16:43 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 118316.80 > 118284.57
+2025-08-05 15:16:43 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 118103.40 < 118234.27
+2025-08-05 15:16:43 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 114572.40 > 114544.93
+2025-08-05 15:16:43 | INFO     | src.core.trading_engine:run_backtest:159 - Backtest completed using BacktestEngine
+2025-08-05 15:16:43 | INFO     | __main__:run_backtest:118 - Backtest completed
+2025-08-05 15:22:56 | INFO     | src.risk.risk_manager:__init__:49 - Risk manager initialized
+2025-08-05 15:22:56 | INFO     | src.core.trading_engine:__init__:84 - Trading engine initialized with $100,000.00 initial capital
+2025-08-05 15:22:56 | INFO     | src.strategies.base_strategy:__init__:34 - Initialized strategy: custom1
+2025-08-05 15:22:56 | INFO     | src.strategies.custom1_strategy:__init__:64 - Custom1 Strategy initialized: SMA(20/50) + RSI(14)
+2025-08-05 15:22:56 | INFO     | src.core.trading_engine:add_strategy:133 - Added strategy: custom1
+2025-08-05 15:22:56 | INFO     | __main__:run_backtest:103 - Custom1 strategy added (enabled)
+2025-08-05 15:22:56 | INFO     | src.core.trading_engine:run_backtest:137 - Starting backtest from 2023-01-01 to 2025-07-31
+2025-08-05 15:22:56 | INFO     | src.core.trading_engine:_fetch_and_cache_data:107 - Fetching historical data from 2023-01-01 to 2025-07-31
+2025-08-05 15:22:56 | INFO     | src.data.data_manager:get_historical_data:64 - Fetching historical OHLCV data for ['Bitstamp:BTCUSD'] from 2023-01-01 to 2025-07-31
+2025-08-05 15:22:57 | INFO     | src.data.data_manager:_fetch_tradingview_ohlcv_data:159 - Successfully fetched OHLCV data for 1 symbols
+2025-08-05 15:22:57 | INFO     | src.data.data_manager:get_historical_data:97 - OHLCV data cached successfully
+2025-08-05 15:22:57 | INFO     | src.core.trading_engine:_fetch_and_cache_data:127 - Cached historical data: (1000, 5)
+2025-08-05 15:22:57 | INFO     | src.risk.risk_manager:__init__:49 - Risk manager initialized
+2025-08-05 15:22:57 | INFO     | src.backtesting.backtest_engine:__init__:38 - Backtest engine initialized
+2025-08-05 15:22:57 | INFO     | src.backtesting.backtest_engine:run_backtest:55 - Starting backtest from 2023-01-01 to 2025-07-31
+2025-08-05 15:22:57 | INFO     | src.backtesting.backtest_engine:run_backtest:59 - Using provided historical data
+2025-08-05 15:22:57 | INFO     | src.backtesting.backtest_engine:run_backtest:73 - Running backtest for strategy: custom1
+2025-08-05 15:22:57 | INFO     | src.strategies.base_strategy:reset:99 - Reset strategy: custom1
+2025-08-05 15:22:57 | INFO     | src.risk.risk_manager:__init__:49 - Risk manager initialized
+2025-08-05 15:22:57 | INFO     | src.strategies.custom1_strategy:_generate_signal_for_symbol:145 - Strong sell signal for Bitstamp:BTCUSD: SMA+RSI combined
+2025-08-05 15:22:57 | INFO     | src.strategies.custom1_strategy:_generate_signal_for_symbol:145 - Strong sell signal for Bitstamp:BTCUSD: SMA+RSI combined
+2025-08-05 15:22:57 | INFO     | src.strategies.custom1_strategy:_generate_signal_for_symbol:145 - Strong sell signal for Bitstamp:BTCUSD: SMA+RSI combined
+2025-08-05 15:22:57 | INFO     | src.strategies.custom1_strategy:_generate_signal_for_symbol:145 - Strong sell signal for Bitstamp:BTCUSD: SMA+RSI combined
+2025-08-05 15:22:57 | INFO     | src.strategies.custom1_strategy:_generate_signal_for_symbol:145 - Strong sell signal for Bitstamp:BTCUSD: SMA+RSI combined
+2025-08-05 15:22:57 | INFO     | src.strategies.custom1_strategy:_generate_signal_for_symbol:139 - Strong buy signal for Bitstamp:BTCUSD: SMA+RSI combined
+2025-08-05 15:22:57 | INFO     | src.strategies.custom1_strategy:_generate_signal_for_symbol:139 - Strong buy signal for Bitstamp:BTCUSD: SMA+RSI combined
+2025-08-05 15:22:57 | INFO     | src.strategies.custom1_strategy:_generate_signal_for_symbol:139 - Strong buy signal for Bitstamp:BTCUSD: SMA+RSI combined
+2025-08-05 15:22:58 | INFO     | src.risk.risk_manager:check_stop_loss:155 - Stop loss triggered for Bitstamp:BTCUSD: -5.22%
+2025-08-05 15:22:58 | INFO     | src.backtesting.backtest_engine:_execute_trades:284 - STOP LOSS: 0.24 Bitstamp:BTCUSD @ $79605.00
+2025-08-05 15:22:58 | INFO     | src.strategies.custom1_strategy:_generate_signal_for_symbol:139 - Strong buy signal for Bitstamp:BTCUSD: SMA+RSI combined
+2025-08-05 15:22:58 | INFO     | src.strategies.custom1_strategy:_generate_signal_for_symbol:139 - Strong buy signal for Bitstamp:BTCUSD: SMA+RSI combined
+2025-08-05 15:22:58 | INFO     | src.risk.risk_manager:check_take_profit:194 - Take profit triggered for Bitstamp:BTCUSD: 15.59%
+2025-08-05 15:22:58 | INFO     | src.backtesting.backtest_engine:_execute_trades:311 - TAKE PROFIT: 0.21 Bitstamp:BTCUSD @ $109024.00
+2025-08-05 15:22:58 | INFO     | src.strategies.custom1_strategy:_generate_signal_for_symbol:145 - Strong sell signal for Bitstamp:BTCUSD: SMA+RSI combined
+2025-08-05 15:22:59 | INFO     | src.strategies.custom1_strategy:_generate_signal_for_symbol:139 - Strong buy signal for Bitstamp:BTCUSD: SMA+RSI combined
+2025-08-05 15:22:59 | INFO     | src.strategies.custom1_strategy:_generate_signal_for_symbol:139 - Strong buy signal for Bitstamp:BTCUSD: SMA+RSI combined
+2025-08-05 15:22:59 | INFO     | src.strategies.custom1_strategy:_generate_signal_for_symbol:139 - Strong buy signal for Bitstamp:BTCUSD: SMA+RSI combined
+2025-08-05 15:22:59 | INFO     | src.risk.risk_manager:check_stop_loss:155 - Stop loss triggered for Bitstamp:BTCUSD: -5.18%
+2025-08-05 15:22:59 | INFO     | src.backtesting.backtest_engine:_execute_trades:284 - STOP LOSS: 0.20 Bitstamp:BTCUSD @ $98980.00
+2025-08-05 15:22:59 | INFO     | src.strategies.custom1_strategy:_generate_signal_for_symbol:145 - Strong sell signal for Bitstamp:BTCUSD: SMA+RSI combined
+2025-08-05 15:22:59 | INFO     | src.strategies.custom1_strategy:_generate_signal_for_symbol:145 - Strong sell signal for Bitstamp:BTCUSD: SMA+RSI combined
+2025-08-05 15:22:59 | INFO     | src.strategies.custom1_strategy:_generate_signal_for_symbol:145 - Strong sell signal for Bitstamp:BTCUSD: SMA+RSI combined
+2025-08-05 15:22:59 | INFO     | src.strategies.custom1_strategy:_generate_signal_for_symbol:145 - Strong sell signal for Bitstamp:BTCUSD: SMA+RSI combined
+2025-08-05 15:22:59 | INFO     | src.strategies.custom1_strategy:_generate_signal_for_symbol:145 - Strong sell signal for Bitstamp:BTCUSD: SMA+RSI combined
+2025-08-05 15:22:59 | INFO     | src.strategies.custom1_strategy:_generate_signal_for_symbol:145 - Strong sell signal for Bitstamp:BTCUSD: SMA+RSI combined
+2025-08-05 15:22:59 | INFO     | src.strategies.custom1_strategy:_generate_signal_for_symbol:139 - Strong buy signal for Bitstamp:BTCUSD: SMA+RSI combined
+2025-08-05 15:22:59 | INFO     | src.strategies.custom1_strategy:_generate_signal_for_symbol:145 - Strong sell signal for Bitstamp:BTCUSD: SMA+RSI combined
+2025-08-05 15:22:59 | INFO     | src.core.trading_engine:run_backtest:159 - Backtest completed using BacktestEngine
+2025-08-05 15:22:59 | INFO     | __main__:run_backtest:121 - Backtest completed
+2025-08-05 15:22:59 | INFO     | __main__:run_backtest:122 - ============================================================
+2025-08-05 15:22:59 | INFO     | __main__:run_backtest:123 - 📊 PORTFOLIO SUMMARY
+2025-08-05 15:22:59 | INFO     | __main__:run_backtest:124 - ============================================================
+2025-08-05 15:22:59 | INFO     | __main__:run_backtest:125 - 💰 Initial Capital: $100,000.00
+2025-08-05 15:22:59 | INFO     | __main__:run_backtest:126 - 💵 Total Value: $100,000.00
+2025-08-05 15:22:59 | INFO     | __main__:run_backtest:127 - 📈 Total Return: 0.00%
+2025-08-05 15:22:59 | INFO     | __main__:run_backtest:128 - 📊 Annualized Return: 0.00%
+2025-08-05 15:22:59 | INFO     | __main__:run_backtest:129 - 📊 Sharpe Ratio: 0.0000
+2025-08-05 15:22:59 | INFO     | __main__:run_backtest:130 - 📉 Max Drawdown: 0.00%
+2025-08-05 15:22:59 | INFO     | __main__:run_backtest:131 - 🎯 Win Rate: 0.00%
+2025-08-05 15:22:59 | INFO     | __main__:run_backtest:132 - 🔄 Total Trades: 0
+2025-08-05 15:22:59 | INFO     | __main__:run_backtest:133 - 💵 Cash: $100,000.00
+2025-08-05 15:22:59 | INFO     | __main__:run_backtest:143 - 
+📋 POSITIONS: None
+2025-08-05 15:22:59 | INFO     | __main__:run_backtest:145 - ============================================================
+2025-08-05 15:23:14 | INFO     | src.risk.risk_manager:__init__:49 - Risk manager initialized
+2025-08-05 15:23:14 | INFO     | src.core.trading_engine:__init__:84 - Trading engine initialized with $100,000.00 initial capital
+2025-08-05 15:23:14 | INFO     | src.strategies.base_strategy:__init__:34 - Initialized strategy: sma_crossover
+2025-08-05 15:23:14 | INFO     | src.strategies.sma_crossover:__init__:48 - SMA Crossover Strategy initialized: 5/30
+2025-08-05 15:23:14 | INFO     | src.core.trading_engine:add_strategy:133 - Added strategy: sma_crossover
+2025-08-05 15:23:14 | INFO     | __main__:run_backtest:76 - SMA Crossover strategy added (enabled)
+2025-08-05 15:23:14 | INFO     | src.core.trading_engine:run_backtest:137 - Starting backtest from 2023-01-01 to 2025-07-31
+2025-08-05 15:23:14 | INFO     | src.core.trading_engine:_fetch_and_cache_data:107 - Fetching historical data from 2023-01-01 to 2025-07-31
+2025-08-05 15:23:14 | INFO     | src.data.data_manager:get_historical_data:64 - Fetching historical OHLCV data for ['Bitstamp:BTCUSD'] from 2023-01-01 to 2025-07-31
+2025-08-05 15:23:15 | INFO     | src.data.data_manager:_fetch_tradingview_ohlcv_data:159 - Successfully fetched OHLCV data for 1 symbols
+2025-08-05 15:23:15 | INFO     | src.data.data_manager:get_historical_data:97 - OHLCV data cached successfully
+2025-08-05 15:23:15 | INFO     | src.core.trading_engine:_fetch_and_cache_data:127 - Cached historical data: (1000, 5)
+2025-08-05 15:23:15 | INFO     | src.risk.risk_manager:__init__:49 - Risk manager initialized
+2025-08-05 15:23:15 | INFO     | src.backtesting.backtest_engine:__init__:38 - Backtest engine initialized
+2025-08-05 15:23:15 | INFO     | src.backtesting.backtest_engine:run_backtest:55 - Starting backtest from 2023-01-01 to 2025-07-31
+2025-08-05 15:23:15 | INFO     | src.backtesting.backtest_engine:run_backtest:59 - Using provided historical data
+2025-08-05 15:23:15 | INFO     | src.backtesting.backtest_engine:run_backtest:73 - Running backtest for strategy: sma_crossover
+2025-08-05 15:23:15 | INFO     | src.strategies.base_strategy:reset:99 - Reset strategy: sma_crossover
+2025-08-05 15:23:15 | INFO     | src.risk.risk_manager:__init__:49 - Risk manager initialized
+2025-08-05 15:23:15 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 85656.20 > 85388.63
+2025-08-05 15:23:15 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 85749.40 < 86137.67
+2025-08-05 15:23:15 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 87930.40 > 87000.40
+2025-08-05 15:23:15 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 88541.60 < 88823.27
+2025-08-05 15:23:15 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 82957.80 > 82925.43
+2025-08-05 15:23:15 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 82161.00 < 82345.27
+2025-08-05 15:23:15 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 82621.60 > 81903.60
+2025-08-05 15:23:15 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 83017.00 < 83173.83
+2025-08-05 15:23:15 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 83248.80 > 83212.33
+2025-08-05 15:23:15 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 82909.40 < 83349.00
+2025-08-05 15:23:15 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 84060.60 > 83599.83
+2025-08-05 15:23:15 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 83882.20 < 83981.73
+2025-08-05 15:23:15 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 84133.40 > 84045.20
+2025-08-05 15:23:15 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 84114.40 < 84120.00
+2025-08-05 15:23:15 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 84223.20 > 84188.80
+2025-08-05 15:23:15 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 86631.80 < 86957.43
+2025-08-05 15:23:15 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 83625.40 > 83590.23
+2025-08-05 15:23:15 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 82925.60 < 83460.23
+2025-08-05 15:23:15 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 80008.40 > 79796.43
+2025-08-05 15:23:15 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 83931.40 < 84227.17
+2025-08-05 15:23:15 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 84525.60 > 84498.00
+2025-08-05 15:23:15 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 84535.40 < 84544.07
+2025-08-05 15:23:15 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 84584.00 > 84555.27
+2025-08-05 15:23:15 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 94442.00 < 94520.93
+2025-08-05 15:23:15 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 94874.80 > 94603.30
+2025-08-05 15:23:15 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 95692.60 < 95824.40
+2025-08-05 15:23:15 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 95962.80 > 95544.00
+2025-08-05 15:23:15 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 102534.60 < 102997.87
+2025-08-05 15:23:15 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 103815.20 > 103497.70
+2025-08-05 15:23:15 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 103605.80 < 103611.53
+2025-08-05 15:23:15 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 103608.40 > 103478.97
+2025-08-05 15:23:15 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 103309.40 < 103354.40
+2025-08-05 15:23:15 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 103957.00 > 103571.93
+2025-08-05 15:23:15 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 108313.00 < 108405.83
+2025-08-05 15:23:15 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 108647.00 > 108519.63
+2025-08-05 15:23:15 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 108528.60 < 108592.20
+2025-08-05 15:23:15 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 109758.60 > 109336.20
+2025-08-05 15:23:15 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 108570.20 < 108783.13
+2025-08-05 15:23:15 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 105127.80 > 105066.27
+2025-08-05 15:23:15 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 104947.20 < 105026.30
+2025-08-05 15:23:15 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 104753.60 > 104694.73
+2025-08-05 15:23:15 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 107633.60 < 107820.03
+2025-08-05 15:23:15 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 106167.20 > 106118.27
+2025-08-05 15:23:15 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 105209.20 < 105696.63
+2025-08-05 15:23:15 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 103306.00 > 103174.30
+2025-08-05 15:23:15 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 107404.20 < 107475.27
+2025-08-05 15:23:15 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 107873.60 > 107410.93
+2025-08-05 15:23:15 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 107884.80 < 107980.77
+2025-08-05 15:23:15 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 108113.20 > 108012.30
+2025-08-05 15:23:15 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 108140.40 < 108168.53
+2025-08-05 15:23:15 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 108288.40 > 108266.33
+2025-08-05 15:23:15 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 108354.80 < 108371.57
+2025-08-05 15:23:15 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 108584.60 > 108489.03
+2025-08-05 15:23:15 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 108474.80 < 108606.67
+2025-08-05 15:23:15 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 108655.60 > 108435.33
+2025-08-05 15:23:15 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 117455.60 < 118101.20
+2025-08-05 15:23:15 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 118586.00 > 118442.23
+2025-08-05 15:23:15 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 118449.40 < 118577.97
+2025-08-05 15:23:15 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 118726.80 > 118685.40
+2025-08-05 15:23:15 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 118422.40 < 118738.93
+2025-08-05 15:23:15 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 118563.60 > 118355.17
+2025-08-05 15:23:15 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 118118.20 < 118364.77
+2025-08-05 15:23:15 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 118098.80 > 118073.20
+2025-08-05 15:23:15 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 117905.80 < 117976.97
+2025-08-05 15:23:15 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 118316.80 > 118284.57
+2025-08-05 15:23:15 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 118103.40 < 118234.27
+2025-08-05 15:23:15 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 114572.40 > 114544.93
+2025-08-05 15:23:15 | INFO     | src.core.trading_engine:run_backtest:159 - Backtest completed using BacktestEngine
+2025-08-05 15:23:15 | INFO     | __main__:run_backtest:121 - Backtest completed
+2025-08-05 15:23:15 | INFO     | __main__:run_backtest:122 - ============================================================
+2025-08-05 15:23:15 | INFO     | __main__:run_backtest:123 - 📊 PORTFOLIO SUMMARY
+2025-08-05 15:23:15 | INFO     | __main__:run_backtest:124 - ============================================================
+2025-08-05 15:23:15 | INFO     | __main__:run_backtest:125 - 💰 Initial Capital: $100,000.00
+2025-08-05 15:23:15 | INFO     | __main__:run_backtest:126 - 💵 Total Value: $100,000.00
+2025-08-05 15:23:15 | INFO     | __main__:run_backtest:127 - 📈 Total Return: 0.00%
+2025-08-05 15:23:15 | INFO     | __main__:run_backtest:128 - 📊 Annualized Return: 0.00%
+2025-08-05 15:23:15 | INFO     | __main__:run_backtest:129 - 📊 Sharpe Ratio: 0.0000
+2025-08-05 15:23:15 | INFO     | __main__:run_backtest:130 - 📉 Max Drawdown: 0.00%
+2025-08-05 15:23:15 | INFO     | __main__:run_backtest:131 - 🎯 Win Rate: 0.00%
+2025-08-05 15:23:15 | INFO     | __main__:run_backtest:132 - 🔄 Total Trades: 0
+2025-08-05 15:23:15 | INFO     | __main__:run_backtest:133 - 💵 Cash: $100,000.00
+2025-08-05 15:23:15 | INFO     | __main__:run_backtest:143 - 
+📋 POSITIONS: None
+2025-08-05 15:23:15 | INFO     | __main__:run_backtest:145 - ============================================================
+2025-08-05 15:27:49 | INFO     | src.risk.risk_manager:__init__:49 - Risk manager initialized
+2025-08-05 15:27:49 | INFO     | src.core.trading_engine:__init__:84 - Trading engine initialized with $100,000.00 initial capital
+2025-08-05 15:27:49 | INFO     | src.strategies.base_strategy:__init__:34 - Initialized strategy: custom1
+2025-08-05 15:27:49 | INFO     | src.strategies.custom1_strategy:__init__:64 - Custom1 Strategy initialized: SMA(20/50) + RSI(14)
+2025-08-05 15:27:49 | INFO     | src.core.trading_engine:add_strategy:133 - Added strategy: custom1
+2025-08-05 15:27:49 | INFO     | __main__:run_backtest:103 - Custom1 strategy added (enabled)
+2025-08-05 15:27:49 | INFO     | src.core.trading_engine:run_backtest:137 - Starting backtest from 2023-01-01 to 2025-07-31
+2025-08-05 15:27:49 | INFO     | src.core.trading_engine:_fetch_and_cache_data:107 - Fetching historical data from 2023-01-01 to 2025-07-31
+2025-08-05 15:27:49 | INFO     | src.data.data_manager:get_historical_data:64 - Fetching historical OHLCV data for ['Bitstamp:BTCUSD'] from 2023-01-01 to 2025-07-31
+2025-08-05 15:27:49 | INFO     | src.data.data_manager:_fetch_tradingview_ohlcv_data:159 - Successfully fetched OHLCV data for 1 symbols
+2025-08-05 15:27:49 | INFO     | src.data.data_manager:get_historical_data:97 - OHLCV data cached successfully
+2025-08-05 15:27:49 | INFO     | src.core.trading_engine:_fetch_and_cache_data:127 - Cached historical data: (1000, 5)
+2025-08-05 15:27:49 | INFO     | src.risk.risk_manager:__init__:49 - Risk manager initialized
+2025-08-05 15:27:49 | INFO     | src.backtesting.backtest_engine:__init__:38 - Backtest engine initialized
+2025-08-05 15:27:49 | INFO     | src.backtesting.backtest_engine:run_backtest:55 - Starting backtest from 2023-01-01 to 2025-07-31
+2025-08-05 15:27:49 | INFO     | src.backtesting.backtest_engine:run_backtest:59 - Using provided historical data
+2025-08-05 15:27:49 | INFO     | src.backtesting.backtest_engine:run_backtest:73 - Running backtest for strategy: custom1
+2025-08-05 15:27:49 | INFO     | src.strategies.base_strategy:reset:99 - Reset strategy: custom1
+2025-08-05 15:27:49 | INFO     | src.risk.risk_manager:__init__:49 - Risk manager initialized
+2025-08-05 15:27:49 | INFO     | src.strategies.custom1_strategy:_generate_signal_for_symbol:145 - Strong sell signal for Bitstamp:BTCUSD: SMA+RSI combined
+2025-08-05 15:27:49 | INFO     | src.strategies.custom1_strategy:_generate_signal_for_symbol:145 - Strong sell signal for Bitstamp:BTCUSD: SMA+RSI combined
+2025-08-05 15:27:49 | INFO     | src.strategies.custom1_strategy:_generate_signal_for_symbol:145 - Strong sell signal for Bitstamp:BTCUSD: SMA+RSI combined
+2025-08-05 15:27:49 | INFO     | src.strategies.custom1_strategy:_generate_signal_for_symbol:145 - Strong sell signal for Bitstamp:BTCUSD: SMA+RSI combined
+2025-08-05 15:27:49 | INFO     | src.strategies.custom1_strategy:_generate_signal_for_symbol:145 - Strong sell signal for Bitstamp:BTCUSD: SMA+RSI combined
+2025-08-05 15:27:50 | INFO     | src.strategies.custom1_strategy:_generate_signal_for_symbol:139 - Strong buy signal for Bitstamp:BTCUSD: SMA+RSI combined
+2025-08-05 15:27:50 | INFO     | src.strategies.custom1_strategy:_generate_signal_for_symbol:139 - Strong buy signal for Bitstamp:BTCUSD: SMA+RSI combined
+2025-08-05 15:27:50 | INFO     | src.strategies.custom1_strategy:_generate_signal_for_symbol:139 - Strong buy signal for Bitstamp:BTCUSD: SMA+RSI combined
+2025-08-05 15:27:50 | INFO     | src.risk.risk_manager:check_stop_loss:155 - Stop loss triggered for Bitstamp:BTCUSD: -5.22%
+2025-08-05 15:27:50 | INFO     | src.backtesting.backtest_engine:_execute_trades:284 - STOP LOSS: 0.24 Bitstamp:BTCUSD @ $79605.00
+2025-08-05 15:27:50 | INFO     | src.strategies.custom1_strategy:_generate_signal_for_symbol:139 - Strong buy signal for Bitstamp:BTCUSD: SMA+RSI combined
+2025-08-05 15:27:50 | INFO     | src.strategies.custom1_strategy:_generate_signal_for_symbol:139 - Strong buy signal for Bitstamp:BTCUSD: SMA+RSI combined
+2025-08-05 15:27:51 | INFO     | src.risk.risk_manager:check_take_profit:194 - Take profit triggered for Bitstamp:BTCUSD: 15.59%
+2025-08-05 15:27:51 | INFO     | src.backtesting.backtest_engine:_execute_trades:311 - TAKE PROFIT: 0.21 Bitstamp:BTCUSD @ $109024.00
+2025-08-05 15:27:51 | INFO     | src.strategies.custom1_strategy:_generate_signal_for_symbol:145 - Strong sell signal for Bitstamp:BTCUSD: SMA+RSI combined
+2025-08-05 15:27:51 | INFO     | src.strategies.custom1_strategy:_generate_signal_for_symbol:139 - Strong buy signal for Bitstamp:BTCUSD: SMA+RSI combined
+2025-08-05 15:27:51 | INFO     | src.strategies.custom1_strategy:_generate_signal_for_symbol:139 - Strong buy signal for Bitstamp:BTCUSD: SMA+RSI combined
+2025-08-05 15:27:51 | INFO     | src.strategies.custom1_strategy:_generate_signal_for_symbol:139 - Strong buy signal for Bitstamp:BTCUSD: SMA+RSI combined
+2025-08-05 15:27:51 | INFO     | src.risk.risk_manager:check_stop_loss:155 - Stop loss triggered for Bitstamp:BTCUSD: -5.18%
+2025-08-05 15:27:51 | INFO     | src.backtesting.backtest_engine:_execute_trades:284 - STOP LOSS: 0.20 Bitstamp:BTCUSD @ $98980.00
+2025-08-05 15:27:51 | INFO     | src.strategies.custom1_strategy:_generate_signal_for_symbol:145 - Strong sell signal for Bitstamp:BTCUSD: SMA+RSI combined
+2025-08-05 15:27:51 | INFO     | src.strategies.custom1_strategy:_generate_signal_for_symbol:145 - Strong sell signal for Bitstamp:BTCUSD: SMA+RSI combined
+2025-08-05 15:27:51 | INFO     | src.strategies.custom1_strategy:_generate_signal_for_symbol:145 - Strong sell signal for Bitstamp:BTCUSD: SMA+RSI combined
+2025-08-05 15:27:51 | INFO     | src.strategies.custom1_strategy:_generate_signal_for_symbol:145 - Strong sell signal for Bitstamp:BTCUSD: SMA+RSI combined
+2025-08-05 15:27:51 | INFO     | src.strategies.custom1_strategy:_generate_signal_for_symbol:145 - Strong sell signal for Bitstamp:BTCUSD: SMA+RSI combined
+2025-08-05 15:27:51 | INFO     | src.strategies.custom1_strategy:_generate_signal_for_symbol:145 - Strong sell signal for Bitstamp:BTCUSD: SMA+RSI combined
+2025-08-05 15:27:52 | INFO     | src.strategies.custom1_strategy:_generate_signal_for_symbol:139 - Strong buy signal for Bitstamp:BTCUSD: SMA+RSI combined
+2025-08-05 15:27:52 | INFO     | src.strategies.custom1_strategy:_generate_signal_for_symbol:145 - Strong sell signal for Bitstamp:BTCUSD: SMA+RSI combined
+2025-08-05 15:27:52 | INFO     | src.core.trading_engine:run_backtest:198 - Backtest completed using BacktestEngine
+2025-08-05 15:29:39 | INFO     | src.risk.risk_manager:__init__:49 - Risk manager initialized
+2025-08-05 15:29:39 | INFO     | src.core.trading_engine:__init__:84 - Trading engine initialized with $100,000.00 initial capital
+2025-08-05 15:29:39 | INFO     | src.strategies.base_strategy:__init__:34 - Initialized strategy: sma_crossover
+2025-08-05 15:29:39 | INFO     | src.strategies.sma_crossover:__init__:48 - SMA Crossover Strategy initialized: 5/30
+2025-08-05 15:29:39 | INFO     | src.core.trading_engine:add_strategy:133 - Added strategy: sma_crossover
+2025-08-05 15:29:39 | INFO     | __main__:run_backtest:76 - SMA Crossover strategy added (enabled)
+2025-08-05 15:29:39 | INFO     | src.core.trading_engine:run_backtest:137 - Starting backtest from 2023-01-01 to 2025-07-31
+2025-08-05 15:29:39 | INFO     | src.core.trading_engine:_fetch_and_cache_data:107 - Fetching historical data from 2023-01-01 to 2025-07-31
+2025-08-05 15:29:39 | INFO     | src.data.data_manager:get_historical_data:64 - Fetching historical OHLCV data for ['Bitstamp:BTCUSD'] from 2023-01-01 to 2025-07-31
+2025-08-05 15:29:40 | INFO     | src.data.data_manager:_fetch_tradingview_ohlcv_data:159 - Successfully fetched OHLCV data for 1 symbols
+2025-08-05 15:29:40 | INFO     | src.data.data_manager:get_historical_data:97 - OHLCV data cached successfully
+2025-08-05 15:29:40 | INFO     | src.core.trading_engine:_fetch_and_cache_data:127 - Cached historical data: (1000, 5)
+2025-08-05 15:29:40 | INFO     | src.risk.risk_manager:__init__:49 - Risk manager initialized
+2025-08-05 15:29:40 | INFO     | src.backtesting.backtest_engine:__init__:38 - Backtest engine initialized
+2025-08-05 15:29:40 | INFO     | src.backtesting.backtest_engine:run_backtest:55 - Starting backtest from 2023-01-01 to 2025-07-31
+2025-08-05 15:29:40 | INFO     | src.backtesting.backtest_engine:run_backtest:59 - Using provided historical data
+2025-08-05 15:29:40 | INFO     | src.backtesting.backtest_engine:run_backtest:73 - Running backtest for strategy: sma_crossover
+2025-08-05 15:29:40 | INFO     | src.strategies.base_strategy:reset:99 - Reset strategy: sma_crossover
+2025-08-05 15:29:40 | INFO     | src.risk.risk_manager:__init__:49 - Risk manager initialized
+2025-08-05 15:29:40 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 85656.20 > 85388.63
+2025-08-05 15:29:40 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 85749.40 < 86137.67
+2025-08-05 15:29:40 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 87930.40 > 87000.40
+2025-08-05 15:29:40 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 88541.60 < 88823.27
+2025-08-05 15:29:40 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 82957.80 > 82925.43
+2025-08-05 15:29:40 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 82161.00 < 82345.27
+2025-08-05 15:29:40 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 82621.60 > 81903.60
+2025-08-05 15:29:40 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 83017.00 < 83173.83
+2025-08-05 15:29:40 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 83248.80 > 83212.33
+2025-08-05 15:29:40 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 82909.40 < 83349.00
+2025-08-05 15:29:40 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 84060.60 > 83599.83
+2025-08-05 15:29:40 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 83882.20 < 83981.73
+2025-08-05 15:29:40 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 84133.40 > 84045.20
+2025-08-05 15:29:40 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 84114.40 < 84120.00
+2025-08-05 15:29:40 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 84223.20 > 84188.80
+2025-08-05 15:29:40 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 86631.80 < 86957.43
+2025-08-05 15:29:40 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 83625.40 > 83590.23
+2025-08-05 15:29:40 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 82925.60 < 83460.23
+2025-08-05 15:29:40 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 80008.40 > 79796.43
+2025-08-05 15:29:40 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 83931.40 < 84227.17
+2025-08-05 15:29:40 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 84525.60 > 84498.00
+2025-08-05 15:29:40 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 84535.40 < 84544.07
+2025-08-05 15:29:40 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 84584.00 > 84555.27
+2025-08-05 15:29:40 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 94442.00 < 94520.93
+2025-08-05 15:29:40 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 94874.80 > 94603.30
+2025-08-05 15:29:40 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 95692.60 < 95824.40
+2025-08-05 15:29:40 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 95962.80 > 95544.00
+2025-08-05 15:29:40 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 102534.60 < 102997.87
+2025-08-05 15:29:40 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 103815.20 > 103497.70
+2025-08-05 15:29:40 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 103605.80 < 103611.53
+2025-08-05 15:29:40 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 103608.40 > 103478.97
+2025-08-05 15:29:40 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 103309.40 < 103354.40
+2025-08-05 15:29:40 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 103957.00 > 103571.93
+2025-08-05 15:29:40 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 108313.00 < 108405.83
+2025-08-05 15:29:40 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 108647.00 > 108519.63
+2025-08-05 15:29:40 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 108528.60 < 108592.20
+2025-08-05 15:29:40 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 109758.60 > 109336.20
+2025-08-05 15:29:40 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 108570.20 < 108783.13
+2025-08-05 15:29:40 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 105127.80 > 105066.27
+2025-08-05 15:29:40 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 104947.20 < 105026.30
+2025-08-05 15:29:40 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 104753.60 > 104694.73
+2025-08-05 15:29:40 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 107633.60 < 107820.03
+2025-08-05 15:29:40 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 106167.20 > 106118.27
+2025-08-05 15:29:40 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 105209.20 < 105696.63
+2025-08-05 15:29:40 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 103306.00 > 103174.30
+2025-08-05 15:29:40 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 107404.20 < 107475.27
+2025-08-05 15:29:40 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 107873.60 > 107410.93
+2025-08-05 15:29:40 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 107884.80 < 107980.77
+2025-08-05 15:29:40 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 108113.20 > 108012.30
+2025-08-05 15:29:40 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 108140.40 < 108168.53
+2025-08-05 15:29:40 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 108288.40 > 108266.33
+2025-08-05 15:29:40 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 108354.80 < 108371.57
+2025-08-05 15:29:40 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 108584.60 > 108489.03
+2025-08-05 15:29:40 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 108474.80 < 108606.67
+2025-08-05 15:29:40 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 108655.60 > 108435.33
+2025-08-05 15:29:40 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 117455.60 < 118101.20
+2025-08-05 15:29:40 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 118586.00 > 118442.23
+2025-08-05 15:29:40 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 118449.40 < 118577.97
+2025-08-05 15:29:40 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 118726.80 > 118685.40
+2025-08-05 15:29:40 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 118422.40 < 118738.93
+2025-08-05 15:29:40 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 118563.60 > 118355.17
+2025-08-05 15:29:40 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 118118.20 < 118364.77
+2025-08-05 15:29:40 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 118098.80 > 118073.20
+2025-08-05 15:29:40 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 117905.80 < 117976.97
+2025-08-05 15:29:40 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 118316.80 > 118284.57
+2025-08-05 15:29:40 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 118103.40 < 118234.27
+2025-08-05 15:29:40 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 114572.40 > 114544.93
+2025-08-05 15:29:40 | INFO     | src.core.trading_engine:run_backtest:198 - Backtest completed using BacktestEngine
+2025-08-05 15:30:42 | INFO     | src.risk.risk_manager:__init__:49 - Risk manager initialized
+2025-08-05 15:30:42 | INFO     | src.core.trading_engine:__init__:84 - Trading engine initialized with $100,000.00 initial capital
+2025-08-05 15:30:42 | INFO     | src.strategies.base_strategy:__init__:34 - Initialized strategy: sma_crossover
+2025-08-05 15:30:42 | INFO     | src.strategies.sma_crossover:__init__:48 - SMA Crossover Strategy initialized: 5/30
+2025-08-05 15:30:42 | INFO     | src.core.trading_engine:add_strategy:133 - Added strategy: sma_crossover
+2025-08-05 15:30:42 | INFO     | __main__:run_backtest:76 - SMA Crossover strategy added (enabled)
+2025-08-05 15:30:42 | INFO     | src.core.trading_engine:run_backtest:137 - Starting backtest from 2023-01-01 to 2025-07-31
+2025-08-05 15:30:42 | INFO     | src.core.trading_engine:_fetch_and_cache_data:107 - Fetching historical data from 2023-01-01 to 2025-07-31
+2025-08-05 15:30:42 | INFO     | src.data.data_manager:get_historical_data:64 - Fetching historical OHLCV data for ['Bitstamp:BTCUSD'] from 2023-01-01 to 2025-07-31
+2025-08-05 15:30:43 | INFO     | src.data.data_manager:_fetch_tradingview_ohlcv_data:159 - Successfully fetched OHLCV data for 1 symbols
+2025-08-05 15:30:43 | INFO     | src.data.data_manager:get_historical_data:97 - OHLCV data cached successfully
+2025-08-05 15:30:43 | INFO     | src.core.trading_engine:_fetch_and_cache_data:127 - Cached historical data: (1000, 5)
+2025-08-05 15:30:43 | INFO     | src.risk.risk_manager:__init__:49 - Risk manager initialized
+2025-08-05 15:30:43 | INFO     | src.backtesting.backtest_engine:__init__:38 - Backtest engine initialized
+2025-08-05 15:30:43 | INFO     | src.backtesting.backtest_engine:run_backtest:55 - Starting backtest from 2023-01-01 to 2025-07-31
+2025-08-05 15:30:43 | INFO     | src.backtesting.backtest_engine:run_backtest:59 - Using provided historical data
+2025-08-05 15:30:43 | INFO     | src.backtesting.backtest_engine:run_backtest:73 - Running backtest for strategy: sma_crossover
+2025-08-05 15:30:43 | INFO     | src.strategies.base_strategy:reset:99 - Reset strategy: sma_crossover
+2025-08-05 15:30:43 | INFO     | src.risk.risk_manager:__init__:49 - Risk manager initialized
+2025-08-05 15:30:43 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 85656.20 > 85388.63
+2025-08-05 15:30:43 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 85749.40 < 86137.67
+2025-08-05 15:30:43 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 87930.40 > 87000.40
+2025-08-05 15:30:43 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 88541.60 < 88823.27
+2025-08-05 15:30:43 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 82957.80 > 82925.43
+2025-08-05 15:30:43 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 82161.00 < 82345.27
+2025-08-05 15:30:43 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 82621.60 > 81903.60
+2025-08-05 15:30:43 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 83017.00 < 83173.83
+2025-08-05 15:30:43 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 83248.80 > 83212.33
+2025-08-05 15:30:43 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 82909.40 < 83349.00
+2025-08-05 15:30:43 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 84060.60 > 83599.83
+2025-08-05 15:30:43 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 83882.20 < 83981.73
+2025-08-05 15:30:43 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 84133.40 > 84045.20
+2025-08-05 15:30:43 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 84114.40 < 84120.00
+2025-08-05 15:30:43 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 84223.20 > 84188.80
+2025-08-05 15:30:43 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 86631.80 < 86957.43
+2025-08-05 15:30:43 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 83625.40 > 83590.23
+2025-08-05 15:30:43 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 82925.60 < 83460.23
+2025-08-05 15:30:43 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 80008.40 > 79796.43
+2025-08-05 15:30:43 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 83931.40 < 84227.17
+2025-08-05 15:30:43 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 84525.60 > 84498.00
+2025-08-05 15:30:43 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 84535.40 < 84544.07
+2025-08-05 15:30:43 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 84584.00 > 84555.27
+2025-08-05 15:30:43 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 94442.00 < 94520.93
+2025-08-05 15:30:43 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 94874.80 > 94603.30
+2025-08-05 15:30:43 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 95692.60 < 95824.40
+2025-08-05 15:30:43 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 95962.80 > 95544.00
+2025-08-05 15:30:43 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 102534.60 < 102997.87
+2025-08-05 15:30:43 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 103815.20 > 103497.70
+2025-08-05 15:30:43 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 103605.80 < 103611.53
+2025-08-05 15:30:43 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 103608.40 > 103478.97
+2025-08-05 15:30:43 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 103309.40 < 103354.40
+2025-08-05 15:30:43 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 103957.00 > 103571.93
+2025-08-05 15:30:43 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 108313.00 < 108405.83
+2025-08-05 15:30:43 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 108647.00 > 108519.63
+2025-08-05 15:30:43 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 108528.60 < 108592.20
+2025-08-05 15:30:43 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 109758.60 > 109336.20
+2025-08-05 15:30:43 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 108570.20 < 108783.13
+2025-08-05 15:30:43 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 105127.80 > 105066.27
+2025-08-05 15:30:43 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 104947.20 < 105026.30
+2025-08-05 15:30:43 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 104753.60 > 104694.73
+2025-08-05 15:30:43 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 107633.60 < 107820.03
+2025-08-05 15:30:43 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 106167.20 > 106118.27
+2025-08-05 15:30:43 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 105209.20 < 105696.63
+2025-08-05 15:30:43 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 103306.00 > 103174.30
+2025-08-05 15:30:43 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 107404.20 < 107475.27
+2025-08-05 15:30:43 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 107873.60 > 107410.93
+2025-08-05 15:30:43 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 107884.80 < 107980.77
+2025-08-05 15:30:43 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 108113.20 > 108012.30
+2025-08-05 15:30:43 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 108140.40 < 108168.53
+2025-08-05 15:30:43 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 108288.40 > 108266.33
+2025-08-05 15:30:43 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 108354.80 < 108371.57
+2025-08-05 15:30:43 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 108584.60 > 108489.03
+2025-08-05 15:30:43 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 108474.80 < 108606.67
+2025-08-05 15:30:43 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 108655.60 > 108435.33
+2025-08-05 15:30:43 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 117455.60 < 118101.20
+2025-08-05 15:30:43 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 118586.00 > 118442.23
+2025-08-05 15:30:43 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 118449.40 < 118577.97
+2025-08-05 15:30:43 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 118726.80 > 118685.40
+2025-08-05 15:30:43 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 118422.40 < 118738.93
+2025-08-05 15:30:43 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 118563.60 > 118355.17
+2025-08-05 15:30:43 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 118118.20 < 118364.77
+2025-08-05 15:30:43 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 118098.80 > 118073.20
+2025-08-05 15:30:43 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 117905.80 < 117976.97
+2025-08-05 15:30:43 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 118316.80 > 118284.57
+2025-08-05 15:30:43 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for Bitstamp:BTCUSD: 118103.40 < 118234.27
+2025-08-05 15:30:43 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for Bitstamp:BTCUSD: 114572.40 > 114544.93
+2025-08-05 15:30:43 | INFO     | src.core.trading_engine:run_backtest:198 - Backtest completed using BacktestEngine
+2025-08-05 15:31:12 | INFO     | src.risk.risk_manager:__init__:49 - Risk manager initialized
+2025-08-05 15:31:12 | INFO     | src.core.trading_engine:__init__:84 - Trading engine initialized with $100,000.00 initial capital
+2025-08-05 15:31:12 | INFO     | src.strategies.base_strategy:__init__:34 - Initialized strategy: sma_crossover
+2025-08-05 15:31:12 | INFO     | src.strategies.sma_crossover:__init__:48 - SMA Crossover Strategy initialized: 5/30
+2025-08-05 15:31:12 | INFO     | src.core.trading_engine:add_strategy:133 - Added strategy: sma_crossover
+2025-08-05 15:31:12 | INFO     | __main__:run_backtest:76 - SMA Crossover strategy added (enabled)
+2025-08-05 15:31:12 | INFO     | src.core.trading_engine:run_backtest:137 - Starting backtest from 2023-01-01 to 2025-07-31
+2025-08-05 15:31:12 | INFO     | src.core.trading_engine:_fetch_and_cache_data:107 - Fetching historical data from 2023-01-01 to 2025-07-31
+2025-08-05 15:31:12 | INFO     | src.data.data_manager:get_historical_data:64 - Fetching historical OHLCV data for ['Bitstamp:BTCUSD'] from 2023-01-01 to 2025-07-31
+2025-08-05 15:33:23 | INFO     | src.risk.risk_manager:__init__:49 - Risk manager initialized
+2025-08-05 15:33:23 | INFO     | src.core.trading_engine:__init__:84 - Trading engine initialized with $100,000.00 initial capital
+2025-08-05 15:33:23 | INFO     | src.strategies.base_strategy:__init__:34 - Initialized strategy: sma_crossover
+2025-08-05 15:33:23 | INFO     | src.strategies.sma_crossover:__init__:48 - SMA Crossover Strategy initialized: 5/30
+2025-08-05 15:33:23 | INFO     | src.core.trading_engine:add_strategy:133 - Added strategy: sma_crossover
+2025-08-05 15:33:23 | INFO     | __main__:run_backtest:76 - SMA Crossover strategy added (enabled)
+2025-08-05 15:33:23 | INFO     | src.core.trading_engine:run_backtest:137 - Starting backtest from 2023-01-01 to 2025-07-31
+2025-08-05 15:33:23 | INFO     | src.core.trading_engine:_fetch_and_cache_data:107 - Fetching historical data from 2023-01-01 to 2025-07-31
+2025-08-05 15:33:23 | INFO     | src.data.data_manager:get_historical_data:64 - Fetching historical OHLCV data for ['BTC-USD'] from 2023-01-01 to 2025-07-31
+2025-08-05 15:33:24 | INFO     | src.data.data_manager:_fetch_yfinance_ohlcv_data:199 - Successfully fetched OHLCV data for 1 symbols
+2025-08-05 15:33:24 | INFO     | src.data.data_manager:get_historical_data:97 - OHLCV data cached successfully
+2025-08-05 15:33:24 | INFO     | src.core.trading_engine:_fetch_and_cache_data:127 - Cached historical data: (942, 5)
+2025-08-05 15:33:24 | INFO     | src.risk.risk_manager:__init__:49 - Risk manager initialized
+2025-08-05 15:33:24 | INFO     | src.backtesting.backtest_engine:__init__:38 - Backtest engine initialized
+2025-08-05 15:33:24 | INFO     | src.backtesting.backtest_engine:run_backtest:55 - Starting backtest from 2023-01-01 to 2025-07-31
+2025-08-05 15:33:24 | INFO     | src.backtesting.backtest_engine:run_backtest:59 - Using provided historical data
+2025-08-05 15:33:24 | INFO     | src.backtesting.backtest_engine:run_backtest:73 - Running backtest for strategy: sma_crossover
+2025-08-05 15:33:24 | INFO     | src.strategies.base_strategy:reset:99 - Reset strategy: sma_crossover
+2025-08-05 15:33:24 | INFO     | src.risk.risk_manager:__init__:49 - Risk manager initialized
+2025-08-05 15:33:24 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for BTC-USD: 23205.15 > 19950.63
+2025-08-05 15:33:24 | INFO     | src.risk.risk_manager:check_stop_loss:155 - Stop loss triggered for BTC-USD: -8.23%
+2025-08-05 15:33:24 | INFO     | src.backtesting.backtest_engine:_execute_trades:284 - STOP LOSS: 0.84 BTC-USD @ $21819.01
+2025-08-05 15:33:24 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for BTC-USD: 22310.35 < 22428.69
+2025-08-05 15:33:24 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for BTC-USD: 23303.27 > 22879.01
+2025-08-05 15:33:24 | INFO     | src.risk.risk_manager:check_stop_loss:155 - Stop loss triggered for BTC-USD: -5.56%
+2025-08-05 15:33:24 | INFO     | src.backtesting.backtest_engine:_execute_trades:284 - STOP LOSS: 0.80 BTC-USD @ $23200.12
+2025-08-05 15:33:24 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for BTC-USD: 23231.87 < 23276.44
+2025-08-05 15:33:24 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for BTC-USD: 23226.12 > 23167.82
+2025-08-05 15:33:24 | INFO     | src.risk.risk_manager:check_take_profit:194 - Take profit triggered for BTC-USD: 15.05%
+2025-08-05 15:33:24 | INFO     | src.backtesting.backtest_engine:_execute_trades:311 - TAKE PROFIT: 0.80 BTC-USD @ $28041.60
+2025-08-05 15:33:24 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for BTC-USD: 28509.83 < 28619.21
+2025-08-05 15:33:24 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for BTC-USD: 28958.32 > 28823.84
+2025-08-05 15:33:24 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for BTC-USD: 28854.32 < 28894.23
+2025-08-05 15:33:24 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for BTC-USD: 29000.75 > 28991.16
+2025-08-05 15:33:24 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for BTC-USD: 28954.74 < 29008.83
+2025-08-05 15:33:24 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for BTC-USD: 27522.16 > 27478.29
+2025-08-05 15:33:24 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for BTC-USD: 27348.19 < 27357.12
+2025-08-05 15:33:24 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for BTC-USD: 26865.51 > 26680.98
+2025-08-05 15:33:24 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for BTC-USD: 30177.60 < 30230.45
+2025-08-05 15:33:24 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for BTC-USD: 26354.76 > 26136.91
+2025-08-05 15:33:24 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for BTC-USD: 26948.49 < 27028.58
+2025-08-05 15:33:24 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for BTC-USD: 27232.36 > 27112.26
+2025-08-05 15:33:24 | INFO     | src.risk.risk_manager:check_take_profit:194 - Take profit triggered for BTC-USD: 15.97%
+2025-08-05 15:33:24 | INFO     | src.backtesting.backtest_engine:_execute_trades:311 - TAKE PROFIT: 0.71 BTC-USD @ $33077.30
+2025-08-05 15:33:24 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for BTC-USD: 42521.39 < 42677.26
+2025-08-05 15:33:24 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for BTC-USD: 43134.57 > 43000.53
+2025-08-05 15:33:24 | INFO     | src.risk.risk_manager:check_stop_loss:155 - Stop loss triggered for BTC-USD: -7.22%
+2025-08-05 15:33:24 | INFO     | src.backtesting.backtest_engine:_execute_trades:284 - STOP LOSS: 0.46 BTC-USD @ $41715.07
+2025-08-05 15:33:24 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for BTC-USD: 43242.18 < 43584.81
+2025-08-05 15:33:24 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for BTC-USD: 43015.77 > 42825.27
+2025-08-05 15:33:24 | INFO     | src.risk.risk_manager:check_take_profit:194 - Take profit triggered for BTC-USD: 15.65%
+2025-08-05 15:33:24 | INFO     | src.backtesting.backtest_engine:_execute_trades:311 - TAKE PROFIT: 0.47 BTC-USD @ $49941.36
+2025-08-05 15:33:24 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for BTC-USD: 68195.33 < 68288.22
+2025-08-05 15:33:24 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for BTC-USD: 69249.70 > 68551.40
+2025-08-05 15:33:24 | INFO     | src.risk.risk_manager:check_stop_loss:155 - Stop loss triggered for BTC-USD: -6.20%
+2025-08-05 15:33:24 | INFO     | src.backtesting.backtest_engine:_execute_trades:284 - STOP LOSS: 0.29 BTC-USD @ $67188.38
+2025-08-05 15:33:24 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for BTC-USD: 67480.27 < 67886.53
+2025-08-05 15:33:24 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for BTC-USD: 63478.68 > 63074.14
+2025-08-05 15:33:24 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for BTC-USD: 68292.89 < 68486.12
+2025-08-05 15:33:24 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for BTC-USD: 61565.14 > 61058.87
+2025-08-05 15:33:24 | INFO     | src.risk.risk_manager:check_stop_loss:155 - Stop loss triggered for BTC-USD: -5.65%
+2025-08-05 15:33:24 | INFO     | src.backtesting.backtest_engine:_execute_trades:284 - STOP LOSS: 0.32 BTC-USD @ $61414.81
+2025-08-05 15:33:24 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for BTC-USD: 62036.11 < 63122.33
+2025-08-05 15:33:24 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for BTC-USD: 61768.90 > 61198.57
+2025-08-05 15:33:24 | INFO     | src.risk.risk_manager:check_stop_loss:155 - Stop loss triggered for BTC-USD: -7.27%
+2025-08-05 15:33:24 | INFO     | src.backtesting.backtest_engine:_execute_trades:284 - STOP LOSS: 0.32 BTC-USD @ $59507.93
+2025-08-05 15:33:24 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for BTC-USD: 59202.26 < 59740.38
+2025-08-05 15:33:24 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for BTC-USD: 59045.71 > 59012.11
+2025-08-05 15:33:24 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for BTC-USD: 61605.97 < 61985.09
+2025-08-05 15:33:24 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for BTC-USD: 62962.36 > 62601.53
+2025-08-05 15:33:24 | INFO     | src.risk.risk_manager:check_take_profit:194 - Take profit triggered for BTC-USD: 15.91%
+2025-08-05 15:33:24 | INFO     | src.backtesting.backtest_engine:_execute_trades:311 - TAKE PROFIT: 0.31 BTC-USD @ $76556.19
+2025-08-05 15:33:24 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for BTC-USD: 97525.86 < 98488.81
+2025-08-05 15:33:24 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for BTC-USD: 98757.29 > 98299.00
+2025-08-05 15:33:24 | INFO     | src.risk.risk_manager:check_stop_loss:155 - Stop loss triggered for BTC-USD: -5.21%
+2025-08-05 15:33:24 | INFO     | src.backtesting.backtest_engine:_execute_trades:284 - STOP LOSS: 0.21 BTC-USD @ $96924.16
+2025-08-05 15:33:24 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for BTC-USD: 97005.19 < 97936.60
+2025-08-05 15:33:24 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for BTC-USD: 97214.60 > 96430.88
+2025-08-05 15:33:24 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for BTC-USD: 100004.43 < 100386.08
+2025-08-05 15:33:24 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for BTC-USD: 85784.43 > 85489.64
+2025-08-05 15:33:24 | INFO     | src.risk.risk_manager:check_stop_loss:155 - Stop loss triggered for BTC-USD: -5.56%
+2025-08-05 15:33:24 | INFO     | src.backtesting.backtest_engine:_execute_trades:284 - STOP LOSS: 0.24 BTC-USD @ $82596.98
+2025-08-05 15:33:24 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for BTC-USD: 84673.32 < 85160.78
+2025-08-05 15:33:24 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for BTC-USD: 84118.54 > 83576.24
+2025-08-05 15:33:24 | INFO     | src.risk.risk_manager:check_take_profit:194 - Take profit triggered for BTC-USD: 15.32%
+2025-08-05 15:33:24 | INFO     | src.backtesting.backtest_engine:_execute_trades:311 - TAKE PROFIT: 0.25 BTC-USD @ $96494.97
+2025-08-05 15:33:24 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for BTC-USD: 104659.56 < 105369.15
+2025-08-05 15:33:24 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for BTC-USD: 107271.73 > 106179.27
+2025-08-05 15:33:24 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for BTC-USD: 106347.81 < 106645.78
+2025-08-05 15:33:24 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for BTC-USD: 106607.89 > 105539.73
+2025-08-05 15:33:24 | INFO     | src.core.trading_engine:run_backtest:198 - Backtest completed using BacktestEngine
+2025-08-05 15:39:37 | INFO     | src.risk.risk_manager:__init__:49 - Risk manager initialized
+2025-08-05 15:39:37 | INFO     | src.core.trading_engine:__init__:84 - Trading engine initialized with $100,000.00 initial capital
+2025-08-05 15:39:37 | INFO     | src.strategies.base_strategy:__init__:34 - Initialized strategy: sma_crossover
+2025-08-05 15:39:37 | INFO     | src.strategies.sma_crossover:__init__:48 - SMA Crossover Strategy initialized: 5/30
+2025-08-05 15:39:37 | INFO     | src.core.trading_engine:add_strategy:133 - Added strategy: sma_crossover
+2025-08-05 15:39:37 | INFO     | __main__:run_backtest:76 - SMA Crossover strategy added (enabled)
+2025-08-05 15:39:37 | INFO     | src.core.trading_engine:run_backtest:137 - Starting backtest from 2023-01-01 to 2025-07-31
+2025-08-05 15:39:37 | INFO     | src.core.trading_engine:_fetch_and_cache_data:107 - Fetching historical data from 2023-01-01 to 2025-07-31
+2025-08-05 15:39:37 | INFO     | src.data.data_manager:get_historical_data:64 - Fetching historical OHLCV data for ['BTC-USD'] from 2023-01-01 to 2025-07-31
+2025-08-05 15:39:39 | INFO     | src.data.data_manager:_fetch_yfinance_ohlcv_data:199 - Successfully fetched OHLCV data for 1 symbols
+2025-08-05 15:39:39 | INFO     | src.data.data_manager:get_historical_data:97 - OHLCV data cached successfully
+2025-08-05 15:39:39 | INFO     | src.core.trading_engine:_fetch_and_cache_data:127 - Cached historical data: (942, 5)
+2025-08-05 15:39:39 | INFO     | src.risk.risk_manager:__init__:49 - Risk manager initialized
+2025-08-05 15:39:39 | INFO     | src.backtesting.backtest_engine:__init__:38 - Backtest engine initialized
+2025-08-05 15:39:39 | INFO     | src.backtesting.backtest_engine:run_backtest:55 - Starting backtest from 2023-01-01 to 2025-07-31
+2025-08-05 15:39:39 | INFO     | src.backtesting.backtest_engine:run_backtest:59 - Using provided historical data
+2025-08-05 15:39:39 | INFO     | src.backtesting.backtest_engine:run_backtest:73 - Running backtest for strategy: sma_crossover
+2025-08-05 15:39:39 | INFO     | src.strategies.base_strategy:reset:99 - Reset strategy: sma_crossover
+2025-08-05 15:39:39 | INFO     | src.risk.risk_manager:__init__:49 - Risk manager initialized
+2025-08-05 15:39:39 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for BTC-USD: 23205.15 > 19950.63
+2025-08-05 15:39:39 | INFO     | src.risk.risk_manager:check_stop_loss:155 - Stop loss triggered for BTC-USD: -8.23%
+2025-08-05 15:39:39 | INFO     | src.backtesting.backtest_engine:_execute_trades:284 - STOP LOSS: 0.84 BTC-USD @ $21819.01
+2025-08-05 15:39:39 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for BTC-USD: 22310.35 < 22428.69
+2025-08-05 15:39:39 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for BTC-USD: 23303.27 > 22879.01
+2025-08-05 15:39:39 | INFO     | src.risk.risk_manager:check_stop_loss:155 - Stop loss triggered for BTC-USD: -5.56%
+2025-08-05 15:39:39 | INFO     | src.backtesting.backtest_engine:_execute_trades:284 - STOP LOSS: 0.80 BTC-USD @ $23200.12
+2025-08-05 15:39:39 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for BTC-USD: 23231.87 < 23276.44
+2025-08-05 15:39:39 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for BTC-USD: 23226.12 > 23167.82
+2025-08-05 15:39:39 | INFO     | src.risk.risk_manager:check_take_profit:194 - Take profit triggered for BTC-USD: 15.05%
+2025-08-05 15:39:39 | INFO     | src.backtesting.backtest_engine:_execute_trades:311 - TAKE PROFIT: 0.80 BTC-USD @ $28041.60
+2025-08-05 15:39:39 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for BTC-USD: 28509.83 < 28619.21
+2025-08-05 15:39:39 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for BTC-USD: 28958.32 > 28823.84
+2025-08-05 15:39:39 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for BTC-USD: 28854.32 < 28894.23
+2025-08-05 15:39:39 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for BTC-USD: 29000.75 > 28991.16
+2025-08-05 15:39:39 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for BTC-USD: 28954.74 < 29008.83
+2025-08-05 15:39:39 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for BTC-USD: 27522.16 > 27478.29
+2025-08-05 15:39:39 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for BTC-USD: 27348.19 < 27357.12
+2025-08-05 15:39:39 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for BTC-USD: 26865.51 > 26680.98
+2025-08-05 15:39:39 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for BTC-USD: 30177.60 < 30230.45
+2025-08-05 15:39:39 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for BTC-USD: 26354.76 > 26136.91
+2025-08-05 15:39:39 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for BTC-USD: 26948.49 < 27028.58
+2025-08-05 15:39:39 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for BTC-USD: 27232.36 > 27112.26
+2025-08-05 15:39:39 | INFO     | src.risk.risk_manager:check_take_profit:194 - Take profit triggered for BTC-USD: 15.97%
+2025-08-05 15:39:39 | INFO     | src.backtesting.backtest_engine:_execute_trades:311 - TAKE PROFIT: 0.71 BTC-USD @ $33077.30
+2025-08-05 15:39:39 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for BTC-USD: 42521.39 < 42677.26
+2025-08-05 15:39:39 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for BTC-USD: 43134.57 > 43000.53
+2025-08-05 15:39:39 | INFO     | src.risk.risk_manager:check_stop_loss:155 - Stop loss triggered for BTC-USD: -7.22%
+2025-08-05 15:39:39 | INFO     | src.backtesting.backtest_engine:_execute_trades:284 - STOP LOSS: 0.46 BTC-USD @ $41715.07
+2025-08-05 15:39:39 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for BTC-USD: 43242.18 < 43584.81
+2025-08-05 15:39:39 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for BTC-USD: 43015.77 > 42825.27
+2025-08-05 15:39:39 | INFO     | src.risk.risk_manager:check_take_profit:194 - Take profit triggered for BTC-USD: 15.65%
+2025-08-05 15:39:39 | INFO     | src.backtesting.backtest_engine:_execute_trades:311 - TAKE PROFIT: 0.47 BTC-USD @ $49941.36
+2025-08-05 15:39:39 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for BTC-USD: 68195.33 < 68288.22
+2025-08-05 15:39:39 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for BTC-USD: 69249.70 > 68551.40
+2025-08-05 15:39:39 | INFO     | src.risk.risk_manager:check_stop_loss:155 - Stop loss triggered for BTC-USD: -6.20%
+2025-08-05 15:39:39 | INFO     | src.backtesting.backtest_engine:_execute_trades:284 - STOP LOSS: 0.29 BTC-USD @ $67188.38
+2025-08-05 15:39:39 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for BTC-USD: 67480.27 < 67886.53
+2025-08-05 15:39:39 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for BTC-USD: 63478.68 > 63074.14
+2025-08-05 15:39:39 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for BTC-USD: 68292.89 < 68486.12
+2025-08-05 15:39:39 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for BTC-USD: 61565.14 > 61058.87
+2025-08-05 15:39:39 | INFO     | src.risk.risk_manager:check_stop_loss:155 - Stop loss triggered for BTC-USD: -5.65%
+2025-08-05 15:39:39 | INFO     | src.backtesting.backtest_engine:_execute_trades:284 - STOP LOSS: 0.32 BTC-USD @ $61414.81
+2025-08-05 15:39:39 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for BTC-USD: 62036.11 < 63122.33
+2025-08-05 15:39:39 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for BTC-USD: 61768.90 > 61198.57
+2025-08-05 15:39:39 | INFO     | src.risk.risk_manager:check_stop_loss:155 - Stop loss triggered for BTC-USD: -7.27%
+2025-08-05 15:39:39 | INFO     | src.backtesting.backtest_engine:_execute_trades:284 - STOP LOSS: 0.32 BTC-USD @ $59507.93
+2025-08-05 15:39:39 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for BTC-USD: 59202.26 < 59740.38
+2025-08-05 15:39:39 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for BTC-USD: 59045.71 > 59012.11
+2025-08-05 15:39:39 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for BTC-USD: 61605.97 < 61985.09
+2025-08-05 15:39:39 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for BTC-USD: 62962.36 > 62601.53
+2025-08-05 15:39:39 | INFO     | src.risk.risk_manager:check_take_profit:194 - Take profit triggered for BTC-USD: 15.91%
+2025-08-05 15:39:39 | INFO     | src.backtesting.backtest_engine:_execute_trades:311 - TAKE PROFIT: 0.31 BTC-USD @ $76556.19
+2025-08-05 15:39:39 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for BTC-USD: 97525.86 < 98488.81
+2025-08-05 15:39:39 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for BTC-USD: 98757.29 > 98299.00
+2025-08-05 15:39:39 | INFO     | src.risk.risk_manager:check_stop_loss:155 - Stop loss triggered for BTC-USD: -5.21%
+2025-08-05 15:39:39 | INFO     | src.backtesting.backtest_engine:_execute_trades:284 - STOP LOSS: 0.21 BTC-USD @ $96924.16
+2025-08-05 15:39:39 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for BTC-USD: 97005.19 < 97936.60
+2025-08-05 15:39:39 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for BTC-USD: 97214.60 > 96430.88
+2025-08-05 15:39:39 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for BTC-USD: 100004.43 < 100386.08
+2025-08-05 15:39:39 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for BTC-USD: 85784.43 > 85489.64
+2025-08-05 15:39:39 | INFO     | src.risk.risk_manager:check_stop_loss:155 - Stop loss triggered for BTC-USD: -5.56%
+2025-08-05 15:39:39 | INFO     | src.backtesting.backtest_engine:_execute_trades:284 - STOP LOSS: 0.24 BTC-USD @ $82596.98
+2025-08-05 15:39:39 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for BTC-USD: 84673.32 < 85160.78
+2025-08-05 15:39:39 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for BTC-USD: 84118.54 > 83576.24
+2025-08-05 15:39:39 | INFO     | src.risk.risk_manager:check_take_profit:194 - Take profit triggered for BTC-USD: 15.32%
+2025-08-05 15:39:39 | INFO     | src.backtesting.backtest_engine:_execute_trades:311 - TAKE PROFIT: 0.25 BTC-USD @ $96494.97
+2025-08-05 15:39:39 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for BTC-USD: 104659.56 < 105369.15
+2025-08-05 15:39:39 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for BTC-USD: 107271.73 > 106179.27
+2025-08-05 15:39:39 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:113 - Death cross detected for BTC-USD: 106347.81 < 106645.78
+2025-08-05 15:39:39 | INFO     | src.strategies.sma_crossover:_generate_signal_for_symbol:109 - Golden cross detected for BTC-USD: 106607.89 > 105539.73
+2025-08-05 15:39:39 | INFO     | src.core.trading_engine:run_backtest:198 - Backtest completed using BacktestEngine
+2025-08-05 16:25:35 | INFO     | src.risk.risk_manager:__init__:49 - Risk manager initialized
+2025-08-05 16:25:35 | INFO     | src.core.trading_engine:__init__:84 - Trading engine initialized with $100,000.00 initial capital
+2025-08-05 16:25:35 | INFO     | src.strategies.base_strategy:__init__:34 - Initialized strategy: custom1
+2025-08-05 16:25:35 | INFO     | src.strategies.custom1_strategy:__init__:64 - Custom1 Strategy initialized: SMA(20/50) + RSI(14)
+2025-08-05 16:25:35 | INFO     | src.core.trading_engine:add_strategy:133 - Added strategy: custom1
+2025-08-05 16:25:35 | INFO     | __main__:run_backtest:103 - Custom1 strategy added (enabled)
+2025-08-05 16:25:35 | INFO     | src.core.trading_engine:run_backtest:137 - Starting backtest from 2023-01-01 to 2025-07-31
+2025-08-05 16:25:35 | INFO     | src.core.trading_engine:_fetch_and_cache_data:107 - Fetching historical data from 2023-01-01 to 2025-07-31
+2025-08-05 16:25:35 | INFO     | src.data.data_manager:get_historical_data:64 - Fetching historical OHLCV data for ['Bitstamp:BTCUSD'] from 2023-01-01 to 2025-07-31
+2025-08-05 16:25:36 | INFO     | src.data.data_manager:_fetch_tradingview_ohlcv_data:159 - Successfully fetched OHLCV data for 1 symbols
+2025-08-05 16:25:36 | INFO     | src.data.data_manager:get_historical_data:97 - OHLCV data cached successfully
+2025-08-05 16:25:36 | INFO     | src.core.trading_engine:_fetch_and_cache_data:127 - Cached historical data: (1000, 5)
+2025-08-05 16:25:36 | INFO     | src.risk.risk_manager:__init__:49 - Risk manager initialized
+2025-08-05 16:25:36 | INFO     | src.backtesting.backtest_engine:__init__:38 - Backtest engine initialized
+2025-08-05 16:25:36 | INFO     | src.backtesting.backtest_engine:run_backtest:55 - Starting backtest from 2023-01-01 to 2025-07-31
+2025-08-05 16:25:36 | INFO     | src.backtesting.backtest_engine:run_backtest:59 - Using provided historical data
+2025-08-05 16:25:36 | INFO     | src.backtesting.backtest_engine:run_backtest:73 - Running backtest for strategy: custom1
+2025-08-05 16:25:36 | INFO     | src.strategies.base_strategy:reset:99 - Reset strategy: custom1
+2025-08-05 16:25:36 | INFO     | src.risk.risk_manager:__init__:49 - Risk manager initialized
+2025-08-05 16:25:36 | INFO     | src.strategies.custom1_strategy:_generate_signal_for_symbol:145 - Strong sell signal for Bitstamp:BTCUSD: SMA+RSI combined
+2025-08-05 16:25:36 | INFO     | src.strategies.custom1_strategy:_generate_signal_for_symbol:145 - Strong sell signal for Bitstamp:BTCUSD: SMA+RSI combined
+2025-08-05 16:25:36 | INFO     | src.strategies.custom1_strategy:_generate_signal_for_symbol:145 - Strong sell signal for Bitstamp:BTCUSD: SMA+RSI combined
+2025-08-05 16:25:36 | INFO     | src.strategies.custom1_strategy:_generate_signal_for_symbol:145 - Strong sell signal for Bitstamp:BTCUSD: SMA+RSI combined
+2025-08-05 16:25:36 | INFO     | src.strategies.custom1_strategy:_generate_signal_for_symbol:145 - Strong sell signal for Bitstamp:BTCUSD: SMA+RSI combined
+2025-08-05 16:25:36 | INFO     | src.strategies.custom1_strategy:_generate_signal_for_symbol:139 - Strong buy signal for Bitstamp:BTCUSD: SMA+RSI combined
+2025-08-05 16:25:36 | INFO     | src.strategies.custom1_strategy:_generate_signal_for_symbol:139 - Strong buy signal for Bitstamp:BTCUSD: SMA+RSI combined
+2025-08-05 16:25:36 | INFO     | src.strategies.custom1_strategy:_generate_signal_for_symbol:139 - Strong buy signal for Bitstamp:BTCUSD: SMA+RSI combined
+2025-08-05 16:25:37 | INFO     | src.risk.risk_manager:check_stop_loss:155 - Stop loss triggered for Bitstamp:BTCUSD: -5.22%
+2025-08-05 16:25:37 | INFO     | src.backtesting.backtest_engine:_execute_trades:284 - STOP LOSS: 0.24 Bitstamp:BTCUSD @ $79605.00
+2025-08-05 16:25:37 | INFO     | src.strategies.custom1_strategy:_generate_signal_for_symbol:139 - Strong buy signal for Bitstamp:BTCUSD: SMA+RSI combined
+2025-08-05 16:25:37 | INFO     | src.strategies.custom1_strategy:_generate_signal_for_symbol:139 - Strong buy signal for Bitstamp:BTCUSD: SMA+RSI combined
+2025-08-05 16:25:37 | INFO     | src.risk.risk_manager:check_take_profit:194 - Take profit triggered for Bitstamp:BTCUSD: 15.59%
+2025-08-05 16:25:37 | INFO     | src.backtesting.backtest_engine:_execute_trades:311 - TAKE PROFIT: 0.21 Bitstamp:BTCUSD @ $109024.00
+2025-08-05 16:25:37 | INFO     | src.strategies.custom1_strategy:_generate_signal_for_symbol:145 - Strong sell signal for Bitstamp:BTCUSD: SMA+RSI combined
+2025-08-05 16:25:37 | INFO     | src.strategies.custom1_strategy:_generate_signal_for_symbol:139 - Strong buy signal for Bitstamp:BTCUSD: SMA+RSI combined
+2025-08-05 16:25:37 | INFO     | src.strategies.custom1_strategy:_generate_signal_for_symbol:139 - Strong buy signal for Bitstamp:BTCUSD: SMA+RSI combined
+2025-08-05 16:25:37 | INFO     | src.strategies.custom1_strategy:_generate_signal_for_symbol:139 - Strong buy signal for Bitstamp:BTCUSD: SMA+RSI combined
+2025-08-05 16:25:38 | INFO     | src.risk.risk_manager:check_stop_loss:155 - Stop loss triggered for Bitstamp:BTCUSD: -5.18%
+2025-08-05 16:25:38 | INFO     | src.backtesting.backtest_engine:_execute_trades:284 - STOP LOSS: 0.20 Bitstamp:BTCUSD @ $98980.00
+2025-08-05 16:25:38 | INFO     | src.strategies.custom1_strategy:_generate_signal_for_symbol:145 - Strong sell signal for Bitstamp:BTCUSD: SMA+RSI combined
+2025-08-05 16:25:38 | INFO     | src.strategies.custom1_strategy:_generate_signal_for_symbol:145 - Strong sell signal for Bitstamp:BTCUSD: SMA+RSI combined
+2025-08-05 16:25:38 | INFO     | src.strategies.custom1_strategy:_generate_signal_for_symbol:145 - Strong sell signal for Bitstamp:BTCUSD: SMA+RSI combined
+2025-08-05 16:25:38 | INFO     | src.strategies.custom1_strategy:_generate_signal_for_symbol:145 - Strong sell signal for Bitstamp:BTCUSD: SMA+RSI combined
+2025-08-05 16:25:38 | INFO     | src.strategies.custom1_strategy:_generate_signal_for_symbol:145 - Strong sell signal for Bitstamp:BTCUSD: SMA+RSI combined
+2025-08-05 16:25:38 | INFO     | src.strategies.custom1_strategy:_generate_signal_for_symbol:145 - Strong sell signal for Bitstamp:BTCUSD: SMA+RSI combined
+2025-08-05 16:25:38 | INFO     | src.strategies.custom1_strategy:_generate_signal_for_symbol:139 - Strong buy signal for Bitstamp:BTCUSD: SMA+RSI combined
+2025-08-05 16:25:38 | INFO     | src.strategies.custom1_strategy:_generate_signal_for_symbol:145 - Strong sell signal for Bitstamp:BTCUSD: SMA+RSI combined
+2025-08-05 16:25:38 | INFO     | src.core.trading_engine:run_backtest:159 - Backtest completed using BacktestEngine
+2025-08-05 16:25:38 | INFO     | __main__:run_backtest:121 - Backtest completed
+2025-08-05 16:25:38 | INFO     | __main__:run_backtest:122 - ============================================================
+2025-08-05 16:25:38 | INFO     | __main__:run_backtest:123 - 📊 PORTFOLIO SUMMARY
+2025-08-05 16:25:38 | INFO     | __main__:run_backtest:124 - ============================================================
+2025-08-05 16:25:38 | INFO     | __main__:run_backtest:125 - 💰 Initial Capital: $100,000.00
+2025-08-05 16:25:38 | INFO     | __main__:run_backtest:126 - 💵 Total Value: $100,000.00
+2025-08-05 16:25:38 | INFO     | __main__:run_backtest:127 - 📈 Total Return: 0.00%
+2025-08-05 16:25:38 | INFO     | __main__:run_backtest:128 - 📊 Annualized Return: 0.00%
+2025-08-05 16:25:38 | INFO     | __main__:run_backtest:129 - 📊 Sharpe Ratio: 0.0000
+2025-08-05 16:25:38 | INFO     | __main__:run_backtest:130 - 📉 Max Drawdown: 0.00%
+2025-08-05 16:25:38 | INFO     | __main__:run_backtest:131 - 🎯 Win Rate: 0.00%
+2025-08-05 16:25:38 | INFO     | __main__:run_backtest:132 - 🔄 Total Trades: 0
+2025-08-05 16:25:38 | INFO     | __main__:run_backtest:133 - 💵 Cash: $100,000.00
+2025-08-05 16:25:38 | INFO     | __main__:run_backtest:143 - 
+📋 POSITIONS: None
+2025-08-05 16:25:38 | INFO     | __main__:run_backtest:145 - ============================================================
+2025-08-05 17:36:19 | INFO     | src.risk.risk_manager:__init__:49 - Risk manager initialized
+2025-08-05 17:36:19 | INFO     | src.core.trading_engine:__init__:84 - Trading engine initialized with $100,000.00 initial capital
+2025-08-05 17:36:19 | INFO     | src.strategies.base_strategy:__init__:34 - Initialized strategy: custom1
+2025-08-05 17:36:19 | INFO     | src.strategies.custom1_strategy:__init__:64 - Custom1 Strategy initialized: SMA(20/50) + RSI(14)
+2025-08-05 17:36:19 | INFO     | src.core.trading_engine:add_strategy:133 - Added strategy: custom1
+2025-08-05 17:36:19 | INFO     | __main__:run_backtest:103 - Custom1 strategy added (enabled)
+2025-08-05 17:36:19 | INFO     | src.core.trading_engine:run_backtest:137 - Starting backtest from 2023-01-01 to 2025-07-31
+2025-08-05 17:36:19 | INFO     | src.core.trading_engine:_fetch_and_cache_data:107 - Fetching historical data from 2023-01-01 to 2025-07-31
+2025-08-05 17:36:19 | INFO     | src.data.data_manager:get_historical_data:64 - Fetching historical OHLCV data for ['Bitstamp:BTCUSD'] from 2023-01-01 to 2025-07-31
+2025-08-05 17:36:20 | INFO     | src.data.data_manager:_fetch_tradingview_ohlcv_data:159 - Successfully fetched OHLCV data for 1 symbols
+2025-08-05 17:36:20 | INFO     | src.data.data_manager:get_historical_data:97 - OHLCV data cached successfully
+2025-08-05 17:36:20 | INFO     | src.core.trading_engine:_fetch_and_cache_data:127 - Cached historical data: (1000, 5)
+2025-08-05 17:36:20 | INFO     | src.risk.risk_manager:__init__:49 - Risk manager initialized
+2025-08-05 17:36:20 | INFO     | src.backtesting.backtest_engine:__init__:38 - Backtest engine initialized
+2025-08-05 17:36:20 | INFO     | src.backtesting.backtest_engine:run_backtest:55 - Starting backtest from 2023-01-01 to 2025-07-31
+2025-08-05 17:36:20 | INFO     | src.backtesting.backtest_engine:run_backtest:59 - Using provided historical data
+2025-08-05 17:36:20 | INFO     | src.backtesting.backtest_engine:run_backtest:73 - Running backtest for strategy: custom1
+2025-08-05 17:36:20 | INFO     | src.strategies.base_strategy:reset:99 - Reset strategy: custom1
+2025-08-05 17:36:20 | INFO     | src.risk.risk_manager:__init__:49 - Risk manager initialized
+2025-08-05 17:36:20 | INFO     | src.strategies.custom1_strategy:_generate_signal_for_symbol:145 - Strong sell signal for Bitstamp:BTCUSD: SMA+RSI combined
+2025-08-05 17:36:20 | INFO     | src.strategies.custom1_strategy:_generate_signal_for_symbol:145 - Strong sell signal for Bitstamp:BTCUSD: SMA+RSI combined
+2025-08-05 17:36:20 | INFO     | src.strategies.custom1_strategy:_generate_signal_for_symbol:145 - Strong sell signal for Bitstamp:BTCUSD: SMA+RSI combined
+2025-08-05 17:36:20 | INFO     | src.strategies.custom1_strategy:_generate_signal_for_symbol:145 - Strong sell signal for Bitstamp:BTCUSD: SMA+RSI combined
+2025-08-05 17:36:20 | INFO     | src.strategies.custom1_strategy:_generate_signal_for_symbol:145 - Strong sell signal for Bitstamp:BTCUSD: SMA+RSI combined
+2025-08-05 17:36:20 | INFO     | src.strategies.custom1_strategy:_generate_signal_for_symbol:139 - Strong buy signal for Bitstamp:BTCUSD: SMA+RSI combined
+2025-08-05 17:36:20 | INFO     | src.strategies.custom1_strategy:_generate_signal_for_symbol:139 - Strong buy signal for Bitstamp:BTCUSD: SMA+RSI combined
+2025-08-05 17:36:20 | INFO     | src.strategies.custom1_strategy:_generate_signal_for_symbol:139 - Strong buy signal for Bitstamp:BTCUSD: SMA+RSI combined
+2025-08-05 17:36:20 | INFO     | src.risk.risk_manager:check_stop_loss:155 - Stop loss triggered for Bitstamp:BTCUSD: -5.22%
+2025-08-05 17:36:20 | INFO     | src.backtesting.backtest_engine:_execute_trades:284 - STOP LOSS: 0.24 Bitstamp:BTCUSD @ $79605.00
+2025-08-05 17:36:20 | INFO     | src.strategies.custom1_strategy:_generate_signal_for_symbol:139 - Strong buy signal for Bitstamp:BTCUSD: SMA+RSI combined
+2025-08-05 17:36:20 | INFO     | src.strategies.custom1_strategy:_generate_signal_for_symbol:139 - Strong buy signal for Bitstamp:BTCUSD: SMA+RSI combined
+2025-08-05 17:36:21 | INFO     | src.risk.risk_manager:check_take_profit:194 - Take profit triggered for Bitstamp:BTCUSD: 15.59%
+2025-08-05 17:36:21 | INFO     | src.backtesting.backtest_engine:_execute_trades:311 - TAKE PROFIT: 0.21 Bitstamp:BTCUSD @ $109024.00
+2025-08-05 17:36:21 | INFO     | src.strategies.custom1_strategy:_generate_signal_for_symbol:145 - Strong sell signal for Bitstamp:BTCUSD: SMA+RSI combined
+2025-08-05 17:36:21 | INFO     | src.strategies.custom1_strategy:_generate_signal_for_symbol:139 - Strong buy signal for Bitstamp:BTCUSD: SMA+RSI combined
+2025-08-05 17:36:21 | INFO     | src.strategies.custom1_strategy:_generate_signal_for_symbol:139 - Strong buy signal for Bitstamp:BTCUSD: SMA+RSI combined
+2025-08-05 17:36:21 | INFO     | src.strategies.custom1_strategy:_generate_signal_for_symbol:139 - Strong buy signal for Bitstamp:BTCUSD: SMA+RSI combined
+2025-08-05 17:36:21 | INFO     | src.risk.risk_manager:check_stop_loss:155 - Stop loss triggered for Bitstamp:BTCUSD: -5.18%
+2025-08-05 17:36:21 | INFO     | src.backtesting.backtest_engine:_execute_trades:284 - STOP LOSS: 0.20 Bitstamp:BTCUSD @ $98980.00
+2025-08-05 17:36:21 | INFO     | src.strategies.custom1_strategy:_generate_signal_for_symbol:145 - Strong sell signal for Bitstamp:BTCUSD: SMA+RSI combined
+2025-08-05 17:36:21 | INFO     | src.strategies.custom1_strategy:_generate_signal_for_symbol:145 - Strong sell signal for Bitstamp:BTCUSD: SMA+RSI combined
+2025-08-05 17:36:21 | INFO     | src.strategies.custom1_strategy:_generate_signal_for_symbol:145 - Strong sell signal for Bitstamp:BTCUSD: SMA+RSI combined
+2025-08-05 17:36:21 | INFO     | src.strategies.custom1_strategy:_generate_signal_for_symbol:145 - Strong sell signal for Bitstamp:BTCUSD: SMA+RSI combined
+2025-08-05 17:36:21 | INFO     | src.strategies.custom1_strategy:_generate_signal_for_symbol:145 - Strong sell signal for Bitstamp:BTCUSD: SMA+RSI combined
+2025-08-05 17:36:21 | INFO     | src.strategies.custom1_strategy:_generate_signal_for_symbol:145 - Strong sell signal for Bitstamp:BTCUSD: SMA+RSI combined
+2025-08-05 17:36:22 | INFO     | src.strategies.custom1_strategy:_generate_signal_for_symbol:139 - Strong buy signal for Bitstamp:BTCUSD: SMA+RSI combined
+2025-08-05 17:36:22 | INFO     | src.strategies.custom1_strategy:_generate_signal_for_symbol:145 - Strong sell signal for Bitstamp:BTCUSD: SMA+RSI combined
+2025-08-05 17:36:22 | INFO     | src.core.trading_engine:run_backtest:159 - Backtest completed using BacktestEngine
+2025-08-05 17:36:22 | INFO     | __main__:run_backtest:121 - Backtest completed
+2025-08-05 17:36:22 | INFO     | __main__:run_backtest:122 - ============================================================
+2025-08-05 17:36:22 | INFO     | __main__:run_backtest:123 - 📊 PORTFOLIO SUMMARY
+2025-08-05 17:36:22 | INFO     | __main__:run_backtest:124 - ============================================================
+2025-08-05 17:36:22 | INFO     | __main__:run_backtest:125 - 💰 Initial Capital: $100,000.00
+2025-08-05 17:36:22 | INFO     | __main__:run_backtest:126 - 💵 Total Value: $100,000.00
+2025-08-05 17:36:22 | INFO     | __main__:run_backtest:127 - 📈 Total Return: 0.00%
+2025-08-05 17:36:22 | INFO     | __main__:run_backtest:128 - 📊 Annualized Return: 0.00%
+2025-08-05 17:36:22 | INFO     | __main__:run_backtest:129 - 📊 Sharpe Ratio: 0.0000
+2025-08-05 17:36:22 | INFO     | __main__:run_backtest:130 - 📉 Max Drawdown: 0.00%
+2025-08-05 17:36:22 | INFO     | __main__:run_backtest:131 - 🎯 Win Rate: 0.00%
+2025-08-05 17:36:22 | INFO     | __main__:run_backtest:132 - 🔄 Total Trades: 0
+2025-08-05 17:36:22 | INFO     | __main__:run_backtest:133 - 💵 Cash: $100,000.00
+2025-08-05 17:36:22 | INFO     | __main__:run_backtest:143 - 
+📋 POSITIONS: None
+2025-08-05 17:36:22 | INFO     | __main__:run_backtest:145 - ============================================================

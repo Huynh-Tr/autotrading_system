@@ -168,25 +168,25 @@ class MACDStrategy(BaseStrategy):
         """Calculate MACD components for the given price series"""
         return calculate_macd(prices, self.fast_period, self.slow_period, self.signal_period)
     
-    def validate_config(self) -> bool:
-        """Validate strategy configuration"""
-        if self.fast_period <= 0 or self.slow_period <= 0:
-            logger.error("MACD periods must be positive")
-            return False
+    # def validate_config(self) -> bool:
+        # """Validate strategy configuration"""
+        # if self.fast_period <= 0 or self.slow_period <= 0:
+        #     logger.error("MACD periods must be positive")
+        #     return False
         
-        if self.fast_period >= self.slow_period:
-            logger.error("Fast period must be less than slow period")
-            return False
+        # if self.fast_period >= self.slow_period:
+        #     logger.error("Fast period must be less than slow period")
+        #     return False
         
-        if self.signal_period <= 0:
-            logger.error("Signal period must be positive")
-            return False
+        # if self.signal_period <= 0:
+        #     logger.error("Signal period must be positive")
+        #     return False
         
-        if self.confirmation_period <= 0:
-            logger.error("Confirmation period must be positive")
-            return False
+        # if self.confirmation_period <= 0:
+        #     logger.error("Confirmation period must be positive")
+        #     return False
         
-        return True
+        # return True
     
     def get_indicators(self, price_data: pd.Series) -> Dict[str, pd.Series]:
         """Get strategy indicators for the given price data"""
@@ -206,15 +206,15 @@ class MACDStrategy(BaseStrategy):
             'Histogram': histogram
         }
     
-    def get_summary(self) -> Dict[str, Any]:
-        """Get strategy summary"""
-        return {
-            'name': self.name,
-            'strategy_type': 'MACD Strategy',
-            'fast_period': self.fast_period,
-            'slow_period': self.slow_period,
-            'signal_period': self.signal_period,
-            'histogram_threshold': self.histogram_threshold,
-            'confirmation_period': self.confirmation_period,
-            'description': f'MACD Strategy with {self.fast_period}/{self.slow_period}/{self.signal_period} periods'
-        } 
+    # def get_summary(self) -> Dict[str, Any]:
+        # """Get strategy summary"""
+        # return {
+        #     'name': self.name,
+        #     'strategy_type': 'MACD Strategy',
+        #     'fast_period': self.fast_period,
+        #     'slow_period': self.slow_period,
+        #     'signal_period': self.signal_period,
+        #     'histogram_threshold': self.histogram_threshold,
+        #     'confirmation_period': self.confirmation_period,
+        #     'description': f'MACD Strategy with {self.fast_period}/{self.slow_period}/{self.signal_period} periods'
+        # } 

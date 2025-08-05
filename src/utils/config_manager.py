@@ -45,36 +45,36 @@ class ConfigManager:
             return self._get_default_config()
     
     # def _get_default_config(self) -> Dict[str, Any]:
-    #     """Get default configuration"""
-    #     return {
-    #         'trading': {
-    #             'mode': 'backtest',
-    #             'symbols': ['AAPL', 'GOOGL', 'MSFT'],
-    #             'initial_capital': 100000,
-    #             'commission': 0.001
-    #         },
-    #         'data': {
-    #             'source': 'yfinance',
-    #             'start_date': '2023-01-01',
-    #             'end_date': '2024-01-01',
-    #             'interval': '1d',
-    #             'cache_data': True,
-    #             'cache_dir': 'data/cache'
-    #         },
-    #         'risk': {
-    #             'max_position_size': 0.1,
-    #             'max_portfolio_risk': 0.02,
-    #             'stop_loss': 0.05,
-    #             'take_profit': 0.15,
-    #             'max_drawdown': 0.20
-    #         },
-    #         'logging': {
-    #             'level': 'INFO',
-    #             'file': 'logs/trading.log',
-    #             'max_size': '10MB',
-    #             'backup_count': 5
-    #         }
-    #     }
+        # """Get default configuration"""
+        # return {
+        #     'trading': {
+        #         'mode': 'backtest',
+        #         'symbols': ['AAPL', 'GOOGL', 'MSFT'],
+        #         'initial_capital': 100000,
+        #         'commission': 0.001
+        #     },
+        #     'data': {
+        #         'source': 'yfinance',
+        #         'start_date': '2023-01-01',
+        #         'end_date': '2024-01-01',
+        #         'interval': '1d',
+        #         'cache_data': True,
+        #         'cache_dir': 'data/cache'
+        #     },
+        #     'risk': {
+        #         'max_position_size': 0.1,
+        #         'max_portfolio_risk': 0.02,
+        #         'stop_loss': 0.05,
+        #         'take_profit': 0.15,
+        #         'max_drawdown': 0.20
+        #     },
+        #     'logging': {
+        #         'level': 'INFO',
+        #         'file': 'logs/trading.log',
+        #         'max_size': '10MB',
+        #         'backup_count': 5
+        #     }
+        # }
     
     def get(self, key: str, default: Any = None) -> Any:
         """Get configuration value using dot notation"""
@@ -88,55 +88,55 @@ class ConfigManager:
         except (KeyError, TypeError):
             return default
     
-    def set(self, key: str, value: Any):
-        """Set configuration value using dot notation"""
-        keys = key.split('.')
-        config = self.config
+    # def set(self, key: str, value: Any):
+        # """Set configuration value using dot notation"""
+        # keys = key.split('.')
+        # config = self.config
         
-        # Navigate to the parent of the target key
-        for k in keys[:-1]:
-            if k not in config:
-                config[k] = {}
-            config = config[k]
+        # # Navigate to the parent of the target key
+        # for k in keys[:-1]:
+        #     if k not in config:
+        #         config[k] = {}
+        #     config = config[k]
         
-        # Set the value
-        config[keys[-1]] = value
+        # # Set the value
+        # config[keys[-1]] = value
     
-    def save(self, config_path: Optional[str] = None):
-        """Save configuration to file"""
-        path = config_path or self.config_path
+    # def save(self, config_path: Optional[str] = None):
+        # """Save configuration to file"""
+        # path = config_path or self.config_path
         
-        # Ensure directory exists
-        os.makedirs(os.path.dirname(path), exist_ok=True)
+        # # Ensure directory exists
+        # os.makedirs(os.path.dirname(path), exist_ok=True)
         
-        try:
-            with open(path, 'w') as file:
-                yaml.dump(self.config, file, default_flow_style=False, indent=2)
-            logger.info(f"Configuration saved to {path}")
-        except Exception as e:
-            logger.error(f"Error saving config: {e}")
+        # try:
+        #     with open(path, 'w') as file:
+        #         yaml.dump(self.config, file, default_flow_style=False, indent=2)
+        #     logger.info(f"Configuration saved to {path}")
+        # except Exception as e:
+        #     logger.error(f"Error saving config: {e}")
     
-    def reload(self):
-        """Reload configuration from file"""
-        self.config = self._load_config()
-        logger.info("Configuration reloaded")
+    # def reload(self):
+        # """Reload configuration from file"""
+        # self.config = self._load_config()
+        # logger.info("Configuration reloaded")
     
-    def get_all(self) -> Dict[str, Any]:
-        """Get all configuration"""
-        return self.config.copy()
+    # def get_all(self) -> Dict[str, Any]:
+        # """Get all configuration"""
+        # return self.config.copy()
     
-    def validate(self) -> bool:
-        """Validate configuration"""
-        required_keys = [
-            'trading.initial_capital',
-            'trading.symbols',
-            'data.source',
-            'risk.max_position_size'
-        ]
+    # def validate(self) -> bool:
+        # """Validate configuration"""
+        # required_keys = [
+        #     'trading.initial_capital',
+        #     'trading.symbols',
+        #     'data.source',
+        #     'risk.max_position_size'
+        # ]
         
-        for key in required_keys:
-            if self.get(key) is None:
-                logger.error(f"Missing required configuration: {key}")
-                return False
+        # for key in required_keys:
+        #     if self.get(key) is None:
+        #         logger.error(f"Missing required configuration: {key}")
+        #         return False
         
-        return True 
+        # return True 

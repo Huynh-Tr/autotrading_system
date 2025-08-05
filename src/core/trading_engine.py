@@ -13,7 +13,7 @@ from ..data.data_manager import DataManager
 from ..strategies.base_strategy import BaseStrategy
 from ..risk.risk_manager import RiskManager
 from ..utils.config_manager import ConfigManager
-from ..utils.ohlcv_utils import get_symbols_from_data, extract_price_data, get_current_price
+from ..utils.ohlcv_utils import get_symbols_from_data, get_current_price
 
 
 @dataclass

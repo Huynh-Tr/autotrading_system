@@ -5,6 +5,7 @@ Strategy Optimization Runner - Optimize strategy parameters using risk managemen
 
 import sys
 import os
+import argparse
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 
 from src.optimization import StrategyOptimizer
@@ -14,6 +15,13 @@ from loguru import logger
 def main():
     """Run strategy optimization"""
     
+    # Parse command line arguments
+    parser = argparse.ArgumentParser(description='Optimize trading strategy parameters')
+    parser.add_argument('--strategy', type=str, help='Specific strategy to optimize (sma_crossover, rsi, macd, custom1)')
+    parser.add_argument('--start-date', type=str, default=None, help='Start date for optimization (YYYY-MM-DD)')
+    parser.add_argument('--end-date', type=str, default=None, help='End date for optimization (YYYY-MM-DD)')
+    args = parser.parse_args()
+    
     # Load configuration
     config = ConfigManager("config/config.yaml")
     
@@ -21,11 +29,16 @@ def main():
     optimizer = StrategyOptimizer(config)
     
     # Define optimization parameters
-    start_date = config.get("data.start_date", "2024-01-01")
-    end_date = config.get("data.end_date", "2024-05-31")
+    start_date = args.start_date or config.get("data.start_date", "2024-01-01")
+    end_date = args.end_date or config.get("data.end_date", "2024-05-31")
     
-    # Strategies to optimize
-    strategy_types = ['sma_crossover', 'rsi', 'macd']
+    # Determine which strategies to optimize
+    if args.strategy:
+        # Optimize only the specified strategy
+        strategy_types = [args.strategy]
+    else:
+        # Optimize all strategies
+        strategy_types = ['sma_crossover', 'rsi', 'macd', 'custom1']
     
     # Optimization settings
     optimization_metric = 'sharpe_ratio'  # Can be: 'sharpe_ratio', 'total_return', 'profit_factor'

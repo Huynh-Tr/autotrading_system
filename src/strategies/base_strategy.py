@@ -72,25 +72,25 @@ class BaseStrategy(ABC):
                 pos['avg_price'] = 0
                 pos['total_cost'] = 0
     
-    def get_position(self, symbol: str) -> Optional[Dict[str, Any]]:
-        """Get current position for a symbol"""
-        return self.positions.get(symbol)
+    # def get_position(self, symbol: str) -> Optional[Dict[str, Any]]:
+        # """Get current position for a symbol"""
+        # return self.positions.get(symbol)
     
     def has_position(self, symbol: str) -> bool:
         """Check if strategy has a position in symbol"""
         return symbol in self.positions and self.positions[symbol]['quantity'] > 0
     
-    def calculate_pnl(self, symbol: str, current_price: float) -> float:
-        """Calculate unrealized P&L for a position"""
-        if not self.has_position(symbol):
-            return 0.0
+    # def calculate_pnl(self, symbol: str, current_price: float) -> float:
+        # """Calculate unrealized P&L for a position"""
+        # if not self.has_position(symbol):
+        #     return 0.0
         
-        position = self.positions[symbol]
-        return (current_price - position['avg_price']) * position['quantity']
+        # position = self.positions[symbol]
+        # return (current_price - position['avg_price']) * position['quantity']
     
-    def validate_config(self) -> bool:
-        """Validate strategy configuration"""
-        return True
+    # def validate_config(self) -> bool:
+        # """Validate strategy configuration"""
+        # return True
     
     def reset(self):
         """Reset strategy state"""
@@ -98,10 +98,10 @@ class BaseStrategy(ABC):
         self.signals = {}
         logger.info(f"Reset strategy: {self.name}")
     
-    def get_summary(self) -> Dict[str, Any]:
-        """Get strategy summary"""
-        return {
-            'name': self.name,
-            'positions': self.positions,
-            'total_positions': len([p for p in self.positions.values() if p['quantity'] > 0])
-        } 
+    # def get_summary(self) -> Dict[str, Any]:
+        # """Get strategy summary"""
+        # return {
+        #     'name': self.name,
+        #     'positions': self.positions,
+        #     'total_positions': len([p for p in self.positions.values() if p['quantity'] > 0])
+        # } 

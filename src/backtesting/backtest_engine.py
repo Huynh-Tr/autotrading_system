@@ -659,7 +659,7 @@ class BacktestEngine:
         axes[1, 0].set_title('Performance Metrics Comparison')
         
         # Bar chart of total returns
-        returns = [metrics.get('total_return', 0) for metrics in metrics_data]
+        returns = [metrics[0] for metrics in metrics_data]  # First element is total_return
         axes[1, 1].bar(strategy_names, returns)
         axes[1, 1].set_title('Total Returns by Strategy')
         axes[1, 1].set_ylabel('Total Return')

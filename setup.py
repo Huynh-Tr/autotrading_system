@@ -98,6 +98,15 @@ strategies:
     fast_period: 12
     slow_period: 26
     signal_period: 9
+    
+  custom1:
+    enabled: true
+    short_window: 20
+    long_window: 50
+    rsi_period: 14
+    rsi_oversold: 30
+    rsi_overbought: 70
+    min_signal_strength: 0.3
 
 # Logging
 logging:

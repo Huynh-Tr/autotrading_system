@@ -115,17 +115,17 @@ class SMACrossoverStrategy(BaseStrategy):
         else:
             return 'hold'
     
-    def validate_config(self) -> bool:
-        """Validate strategy configuration"""
-        if self.short_window <= 0 or self.long_window <= 0:
-            logger.error("SMA windows must be positive")
-            return False
+    # def validate_config(self) -> bool:
+        # """Validate strategy configuration"""
+        # if self.short_window <= 0 or self.long_window <= 0:
+        #     logger.error("SMA windows must be positive")
+        #     return False
         
-        if self.short_window >= self.long_window:
-            logger.error("Short window must be less than long window")
-            return False
+        # if self.short_window >= self.long_window:
+        #     logger.error("Short window must be less than long window")
+        #     return False
         
-        return True
+        # return True
     
     def get_indicators(self, price_data: pd.Series) -> Dict[str, pd.Series]:
         """Get strategy indicators for the given price data"""
@@ -140,12 +140,12 @@ class SMACrossoverStrategy(BaseStrategy):
             f'{self.long_window}_SMA': long_sma
         }
     
-    def get_summary(self) -> Dict[str, Any]:
-        """Get strategy summary"""
-        return {
-            'name': self.name,
-            'strategy_type': 'SMA Crossover',
-            'short_window': self.short_window,
-            'long_window': self.long_window,
-            'description': f'SMA Crossover with {self.short_window}/{self.long_window} periods'
-        } 
+    # def get_summary(self) -> Dict[str, Any]:
+        # """Get strategy summary"""
+        # return {
+        #     'name': self.name,
+        #     'strategy_type': 'SMA Crossover',
+        #     'short_window': self.short_window,
+        #     'long_window': self.long_window,
+        #     'description': f'SMA Crossover with {self.short_window}/{self.long_window} periods'
+        # } 

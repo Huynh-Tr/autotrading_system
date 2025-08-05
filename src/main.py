@@ -28,6 +28,7 @@ from src.core.trading_engine import TradingEngine
 from src.strategies.sma_crossover import SMACrossoverStrategy
 from src.strategies.rsi_strategy import RSIStrategy
 from src.strategies.macd_strategy import MACDStrategy
+from src.strategies.custom1_strategy import Custom1Strategy
 from src.utils.config_manager import ConfigManager
 
 
@@ -94,6 +95,15 @@ def run_backtest(config_path: str, strategy_name: str):
         else:
             logger.warning("MACD strategy is disabled in config")
             return
+    elif strategy_name == "custom1":
+        strategy_config = config.get("strategies.custom1", {})
+        if strategy_config.get('enabled', True):
+            strategy = Custom1Strategy(strategy_config)
+            engine.add_strategy(strategy)
+            logger.info("Custom1 strategy added (enabled)")
+        else:
+            logger.warning("Custom1 strategy is disabled in config")
+            return
     else:
         logger.error(f"Unknown strategy: {strategy_name}")
         return
@@ -105,7 +115,34 @@ def run_backtest(config_path: str, strategy_name: str):
     # Run backtest
     engine.run_backtest(start_date, end_date)
     
+    # Get and display portfolio summary
+    portfolio_summary = engine.get_portfolio_summary()
+    
     logger.info("Backtest completed")
+    logger.info("=" * 60)
+    logger.info("📊 PORTFOLIO SUMMARY")
+    logger.info("=" * 60)
+    logger.info(f"💰 Initial Capital: ${portfolio_summary['initial_capital']:,.2f}")
+    logger.info(f"💵 Total Value: ${portfolio_summary['total_value']:,.2f}")
+    logger.info(f"📈 Total Return: {portfolio_summary['total_return']:.2%}")
+    logger.info(f"📊 Annualized Return: {portfolio_summary['annualized_return']:.2%}")
+    logger.info(f"📊 Sharpe Ratio: {portfolio_summary['sharpe_ratio']:.4f}")
+    logger.info(f"📉 Max Drawdown: {portfolio_summary['max_drawdown']:.2%}")
+    logger.info(f"🎯 Win Rate: {portfolio_summary['win_rate']:.2%}")
+    logger.info(f"🔄 Total Trades: {portfolio_summary['total_trades']}")
+    logger.info(f"💵 Cash: ${portfolio_summary['cash']:,.2f}")
+    
+    # Display positions if any
+    if portfolio_summary['positions']:
+        logger.info("\n📋 POSITIONS:")
+        for symbol, pos in portfolio_summary['positions'].items():
+            logger.info(f"  {symbol}: {pos['quantity']:.4f} @ ${pos['entry_price']:.2f} "
+                       f"(Current: ${pos['current_price']:.2f}, P&L: ${pos['pnl']:.2f} "
+                       f"({pos['pnl_pct']:.2%}))")
+    else:
+        logger.info("\n📋 POSITIONS: None")
+    
+    logger.info("=" * 60)
 
 
 def run_live_trading(config_path: str, strategy_name: str):
@@ -146,6 +183,15 @@ def run_live_trading(config_path: str, strategy_name: str):
             logger.info("MACD strategy added (enabled)")
         else:
             logger.warning("MACD strategy is disabled in config")
+            return
+    elif strategy_name == "custom1":
+        strategy_config = config.get("strategies.custom1", {})
+        if strategy_config.get('enabled', True):
+            strategy = Custom1Strategy(strategy_config)
+            engine.add_strategy(strategy)
+            logger.info("Custom1 strategy added (enabled)")
+        else:
+            logger.warning("Custom1 strategy is disabled in config")
             return
     else:
         logger.error(f"Unknown strategy: {strategy_name}")
@@ -195,6 +241,15 @@ def run_paper_trading(config_path: str, strategy_name: str):
         else:
             logger.warning("MACD strategy is disabled in config")
             return
+    elif strategy_name == "custom1":
+        strategy_config = config.get("strategies.custom1", {})
+        if strategy_config.get('enabled', True):
+            strategy = Custom1Strategy(strategy_config)
+            engine.add_strategy(strategy)
+            logger.info("Custom1 strategy added (enabled)")
+        else:
+            logger.warning("Custom1 strategy is disabled in config")
+            return
     else:
         logger.error(f"Unknown strategy: {strategy_name}")
         return
@@ -215,7 +270,7 @@ def main():
     )
     parser.add_argument(
         "--strategy",
-        choices=["sma_crossover", "rsi", "macd"],
+        choices=["sma_crossover", "rsi", "macd", "custom1"],
         default="sma_crossover",
         help="Trading strategy (default: sma_crossover)"
     )

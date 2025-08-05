@@ -139,25 +139,25 @@ class RSIStrategy(BaseStrategy):
         """Calculate RSI for the given price series"""
         return calculate_rsi(prices, period)
     
-    def validate_config(self) -> bool:
-        """Validate strategy configuration"""
-        if self.period <= 0:
-            logger.error("RSI period must be positive")
-            return False
+    # def validate_config(self) -> bool:
+        # """Validate strategy configuration"""
+        # if self.period <= 0:
+        #     logger.error("RSI period must be positive")
+        #     return False
         
-        if self.overbought_threshold <= self.oversold_threshold:
-            logger.error("Overbought threshold must be greater than oversold threshold")
-            return False
+        # if self.overbought_threshold <= self.oversold_threshold:
+        #     logger.error("Overbought threshold must be greater than oversold threshold")
+        #     return False
         
-        if self.overbought_threshold > 100 or self.oversold_threshold < 0:
-            logger.error("RSI thresholds must be between 0 and 100")
-            return False
+        # if self.overbought_threshold > 100 or self.oversold_threshold < 0:
+        #     logger.error("RSI thresholds must be between 0 and 100")
+        #     return False
         
-        if self.confirmation_period <= 0:
-            logger.error("Confirmation period must be positive")
-            return False
+        # if self.confirmation_period <= 0:
+        #     logger.error("Confirmation period must be positive")
+        #     return False
         
-        return True
+        # return True
     
     def get_indicators(self, price_data: pd.Series) -> Dict[str, pd.Series]:
         """Get strategy indicators for the given price data"""
@@ -173,14 +173,14 @@ class RSIStrategy(BaseStrategy):
             'Oversold': pd.Series([self.oversold_threshold] * len(rsi), index=rsi.index)
         }
     
-    def get_summary(self) -> Dict[str, Any]:
-        """Get strategy summary"""
-        return {
-            'name': self.name,
-            'strategy_type': 'RSI Strategy',
-            'period': self.period,
-            'overbought_threshold': self.overbought_threshold,
-            'oversold_threshold': self.oversold_threshold,
-            'confirmation_period': self.confirmation_period,
-            'description': f'RSI Strategy with {self.period} period, {self.oversold_threshold}/{self.overbought_threshold} levels'
-        } 
+    # def get_summary(self) -> Dict[str, Any]:
+        # """Get strategy summary"""
+        # return {
+        #     'name': self.name,
+        #     'strategy_type': 'RSI Strategy',
+        #     'period': self.period,
+        #     'overbought_threshold': self.overbought_threshold,
+        #     'oversold_threshold': self.oversold_threshold,
+        #     'confirmation_period': self.confirmation_period,
+        #     'description': f'RSI Strategy with {self.period} period, {self.oversold_threshold}/{self.overbought_threshold} levels'
+        # } 

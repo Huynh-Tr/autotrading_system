@@ -15,6 +15,7 @@ from ..backtesting import BacktestEngine
 from ..strategies.sma_crossover import SMACrossoverStrategy
 from ..strategies.rsi_strategy import RSIStrategy
 from ..strategies.macd_strategy import MACDStrategy
+from ..strategies.custom1_strategy import Custom1Strategy
 from ..utils.config_manager import ConfigManager
 from .parameter_grid import ParameterGrid
 
@@ -32,7 +33,8 @@ class StrategyOptimizer:
         self.strategy_factory = {
             'sma_crossover': SMACrossoverStrategy,
             'rsi': RSIStrategy,
-            'macd': MACDStrategy
+            'macd': MACDStrategy,
+            'custom1': Custom1Strategy
         }
         
         # Optimization results

@@ -68,7 +68,7 @@ def calculate_all_technical_indicators(data: pd.DataFrame,
     Returns:
         DataFrame with original data plus all technical indicators
     """
-    from ..utils.ohlcv_utils import get_symbols_from_data, get_symbol_data, extract_price_data
+    from ..utils.ohlcv_utils import get_symbols_from_data, extract_price_data
     
     if symbols is None:
         symbols = get_symbols_from_data(data)

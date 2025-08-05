@@ -31,6 +31,14 @@ class ParameterGrid:
                 'slow_period': [20, 26, 30, 35, 40],
                 'signal_period': [7, 9, 12, 15]
             },
+            'custom1': {
+                'short_window': [10, 15, 20, 25, 30],
+                'long_window': [40, 50, 60, 70, 80],
+                'rsi_period': [10, 14, 20, 30],
+                'rsi_oversold': [25, 30, 35],
+                'rsi_overbought': [65, 70, 75],
+                'min_signal_strength': [0.2, 0.3, 0.4, 0.5]
+            },
             'bollinger_bands': {
                 'period': [10, 15, 20, 30],
                 'std_dev': [1.5, 2.0, 2.5, 3.0]
